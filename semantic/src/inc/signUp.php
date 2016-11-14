@@ -46,7 +46,7 @@
         </div>
     </form>
 </div>
-<div class="ui blue inverted footer segment" style = "position: absolute">
+<div class="ui blue inverted footer segment">
     <div class="ui center aligned container">
         <div class="ui stackable inverted grid">
             <div class="three wide column">
