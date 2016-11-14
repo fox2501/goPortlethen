@@ -9,53 +9,7 @@
     <title>goPortlethen</title>
 </head>
 <body>
-<!--<div class = "ui blue inverted secondary pointing stackable menu">
-    <a class = "header item" href = "Index.php">
-        <i class = "home icon"></i>
-            goPortlethen
-    </a>
-    <a class = "item">
-        <i class="heartbeat icon"></i>
-                Health & Wellbeing
-    </a>
-    <a class = "item">
-        <i class="users icon"></i>
-        Clubs
-    </a>
-    <a class = "item">
-        <i class = "map icon"></i>
-            Maps
-    </a>
-    <div class = "right menu">
-        <!--<div class = "ui simple dropdown">
-            <a class = "browse item" href = "profile.html">
-                <i class = "user icon"></i>
-                Ross
-                <i class="dropdown icon"></i>
-            </a>
-            <div class = "ui menu">
-                <div class = "item">My Profile</div>
-                <div class = "item" href = "profile.html">Settings</div>
-                <div class = "item" href = "index.html">Log Out</div>
-            </div>
-        </div>
-        <a class = "item" href = "signUp.html">
-            <div class = "ui teal button">
-                <i class="add user icon"></i>
-                Sign up
-            </div>
-        </a>
-        <a class = "item" href = "logIn.html">
-            <div class = "ui button">
-                <i class="sign in icon"></i>
-                Log In
-            </div>
-        </a>
-    </div>
-</div>-->
-
 <?php include("inc/header.php"); ?>
-
 <div class = "ui container">
     <div class = "ui one column grid">
         <div class = "row">
