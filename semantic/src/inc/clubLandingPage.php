@@ -5,26 +5,8 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css">
     <title>Club Landing Page</title>
 </head>
+<?include ("includes/header.php"); ?>
 <body>
-
-<div class="ui stackable menu">
-    <a class="header item" href="Index.html">goPortlethen</a>
-    <a class="item">Health & Wellbeing</a>
-    <a class="item">Clubs</a>
-    <a class="item">Maps</a>
-    <div class="right menu">
-        <a class="item">
-            <div class="ui primary button">
-                Sign up
-            </div>
-        </a>
-        <a class="item">
-            <div class="ui secondary button" id="logIn">
-                Log In
-            </div>
-        </a>
-    </div>
-</div>
 
 <h1 align="center">Club Landing Page</h1>
 <div class="ui horizontal section divider">

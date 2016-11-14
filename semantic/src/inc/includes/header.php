@@ -19,7 +19,7 @@ session_start();
         <i class="heartbeat icon"></i>
         Health & Wellbeing
     </a>
-    <a class = "item">
+    <a class = "item" href = "/semantic/src/inc/clubLandingPage.php">
         <i class="users icon"></i>
         Clubs
     </a>
