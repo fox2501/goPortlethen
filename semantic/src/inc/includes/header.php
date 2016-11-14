@@ -11,7 +11,7 @@ session_start();
 </head>
 <body>
 <div class = "ui blue inverted secondary pointing stackable menu">
-    <a class = "header item" href = "Index.php">
+    <a class = "header item" href = "/semantic">
         <i class = "home icon"></i>
         goPortlethen
     </a>
@@ -29,7 +29,7 @@ session_start();
     </a>
     <div class = "right menu">
         <div class = "ui simple dropdown">
-            <a class = "browse item" href = "inc/profile.php">
+            <a class = "browse item" href = "/semantic/src/inc/profile.php">
                 <i class = "user icon"></i>
                 Ross
                 <i class="dropdown icon"></i>
@@ -40,7 +40,7 @@ session_start();
                 <div class = "item" href = "inc/index.php">Log Out</div>
             </div>
         </div>
-        <a class = "item" href = "inc/signUp.php">
+        <a class = "item" href = "/semantic/src/inc/signUp.php">
             <div class = "ui teal button">
                 <i class="add user icon"></i>
                 Sign up
