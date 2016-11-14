@@ -35,7 +35,7 @@ session_start();
                 <i class="dropdown icon"></i>
             </a>
             <div class = "ui menu">
-                <div class = "item">My Profile</div>
+                <div class = "item" href = "profile.php">My Profile</div>
                 <div class = "item" href = "profile.php">Settings</div>
                 <div class = "item" href = "index.php">Log Out</div>
             </div>
