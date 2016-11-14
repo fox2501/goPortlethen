@@ -8,7 +8,7 @@
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
     <title>goPortlethen</title>
 </head>
-<?php include("inc/includes/header.php");?>
+<?php include("includes/header.php");?>
 <body>
 <div class = "ui center aligned container">
     <div class="ui middle aligned center aligned grid">
