@@ -225,4 +225,5 @@
     </div>
 </div>
 </body>
+<?php include("/src/inc/includes/footer.php");?>
 </html>

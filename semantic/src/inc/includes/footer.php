@@ -1,52 +1,16 @@
+<?
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel = "stylesheet" type = "text/css" href = "goPortlethen/semantic/dist/semantic.css">
+    <link rel = "stylesheet" type = "text/css" href = "C:\Users\ross1\Documents\PHPStormProjects\goPortlethen\semantic\dist\semantic.css">
     <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src = "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
     <title>goPortlethen</title>
 </head>
-<?php include("includes/header.php");?>
 <body>
-<div class = "ui container">
-    <form class = "ui form">
-        <h2 class="ui center aligned blue header">
-            <div class="content">
-                Sign up
-            </div>
-        </h2>
-        <div class = "ui segment">
-        <div class = "field">
-            <label>Display Name</label>
-            <div class = "field">
-                <input type = "text" name = "displayName" placeholder = "Enter your display name. This can just be your first name.">
-            </div>
-        </div>
-        <div class = "field">
-            <label>Email Address</label>
-            <div class = "field">
-                <input type = "text" name = "email" placeholder = "Please enter your email address.">
-            </div>
-        </div>
-        <div class = "field">
-            <label>Username</label>
-            <div class = "field">
-                <input type = "text" name = "username" placeholder = "Please enter a username. You will use this to login.">
-            </div>
-        </div>
-        <div class = "field">
-            <label>Password</label>
-            <div class = "field">
-                <input type = "password" name = "password" placeholder = "Please create a password.">
-            </div>
-        </div>
-            <div class="ui fluid large green submit button">Create Account</div>
-        </div>
-    </form>
-</div>
-<div class="ui blue inverted footer segment" >
+<div class="ui blue inverted footer segment" id = "footer">
     <div class="ui center aligned container">
         <div class="ui stackable inverted grid">
             <div class="three wide column">
@@ -80,5 +44,4 @@
     </div>
 </div>
 </body>
-<?php include("/src/inc/includes/footer.php");?>
 </html>
