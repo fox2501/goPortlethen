@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css">
-    <title>Map Landing</title>
+    <title>Map Landing Page</title>
 </head>
 <?php include("includes/header.php"); ?>
 
