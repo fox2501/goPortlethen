@@ -36,8 +36,8 @@ session_start();
             </a>
             <div class = "ui menu">
                 <div class = "item">My Profile</div>
-                <div class = "item" href = "profile.html">Settings</div>
-                <div class = "item" href = "index.html">Log Out</div>
+                <div class = "item" href = "profile.php">Settings</div>
+                <div class = "item" href = "index.php">Log Out</div>
             </div>
         </div>
         <a class = "item" href = "signUp.php">
