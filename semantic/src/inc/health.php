@@ -8,12 +8,16 @@
 <?include ("includes/header.php"); ?>
 
 <body>
-<h1 align="center">Health & Wellbeing</h1>
+    <!-- Page header -->
+    <h1 align="center">Health & Wellbeing</h1>
 
-<button class="ui primary button">
-    Submit content
-</button>
-<br><br><br>
+    <!-- Div for admin/contributors -->
+    <!-- Only appears if they are logged in -->
+    <button class="ui primary button">
+        Submit Content
+    </button>
+    <br><br><br>
+
 
 
 <div class="ui grid">
