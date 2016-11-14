@@ -46,7 +46,6 @@
         </div>
     </form>
 </div>
-<div class = "ui fixed bottom sticky" style = "width: 100%;">
 <div class="ui blue inverted footer segment">
     <div class="ui center aligned container">
         <div class="ui stackable inverted grid">
@@ -78,7 +77,6 @@
                 </form>
             </div>
         </div>
-    </div>
     </div>
 </div>
 </body>
