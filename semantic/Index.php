@@ -40,7 +40,7 @@
         </div>
         <div class = "row">
             <div class = "column">
-                <div class = "ui header">Need help? Click <a href = "src/inc/help.php">here</a> for FAQs!</div>
+                <div class = "ui header">Need help? Click <a href = "/src/inc/help.php">here</a> for FAQs!</div>
             </div>
         </div>
     </div>

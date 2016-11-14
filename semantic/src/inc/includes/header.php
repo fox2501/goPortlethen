@@ -35,9 +35,9 @@ session_start();
                 <i class="dropdown icon"></i>
             </a>
             <div class = "ui menu">
-                <div class = "item" href = "inc/profile.php">My Profile</div>
-                <div class = "item" href = "inc/profile.php">Settings</div>
-                <div class = "item" href = "inc/index.php">Log Out</div>
+                <div class = "item" href = "/semantic/src/inc/profile.php">My Profile</div>
+                <div class = "item" href = "/semantic/src/inc/profile.php">Settings</div>
+                <div class = "item" href = "/semantic/src/inc/index.php">Log Out</div>
             </div>
         </div>
         <a class = "item" href = "/semantic/src/inc/signUp.php">
@@ -46,7 +46,7 @@ session_start();
                 Sign up
             </div>
         </a>
-        <a class = "item" href = "inc/logIn.php">
+        <a class = "item" href = "/semantic/src/inc/logIn.php">
             <div class = "ui button">
                 <i class="sign in icon"></i>
                 Log In
