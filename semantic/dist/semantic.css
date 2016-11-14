@@ -23509,7 +23509,9 @@ Floated Menu / Item
 
 /* Footer */
 
-
+.body{
+    padding-bottom: 150px;
+}
 #footer {
     position: absolute;
     bottom: 0;
