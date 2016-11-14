@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <link rel = "stylesheet" type = "text/css" href = "semantic.css">
     <title>Semantic UI</title>
+    <?include ("includes/header.php"); ?>
 </head>
-<?include ("includes/header.php"); ?>
+
 
 <body>
 <h1 align="center">Health & Wellbeing</h1>
@@ -40,3 +41,4 @@
     <div class="four wide column"></div>
     <div class="four wide column"></div>
 </div>
+</body>
