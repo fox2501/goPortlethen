@@ -29,24 +29,24 @@ session_start();
     </a>
     <div class = "right menu">
         <div class = "ui simple dropdown">
-            <a class = "browse item" href = "profile.php">
+            <a class = "browse item" href = "inc/profile.php">
                 <i class = "user icon"></i>
                 Ross
                 <i class="dropdown icon"></i>
             </a>
             <div class = "ui menu">
-                <div class = "item" href = "profile.php">My Profile</div>
-                <div class = "item" href = "profile.php">Settings</div>
-                <div class = "item" href = "index.php">Log Out</div>
+                <div class = "item" href = "inc/profile.php">My Profile</div>
+                <div class = "item" href = "inc/profile.php">Settings</div>
+                <div class = "item" href = "inc/index.php">Log Out</div>
             </div>
         </div>
-        <a class = "item" href = "signUp.php">
+        <a class = "item" href = "inc/signUp.php">
             <div class = "ui teal button">
                 <i class="add user icon"></i>
                 Sign up
             </div>
         </a>
-        <a class = "item" href = "logIn.php">
+        <a class = "item" href = "inc/logIn.php">
             <div class = "ui button">
                 <i class="sign in icon"></i>
                 Log In
