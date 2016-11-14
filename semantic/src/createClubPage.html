@@ -2,31 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel = "stylesheet" type = "text/css" href = "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css">
-    <title>Semantic UI</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css">
+    <title>Create Club Page</title>
 </head>
 <body>
 
-<div class="ui menu">
-    <div class="item">
-        <a href="#">goPortlethen</a>
-    </div>
-    <div class="item">
-        <a href="#">Health & Wellbeing</a>
-    </div>
-    <div class="item">
-        <a href="#">Clubs</a>
-    </div>
-    <div class="item">
-        <a href="#">Maps</a>
-    </div>
-    <div class="right item">
-        <a href="#">Log in</a>
-    </div>
-    <div class="right item">
-        <a href="#">Sign up</a>
+<div class="ui stackable menu">
+    <a class="header item" href="Index.html">goPortlethen</a>
+    <a class="item">Health & Wellbeing</a>
+    <a class="item">Clubs</a>
+    <a class="item">Maps</a>
+    <div class="right menu">
+        <a class="item">
+            <div class="ui primary button">
+                Sign up
+            </div>
+        </a>
+        <a class="item">
+            <div class="ui secondary button" id="logIn">
+                Log In
+            </div>
+        </a>
     </div>
 </div>
+
+<h1 align="center">Club Create Page</h1>
+<div class="ui horizontal section divider">
+    Inspire your local community
+</div>
+
+<form class="ui form">
+    <div class="field">
+        <label>Club Name</label>
+        <input type="text" name="first-name" placeholder="First Name">
+    </div>
+    <div class="field">
+        <label>Description</label>
+        <input type="text" name="last-name" placeholder="Last Name">
+    </div>
+    <div class="field">
+        <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden">
+            <label>I agree to the Terms and Conditions</label>
+        </div>
+    </div>
+    <button class="ui button" type="submit">Submit</button>
+</form>
+
 <div class="ui inverted vertical footer segment">
     <div class="ui container">
         <div class="ui stackable inverted divided equal height stackable grid">
@@ -54,5 +76,7 @@
             </div>
         </div>
     </div>
+</div>
+
 </body>
 </html>
