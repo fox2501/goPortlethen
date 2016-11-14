@@ -23509,7 +23509,7 @@ Floated Menu / Item
 
 /* Footer */
 
-.body{
+.ui.container{
     padding-bottom: 150px;
 }
 #footer {
