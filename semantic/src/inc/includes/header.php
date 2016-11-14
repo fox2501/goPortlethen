@@ -23,7 +23,7 @@ session_start();
         <i class="users icon"></i>
         Clubs
     </a>
-    <a class = "item">
+    <a class = "item" href = "/semantic/src/inc/MapLanding.php">
         <i class = "map icon"></i>
         Maps
     </a>
