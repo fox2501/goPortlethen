@@ -19,6 +19,7 @@
         </div>
         <div class="row">
             <div class="four wide column">
+                <button class="ui button"><a href="/semantic/src/inc/CreateClubPage.php">Create Club</a></button>
             </div>
             <div class="eight wide column">
                 <div class="ui form">
