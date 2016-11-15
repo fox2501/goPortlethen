@@ -2,63 +2,138 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css">
+    <link rel="stylesheet" type="text/css" href="goPortlethen/semantic/dist/semantic.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
     <title>Create Club Page</title>
 </head>
-<?include ("includes/header.php"); ?>
+<?php include("includes/header.php"); ?>
 <body>
-
-<h1 align="center">Club Create Page</h1>
-<div class="ui horizontal section divider">
-    Inspire your local community
-</div>
-
-<form class="ui form">
-    <div class="field">
-        <label>Club Name</label>
-        <input type="text" name="first-name" placeholder="First Name">
-    </div>
-    <div class="field">
-        <label>Description</label>
-        <input type="text" name="last-name" placeholder="Last Name">
-    </div>
-    <div class="field">
-        <div class="ui checkbox">
-            <input type="checkbox" tabindex="0" class="hidden">
-            <label>I agree to the Terms and Conditions</label>
+<div class="ui container">
+    <form class="ui form">
+        <h2 class="ui center aligned blue header">
+            <div class="content">
+                Create Your Club
+            </div>
+        </h2>
+        <div class="ui horizontal section divider">
+            Inspire your local community
         </div>
-    </div>
-    <button class="ui button" type="submit">Submit</button>
-</form>
-
-<div class="ui inverted vertical footer segment">
-    <div class="ui container">
-        <div class="ui stackable inverted divided equal height stackable grid">
-            <div class="three wide column">
-                <h4 class="ui inverted header">About</h4>
-                <div class="ui inverted link list">
-                    <a href="#" class="item">Sitemap</a>
-                    <a href="#" class="item">Contact Us</a>
-                    <a href="#" class="item">Religious Ceremonies</a>
-                    <a href="#" class="item">Gazebo Plans</a>
+        <div class="ui attached message">
+            <div class="header">
+                Welcome to goPortlethen!
+            </div>
+            <p>Please fill out the form below to create your club page</p>
+        </div>
+        <div class="ui form attached fluid segment">
+            <div class="ui error message"></div>
+            <div class="field">
+                <label>Club Name</label>
+                <div class="field">
+                    <input type="text" name="displayName" placeholder="Enter your club name.">
                 </div>
             </div>
-            <div class="three wide column">
-                <h4 class="ui inverted header">Services</h4>
-                <div class="ui inverted link list">
-                    <a href="#" class="item">Banana Pre-Order</a>
-                    <a href="#" class="item">DNA FAQ</a>
-                    <a href="#" class="item">How To Access</a>
-                    <a href="#" class="item">Favorite X-Men</a>
+            <div class="field">
+                <label>Email Address</label>
+                <div class="field">
+                    <input type="text" name="email" placeholder="Please enter your email address.">
                 </div>
             </div>
-            <div class="seven wide column">
-                <h4 class="ui inverted header">Footer Header</h4>
-                <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
+            <div class="field">
+                <label>Club Category</label>
+                <select class="ui search dropdown">
+                    <option value="">Select Category</option>
+                    <option value="AR">Art</option>
+                    <option value="EP">E-Sport</option>
+                    <option value="HE">Health</option>
+                    <option value="SP">Sport</option>
+                </select>
+            </div>
+            <div class="field">
+                <label>Club Description</label>
+                <textarea rows="4"></textarea>
+            </div>
+            <div class="field">
+                <label>Phone Number</label>
+                <input type="text" name="phone[number]" maxlength="11" placeholder="Phone Number">
+            </div>
+            <div class="field">
+                <label>Please toggle if your club requires a fee: </label>
+                <div class="ui toggle checkbox">
+                    <input type="checkbox" tabindex="0" class="hidden" id="isFee">
+                </div>
+                <script>
+                    $('.ui.checkbox')
+                        .checkbox()
+                    ;
+                </script>
+            </div>
+            <div class="field" id="feeAmount" style="display: none;">
+                <label>Please enter your clubs monthly fee: </label>
+                <div class="ui  right labeled input">
+                    <div class="ui label">£</div>
+                    <input type="text" placeholder="Amount">
+                    <div class="ui basic label">.00</div>
+                </div>
+                <script>
+                    var checker = document.getElementById('isFee');
+                    var sendbtn = document.getElementById('feeAmount');
+                    // when unchecked or checked, run the function
+                    checker.onchange = function () {
+                        if (this.checked) {
+                            sendbtn.style.display = 'block';
+                        } else {
+                            sendbtn.style.display = 'none';
+                        }
+
+                    }
+                </script>
+            </div>
+            <div class="required inline field">
+                <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0" class="hidden" name="checkbox">
+                    <label>I agree to the terms and conditions</label>
+                </div>
+                <script>
+                    $('.ui.checkbox')
+                        .checkbox()
+                    ;
+                </script>
             </div>
         </div>
+        <div class="ui fluid large green submit button">Create Club</div>
+        <script>
+            $('.ui.form')
+                .form({
+                        email: {
+                            identifier: 'email',
+                            rules: [
+                                {
+                                    type: 'email',
+                                    prompt: 'Please enter a valid e-mail'
+                                }
+                            ]
+                        },
+                        checkbox: {
+                            identifier: 'checkbox',
+                            rules: [
+                                {
+                                    type: 'checked',
+                                    prompt: 'Please agree to the terms & conditions'
+                                }
+                            ]
+                        }
+                    }
+                )
+            ;
+        </script>
+    </form>
+    <div class="ui bottom attached warning message">
+        <i class="icon help"></i>
+        Already signed up? <a href="#">Login here</a> instead.
     </div>
 </div>
-
 </body>
+<?php include("includes/header.php"); ?>
 </html>
