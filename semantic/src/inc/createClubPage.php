@@ -131,7 +131,7 @@
     </form>
     <div class="ui bottom attached warning message">
         <i class="icon help"></i>
-        Already signed up? <a href="#">Login here</a> instead.
+        Already signed up? <a href="/semantic/src/inc/logIn.php">Login here</a> instead.
     </div>
 </div>
 </body>
