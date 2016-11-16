@@ -91,6 +91,7 @@
                 </script>
             </div>
             <div class="field">
+                <label>Please upload your clubs profile picture: </label>
                 <div class="ui fluid action input">
                     <input type="text" readonly>
                     <input type="file">
