@@ -90,6 +90,38 @@
                     }
                 </script>
             </div>
+            <div class="field">
+                <div class="ui fluid action input">
+                    <input type="text" readonly>
+                    <input type="file">
+                    <div class="ui icon button">
+                        <i class="cloud upload icon"></i>
+                    </div>
+                </div>
+                <script>
+                    $('input:text, .ui.button', '.ui.action.input')
+                        .on('click', function (e) {
+                            $('input:file', $(e.target).parents()).click();
+                        })
+                    ;
+
+                    $('input:file', '.ui.action.input')
+                        .on('change', function (e) {
+                            var name = e.target.files[0].name;
+                            $('input:text', $(e.target).parent()).val(name);
+                        })
+                    ;
+                </script>
+                <style>
+                    body {
+                        padding: 1em;
+                    }
+
+                    .ui.action.input input[type="file"] {
+                        display: none;
+                    }
+                </style>
+            </div>
             <div class="required inline field">
                 <div class="ui checkbox">
                     <input type="checkbox" tabindex="0" class="hidden" name="checkbox">
