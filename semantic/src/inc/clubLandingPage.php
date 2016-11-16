@@ -212,7 +212,7 @@
         <div class="row">
         </div>
     </div>
-    <div class="ui items">
+    <div class="ui divided items">
         <div class="item">
             <div class="ui small image">
                 <img src="http://secure.cache.images.core.optasports.com/soccer/teams/150x150/961.png">
