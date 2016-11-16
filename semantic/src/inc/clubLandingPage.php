@@ -230,7 +230,7 @@
                 </div>
                 <div class="extra">
                     <div class="ui right floated button">
-                        For more info click here!
+                        <a href="/semantic/src/inc/clubPage.php">For more info click here!</a>
                     </div>
                 </div>
             </div>
@@ -257,7 +257,7 @@
                 </div>
                 <div class="extra">
                     <div class="ui right floated button">
-                        For more info click here!
+                        <a href="/semantic/src/inc/clubPage.php">For more info click here!</a>
                     </div>
                 </div>
             </div>
@@ -285,7 +285,7 @@
                 </div>
                 <div class="extra">
                     <div class="ui right floated button">
-                        For more info click here!
+                        <a href="/semantic/src/inc/clubPage.php">For more info click here!</a>
                     </div>
                 </div>
             </div>
