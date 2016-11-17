@@ -100,7 +100,7 @@
     </div>
 </div>
 </body>
-<?php include("includes/header.php");?>
+<?php include("includes/footer.php");?>
 <script>
     $(document).ready(function(){
         $("#helpMessage").click(function(){
