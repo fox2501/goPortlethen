@@ -16,7 +16,6 @@
         <p>Keeping Portlethen Healthy</p>
     </div>
 
-    <!-- Submit content button, calendar, Twitter -->
     <div class="ui container">
         <div class="ui grid">
             <div class="row">
@@ -28,16 +27,9 @@
                     <a href="submithealth.php"><button class="ui primary button">Submit Content</button></a>
                     <br><br>
                 </div>
-                <div class="eight wide column">
-                    <iframe src="https://calendar.google.com/calendar/embed?src=imdvs1dbg4fm5e9g35o2cj8i2g%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
-                </div>
-                <div class="five wide column">
-                    <p>Twitter</p>
-                </div>
             </div>
         </div>
     </div>
-    <div class="ui divider"></div>
 
     <!-- Health info sections -->
     <!-- Only appear as and when they are added by contributor -->
