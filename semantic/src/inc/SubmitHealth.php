@@ -37,25 +37,10 @@
     </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-    <p>User creating a new post:
-    <br>User inputs title, text and image(s) into form
-    <br>Name and date are automatically addded</p>
-
-    <p>User editing a post:
+    <!--<p>User editing a post:
     <br>Can edit title, text and image(s) on form (original information is displayed when "edit" is clicked
     <br>Name stays the same but date changes
-    <br>Can also delete post</p>
+    <br>Can also delete post</p>-->
 </body>
 
 <!-- Footer -->
