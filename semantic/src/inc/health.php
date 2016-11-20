@@ -37,11 +37,11 @@
                 <div style="overflow: scroll; height:500px; width: 900px">
                     <div class="ui grid">
                         <div class="row">
-                            <div class="two wide column">
+                            <div class="three wide column">
                                 <h3 class="ui header">Section One</h3>
                                 <img class="ui medium rounded image" src="/images/wireframe/square-image.png">
                             </div>
-                            <div class="six wide column">
+                            <div class="eight wide column">
                                 <!-- Lets user edit title, information and pictures, or delete the whole thing, of already existing health information -->
                                 <!-- Only visible to admin/contributor -->
                                 <!-- When ordinary user is logged in, disable this button -->
