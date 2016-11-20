@@ -23,6 +23,12 @@
                 <div class="field">
                     <input type="text" name="title" placeholder="Enter the title of your post:">
                 </div>
+                <label>Post Content</label>
+                <div class="field">
+                    <textarea rows="8" input type="text" name="content" placeholder="Enter the content of your post:"></textarea>
+                </div>
+
+
             </div>
         </form>
     </div>
