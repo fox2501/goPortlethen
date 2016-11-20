@@ -21,7 +21,7 @@
                 <!-- Only visible to admin/contributor -->
                 <!-- When ordinary user is logged in, hide this button -->
                 <button class="ui primary button">
-                    <a href="/semantic/src/inc/SubmitHealth.php">Submit Content</a>
+                    <a href="http://goportlethencs8.azurewebsites.net/semantic/src/inc/submithealth.php">Submit Content</a>
                 </button>
             </div>
             <div class="row">
