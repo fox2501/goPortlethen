@@ -19,6 +19,7 @@
             <div class="row">
                 <button class="ui primary button">
                     Submit Content
+
                 </button>
             </div>
             <div class="row">
