@@ -60,7 +60,7 @@
     <!-- Section 2 information -->
     <div class="ui container">
         <div class="row">
-            <div class="three wide column">
+            <div class="two wide column">
                 <h3 class="ui header">Section Two</h3>
                 <img class="ui small rounded image" src="/images/wireframe/square-image.png">
             </div>
@@ -79,7 +79,7 @@
     <!-- Section 3 information -->
     <div class="ui container">
         <div class="row">
-            <div class="three wide column">
+            <div class="two wide column">
                 <h3 class="ui header">Section Three</h3>
                 <img class="ui small rounded image" src="/images/wireframe/square-image.png">
             </div>
