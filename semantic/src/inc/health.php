@@ -20,7 +20,7 @@
     <div class="ui container">
         <div class="ui grid">
             <div class="row">
-                <div class="two wide column">
+                <div class="three wide column">
                     <!-- Submit content button -->
                     <!-- Takes user to SubmitHealth.php -->
                     <!-- Only visible to admin/contributor -->
