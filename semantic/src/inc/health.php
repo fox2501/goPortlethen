@@ -57,7 +57,6 @@
                     <div class="ui divider"></div>
                 </div>
                 <!-- If there is content on the page, keep calendar on row 2 (with section 1 info) -->
-                <div class="two wide column"></div>
                 <div class="three wide column"></div>
                     <iframe src="https://calendar.google.com/calendar/embed?src=imdvs1dbg4fm5e9g35o2cj8i2g%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
                 </div>
