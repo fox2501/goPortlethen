@@ -21,10 +21,8 @@
     <div class="ui container">
         <div class="ui grid">
             <div class="row">
-                <div class="four wide column"
+                <div class="four wide column">
                     <h3 class="ui header">Section One</h3>
-                </div>
-                <div class="four wide column">
                     <img class="ui medium rounded image" src="/images/wireframe/square-image.png">
                 </div>
                 <div class="eight wide column">
@@ -38,8 +36,8 @@
     <div class="ui container">
         <div class="ui grid">
             <div class="row">
-                <h3 class="ui header">Section Two</h3>
                 <div class="four wide column">
+                    <h3 class="ui header">Section Two</h3>
                     <img class="ui medium rounded image" src="/images/wireframe/square-image.png">
                 </div>
                 <div class="eight wide column">
@@ -53,8 +51,8 @@
     <div class="ui container">
         <div class="ui grid">
             <div class="row">
-                <h3 class="ui header">Section Three</h3>
                 <div class="four wide column">
+                    <h3 class="ui header">Section Three</h3>
                     <img class="ui medium rounded image" src="/images/wireframe/square-image.png">
                 </div>
                 <div class="eight wide column">
