@@ -34,6 +34,15 @@
     <div class=" ui container">
         <div class="ui grid">
             <div class="row">
+
+                <!-- Calendar and Twitter section -->
+                <div class="two wide column">
+                    <iframe src="https://calendar.google.com/calendar/embed?src=imdvs1dbg4fm5e9g35o2cj8i2g%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
+                    <br><br><br>
+                    <!-- Placeholder for Twitter section -->
+                    <iframe src="https://calendar.google.com/calendar/embed?src=imdvs1dbg4fm5e9g35o2cj8i2g%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
+                </div>
+
                 <!-- Scrollable info section -->
                 <div class="ten wide column" style="overflow: scroll; height:500px; width: 800px">
 
@@ -84,14 +93,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Calendar and Twitter section -->
-                <div class="two wide column">
-                    <iframe src="https://calendar.google.com/calendar/embed?src=imdvs1dbg4fm5e9g35o2cj8i2g%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
-                    <br><br><br>
-                    <!-- Placeholder for Twitter section -->
-                    <iframe src="https://calendar.google.com/calendar/embed?src=imdvs1dbg4fm5e9g35o2cj8i2g%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
                 </div>
             </div>
         </div>
