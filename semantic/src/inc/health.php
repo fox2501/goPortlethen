@@ -11,7 +11,7 @@
     <!-- Page header -->
     <h1 align="center">Health & Wellbeing</h1>
 
-    <!-- Div for admin/contributors -->
+    <!-- Button for admin/contributors -->
     <!-- Only appears if they are logged in -->
     <button class="ui primary button">
         Submit Content
@@ -47,5 +47,7 @@
         <div class="four wide column"></div>
         <div class="four wide column"></div>
     </div>
+
+    <?php include("includes/footer.php"); ?>
 </body>
 </html>
