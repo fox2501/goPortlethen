@@ -35,6 +35,8 @@
         <div class="ui grid">
             <div class="row">
                 <!-- Info section -->
+                <!-- Sections added as users add info through form -->
+                <!-- These are placeholders -->
                 <div class="ten wide column">
 
                     <!-- Section 1 -->
