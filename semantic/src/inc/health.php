@@ -10,6 +10,9 @@
 <body>
     <!-- Page header -->
     <h1 align="center">Health & Wellbeing</h1>
+    <div class="ui horizontal section divider">
+        Keeping Portlethen Healthy
+    </div>
 
     <div class="ui container">
         <div class="ui grid">
