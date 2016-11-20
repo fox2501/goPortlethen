@@ -46,7 +46,7 @@
             <div class="row">
                 <div class="four wide column">
                     <h3 class="ui header">Section One</h3>
-                    <img class="ui small rounded image" src="/images/wireframe/square-image.png">
+                    <img class="ui medium rounded image" src="/images/wireframe/square-image.png">
                 </div>
                 <div class="eight wide column">
                     <!-- Lets user edit title, information and pictures, or delete the whole thing, of already existing health information -->
