@@ -37,7 +37,7 @@
                 <div style="overflow: scroll; height:500px; width: 900px">
                     <div class="ui grid">
                         <div class="row">
-                            <div class="four wide column">
+                            <div class="six wide column">
                                 <h3 class="ui header">Section One</h3>
                                 <img class="ui medium rounded image" src="/images/wireframe/square-image.png">
                             </div>
@@ -56,7 +56,7 @@
 
                     <div class="ui grid">
                         <div class="row">
-                            <div class="four wide column">
+                            <div class="six wide column">
                                 <h3 class="ui header">Section Two</h3>
                                 <img class="ui medium rounded image" src="/images/wireframe/square-image.png">
                             </div>
@@ -75,7 +75,7 @@
 
                     <div class="ui grid">
                         <div class="row">
-                            <div class="four wide column">
+                            <div class="six wide column">
                                 <h3 class="ui header">Section Three</h3>
                                 <img class="ui medium rounded image" src="/images/wireframe/square-image.png">
                             </div>
