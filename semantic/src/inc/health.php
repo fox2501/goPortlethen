@@ -37,6 +37,7 @@
 
     <!-- Health info sections -->
     <!-- Only appear as and when they are added by contributor -->
+    <div style="overflow:scroll>
     <div class="ui container">
         <div class="ui grid">
             <div class="row">
@@ -98,6 +99,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     <!-- Footer -->
