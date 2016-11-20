@@ -19,10 +19,8 @@
             <div class="row">
                 <!-- Takes user to SubmitHealth.php -->
                 <!-- Only visible to admin/contributor -->
-                <!-- When ordinary user is logged in, hide this button -->
-                <button class="ui primary button">
-                    <a href="http://goportlethencs8.azurewebsites.net/semantic/src/inc/submithealth.php">Submit Content</a>
-                </button>
+                <!-- When ordinary user on site, hide this button -->
+                <button class="ui primary button"><a href="submithealth.php">Submit Content</a></button>
             </div>
             <div class="row">
                 <div class="four wide column">
