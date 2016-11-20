@@ -17,11 +17,11 @@
     </div>
 
     <p>User creating a new post:
-    <br>Add title, text and image(s)
-    <br>Name and date is added too</p>
+    <br>User inputs title, text and image(s) into form
+    <br>Name and date are automatically addded</p>
 
     <p>User editing a post:
-    <br>Can edit title, text and image(s)
+    <br>Can edit title, text and image(s) on form (original information is displayed when "edit" is clicked
     <br>Name stays the same but date changes
     <br>Can also delete post</p>
 </body>
