@@ -31,12 +31,9 @@
         </div>
     </div>
 
-    <!--<div class="eight wide column">
-                    <iframe src="https://calendar.google.com/calendar/embed?src=imdvs1dbg4fm5e9g35o2cj8i2g%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
-                </div>
-                <div class="five wide column">
-                    <p>Twitter</p>
-                </div>-->
+    <!-- Calendar
+    <iframe src="https://calendar.google.com/calendar/embed?src=imdvs1dbg4fm5e9g35o2cj8i2g%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
+    -->
 
     <!-- Health info sections -->
     <!-- Only appear as and when they are added by contributor -->
@@ -102,6 +99,7 @@
             </div>
         </div>
     </div>
+
     <!-- Footer -->
     <?php include("includes/footer.php"); ?>
 </body>
