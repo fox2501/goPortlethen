@@ -20,7 +20,7 @@
                 <!-- Takes user to SubmitHealth.php -->
                 <!-- Only visible to admin/contributor -->
                 <!-- When ordinary user on site, hide this button -->
-                <button class="ui primary button"><a href="submithealth.php">Submit Content</a></button>
+                <a href="submithealth.php"><button class="ui primary button">Submit Content</button></a>
             </div>
             <div class="row">
                 <div class="four wide column">
