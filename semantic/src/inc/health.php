@@ -19,6 +19,9 @@
             <div class="row">
                 <button class="ui primary button">
                     Submit Content
+                    $('.ui.modal')
+                    .modal('show')
+                    ;
                 </button>
             </div>
             <div class="row">
