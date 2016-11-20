@@ -32,7 +32,7 @@
     <div class="ui container">
         <div class="ui grid">
             <div class="row">
-                <a href="submithealth.php"><button class="ui primary button">Submit Content</button></a>
+                <a href="submithealth.php"><button class="ui primary button">Submit Content111</button></a>
                 <br><br>
             </div>
         </div>
