@@ -11,15 +11,13 @@
     <!-- Page header -->
     <h1 align="center">Health & Wellbeing</h1>
 
-    <!-- Button for admin/contributors
-         Only appears if they are logged in -->
-    <button class="ui primary button">
-        Submit Content
-    </button>
-    <br><br><br>
-
     <div class="ui container">
         <div class="ui grid">
+            <div class="row">
+                <button class="ui primary button">
+                    Submit Content
+                </button>
+            </div>
             <div class="row">
                 <div class="four wide column">
                     <h3 class="ui header">Section One</h3>
