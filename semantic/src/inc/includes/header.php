@@ -15,7 +15,7 @@ session_start();
         <i class = "home icon"></i>
         goPortlethen
     </a>
-    <a class = "item">
+    <a class = "item" href="/semantic/src/inc/health.php">
         <i class="heartbeat icon"></i>
         Health & Wellbeing
     </a>
