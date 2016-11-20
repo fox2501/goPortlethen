@@ -13,5 +13,7 @@
     <div class="ui horizontal section divider">
         Keeping Portlethen Healthy
     </div>
+
+    <?php include("includes/footer.php"); ?>
 </body>
 </html>
