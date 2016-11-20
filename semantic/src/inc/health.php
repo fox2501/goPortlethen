@@ -13,9 +13,10 @@
     <!-- Page header -->
     <h1 align="center">Health & Wellbeing</h1>
     <div class="ui horizontal section divider">
-        Keeping Portlethen Healthy
+        <p>Keeping Portlethen Healthy</p>
     </div>
 
+    <!-- Submit content button, calendar, Twitter -->
     <div class="ui container">
         <div class="ui grid">
             <div class="row">
@@ -23,13 +24,15 @@
                     <!-- Submit content button -->
                     <!-- Takes user to SubmitHealth.php -->
                     <!-- Only visible to admin/contributor -->
-                    <!-- When ordinary user on site, hide this button -->
+                    <!-- When ordinary user on site, block out this button -->
                     <a href="submithealth.php"><button class="ui primary button">Submit Content</button></a>
                     <br><br>
                 </div>
-                <div class="two wide column"></div>
-                <div class="three wide column"></div>
+                <div class="three wide column">
                     <iframe src="https://calendar.google.com/calendar/embed?src=imdvs1dbg4fm5e9g35o2cj8i2g%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
+                </div>
+                <div class="three wide column">
+                    <p>Twitter</p>
                 </div>
             </div>
 
