@@ -15,6 +15,11 @@
     <div class="ui horizontal section divider">
         Keeping Portlethen Healthy
     </div>
+
+
+
+    <p>User inputs a title, text and a image(s)
+    This is all displayed in a new section on the health page (along with the date and their name)</p>
 </body>
 
 <!-- Footer -->
