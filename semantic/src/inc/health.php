@@ -35,9 +35,9 @@
                     <p>Twitter</p>
                 </div>
             </div>
-
         </div>
     </div>
+    <div class="ui divider"></div>
 
     <!-- Health info sections -->
     <!-- Only appear as and when they are added by contributor -->
