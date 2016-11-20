@@ -31,9 +31,7 @@
         </div>
     </div>
 
-    <!-- Calendar
-    -->
-    <div class="container">
+    <div class=" ui container">
         <div class="ui grid">
             <div class="row">
                 <div style="overflow: scroll; height:500px">
