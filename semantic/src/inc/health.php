@@ -33,7 +33,7 @@
                     <h3 class="ui header">Section One</h3>
                     <img class="ui medium rounded image" src="/images/wireframe/square-image.png">
                 </div>
-                <div class="six wide column">
+                <div class="four wide column">
                     <!-- Lets user edit title, information and pictures, or delete the whole thing, of already existing health information -->
                     <!-- Only visible to admin/contributor -->
                     <!-- When ordinary user is logged in, hide this button -->
@@ -54,7 +54,7 @@
                     <h3 class="ui header">Section Two</h3>
                     <img class="ui medium rounded image" src="/images/wireframe/square-image.png">
                 </div>
-                <div class="six wide column">
+                <div class="four wide column">
                     <!-- Lets user edit title, information and pictures, or delete the whole thing, of already existing health information -->
                     <!-- Only visible to admin/contributor -->
                     <!-- When ordinary user is logged in, hide this button -->
@@ -75,7 +75,7 @@
                     <h3 class="ui header">Section Three</h3>
                     <img class="ui medium rounded image" src="/images/wireframe/square-image.png">
                 </div>
-                <div class="six wide column">
+                <div class="four wide column">
                     <!-- Lets user edit title, information and pictures, or delete the whole thing, of already existing health information -->
                     <!-- Only visible to admin/contributor -->
                     <!-- When ordinary user is logged in, hide this button -->
