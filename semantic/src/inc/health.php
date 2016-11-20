@@ -35,7 +35,7 @@
         <div class="ui grid">
             <div class="row">
                 <!-- Scrollable info section -->
-                <div style="overflow: scroll; height:500px; width: 800px">
+                <div class="eight wide column" style="overflow: scroll; height:500px; width: 800px">
 
                     <!-- Section 1 -->
                     <div class="ui grid">
@@ -86,7 +86,7 @@
                     </div>
                 </div>
                 <!-- Calendar section -->
-                <div>
+                <div class="three wide column">
                     <iframe src="https://calendar.google.com/calendar/embed?src=imdvs1dbg4fm5e9g35o2cj8i2g%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
                 </div>
             </div>
