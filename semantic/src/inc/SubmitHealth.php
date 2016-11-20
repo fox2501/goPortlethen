@@ -19,16 +19,19 @@
     <div class="ui container">
         <form class="ui form">
             <div class="field">
-                <label>Post Title</label>
+                <label>Title</label>
                 <div class="field">
-                    <input type="text" name="title" placeholder="Enter the title of your post:">
+                    <input type="text" name="title" placeholder="Enter the title of your post">
                 </div>
-                <label>Post Content</label>
+                <label>Content</label>
                 <div class="field">
-                    <textarea rows="8" input type="text" name="content" placeholder="Enter the content of your post:"></textarea>
+                    <textarea rows="8" input type="text" name="content" placeholder="Enter the content of your post"></textarea>
                 </div>
-
-
+                <label>Main Image</label>
+                <div class="field">
+                    <!-- Should be able to select image -->
+                    <input type="text" name="image" placeholder="Select an image for your post">
+                </div>
             </div>
         </form>
     </div>
