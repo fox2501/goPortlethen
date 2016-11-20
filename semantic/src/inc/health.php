@@ -47,6 +47,7 @@
                 <img class="ui medium rounded image" src="/images/wireframe/square-image.png">
             </div>
         </div>
+
         <div class="four wide column">
             <iframe src="https://calendar.google.com/calendar/embed?src=imdvs1dbg4fm5e9g35o2cj8i2g%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
         </div>
