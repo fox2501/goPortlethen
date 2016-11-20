@@ -33,6 +33,7 @@
         <div class="ui grid">
             <div class="row">
                 <a href="submithealth.php"><button class="ui primary button">Submit Content</button></a>
+                <br><br>
             </div>
         </div>
     </div>
@@ -40,7 +41,7 @@
     <!-- Section 1 information -->
     <div class="ui container">
         <div class="row">
-            <div class="three wide column">
+            <div class="two wide column">
                 <h3 class="ui header">Section One</h3>
                 <img class="ui small rounded image" src="/images/wireframe/square-image.png">
             </div>
