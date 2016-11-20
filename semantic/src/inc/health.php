@@ -29,9 +29,9 @@
                 <a href="submithealth.php"><button class="ui primary button">Submit Content</button></a>
             </div>
             <div class="row">
-                <div class="four wide column">
+                <div class="three wide column">
                     <h3 class="ui header">Section One</h3>
-                    <img class="ui medium rounded image" src="/images/wireframe/square-image.png">
+                    <img class="ui small rounded image" src="/images/wireframe/square-image.png">
                 </div>
                 <div class="four wide column">
                     <!-- Lets user edit title, information and pictures, or delete the whole thing, of already existing health information -->
@@ -50,9 +50,9 @@
     <div class="ui container">
         <div class="ui grid">
             <div class="row">
-                <div class="four wide column">
+                <div class="three wide column">
                     <h3 class="ui header">Section Two</h3>
-                    <img class="ui medium rounded image" src="/images/wireframe/square-image.png">
+                    <img class="ui small rounded image" src="/images/wireframe/square-image.png">
                 </div>
                 <div class="four wide column">
                     <!-- Lets user edit title, information and pictures, or delete the whole thing, of already existing health information -->
@@ -71,9 +71,9 @@
     <div class="ui container">
         <div class="ui grid">
             <div class="row">
-                <div class="four wide column">
+                <div class="three wide column">
                     <h3 class="ui header">Section Three</h3>
-                    <img class="ui medium rounded image" src="/images/wireframe/square-image.png">
+                    <img class="ui small rounded image" src="/images/wireframe/square-image.png">
                 </div>
                 <div class="four wide column">
                     <!-- Lets user edit title, information and pictures, or delete the whole thing, of already existing health information -->
