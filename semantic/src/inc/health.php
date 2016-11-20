@@ -43,7 +43,6 @@
         <div class="ui grid">
             <div class="row">
                 <div class="two wide column">
-
                     <h3 class="ui header">Section One</h3>
                     <img class="ui small rounded image" src="/images/wireframe/square-image.png">
                 </div>
@@ -62,7 +61,9 @@
                     <iframe src="https://calendar.google.com/calendar/embed?src=imdvs1dbg4fm5e9g35o2cj8i2g%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
                 </div>
             </div>
+        </div>
 
+        <div class="ui grid">
             <div class="row">
                 <div class="two wide column">
                     <h3 class="ui header">Section Two</h3>
@@ -79,7 +80,9 @@
                     <div class="ui divider"></div>
                 </div>
             </div>
+        </div>
 
+        <div class="ui grid">
             <div class="row">
                 <div class="two wide column">
                     <h3 class="ui header">Section Three</h3>
