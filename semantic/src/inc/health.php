@@ -17,10 +17,9 @@
     <div class="ui container">
         <div class="ui grid">
             <div class="row">
-                <button class="ui primary button">
-                    Submit Content
-
-                </button>
+                 <button class="ui primary button">
+                     Submit Content
+                 </button>
             </div>
             <div class="row">
                 <div class="four wide column">
@@ -64,8 +63,6 @@
             </div>
         </div>
     </div>
-
-
 
 
 
