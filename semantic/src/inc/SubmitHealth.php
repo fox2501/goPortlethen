@@ -5,6 +5,8 @@
     <link rel = "stylesheet" type = "text/css" href = "semantic.css">
     <title>Semantic UI</title>
 </head>
+
+<!-- Nav bar -->
 <?include ("includes/header.php"); ?>
 
 <body>
@@ -13,7 +15,9 @@
     <div class="ui horizontal section divider">
         Keeping Portlethen Healthy
     </div>
-
-    <?php include("includes/footer.php"); ?>
 </body>
+
+<!-- Footer -->
+<?php include("includes/footer.php"); ?>
+
 </html>
