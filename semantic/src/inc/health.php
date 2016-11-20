@@ -34,7 +34,7 @@
     <div class=" ui container">
         <div class="ui grid">
             <div class="row">
-                <div style="overflow: scroll; height:500px; width: 500px">
+                <div style="overflow: scroll; height:500px; width: 900px">
                     <div class="ui grid">
                         <div class="row">
                             <div class="four wide column">
