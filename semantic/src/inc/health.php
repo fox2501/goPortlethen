@@ -38,75 +38,57 @@
         </div>
     </div>
 
-    <!-- Section 1 information -->
-    <div class="ui container">
-        <div class="row">
-            <div class="two wide column">
-                <h3 class="ui header">Section One</h3>
-                <img class="ui small rounded image" src="/images/wireframe/square-image.png">
-            </div>
-            <div class="five wide column">
-                <!-- Lets user edit title, information and pictures, or delete the whole thing, of already existing health information -->
-                <!-- Only visible to admin/contributor -->
-                <!-- When ordinary user is logged in, hide this button -->
-                <button class="mini ui button" style="float:right; margin-left:20px">Edit</button>
-                <p style="text-align:justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ante eu faucibus efficitur. Suspendisse potenti. Fusce lobortis massa arcu, eget vestibulum sem sagittis sed. Aliquam nec quam tristique, pulvinar mauris ac, euismod ipsum. Nullam magna ipsum, auctor eget justo a, interdum condimentum tellus. Mauris auctor, massa id pulvinar laoreet, nibh elit fringilla nulla, sed commodo enim velit in massa. Aenean non volutpat orci. Phasellus nunc velit, semper at efficitur ut, finibus vel tellus. Proin egestas quis neque non elementum. Pellentesque eros nulla, venenatis non rhoncus id, blandit eget elit. Duis ornare cursus pretium.</p>
-                <p style="text-align:justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ante eu faucibus efficitur. Suspendisse potenti. Fusce lobortis massa arcu, eget vestibulum sem sagittis sed. Aliquam nec quam tristique, pulvinar mauris ac, euismod ipsum. Nullam magna ipsum, auctor eget justo a, interdum condimentum tellus. Mauris auctor, massa id pulvinar laoreet, nibh elit fringilla nulla, sed commodo enim velit in massa. Aenean non volutpat orci. Phasellus nunc velit, semper at efficitur ut, finibus vel tellus. Proin egestas quis neque non elementum. Pellentesque eros nulla, venenatis non rhoncus id, blandit eget elit. Duis ornare cursus pretium.</p>
-                <div class="ui divider"></div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="two wide column">
-                <h3 class="ui header">Section Two</h3>
-                <img class="ui small rounded image" src="/images/wireframe/square-image.png">
-            </div>
-            <div class="five wide column">
-                <!-- Lets user edit title, information and pictures, or delete the whole thing, of already existing health information -->
-                <!-- Only visible to admin/contributor -->
-                <!-- When ordinary user is logged in, hide this button -->
-                <button class="mini ui button" style="float:right; margin-left:20px">Edit</button>
-                <p style="text-align:justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ante eu faucibus efficitur. Suspendisse potenti. Fusce lobortis massa arcu, eget vestibulum sem sagittis sed. Aliquam nec quam tristique, pulvinar mauris ac, euismod ipsum. Nullam magna ipsum, auctor eget justo a, interdum condimentum tellus. Mauris auctor, massa id pulvinar laoreet, nibh elit fringilla nulla, sed commodo enim velit in massa. Aenean non volutpat orci. Phasellus nunc velit, semper at efficitur ut, finibus vel tellus. Proin egestas quis neque non elementum. Pellentesque eros nulla, venenatis non rhoncus id, blandit eget elit. Duis ornare cursus pretium.</p>
-                <p style="text-align:justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ante eu faucibus efficitur. Suspendisse potenti. Fusce lobortis massa arcu, eget vestibulum sem sagittis sed. Aliquam nec quam tristique, pulvinar mauris ac, euismod ipsum. Nullam magna ipsum, auctor eget justo a, interdum condimentum tellus. Mauris auctor, massa id pulvinar laoreet, nibh elit fringilla nulla, sed commodo enim velit in massa. Aenean non volutpat orci. Phasellus nunc velit, semper at efficitur ut, finibus vel tellus. Proin egestas quis neque non elementum. Pellentesque eros nulla, venenatis non rhoncus id, blandit eget elit. Duis ornare cursus pretium.</p>
-                <div class="ui divider"></div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="two wide column">
-                <h3 class="ui header">Section Three</h3>
-                <img class="ui small rounded image" src="/images/wireframe/square-image.png">
-            </div>
-            <div class="five wide column">
-                <!-- Lets user edit title, information and pictures, or delete the whole thing, of already existing health information -->
-                <!-- Only visible to admin/contributor -->
-                <!-- When ordinary user is logged in, hide this button -->
-                <button class="mini ui button" style="float:right; margin-left:20px">Edit</button>
-                <p style="text-align:justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ante eu faucibus efficitur. Suspendisse potenti. Fusce lobortis massa arcu, eget vestibulum sem sagittis sed. Aliquam nec quam tristique, pulvinar mauris ac, euismod ipsum. Nullam magna ipsum, auctor eget justo a, interdum condimentum tellus. Mauris auctor, massa id pulvinar laoreet, nibh elit fringilla nulla, sed commodo enim velit in massa. Aenean non volutpat orci. Phasellus nunc velit, semper at efficitur ut, finibus vel tellus. Proin egestas quis neque non elementum. Pellentesque eros nulla, venenatis non rhoncus id, blandit eget elit. Duis ornare cursus pretium.</p>
-                <p style="text-align:justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ante eu faucibus efficitur. Suspendisse potenti. Fusce lobortis massa arcu, eget vestibulum sem sagittis sed. Aliquam nec quam tristique, pulvinar mauris ac, euismod ipsum. Nullam magna ipsum, auctor eget justo a, interdum condimentum tellus. Mauris auctor, massa id pulvinar laoreet, nibh elit fringilla nulla, sed commodo enim velit in massa. Aenean non volutpat orci. Phasellus nunc velit, semper at efficitur ut, finibus vel tellus. Proin egestas quis neque non elementum. Pellentesque eros nulla, venenatis non rhoncus id, blandit eget elit. Duis ornare cursus pretium.</p>
-                <div class="ui divider"></div>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- Section 2 information -->
-    <div class="ui container">
-
-    </div>
-
-    <!-- Section 3 information -->
-    <div class="ui container">
-
-    </div>
-
-    <!-- Calendar div -->
     <div class="ui container">
         <div class="ui grid">
+            <div class="row">
+                <div class="two wide column">
+                    <h3 class="ui header">Section One</h3>
+                    <img class="ui small rounded image" src="/images/wireframe/square-image.png">
+                </div>
+                <div class="five wide column">
+                    <!-- Lets user edit title, information and pictures, or delete the whole thing, of already existing health information -->
+                    <!-- Only visible to admin/contributor -->
+                    <!-- When ordinary user is logged in, hide this button -->
+                    <button class="mini ui button" style="float:right; margin-left:20px">Edit</button>
+                    <p style="text-align:justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ante eu faucibus efficitur. Suspendisse potenti. Fusce lobortis massa arcu, eget vestibulum sem sagittis sed. Aliquam nec quam tristique, pulvinar mauris ac, euismod ipsum. Nullam magna ipsum, auctor eget justo a, interdum condimentum tellus. Mauris auctor, massa id pulvinar laoreet, nibh elit fringilla nulla, sed commodo enim velit in massa. Aenean non volutpat orci. Phasellus nunc velit, semper at efficitur ut, finibus vel tellus. Proin egestas quis neque non elementum. Pellentesque eros nulla, venenatis non rhoncus id, blandit eget elit. Duis ornare cursus pretium.</p>
+                    <p style="text-align:justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ante eu faucibus efficitur. Suspendisse potenti. Fusce lobortis massa arcu, eget vestibulum sem sagittis sed. Aliquam nec quam tristique, pulvinar mauris ac, euismod ipsum. Nullam magna ipsum, auctor eget justo a, interdum condimentum tellus. Mauris auctor, massa id pulvinar laoreet, nibh elit fringilla nulla, sed commodo enim velit in massa. Aenean non volutpat orci. Phasellus nunc velit, semper at efficitur ut, finibus vel tellus. Proin egestas quis neque non elementum. Pellentesque eros nulla, venenatis non rhoncus id, blandit eget elit. Duis ornare cursus pretium.</p>
+                    <div class="ui divider"></div>
+                </div>
+            </div>
 
+            <div class="row">
+                <div class="two wide column">
+                    <h3 class="ui header">Section Two</h3>
+                    <img class="ui small rounded image" src="/images/wireframe/square-image.png">
+                </div>
+                <div class="five wide column">
+                    <!-- Lets user edit title, information and pictures, or delete the whole thing, of already existing health information -->
+                    <!-- Only visible to admin/contributor -->
+                    <!-- When ordinary user is logged in, hide this button -->
+                    <button class="mini ui button" style="float:right; margin-left:20px">Edit</button>
+                    <p style="text-align:justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ante eu faucibus efficitur. Suspendisse potenti. Fusce lobortis massa arcu, eget vestibulum sem sagittis sed. Aliquam nec quam tristique, pulvinar mauris ac, euismod ipsum. Nullam magna ipsum, auctor eget justo a, interdum condimentum tellus. Mauris auctor, massa id pulvinar laoreet, nibh elit fringilla nulla, sed commodo enim velit in massa. Aenean non volutpat orci. Phasellus nunc velit, semper at efficitur ut, finibus vel tellus. Proin egestas quis neque non elementum. Pellentesque eros nulla, venenatis non rhoncus id, blandit eget elit. Duis ornare cursus pretium.</p>
+                    <p style="text-align:justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ante eu faucibus efficitur. Suspendisse potenti. Fusce lobortis massa arcu, eget vestibulum sem sagittis sed. Aliquam nec quam tristique, pulvinar mauris ac, euismod ipsum. Nullam magna ipsum, auctor eget justo a, interdum condimentum tellus. Mauris auctor, massa id pulvinar laoreet, nibh elit fringilla nulla, sed commodo enim velit in massa. Aenean non volutpat orci. Phasellus nunc velit, semper at efficitur ut, finibus vel tellus. Proin egestas quis neque non elementum. Pellentesque eros nulla, venenatis non rhoncus id, blandit eget elit. Duis ornare cursus pretium.</p>
+                    <div class="ui divider"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="two wide column">
+                    <h3 class="ui header">Section Three</h3>
+                    <img class="ui small rounded image" src="/images/wireframe/square-image.png">
+                </div>
+                <div class="five wide column">
+                    <!-- Lets user edit title, information and pictures, or delete the whole thing, of already existing health information -->
+                    <!-- Only visible to admin/contributor -->
+                    <!-- When ordinary user is logged in, hide this button -->
+                    <button class="mini ui button" style="float:right; margin-left:20px">Edit</button>
+                    <p style="text-align:justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ante eu faucibus efficitur. Suspendisse potenti. Fusce lobortis massa arcu, eget vestibulum sem sagittis sed. Aliquam nec quam tristique, pulvinar mauris ac, euismod ipsum. Nullam magna ipsum, auctor eget justo a, interdum condimentum tellus. Mauris auctor, massa id pulvinar laoreet, nibh elit fringilla nulla, sed commodo enim velit in massa. Aenean non volutpat orci. Phasellus nunc velit, semper at efficitur ut, finibus vel tellus. Proin egestas quis neque non elementum. Pellentesque eros nulla, venenatis non rhoncus id, blandit eget elit. Duis ornare cursus pretium.</p>
+                    <p style="text-align:justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ante eu faucibus efficitur. Suspendisse potenti. Fusce lobortis massa arcu, eget vestibulum sem sagittis sed. Aliquam nec quam tristique, pulvinar mauris ac, euismod ipsum. Nullam magna ipsum, auctor eget justo a, interdum condimentum tellus. Mauris auctor, massa id pulvinar laoreet, nibh elit fringilla nulla, sed commodo enim velit in massa. Aenean non volutpat orci. Phasellus nunc velit, semper at efficitur ut, finibus vel tellus. Proin egestas quis neque non elementum. Pellentesque eros nulla, venenatis non rhoncus id, blandit eget elit. Duis ornare cursus pretium.</p>
+                    <div class="ui divider"></div>
+                </div>
+            </div>
         </div>
     </div>
-
     <!-- Footer -->
     <?php include("includes/footer.php"); ?>
 </body>
