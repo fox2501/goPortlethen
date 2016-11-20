@@ -37,7 +37,7 @@
 
     <!-- Health info sections -->
     <!-- Only appear as and when they are added by contributor -->
-    <div style="overflow:scroll>
+    <div style="overflow y:scroll; height:500px">
     <div class="ui container">
         <div class="ui grid">
             <div class="row">
