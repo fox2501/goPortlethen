@@ -17,10 +17,11 @@
     <div class="ui container">
         <div class="ui grid">
             <div class="row">
+                <!-- Takes user to SubmitHealth.php -->
                 <!-- Only visible to admin/contributor -->
                 <!-- When ordinary user is logged in, hide this button -->
                 <button class="ui primary button">
-                    Submit Content
+                    <a href="/semantic/src/inc/SubmitHealth.php">Submit Content</a>
                 </button>
             </div>
             <div class="row">
@@ -29,6 +30,7 @@
                     <img class="ui medium rounded image" src="/images/wireframe/square-image.png">
                 </div>
                 <div class="six wide column">
+                    <!-- Lets user edit title, information and pictures, or delete the whole thing, of already existing health information -->
                     <!-- Only visible to admin/contributor -->
                     <!-- When ordinary user is logged in, hide this button -->
                     <button class="mini ui button" style="float:right; margin-left:20px">Edit</button>
@@ -46,6 +48,7 @@
                     <img class="ui medium rounded image" src="/images/wireframe/square-image.png">
                 </div>
                 <div class="six wide column">
+                    <!-- Lets user edit title, information and pictures, or delete the whole thing, of already existing health information -->
                     <!-- Only visible to admin/contributor -->
                     <!-- When ordinary user is logged in, hide this button -->
                     <button class="mini ui button" style="float:right; margin-left:20px">Edit</button>
@@ -63,6 +66,7 @@
                     <img class="ui medium rounded image" src="/images/wireframe/square-image.png">
                 </div>
                 <div class="six wide column">
+                    <!-- Lets user edit title, information and pictures, or delete the whole thing, of already existing health information -->
                     <!-- Only visible to admin/contributor -->
                     <!-- When ordinary user is logged in, hide this button -->
                     <button class="mini ui button" style="float:right; margin-left:20px">Edit</button>
