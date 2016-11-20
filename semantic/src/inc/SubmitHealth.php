@@ -1,7 +1,17 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Lorna
- * Date: 20/11/2016
- * Time: 14:36
- */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" type = "text/css" href = "semantic.css">
+    <title>Semantic UI</title>
+</head>
+<?include ("includes/header.php"); ?>
+
+<body>
+    <!-- Page header -->
+    <h1 align="center">Submit Health & Wellbeing Information</h1>
+    <div class="ui horizontal section divider">
+        Keeping Portlethen Healthy
+    </div>
+</body>
+</html>
