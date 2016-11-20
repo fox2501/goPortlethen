@@ -65,6 +65,12 @@
         </div>
     </div>
 
+    <?php
+    $('.ui.modal')
+    .modal('show')
+    ;
+    ?>
+
     <div class="ui modal">
         <i class="close icon"></i>
         <div class="header">
