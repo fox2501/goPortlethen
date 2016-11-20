@@ -35,7 +35,7 @@
         <div class="ui grid">
             <div class="row">
                 <!-- Scrollable info section -->
-                <div class="ten wide column" style="overflow: scroll; height:900px; width: 800px">
+                <div class="ten wide column" style="height:900px; width: 800px">
 
                     <!-- Section 1 -->
                     <div class="ui grid">
