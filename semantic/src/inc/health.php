@@ -22,7 +22,6 @@
                     <?$('.ui.modal')
                     .modal('show')
                     ;?>
-
                 </button>
             </div>
             <div class="row">
