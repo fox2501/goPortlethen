@@ -5,6 +5,8 @@
     <link rel = "stylesheet" type = "text/css" href = "semantic.css">
     <title>Semantic UI</title>
 </head>
+
+<!-- Nav bar -->
 <?include ("includes/header.php"); ?>
 
 <body>
@@ -14,6 +16,10 @@
         Keeping Portlethen Healthy
     </div>
 
+    <!-- Health info sections
+         Only appear as and when they are added by contributor -->
+
+    <!-- Section 1 information -->
     <div class="ui container">
         <div class="ui grid">
             <div class="row">
@@ -40,6 +46,7 @@
         </div>
     </div>
 
+    <!-- Section 2 information -->
     <div class="ui container">
         <div class="ui grid">
             <div class="row">
@@ -60,6 +67,7 @@
         </div>
     </div>
 
+    <!-- Section 3 information -->
     <div class="ui container">
         <div class="ui grid">
             <div class="row">
@@ -82,12 +90,18 @@
 
 
 
-    <!--
-        <div class="four wide column">
-            <iframe src="https://calendar.google.com/calendar/embed?src=imdvs1dbg4fm5e9g35o2cj8i2g%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
-        </div>-->
+    <!-- Calendar div -->
+    <div class="ui container">
+        <div class="ui grid">
+            <div class="row">
+                <div class="four wide column">
+                    <iframe src="https://calendar.google.com/calendar/embed?src=imdvs1dbg4fm5e9g35o2cj8i2g%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
 
-
+    <!-- Footer -->
     <?php include("includes/footer.php"); ?>
 </body>
 </html>
