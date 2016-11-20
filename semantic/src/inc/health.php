@@ -19,7 +19,7 @@
     <!-- Submit content button -->
     <!-- Takes user to SubmitHealth.php -->
     <!-- Only visible to admin/contributor -->
-    <!-- When ordinary user on site, disable this button -->
+    <!-- When ordinary user on site, hide this div -->
     <div class="ui container">
         <div class="ui grid">
             <div class="row">
@@ -34,7 +34,7 @@
     <div class=" ui container">
         <div class="ui grid">
             <div class="row">
-                <!-- Scrollable info section -->
+                <!-- Info section -->
                 <div class="ten wide column">
 
                     <!-- Section 1 -->
@@ -96,9 +96,9 @@
             </div>
         </div>
     </div>
-
-
-    <!-- Footer -->
-    <?php include("includes/footer.php"); ?>
 </body>
+
+<!-- Footer -->
+<?php include("includes/footer.php"); ?>
+
 </html>
