@@ -11,8 +11,8 @@
     <!-- Page header -->
     <h1 align="center">Health & Wellbeing</h1>
 
-    <!-- Button for admin/contributors -->
-    <!-- Only appears if they are logged in -->
+    <!-- Button for admin/contributors
+         Only appears if they are logged in -->
     <button class="ui primary button">
         Submit Content
     </button>
@@ -20,8 +20,13 @@
 
     <div class="ui grid">
         <div class="four wide column">
+
+            <!-- Div to hold a section of information
+                 Div's appear individually as and when contributors add information -->
             <div>
                 <h3 class="ui header">Section One</h3>
+                <!-- Button for admin/contributors
+                     Only appears if they are logged in -->
                 <button class="mini ui button">
                     Edit
                 </button>
@@ -36,8 +41,6 @@
         <div class="four wide column">
             <iframe src="https://calendar.google.com/calendar/embed?src=imdvs1dbg4fm5e9g35o2cj8i2g%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
         </div>
-        <div class="four wide column"></div>
-        <div class="four wide column"></div>
     </div>
 
     <?php include("includes/footer.php"); ?>
