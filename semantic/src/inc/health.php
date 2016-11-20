@@ -43,6 +43,7 @@
         <div class="ui grid">
             <div class="row">
                 <div class="two wide column">
+
                     <h3 class="ui header">Section One</h3>
                     <img class="ui small rounded image" src="/images/wireframe/square-image.png">
                 </div>
