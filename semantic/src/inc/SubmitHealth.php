@@ -16,6 +16,29 @@
         Keeping Portlethen Healthy
     </div>
 
+    <div class="ui container">
+        <form class="ui form">
+            <div class="field">
+                <label>Post Title</label>
+                <div class="field">
+                    <input type="text" name="title" placeholder="Enter the title of your post:">
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
     <p>User creating a new post:
     <br>User inputs title, text and image(s) into form
     <br>Name and date are automatically addded</p>
