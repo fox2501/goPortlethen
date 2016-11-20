@@ -55,10 +55,7 @@
                 <div class="ui divider"></div>
             </div>
         </div>
-    </div>
 
-    <!-- Section 2 information -->
-    <div class="ui container">
         <div class="row">
             <div class="two wide column">
                 <h3 class="ui header">Section Two</h3>
@@ -74,10 +71,7 @@
                 <div class="ui divider"></div>
             </div>
         </div>
-    </div>
 
-    <!-- Section 3 information -->
-    <div class="ui container">
         <div class="row">
             <div class="two wide column">
                 <h3 class="ui header">Section Three</h3>
@@ -93,6 +87,17 @@
                 <div class="ui divider"></div>
             </div>
         </div>
+
+    </div>
+
+    <!-- Section 2 information -->
+    <div class="ui container">
+
+    </div>
+
+    <!-- Section 3 information -->
+    <div class="ui container">
+
     </div>
 
     <!-- Calendar div -->
