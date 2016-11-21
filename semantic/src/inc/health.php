@@ -52,19 +52,13 @@
                                         ?>
                                     </h3>
                                     <img class="ui medium rounded image" src="" id="image">
-                                        <?php
-                                        $image = $_POST["image"];
-                                        echo "{$image}";
-                                        ?>
+
                                     </img>
                                 </div>
                                 <div class="ten wide column">
                                     <button class="mini ui button" style="float:right; margin-left:20px">Edit</button>
                                     <p id="content">
-                                        <?php
-                                        $content = $_POST["content"];
-                                        echo "{$content}";
-                                        ?>
+
                                     </p>
                                     <p id="author"><!-- Automatically add username of author --></p>
                                     <p id="date"><!-- Automatically add date of post --></p>
