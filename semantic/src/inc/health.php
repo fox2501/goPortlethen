@@ -37,18 +37,20 @@
                 <div class="ten wide column">
 
                     <!-- Blank area to input info through form -->
-                    <div class="ui grid">
-                        <div class="row">
-                            <div class="four wide column">
-                                <h3 class="ui header" id="title"></h3>
-                                <img class="ui medium rounded image" src="" id="image">
-                            </div>
-                            <div class="ten wide column">
-                                <button class="mini ui button" style="float:right; margin-left:20px">Edit</button>
-                                <p id="content"></p>
-                                <p id="author"></p>
-                                <p id="date"></p>
-                                <div class="ui divider"></div>
+                    <div class="infoInput">
+                        <div class="ui grid">
+                            <div class="row">
+                                <div class="four wide column">
+                                    <h3 class="ui header" id="title"><!-- Enter title here from title field --></h3>
+                                    <img class="ui medium rounded image" src="" id="image"><!-- Enter image here from image field -->
+                                </div>
+                                <div class="ten wide column">
+                                    <button class="mini ui button" style="float:right; margin-left:20px">Edit</button>
+                                    <p id="content"><!-- Enter content here from content field --></p>
+                                    <p id="author"><!-- Automatically add username of author --></p>
+                                    <p id="date"><!-- Automatically add date of post --></p>
+                                    <div class="ui divider"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
