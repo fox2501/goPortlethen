@@ -17,7 +17,7 @@
     </div>
 
     <div class="ui container">
-        <form class="ui form" action="health.php">
+        <form class="ui form" action="health.php" method="post">
             <div class="field">
                 <label>Title</label>
                 <div class="field">
