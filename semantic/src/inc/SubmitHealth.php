@@ -17,7 +17,7 @@
     </div>
 
     <div class="ui container">
-        <form class="ui form">
+        <form class="ui form" action="health.php">
             <div class="field">
                 <label>Title</label>
                 <div class="field">
@@ -52,12 +52,5 @@
 
 <!-- Footer -->
 <?php include("includes/footer.php"); ?>
-
-<?php
-
-$title = $_POST["title"];
-echo "{#title}";
-
-                ?>
 
 </html>

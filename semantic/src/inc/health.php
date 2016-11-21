@@ -137,6 +137,13 @@
     </div>
 </body>
 
+<?php
+
+$title = $_POST["title"];
+echo "{#title}";
+
+?>
+
 <!-- Footer -->
 <?php include("includes/footer.php"); ?>
 
