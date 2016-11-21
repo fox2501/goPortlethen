@@ -7,7 +7,7 @@
 </head>
 
 <!-- Database -->
-<? include ("/includes/dbconnect.php");?>
+<? include ("includes/dbconnect.php");?>
 
 <!-- Nav bar -->
 <?include ("includes/header.php"); ?>
