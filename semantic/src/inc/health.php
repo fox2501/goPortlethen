@@ -47,8 +47,6 @@
                                 <div class="four wide column">
                                     <h3 class="ui header" id="title">
                                         <?php
-                                        $title = $_POST["title"];
-                                        $sql = "INSERT INTO healthContent (title) VALUES ('$title')";
                                         echo "{$title}";
                                         ?>
                                     </h3>
