@@ -37,6 +37,13 @@
                     </div>
                 </div>
                 <input type="submit" value="SUBMIT">
+
+                <?php
+
+                $title = $_POST["title"];
+                echo "{#title"};
+
+                ?>
             </div>
         </form>
     </div>
