@@ -7,19 +7,7 @@
 </head>
 
 <!-- Database -->
-<?include ("/includes/dbconnect.php");
-
-$title = $_POST["title"];
-
-$sql = "INSERT INTO healthContent (title) VALUES ('$title')";
-
-if (mysqli_query($db, $sql)) {
-} else {
-    echo "Error: " . $sql . "<br"> . mysqli_error($db);
-}
-
-header("location:health.php");
-?>
+<? include ("dbconnect.php");?>
 
 <!-- Nav bar -->
 <?include ("includes/header.php"); ?>
@@ -60,10 +48,7 @@ header("location:health.php");
                                         <?php
                                         $sql_query = "SELECT title FROM healthContent";
                                         $result = $db->query($sql_query);
-                                        while($row = $result->fetch_array()) {
-                                            $title = $row['title'];
-                                            echo "{$title}";
-                                        }
+                                        echo "{$title}";
                                         ?>
                                     </h3>
                                     <img class="ui medium rounded image" src="" id="image">
