@@ -19,14 +19,14 @@
     <!-- Submit content button -->
     <!-- Takes user to SubmitHealth.php -->
     <!-- Only visible to admin/contributor -->
-    <!-- When ordinary user on site, hide this row -->
+    <!-- When ordinary user on site, hide this div -->
     <div class="ui container">
         <div class="ui grid">
             <div class="row">
                 <a href="submithealth.php"><button class="ui primary button">Submit Content</button></a>
-                <div class="ui divider"></div>
             </div>
         </div>
+        <div class="ui divider"></div>
     </div>
 
     <div class=" ui container">
