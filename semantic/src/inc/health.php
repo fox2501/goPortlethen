@@ -34,7 +34,6 @@
             <div class="row">
                 <!-- Info section -->
                 <!-- Sections added as users add info through form -->
-                <!-- These are placeholders -->
                 <div class="ten wide column">
 
                     <!-- Blank area to input info through form -->
@@ -53,6 +52,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- These are placeholders -->
 
                     <!-- Section 1 -->
                     <div class="ui grid">
@@ -128,6 +129,7 @@
                     <!-- Placeholder for Twitter section -->
                     <iframe src="https://calendar.google.com/calendar/embed?src=imdvs1dbg4fm5e9g35o2cj8i2g%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
                 </div>
+
             </div>
         </div>
     </div>
