@@ -22,10 +22,6 @@
                 <label>Title</label>
                 <div class="field">
                     <input type="text" name="title" placeholder="Enter the title of your post">
-                    <?php
-                    $title = $_GET["title"];
-                    echo $title;
-                    ?>
                 </div>
                 <label>Content</label>
                 <div class="field">
@@ -40,6 +36,7 @@
                         </div>
                     </div>
                 </div>
+                <input type="submit" value="SUBMIT">
             </div>
         </form>
     </div>
