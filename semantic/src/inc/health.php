@@ -44,7 +44,7 @@
                                     <h3 class="ui header" id="title"><?php
 
                                         $title = $_POST["title"];
-                                        echo "{#title}";
+                                        echo "{$title}";
 
                                         ?></h3>
                                     <img class="ui medium rounded image" src="" id="image"><!-- Enter image here from image field -->
