@@ -29,7 +29,6 @@
                 </div>
                 <label>Main Image</label>
                 <div class="field">
-                    <label>Please upload your clubs profile picture: </label>
                     <div class="ui fluid action input">
                         <input type="text" readonly>
                         <input type="file">
