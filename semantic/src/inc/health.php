@@ -8,6 +8,15 @@
 
 <!-- Database -->
 <?include ("/includes/dbconnect.php");
+
+$title = $_POST["title"];
+
+$sql = "INSERT INTO healthContent (title) VALUES ('$title')";
+
+if (mysqli_query($db, $sql)) {
+} else {
+    echo "Error: " . $sql . "<br"> . mysqli_error($db);
+}
 ?>
 
 <!-- Nav bar -->
@@ -47,7 +56,12 @@
                                 <div class="four wide column">
                                     <h3 class="ui header" id="title">
                                         <?php
-                                        echo "{$title}";
+                                        $sql_query = "SELECT title FROM healthContent";
+                                        $result = $db->query($sql_query);
+                                        while($row = $result->fetch_array()) {
+                                            $title = $row['title'];
+                                            echo "{$title}";
+                                        }
                                         ?>
                                     </h3>
                                     <img class="ui medium rounded image" src="" id="image">

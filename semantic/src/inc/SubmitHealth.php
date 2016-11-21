@@ -22,10 +22,6 @@
                 <label>Title</label>
                 <div class="field">
                     <input type="text" name="title" placeholder="Enter the title of your post">
-                    <?php
-                    $title = $_POST["title"];
-                    $sql = "INSERT INTO healthContent (title) VALUES ('$title')";
-                    ?>
                 </div>
                 <label>Content</label>
                 <div class="field">
