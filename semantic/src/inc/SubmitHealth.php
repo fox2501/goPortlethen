@@ -22,6 +22,10 @@
                 <label>Title</label>
                 <div class="field">
                     <input type="text" name="title" placeholder="Enter the title of your post">
+                    <?php
+                    $title = $_GET["title"];
+                    echo $title;
+                    ?>
                 </div>
                 <label>Content</label>
                 <div class="field">
@@ -42,7 +46,7 @@
 
 
     <!--<p>User editing a post:
-    <br>Can edit title, text and image(s) on form (original information is displayed when "edit" is clicked
+    <br>Can edit title, text and image(s) on form (original information is displayed when "edit" is clicked)
     <br>Name stays the same but date changes
     <br>Can also delete post</p>-->
 </body>
