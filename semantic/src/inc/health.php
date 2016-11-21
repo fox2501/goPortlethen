@@ -1,13 +1,14 @@
 <!DOCTYPE html>
+
+<!-- Database -->
+<? include ("includes/dbconnect.php");?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <link rel = "stylesheet" type = "text/css" href = "semantic.css">
     <title>Semantic UI</title>
 </head>
-
-<!-- Database -->
-<? include ("includes/dbconnect.php");?>
 
 <!-- Nav bar -->
 <?include ("includes/header.php"); ?>
@@ -48,6 +49,9 @@
                                         <?php
                                         $sql_query = "SELECT title FROM healthContent";
                                         $result = $db->query($sql_query);
+                                        while($row = $result->fetch_array()) {
+                                            $title = $row['title'];
+                                        }
                                         echo "{$title}";
                                         ?>
                                     </h3>
