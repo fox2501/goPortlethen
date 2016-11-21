@@ -30,7 +30,6 @@
                 <label>Main Image</label>
                 <div class="field">
                     <div class="ui fluid action input">
-                        <input type="text" readonly>
                         <input type="file">
                         <div class="ui icon button">
                             <i class="cloud upload icon"></i>
