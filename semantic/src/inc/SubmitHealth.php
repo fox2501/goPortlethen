@@ -29,8 +29,14 @@
                 </div>
                 <label>Main Image</label>
                 <div class="field">
-                    <!-- Should be able to select image -->
-                    <input type="text" name="image" placeholder="Select an image for your post">
+                    <label>Please upload your clubs profile picture: </label>
+                    <div class="ui fluid action input">
+                        <input type="text" readonly>
+                        <input type="file">
+                        <div class="ui icon button">
+                            <i class="cloud upload icon"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </form>
