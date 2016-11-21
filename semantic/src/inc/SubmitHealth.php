@@ -38,12 +38,7 @@
                 </div>
                 <input type="submit" value="SUBMIT">
 
-                <?php
 
-                $title = $_POST["title"];
-                echo "{#title"};
-
-                ?>
             </div>
         </form>
     </div>
@@ -57,5 +52,12 @@
 
 <!-- Footer -->
 <?php include("includes/footer.php"); ?>
+
+<?php
+
+$title = $_POST["title"];
+echo "{#title}";
+
+                ?>
 
 </html>
