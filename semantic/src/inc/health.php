@@ -41,7 +41,12 @@
                         <div class="ui grid">
                             <div class="row">
                                 <div class="four wide column">
-                                    <h3 class="ui header" id="title"><!-- Enter title here from title field --></h3>
+                                    <h3 class="ui header" id="title"><?php
+
+                                        $title = $_POST["title"];
+                                        echo "{#title}";
+
+                                        ?></h3>
                                     <img class="ui medium rounded image" src="" id="image"><!-- Enter image here from image field -->
                                 </div>
                                 <div class="ten wide column">
@@ -136,13 +141,6 @@
         </div>
     </div>
 </body>
-
-<?php
-
-$title = $_POST["title"];
-echo "{#title}";
-
-?>
 
 <!-- Footer -->
 <?php include("includes/footer.php"); ?>
