@@ -46,6 +46,7 @@
                                         $title = $_POST["title"];
                                         echo "{$title}";
 
+
                                         ?></h3>
                                     <img class="ui medium rounded image" src="" id="image"><!-- Enter image here from image field -->
                                 </div>
