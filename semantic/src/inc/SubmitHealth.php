@@ -25,12 +25,12 @@
                 </div>
                 <label>Content</label>
                 <div class="field">
-                    <textarea rows="8" input type="text" name="content" placeholder="Enter the content of your post"></textarea>
+                    <textarea rows="8" type="text" name="content" placeholder="Enter the content of your post"></textarea>
                 </div>
                 <label>Main Image</label>
                 <div class="field">
                     <div class="ui fluid action input">
-                        <input type="file">
+                        <input type="file" name="image">
                         <div class="ui icon button">
                             <i class="cloud upload icon"></i>
                         </div>

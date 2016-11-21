@@ -47,7 +47,12 @@
                                         echo "{$title}";
                                         ?>
                                     </h3>
-                                    <img class="ui medium rounded image" src="" id="image"><!-- Enter image here from image field -->
+                                    <img class="ui medium rounded image" src="" id="image">
+                                        <?php
+                                        $image = $_POST["image"];
+                                        echo "{$image}";
+                                        ?>
+                                    </img>
                                 </div>
                                 <div class="ten wide column">
                                     <button class="mini ui button" style="float:right; margin-left:20px">Edit</button>
