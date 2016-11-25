@@ -1,8 +1,7 @@
-<!DOCTYPE html>
-
 <!-- Database -->
 <? include ("includes/dbconnect.php");?>
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
