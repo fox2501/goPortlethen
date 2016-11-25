@@ -26,7 +26,7 @@
     <div class="ui container">
         <div class="ui grid">
             <div class="row">
-                <a href="submithealth.php"><button class="ui primary button">Submit Content</button></a>
+                <a href="healthForm.php"><button class="ui primary button">Submit Content</button></a>
             </div>
         </div>
         <div class="ui divider"></div>
