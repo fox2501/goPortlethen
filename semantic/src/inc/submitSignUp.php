@@ -10,6 +10,7 @@ $age = $_POST["age"];
 
 $sql = "INSERT INTO users (userName, password, emailAddress, displayName, approvalStatus, age) values('$username', '$password', '$email', '$displayName', '0', '$age')";
 
+$result = mysqli_query($db, $sql);
 header("location: /semantic/");
 
 ?>
