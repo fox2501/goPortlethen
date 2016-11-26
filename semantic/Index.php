@@ -1,18 +1,3 @@
-<?php
-
-$session_start();
-
-$accesslevel = $_COOKIE['access_level_cookie'];
-
-displayAccessLevelInformation($acesslevel);
-
-function displayAccessLevelInformation($accesslevel){
-    if($accesslevel == "standarduser"){
-        include("index.php");
-    }
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
