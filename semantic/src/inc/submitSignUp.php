@@ -10,6 +10,6 @@ $age = $_POST["age"];
 
 $sql = "INSERT INTO users (userName, password, emailAddress, displayName, age) values('$username', '$password', '$email', '$displayName', '$age')";
 
-header("location:index.php");
+header("location: /semantic/");
 
 ?>
