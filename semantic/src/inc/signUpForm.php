@@ -45,7 +45,7 @@
             <div class = "field">
                 <label>Age</label>
                 <div class = "field">
-                    <input type = "text" name = "age" placeholder = "Please enter your age."
+                    <input type = "number" name = "age" placeholder = "Please enter your age."
                 </div>
             </div>
             <button class="ui fluid large green submit button" type = "submit">Create Account</button>
