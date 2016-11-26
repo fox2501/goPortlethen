@@ -1,7 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: ross1
- * Date: 25/11/2016
- * Time: 10:59
- */
+
+$username = $_POST["email"];
+$password = $_POST["password"];
+
+if ($username == "email" && $password == "password") {
+    setcookie('access_level_cookie', 'standarduser');
+}
+header('Location: logginIn.php');
+
+?>

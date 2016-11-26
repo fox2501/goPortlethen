@@ -43,7 +43,7 @@
 
 
             <div class="ui message">
-                New to us? <a href="signUp.php">Sign Up</a>
+                New to us? <a href="signUpForm.php">Sign Up</a>
             </div>
         </div>
     </div>

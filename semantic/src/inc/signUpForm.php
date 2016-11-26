@@ -11,7 +11,7 @@
 <?php include("includes/header.php");?>
 <body>
 <div class = "ui container">
-    <form class = "ui form">
+    <form class = "ui form" action = "signUpMethod.php" method = "POST">
         <h2 class="ui center aligned blue header">
             <div class="content">
                 Sign up
@@ -42,6 +42,12 @@
                 <input type = "password" name = "password" placeholder = "Please create a password.">
             </div>
         </div>
+            <div class = "field">
+                <label>Age</label>
+                <div class = "field">
+                    <input type = "text" name = "age" placeholder = "Please enter your age."
+                </div>
+            </div>
             <div class="ui fluid large green submit button">Create Account</div>
         </div>
     </form>
