@@ -48,7 +48,7 @@
                     <input type = "text" name = "age" placeholder = "Please enter your age."
                 </div>
             </div>
-            <div class="ui fluid large green submit button">Create Account</div>
+            <button class="ui fluid large green submit button" type = "submit">Create Account</button>
         </div>
     </form>
 </div>
