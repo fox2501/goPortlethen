@@ -11,7 +11,7 @@
 <?php include("includes/header.php");?>
 <body>
 <div class = "ui container">
-    <form class = "ui form" action = "signUpMethod.php" method = "POST">
+    <form class = "ui form" action = "submitSignUp.php" method = "POST">
         <h2 class="ui center aligned blue header">
             <div class="content">
                 Sign up
