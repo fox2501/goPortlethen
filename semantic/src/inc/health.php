@@ -43,6 +43,38 @@
                     <div class="infoInput">
                         <div class="ui grid">
                             <div class="row">
+
+                                <ul>
+                                    <?php
+                                    $sql_query = "SELECT * FROM healthContent";
+                                    $result = $db->query($sql_query);
+                                    while($row = $result-> fetch_array()) {
+                                        $title = $row['title'];
+                                        $mainText = $row['mainText'];
+                                        echo " <div class=\"four wide column\">
+                                    <h3 class=\"ui header\" id=\"title\">
+                                    </h3>
+                                    <img class=\"ui medium rounded image\" src=\"\" id=\"image\">
+                                    </img>
+                                </div>
+                                
+                                
+                                <div class=\"ten wide column\">
+                                    <button class=\"mini ui button\" style=\"float:right; margin-left:20px\">Edit</button>
+                                    <p id=\"mainText\">
+                                        
+                                    </p>
+                                    <p id=\"author\"><!-- Automatically add username of author --></p>
+                                    <p id=\"date\"><!-- Automatically add date of post --></p>
+                                    <div class=\"ui divider\"></div>
+                                </div> ";
+                                    }
+                                    ?>
+
+                                
+                                
+                                
+                                
                                 <div class="four wide column">
                                     <h3 class="ui header" id="title">
                                         <?php
@@ -58,6 +90,8 @@
 
                                     </img>
                                 </div>
+
+
                                 <div class="ten wide column">
                                     <button class="mini ui button" style="float:right; margin-left:20px">Edit</button>
                                     <p id="mainText">
@@ -74,6 +108,16 @@
                                     <p id="date"><!-- Automatically add date of post --></p>
                                     <div class="ui divider"></div>
                                 </div>
+                                
+
+                                
+                                
+
+                                
+                                
+                                
+                                
+                                
                             </div>
                         </div>
                     </div>
@@ -165,16 +209,6 @@
 <!-- Footer -->
 <?php include("includes/footer.php"); ?>
 
-<ul>
-    <?php
-    $sql_query = "SELECT * FROM healthContent";
-    $result = $db->query($sql_query);
-    while($row = $result-> fetch_array()) {
-        $title = $row['title'];
-        $mainText = $row['mainText'];
-        echo "<li>{$title} {$mainText}</li>";
-    }
-    ?>
-</ul>
+
 
 </html>
