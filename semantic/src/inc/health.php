@@ -38,10 +38,10 @@
             <div class="row">
                 <!-- Info section -->
                 <!-- Sections added as users add info through form -->
-                <div class="ten wide column">
+                <div>
 
                     <!-- Blank area to input info through form -->
-                    <div class="infoInput">
+                    <div>
                         <div class="ui grid">
                             <div class="row">
                                 <ul>
