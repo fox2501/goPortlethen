@@ -45,7 +45,6 @@
                             <div class="row">
                                 <div class="four wide column">
                                     <h3 class="ui header" id="title">
-                                        <ul>
                                         <?php
                                         $sql_query = "SELECT title FROM healthContent";
                                         $result = $db->query($sql_query);
@@ -54,7 +53,6 @@
                                         }
                                         echo "{$title}";
                                         ?>
-                                        </ul>
                                     </h3>
                                     <img class="ui medium rounded image" src="" id="image">
 
@@ -166,5 +164,17 @@
 
 <!-- Footer -->
 <?php include("includes/footer.php"); ?>
+
+<ul>
+    <?php
+    $sql_query = "SELECT * FROM healthContent";
+    $result = $db->query($sql_query);
+    while($row = $result-> fetch_array()) {
+        $title = $row['title'];
+        $mainText = $row['mainText'];
+        echo "<li>{$title} {mainText}</li>";
+    }
+    ?>
+</ul>
 
 </html>
