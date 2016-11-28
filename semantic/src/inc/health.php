@@ -45,6 +45,7 @@
                             <div class="row">
                                 <div class="four wide column">
                                     <h3 class="ui header" id="title">
+                                        <ul>
                                         <?php
                                         $sql_query = "SELECT title FROM healthContent";
                                         $result = $db->query($sql_query);
@@ -53,6 +54,7 @@
                                         }
                                         echo "{$title}";
                                         ?>
+                                        </ul>
                                     </h3>
                                     <img class="ui medium rounded image" src="" id="image">
 

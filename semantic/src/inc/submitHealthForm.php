@@ -14,6 +14,3 @@ if (mysqli_query($db, $sql)) {
 header("location:health.php");
 
 ?>
-
-
-
