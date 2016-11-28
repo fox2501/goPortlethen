@@ -97,14 +97,4 @@
 <!-- Footer -->
 <?php include("includes/footer.php"); ?>
 
-<?php
-$sql_query = "SELECT * FROM healthContent";
-$result = $db->query($sql_query);
-while($row = $result-> fetch_array()) {
-    $title = $row['title'];
-    $mainText = $row['mainText'];
-    echo "<li> </li>";
-}
-?>
-
 </html>
