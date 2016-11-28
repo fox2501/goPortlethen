@@ -67,7 +67,7 @@
                                                 <p id=\"mainText\" style=\"text - align:justify\">
                                                     $mainText
                                                 </p>
-                                                <p id=\"author\">$userName</p>
+                                                <p id=\"author\">By $userName</p>
                                                 <p id=\"date\"><!-- Automatically add date of post --></p>
                                                 <div class=\"ui divider\"></div>
                                             </div>
