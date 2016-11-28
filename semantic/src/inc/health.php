@@ -12,9 +12,6 @@
 <!-- Nav bar -->
 <?include ("includes/header.php"); ?>
 
-<!-- Footer -->
-<?php include("includes/footer.php"); ?>
-
 <body>
     <!-- Page header -->
     <h1 align="center">Health & Wellbeing</h1>
@@ -95,8 +92,10 @@
             </div>
         </div>
     </div>
+
 </body>
 
-
+<!-- Footer -->
+<?php include("includes/footer.php"); ?>
 
 </html>
