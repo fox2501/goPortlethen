@@ -65,7 +65,7 @@
                                         $sql_query = "SELECT mainText FROM healthContent";
                                         $result = $db->query($sql_query);
                                         while($row = $result->fetch_array()) {
-                                            $title = $row['mainText'];
+                                            $mainText = $row['mainText'];
                                         }
                                         echo "{$mainText}";
                                         ?>
