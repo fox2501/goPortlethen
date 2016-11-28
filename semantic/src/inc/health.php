@@ -27,8 +27,8 @@
         <div class="ui grid">
             <div class="row">
                 <a href="healthForm.php"><button class="ui primary button">Submit Content</button></a>
-                <a href=""><button class="ui primary button">Event Calendar</button></a>
-                <a href=""><button class="ui primary button">Twitter</button></a>
+                <iframe src="https://calendar.google.com/calendar/embed?src=imdvs1dbg4fm5e9g35o2cj8i2g%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
+                <iframe src="https://calendar.google.com/calendar/embed?src=imdvs1dbg4fm5e9g35o2cj8i2g%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
             </div>
         </div>
         <div class="ui divider"></div>
@@ -51,9 +51,6 @@
                                     <?php
                                     $sql_query = "SELECT * FROM healthContent, users WHERE healthContent.userID=users.userID";
                                     $result = $db->query($sql_query);
-                                    if(isset($_POST['submitButton'])) {
-                                        $date_clicked = date('Y-m-d H:i:s');
-                                    }
                                     while($row = $result-> fetch_array()) {
                                         $title = $row['title'];
                                         $mainText = $row['mainText'];
@@ -70,7 +67,7 @@
                                                     $mainText
                                                 </p>
                                                 <p id=\"author\">By $userName</p>
-                                                <p id=\"date\">$date_clicked</p>
+                                                <p id=\"date\"></p>
                                                 <div class=\"ui divider\"></div>
                                             </div>
                                         </div>";
@@ -83,13 +80,7 @@
 
 
 
-                <!-- Calendar and Twitter section
-                <!--<div class="two wide column">
-                    <iframe src="https://calendar.google.com/calendar/embed?src=imdvs1dbg4fm5e9g35o2cj8i2g%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
-                    <br><br><br>
-                    <!-- Placeholder for Twitter section
-                    <iframe src="https://calendar.google.com/calendar/embed?src=imdvs1dbg4fm5e9g35o2cj8i2g%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
-                </div>-->
+
 
             </div>
         </div>
@@ -101,12 +92,5 @@
 <!-- Footer -->
 <?php include("includes/footer.php"); ?>
 
-<?php
-if(isset($_POST['submitButton']))
-{
-    $date_clicked = date('Y-m-d H:i:s');;
-    echo "Time the button was clicked: " . $date_clicked . "<br>";
-}
-?>
 
 </html>
