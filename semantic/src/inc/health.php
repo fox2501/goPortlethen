@@ -48,6 +48,7 @@
                         <div class="ui grid">
                             <div class="row">
                                 <ul>
+
                                     <?php
                                     $sql_query = "SELECT *
                                     FROM healthContent
