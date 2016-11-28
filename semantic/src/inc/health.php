@@ -60,7 +60,7 @@
                                 </div>
                                 <div class="ten wide column">
                                     <button class="mini ui button" style="float:right; margin-left:20px">Edit</button>
-                                    <p id="content">
+                                    <p id="mainText">
                                         <?php
                                         $sql_query = "SELECT mainText FROM healthContent";
                                         $result = $db->query($sql_query);
