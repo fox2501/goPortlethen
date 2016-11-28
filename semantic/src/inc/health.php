@@ -60,7 +60,7 @@
                                                 <h3 class=\"ui header\" id=\"title\">
                                                     $title
                                                 </h3>
-                                                <img style=\"width:150px height:150px\" class=\"ui centered small image\" src=\"https://scontent.flhr4-1.fna.fbcdn.net/v/t1.0-9/13434842_1608517786105160_4523080997776743356_n.jpg?oh=4981b2761c2ef40c4989fc4b74bd440a&oe=58C6B38A\" id=\"image\"></img>
+                                                <img class=\"ui small image\" src=\"https://scontent.flhr4-1.fna.fbcdn.net/v/t1.0-9/13434842_1608517786105160_4523080997776743356_n.jpg?oh=4981b2761c2ef40c4989fc4b74bd440a&oe=58C6B38A\" id=\"image\"></img>
             
                                             </div>
                                         </div>";
