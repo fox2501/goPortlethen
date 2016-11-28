@@ -61,7 +61,14 @@
                                 <div class="ten wide column">
                                     <button class="mini ui button" style="float:right; margin-left:20px">Edit</button>
                                     <p id="content">
-
+                                        <?php
+                                        $sql_query = "SELECT mainText FROM healthContent";
+                                        $result = $db->query($sql_query);
+                                        while($row = $result->fetch_array()) {
+                                            $title = $row['mainText'];
+                                        }
+                                        echo "{$mainText}";
+                                        ?>
                                     </p>
                                     <p id="author"><!-- Automatically add username of author --></p>
                                     <p id="date"><!-- Automatically add date of post --></p>
