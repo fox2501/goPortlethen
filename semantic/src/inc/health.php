@@ -71,7 +71,7 @@
                                                 <p id=\"date\"><!-- Automatically add date of post --></p>
                                                 <div class=\"ui divider\"></div>
                                             </div>
-                                        </div>
+                                        </div>";
                                     }
                                     ?>
                                 </ul>
