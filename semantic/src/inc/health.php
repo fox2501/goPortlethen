@@ -52,23 +52,13 @@
                                     while($row = $result-> fetch_array()) {
                                         $title = $row['title'];
                                         $mainText = $row['mainText'];
-                                        echo "<li> ($title) ($mainText)</li>";
-                                    }
-                                    ?>
-                                </ul>
+                                        echo "<li>  
                                 
                                 
                                 
                                 <div class="four wide column">
                                     <h3 class="ui header" id="title">
-                                        <?php
-                                        $sql_query = "SELECT title FROM healthContent";
-                                        $result = $db->query($sql_query);
-                                        while($row = $result->fetch_array()) {
-                                            $title = $row['title'];
-                                        }
-                                        echo "{$title}";
-                                        ?>
+                                        ($title)
                                     </h3>
                                     <img class="ui medium rounded image" src="" id="image"></img>
                                 </div>
@@ -77,14 +67,7 @@
                                 <div class="ten wide column">
                                     <button class="mini ui button" style="float:right; margin-left:20px">Edit</button>
                                     <p id="mainText">
-                                        <?php
-                                        $sql_query = "SELECT mainText FROM healthContent";
-                                        $result = $db->query($sql_query);
-                                        while($row = $result->fetch_array()) {
-                                            $mainText = $row['mainText'];
-                                        }
-                                        echo "{$mainText}";
-                                        ?>
+                                        ($mainText)
                                     </p>
                                     <p id="author"><!-- Automatically add username of author --></p>
                                     <p id="date"><!-- Automatically add date of post --></p>
@@ -92,7 +75,10 @@
                                 </div>
                                 
 
-
+</li>";
+                                    }
+                                    ?>
+                                </ul>
                                 
 
                                 
