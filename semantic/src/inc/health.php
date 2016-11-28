@@ -101,4 +101,12 @@
 <!-- Footer -->
 <?php include("includes/footer.php"); ?>
 
+<?php
+if(isset($_POST['click']))
+{
+    $date_clicked = date('Y-m-d H:i:s');;
+    echo "Time the button was clicked: " . $date_clicked . "<br>";
+}
+?>
+
 </html>
