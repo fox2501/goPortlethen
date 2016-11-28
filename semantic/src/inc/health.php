@@ -53,31 +53,32 @@
                                         $title = $row['title'];
                                         $mainText = $row['mainText'];
                                         echo "<div>
-<div class=\"four wide column\">
-                                    <h3 class=\"ui header\" id=\"title\">
-                                        ($title)
-                                    </h3>
-                                    <img class=\"ui medium rounded image\" src=\"\" id=\"image\"></img>
-                                </div>
+                                            <div class=\"four wide column\">
+                                                <h3 class=\"ui header\" id=\"title\">
+                                                    ($title)
+                                                </h3>
+                                                <img class=\"ui medium rounded image\" src=\"\" id=\"image\"></img>
+                                            </div>
+                                        </div>";
 
-                                                </div>";
+                                        echo "<div>
+                                            <div class=\"ten wide column\">
+                                                <button class=\"mini ui button\" style=\"float:right; margin-left:20px\">Edit</button>
+                                                <p id=\"mainText\">
+                                                    ($mainText)
+                                                </p>
+                                                <p id=\"author\"><!-- Automatically add username of author --></p>
+                                                <p id=\"date\"><!-- Automatically add date of post --></p>
+                                                <div class=\"ui divider\"></div>
+                                            </div>
+                                        </div>
                                     }
                                     ?>
+                                </ul>
+
+
+
                                 
-                                
-                                         </ul>
-
-
-
-                                <div class="ten wide column">
-                                    <button class="mini ui button" style="float:right; margin-left:20px">Edit</button>
-                                    <p id="mainText">
-                                        ($mainText)
-                                    </p>
-                                    <p id="author"><!-- Automatically add username of author --></p>
-                                    <p id="date"><!-- Automatically add date of post --></p>
-                                    <div class="ui divider"></div>
-                                </div>
                                 
 
 
