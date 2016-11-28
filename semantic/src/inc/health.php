@@ -12,6 +12,9 @@
 <!-- Nav bar -->
 <?include ("includes/header.php"); ?>
 
+<!-- Footer -->
+<?php include("includes/footer.php"); ?>
+
 <body>
     <!-- Page header -->
     <h1 align="center">Health & Wellbeing</h1>
@@ -31,11 +34,6 @@
         </div>
         <div class="ui divider"></div>
     </div>
-
-
-
-
-
 
     <div class=" ui container">
         <div class="ui grid">
@@ -98,7 +96,6 @@
     </div>
 </body>
 
-<!-- Footer -->
-<?php include("includes/footer.php"); ?>
+
 
 </html>
