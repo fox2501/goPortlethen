@@ -1,8 +1,7 @@
-<!DOCTYPE html>
-
 <!-- Database -->
 <? include ("includes/dbconnect.php");?>
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -27,7 +26,7 @@
     <div class="ui container">
         <div class="ui grid">
             <div class="row">
-                <a href="submithealth.php"><button class="ui primary button">Submit Content</button></a>
+                <a href="healthForm.php"><button class="ui primary button">Submit Content</button></a>
             </div>
         </div>
         <div class="ui divider"></div>
@@ -44,6 +43,38 @@
                     <div class="infoInput">
                         <div class="ui grid">
                             <div class="row">
+
+                                <ul>
+                                    <?php
+                                    $sql_query = "SELECT * FROM healthContent";
+                                    $result = $db->query($sql_query);
+                                    while($row = $result-> fetch_array()) {
+                                        $title = $row['title'];
+                                        $mainText = $row['mainText'];
+                                        echo " <div class=\"four wide column\">
+                                    <h3 class=\"ui header\" id=\"title\">
+                                    </h3>
+                                    <img class=\"ui medium rounded image\" src=\"\" id=\"image\">
+                                    </img>
+                                </div>
+                                
+                                
+                                <div class=\"ten wide column\">
+                                    <button class=\"mini ui button\" style=\"float:right; margin-left:20px\">Edit</button>
+                                    <p id=\"mainText\">
+                                        
+                                    </p>
+                                    <p id=\"author\"><!-- Automatically add username of author --></p>
+                                    <p id=\"date\"><!-- Automatically add date of post --></p>
+                                    <div class=\"ui divider\"></div>
+                                </div> ";
+                                    }
+                                    ?>
+</ul>
+                                
+                                
+                                
+                                
                                 <div class="four wide column">
                                     <h3 class="ui header" id="title">
                                         <?php
@@ -59,15 +90,34 @@
 
                                     </img>
                                 </div>
+
+
                                 <div class="ten wide column">
                                     <button class="mini ui button" style="float:right; margin-left:20px">Edit</button>
-                                    <p id="content">
-
+                                    <p id="mainText">
+                                        <?php
+                                        $sql_query = "SELECT mainText FROM healthContent";
+                                        $result = $db->query($sql_query);
+                                        while($row = $result->fetch_array()) {
+                                            $mainText = $row['mainText'];
+                                        }
+                                        echo "{$mainText}";
+                                        ?>
                                     </p>
                                     <p id="author"><!-- Automatically add username of author --></p>
                                     <p id="date"><!-- Automatically add date of post --></p>
                                     <div class="ui divider"></div>
                                 </div>
+                                
+
+                                
+                                
+
+                                
+                                
+                                
+                                
+                                
                             </div>
                         </div>
                     </div>
@@ -154,7 +204,11 @@
     </div>
 </body>
 
+
+
 <!-- Footer -->
 <?php include("includes/footer.php"); ?>
+
+
 
 </html>
