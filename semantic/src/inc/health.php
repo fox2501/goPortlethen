@@ -52,16 +52,21 @@
                                     while($row = $result-> fetch_array()) {
                                         $title = $row['title'];
                                         $mainText = $row['mainText'];
-                                        echo "<li>  
-                                
-                                
-                                
-                                <div class="four wide column">
-                                    <h3 class="ui header" id="title">
+                                        echo "<div>
+<div class=\"four wide column\">
+                                    <h3 class=\"ui header\" id=\"title\">
                                         ($title)
                                     </h3>
-                                    <img class="ui medium rounded image" src="" id="image"></img>
+                                    <img class=\"ui medium rounded image\" src=\"\" id=\"image\"></img>
                                 </div>
+
+                                                </div>";
+                                    }
+                                    ?>
+                                
+                                
+                                         </ul>
+
 
 
                                 <div class="ten wide column">
@@ -75,10 +80,7 @@
                                 </div>
                                 
 
-</li>";
-                                    }
-                                    ?>
-                                </ul>
+
                                 
 
                                 
