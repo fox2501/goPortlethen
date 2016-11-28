@@ -94,11 +94,7 @@
     </div>
 </body>
 
-
-
-
-
-</html>
-
 <!-- Footer -->
 <?php include("includes/footer.php"); ?>
+
+</html>
