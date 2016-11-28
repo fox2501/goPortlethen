@@ -52,6 +52,9 @@
                                     <?php
                                     $sql_query = "SELECT * FROM healthContent, users WHERE healthContent.userID=users.userID";
                                     $result = $db->query($sql_query);
+                                    if(isset($_POST['submitButton'])) {
+                                        $date_clicked = date('Y-m-d H:i:s');
+                                    }
                                     while($row = $result-> fetch_array()) {
                                         $title = $row['title'];
                                         $mainText = $row['mainText'];
@@ -68,7 +71,7 @@
                                                     $mainText
                                                 </p>
                                                 <p id=\"author\">By $userName</p>
-                                                <p id=\"date\"><!-- Automatically add date of post --></p>
+                                                <p id=\"date\">$date_clicked</p>
                                                 <div class=\"ui divider\"></div>
                                             </div>
                                         </div>";
