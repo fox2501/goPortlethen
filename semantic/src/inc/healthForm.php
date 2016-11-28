@@ -36,9 +36,7 @@
                         </div>
                     </div>
                 </div>
-                <input type="submit" value="SUBMIT">
-
-
+                <button class="ui primary button" input type="submit" value="SUBMIT">Submit Content</button>
             </div>
         </form>
     </div>
