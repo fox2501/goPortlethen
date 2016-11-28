@@ -49,11 +49,15 @@
                             <div class="row">
                                 <ul>
                                     <?php
-                                    $sql_query = "SELECT * FROM healthContent";
+                                    $sql_query = "SELECT *
+                                    FROM healthContent
+                                    INNER JOIN users
+                                    ON users.userID=healthContent.userID"
                                     $result = $db->query($sql_query);
                                     while($row = $result-> fetch_array()) {
                                         $title = $row['title'];
                                         $mainText = $row['mainText'];
+                                        $userName = $row['userName'];
                                         echo "<div>
                                             <div class=\"four wide column\">
                                                 <h3 class=\"ui header\" id=\"title\">
