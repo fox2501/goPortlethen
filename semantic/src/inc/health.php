@@ -52,7 +52,7 @@
                                     while($row = $result-> fetch_array()) {
                                         $title = $row['title'];
                                         $mainText = $row['mainText'];
-                                        echo "<li> </li>";
+                                        echo "<li> $title $mainText</li>";
                                     }
                                     ?>
                                 </ul>
