@@ -50,10 +50,7 @@
                                 <ul>
 
                                     <?php
-                                    $sql_query = "SELECT *
-                                    FROM healthContent
-                                    INNER JOIN users
-                                    ON users.userID=healthContent.userID"
+                                    $sql_query = "SELECT * FROM healthContent, users";
                                     $result = $db->query($sql_query);
                                     while($row = $result-> fetch_array()) {
                                         $title = $row['title'];
