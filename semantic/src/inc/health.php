@@ -27,6 +27,8 @@
         <div class="ui grid">
             <div class="row">
                 <a href="healthForm.php"><button class="ui primary button">Submit Content</button></a>
+                <a href=""><button class="ui primary button">Event Calendar</button></a>
+                <a href=""><button class="ui primary button">Twitter</button></a>
             </div>
         </div>
         <div class="ui divider"></div>
