@@ -15,5 +15,5 @@ if (password_verify($hashkey,$hash,['cost' => 12])){
 
     }
 }
-//achangge
+
 ?>
