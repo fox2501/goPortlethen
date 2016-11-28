@@ -25,7 +25,7 @@
                 </div>
                 <label>Content</label>
                 <div class="field">
-                    <textarea rows="8" type="text" name="content" placeholder="Enter the content of your post"></textarea>
+                    <textarea rows="8" type="text" name="mainText" placeholder="Enter the content of your post"></textarea>
                 </div>
                 <label>Main Image</label>
                 <div class="field">
