@@ -62,19 +62,7 @@
                                                 <img class=\"ui small image\" src=\"https://scontent.flhr4-1.fna.fbcdn.net/v/t1.0-9/13434842_1608517786105160_4523080997776743356_n.jpg?oh=4981b2761c2ef40c4989fc4b74bd440a&oe=58C6B38A\" id=\"image\"></img>
                                                 <br>
                                                 <button class=\"mini ui button\" style=\"float:right; margin - left:20px\">Edit</button>
-                    <p id=\"mainText\" style=\"text - align:justify\">
-                        $mainText
-                    </p>
-                    <p id=\"author\"><!-- Automatically add username of author --></p>
-                    <p id=\"date\"><!-- Automatically add date of post --></p>
-                    <div class=\"ui divider\"></div>
-                                            </div>
-                                        </div>";
-
-                                        echo "<div>
-                                            <div class=\"ten wide column\">
-                                                <button class=\"mini ui button\" style=\"float:right; margin-left:20px\">Edit</button>
-                                                <p id=\"mainText\" style=\"text-align:justify\">
+                                                <p id=\"mainText\" style=\"text - align:justify\">
                                                     $mainText
                                                 </p>
                                                 <p id=\"author\"><!-- Automatically add username of author --></p>
