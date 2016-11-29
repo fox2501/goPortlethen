@@ -17,12 +17,12 @@ session_start();
     <script type="text/javascript" src="jquery.fileupload.js"></script>
     <script type="text/javascript" src="jquery.cloudinary.js"></script>
 <!--    --><?php
-/*    require 'goPortlethen/semantic/cloudinaryAPI/Cloudinary.php';
+    require 'goPortlethen/semantic/cloudinaryAPI/Cloudinary.php';
     require 'goPortlethen/semantic/cloudinaryAPI/Uploader.php';
     require 'goPortlethen/semantic/cloudinaryAPI/Api.php';
 
-    */?>
-<!--    $.cloudinary.config({ cloud_name: 'goportlethencs8', api_key: '116467215234765'})-->
+    ?>
+ $.cloudinary.config({ cloud_name: 'goportlethencs8', api_key: '116467215234765'})
     <title>goPortlethen</title>
 </head>
 <body>
