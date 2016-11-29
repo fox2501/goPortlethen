@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!-- Database -->
 <? include ("includes/dbconnect.php");?>
 

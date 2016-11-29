@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 include("includes/dbconnect.php");
 $title = $_POST["title"];
 $mainText = $_POST["mainText"];
