@@ -29,12 +29,6 @@ include("includes/header.php");
                         <?php
                         if(strpos($url, 'error=password') !== false){
                             echo "
-                                    <div class='ui warning message'>
-                                      <i class='close icon'></i>
-                                      <div class='header'>
-                                        Username or password is incorrect!
-                                      </div>
-                                    </div>
                                   <div class='field error'>
                                     <div class='ui left icon input'>
                                         <i class='user icon'></i>
@@ -76,7 +70,7 @@ include("includes/header.php");
         </div>
     </div>
     </div>
-<div class="ui bottom attached warning message">
+<div class="ui bottom attached centered warning message">
     <i class="icon help"></i>
     Already signed up? <a href="/semantic/src/inc/logIn.php">Login here</a> instead.
 </div>
