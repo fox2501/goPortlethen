@@ -41,7 +41,7 @@ session_start();
                         <div class = 'ui menu'>
                             <div class = 'item' href = '/semantic/src/inc/profile.php'>My Profile</div>
                             <div class = 'item' href = '/semantic/src/inc/profile.php'>Settings</div>
-                            <div class = 'item' type = 'submit' href = 'logout.php'>Log Out</div>
+                            <button class = 'ui submit button' type = 'submit' action = 'logout.php'>Log Out</div>
                         </div>
                         </div>";
             } else {
