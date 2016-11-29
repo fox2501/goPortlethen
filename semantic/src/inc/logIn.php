@@ -18,7 +18,6 @@ include("includes/header.php");
 <body>
 <div class = "ui center aligned container">
     <div class="ui middle aligned center aligned grid">
-        <div class="column">
             <h2 class="ui blue header">
                 <div class="content">
                     Log-in to your account
@@ -64,16 +63,11 @@ include("includes/header.php");
             </form>
 
 
-            <div class="ui message">
+            <div class="ui warning message">
                 New to us? <a href="signUpForm.php">Sign Up</a>
             </div>
-        </div>
     </div>
     </div>
-<div class="ui bottom attached centered warning message">
-    <i class="icon help"></i>
-    Already signed up? <a href="/semantic/src/inc/logIn.php">Login here</a> instead.
-</div>
 </div>
 </body>
 <?php include("includes/footer.php");?>
