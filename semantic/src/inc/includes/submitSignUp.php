@@ -1,6 +1,6 @@
 <?php
 
-include("includes/dbconnect.php");
+include("dbconnect.php");
 
 $displayName =  $_POST["displayName"];
 $email = $_POST["email"];
@@ -13,6 +13,5 @@ values('$username', '$password', '$email', '$displayName', '0', '$age')";
 
 $result = mysqli_query($db, $sql);
 
-header("location: ../semantic");
-
+header("location: /semantic/")
 ?>
