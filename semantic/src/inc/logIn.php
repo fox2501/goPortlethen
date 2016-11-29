@@ -32,7 +32,7 @@ include("includes/header.php");
                                   <div class='field warning'>
                                     <div class='ui left icon input'>
                                         <i class='user icon'></i>
-                                        <input type='text' name='username' placeholder='Username'>
+                                        <input type='text' name='username' placeholder='test'>
                                     </div>
                                   </div>
                                   <div class='field warning'>
