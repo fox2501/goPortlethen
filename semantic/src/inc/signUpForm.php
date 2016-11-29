@@ -43,7 +43,7 @@ if(strpos($url, 'error=noAge') !== false){
             <div class="field">
                 <label>Display Name</label>
                 <?php
-                if(strpos($url, 'error=noDisplayName') !== false){
+                if(strpos($url, 'error=empty') !== false){
                     echo "<div class='field error'>
                             <input type='text' name='displayName'
                            placeholder='Please make sure you enter a display name! This can just be your first name.'>
@@ -60,7 +60,7 @@ if(strpos($url, 'error=noAge') !== false){
             <div class="field">
                 <label>Email Address</label>
                     <?php
-                    if(strpos($url, 'error=noEmail') !== false){
+                    if(strpos($url, 'error=empty') !== false){
                         echo "<div class='field error'>
                     <input type='text' name='email' placeholder='Please ensure you enter an email address!'>
                 </div>";
@@ -74,22 +74,45 @@ if(strpos($url, 'error=noAge') !== false){
             </div>
             <div class="field">
                 <label>Username</label>
-                <div class="field">
-                    <input type="text" name="username"
-                           placeholder="Please enter a username. You will use this to login.">
-                </div>
+                <?php
+                if(strpos($url, 'error=empty') !== false){
+                    echo "<div class='field error'>
+                    <input type='text' name='username' placeholder='Please ensure you enter a username!'>
+                </div>";
+                } else{
+                    echo "<div class='field'>
+                    <input type='text' name='username' placeholder='Please enter a username.'>
+                </div>";
+                }
+                ?>
             </div>
             <div class="field">
                 <label>Password</label>
-                <div class="field">
-                    <input type="password" name="password" placeholder="Please create a password.">
-                </div>
+                <?php
+                if(strpos($url, 'error=empty') !== false){
+                    echo "<div class='field error'>
+                    <input type='password' name='password' placeholder='Please ensure you enter a password!'>
+                </div>";
+                } else{
+                    echo "<div class='field'>
+                    <input type='password' name='password' placeholder='Please enter a password.'>
+                </div>";
+                }
+                ?>
             </div>
             <div class="field">
                 <label>Age</label>
-                <div class="field">
-                    <input type="number" name="age" placeholder="Please enter your age."
-                </div>
+                <?php
+                if(strpos($url, 'error=empty') !== false){
+                    echo "<div class='field error'>
+                    <input type='number' name='age' placeholder='Please ensure you enter an email address!'>
+                </div>";
+                } else{
+                    echo "<div class='field'>
+                    <input type='number' name='age' placeholder='Please enter an email address.'>
+                </div>";
+                }
+                ?>
             </div>
             <button class="ui fluid large green submit button" type="submit">Create Account</button>
         </div>
