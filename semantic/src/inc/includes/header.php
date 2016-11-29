@@ -45,13 +45,13 @@ session_start();
                         </div>
                         </div>";
             } else {
-                echo "<a class = 'item' href = '/semantic/src/inc/signUpForm.php'>
+                echo "<a class = 'item' href = '/src/inc/signUpForm.php'>
                         <div class = 'ui teal button'>
                             <i class='add user icon'></i>
                                 Sign up
                         </div>
                       </a>
-                      <a class = 'item' href = '/semantic/src/inc/logIn.php'>
+                      <a class = 'item' href = '/src/inc/logIn.php'>
                         <div class = 'ui button'>
                             <i class='sign in icon'></i>
                                 Log In
