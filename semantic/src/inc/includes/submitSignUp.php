@@ -28,11 +28,22 @@ if(empty($age)){
     header("Location: ../signUpForm.php?error=empty");
     exit();
 }
+else{
+    $sql = "SELECT username FROM users WHERE username = '$username'";
+    $result = mysqli_query($db, $sql);
+    $usernameCheck = mysqli_num_rows();
+    if($usernameCheck > 0){
+        header("Location: ../signUpForm.php?error=username");
+        exit();
+    }else {
+        $hashpass = password_hash($password, PASSWORD_DEFAULT);
 
-$sql = "INSERT INTO users (userName, password, emailAddress, displayName, approvalStatus, age) 
-values('$username', '$password', '$email', '$displayName', '0', '$age')";
+        $sql = "INSERT INTO users (userName, password, emailAddress, displayName, approvalStatus, age) 
+        values('$username', '$hashpass', '$email', '$displayName', '0', '$age')";
 
-$result = mysqli_query($db, $sql);
+        $result = mysqli_query($db, $sql);
 
-header("location: /semantic/")
+        header("location: /semantic/");
+    }
+}
 ?>

@@ -12,23 +12,6 @@ session_start();
 </head>
 <?php include("includes/header.php"); ?>
 <?php $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-
-if(strpos($url, 'error=noEmail') !== false){
-    echo "Fill out all fields!";
-
-}
-if(strpos($url, 'error=noUsername') !== false){
-    echo "Fill out all fields!";
-
-}
-if(strpos($url, 'error=noPassword') !== false){
-    echo "Fill out all fields!";
-
-}
-if(strpos($url, 'error=noAge') !== false){
-    echo "Fill out all fields!";
-
-}
 ?>
 
 <body>

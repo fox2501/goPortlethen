@@ -11,7 +11,10 @@ session_start();
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
     <title>goPortlethen</title>
 </head>
-<?php include("includes/header.php");?>
+<?php
+$url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+include("includes/header.php");
+?>
 <body>
 <div class = "ui center aligned container">
     <div class="ui middle aligned center aligned grid">
@@ -23,18 +26,39 @@ session_start();
             </h2>
             <form class="ui large form" action = "includes/checkLogin.php" method = "POST">
                     <div class="ui stacked segment">
-                        <div class="field">
-                            <div class="ui left icon input">
-                                <i class="user icon"></i>
-                                <input type="text" name="username" placeholder="Username">
-                            </div>
-                        </div>
-                        <div class="field">
-                            <div class="ui left icon input">
-                                <i class="lock icon"></i>
-                                <input type="password" name="password" placeholder="Password">
-                            </div>
-                        </div>
+                        <?php
+                        if(strpos($url, 'error=password') !== false){
+                            echo "
+                                  <div class='field warning'>
+                                    <div class='ui left icon input'>
+                                        <i class='user icon'></i>
+                                        <input type='text' name='username' placeholder='Username'>
+                                    </div>
+                                  </div>
+                                  <div class='field warning'>
+                                    <div class='ui left icon input'>
+                                        <i class='lock icon'></i>
+                                        <input type='password' name='password' placeholder='Password'>
+                                    </div>
+                                  </div>";
+                        } else{
+                            echo "
+                                  <div class='field'>
+                                    <div class='ui left icon input'>
+                                        <i class='user icon'></i>
+                                        <input type='text' name='username' placeholder='Username'>
+                                    </div>
+                                  </div>
+                                  <div class='field'>
+                                    <div class='ui left icon input'>
+                                        <i class='lock icon'></i>
+                                        <input type='password' name='password' placeholder='Password'>
+                                    </div>
+                                  </div>";
+                        }
+
+                        ?>
+
                         <button class="ui fluid large blue submit button" type = "submit">Login</button>
                     </div>
             </form>
@@ -46,6 +70,10 @@ session_start();
         </div>
     </div>
     </div>
+<div class="ui bottom attached warning message">
+    <i class="icon help"></i>
+    Already signed up? <a href="/semantic/src/inc/logIn.php">Login here</a> instead.
+</div>
 </div>
 </body>
 <?php include("includes/footer.php");?>
