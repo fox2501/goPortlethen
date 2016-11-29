@@ -2,7 +2,7 @@
 
 includes("dbconnect.php");
 
-$username = $_POST["email"];
+$username = $_POST["username"];
 $password = $_POST["password"];
 
 $sql = "SELECT * FROM user where username = '$username' AND password = '$password'";
