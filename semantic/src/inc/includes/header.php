@@ -1,6 +1,11 @@
 <?
 session_start();
 ?>
+<?php
+require 'goPortlethen/semantic/cloudinaryAPI/Cloudinary.php';
+require 'goPortlethen/semantic/cloudinaryAPI/Uploader.php';
+require 'goPortlethen/semantic/cloudinaryAPI/Api.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
