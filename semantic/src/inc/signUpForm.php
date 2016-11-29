@@ -22,19 +22,36 @@ session_start();
                 Sign up
             </div>
         </h2>
+        <?php
+        if(strpos($url, 'error=username') !== false){
+            echo "<div class=\"ui warning message\">
+                    <i class=\"close icon\"></i>
+                    <div class=\"header\">
+                        Woops! That username is already taken. 
+                    </div>
+                  </div>";
+        }
+        ?>
+        <div class="ui warning message">
+            <i class="close icon"></i>
+            <div class="header">
+                You must register before you can do that!
+            </div>
+            Visit our registration page, then try again
+        </div>
         <div class="ui segment">
             <div class="field">
                 <label>Display Name</label>
                 <?php
                 if(strpos($url, 'error=empty') !== false){
                     echo "<div class='field error'>
-                            <input type='text' name='displayName'
-                           placeholder='Please make sure you enter a display name! This can just be your first name.'>
+                            <input type='text' name='firstName'
+                           placeholder='Please make sure you enter a name!'>
                             </div>";
                 } else{
                     echo "<div class='field'>
-                            <input type='text' name='displayName'
-                           placeholder='Enter your display name. This can just be your first name.'>
+                            <input type='text' name='firstName'
+                           placeholder='Please enter your first name.'>
                             </div>";
                 }
                 ?>

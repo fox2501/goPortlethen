@@ -2,7 +2,7 @@
 session_start();
 include("dbconnect.php");
 
-$displayName =  $_POST["displayName"];
+$firstName =  $_POST["firstName"];
 $email = $_POST["email"];
 $username = $_POST["username"];
 $password = $_POST["password"];
@@ -31,15 +31,15 @@ if(empty($age)){
 else{
     $sql = "SELECT username FROM users WHERE username = '$username'";
     $result = mysqli_query($db, $sql);
-    $usernameCheck = mysqli_num_rows();
+    $usernameCheck = mysqli_num_rows($result);
     if($usernameCheck > 0){
         header("Location: ../signUpForm.php?error=username");
         exit();
     }else {
         $hashpass = password_hash($password, PASSWORD_DEFAULT);
 
-        $sql = "INSERT INTO users (userName, password, emailAddress, displayName, approvalStatus, age) 
-        values('$username', '$hashpass', '$email', '$displayName', '0', '$age')";
+        $sql = "INSERT INTO users (userName, password, emailAddress, firstName, approvalStatus, age) 
+        values('$username', '$hashpass', '$email', '$firstName', '0', '$age')";
 
         $result = mysqli_query($db, $sql);
 
