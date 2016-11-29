@@ -1,4 +1,7 @@
-<?php include("/src/inc/includes/header.php");?>
+<?php
+session_start();
+include("/src/inc/includes/header.php");
+?>
 <body>
 <div class = "ui container">
     <div class = "ui one column grid">

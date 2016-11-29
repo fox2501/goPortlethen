@@ -39,7 +39,7 @@ session_start();
             <div class = "ui menu">
                 <div class = "item" href = "/semantic/src/inc/profile.php">My Profile</div>
                 <div class = "item" href = "/semantic/src/inc/profile.php">Settings</div>
-                <div class = "item" href = "/semantic/src/inc/index.php">Log Out</div>
+                <button class = "item" type = "submit" action = "logout.php">Log Out</button>
             </div>
         </div>
         <a class = "item" href = "/semantic/src/inc/signUpForm.php">
