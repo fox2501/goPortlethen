@@ -13,6 +13,6 @@ values('$username', '$password', '$email', '$displayName', '0', '$age')";
 
 $result = mysqli_query($db, $sql);
 
-header("location: /semantic/");
+header("location: ../semantic");
 
 ?>
