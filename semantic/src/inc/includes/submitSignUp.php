@@ -35,7 +35,8 @@ else{
     if($usernameCheck > 0){
         header("Location: ../signUpForm.php?error=username");
         exit();
-    }else {
+    }
+    else {
         $hashpass = password_hash($password, PASSWORD_DEFAULT);
 
         $sql = "INSERT INTO users (userName, password, emailAddress, firstName, approvalStatus, age) 
