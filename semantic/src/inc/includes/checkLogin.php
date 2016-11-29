@@ -5,7 +5,7 @@ include("dbconnect.php");
 $username = $_POST["username"];
 $password = $_POST["password"];
 
-$sql = "SELECT * FROM user where username = '$username' AND password = '$password'";
+$sql = "SELECT * FROM users where username = '$username' AND password = '$password'";
 $result = mysqli_query($db, $sql);
 
 if (!$row = mysqli_fetch_assoc($result)){
