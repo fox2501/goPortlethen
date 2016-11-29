@@ -18,7 +18,7 @@
                     Log-in to your account
                 </div>
             </h2>
-            <form action = "checkLogin.php" method = "post">
+            <form action = "checkLogin.php" method = "POST">
                 <form class="ui large form">
                     <div class="ui stacked segment">
                         <div class="field">
