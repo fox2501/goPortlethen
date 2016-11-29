@@ -4061,7 +4061,7 @@ var slice = [].slice,
             }
         }
         if (!upload_params.callback) {
-            upload_params.callback = '/cloudinary_cors.html';
+            upload_params.callback = 'semantic/src/inc/cloudinary_cors.html';
         }
         upload_params.upload_preset = upload_preset;
         options.formData = upload_params;

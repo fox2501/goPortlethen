@@ -5,7 +5,9 @@ session_start();
 require 'goPortlethen/semantic/cloudinaryAPI/Cloudinary.php';
 require 'goPortlethen/semantic/cloudinaryAPI/Uploader.php';
 require 'goPortlethen/semantic/cloudinaryAPI/Api.php';
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +15,13 @@ require 'goPortlethen/semantic/cloudinaryAPI/Api.php';
     <link rel = "stylesheet" type = "text/css" href = "/semantic/dist/semantic.css">
     <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src = "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>\
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="jquery.iframe-transport.js"></script>
+    <script type="text/javascript" src="jquery.fileupload.js"></script>
+    <script type="text/javascript" src="jquery.cloudinary.js"></script>
+<!--    $.cloudinary.config({ cloud_name: 'goportlethencs8', api_key: '116467215234765'})-->
     <title>goPortlethen</title>
 </head>
 <body>
