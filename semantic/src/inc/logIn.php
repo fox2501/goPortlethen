@@ -33,11 +33,8 @@
                                 <input type="password" name="password" placeholder="Password">
                             </div>
                         </div>
-                        <div class="ui fluid large blue submit button">Login</div>
+                        <div class="ui fluid large blue submit button" type = "submit">Login</div>
                     </div>
-
-                    <div class="ui error message"></div>
-
                 </form>
             </form>
 
