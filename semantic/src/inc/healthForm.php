@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +20,7 @@
     </div>
 
     <div class="ui container">
-        <form class="ui form">
+        <form class="ui form" action="submitHealthForm.php" method="POST">
             <div class="field">
                 <label>Title</label>
                 <div class="field">
@@ -25,20 +28,27 @@
                 </div>
                 <label>Content</label>
                 <div class="field">
-                    <textarea rows="8" input type="text" name="content" placeholder="Enter the content of your post"></textarea>
+                    <textarea rows="8" type="text" name="mainText" placeholder="Enter the content of your post"></textarea>
                 </div>
                 <label>Main Image</label>
                 <div class="field">
-                    <!-- Should be able to select image -->
-                    <input type="text" name="image" placeholder="Select an image for your post">
+<!--                    --><?php //echo cl_image_upload_tag('imageID',array("callback" => $cors_location));?>
+
+                    <div class="ui fluid action input">
+                        <input type="file" name="image">
+                        <div class="ui icon button">
+                            <i class="cloud upload icon"></i>
+                        </div>
+                    </div>
                 </div>
+                <button id="submitButton" class="ui primary button" input type="submit" value="SUBMIT">Submit Content</button>
             </div>
         </form>
     </div>
 
 
     <!--<p>User editing a post:
-    <br>Can edit title, text and image(s) on form (original information is displayed when "edit" is clicked
+    <br>Can edit title, text and image(s) on form (original information is displayed when "edit" is clicked)
     <br>Name stays the same but date changes
     <br>Can also delete post</p>-->
 </body>
