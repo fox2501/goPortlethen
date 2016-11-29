@@ -18,8 +18,7 @@
                     Log-in to your account
                 </div>
             </h2>
-            <form action = "checkLogin.php" method = "POST">
-                <form class="ui large form">
+            <form class="ui large form" action = "checkLogin.php" method = "POST">
                     <div class="ui stacked segment">
                         <div class="field">
                             <div class="ui left icon input">
@@ -35,7 +34,6 @@
                         </div>
                         <button class="ui fluid large blue submit button" type = "submit">Login</button>
                     </div>
-                </form>
             </form>
 
 
