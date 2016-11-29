@@ -40,7 +40,7 @@ session_start();
             </form>
 
 
-            <div class="ui message">
+            <div class="bottom attached warning message">
                 New to us? <a href="signUpForm.php">Sign Up</a>
             </div>
         </div>
