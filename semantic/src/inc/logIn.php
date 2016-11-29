@@ -29,13 +29,19 @@ include("includes/header.php");
                         <?php
                         if(strpos($url, 'error=password') !== false){
                             echo "
-                                  <div class='field warning'>
+                                    <div class='ui warning message'>
+                                      <i class='close icon'></i>
+                                      <div class='header'>
+                                        Username or password is incorrect!
+                                      </div>
+                                    </div>
+                                  <div class='field error'>
                                     <div class='ui left icon input'>
                                         <i class='user icon'></i>
-                                        <input type='text' name='username' placeholder='test'>
+                                        <input type='text' name='username' placeholder='Username'>
                                     </div>
                                   </div>
-                                  <div class='field warning'>
+                                  <div class='field error'>
                                     <div class='ui left icon input'>
                                         <i class='lock icon'></i>
                                         <input type='password' name='password' placeholder='Password'>
