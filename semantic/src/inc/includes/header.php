@@ -43,7 +43,7 @@ session_start();
                             <div class = 'item' href = '/semantic/src/inc/profile.php'>Settings</div>
                         </div>
                         </div>
-                        <form action = 'logout.php'>
+                        <form action = '../logout.php'>
                             <button class = 'ui fluid large green submit button' type = 'submit'>Log Out</div>
                         </form>
                         ";
