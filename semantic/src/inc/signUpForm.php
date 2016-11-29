@@ -12,7 +12,10 @@ session_start();
 </head>
 <?php include("includes/header.php"); ?>
 <?php $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-echo $url;
+if(strpos($url, 'error=empty') !== false){
+    echo "Fill out all fields!";
+
+}
 ?>
 
 <body>
