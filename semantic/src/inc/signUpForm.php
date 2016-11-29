@@ -60,7 +60,7 @@ if(strpos($url, 'error=noAge') !== false){
             <div class="field">
                 <label>Email Address</label>
                     <?php
-                    if(strpost($url, 'error=noEmail') !== false){
+                    if(strpos($url, 'error=noEmail') !== false){
                         echo "<div class='field error'>
                     <input type='text' name='email' placeholder='Please ensure you enter an email address!'>
                 </div>";
