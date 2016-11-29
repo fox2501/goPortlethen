@@ -10,7 +10,7 @@ session_start();
     <link rel = "stylesheet" type = "text/css" href = "/semantic/dist/semantic.css">
     <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src = "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>\
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="jquery.ui.widget.js"></script>
     <script type="text/javascript" src="jquery.iframe-transport.js"></script>
