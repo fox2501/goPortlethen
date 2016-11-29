@@ -24,21 +24,14 @@ session_start();
         </h2>
         <?php
         if(strpos($url, 'error=username') !== false){
-            echo "<div class=\"ui warning message\">
-                    <i class=\"close icon\"></i>
-                    <div class=\"header\">
+            echo "<div class='ui warning message'>
+                    <i class='close icon'></i>
+                    <div class='header'>
                         Woops! That username is already taken. 
                     </div>
                   </div>";
         }
         ?>
-        <div class="ui warning message">
-            <i class="close icon"></i>
-            <div class="header">
-                You must register before you can do that!
-            </div>
-            Visit our registration page, then try again
-        </div>
         <div class="ui segment">
             <div class="field">
                 <label>Display Name</label>
