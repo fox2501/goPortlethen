@@ -46,7 +46,7 @@ if(strpos($url, 'error=noAge') !== false){
                 if(strpos($url, 'error=noDisplayName') !== false){
                     echo "<div class='field error'>
                             <input type='text' name='displayName'
-                           placeholder='Enter your display name. This can just be your first name.'>
+                           placeholder='Please make sure you enter a display name! This can just be your first name.'>
                             </div>";
                 } else{
                     echo "<div class='field'>
@@ -59,9 +59,18 @@ if(strpos($url, 'error=noAge') !== false){
             </div>
             <div class="field">
                 <label>Email Address</label>
-                <div class="field">
-                    <input type="text" name="email" placeholder="Please enter your email address.">
-                </div>
+                    <?php
+                    if(strpost($url, 'error=noEmail') !== false){
+                        echo "<div class='field error'>
+                    <input type='text' name='email' placeholder='Please ensure you enter an email address!'>
+                </div>";
+                    } else{
+                        echo "<div class='field'>
+                    <input type='text' name='email' placeholder='Please enter an email address.'>
+                </div>";
+                    }
+                    ?>
+
             </div>
             <div class="field">
                 <label>Username</label>
