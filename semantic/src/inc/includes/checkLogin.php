@@ -25,6 +25,7 @@ if($dehashedpass == 0){
         echo "Your username or password is incorrect!";
     } else{
         $_SESSION['loggedIn'] = $row['userID'];
+        $_SESSION['name'] = $row['firstName'];
     }
 
     header('Location: /semantic/');

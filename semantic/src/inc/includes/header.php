@@ -35,6 +35,7 @@ session_start();
                 echo "  <div class = 'ui simple dropdown'>
                             <a class = 'browse item' href = '/semantic/src/inc/profile.php'>
                                 <i class = 'user icon'></i>
+                                " .$_SESSION['name']. "
                                 <i class='dropdown icon'></i>
                             </a>
                         <div class = 'ui menu'>
