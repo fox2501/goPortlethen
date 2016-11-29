@@ -24,12 +24,7 @@ session_start();
         </h2>
         <?php
         if(strpos($url, 'error=username') !== false){
-            echo "<div class='ui warning message'>
-                    <i class='close icon'></i>
-                    <div class='header'>
-                        Woops! That username is already taken. 
-                    </div>
-                  </div>";
+            echo "<h2> That username is already taken! </h2>";
         }
         ?>
         <div class="ui segment">
