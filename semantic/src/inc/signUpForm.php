@@ -12,7 +12,20 @@ session_start();
 </head>
 <?php include("includes/header.php"); ?>
 <?php $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-if(strpos($url, 'error=empty') !== false){
+
+if(strpos($url, 'error=noEmail') !== false){
+    echo "Fill out all fields!";
+
+}
+if(strpos($url, 'error=noUsername') !== false){
+    echo "Fill out all fields!";
+
+}
+if(strpos($url, 'error=noPassword') !== false){
+    echo "Fill out all fields!";
+
+}
+if(strpos($url, 'error=noAge') !== false){
     echo "Fill out all fields!";
 
 }
@@ -29,10 +42,20 @@ if(strpos($url, 'error=empty') !== false){
         <div class="ui segment">
             <div class="field">
                 <label>Display Name</label>
-                <div class="field">
-                    <input type="text" name="displayName"
-                           placeholder="Enter your display name. This can just be your first name.">
-                </div>
+                <?php
+                if(strpos($url, 'error=noDisplayName') !== false){
+                    echo "<div class='field error'>
+                            <input type='text' name='displayName'
+                           placeholder='Enter your display name. This can just be your first name.'>
+                            </div>";
+                } else{
+                    echo "<div class='field'>
+                            <input type='text' name='displayName'
+                           placeholder='Enter your display name. This can just be your first name.'>
+                            </div>";
+                }
+                ?>
+
             </div>
             <div class="field">
                 <label>Email Address</label>

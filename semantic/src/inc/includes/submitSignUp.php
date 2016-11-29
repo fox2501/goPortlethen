@@ -9,23 +9,23 @@ $password = $_POST["password"];
 $age = $_POST["age"];
 
 if(empty($displayName)){
-    header("Location: ../signUpForm.php?error=empty");
+    header("Location: ../signUpForm.php?error=noDisplayName");
     exit();
 }
 if(empty($email)){
-    header("Location: ../signUpForm.php?error=empty");
+    header("Location: ../signUpForm.php?error=noEmail");
     exit();
 }
 if(empty($username)){
-    header("Location: ../signUpForm.php?error=empty");
+    header("Location: ../signUpForm.php?error=noUsername");
     exit();
 }
 if(empty($password)){
-    header("Location: ../signUpForm.php?error=empty");
+    header("Location: ../signUpForm.php?error=nopassword");
     exit();
 }
 if(empty($age)){
-    header("Location: ../signUpForm.php?error=empty");
+    header("Location: ../signUpForm.php?error=noAge");
     exit();
 }
 
