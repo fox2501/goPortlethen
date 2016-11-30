@@ -216,8 +216,7 @@ session_start();
 
 <div class="ui container">
     <div class="ui grid">
-        <div class="row">
-        </div>
+        <div class="ui hidden divider"></div>
         <div class="ui divided items">
             <div class="item">
                 <div class="ui small image">
@@ -315,7 +314,7 @@ session_start();
                             <a href="/semantic/src/inc/clubPage.php">For more info click here!</a>
                         </div>
                     </div>
-                    <div class="ui hidden divider"></div>
+                    <div class="ui divider"></div>
                 </div>
             </div>
         </div>
