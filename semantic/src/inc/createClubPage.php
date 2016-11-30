@@ -131,7 +131,7 @@
     </form>
 
     <script type="text/javascript">
-        $(".ui.form")
+        $('.ui.form')
             .form({
                     email: {
                         identifier: 'email',
