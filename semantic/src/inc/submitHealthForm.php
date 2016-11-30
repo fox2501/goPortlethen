@@ -17,7 +17,7 @@ if (!$imageID->is_valid()) {
 }
 
 
-$sql = "INSERT INTO healthcontent (title, mainText, userID, contentType, approvalStatus) VALUES ('$title', '$mainText', '$userID]', 'Blah', '0')";
+$sql = "INSERT INTO healthcontent (title, mainText, userID, contentType, approvalStatus) VALUES ('$title', '$mainText', '$userID', 'Blah', '0')";
 
 if (mysqli_query($db, $sql)) {
 } else {
