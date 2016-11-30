@@ -51,7 +51,6 @@
                     <option value="SP">Sport</option>
                 </select>
             </div>
-            </div>
             <div class="field">
                 <label>Club Description</label>
                 <textarea rows="4"></textarea>
