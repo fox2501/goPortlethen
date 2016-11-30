@@ -32,14 +32,15 @@ session_start();
                 </div>
                 <label>Main Image</label>
                 <div class="field">
-<!--                    --><?php //echo cl_image_upload_tag('imageID',array("callback" => $cors_location));?>
+                    <?php echo cl_image_upload_tag('imageID',array("callback" => $cors_location));?>
+                    <!--
 
                     <div class="ui fluid action input">
                         <input type="file" name="image">
                         <div class="ui icon button">
                             <i class="cloud upload icon"></i>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
                 <button id="submitButton" class="ui primary button" input type="submit" value="SUBMIT">Submit Content</button>
             </div>

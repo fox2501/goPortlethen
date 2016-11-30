@@ -9,12 +9,12 @@ $title = $_POST["title"];
 $mainText = $_POST["mainText"];
 $userID = $_SESSION['loggedIn'];
 
-/*$imageID = new PreloadedFile($_POST['imageID']);
+$imageID = new PreloadedFile($_POST['imageID']);
 if (!$imageID->is_valid()) {
     echo "Invalid upload signature";
 } else {
     $photo->image_identifier = $imageID->identifier();
-}*/
+}
 
 
 $sql = "INSERT INTO healthcontent (title, mainText, userID, contentType, approvalStatus) VALUES ('$title', '$mainText', '$userID]', 'Blah', '0')";
