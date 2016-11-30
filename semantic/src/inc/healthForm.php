@@ -34,7 +34,7 @@ session_start();
                 <div class="field">
                     <div class="ui fluid action input">
                         <input type="file" name="image">
-                        <?php echo cl_image_upload_tag('imageID',array("callback" => $cors_location));?>
+<!--                        --><?php //echo cl_image_upload_tag('imageID',array("callback" => $cors_location));?>
 <!--                        <div class="ui icon button">
                             <i class="cloud upload icon"></i>
                         </div>-->
