@@ -129,7 +129,7 @@ session_start();
     </div>
 </div>
 </div>
--->
+
 
 <div class="ui container">
     <div class="ui grid">
@@ -214,7 +214,7 @@ session_start();
         </div>
         <div class="row">
         </div>
-    </div>
+    </div>-->
     <div class="ui divided items">
         <div class="item">
             <div class="ui small image">
