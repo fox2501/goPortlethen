@@ -318,7 +318,10 @@ session_start();
             </div>
             <div class="ui divider"></div>
         </div>
+        <div class="ui divider"></div>
     </div>
+    <div class="ui divider"></div>
 </body>
+<div class="ui divider"></div>
 <?php include("includes/footer.php"); ?>
 </html>
