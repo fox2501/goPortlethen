@@ -67,11 +67,6 @@ session_start();
                     <input type="checkbox" tabindex="0" class="hidden" id="isFee">
                     <label for="isFee">Fee does apply</label>
                 </div>
-                <!--<script>
-                    $('.ui.checkbox')
-                        .checkbox()
-                    ;
-                </script>-->
             </div>
             <div class="field" id="feeAmount" style="display: none;">
                 <label>Please enter your clubs monthly fee: </label>
@@ -129,8 +124,8 @@ session_start();
             </div>
             <div class="required inline field">
                 <div class="ui checkbox">
-                    <input type="checkbox" tabindex="0" class="hidden" name="checkbox">
-                    <label>I agree to the terms and conditions</label>
+                    <input type="checkbox" tabindex="0" class="hidden" name="checkbox"id="termsAndConditions">
+                    <label for="termsAndConditions">I agree to the terms and conditions</label>
                 </div>
                 <script>
                     $('.ui.checkbox')
