@@ -43,7 +43,7 @@
             </div>
             <div class="field">
                 <label>Club Category</label>
-                <select class="ui search dropdown" multiple="">
+                <select class="ui search dropdown">
                     <option value="">Select Category</option>
                     <option value="AR">Art</option>
                     <option value="EP">E-Sport</option>
