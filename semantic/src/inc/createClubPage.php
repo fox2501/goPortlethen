@@ -129,7 +129,7 @@ include("includes/dbconnect.php");?>
                 </div>
             </div>
         </div>
-        <div class="ui fluid large green submit button">Create Club</div>
+        <div class="ui fluid large green submit button" id="createClub">Create Club</div>
     </form>
 
     <script type="text/javascript">

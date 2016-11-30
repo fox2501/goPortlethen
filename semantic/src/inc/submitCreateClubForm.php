@@ -20,11 +20,14 @@ if (!$imageID->is_valid()) {
    $photo->image_identifier = $imageID->identifier();
 }*/
 
+if(isset($_POST['createClub']))
+{
+    $sql = "INSERT INTO club (clubName, email, clubCategory, clubDescription, contactNumber, feePaid, feeCost)
+    VALUES ('".$_POST["clubName"]."','".$_POST["email"]."','".$_POST["clubCategory"]."','".$_POST["clubDescription"]."','".$_POST["contactNumber"]."','".$_POST["feePaid"]."','".$_POST["feePaid"]."','".$_POST["feeCost"]."')";
 
-$sql = "INSERT INTO club (clubName, email, clubCategory, clubDescription, contactNumber, feePaid, feeCost) VALUES ('$clubName', '$email', '$clubCategory', '$clubCategory', )";
-
-if (mysqli_query($db, $sql)) {
-} else {
+    $result = mysqli_query($conn,$sql);
+}
+else {
     echo "Error: " . $sql . "<br>" . mysqli_error($db);
 }
 
