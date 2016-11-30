@@ -16,11 +16,10 @@ session_start();
     <script type="text/javascript" src="jquery.iframe-transport.js"></script>
     <script type="text/javascript" src="jquery.fileupload.js"></script>
     <script type="text/javascript" src="jquery.cloudinary.js"></script>
-<!--
-   require 'goPortlethen/semantic/cloudinaryAPI/Cloudinary.php';
-    require 'goPortlethen/semantic/cloudinaryAPI/Uploader.php';
-    require 'goPortlethen/semantic/cloudinaryAPI/Api.php';
-    -->
+
+    <?php include 'goPortlethen/semantic/cloudinaryAPI/Cloudinary.php';
+    include 'goPortlethen/semantic/cloudinaryAPI/Uploader.php';
+    include 'goPortlethen/semantic/cloudinaryAPI/Api.php'; ?>
 
 <!--    $.cloudinary.config({ cloud_name: 'goportlethencs8', api_key: '116467215234765'})-->
     <title>goPortlethen</title>
