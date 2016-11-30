@@ -34,7 +34,7 @@ include("includes/dbconnect.php");?>
             <div class="field">
                 <label>Club Name</label>
                 <div class="field">
-                    <input type="text" name="displayName" placeholder="Enter your club name.">
+                    <input type="text" name="clubName" placeholder="Enter your club name.">
                 </div>
             </div>
             <div class="field">
@@ -45,7 +45,7 @@ include("includes/dbconnect.php");?>
             </div>
             <div class="field">
                 <label>Club Category</label>
-                <select class="ui search dropdown">
+                <select class="ui search dropdown" name="clubCategory">
                     <option value="">Select Category</option>
                     <option value="AR">Art</option>
                     <option value="EP">E-Sport</option>
@@ -55,11 +55,11 @@ include("includes/dbconnect.php");?>
             </div>
             <div class="field">
                 <label>Club Description</label>
-                <textarea rows="4"></textarea>
+                <textarea rows="4" name="clubDescription"></textarea>
             </div>
             <div class="field">
                 <label>Phone Number</label>
-                <input type="text" name="phone[number]" maxlength="11" placeholder="Phone Number">
+                <input type="text" name="phoneNumber" maxlength="11" placeholder="Phone Number">
             </div>
             <div class="field">
                 <label>Please toggle if your club requires a fee: </label>
@@ -72,7 +72,7 @@ include("includes/dbconnect.php");?>
                 <label>Please enter your clubs monthly fee: </label>
                 <div class="ui  right labeled input">
                     <div class="ui label">£</div>
-                    <input type="text" placeholder="Amount">
+                    <input type="text" placeholder="Amount" name="feeAmount">
                     <div class="ui basic label">.00</div>
                 </div>
                 <script>
