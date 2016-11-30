@@ -314,9 +314,9 @@ session_start();
                             <a href="/semantic/src/inc/clubPage.php">For more info click here!</a>
                         </div>
                     </div>
-                    <div class="ui divider"></div>
                 </div>
             </div>
+            <div class="ui divider"></div>
         </div>
     </div>
 </body>
