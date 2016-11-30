@@ -128,32 +128,32 @@
             </div>
         </div>
         <div class="ui fluid large green submit button">Create Club</div>
-        <script type="javascript">
-            $('.ui.form')
-                .form({
-                        email: {
-                            identifier: 'email',
-                            rules: [
-                                {
-                                    type: 'email',
-                                    prompt: 'Please enter a valid e-mail'
-                                }
-                            ]
-                        },
-                        checkbox: {
-                            identifier: 'checkbox',
-                            rules: [
-                                {
-                                    type: 'checked',
-                                    prompt: 'Please agree to the terms & conditions'
-                                }
-                            ]
-                        }
-                    }
-                )
-            ;
-        </script>
     </form>
+    <script type="text/javascript">
+        $('.ui.form')
+            .form({
+                    email: {
+                        identifier: 'email',
+                        rules: [
+                            {
+                                type: 'email',
+                                prompt: 'Please enter a valid e-mail'
+                            }
+                        ]
+                    },
+                    checkbox: {
+                        identifier: 'checkbox',
+                        rules: [
+                            {
+                                type: 'checked',
+                                prompt: 'Please agree to the terms & conditions'
+                            }
+                        ]
+                    }
+                }
+            )
+        ;
+    </script>
     <div class="ui bottom attached warning message">
         <i class="icon help"></i>
         Already signed up? <a href="/semantic/src/inc/logIn.php">Login here</a> instead.
