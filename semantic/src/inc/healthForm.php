@@ -32,6 +32,7 @@ session_start();
                 </div>
                 <label>Main Image</label>
                 <div class="field">
+                    <input type="file" name="image">
                     <?php echo cl_image_upload_tag('imageID',array("callback" => $cors_location));?>
                     <!--
 
