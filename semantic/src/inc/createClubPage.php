@@ -128,7 +128,7 @@
             </div>
         </div>
         <div class="ui fluid large green submit button">Create Club</div>
-        <script>
+        <script type="javascript">
             $('.ui.form')
                 .form({
                         email: {
