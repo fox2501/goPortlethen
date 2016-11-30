@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,7 +38,7 @@ session_start();
             <div class="field">
                 <label>Email Address</label>
                 <div class="field">
-                    <input type="text" name="email" placeholder="Please enter your email address.">
+                    <input type="text" name="email" placeholder="Please enter your email address." id="email">
                 </div>
             </div>
             <div class="field">
@@ -127,11 +125,6 @@ session_start();
                     <input type="checkbox" tabindex="0" class="hidden" name="checkbox"id="termsAndConditions">
                     <label for="termsAndConditions">I agree to the terms and conditions</label>
                 </div>
-                <script>
-                    $('.ui.checkbox')
-                        .checkbox()
-                    ;
-                </script>
             </div>
         </div>
         <div class="ui fluid large green submit button">Create Club</div>
