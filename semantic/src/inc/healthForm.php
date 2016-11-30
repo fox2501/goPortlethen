@@ -21,7 +21,7 @@ session_start();
 
     <div class="ui container">
         <form class="ui form" action="submitHealthForm.php" method="POST">
-            <div class="field">
+<!--            <div class="field">-->
                 <label>Title</label>
                 <div class="field">
                     <input type="text" name="title" placeholder="Enter the title of your post">
@@ -35,9 +35,9 @@ session_start();
                     <div class="ui fluid action input">
                         <input type="file" name="image">
                         <?php echo cl_image_upload_tag('imageID',array("callback" => $cors_location));?>
-                        <div class="ui icon button">
+<!--                        <div class="ui icon button">
                             <i class="cloud upload icon"></i>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
                 <button id="submitButton" class="ui primary button" input type="submit" value="SUBMIT">Submit Content</button>
