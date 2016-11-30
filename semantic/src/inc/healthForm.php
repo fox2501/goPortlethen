@@ -40,8 +40,8 @@ session_start();
                         <input type="file" name="image">
                         <div class="ui icon button">
                             <i class="cloud upload icon"></i>
-                        </div>
-                    </div>-->
+                        </div>-->
+                    </div>
                 </div>
                 <button id="submitButton" class="ui primary button" input type="submit" value="SUBMIT">Submit Content</button>
             </div>
