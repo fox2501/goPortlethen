@@ -67,11 +67,11 @@ session_start();
                     <input type="checkbox" tabindex="0" class="hidden" id="isFee">
                     <label for="isFee">Fee does apply</label>
                 </div>
-                <script>
+                <!--<script>
                     $('.ui.checkbox')
                         .checkbox()
                     ;
-                </script>
+                </script>-->
             </div>
             <div class="field" id="feeAmount" style="display: none;">
                 <label>Please enter your clubs monthly fee: </label>
