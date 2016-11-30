@@ -315,7 +315,7 @@ session_start();
                             <a href="/semantic/src/inc/clubPage.php">For more info click here!</a>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="item">
                     </div>
                 </div>
             </div>
