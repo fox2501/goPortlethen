@@ -128,12 +128,12 @@ session_start();
         </div>
     </div>
 </div>
-</div>
+</div>-->
 
 
 <div class="ui container">
     <div class="ui grid">
-        <div class="row">
+        <!--<div class="row">
             <div class="four wide column">
                 <img class="ui centered small image"
                      src="http://cache.images.core.optasports.com/soccer/teams/150x150/1900.png">
@@ -191,7 +191,7 @@ session_start();
             <div class="four wide column">
                 <button class="large ui button"><a href="/semantic/src/inc/clubPage.php">For more info click here!</a></button>
             </div>
-        </div>
+        </div>-->
         <div class="row">
             <div class="four wide column">
                 <img class="ui centered small image"
@@ -214,7 +214,7 @@ session_start();
         </div>
         <div class="row">
         </div>
-    </div>-->
+    </div>
     <div class="ui divided items">
         <div class="item">
             <div class="ui small image">
