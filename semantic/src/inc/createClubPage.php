@@ -122,15 +122,16 @@
             </div>
             <div class="required inline field">
                 <div class="ui checkbox">
-                    <input type="checkbox" tabindex="0" class="hidden" name="checkbox"id="termsAndConditions">
+                    <input type="checkbox" tabindex="0" class="hidden" name="termsAndConditions" id="termsAndConditions">
                     <label for="termsAndConditions">I agree to the terms and conditions</label>
                 </div>
             </div>
         </div>
         <div class="ui fluid large green submit button">Create Club</div>
     </form>
+
     <script type="text/javascript">
-        $('.ui.form')
+        $(".ui.form")
             .form({
                     email: {
                         identifier: 'email',
@@ -142,7 +143,7 @@
                         ]
                     },
                     checkbox: {
-                        identifier: 'checkbox',
+                        identifier: 'termsAndConditions',
                         rules: [
                             {
                                 type: 'checked',
@@ -154,6 +155,7 @@
             )
         ;
     </script>
+
     <div class="ui bottom attached warning message">
         <i class="icon help"></i>
         Already signed up? <a href="/semantic/src/inc/logIn.php">Login here</a> instead.
