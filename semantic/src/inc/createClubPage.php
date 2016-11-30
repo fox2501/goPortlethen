@@ -65,6 +65,7 @@ session_start();
                 <label>Please toggle if your club requires a fee: </label>
                 <div class="ui toggle checkbox">
                     <input type="checkbox" tabindex="0" class="hidden" id="isFee">
+                    <label for="isFee">Fee does apply</label>
                 </div>
                 <script>
                     $('.ui.checkbox')

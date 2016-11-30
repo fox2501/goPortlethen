@@ -129,8 +129,6 @@ session_start();
     </div>
 </div>
 </div>-->
-
-
 <!--<div class="row">
     <div class="four wide column">
         <img class="ui centered small image"
@@ -316,12 +314,9 @@ session_start();
                     </div>
                 </div>
             </div>
-            <div class="ui divider"></div>
+            <div class="ui hidden divider"></div>
         </div>
-        <div class="ui divider"></div>
     </div>
-    <div class="ui divider"></div>
 </body>
-<div class="ui divider"></div>
 <?php include("includes/footer.php"); ?>
 </html>
