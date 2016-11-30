@@ -9,7 +9,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
     <title>Create Club Page</title>
 </head>
-<?php include("includes/header.php"); ?>
+<?php
+include("includes/header.php");
+include("includes/dbconnect.php");?>
 <body>
 <div class="ui container">
     <form class="ui form">
