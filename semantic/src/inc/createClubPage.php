@@ -41,25 +41,16 @@
                     <input type="text" name="email" placeholder="Please enter your email address." id="email">
                 </div>
             </div>
-            <!--<div class="field">
-                <label>Club Category</label>
-                <select class="ui search dropdown">
-                    <option value="">Select Category</option>
-                    <option value="AR">Art</option>
-                    <option value="EP">E-Sport</option>
-                    <option value="HE">Health</option>
-                    <option value="SP">Sport</option>
-                </select>
-            </div>-->
             <div class="field">
                 <label>Club Category</label>
-                <select name="Categories" multiple="" class="ui dropdown">
+                <select class="ui search dropdown" multiple="">
                     <option value="">Select Category</option>
                     <option value="AR">Art</option>
                     <option value="EP">E-Sport</option>
                     <option value="HE">Health</option>
                     <option value="SP">Sport</option>
                 </select>
+            </div>
             </div>
             <div class="field">
                 <label>Club Description</label>
