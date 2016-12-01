@@ -37,8 +37,6 @@ session_start();
         <div class="ui divider"></div>
     </div>
 
-
-
     <div class=" ui container">
         <div class="ui grid">
             <div class="row">
@@ -80,11 +78,6 @@ session_start();
                             </div>
                         </div>
                     </div>
-
-
-
-
-
             </div>
         </div>
     </div>
