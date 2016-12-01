@@ -16,9 +16,9 @@ if (!$imageID->is_valid()) {
     $photo->image_identifier = $imageID->identifier();
 }*/
 
-if(isset($_SESSION['loggedIn'])) {
+/*if(isset($_SESSION['loggedIn'])) {
     echo "exists";
-}
+}*/
 $sql = "INSERT INTO healthcontent (title, mainText, userID, contentType, approvalStatus) VALUES ('$title', '$mainText', '$userID', 'Blah', '0')";
 
 if (mysqli_query($db, $sql)) {
