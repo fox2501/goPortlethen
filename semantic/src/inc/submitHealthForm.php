@@ -7,7 +7,7 @@ session_start();
 include("includes/dbconnect.php");
 $title = $_POST["title"];
 $mainText = $_POST["mainText"];
-$userID = $_SESSION['loggedIn'];
+$userID = $_SESSION["loggedIn"];
 
 /*$imageID = new PreloadedFile($_POST['imageID']);
 if (!$imageID->is_valid()) {
