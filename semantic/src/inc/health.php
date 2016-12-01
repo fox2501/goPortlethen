@@ -18,11 +18,10 @@ session_start();
 <body>
     <!-- Page header -->
     <h1 align="center">Health & Wellbeing</h1>
-
     <div class="ui horizontal section divider">
         <p>Keeping Portlethen Healthy</p>
     </div>
-    
+
 
     <!-- Submit content button -->
     <!-- Takes user to SubmitHealth.php -->
