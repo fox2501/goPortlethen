@@ -26,7 +26,7 @@ session_start();
 
             <label>Title</label>
             <div class="field">
-                <input type="text" name="title" placeholder">Enter the title of your post">
+                <input type="text" name="title" placeholder="Enter the title of your post">
             </div>
 
             <label>Content</label>
