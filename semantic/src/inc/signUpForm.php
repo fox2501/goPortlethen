@@ -10,8 +10,12 @@ session_start();
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
     <title>goPortlethen</title>
 </head>
-<?php include("includes/header.php"); ?>
-<?php $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+<?php
+include("includes/header.php");
+include("includes/submitSignUp.php");
+$url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+?>
+<?php
 ?>
 
 <body>
@@ -31,10 +35,10 @@ session_start();
             <div class="field">
                 <label>Display Name</label>
                 <?php
-                if(strpos($url, 'error=empty') !== false){
+                if(strpos($url, 'error=emptyFirstName') !== false){
                     echo "<div class='field error'>
                             <input type='text' name='firstName'
-                           placeholder='Please make sure you enter a name!'>
+                           placeholder=$emptyFirstNameError>
                             </div>";
                 } else{
                     echo "<div class='field'>
@@ -48,7 +52,7 @@ session_start();
             <div class="field">
                 <label>Email Address</label>
                     <?php
-                    if(strpos($url, 'error=empty') !== false){
+                    if(strpos($url, 'error=emptyEmail') !== false){
                         echo "<div class='field error'>
                     <input type='text' name='email' placeholder='Please ensure you enter an email address!'>
                 </div>";
@@ -63,7 +67,7 @@ session_start();
             <div class="field">
                 <label>Username</label>
                 <?php
-                if(strpos($url, 'error=empty') !== false){
+                if(strpos($url, 'error=emptyUsername') !== false){
                     echo "<div class='field error'>
                     <input type='text' name='username' placeholder='Please ensure you enter a username!'>
                 </div>";
@@ -77,7 +81,7 @@ session_start();
             <div class="field">
                 <label>Password</label>
                 <?php
-                if(strpos($url, 'error=empty') !== false){
+                if(strpos($url, 'error=emptyPassword') !== false){
                     echo "<div class='field error'>
                     <input type='password' name='password' placeholder='Please ensure you enter a password!'>
                 </div>";
@@ -91,7 +95,7 @@ session_start();
             <div class="field">
                 <label>Age</label>
                 <?php
-                if(strpos($url, 'error=empty') !== false){
+                if(strpos($url, 'error=emptyAge') !== false){
                     echo "<div class='field error'>
                     <input type='number' name='age' placeholder='Please ensure you enter an email address!'>
                 </div>";
