@@ -26,6 +26,7 @@ if($dehashedpass == 0){
     } else{
         $_SESSION['loggedIn'] = $row['userID'];
         $_SESSION['name'] = $row['firstName'];
+        $_SESSION['surname'] = $row['surname'];
     }
 
     header('Location: /semantic/');

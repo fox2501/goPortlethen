@@ -53,13 +53,7 @@ if (isset($_SESSION['loggedIn'])) {
                             <div class="row">
                                 <div class="ui header">
                                     <?php
-                                    $sql = "SELECT firstName, surname FROM users";
-                                    $result = $conn->query($sql);
-                                    if (!$row = mysqli_fetch_assoc($result)){
-                                        echo "No name found";
-                                    } else{
-                                        echo $row['firstName'];
-                                    }
+                                        echo $_SESSION['surname'];
                                     ?>
                                 </div>
                             </div>
