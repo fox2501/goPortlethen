@@ -13,7 +13,7 @@ if(empty($firstName)){
     header("Location: ../signUpForm.php?error=formError");
     exit();
 }
-if(empty($surnameName)){
+if(empty($surname)){
     header("Location: ../signUpForm.php?error=formError");
     exit();
 }
@@ -34,7 +34,6 @@ if(empty($password)){
 }
 if(empty($age)){
     header("Location: ../signUpForm.php?error=formError");
-
     exit();
 }
 else{
