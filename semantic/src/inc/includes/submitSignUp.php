@@ -19,9 +19,8 @@ if(empty($surnameName)){
 
     exit();
 }
-if(empty($email)){
+if(empty($email) && !filter_var($email,FILTER_VALIDATE_EMAIL)){
     header("Location: ../signUpForm.php?error=formError");
-
     exit();
 }
 if(empty($username)){

@@ -81,7 +81,7 @@ session_start();
                     <?php
                     if(strpos($url, 'error=formError') !== false){
                         echo "<div class='field error'>
-                    <input type='text' name='email' placeholder='Please ensure you enter an email address!'>
+                    <input type='text' name='email' placeholder='Please enter a valid email address!'>
                 </div>";
                     } else{
                         echo "<div class='field'>
