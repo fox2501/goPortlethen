@@ -34,7 +34,7 @@ session_start();
                 if(isset($result) && $firstNameError !== false){
                     echo "<div class='field error'>
                             <input type='text' name='firstName'
-                           placeholder='Please make sure you enter a name!'>
+                           placeholder='Please make sure your first name!'>
                             </div>";
                 } else{
                     echo "<div class='field'>
@@ -51,7 +51,7 @@ session_start();
                 if(strpos($url, 'error=formError') !== false){
                     echo "<div class='field error'>
                             <input type='text' name='surname'
-                           placeholder='Please make sure your surname!'>
+                           placeholder='Please make sure you enter your surname!'>
                             </div>";
                 } else{
                     echo "<div class='field'>
@@ -67,7 +67,7 @@ session_start();
                 <?php
                 if(strpos($url, 'error=formError') !== false){
                     echo "<div class='field error'>
-                    <input type='number' name='age' placeholder='Please ensure you enter an email address!'>
+                    <input type='number' name='age' placeholder='Please ensure you enter your age!'>
                 </div>";
                 } else{
                     echo "<div class='field'>
