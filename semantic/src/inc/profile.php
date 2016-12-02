@@ -111,7 +111,7 @@ if (isset($_SESSION['loggedIn'])) {
     </html>
     <?php
 } else{
-    header("/semantic/");
+    header("Location: ../semantic/");
 }
 ?>
 
