@@ -34,10 +34,7 @@ if(empty($password)){
 } else if (strlen($password) < 8){
     header("Location: ../signUpForm.php?error=formError");
     exit();
-} else if(preg_match("/[^0,9]/", $password)){
-    header("Location: ../signUpForm.php?error=formError");
-    exit();
-} else if($password == strtoupper($password) || $password == strtolower($password)){
+} else if(!preg_match('/^(?=[a-z])(?=[A-Z])[a-zA-Z]{8,}$/', $password)){
     header("Location: ../signUpForm.php?error=formError");
     exit();
 }
