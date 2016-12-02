@@ -14,6 +14,7 @@ if (isset($_SESSION['loggedIn'])) {
     </head>
     <?php
     include("includes/header.php");
+    include("includes/dbconnect.php");
     ?>
     <body>
     <div class="ui container">
@@ -50,7 +51,17 @@ if (isset($_SESSION['loggedIn'])) {
                     <div class="ui one column grid">
                         <div class="column">
                             <div class="row">
-                                <div class="ui header">Name: Ross Henderson</div>
+                                <div class="ui header">
+                                    <?php
+                                    $sql = "SELECT firstName, surname FROM users";
+                                    $result = $conn->query($sql);
+                                    if (!$row = mysqli_fetch_assoc($result)){
+                                        echo "No name found";
+                                    } else{
+                                        echo $row['firstName'];
+                                    }
+                                    ?>
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="ui header">Age: 22</div>
