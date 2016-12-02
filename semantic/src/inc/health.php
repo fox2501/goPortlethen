@@ -22,6 +22,7 @@ session_start();
         <p>Keeping Portlethen Healthy</p>
     </div>
 
+
     <!-- Submit content button -->
     <!-- Takes user to SubmitHealth.php -->
     <!-- Only visible to admin/contributor -->
@@ -37,8 +38,6 @@ session_start();
         <div class="ui divider"></div>
     </div>
 
-
-
     <div class=" ui container">
         <div class="ui grid">
             <div class="row">
@@ -47,44 +46,37 @@ session_start();
                 <div>
 
                     <!-- Blank area to input info through form -->
-                    <div>
-                        <div class="ui grid">
-                            <div class="row">
-                                <ul>
-                                    <?php
-                                    $sql_query = "SELECT * FROM healthContent, users WHERE healthContent.userID=users.userID";
-                                    $result = $db->query($sql_query);
-                                    while($row = $result-> fetch_array()) {
-                                        $title = $row['title'];
-                                        $mainText = $row['mainText'];
-                                        $userName = $row['userName'];
-                                        echo "<div>
-                                            <div class=\"four wide column\">
-                                                <h3 class=\"ui header\" id=\"title\">
-                                                    $title
-                                                </h3>
-                                                <img class=\"ui small image\" src=\"https://scontent.flhr4-1.fna.fbcdn.net/v/t1.0-9/13434842_1608517786105160_4523080997776743356_n.jpg?oh=4981b2761c2ef40c4989fc4b74bd440a&oe=58C6B38A\" id=\"image\"></img>
-                                                <br>
-                                                <button class=\"mini ui button\" style=\"float:right; margin-left:20px\">Edit</button>
-                                                <p id=\"mainText\" style=\"text - align:justify\">
-                                                    $mainText
-                                                </p>
-                                                <p id=\"author\">By $userName</p>
-                                                <p id=\"date\"></p>
-                                                <div class=\"ui divider\"></div>
-                                            </div>
-                                        </div>";
-                                    }
-                                    ?>
-                                </ul>
-                            </div>
+                    <div class="ui grid">
+                        <div class="row">
+                            <ul>
+                                <?php
+                                $sql_query = "SELECT * FROM healthContent, users WHERE healthContent.userID=users.userID";
+                                $result = $db->query($sql_query);
+                                while($row = $result-> fetch_array()) {
+                                    $title = $row['title'];
+                                    $mainText = $row['mainText'];
+                                    $userName = $row['userName'];
+                                    echo "<div>
+                                        <div class=\"four wide column\">
+                                            <h3 class=\"ui header\" id=\"title\">
+                                                $title
+                                            </h3>
+                                            <img class=\"ui small image\" src=\"https://scontent.flhr4-1.fna.fbcdn.net/v/t1.0-9/13434842_1608517786105160_4523080997776743356_n.jpg?oh=4981b2761c2ef40c4989fc4b74bd440a&oe=58C6B38A\" id=\"image\"></img>
+                                            <br>
+                                            <button class=\"mini ui button\" style=\"float:right; margin-left:20px\">Edit</button>
+                                            <p id=\"mainText\" style=\"text - align:justify\">
+                                                $mainText
+                                            </p>
+                                            <p id=\"author\">By $userName</p>
+                                            <p id=\"date\"></p>
+                                            <div class=\"ui divider\"></div>
+                                        </div>
+                                    </div>";}
+                                ?>
+                            </ul>
                         </div>
                     </div>
-
-
-
-
-
+                </div>
             </div>
         </div>
     </div>

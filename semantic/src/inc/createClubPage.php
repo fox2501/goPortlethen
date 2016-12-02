@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,10 +9,12 @@ session_start();
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
     <title>Create Club Page</title>
 </head>
-<?php include("includes/header.php"); ?>
+<?php
+include("includes/header.php");
+include("includes/dbconnect.php");?>
 <body>
 <div class="ui container">
-    <form class="ui form">
+    <form class="ui form" action="submitCreateClubForm.php" method="post">
         <h2 class="ui center aligned blue header">
             <div class="content">
                 Create Your Club
@@ -34,18 +34,18 @@ session_start();
             <div class="field">
                 <label>Club Name</label>
                 <div class="field">
-                    <input type="text" name="displayName" placeholder="Enter your club name.">
+                    <input type="text" name="clubName" placeholder="Enter your club name.">
                 </div>
             </div>
             <div class="field">
                 <label>Email Address</label>
                 <div class="field">
-                    <input type="text" name="email" placeholder="Please enter your email address.">
+                    <input type="text" name="email" placeholder="Please enter your email address." id="email">
                 </div>
             </div>
             <div class="field">
                 <label>Club Category</label>
-                <select class="ui search dropdown">
+                <select class="ui search dropdown" name="clubCategory">
                     <option value="">Select Category</option>
                     <option value="AR">Art</option>
                     <option value="EP">E-Sport</option>
@@ -55,28 +55,24 @@ session_start();
             </div>
             <div class="field">
                 <label>Club Description</label>
-                <textarea rows="4"></textarea>
+                <textarea rows="4" name="clubDescription"></textarea>
             </div>
             <div class="field">
                 <label>Phone Number</label>
-                <input type="text" name="phone[number]" maxlength="11" placeholder="Phone Number">
+                <input type="text" name="phoneNumber" maxlength="11" placeholder="Phone Number">
             </div>
             <div class="field">
                 <label>Please toggle if your club requires a fee: </label>
                 <div class="ui toggle checkbox">
                     <input type="checkbox" tabindex="0" class="hidden" id="isFee">
+                    <label for="isFee">Fee does apply</label>
                 </div>
-                <script>
-                    $('.ui.checkbox')
-                        .checkbox()
-                    ;
-                </script>
             </div>
             <div class="field" id="feeAmount" style="display: none;">
                 <label>Please enter your clubs monthly fee: </label>
                 <div class="ui  right labeled input">
                     <div class="ui label">£</div>
-                    <input type="text" placeholder="Amount">
+                    <input type="text" placeholder="Amount" name="feeAmount">
                     <div class="ui basic label">.00</div>
                 </div>
                 <script>
@@ -128,43 +124,40 @@ session_start();
             </div>
             <div class="required inline field">
                 <div class="ui checkbox">
-                    <input type="checkbox" tabindex="0" class="hidden" name="checkbox">
-                    <label>I agree to the terms and conditions</label>
+                    <input type="checkbox" tabindex="0" class="hidden" name="termsAndConditions" id="termsAndConditions">
+                    <label for="termsAndConditions">I agree to the terms and conditions</label>
                 </div>
-                <script>
-                    $('.ui.checkbox')
-                        .checkbox()
-                    ;
-                </script>
             </div>
         </div>
-        <div class="ui fluid large green submit button">Create Club</div>
-        <script>
-            $('.ui.form')
-                .form({
-                        email: {
-                            identifier: 'email',
-                            rules: [
-                                {
-                                    type: 'email',
-                                    prompt: 'Please enter a valid e-mail'
-                                }
-                            ]
-                        },
-                        checkbox: {
-                            identifier: 'checkbox',
-                            rules: [
-                                {
-                                    type: 'checked',
-                                    prompt: 'Please agree to the terms & conditions'
-                                }
-                            ]
-                        }
-                    }
-                )
-            ;
-        </script>
+        <div class="ui fluid large green submit button" id="createClub">Create Club</div>
     </form>
+
+    <script type="text/javascript">
+        $('.ui.form')
+            .form({
+                    email: {
+                        identifier: 'email',
+                        rules: [
+                            {
+                                type: 'email',
+                                prompt: 'Please enter a valid e-mail'
+                            }
+                        ]
+                    },
+                    checkbox: {
+                        identifier: 'termsAndConditions',
+                        rules: [
+                            {
+                                type: 'checked',
+                                prompt: 'Please agree to the terms & conditions'
+                            }
+                        ]
+                    }
+                }
+            )
+        ;
+    </script>
+
     <div class="ui bottom attached warning message">
         <i class="icon help"></i>
         Already signed up? <a href="/semantic/src/inc/logIn.php">Login here</a> instead.
