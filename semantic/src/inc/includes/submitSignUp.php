@@ -34,9 +34,6 @@ if(empty($password)){
 } else if (strlen($password) < 8){
     header("Location: ../signUpForm.php?error=formError");
     exit();
-} else if(!preg_match('/^(?=[a-z])(?=[A-Z])[a-zA-Z]{8,}$/', $password)){
-    header("Location: ../signUpForm.php?error=formError");
-    exit();
 }
 if(empty($age)){
     header("Location: ../signUpForm.php?error=formError");
