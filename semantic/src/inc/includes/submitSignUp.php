@@ -11,30 +11,25 @@ $age = $_POST["age"];
 
 if(empty($firstName)){
     header("Location: ../signUpForm.php?error=formError");
-
     exit();
 }
 if(empty($surnameName)){
     header("Location: ../signUpForm.php?error=formError");
-
     exit();
 }
-if(empty($email) && !filter_var($email,FILTER_VALIDATE_EMAIL)){
+if(empty($email)){
     header("Location: ../signUpForm.php?error=formError");
     exit();
 }
 if(empty($username)){
     header("Location: ../signUpForm.php?error=formError");
-
     exit();
 }
 if(empty($password)){
     header("Location: ../signUpForm.php?error=formError");
-
     exit();
 } else if (strlen($password) < 8){
     header("Location: ../signUpForm.php?error=passwordError");
-
     exit();
 }
 if(empty($age)){
