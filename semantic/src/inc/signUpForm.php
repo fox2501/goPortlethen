@@ -31,7 +31,7 @@ session_start();
             <div class="field">
                 <label>First Name</label>
                 <?php
-                if($firstNameError !== false){
+                if(isset($result) && $firstNameError !== false){
                     echo "<div class='field error'>
                             <input type='text' name='firstName'
                            placeholder='Please make sure you enter a name!'>
