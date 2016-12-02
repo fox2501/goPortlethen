@@ -20,6 +20,9 @@ if(empty($surname)){
 if(empty($email)){
     header("Location: ../signUpForm.php?error=formError");
     exit();
+} else if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
+    header("Location: ../signUpForm.php?error=notValidEmail");
+    exit();
 }
 if(empty($username)){
     header("Location: ../signUpForm.php?error=formError");
@@ -29,6 +32,12 @@ if(empty($password)){
     header("Location: ../signUpForm.php?error=formError");
     exit();
 } else if (strlen($password) < 8){
+    header("Location: ../signUpForm.php?error=passwordError");
+    exit();
+} else if(preg_match("/[^0,9]/", $password)){
+    header("Location: ../signUpForm.php?error=passwordError");
+    exit();
+} else if($password == strtoupper($password) || $password == strtolower($password)){
     header("Location: ../signUpForm.php?error=passwordError");
     exit();
 }
