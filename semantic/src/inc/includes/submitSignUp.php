@@ -60,6 +60,7 @@ if(empty($age)){
 }
 else{
     $sql = "SELECT username FROM users WHERE username = '$username'";
+    global $result;
     $result = mysqli_query($db, $sql);
     $usernameCheck = mysqli_num_rows($result);
     if($usernameCheck > 0){
