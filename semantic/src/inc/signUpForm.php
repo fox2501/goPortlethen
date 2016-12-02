@@ -34,7 +34,7 @@ session_start();
                 if(strpos($url, 'error=formError') !== false){
                     echo "<div class='field error'>
                             <input type='text' name='firstName'
-                           placeholder='Please make sure your first name!'>
+                           placeholder='Please make sure you enter your first name!'>
                             </div>";
                 } else{
                     echo "<div class='field'>
