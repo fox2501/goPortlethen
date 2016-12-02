@@ -16,6 +16,14 @@ global $passwordError;
 global $passwordCriteriaError;
 global $emailError;
 
+$firstNameError = false;
+$surnameError = false;
+$ageError = false;
+$usernameError = false;
+$passwordError = false;
+$passwordCriteriaError = false;
+$emailError = false;
+
 if(empty($firstName)){
     header("Location: ../signUpForm.php?error=formError");
     $firstNameError = true;
