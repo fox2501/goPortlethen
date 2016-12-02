@@ -31,7 +31,7 @@ session_start();
             <div class="field">
                 <label>First Name</label>
                 <?php
-                if(strpos($url, 'error=empty') !== false){
+                if($firstNameError !== false){
                     echo "<div class='field error'>
                             <input type='text' name='firstName'
                            placeholder='Please make sure you enter a name!'>
@@ -48,7 +48,7 @@ session_start();
             <div class="field">
                 <label>Surname</label>
                 <?php
-                if(strpos($url, 'error=empty') !== false){
+                if(strpos($url, 'error=formError') !== false){
                     echo "<div class='field error'>
                             <input type='text' name='surname'
                            placeholder='Please make sure your surname!'>
@@ -65,7 +65,7 @@ session_start();
             <div class="field">
                 <label>Age</label>
                 <?php
-                if(strpos($url, 'error=empty') !== false){
+                if(strpos($url, 'error=formError') !== false){
                     echo "<div class='field error'>
                     <input type='number' name='age' placeholder='Please ensure you enter an email address!'>
                 </div>";
@@ -79,7 +79,7 @@ session_start();
             <div class="field">
                 <label>Email Address</label>
                     <?php
-                    if(strpos($url, 'error=empty') !== false){
+                    if(strpos($url, 'error=formError') !== false){
                         echo "<div class='field error'>
                     <input type='text' name='email' placeholder='Please ensure you enter an email address!'>
                 </div>";
@@ -94,7 +94,7 @@ session_start();
             <div class="field">
                 <label>Username</label>
                 <?php
-                if(strpos($url, 'error=empty') !== false){
+                if(strpos($url, 'error=formError') !== false){
                     echo "<div class='field error'>
                     <input type='text' name='username' placeholder='Please ensure you enter a username!'>
                 </div>";
@@ -108,7 +108,7 @@ session_start();
             <div class="field">
                 <label>Password</label>
                 <?php
-                if(strpos($url, 'error=empty') !== false){
+                if(strpos($url, 'error=formError') !== false){
                     echo "<div class='field error'>
                     <input type='password' name='password' placeholder='Please ensure you enter a password!'>
                 </div>";

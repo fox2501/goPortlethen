@@ -8,24 +8,46 @@ $username = $_POST["username"];
 $password = $_POST["password"];
 $age = $_POST["age"];
 
+global $firstNameError;
+global $surnameError;
+global $ageError;
+global $usernameError;
+global $passwordError;
+global $passwordCriteriaError;
+global $emailError;
+
 if(empty($firstName)){
-    header("Location: ../signUpForm.php?error=empty");
+    header("Location: ../signUpForm.php?error=formError");
+    $firstNameError = true;
+    exit();
+}
+if(empty($surnameName)){
+    header("Location: ../signUpForm.php?error=formError");
+    $surnameError = true;
     exit();
 }
 if(empty($email)){
-    header("Location: ../signUpForm.php?error=empty");
+    header("Location: ../signUpForm.php?error=formError");
+    $emailError = true;
     exit();
 }
 if(empty($username)){
-    header("Location: ../signUpForm.php?error=empty");
+    header("Location: ../signUpForm.php?error=formError");
+    $ageError = true;
     exit();
 }
 if(empty($password)){
-    header("Location: ../signUpForm.php?error=empty");
+    header("Location: ../signUpForm.php?error=formError");
+    $usernameError = true;
+    exit();
+} else if (strlen($password) < 8){
+    header("Location: ../signUpForm.php?error=passwordError");
+    $passwordCriteriaError = true;
     exit();
 }
 if(empty($age)){
-    header("Location: ../signUpForm.php?error=empty");
+    header("Location: ../signUpForm.php?error=formError");
+    $passwordError = true;
     exit();
 }
 else{
