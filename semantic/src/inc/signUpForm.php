@@ -16,7 +16,7 @@ session_start();
 
 <body>
 <div class="ui container">
-    <form class="ui form" action="includes/submitSignUp.php" method="POST">
+    <form class="ui form" method="POST">
         <h2 class="ui center aligned blue header">
             <div class="content">
                 Sign up
@@ -119,7 +119,10 @@ session_start();
                 }
                 ?>
             </div>
-            <button class="ui fluid large green submit button" type="submit">Create Account</button>
+            <form action="includes/submitSignUp.php">
+                <button class="ui fluid large green submit button" type="submit">Create Account</button>
+            </form>
+
         </div>
     </form>
 </div>
