@@ -21,7 +21,7 @@ if(empty($email)){
     header("Location: ../signUpForm.php?error=formError");
     exit();
 } else if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
-    header("Location: ../signUpForm.php?error=notValidEmail");
+    header("Location: ../signUpForm.php?error=formError");
     exit();
 }
 if(empty($username)){
@@ -32,13 +32,13 @@ if(empty($password)){
     header("Location: ../signUpForm.php?error=formError");
     exit();
 } else if (strlen($password) < 8){
-    header("Location: ../signUpForm.php?error=passwordError");
+    header("Location: ../signUpForm.php?error=formError");
     exit();
 } else if(preg_match("/[^0,9]/", $password)){
-    header("Location: ../signUpForm.php?error=passwordError");
+    header("Location: ../signUpForm.php?error=formError");
     exit();
 } else if($password == strtoupper($password) || $password == strtolower($password)){
-    header("Location: ../signUpForm.php?error=passwordError");
+    header("Location: ../signUpForm.php?error=formError");
     exit();
 }
 if(empty($age)){
