@@ -20,10 +20,11 @@ if(empty($surname)){
 if(empty($email)){
     header("Location: ../signUpForm.php?error=formError");
     exit();
-} else if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
-    header("Location: ../signUpForm.php?error=formError");
-    exit();
 }
+//else if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
+  //  header("Location: ../signUpForm.php?error=formError");
+    //exit();
+//}
 if(empty($username)){
     header("Location: ../signUpForm.php?error=formError");
     exit();
@@ -31,10 +32,11 @@ if(empty($username)){
 if(empty($password)){
     header("Location: ../signUpForm.php?error=formError");
     exit();
-} else if (strlen($password) < 8){
-    header("Location: ../signUpForm.php?error=formError");
-    exit();
 }
+//else if (strlen($password) < 8){
+  //  header("Location: ../signUpForm.php?error=formError");
+    //exit();
+//}
 if(empty($age)){
     header("Location: ../signUpForm.php?error=formError");
     exit();
