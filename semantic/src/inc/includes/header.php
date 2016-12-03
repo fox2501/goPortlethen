@@ -46,7 +46,7 @@ session_start();
     <div class = "right menu">
         <?php
             if(isset($_SESSION['loggedIn'])){
-                echo "  <div class = 'ui teal button'>
+                echo "  <div class = 'ui simple dropdown'>
                             <a class = 'browse item' href = '/semantic/src/inc/profile.php'>
                                 <i class = 'user icon'></i>
                                 " .$_SESSION['name']. "
