@@ -53,12 +53,14 @@ if (isset($_SESSION['loggedIn'])) {
                             <div class="row">
                                 <div class="ui header">
                                     <?php
+                                    $userID = $_SESSION['userID'];
                                     $sql = "SELECT firstName, surname FROM users WHERE userID = $userID";
                                     $result = mysqli_query($db, $sql);
-                                    $row = mysqli_fetch_array($result);
-                                    $firstName = $row['firstName'];
-                                    $surname = $row['surname'];
-                                    echo "Name: ".$firstName.$surname;
+                                    while($row = mysqli_fetch_array($result)){
+                                        $firstName = $row['firstName'];
+                                        $surname = $row['surname'];
+                                        echo "Name: ".$firstName.' '.$surname;
+                                    }
                                     ?>
                                 </div>
                             </div>
