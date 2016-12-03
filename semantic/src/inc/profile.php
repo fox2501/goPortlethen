@@ -21,7 +21,11 @@ if (isset($_SESSION['loggedIn'])) {
         <div class="ui three column grid">
             <br>
             <div class = "ui huge blue header">
-                Profile Page
+                My profile
+            </div>
+            <div class = "ui button">
+                <i class="settings icon"></i>
+                Edit Profile
             </div>
             <div class="row">
                 <div class="column">
