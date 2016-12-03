@@ -164,19 +164,56 @@ if (isset($_SESSION['loggedIn'])) {
                     </div>
                     <div class = "field">
                         <label>Surname</label>
-                        <input type = "text" name = "surname">
+                        <input type = "text" name = "surname" value =
+                        "<?php
+                        $userID = $_SESSION['loggedIn'];
+                        $sql = "SELECT firstName, surname FROM users WHERE userID = '$userID'";
+                        $result = mysqli_query($db, $sql);
+                        while($row = mysqli_fetch_array($result)) {
+                            $firstName = $row['firstName'];
+                            $surname = $row['surname'];
+                        }
+                        echo $firstName;
+                        ?>">
                     </div>
                     <div class = "field">
                         <label>Age</label>
-                        <input type = "number" name = "age">
+                        <input type = "number" name = "age" value =
+                        "<?php
+                        $userID = $_SESSION['loggedIn'];
+                        $sql = "SELECT age FROM users WHERE userID = '$userID'";
+                        $result = mysqli_query($db, $sql);
+                        while($row = mysqli_fetch_array($result)) {
+                            $age = $row['age'];
+                        }
+                        echo $age;
+                        ?>">
                     </div>
                     <div class = "field">
                         <label>Location</label>
-                        <input type = "text" name = "location">
+                        <input type = "text" name = "location" value =
+                        "<?php
+                        $userID = $_SESSION['loggedIn'];
+                        $sql = "SELECT location FROM users WHERE userID = '$userID'";
+                        $result = mysqli_query($db, $sql);
+                        while($row = mysqli_fetch_array($result)) {
+                            $location = $row['location'];
+                        }
+                        echo $firstName;
+                        ?>">
                     </div>
                     <div class = "field">
                         <label>About</label>
-                        <input type = "text" name = "aboutUser">
+                        <input type = "text" name = "aboutUser" value =
+                        "<?php
+                        $userID = $_SESSION['loggedIn'];
+                        $sql = "SELECT aboutUser FROM users WHERE userID = '$userID'";
+                        $result = mysqli_query($db, $sql);
+                        while($row = mysqli_fetch_array($result)) {
+                            $aboutUser = $row['aboutUser'];
+                        }
+                        echo $firstName;
+                        ?>">
                     </div>
                 </div>
             </div>
