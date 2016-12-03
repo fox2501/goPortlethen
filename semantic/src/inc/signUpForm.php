@@ -29,12 +29,12 @@ session_start();
         ?>
         <div class="ui segment">
             <div class="field">
-                <label>Display Name</label>
+                <label>First Name</label>
                 <?php
-                if(strpos($url, 'error=empty') !== false){
+                if(strpos($url, 'error=formError') !== false){
                     echo "<div class='field error'>
                             <input type='text' name='firstName'
-                           placeholder='Please make sure you enter a name!'>
+                           placeholder='Please make sure you enter your first name!'>
                             </div>";
                 } else{
                     echo "<div class='field'>
@@ -46,11 +46,42 @@ session_start();
 
             </div>
             <div class="field">
+                <label>Surname</label>
+                <?php
+                if(strpos($url, 'error=formError') !== false){
+                    echo "<div class='field error'>
+                            <input type='text' name='surname'
+                           placeholder='Please make sure you enter your surname!'>
+                            </div>";
+                } else{
+                    echo "<div class='field'>
+                            <input type='text' name='surname'
+                           placeholder='Please enter your surname.'>
+                            </div>";
+                }
+                ?>
+
+            </div>
+            <div class="field">
+                <label>Age</label>
+                <?php
+                if(strpos($url, 'error=formError') !== false){
+                    echo "<div class='field error'>
+                    <input type='number' name='age' placeholder='Please ensure you enter your age!'>
+                </div>";
+                } else{
+                    echo "<div class='field'>
+                    <input type='number' name='age' placeholder='Please enter an email address.'>
+                </div>";
+                }
+                ?>
+            </div>
+            <div class="field">
                 <label>Email Address</label>
                     <?php
-                    if(strpos($url, 'error=empty') !== false){
+                    if(strpos($url, 'error=formError') !== false){
                         echo "<div class='field error'>
-                    <input type='text' name='email' placeholder='Please ensure you enter an email address!'>
+                    <input type='text' name='email' placeholder='Please enter a valid email address!'>
                 </div>";
                     } else{
                         echo "<div class='field'>
@@ -63,7 +94,7 @@ session_start();
             <div class="field">
                 <label>Username</label>
                 <?php
-                if(strpos($url, 'error=empty') !== false){
+                if(strpos($url, 'error=formError') !== false){
                     echo "<div class='field error'>
                     <input type='text' name='username' placeholder='Please ensure you enter a username!'>
                 </div>";
@@ -77,27 +108,13 @@ session_start();
             <div class="field">
                 <label>Password</label>
                 <?php
-                if(strpos($url, 'error=empty') !== false){
+                if(strpos($url, 'error=formError') !== false){
                     echo "<div class='field error'>
                     <input type='password' name='password' placeholder='Please ensure you enter a password!'>
                 </div>";
                 } else{
                     echo "<div class='field'>
                     <input type='password' name='password' placeholder='Please enter a password.'>
-                </div>";
-                }
-                ?>
-            </div>
-            <div class="field">
-                <label>Age</label>
-                <?php
-                if(strpos($url, 'error=empty') !== false){
-                    echo "<div class='field error'>
-                    <input type='number' name='age' placeholder='Please ensure you enter an email address!'>
-                </div>";
-                } else{
-                    echo "<div class='field'>
-                    <input type='number' name='age' placeholder='Please enter an email address.'>
                 </div>";
                 }
                 ?>
