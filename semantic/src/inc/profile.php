@@ -54,12 +54,12 @@ if (isset($_SESSION['loggedIn'])) {
                                 <div class="ui header">
                                     <?php
                                     $userID = $_SESSION['userID'];
-                                    $sql = "SELECT firstName, surname FROM users WHERE userID = $userID";
+                                    $sql = "SELECT firstName, surname FROM users WHERE userID = '$userID''";
                                     $result = mysqli_query($db, $sql);
-                                    while($row = mysqli_fetch_array($result)){
+                                    while($row = mysqli_fetch_assoc($result)){
                                         $firstName = $row['firstName'];
                                         $surname = $row['surname'];
-                                        echo "Name: ".$firstName.' '.$surname;
+                                        echo "Name: ".$firstName.'<br/>'.$surname;
                                     }
                                     ?>
                                 </div>
