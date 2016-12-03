@@ -19,6 +19,7 @@ if (isset($_SESSION['loggedIn'])) {
     <body>
     <div class="ui container">
         <div class="ui three column grid">
+            <br>
             <div class = "ui huge blue header">
                 Profile Page
             </div>
@@ -60,47 +61,48 @@ if (isset($_SESSION['loggedIn'])) {
                     <div class="ui one column grid">
                         <div class="column">
                             <div class="row">
-                                    <h5 class = "ui top attached header">
-                                        Name
-                                    </h5>
-                                    <div class = "ui attached segment">
-                                        <?php
-                                        $userID = $_SESSION['loggedIn'];
-                                        $sql = "SELECT firstName, surname FROM users WHERE userID = '$userID'";
-                                        $result = mysqli_query($db, $sql);
-                                        while($row = mysqli_fetch_array($result)) {
-                                            $firstName = $row['firstName'];
-                                            $surname = $row['surname'];
-                                        }
-                                        echo $firstName.' '.$surname;
-                                        ?>
-                                    </div>
-                                    <h5 class = "ui top attached header">
-                                        Age
-                                    </h5>
-                                    <div class = "ui attached segment">
-                                        <?php
-                                        $userID = $_SESSION['loggedIn'];
-                                        $sql = "SELECT age FROM users WHERE userID = '$userID'";
-                                        $result = mysqli_query($db, $sql);
-                                        while($row = mysqli_fetch_array($result)) {
-                                            $age = $row['age'];
-                                        }
-                                        echo $age;
-                                        ?>
-                                    </div>
-                                    <h5 class = "ui top attached header">
-                                        Location
-                                    </h5>
+                                <h5 class = "ui top attached header">
+                                    Name
+                                </h5>
+                                <div class = "ui attached segment">
                                     <?php
                                     $userID = $_SESSION['loggedIn'];
-                                    $sql = "SELECT location FROM users WHERE userID = '$userID'";
+                                    $sql = "SELECT firstName, surname FROM users WHERE userID = '$userID'";
                                     $result = mysqli_query($db, $sql);
                                     while($row = mysqli_fetch_array($result)) {
-                                        $location = $row['location'];
+                                        $firstName = $row['firstName'];
+                                        $surname = $row['surname'];
                                     }
-                                    echo $location;
+                                    echo $firstName.' '.$surname;
                                     ?>
+                                </div>
+                                <h5 class = "ui top attached header">
+                                    Age
+                                </h5>
+                                <div class = "ui attached segment">
+                                    <?php
+                                    $userID = $_SESSION['loggedIn'];
+                                    $sql = "SELECT age FROM users WHERE userID = '$userID'";
+                                    $result = mysqli_query($db, $sql);
+                                    while($row = mysqli_fetch_array($result)) {
+                                        $age = $row['age'];
+                                    }
+                                    echo $age;
+                                    ?>
+                                </div>
+                                <h5 class = "ui top attached header">
+                                    Location
+                                </h5>
+                                <?php
+                                $userID = $_SESSION['loggedIn'];
+                                $sql = "SELECT location FROM users WHERE userID = '$userID'";
+                                $result = mysqli_query($db, $sql);
+                                while($row = mysqli_fetch_array($result)) {
+                                    $location = $row['location'];
+                                }
+                                echo $location;
+                                ?>
+                            </div>
                         </div>
                     </div>
                 </div>
