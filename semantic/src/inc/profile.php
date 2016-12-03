@@ -132,12 +132,6 @@ if (isset($_SESSION['loggedIn'])) {
                         </div>
                     </div>
                 </div>
-                <div class = "column">
-                    <button class = "ui button" style = "height: 40px;">
-                        <i class="settings icon"></i>
-                        Edit Profile
-                    </button>
-                </div>
             </div>
         </div>
     </div>
