@@ -61,9 +61,33 @@ while($row = mysqli_fetch_array($result)) {
                     <div class="ui one column grid">
                         <div class="column">
                             <div class="row">
-                                <div class="ui header">
+                                <div class = "ui padded segment">
+                                    <h5 class = "ui top attached header">
+                                        Name
+                                    </h5>
+                                    <div class = "ui attached segment">
+                                        <?php
+                                        echo $firstName.' '.$surname;
+                                        ?>
+                                    </div>
+                                    <h5 class = "ui top attached header">
+                                        Age
+                                    </h5>
+                                    <div class = "ui attached segment">
+                                        <?php
+                                        echo $age;
+                                        ?>
+                                    </div>
+                                    <h5 class = "ui top attached header">
+                                        Location
+                                    </h5>
                                     <?php
-                                    $userID = $_SESSION['loggedIn'];
+                                    echo $location;
+                                    ?>
+                            </div>
+<!--                                <div class="ui header">
+                                    <?php
+/*                                    $userID = $_SESSION['loggedIn'];
                                     $sql = "SELECT firstName, surname FROM users WHERE userID = '$userID'";
                                     $result = mysqli_query($db, $sql);
                                     while($row = mysqli_fetch_array($result)){
@@ -71,7 +95,7 @@ while($row = mysqli_fetch_array($result)) {
                                         $surname = $row['surname'];
                                         echo "Name: ".$firstName.' '.$surname;
                                     }
-                                    ?>
+                                    */?>
                                 </div>
                             </div>
                             <div class="row">
@@ -82,7 +106,7 @@ while($row = mysqli_fetch_array($result)) {
                             </div>
                             <div class="row">
                                 <div class="ui header">Interests: Modern Warfare Remastered, Sesh.</div>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>
