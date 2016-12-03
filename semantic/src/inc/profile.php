@@ -25,13 +25,6 @@ if (isset($_SESSION['loggedIn'])) {
                     My profile
                 </div>
             </div>
-            <div class = "row">
-                <button class = "ui button" style = "height: 40px;">
-                    <i class="settings icon"></i>
-                    Edit Profile
-                </button>
-            </div>
-
             <div class="row">
                 <div class="column">
                     <div class="ui card">
@@ -131,6 +124,12 @@ if (isset($_SESSION['loggedIn'])) {
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class = "column">
+                    <button class = "ui button" style = "height: 40px;">
+                        <i class="settings icon"></i>
+                        Edit Profile
+                    </button>
                 </div>
             </div>
         </div>
