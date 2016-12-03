@@ -20,7 +20,7 @@ if (isset($_SESSION['loggedIn'])) {
     <div class="ui container">
         <div class="ui three column grid">
             <div class="row">
-                <div class = "ui blue header">
+                <div class = "ui huge blue header">
                     Profile Page
                 </div>
                 <div class="column">
