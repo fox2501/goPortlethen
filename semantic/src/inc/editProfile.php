@@ -24,14 +24,8 @@ if (isset($_SESSION['loggedIn'])) {
         <div class = "ui two column grid">
             <div class = "ui column">
                 <div class = "ui huge blue header">
-                    My profile
+                    Edit profile
                 </div>
-            </div>
-            <div class = "ui column">
-                <button class = "ui right floated button" style = "height: 40px;">
-                    <i class="settings icon"></i>
-                    Edit Profile
-                </button>
             </div>
         </div>
         <div class="ui three column grid">
@@ -78,71 +72,6 @@ if (isset($_SESSION['loggedIn'])) {
                                 }
                                 echo $aboutUser;
                                 ?>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="ui one column grid">
-                        <div class="column">
-                            <div class="row">
-                                <h5 class = "ui top attached header">
-                                    Name
-                                </h5>
-                                <div class = "ui attached segment">
-                                    <?php
-                                    $userID = $_SESSION['loggedIn'];
-                                    $sql = "SELECT firstName, surname FROM users WHERE userID = '$userID'";
-                                    $result = mysqli_query($db, $sql);
-                                    while($row = mysqli_fetch_array($result)) {
-                                        $firstName = $row['firstName'];
-                                        $surname = $row['surname'];
-                                    }
-                                    echo $firstName.' '.$surname;
-                                    ?>
-                                </div>
-                                <h5 class = "ui top attached header">
-                                    Age
-                                </h5>
-                                <div class = "ui attached segment">
-                                    <?php
-                                    $userID = $_SESSION['loggedIn'];
-                                    $sql = "SELECT age FROM users WHERE userID = '$userID'";
-                                    $result = mysqli_query($db, $sql);
-                                    while($row = mysqli_fetch_array($result)) {
-                                        $age = $row['age'];
-                                    }
-                                    echo $age;
-                                    ?>
-                                </div>
-                                <h5 class = "ui top attached header">
-                                    Location
-                                </h5>
-                                <div class = "ui attached segmenet">
-                                    <?php
-                                    $userID = $_SESSION['loggedIn'];
-                                    $sql = "SELECT location FROM users WHERE userID = '$userID'";
-                                    $result = mysqli_query($db, $sql);
-                                    while($row = mysqli_fetch_array($result)) {
-                                        $location = $row['location'];
-                                    }
-                                    echo $location;
-                                    ?>
-                                </div>
-                                <h5 class = "ui top attached header">
-                                    About
-                                </h5>
-                                <div class = "ui attached segmenet">
-                                    <?php
-                                    $userID = $_SESSION['loggedIn'];
-                                    $sql = "SELECT aboutUser FROM users WHERE userID = '$userID'";
-                                    $result = mysqli_query($db, $sql);
-                                    while($row = mysqli_fetch_array($result)) {
-                                        $aboutUser = $row['aboutUser'];
-                                    }
-                                    echo $location;
-                                    ?>
-                                </div>
                             </div>
                         </div>
                     </div>
