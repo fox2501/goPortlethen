@@ -77,7 +77,7 @@ if (isset($_SESSION['loggedIn'])) {
                     </div>
                 </div>
                 <div class = "column">
-                    <div class = "ui form" action="includes/submitEditProfile.php" method="POST">
+                    <form class = "ui form" action="includes/submitEditProfile.php" method="POST">
                         <div class = "field">
                             <label>First Name</label>
                             <input type = "text" name = "firstName" value =
@@ -144,7 +144,7 @@ if (isset($_SESSION['loggedIn'])) {
                             ?>">
                         </div>
 
-                    </div>
+                    </form>
                     <button class="ui fluid large green submit button" type="submit">Submit</button>
                 </div>
             </div>
