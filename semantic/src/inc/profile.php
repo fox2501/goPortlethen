@@ -15,6 +15,9 @@ if (isset($_SESSION['loggedIn'])) {
     <?php
     include("includes/header.php");
     include("includes/dbconnect.php");
+    $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+    $userID = $_SESSION['loggedIn'];
+    header("Location: ../profile.php?error=".$userID);
     ?>
     <body>
     <div class="ui container">
