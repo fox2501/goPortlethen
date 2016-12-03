@@ -18,17 +18,17 @@ if (isset($_SESSION['loggedIn'])) {
     ?>
     <body>
     <div class="ui container">
-        <div class="ui three column grid">
-            <br>
-            <div class =  "row">
-                <div class = "ui huge blue header">
-                    My profile
-                </div>
-                <button class = "ui right floated button" style = "height: 40px;">
-                    <i class="settings icon"></i>
-                    Edit Profile
-                </button>
+        <br>
+        <div class =  "row">
+            <div class = "ui huge blue header">
+                My profile
             </div>
+            <button class = "ui right floated button" style = "height: 40px;">
+                <i class="settings icon"></i>
+                Edit Profile
+            </button>
+        </div>
+        <div class="ui three column grid">
             <div class="row">
                 <div class="column">
                     <div class="ui card">
