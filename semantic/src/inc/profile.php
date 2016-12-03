@@ -19,10 +19,10 @@ if (isset($_SESSION['loggedIn'])) {
     <body>
     <div class="ui container">
         <div class="ui three column grid">
-            <div class = "ui blue header">
-              Profile Page
-            </div>
             <div class="row">
+                <div class = "ui blue header">
+                    Profile Page
+                </div>
                 <div class="column">
                     <div class="ui card">
                         <div class="image">
