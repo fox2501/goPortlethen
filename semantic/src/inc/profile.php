@@ -19,7 +19,6 @@ if (isset($_SESSION['loggedIn'])) {
     <body>
     <div class="ui container">
         <br>
-        <div class =  "row">
             <div class = "ui huge blue header">
                 My profile
             </div>
@@ -27,7 +26,6 @@ if (isset($_SESSION['loggedIn'])) {
                 <i class="settings icon"></i>
                 Edit Profile
             </button>
-        </div>
         <div class="ui three column grid">
             <div class="row">
                 <div class="column">
