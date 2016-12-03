@@ -1,16 +1,6 @@
 <?php
 session_start();
 if (isset($_SESSION['loggedIn'])) {
-$userID = $_SESSION['loggedIn'];
-$sql = "SELECT firstName, surname, age, location, aboutUser FROM users WHERE userID = '$userID'";
-$result = mysqli_query($db, $sql);
-while($row = mysqli_fetch_array($result)) {
-    $firstName = $row['firstName'];
-    $surname = $row['surname'];
-    $age = $row['age'];
-    $location = $row['location'];
-    $aboutUser = $row['aboutUser'];
-}
     ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -61,12 +51,18 @@ while($row = mysqli_fetch_array($result)) {
                     <div class="ui one column grid">
                         <div class="column">
                             <div class="row">
-                                <div class = "ui padded segment">
                                     <h5 class = "ui top attached header">
                                         Name
                                     </h5>
                                     <div class = "ui attached segment">
                                         <?php
+                                        $userID = $_SESSION['loggedIn'];
+                                        $sql = "SELECT firstName, surname FROM users WHERE userID = '$userID'";
+                                        $result = mysqli_query($db, $sql);
+                                        while($row = mysqli_fetch_array($result)) {
+                                            $firstName = $row['firstName'];
+                                            $surname = $row['surname'];
+                                        }
                                         echo $firstName.' '.$surname;
                                         ?>
                                     </div>
@@ -75,6 +71,12 @@ while($row = mysqli_fetch_array($result)) {
                                     </h5>
                                     <div class = "ui attached segment">
                                         <?php
+                                        $userID = $_SESSION['loggedIn'];
+                                        $sql = "SELECT ageFROM users WHERE userID = '$userID'";
+                                        $result = mysqli_query($db, $sql);
+                                        while($row = mysqli_fetch_array($result)) {
+                                            $age = $row['age'];
+                                        }
                                         echo $age;
                                         ?>
                                     </div>
@@ -82,35 +84,17 @@ while($row = mysqli_fetch_array($result)) {
                                         Location
                                     </h5>
                                     <?php
+                                    $userID = $_SESSION['loggedIn'];
+                                    $sql = "SELECT locationFROM users WHERE userID = '$userID'";
+                                    $result = mysqli_query($db, $sql);
+                                    while($row = mysqli_fetch_array($result)) {
+                                        $location = $row['location'];
+                                    }
                                     echo $location;
                                     ?>
-                            </div>
-<!--                                <div class="ui header">
-                                    <?php
-/*                                    $userID = $_SESSION['loggedIn'];
-                                    $sql = "SELECT firstName, surname FROM users WHERE userID = '$userID'";
-                                    $result = mysqli_query($db, $sql);
-                                    while($row = mysqli_fetch_array($result)){
-                                        $firstName = $row['firstName'];
-                                        $surname = $row['surname'];
-                                        echo "Name: ".$firstName.' '.$surname;
-                                    }
-                                    */?>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="ui header">Age: 22</div>
-                            </div>
-                            <div class="row">
-                                <div class="ui header">Location: Aberdeen</div>
-                            </div>
-                            <div class="row">
-                                <div class="ui header">Interests: Modern Warfare Remastered, Sesh.</div>
-                            </div>-->
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
