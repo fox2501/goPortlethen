@@ -34,6 +34,10 @@ if(empty($password)){
     header("Location: ../signUpForm.php?error=formError");
     exit();
 }
+if(empty($passwordConfirm)){
+    header("Location: ../signUpForm.php?error=formError");
+    exit();
+}
 //else if (strlen($password) < 8){
   //  header("Location: ../signUpForm.php?error=formError");
     //exit();
