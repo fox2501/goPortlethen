@@ -23,11 +23,13 @@ if (isset($_SESSION['loggedIn'])) {
             <div class = "ui huge blue header">
                 My profile
             </div>
-            <div class = "ui button">
-                <i class="settings icon"></i>
-                Edit Profile
-            </div>
             <div class="row">
+                <div class = "ui button">
+                    <i class="settings icon"></i>
+                    Edit Profile
+                </div>
+                </row>
+                <div class = "row">
                 <div class="column">
                     <div class="ui card">
                         <div class="image">
