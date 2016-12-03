@@ -24,7 +24,7 @@ if (isset($_SESSION['loggedIn'])) {
         <div class = "ui two column grid">
             <div class = "ui column">
                 <div class = "ui huge blue header">
-                    Edit profile
+                    User settings
                 </div>
             </div>
         </div>
