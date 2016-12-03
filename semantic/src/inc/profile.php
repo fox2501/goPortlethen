@@ -94,15 +94,31 @@ if (isset($_SESSION['loggedIn'])) {
                                 <h5 class = "ui top attached header">
                                     Location
                                 </h5>
-                                <?php
-                                $userID = $_SESSION['loggedIn'];
-                                $sql = "SELECT location FROM users WHERE userID = '$userID'";
-                                $result = mysqli_query($db, $sql);
-                                while($row = mysqli_fetch_array($result)) {
-                                    $location = $row['location'];
-                                }
-                                echo $location;
-                                ?>
+                                <div class = "ui attached segmenet">
+                                    <?php
+                                    $userID = $_SESSION['loggedIn'];
+                                    $sql = "SELECT location FROM users WHERE userID = '$userID'";
+                                    $result = mysqli_query($db, $sql);
+                                    while($row = mysqli_fetch_array($result)) {
+                                        $location = $row['location'];
+                                    }
+                                    echo $location;
+                                    ?>
+                                </div>
+                                <h5 class = "ui top attached header">
+                                    About
+                                </h5>
+                                <div class = "ui attached segmenet">
+                                    <?php
+                                    $userID = $_SESSION['loggedIn'];
+                                    $sql = "SELECT aboutUser FROM users WHERE userID = '$userID'";
+                                    $result = mysqli_query($db, $sql);
+                                    while($row = mysqli_fetch_array($result)) {
+                                        $aboutUser = $row['aboutUser'];
+                                    }
+                                    echo $location;
+                                    ?>
+                                </div>
                             </div>
                         </div>
                     </div>
