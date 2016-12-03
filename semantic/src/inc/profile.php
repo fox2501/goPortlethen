@@ -28,11 +28,12 @@ if (isset($_SESSION['loggedIn'])) {
                 </div>
             </div>
             <div class = "ui column">
-                <button class = "ui right floated button" style = "height: 40px;">
-                    <input type="button" name="editProfileButton" onClick="window.navigate('editProfile.php')">
+                <form>
+                <button class = "ui right floated button" style = "height: 40px;" formaction="editProfile.php">
                     <i class="settings icon"></i>
                     Edit Profile
                 </button>
+                </form>
             </div>
         </div>
         <div class="ui three column grid">
