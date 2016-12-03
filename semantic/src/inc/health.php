@@ -68,7 +68,7 @@ session_start();
                                                 $mainText
                                             </p>
                                             <p id=\"author\">By $userName</p>
-                                            <p id=\"date\"></p>
+                                            <p id=\"date\">$date = date('m/d/Y h:i:s a', time());</p>
                                             <div class=\"ui divider\"></div>
                                         </div>
                                     </div>";}
