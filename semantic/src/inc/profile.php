@@ -24,6 +24,10 @@ if (isset($_SESSION['loggedIn'])) {
                 <div class = "ui huge blue header">
                     My profile
                 </div>
+                <button class = "ui right floated button" style = "height: 40px;">
+                    <i class="settings icon"></i>
+                    Edit Profile
+                </button>
             </div>
             <div class="row">
                 <div class="column">
