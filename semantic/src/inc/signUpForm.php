@@ -128,7 +128,7 @@ session_start();
                 </div>";
                 } else{
                     echo "<div class='field'>
-                    <input type='password' name='passwordConfirm' placeholder='Please confirm your password.'>
+                    <input type='password' name='passwordConfirm' placeholder='Please now confirm your password.'>
                 </div>";
                 }
                 ?>
