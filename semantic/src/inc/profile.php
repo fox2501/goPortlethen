@@ -34,7 +34,7 @@ if (isset($_SESSION['loggedIn'])) {
                                 <span class="date">
                                     <?php
                                     $userID = $_SESSION['loggedIn'];
-                                    $sql = "SELECT year(dateCreated) as yearCreated, DATENAME(month, dateCreated) as monthCreated FROM users WHERE userID = '$userID'";
+                                    $sql = "SELECT year(dateCreated) as yearCreated, monthname(dateCreated) as monthCreated FROM users WHERE userID = '$userID'";
                                     $result = mysqli_query($db, $sql);
                                     while($row = mysqli_fetch_array($result)) {
                                         $yearCreated = $row['yearCreated'];
