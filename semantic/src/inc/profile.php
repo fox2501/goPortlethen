@@ -120,7 +120,7 @@ if (isset($_SESSION['loggedIn'])) {
                                 <h5 class = "ui top attached header">
                                     Location
                                 </h5>
-                                <div class = "ui attached segmenet">
+                                <div class = "ui attached segment">
                                     <?php
                                     $userID = $_SESSION['loggedIn'];
                                     $sql = "SELECT location FROM users WHERE userID = '$userID'";
@@ -134,7 +134,7 @@ if (isset($_SESSION['loggedIn'])) {
                                 <h5 class = "ui top attached header">
                                     About
                                 </h5>
-                                <div class = "ui attached segmenet">
+                                <div class = "ui attached segment">
                                     <?php
                                     $userID = $_SESSION['loggedIn'];
                                     $sql = "SELECT aboutUser FROM users WHERE userID = '$userID'";
