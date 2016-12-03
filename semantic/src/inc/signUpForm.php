@@ -71,7 +71,7 @@ session_start();
                 </div>";
                 } else{
                     echo "<div class='field'>
-                    <input type='number' name='age' placeholder='Please enter an email address.'>
+                    <input type='number' name='age' placeholder='Please enter your age.'>
                 </div>";
                 }
                 ?>
@@ -115,6 +115,20 @@ session_start();
                 } else{
                     echo "<div class='field'>
                     <input type='password' name='password' placeholder='Please enter a password.'>
+                </div>";
+                }
+                ?>
+            </div>
+            <div class="field">
+                <label>Confirm Password</label>
+                <?php
+                if(strpos($url, 'error=formError') !== false){
+                    echo "<div class='field error'>
+                    <input type='password' name='passwordConfirm' placeholder='Please ensure you confirm your password!'>
+                </div>";
+                } else{
+                    echo "<div class='field'>
+                    <input type='password' name='passwordConfirm' placeholder='Please confirm your password.'>
                 </div>";
                 }
                 ?>

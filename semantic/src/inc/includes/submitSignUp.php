@@ -7,6 +7,7 @@ $surname = $_POST["surname"];
 $email = $_POST["email"];
 $username = $_POST["username"];
 $password = $_POST["password"];
+$passwordConfirm = $_POST["passwordConfirm"];
 $age = $_POST["age"];
 
 if(empty($firstName)){
@@ -47,6 +48,9 @@ else{
     $usernameCheck = mysqli_num_rows($result);
     if($usernameCheck > 0){
         header("Location: ../signUpForm.php?error=username");
+        exit();
+    } else if(!($password == $passwordConfirm)){
+        header("Location: ../signUpForm.php?error=passwordConfirm");
         exit();
     }
     else {

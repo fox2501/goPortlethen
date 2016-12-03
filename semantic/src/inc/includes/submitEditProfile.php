@@ -11,9 +11,15 @@ $location = $_POST["location"];
 $aboutUser = $_POST["aboutUser"];
 $userID = $_SESSION['loggedIn'];
 
-$sql = "UPDATE users SET firstName = '$firstName', surname = '$surname', age = $age, location = '$location', aboutUser = '$aboutUser'
-        WHERE userID = $userID";
-
+$sql = "
+UPDATE users 
+SET firstName = '$firstName', 
+surname = '$surname', 
+age = $age, 
+location = '$location', 
+aboutUser = '$aboutUser'
+WHERE userID = $userID;
+";
 $result = mysqli_query($db, $sql);
 
 header("location: ../profile.php");
