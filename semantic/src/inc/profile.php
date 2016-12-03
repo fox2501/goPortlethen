@@ -58,7 +58,7 @@ if (isset($_SESSION['loggedIn'])) {
                                     $row = mysqli_fetch_array($result);
                                     $firstName = $row['firstName'];
                                     $surname = $row['surname'];
-                                    echo "$firstName + ' ' + $surname";
+                                    echo "Name: ".$firstName.$surname;
                                     ?>
                                 </div>
                             </div>
