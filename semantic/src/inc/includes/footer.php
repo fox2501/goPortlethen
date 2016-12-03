@@ -9,8 +9,8 @@ session_start();
     <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css">
     <title>goPortlethen</title>
 </head>
-<body>
-<div class="ui blue inverted footer segment" id = "footer" style = "padding-top: 200px;">
+<body  style = "padding-top: 200px;>
+<div class="ui blue inverted footer segment" id = "footer"">
     <div class="ui center aligned container">
         <div class="ui stackable inverted grid">
             <div class="three wide column">
