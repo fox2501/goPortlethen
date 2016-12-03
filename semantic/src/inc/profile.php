@@ -18,11 +18,6 @@ if (isset($_SESSION['loggedIn'])) {
     ?>
     <body>
     <div class="ui container">
-        <h2 class="ui blue header">
-            <div class="content">
-                Ross' Profile
-            </div>
-        </h2>
         <div class="ui three column grid">
             <div class="row">
                 <div class="column">
@@ -31,19 +26,30 @@ if (isset($_SESSION['loggedIn'])) {
                             <img src="http://www.rantlifestyle.com/wp-content/uploads/2014/04/Brick-Tamland1.jpg">
                         </div>
                         <div class="content">
-                            <a class="header">Ross</a>
                             <div class="meta">
-                                <span class="date">Joined in 2016</span>
+                                <span class="date">
+                                    <?php
+                                    $userID = $_SESSION['loggedIn'];
+                                    $sql = "SELECT dateCreated FROM users WHERE userID = '$userID'";
+                                    $result = mysqli_query($db, $sql);
+                                    while($row = mysqli_fetch_array($result)) {
+                                        $dateCreated = $row['dateCreated'];
+                                    }
+                                    echo "Joined in ".$dateCreated;
+                                    ?>
+                                </span>
                             </div>
                             <div class="description">
-                                Ross is so cool
+                                <?php
+                                $userID = $_SESSION['loggedIn'];
+                                $sql = "SELECT aboutUser FROM users WHERE userID = '$userID'";
+                                $result = mysqli_query($db, $sql);
+                                while($row = mysqli_fetch_array($result)) {
+                                    $aboutUser = $row['aboutUser'];
+                                }
+                                echo $aboutUser;
+                                ?>
                             </div>
-                        </div>
-                        <div class="extra content">
-                            <a>
-                                <i class="user icon"></i>
-                                100000000000 Friends
-                            </a>
                         </div>
                     </div>
                 </div>
