@@ -59,7 +59,7 @@ if (isset($_SESSION['loggedIn'])) {
                                     while($row = mysqli_fetch_array($result)){
                                         $firstName = $row['firstName'];
                                         $surname = $row['surname'];
-                                        echo "Name: ".$firstName.'<br/>'.$surname;
+                                        echo "Name: ".$firstName.' '.$surname;
                                     }
                                     ?>
                                 </div>
