@@ -18,7 +18,6 @@ if (isset($_SESSION['loggedIn'])) {
     ?>
     <body>
     <div class="ui container">
-        <br>
             <div class = "ui huge blue header">
                 My profile
             </div>
