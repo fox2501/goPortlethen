@@ -142,7 +142,7 @@ if (isset($_SESSION['loggedIn'])) {
                                     while($row = mysqli_fetch_array($result)) {
                                         $aboutUser = $row['aboutUser'];
                                     }
-                                    echo $location;
+                                    echo $aboutUser;
                                     ?>
                                 </div>
                             </div>
