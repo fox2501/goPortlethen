@@ -10,7 +10,7 @@ session_start();
     <title>goPortlethen</title>
 </head>
 <body>
-<div class="ui blue inverted footer segment" id = "footer" style = "margin-top: 200px;">
+<div class="ui blue inverted footer segment" id = "footer" style = "margin-top: 150px;">
     <div class="ui center aligned container">
         <div class="ui stackable inverted grid">
             <div class="three wide column">
