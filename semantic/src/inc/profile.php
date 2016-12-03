@@ -53,8 +53,8 @@ if (isset($_SESSION['loggedIn'])) {
                             <div class="row">
                                 <div class="ui header">
                                     <?php
-                                    $userID = $_SESSION['userID'];
-                                    $sql = "SELECT firstName, surname FROM users WHERE userID = 51";
+                                    $userID = $_SESSION['loggedIn'];
+                                    $sql = "SELECT firstName, surname FROM users WHERE userID = '$userID'";
                                     $result = mysqli_query($db, $sql);
                                     while($row = mysqli_fetch_array($result)){
                                         $firstName = $row['firstName'];
