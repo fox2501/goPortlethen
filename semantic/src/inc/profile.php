@@ -24,10 +24,10 @@ if (isset($_SESSION['loggedIn'])) {
                 My profile
             </div>
             <div class="row">
-                <div class = "ui button">
+                <button class = "ui button">
                     <i class="settings icon"></i>
                     Edit Profile
-                </div>
+                </button>
                 <div class="column">
                     <div class="ui card">
                         <div class="image">
