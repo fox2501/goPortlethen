@@ -39,6 +39,18 @@ if (isset($_SESSION['loggedIn'])) {
                             <img src="http://www.rantlifestyle.com/wp-content/uploads/2014/04/Brick-Tamland1.jpg">
                         </div>
                         <div class="content">
+                            <div class = "ui header">
+                                <?php
+                                $userID = $_SESSION['loggedIn'];
+                                $sql = "SELECT firstName, surname FROM users WHERE userID = '$userID'";
+                                $result = mysqli_query($db, $sql);
+                                while($row = mysqli_fetch_array($result)) {
+                                    $firstName = $row['firstName'];
+                                    $surname = $row['surname'];
+                                }
+                                echo $firstName;
+                                ?>
+                            </div>
                             <div class="meta">
                                 <span class="date">
                                     <?php
