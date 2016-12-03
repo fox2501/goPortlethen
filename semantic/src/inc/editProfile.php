@@ -143,8 +143,9 @@ if (isset($_SESSION['loggedIn'])) {
                             echo $aboutUser;
                             ?>">
                         </div>
-                        <button class="ui fluid large green submit button" type="submit">Submit</button>
+
                     </div>
+                    <button class="ui fluid large green submit button" type="submit">Submit</button>
                 </div>
             </div>
         </div>
