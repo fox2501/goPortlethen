@@ -72,7 +72,7 @@ if (isset($_SESSION['loggedIn'])) {
                                     <div class = "ui attached segment">
                                         <?php
                                         $userID = $_SESSION['loggedIn'];
-                                        $sql = "SELECT ageFROM users WHERE userID = '$userID'";
+                                        $sql = "SELECT age FROM users WHERE userID = '$userID'";
                                         $result = mysqli_query($db, $sql);
                                         while($row = mysqli_fetch_array($result)) {
                                             $age = $row['age'];
@@ -85,7 +85,7 @@ if (isset($_SESSION['loggedIn'])) {
                                     </h5>
                                     <?php
                                     $userID = $_SESSION['loggedIn'];
-                                    $sql = "SELECT locationFROM users WHERE userID = '$userID'";
+                                    $sql = "SELECT location FROM users WHERE userID = '$userID'";
                                     $result = mysqli_query($db, $sql);
                                     while($row = mysqli_fetch_array($result)) {
                                         $location = $row['location'];
