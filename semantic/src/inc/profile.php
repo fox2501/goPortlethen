@@ -34,12 +34,13 @@ if (isset($_SESSION['loggedIn'])) {
                                 <span class="date">
                                     <?php
                                     $userID = $_SESSION['loggedIn'];
-                                    $sql = "SELECT dateCreated FROM users WHERE userID = '$userID'";
+                                    $sql = "SELECT year(dateCreated) as yearCreated, DATENAME(month, dateCreated) as monthCreated FROM users WHERE userID = '$userID'";
                                     $result = mysqli_query($db, $sql);
                                     while($row = mysqli_fetch_array($result)) {
-                                        $dateCreated = $row['dateCreated'];
+                                        $yearCreated = $row['yearCreated'];
+                                        $monthCreated = $row['monthCreated'];
                                     }
-                                    echo "Joined in ".$dateCreated;
+                                    echo "Joined in ".$monthCreated.' '.$yearCreated;
                                     ?>
                                 </span>
                             </div>
