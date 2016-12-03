@@ -28,7 +28,7 @@ if (isset($_SESSION['loggedIn'])) {
                 </div>
             </div>
             <div class = "ui column">
-                <button class = "ui right floated button" style = "height: 40px;" href = "editProfile.php">
+                <button class = "ui right floated button" style = "height: 40px;">
                     <i class="settings icon"></i>
                     Edit Profile
                 </button>
@@ -145,6 +145,38 @@ if (isset($_SESSION['loggedIn'])) {
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class = "ui form">
+                    <div class = "field">
+                        <label>First Name</label>
+                        <input type = "text" name = "firstName" value =
+                        "<?php
+                        $userID = $_SESSION['loggedIn'];
+                        $sql = "SELECT firstName, surname FROM users WHERE userID = '$userID'";
+                        $result = mysqli_query($db, $sql);
+                        while($row = mysqli_fetch_array($result)) {
+                            $firstName = $row['firstName'];
+                            $surname = $row['surname'];
+                        }
+                        echo $firstName;
+                        ?>">
+                    </div>
+                    <div class = "field">
+                        <label>Surname</label>
+                        <input type = "text" name = "surname">
+                    </div>
+                    <div class = "field">
+                        <label>Age</label>
+                        <input type = "number" name = "age">
+                    </div>
+                    <div class = "field">
+                        <label>Location</label>
+                        <input type = "text" name = "location">
+                    </div>
+                    <div class = "field">
+                        <label>About</label>
+                        <input type = "text" name = "aboutUser">
                     </div>
                 </div>
             </div>
