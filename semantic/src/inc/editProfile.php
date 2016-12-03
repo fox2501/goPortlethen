@@ -76,7 +76,7 @@ if (isset($_SESSION['loggedIn'])) {
                         </div>
                     </div>
                 </div>
-                <div class = "ui form">
+                <div class = "ui form" action="includes/submitEditProfile.php" method="POST">
                     <div class = "field">
                         <label>First Name</label>
                         <input type = "text" name = "firstName" value =
@@ -86,7 +86,6 @@ if (isset($_SESSION['loggedIn'])) {
                         $result = mysqli_query($db, $sql);
                         while($row = mysqli_fetch_array($result)) {
                             $firstName = $row['firstName'];
-                            $surname = $row['surname'];
                         }
                         echo $firstName;
                         ?>">
@@ -99,10 +98,9 @@ if (isset($_SESSION['loggedIn'])) {
                         $sql = "SELECT firstName, surname FROM users WHERE userID = '$userID'";
                         $result = mysqli_query($db, $sql);
                         while($row = mysqli_fetch_array($result)) {
-                            $firstName = $row['firstName'];
                             $surname = $row['surname'];
                         }
-                        echo $firstName;
+                        echo $surname;
                         ?>">
                     </div>
                     <div class = "field">
@@ -145,6 +143,7 @@ if (isset($_SESSION['loggedIn'])) {
                         ?>">
                     </div>
                 </div>
+                <button class="ui fluid large green submit button" type="submit">Submit</button>
             </div>
         </div>
     </div>
