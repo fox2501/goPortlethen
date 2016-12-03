@@ -53,7 +53,9 @@ if (isset($_SESSION['loggedIn'])) {
                             <div class="row">
                                 <div class="ui header">
                                     <?php
-                                        echo $_SESSION['surname'];
+                                    $sql = "SELECT firstName, surname FROM users WHERE userID = '$userID'";
+                                    $result = mysqli_query($db, $sql);
+                                    echo $result;
                                     ?>
                                 </div>
                             </div>
