@@ -28,8 +28,6 @@ if (isset($_SESSION['loggedIn'])) {
                     <i class="settings icon"></i>
                     Edit Profile
                 </div>
-                </row>
-                <div class = "row">
                 <div class="column">
                     <div class="ui card">
                         <div class="image">
