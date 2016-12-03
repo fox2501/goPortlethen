@@ -199,7 +199,7 @@ if (isset($_SESSION['loggedIn'])) {
                         while($row = mysqli_fetch_array($result)) {
                             $location = $row['location'];
                         }
-                        echo $firstName;
+                        echo $location;
                         ?>">
                     </div>
                     <div class = "field">
@@ -212,7 +212,7 @@ if (isset($_SESSION['loggedIn'])) {
                         while($row = mysqli_fetch_array($result)) {
                             $aboutUser = $row['aboutUser'];
                         }
-                        echo $firstName;
+                        echo $aboutUser;
                         ?>">
                     </div>
                 </div>
