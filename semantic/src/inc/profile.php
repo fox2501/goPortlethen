@@ -24,7 +24,7 @@ if (isset($_SESSION['loggedIn'])) {
                 My profile
             </div>
             <div class="row">
-                <button class = "ui button">
+                <button class = "ui button" style = "height: 60px;">
                     <i class="settings icon"></i>
                     Edit Profile
                 </button>
