@@ -20,14 +20,19 @@ if (isset($_SESSION['loggedIn'])) {
     <div class="ui container">
         <div class="ui three column grid">
             <br>
-            <div class = "ui huge blue header">
-                My profile
+            <div class =  "row">
+                <div class = "ui huge blue header">
+                    My profile
+                </div>
             </div>
-            <div class="row">
-                <button class = "ui button" style = "height: 60px;">
+            <div class = "row">
+                <button class = "ui button" style = "height: 40px;">
                     <i class="settings icon"></i>
                     Edit Profile
                 </button>
+            </div>
+
+            <div class="row">
                 <div class="column">
                     <div class="ui card">
                         <div class="image">
