@@ -55,7 +55,7 @@ if (isset($_SESSION['loggedIn'])) {
                                     <?php
                                     $sql = "SELECT firstName, surname FROM users WHERE userID = '$userID'";
                                     $result = mysqli_query($db, $sql);
-                                    $row = mysqli_fetch_assoc($result);
+                                    $row = mysqli_fetch_array($result);
                                     $firstName = $row['firstName'];
                                     $surname = $row['surname'];
                                     echo "$firstName + ' ' + $surname";
