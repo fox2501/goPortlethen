@@ -52,8 +52,8 @@ else{
     else {
         $hashpass = password_hash($password, PASSWORD_DEFAULT);
 
-        $sql = "INSERT INTO users (userName, password, emailAddress, firstName, surname, approvalStatus, age) 
-        values('$username', '$hashpass', '$email', '$firstName', '$surname', '0', '$age')";
+        $sql = "INSERT INTO users (userName, password, emailAddress, firstName, surname, approvalStatus, age, dateCreated) 
+        values('$username', '$hashpass', '$email', '$firstName', '$surname', '0', '$age', CURRENT_TIMESTAMP)";
 
         $result = mysqli_query($db, $sql);
 

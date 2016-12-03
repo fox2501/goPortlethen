@@ -1,6 +1,16 @@
 <?php
 session_start();
 if (isset($_SESSION['loggedIn'])) {
+$userID = $_SESSION['loggedIn'];
+$sql = "SELECT firstName, surname, age, location, aboutUser FROM users WHERE userID = '$userID'";
+$result = mysqli_query($db, $sql);
+while($row = mysqli_fetch_array($result)) {
+    $firstName = $row['firstName'];
+    $surname = $row['surname'];
+    $age = $row['age'];
+    $location = $row['location'];
+    $aboutUser = $row['aboutUser'];
+}
     ?>
     <!DOCTYPE html>
     <html lang="en">
