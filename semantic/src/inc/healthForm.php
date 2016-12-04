@@ -73,6 +73,10 @@ session_start();
             if (x == "") {
                 alert("Please enter a title.")
             }
+            var y = document.forms["healthForm"] ["content"].value;
+            if (y == "") {
+                alert("Please enter some content.")
+            }
          }
     </script>
 </body>
