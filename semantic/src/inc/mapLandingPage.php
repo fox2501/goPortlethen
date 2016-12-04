@@ -20,7 +20,9 @@ session_start();
 
 
     <div class="ui grid">
-        <div class="five wide column"></div>
+        <div class="five wide column">
+            <button class="ui button"><a href="">Create Route</a></button>
+        </div>
         <div class="six wide column">
             <div class="ui celled list">
                 <div class="item">
