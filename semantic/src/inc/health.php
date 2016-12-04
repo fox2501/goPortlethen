@@ -90,6 +90,7 @@ session_start();
                                                 $date = date_create();
                                                 echo date_format($date, 'U = Y-m-d H:i:s') . \"\n\";
                                                 ?>
+                                            
                                             </p>
                                             <div class=\"ui divider\"></div>
                                         </div>
