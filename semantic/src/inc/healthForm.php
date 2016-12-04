@@ -59,7 +59,6 @@ session_start();
                     <div class="item" data-value="2">Outdoors</div>
                 </div>
             </div>
-
             <br>
             <br>
             <button id="submitButton" class="ui primary button" input type="submit" value="SUBMIT">Submit Content</button>
