@@ -21,7 +21,7 @@ session_start();
 
     <div class="ui grid">
         <div class="five wide column">
-            <button class="ui button"><a href="">Create Route</a></button>
+            <button class="ui button"><center><a href="">Create Route</a></button></center>
         </div>
         <div class="six wide column">
             <div class="ui celled list">
