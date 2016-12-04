@@ -1,7 +1,7 @@
 function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 4,
-        center: {lat: -24.345, lng: 134.46}  // Australia.
+        zoom: 12,
+        center: {lat: 57.061681, lng: -2.129468}  // Portlethen.
     });
 
     var directionsService = new google.maps.DirectionsService;
@@ -15,7 +15,7 @@ function initMap() {
         computeTotalDistance(directionsDisplay.getDirections());
     });
 
-    displayRoute('Aberdeen, Scotland', 'Portlethen, Scotland', directionsService,
+    displayRoute('57.061959, -2.131337', '57.054993, -2.145402', directionsService,
         directionsDisplay);
 }
 
@@ -23,7 +23,7 @@ function displayRoute(origin, destination, service, display) {
     service.route({
         origin: origin,
         destination: destination,
-        waypoints: [{location: 'Torry, Scotland'}, {location: 'Cove Bay, Scotland'}],
+        waypoints: [{location: '57.058727, -2.134105'}, {location: '57.053802, -2.135103'}],
         travelMode: 'WALKING',
         avoidTolls: true
     }, function(response, status) {
