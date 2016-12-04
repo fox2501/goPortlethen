@@ -29,7 +29,6 @@ session_start();
                     <i class="marker icon"></i>
                     <div class="content">
                         <a class="header"><a href="Routes.php">Test Route 1</a>
-                        </a>
                         4.2miles
                     </div>
                 </div>
