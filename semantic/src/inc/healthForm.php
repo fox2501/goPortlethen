@@ -24,6 +24,11 @@ session_start();
     <div class="ui container">
         <form class="ui form" action="submitHealthForm.php" method="POST">
 
+            <label>Date of Post</label>
+            <div class="field">
+                <input type="date" name="date" placeholder="Enter the date">
+            </div>
+
             <label>Title</label>
             <div class="field">
                 <input type="text" name="title" placeholder="Enter the title of your post">
@@ -31,7 +36,7 @@ session_start();
 
             <label>Content</label>
             <div class="field">
-                <textarea rows="8" type="text" name="mainText" placeholder="Enter the content of your post" value="lololol"></textarea>
+                <textarea rows="8" type="text" name="mainText" placeholder="Enter the content of your post"></textarea>
             </div>
 
             <label>Main Image</label>
