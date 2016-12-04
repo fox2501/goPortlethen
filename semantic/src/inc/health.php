@@ -55,6 +55,7 @@ session_start();
                                 <div class="item" data-value="1">Dance</div>
                                 <div class="item" data-value="2">Outdoors</div>
                             </div>
+
                         </div>
                     </div>
 
