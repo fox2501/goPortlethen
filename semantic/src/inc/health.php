@@ -32,10 +32,8 @@ session_start();
             <div class="row">
                 <a href="healthForm.php"><button class="ui primary button" style="margin-right:50px">Submit Content</button></a>
                 <iframe style="margin-right:50px" src="https://calendar.google.com/calendar/embed?src=imdvs1dbg4fm5e9g35o2cj8i2g%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
-                <!-- BEGIN: Twitter website widget (http://twitterforweb.com) -->
                 <div style="width:236px;font-size:8px;text-align:right;"><script type="text/javascript">
-                        document.write(unescape("%3Cscript src='http://twitterforweb.com/twitterbox.js?username=kanyewest&settings=1,0,3,236,505,f4f4f4,0,c4c4c4,101010,1,1,336699' type='text/javascript'%3E%3C/script%3E"));</script>Created by: <a href="http://twitterforweb.com" target="_blank">twitter website widget</a></div>
-                <!-- END: Twitter website widget (http://twitterforweb.com) -->
+                        document.write(unescape("%3Cscript src='http://twitterforweb.com/twitterbox.js?username=kanyewest&settings=1,0,3,236,505,f4f4f4,0,c4c4c4,101010,1,1,336699' type='text/javascript'%3E%3C/script%3E"));</script></div>
 
             </div>
         </div>
