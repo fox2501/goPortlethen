@@ -73,6 +73,7 @@ session_start();
                                     $mainText = $row['mainText'];
                                     $userName = $row['userName'];
                                     echo "<div>
+
                                         <div class=\"four wide column\">
                                             <h3 class=\"ui header\" id=\"title\">
                                                 $title
