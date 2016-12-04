@@ -88,6 +88,7 @@ session_start();
                                             <p id=\"author\">By $userName</p>
                                             <p id=\"date\">
                                                 echo $date;
+                                                
                                             </p>
                                             <div class=\"ui divider\"></div>
                                         </div>
