@@ -1,4 +1,6 @@
-<?php session_start();?>
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -129,7 +131,7 @@ include("includes/dbconnect.php");?>
                 </div>
             </div>
         </div>
-        <div class="ui fluid large green submit button" id="createClub">Create Club</div>
+        <div class="ui fluid large green submit button" id="createClub" type="submit>Create Club</div>
     </form>
 
     <script type="text/javascript">
