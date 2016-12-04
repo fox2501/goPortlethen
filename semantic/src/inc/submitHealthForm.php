@@ -20,6 +20,8 @@ if (!$imageID->is_valid()) {
 if(isset($_SESSION['loggedIn'])) {
     echo "exists";
 }
+
+$sql = "INSERT INTO healthContent (contentType) VALUES ('Sport', 'Dance', 'Outdoors')";
 $sql = "INSERT INTO healthcontent (title, mainText, userID, contentType, approvalStatus) VALUES ('$title', '$mainText', '$userID', '$contentType', '0')";
 
 if (mysqli_query($db, $sql)) {
