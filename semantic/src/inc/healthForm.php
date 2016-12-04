@@ -43,10 +43,10 @@ session_start();
             </div>
 
             <label>Content Type</label>
+            <br>
             <div class="ui selection dropdown">
                 <input name="contentType" type="hidden">
                 <i class="dropdown icon"></i>
-                <div class="default text">Content Type</div>
                 <div class="menu">
                     <div class="item" data-value="1">Sport</div>
                     <div class="item" data-value="0">Dance</div>
@@ -54,6 +54,7 @@ session_start();
                 </div>
             </div>
 
+            <br>
             <button id="submitButton" class="ui primary button" input type="submit" value="SUBMIT">Submit Content</button>
         </form>
     </div>
