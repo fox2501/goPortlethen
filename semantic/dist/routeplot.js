@@ -23,7 +23,7 @@ function displayRoute(origin, destination, service, display) {
     service.route({
         origin: origin,
         destination: destination,
-        waypoints: [{location: '57.058703, -2.116714'}, {location: '57.053802, -2.135103'}],
+        waypoints: [{location: '57.058727, -2.134105'}, {location: '57.053802, -2.135103'}],
         travelMode: 'WALKING',
         avoidTolls: true
     }, function(response, status) {
