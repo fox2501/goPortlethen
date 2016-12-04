@@ -90,7 +90,7 @@ session_start();
                                                 $t=time();
                                                 echo($t . \"<br>\");
                                                 echo(date(\"Y-m-d\",$t));
-                                                ?> 
+                                                ?>
                                             </p>
                                             <div class=\"ui divider\"></div>
                                         </div>
