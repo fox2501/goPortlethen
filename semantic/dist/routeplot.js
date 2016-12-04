@@ -1,7 +1,7 @@
 function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 4,
-        center: {lat: -24.345, lng: 134.46}  // Portlethen.
+        center: {lat: 57.061681, lng: -2.129468}  // Portlethen.
     });
 
     var directionsService = new google.maps.DirectionsService;
