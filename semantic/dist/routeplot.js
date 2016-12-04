@@ -15,7 +15,7 @@ function initMap() {
         computeTotalDistance(directionsDisplay.getDirections());
     });
 
-    displayRoute('57.05807318927458, -2.136229', '57.054993, -2.145402', directionsService,
+    displayRoute('57.061959, -2.131337', '57.054993, -2.145402', directionsService,
         directionsDisplay);
 }
 
