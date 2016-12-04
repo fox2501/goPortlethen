@@ -36,6 +36,7 @@ session_start();
                 <div style="width:236px;font-size:8px;text-align:right;"><script type="text/javascript">
                         document.write(unescape("%3Cscript src='http://twitterforweb.com/twitterbox.js?username=kanyewest&settings=1,0,3,236,505,f4f4f4,0,c4c4c4,101010,1,1,336699' type='text/javascript'%3E%3C/script%3E"));</script>Created by: <a href="http://twitterforweb.com" target="_blank">twitter website widget</a></div>
                 <!-- END: Twitter website widget (http://twitterforweb.com) -->
+
             </div>
         </div>
         <div class="ui divider"></div>
