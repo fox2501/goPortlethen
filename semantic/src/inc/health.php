@@ -44,21 +44,19 @@ session_start();
                 <!-- Info section -->
                 <!-- Sections added as users add info through form -->
                 <div>
-
-
                     <div class="inline fields">
-                        <label>Filter content by: </label>
-                        <div class="field">
-                            <div class="ui radio checkbox">
-                                <input type="radio" name="Club" checked="" tabindex="0" class="hidden" id="A-Z">
-                                <label for="A-Z">Content Type</label>
+                        <label>Filter by content type: </label>
+                        <div class="ui selection dropdown">
+                            <input name="contentType" type="hidden">
+                            <i class="dropdown icon"></i>
+                            <div class="default text"></div>
+                            <div class="menu">
+                                <div class="item" data-value="0">Sport</div>
+                                <div class="item" data-value="1">Dance</div>
+                                <div class="item" data-value="2">Outdoors</div>
                             </div>
                         </div>
                     </div>
-
-
-
-
 
                     <!-- Blank area to input info through form -->
                     <div class="ui grid">
