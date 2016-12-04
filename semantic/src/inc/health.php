@@ -87,9 +87,9 @@ session_start();
                                             <p id=\"author\">By $userName</p>
                                             <p id=\"date\">
                                                 <?php
-                                                $date = date_create();
-                                                echo date_format($date, 'U = Y-m-d H:i:s') . \"\n\";
-                                                echo $date;
+                                                $t=time();
+                                                echo($t . \"<br>\");
+                                                echo(date(\"Y-m-d\",$t));
                                                 ?>
                                             </p>
                                             <div class=\"ui divider\"></div>
