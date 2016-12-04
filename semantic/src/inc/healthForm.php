@@ -22,7 +22,8 @@ session_start();
 
     <!-- Form -->
     <div class="ui container">
-        <form class="ui form" action="submitHealthForm.php" method="POST">
+        <form name="healthForm" class="ui form" action="submitHealthForm.php" method="POST"
+        onsubmit="return validateForm()">
 
             <label>Date of Post</label>
             <div class="field">
@@ -55,7 +56,7 @@ session_start();
                 <div class="default text">Select a content type of the post
                 </div>
                 <div class="menu">
-                    <div class="item" data-value="0">Sport</div>
+                    <div class="item" data-value="0"></div>
                     <div class="item" data-value="1">Dance</div>
                     <div class="item" data-value="2">Outdoors</div>
                 </div>
@@ -65,6 +66,15 @@ session_start();
             <button id="submitButton" class="ui primary button" input type="submit" value="SUBMIT">Submit Content</button>
         </form>
     </div>
+
+    <script type="text/javascript">
+        function validateForm() {
+            var x = document.forms["healthForm"] ["title"].value;
+            if (x == "") {
+                alert("Please enter a title.")
+            }
+         }
+    </script>
 </body>
 <!-- Footer -->
 <?php include("includes/footer.php"); ?>
