@@ -47,6 +47,7 @@ session_start();
             <div class="ui selection dropdown">
                 <input name="contentType" type="hidden">
                 <i class="dropdown icon"></i>
+                <div class="default text"></div>
                 <div class="menu">
                     <div class="item" data-value="1">Sport</div>
                     <div class="item" data-value="0">Dance</div>
