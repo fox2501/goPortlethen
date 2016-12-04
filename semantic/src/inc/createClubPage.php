@@ -16,7 +16,7 @@ include("includes/header.php");
 include("includes/dbconnect.php");?>
 <body>
 <div class="ui container">
-    <form class="ui form" action="submitCreateClubForm.php" method="post">
+    <form class="ui form" action="includes/submitCreateClubForm.php" method="POST">
         <h2 class="ui center aligned blue header">
             <div class="content">
                 Create Your Club
