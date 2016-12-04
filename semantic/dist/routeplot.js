@@ -15,7 +15,7 @@ function initMap() {
         computeTotalDistance(directionsDisplay.getDirections());
     });
 
-    displayRoute('Aberdeen, Scotland', 'Portlethen, Scotland', directionsService,
+    displayRoute('Bruntland Rd, Portlethen, Scotland', 'Portlethen, Scotland', directionsService,
         directionsDisplay);
 }
 
