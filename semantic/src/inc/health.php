@@ -72,6 +72,7 @@ session_start();
                                     $title = $row['title'];
                                     $mainText = $row['mainText'];
                                     $userName = $row['userName'];
+                                    $date = $row['date'];
                                     echo "<div>
 
                                         <div class=\"four wide column\">
@@ -86,6 +87,7 @@ session_start();
                                             </p>
                                             <p id=\"author\">By $userName</p>
                                             <p id=\"date\">
+                                                $date;
                                             </p>
                                             <div class=\"ui divider\"></div>
                                         </div>
