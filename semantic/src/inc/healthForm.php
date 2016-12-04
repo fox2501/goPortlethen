@@ -31,7 +31,7 @@ session_start();
 
             <label>Content</label>
             <div class="field">
-                <textarea rows="8" type="text" name="mainText" placeholder="Enter the content of your post"></textarea>
+                <textarea rows="8" type="text" name="mainText" placeholder="Enter the content of your post" value="lololol"></textarea>
             </div>
 
             <label>Main Image</label>
