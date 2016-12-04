@@ -55,6 +55,7 @@ session_start();
             </div>
 
             <br>
+            <br>
             <button id="submitButton" class="ui primary button" input type="submit" value="SUBMIT">Submit Content</button>
         </form>
     </div>
