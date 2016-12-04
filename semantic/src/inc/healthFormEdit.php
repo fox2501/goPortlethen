@@ -86,6 +86,16 @@ session_start();
             }
         }
     </script>
+
+    <?php
+
+    if(isset($_POST['update'])) {
+        $title = $POST['title'];
+    }
+
+    $sql = mysqli_query("UPDATE healthContent SET title = '$title'");
+
+    ?>
     </body>
     <!-- Footer -->
     <?php include("includes/footer.php"); ?>
