@@ -49,9 +49,9 @@ session_start();
                 <i class="dropdown icon"></i>
                 <div class="default text"></div>
                 <div class="menu">
-                    <div class="item" data-value="1">Sport</div>
-                    <div class="item" data-value="0">Dance</div>
-                    <div class="item" data-value="1">Outdoors</div>
+                    <div class="item" data-value="0">Sport</div>
+                    <div class="item" data-value="1">Dance</div>
+                    <div class="item" data-value="2">Outdoors</div>
                 </div>
             </div>
 
