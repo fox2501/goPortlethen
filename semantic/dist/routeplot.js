@@ -1,6 +1,6 @@
 function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 4,
+        zoom: 12,
         center: {lat: 57.061681, lng: -2.129468}  // Portlethen.
     });
 
@@ -15,7 +15,7 @@ function initMap() {
         computeTotalDistance(directionsDisplay.getDirections());
     });
 
-    displayRoute('Bruntland Rd, Portlethen, Scotland', 'Portlethen, Scotland', directionsService,
+    displayRoute('57.05807318927458, -2.136229', '57.054993, -2.145402', directionsService,
         directionsDisplay);
 }
 
@@ -23,7 +23,7 @@ function displayRoute(origin, destination, service, display) {
     service.route({
         origin: origin,
         destination: destination,
-        waypoints: [{location: 'Torry, Scotland'}, {location: 'Cove Bay, Scotland'}],
+        waypoints: [{location: '57.058703, -2.116714'}, {location: '57.053802, -2.135103'}],
         travelMode: 'WALKING',
         avoidTolls: true
     }, function(response, status) {
