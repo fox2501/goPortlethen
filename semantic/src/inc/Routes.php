@@ -32,6 +32,13 @@ session_start();
 </div>
 </div>
 
+<div id="map"></div>
+<!-- Replace the value of the key parameter with your own API key. -->
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsaPQGyO2SHJumHMC2k8RTYfy3z7OXIk&callback=initMap">
+
+</script>
+
 <html class="container">
 <div class="ui grid">
     <div class="four wide column"></div>
