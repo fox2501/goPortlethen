@@ -2,7 +2,7 @@
 
 session_start();
 
-include("includes/dbconnect.php");
+include("dbconnect.php");
 
 $clubName = $_POST["clubName"];
 $email = $_POST["email"];
