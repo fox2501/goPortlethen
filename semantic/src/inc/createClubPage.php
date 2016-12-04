@@ -1,4 +1,6 @@
-<?php session_start();?>
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +16,7 @@ include("includes/header.php");
 include("includes/dbconnect.php");?>
 <body>
 <div class="ui container">
-    <form class="ui form" action="submitCreateClubForm.php" method="post">
+    <form class="ui form" action="includes/submitCreateClubForm.php" method="POST">
         <h2 class="ui center aligned blue header">
             <div class="content">
                 Create Your Club
@@ -129,7 +131,7 @@ include("includes/dbconnect.php");?>
                 </div>
             </div>
         </div>
-        <div class="ui fluid large green submit button" id="createClub">Create Club</div>
+        <div class="ui fluid large green submit button" id="createClub" type="submit">Create Club</div>
     </form>
 
     <script type="text/javascript">
