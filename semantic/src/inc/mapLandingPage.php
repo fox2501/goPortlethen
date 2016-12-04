@@ -20,19 +20,15 @@ session_start();
 
 
     <div class="ui grid">
-        <div class="two wide column">
-        </div>
-        <div class="one wide column">
+        <div class="five wide column">
             <button class="ui button"><a href="">Create Route</a></button>
-        </div>
-        <div class="two wide column">
         </div>
         <div class="six wide column">
             <div class="ui celled list">
                 <div class="item">
                     <i class="marker icon"></i>
                     <div class="content">
-                        <a class="header"> Test Route 1
+                        <a class="header"><a href="Routes.php">Test Route 1</a>
                         </a>
                         4.2miles
                     </div>
