@@ -73,6 +73,7 @@ session_start();
                                     $mainText = $row['mainText'];
                                     $userName = $row['userName'];
                                     echo "<div>
+
                                         <div class=\"four wide column\">
                                             <h3 class=\"ui header\" id=\"title\">
                                                 $title
@@ -84,8 +85,12 @@ session_start();
                                                 $mainText
                                             </p>
                                             <p id=\"author\">By $userName</p>
-                                            
-                                            <p id=\"date\">$date</p>
+                                            <p id=\"date\">
+                                                <?php
+                                                $date = date_create();
+                                                echo date_format($date, 'U = Y-m-d H:i:s') . \"\n\";
+                                                ?>
+                                            </p>
                                             <div class=\"ui divider\"></div>
                                         </div>
                                     </div>";}
