@@ -7,6 +7,7 @@ $surname = $_POST["surname"];
 $email = $_POST["email"];
 $username = $_POST["username"];
 $password = $_POST["password"];
+$passwordConfirm = $_POST["passwordConfirm"];
 $age = $_POST["age"];
 
 if(empty($firstName)){
@@ -33,6 +34,10 @@ if(empty($password)){
     header("Location: ../signUpForm.php?error=formError");
     exit();
 }
+if(empty($passwordConfirm)){
+    header("Location: ../signUpForm.php?error=formError");
+    exit();
+}
 //else if (strlen($password) < 8){
   //  header("Location: ../signUpForm.php?error=formError");
     //exit();
@@ -48,12 +53,15 @@ else{
     if($usernameCheck > 0){
         header("Location: ../signUpForm.php?error=username");
         exit();
+    } else if(!($password == $passwordConfirm)){
+        header("Location: ../signUpForm.php?error=passwordConfirm");
+        exit();
     }
     else {
         $hashpass = password_hash($password, PASSWORD_DEFAULT);
 
-        $sql = "INSERT INTO users (userName, password, emailAddress, firstName, surname, approvalStatus, age) 
-        values('$username', '$hashpass', '$email', '$firstName', '$surname', '0', '$age')";
+        $sql = "INSERT INTO users (userName, password, emailAddress, firstName, surname, approvalStatus, age, dateCreated) 
+        values('$username', '$hashpass', '$email', '$firstName', '$surname', '0', '$age', CURRENT_TIMESTAMP)";
 
         $result = mysqli_query($db, $sql);
 
