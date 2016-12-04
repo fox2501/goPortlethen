@@ -84,7 +84,6 @@ session_start();
                                                 $mainText
                                             </p>
                                             <p id=\"author\">By $userName</p>
-                                            
                                             <p id=\"date\">
                                                 <?php
                                                 $date = date_create();
