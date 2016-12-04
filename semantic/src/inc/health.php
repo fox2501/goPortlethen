@@ -32,9 +32,9 @@ session_start();
             <div class="row">
                 <a href="healthForm.php"><button class="ui primary button" style="margin-right:50px">Submit Content</button></a>
                 <iframe style="margin-right:50px" src="https://calendar.google.com/calendar/embed?src=imdvs1dbg4fm5e9g35o2cj8i2g%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
-                <div style="width:236px;font-size:8px;text-align:right;"><script type="text/javascript">
-                        document.write(unescape("%3Cscript src='http://twitterforweb.com/twitterbox.js?username=kanyewest&settings=1,0,3,236,505,f4f4f4,0,c4c4c4,101010,1,1,336699' type='text/javascript'%3E%3C/script%3E"));</script></div>
-
+                <div style="width:300px">
+                    <a class="twitter-timeline" href="https://twitter.com/kanyewest">Tweets by kanyewest</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
             </div>
         </div>
         <div class="ui divider"></div>
@@ -74,7 +74,6 @@ session_start();
                                     $userName = $row['userName'];
                                     $date = $row['date'];
                                     echo "<div>
-
                                         <div class=\"four wide column\">
                                             <h3 class=\"ui header\" id=\"title\">
                                                 $title

@@ -27,8 +27,7 @@ session_start();
 
             <label>Date of Post</label>
             <div class="field">
-                <input type="date" name="date" value="<?php echo date('Y-m-d');?>"
-                placeholder="Enter the date">
+                <input type="date" name="date" value="<?php echo date('Y-m-d');?>">
             </div>
 
             <label>Title</label>
