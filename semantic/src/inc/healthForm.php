@@ -24,6 +24,11 @@ session_start();
     <div class="ui container">
         <form class="ui form" action="submitHealthForm.php" method="POST">
 
+            <label>Date of Post</label>
+            <div class="field">
+                <input type="date" name="date" placeholder="Enter the date">
+            </div>
+
             <label>Title</label>
             <div class="field">
                 <input type="text" name="title" placeholder="Enter the title of your post">
@@ -42,6 +47,21 @@ session_start();
                 </div>
             </div>
 
+            <label>Content Type</label>
+            <br>
+            <div class="ui selection dropdown">
+                <input name="contentType" type="hidden">
+                <i class="dropdown icon"></i>
+                <div class="default text">Select a content type of the post
+                </div>
+                <div class="menu">
+                    <div class="item" data-value="0">Sport</div>
+                    <div class="item" data-value="1">Dance</div>
+                    <div class="item" data-value="2">Outdoors</div>
+                </div>
+            </div>
+            <br>
+            <br>
             <button id="submitButton" class="ui primary button" input type="submit" value="SUBMIT">Submit Content</button>
         </form>
     </div>

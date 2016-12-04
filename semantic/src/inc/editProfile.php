@@ -6,7 +6,6 @@ if (isset($_SESSION['loggedIn'])) {
     <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="/goportlethen/semantic/dist/semantic.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
@@ -24,16 +23,8 @@ if (isset($_SESSION['loggedIn'])) {
         <div class = "ui two column grid">
             <div class = "ui column">
                 <div class = "ui huge blue header">
-                    My profile
+                    User settings
                 </div>
-            </div>
-            <div class = "ui column">
-                <form>
-                <button class = "ui right floated button" style = "height: 40px;" formaction="editProfile.php">
-                    <i class="settings icon"></i>
-                    Edit Profile
-                </button>
-                </form>
             </div>
         </div>
         <div class="ui two column grid">
@@ -84,70 +75,75 @@ if (isset($_SESSION['loggedIn'])) {
                         </div>
                     </div>
                 </div>
-                <div class="column">
-                    <div class="ui one column grid">
-                        <div class="column">
-                            <div class="row">
-                                <h5 class = "ui top attached header">
-                                    Name
-                                </h5>
-                                <div class = "ui attached segment">
-                                    <?php
-                                    $userID = $_SESSION['loggedIn'];
-                                    $sql = "SELECT firstName, surname FROM users WHERE userID = '$userID'";
-                                    $result = mysqli_query($db, $sql);
-                                    while($row = mysqli_fetch_array($result)) {
-                                        $firstName = $row['firstName'];
-                                        $surname = $row['surname'];
-                                    }
-                                    echo $firstName.' '.$surname;
-                                    ?>
-                                </div>
-                                <h5 class = "ui top attached header">
-                                    Age
-                                </h5>
-                                <div class = "ui attached segment">
-                                    <?php
-                                    $userID = $_SESSION['loggedIn'];
-                                    $sql = "SELECT age FROM users WHERE userID = '$userID'";
-                                    $result = mysqli_query($db, $sql);
-                                    while($row = mysqli_fetch_array($result)) {
-                                        $age = $row['age'];
-                                    }
-                                    echo $age;
-                                    ?>
-                                </div>
-                                <h5 class = "ui top attached header">
-                                    Location
-                                </h5>
-                                <div class = "ui attached segment">
-                                    <?php
-                                    $userID = $_SESSION['loggedIn'];
-                                    $sql = "SELECT location FROM users WHERE userID = '$userID'";
-                                    $result = mysqli_query($db, $sql);
-                                    while($row = mysqli_fetch_array($result)) {
-                                        $location = $row['location'];
-                                    }
-                                    echo $location;
-                                    ?>
-                                </div>
-                                <h5 class = "ui top attached header">
-                                    About
-                                </h5>
-                                <div class = "ui attached segment">
-                                    <?php
-                                    $userID = $_SESSION['loggedIn'];
-                                    $sql = "SELECT aboutUser FROM users WHERE userID = '$userID'";
-                                    $result = mysqli_query($db, $sql);
-                                    while($row = mysqli_fetch_array($result)) {
-                                        $aboutUser = $row['aboutUser'];
-                                    }
-                                    echo $aboutUser;
-                                    ?>
-                                </div>
-                            </div>
+                <div class = "column">
+                    <form class = "ui form" action="includes/submitEditProfile.php" method="POST">
+                        <div class = "field">
+                            <label>First Name</label>
+                            <input type = "text" name = "firstName" value =
+                            "<?php
+                            $userID = $_SESSION['loggedIn'];
+                            $sql = "SELECT firstName, surname FROM users WHERE userID = '$userID'";
+                            $result = mysqli_query($db, $sql);
+                            while($row = mysqli_fetch_array($result)) {
+                                $firstName = $row['firstName'];
+                            }
+                            echo $firstName;
+                            ?>">
                         </div>
-                    </div>
+                        <div class = "field">
+                            <label>Surname</label>
+                            <input type = "text" name = "surname" value =
+                            "<?php
+                            $userID = $_SESSION['loggedIn'];
+                            $sql = "SELECT firstName, surname FROM users WHERE userID = '$userID'";
+                            $result = mysqli_query($db, $sql);
+                            while($row = mysqli_fetch_array($result)) {
+                                $surname = $row['surname'];
+                            }
+                            echo $surname;
+                            ?>">
+                        </div>
+                        <div class = "field">
+                            <label>Age</label>
+                            <input type = "number" name = "age" value =
+                            "<?php
+                            $userID = $_SESSION['loggedIn'];
+                            $sql = "SELECT age FROM users WHERE userID = '$userID'";
+                            $result = mysqli_query($db, $sql);
+                            while($row = mysqli_fetch_array($result)) {
+                                $age = $row['age'];
+                            }
+                            echo $age;
+                            ?>">
+                        </div>
+                        <div class = "field">
+                            <label>Location</label>
+                            <input type = "text" name = "location" value =
+                            "<?php
+                            $userID = $_SESSION['loggedIn'];
+                            $sql = "SELECT location FROM users WHERE userID = '$userID'";
+                            $result = mysqli_query($db, $sql);
+                            while($row = mysqli_fetch_array($result)) {
+                                $location = $row['location'];
+                            }
+                            echo $location;
+                            ?>">
+                        </div>
+                        <div class = "field">
+                            <label>About</label>
+                            <input type = "text" name = "aboutUser" value =
+                            "<?php
+                            $userID = $_SESSION['loggedIn'];
+                            $sql = "SELECT aboutUser FROM users WHERE userID = '$userID'";
+                            $result = mysqli_query($db, $sql);
+                            while($row = mysqli_fetch_array($result)) {
+                                $aboutUser = $row['aboutUser'];
+                            }
+                            echo $aboutUser;
+                            ?>">
+                        </div>
+                        <button class="ui fluid large green submit button" type="submit">Submit</button>
+                    </form>
                 </div>
             </div>
         </div>
