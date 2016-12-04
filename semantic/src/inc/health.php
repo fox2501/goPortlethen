@@ -38,6 +38,7 @@ session_start();
             </div>
         </div>
         <div class="ui divider"></div>
+
     </div>
 
     <div class=" ui container">
