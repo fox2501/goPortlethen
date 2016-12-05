@@ -5,10 +5,10 @@ include("includes/dbconnect.php");
 $clubName = $_POST["clubName"];
 $clubDescription = $_POST["clubDescription"];
 $email = $_POST["email"];
-$contactNumber = $_POST["contactNumber"];
+$contactNumber = $_POST["phoneNumber"];
 $calendarID = $_POST["calendarID"];
 $feePaid = $_POST["feePaid"];
-$feeCost = $_POST["feeCost"]; 
+$feeCost = $_POST["feeAmount"]; 
 $clubCategory = $_POST["clubCategory"];
 
   /*$imageID = new PreloadedFile($_POST['imageID']); if (!$imageID->is_valid()) {    echo "Invalid upload signature"; } else {    $photo->image_identifier = $imageID->identifier(); }*/
