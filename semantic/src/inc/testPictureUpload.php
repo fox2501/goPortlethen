@@ -11,6 +11,7 @@ if(isset($_POST['submit'])){
         $pvars   = array('image' => base64_encode($data));
         $timeout = 30;
         $curl = curl_init();
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($curl, CURLOPT_URL, 'https://api.imgur.com/3/image.json');
         curl_setopt($curl, CURLOPT_TIMEOUT, $timeout);
         curl_setopt($curl, CURLOPT_HTTPHEADER, array('Authorization: Client-ID ' . $client_id));
