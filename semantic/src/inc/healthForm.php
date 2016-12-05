@@ -1,5 +1,22 @@
 <?php
 session_start();
+if(isset($_SESSION['loggedIn'])){
+    $userID = $_SESSION['loggedIn'];
+    $canAccess = '0';
+    $sql = "SELECT userName from users WHERE userID = '$userID'";
+    $result = mysqli_query($db, $sql);
+    $row = mysqli_fetch_assoc($result);
+    $userName = $row["userName"];
+
+    $sql = "SELECT accessID from useraccess where userName = '$userName'";
+    $result = mysqli_query($db, $sql);
+    $row = mysqli_fetch_assoc($result);
+    $accessID = $row["accessID"];
+    if($accessID == '1' || $accessID == '4'){
+        $canAccess = '1';
+    } else{
+        $canAccess = '0';
+    }
 ?>
 
 <!DOCTYPE html>
@@ -42,11 +59,11 @@ session_start();
             <label>Main Image</label>
             <div class="field">
                 <div class="ui fluid action input">
-                    <input name="img" size="35" type="file"/><br/>
+                    Choose Image : <input name="img" size="35" type="file"/><br/>
                 </div>
             </div>
 
-            <button id="submitButton" class="ui primary button" input type="submit" value="SUBMIT">Submit Content</button>
+            <button id="submitButton" class="ui primary button" name = "submit" input type="submit" value="SUBMIT">Submit Content</button>
         </form>
     </div>
 
@@ -74,3 +91,4 @@ session_start();
 <?php include("includes/footer.php"); ?>
 
 </html>
+<?php }; ?>

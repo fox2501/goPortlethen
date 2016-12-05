@@ -69,25 +69,25 @@ session_start();
                 $mainText = $row['mainText'];
                 echo "<div>
 
-            <div class="item">
-                <div class="ui small image">
-                    <img src="http://secure.cache.images.core.optasports.com/soccer/teams/150x150/961.png">
+            <div class='item'>
+                <div class='ui small image'>
+                    <img src='http://secure.cache.images.core.optasports.com/soccer/teams/150x150/961.png'>
                 </div>
-                <div class="middle aligned content">
-                    <div class="header">
+                <div class='middle aligned content''>
+                    <div class='header'>
                         $title
                     </div>
-                    <div class="description">
+                    <div class='description'>
                         <p> $mainText </p>
                     </div>
-                    <div class="extra">
-                        <div class="ui right floated button">
-                            <a href="/semantic/src/inc/clubPage.php">For more info click here!</a>
+                    <div class='extra'>
+                        <div class='ui right floated button'>
+                            <a href='/semantic/src/inc/clubPage.php'>For more info click here!</a>
                         </div>
                     </div>
                 </div>
             </div>
-            </div>; }
+            </div>"; }
             ?>
         </div>
     </div>
