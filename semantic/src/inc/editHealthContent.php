@@ -44,8 +44,6 @@ if(isset($_SESSION['loggedIn'])) {
         <form name="healthForm" class="ui form" action="submitEditHealth.php" method="POST" onsubmit="return validateForm()">
 
             <label>Title</label>
-            <div class="field">
-
                 <input type = "text" name = "title" value =
                 "<?php
                 $userID = $_SESSION['loggedIn'];
