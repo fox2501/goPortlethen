@@ -17,5 +17,5 @@ $sql = "INSERT INTO club (clubName, clubDescription, email, contactNumber, calen
 VALUES ('$clubName', '$clubDescription', '$email', '$contactNumber', '0', '0', '0.0', '$clubCategory')";
 $result = mysqli_query($db, $sql);
 
-header("location: ../clubPage.php");
+header("location:clubPage.php");
    ?>
