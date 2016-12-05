@@ -96,6 +96,21 @@ if (isset($_SESSION['loggedIn'])) {
                             echo $aboutUser;
                             ?>">
                         </div>
+                        <div class = "field">
+                            <label>Change password</label>
+                            <input type = "password" name = "password" value =
+                                "<?php
+                                $userID = $_SESSION['loggedIn'];
+                                $sql = "SELECT password FROM users WHERE userId = '$userID'";
+                                $result = mysqli_query($db, $sql);
+                                $row = mysqli_fetch_assoc($result);
+                                $hashpass = $row['password'];
+                                $dehashedpass = password_verify($password, $hashpass);
+                                echo $dehashedpass;
+
+
+                                ?>">
+                        </div>
                         <button class="ui fluid large green submit button" type="submit">Submit</button>
                     </form>
                 </div>
