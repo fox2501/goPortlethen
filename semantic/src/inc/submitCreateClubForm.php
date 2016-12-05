@@ -1,6 +1,6 @@
 <?php   
 session_start();
-include("..includes/dbconnect.php");
+include("https://goportlethencs8.azurewebsites.net/semantic/src/inc/includes/dbconnect.php");
   
 $clubName = $_POST["clubName"];
 $email = $_POST["email"];
@@ -16,9 +16,9 @@ $feeCost = $_POST["feeCost"];
   
 $sql = "
 INSERT INTO club (clubName, clubDescription, email, contactNumber, calendarID, feePaid, feeCost, url, clubCategory) 
-    VALUES ('$clubName', '$clubDescription', '$email', '$contactNumber', '$calendarID', '$feePaid', '$feeCost', '', '$clubCategory')";
+VALUES ('$clubName', '$clubDescription', '$email', '$contactNumber', '$calendarID', '$feePaid', '$feeCost', '', '$clubCategory')";
   
 $result = mysqli_query($db, $sql);
    
-header("location: ../clubpage.php");
+header("location: clubPage.php");
    ?>
