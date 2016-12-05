@@ -56,6 +56,7 @@ session_start();
             var x = document.forms["healthForm"] ["title"].value;
             var y = document.forms["healthForm"] ["mainText"].value;
             var z = document.forms["healthForm"] ["datePosted"].value;
+
             if (x == "") {
                 alert("Please enter a title.")
             }
@@ -64,7 +65,7 @@ session_start();
                 alert("Please enter some content.")
             }
 
-            else if(x == "") {
+            else if (z == "") {
                 alert("Please enter a date.")
             }
          }
