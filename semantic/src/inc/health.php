@@ -73,7 +73,7 @@
             </div>
         </div>
         <div class="six wide column">
-            <iframe style="margin-right:50px" src="https://calendar.google.com/calendar/embed?src=imdvs1dbg4fm5e9g35o2cj8i2g%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="200" height="300" frameborder="0" scrolling="no"></iframe>
+            <iframe style="margin-right:50px" src="https://calendar.google.com/calendar/embed?src=imdvs1dbg4fm5e9g35o2cj8i2g%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="yes"></iframe>
             <div style="height:600px">
                 <a class="twitter-timeline" data-height="500" href="https://twitter.com/kanyewest">Tweets by kanyewest</a>
                 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
