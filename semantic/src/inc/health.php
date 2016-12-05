@@ -1,6 +1,25 @@
 <?php session_start(); ?>
 <!-- Database -->
-<? include ( "includes/dbconnect.php");?>
+<?
+include ( "includes/dbconnect.php");
+
+if(isset($_SESSION['loggedIn'])){
+    $userID = $_SESSION['loggedIn'];
+    $canAccess = 0;
+    $sql = "SELECT userName from user WHERE userID = '$userID'";
+    $result = mysqli_query($db, $sql);
+    $row = mysqli_fetch_assoc($result);
+
+    $sql = "SELECT accessLevel from useraccess where userName = '$row'";
+    $result = mysqli_query($db, $sql);
+    $row = mysqli_fetch_assoc($result);
+    if($row == 1 || $row == 4){
+        $canAccess = 1;
+    } else{
+        $canAccess = 0;
+    }
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +48,7 @@
     <div class="ui two column grid">
         <div class="ten wide column">
             <?php
-            if(isset($_SESSION['loggedIn'])){
+            if($canAccess > 0){
                 echo "<div class='row'>
                 <a href='healthForm.php'>
                     <button class='ui primary button' style='margin-right:50px'>Submit Content</button>
