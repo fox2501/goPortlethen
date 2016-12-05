@@ -91,27 +91,31 @@ if(isset($_SESSION['loggedIn'])) {
             while ($row = $result-> fetch_array()) {
                 $title = $row['clubName'];
                 $mainText = $row['clubDescription'];
-                echo "<div>
-
-            <div class='item'>
-                <div class='ui small image'>
+                echo "
+<div class = 'ui container'>
+    <div class = 'ui grid'>
+    <div class = 'ui two wide column'>
+        <div class='ui small image'>
                     <img src='http://secure.cache.images.core.optasports.com/soccer/teams/150x150/961.png'>
-                </div>
-                <div class='middle aligned content''>
-                    <div class='header'>
+        </div>
+    </div>
+    <div class = 'ui ten wide column'>
+        <div class='middle aligned content''>
+            <div class='header'>
                         $title
-                    </div>
-                    <div class='description'>
-                        <p> $mainText </p>
-                    </div>
-                    <div class='extra'>
-                        <div class='ui right floated button'>
-                            <a href='/semantic/src/inc/clubPage.php'>For more info click here!</a>
-                        </div>
-                    </div>
-                </div>
             </div>
-            </div>"; }
+            <div class='description'>
+                   <p> $mainText </p>
+            </div>
+            <div class='extra'>
+                   <div class='ui right floated button'>
+                      <a href='/semantic/src/inc/clubPage.php'>For more info click here!</a>
+                   </div>
+            </div>
+     </div>
+</div>
+</div>
+"; }
             ?>
         </div>
     </div>
