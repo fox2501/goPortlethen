@@ -3,14 +3,8 @@
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
 
 <?php
-/**
- * Created by PhpStorm.
- * User: liams
- * Date: 05/12/2016
- * Time: 11:38
- */
 $img=$_FILES['img'];
-if(isset($_POST['SUBMIT'])){
+if(isset($_POST['submit'])){
     if($img['name']==''){
         echo "<h2>An Image Please.</h2>";
     }else{
