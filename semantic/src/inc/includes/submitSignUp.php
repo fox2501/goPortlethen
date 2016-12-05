@@ -12,7 +12,7 @@ $age = $_POST["age"];
 $accessRequested = $_POST["accessRequested"];
 $requireApproval = "1";
 $userApproved = "0";
-$acccessLevel = "0";
+$accessLevel = "0";
 
 if(empty($firstName)){
     header("Location: ../signUpForm.php?error=formError");
