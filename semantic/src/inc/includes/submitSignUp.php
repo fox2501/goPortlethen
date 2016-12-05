@@ -48,7 +48,6 @@ if(empty($age)){
     header("Location: ../signUpForm.php?error=formError");
     exit();
 }
-
 else{
     $sql = "SELECT username FROM users WHERE username = '$username'";
     $result = mysqli_query($db, $sql);
@@ -62,7 +61,9 @@ else{
     }
     else {
         $hashpass = password_hash($password, PASSWORD_DEFAULT);
-
+        if($requireApproval == "0"){
+            $userApproved = "1";
+        }
         $sql = "INSERT INTO users (userName, password, emailAddress, firstName, surname, requireApproval, userApproved, age, location, aboutUser, dateCreated) 
         values('$username', '$hashpass', '$email', '$firstName', '$surname', '$requireApproval', $userApproved, '$age', '', '', CURRENT_DATE)";
 
