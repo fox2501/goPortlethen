@@ -27,7 +27,7 @@ session_start();
 
             <label>Date of Post</label>
             <div class="field">
-                <input type="date" name="date" value="<?php echo date('Y-m-d');?>">
+                <input type="date" name="date" value="<?php echo $currentDate; ?>">
             </div>
 
             <label>Title</label>
