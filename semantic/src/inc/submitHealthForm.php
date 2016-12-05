@@ -4,7 +4,6 @@
 session_start();
 
 include("includes/dbconnect.php");
-include ("includes/header.php");
 $title = $_POST["title"];
 $mainText = $_POST["mainText"];
 $userID = $_SESSION["loggedIn"];
@@ -17,7 +16,7 @@ if (!$imageID->is_valid()) {
 }*/
 
 $img=$_FILES['img'];
-if(isset($_POST['submit'])){
+if(isset($_POST['SUBMIT'])){
     if($img['name']==''){
         echo "<h2>An Image Please.</h2>";
     }else{
