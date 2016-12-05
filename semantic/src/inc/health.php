@@ -1,6 +1,25 @@
 <?php session_start(); ?>
 <!-- Database -->
-<? include ( "includes/dbconnect.php");?>
+<?
+include ( "includes/dbconnect.php");
+
+if(isset($_SESSION['loggedIn'])){
+    $userID = $_SESSION['loggedIn'];
+    $canAccess = 0;
+    $sql = "SELECT userName from users WHERE userID = '$userID'";
+    $result = mysqli_query($db, $sql);
+    $row = mysqli_fetch_assoc($result);
+
+    $sql = "SELECT accessID from useraccess where userName = '$row'";
+    $result = mysqli_query($db, $sql);
+    $row = mysqli_fetch_assoc($result);
+    if($row == 1 || $row == 4){
+        $canAccess = 1;
+    } else{
+        $canAccess = 0;
+    }
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +48,7 @@
     <div class="ui two column grid">
         <div class="ten wide column">
             <?php
-            if(isset($_SESSION['loggedIn'])){
+            if($canAccess > 0){
                 echo "<div class='row'>
                 <a href='healthForm.php'>
                     <button class='ui primary button' style='margin-right:50px'>Submit Content</button>
@@ -80,7 +99,7 @@
         <div class="six wide column">
             <iframe style="margin-right:50px" src="https://calendar.google.com/calendar/embed?src=imdvs1dbg4fm5e9g35o2cj8i2g%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="yes"></iframe>
             <div style="height:600px">
-                <a class="twitter-timeline" data-height="500" href="https://twitter.com/kanyewest">Tweets by kanyewest</a>
+                <a class="twitter-timeline" data-height="500" href="https://twitter.com/BoringMilner">Tweets by James Milner</a>
                 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
         </div>
