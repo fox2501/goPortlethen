@@ -60,7 +60,7 @@ session_start();
                                     $mainText = $row['mainText'];
                                     $userName = $row['userName'];
                                     $datePosted = $row['datePosted'];
-                                    echo "<div>
+                                    echo "<li><div>
                                         <div class=\"four wide column\">
                                             <h3 class=\"ui header\" id=\"title\">
                                                 $title
@@ -73,7 +73,7 @@ session_start();
                                             <p id=\"datePosted\">$datePosted<br></p>
                                             <div class=\"ui divider\"></div>
                                         </div>
-                                    </div>";}
+                                    </div></li>";}
                                 ?>
                             </ol>
                         </div>
@@ -89,6 +89,4 @@ session_start();
 
 <!-- Footer -->
 <?php include("includes/footer.php"); ?>
-
-
 </html>
