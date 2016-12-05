@@ -36,43 +36,8 @@ if (isset($_SESSION['loggedIn'])) {
                 </form>
             </div>
         </div>
-        <div class="ui two column grid">
+        <div class="ui grid">
             <div class="row">
-                <div class="column">
-                    <div class="ui card">
-                        <div class="image">
-                            <img src="http://www.rantlifestyle.com/wp-content/uploads/2014/04/Brick-Tamland1.jpg">
-                        </div>
-                        <div class="content">
-                            <div class = "ui header">
-                                <?php
-                                $userID = $_SESSION['loggedIn'];
-                                $sql = "SELECT firstName, surname FROM users WHERE userID = '$userID'";
-                                $result = mysqli_query($db, $sql);
-                                while($row = mysqli_fetch_array($result)) {
-                                    $firstName = $row['firstName'];
-                                    $surname = $row['surname'];
-                                }
-                                echo $firstName;
-                                ?>
-                            </div>
-                            <div class="meta">
-                                <span class="date">
-                                    <?php
-                                    $userID = $_SESSION['loggedIn'];
-                                    $sql = "SELECT year(dateCreated) as yearCreated, monthname(dateCreated) as monthCreated FROM users WHERE userID = '$userID'";
-                                    $result = mysqli_query($db, $sql);
-                                    while($row = mysqli_fetch_array($result)) {
-                                        $yearCreated = $row['yearCreated'];
-                                        $monthCreated = $row['monthCreated'];
-                                    }
-                                    echo "Joined in ".$monthCreated.' '.$yearCreated;
-                                    ?>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class="column">
                     <div class="ui one column grid">
                         <div class="column">
