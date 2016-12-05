@@ -15,4 +15,4 @@ $result = mysqli_query($db, $sql);
 
 //test
 
-header("location: ../clubPage.php");?>
+header("location:clubPage.php");?>
