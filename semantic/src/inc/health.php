@@ -6,7 +6,7 @@ include ( "includes/dbconnect.php");
 if(isset($_SESSION['loggedIn'])){
     $userID = $_SESSION['loggedIn'];
     $canAccess = 0;
-    $sql = "SELECT userName from user WHERE userID = '$userID'";
+    $sql = "SELECT userName from users WHERE userID = '$userID'";
     $result = mysqli_query($db, $sql);
     $row = mysqli_fetch_assoc($result);
 
