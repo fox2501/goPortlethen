@@ -61,7 +61,17 @@ if(isset($_SESSION['loggedIn'])) {
 
             <label>Content</label>
             <div class="field">
-                <textarea rows="8" type="text" name="mainText" placeholder="Enter the content of your post"></textarea>
+                <textarea rows="8" type="text" name="mainText" value=
+                "<?php
+                $userID = $_SESSION['loggedIn'];
+                $sql = "SELECT mainText FROM healthContent WHERE userID = '$userID'";
+                $result = mysqli_query($db, $sql);
+                while($row = mysqli_fetch_array($result)) {
+                    $mainText = $row['mainText'];
+                }
+                echo $mainText;
+                ?>">
+                </textarea>
             </div>
 
             <button id="submitButton" class="ui primary button" name = "submit" input type="submit" value="SUBMIT">Submit Content</button>
