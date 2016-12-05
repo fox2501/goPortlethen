@@ -70,17 +70,6 @@ if (isset($_SESSION['loggedIn'])) {
                                     ?>
                                 </span>
                             </div>
-                            <div class="description">
-                                <?php
-                                $userID = $_SESSION['loggedIn'];
-                                $sql = "SELECT aboutUser FROM users WHERE userID = '$userID'";
-                                $result = mysqli_query($db, $sql);
-                                while($row = mysqli_fetch_array($result)) {
-                                    $aboutUser = $row['aboutUser'];
-                                }
-                                echo $aboutUser;
-                                ?>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -135,6 +124,9 @@ if (isset($_SESSION['loggedIn'])) {
                                     About
                                 </h5>
                                 <div class = "ui attached segment">
+                                    <div class = "ui textbox">
+
+
                                     <?php
                                     $userID = $_SESSION['loggedIn'];
                                     $sql = "SELECT aboutUser FROM users WHERE userID = '$userID'";
@@ -144,6 +136,7 @@ if (isset($_SESSION['loggedIn'])) {
                                     }
                                     echo $aboutUser;
                                     ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -152,48 +145,10 @@ if (isset($_SESSION['loggedIn'])) {
             </div>
         </div>
     </div>
-    <div class="ui fixed bottom sticky" style="width: 100%;">
-        <div class="ui blue inverted footer segment">
-            <div class="ui center aligned container">
-                <div class="ui stackable inverted grid">
-                    <div class="three wide column">
-                        <h4 class="ui inverted header">Community</h4>
-                        <div class="ui inverted link list">
-                            <a class="item" href="https://www.transifex.com/organization/semantic-org/" target="_blank">Help
-                                Translate</a>
-                            <a class="item" href="https://github.com/Semantic-Org/Semantic-UI/issues" target="_blank">Submit
-                                an Issue</a>
-                            <a class="item" href="https://gitter.im/Semantic-Org/Semantic-UI" target="_blank">Join our
-                                Chat</a>
-                            <a class="item" href="/cla.html" target="_blank">CLA</a>
-                        </div>
-                    </div>
-                    <div class="three wide column">
-                        <h4 class="ui inverted header">Network</h4>
-                        <div class="ui inverted link list">
-                            <a class="item" href="https://github.com/Semantic-Org/Semantic-UI" target="_blank">GitHub
-                                Repo</a>
-                            <a class="item" href="https://forums.semantic-ui.com" target="_blank">User Forums</a>
-                            <a class="item" href="http://1.semantic-ui.com">1.x Docs</a>
-                            <a class="item" href="http://legacy.semantic-ui.com">0.x Docs</a>
-                        </div>
-                    </div>
-                    <div class="seven wide right floated column">
-                        <h4 class="ui inverted header">Help Preserve This Project</h4>
-                        <p> Support for the continued development of Semantic UI comes directly from the community.</p>
-                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                            <input type="hidden" name="cmd" value="_s-xclick">
-                            <input type="hidden" name="hosted_button_id" value="7ZAF2Q8DBZAQL">
-                            <button type="submit" class="ui large button">Donate Today</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     </body>
     </html>
     <?php
+    include("includes/footer.php");
 } else{
     header("Location: /semantic/");
 }
