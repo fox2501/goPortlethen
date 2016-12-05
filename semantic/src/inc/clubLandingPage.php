@@ -88,7 +88,7 @@ if(isset($_SESSION['loggedIn'])) {
 
             $sql_query = "SELECT clubName, clubDescription FROM club, users WHERE club.userID=users.userID";
             $result = $db->query($sql_query);
-            while ($row = mysqli_fetch_array($result)) {
+            while ($row = $result-> fetch_array()) {
                 $title = $row['clubName'];
                 $mainText = $row['clubDescription'];
                 echo "<div>
