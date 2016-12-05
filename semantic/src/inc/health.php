@@ -28,11 +28,16 @@
 <div class="ui container">
     <div class="ui two column grid">
         <div class="ten wide column">
-            <div class="row">
-                <a href="healthForm.php">
-                    <button class="ui primary button" style="margin-right:50px">Submit Content</button>
+            <?php
+            if(isset($_SESSION['loggedIn'])){
+                echo "<div class='row'>
+                <a href='healthForm.php'>
+                    <button class='ui primary button' style='margin-right:50px'>Submit Content</button>
                 </a>
-            </div>
+            </div>";
+            }
+            ?>
+
             <!-- Info section -->
             <!-- Sections added as users add info through form -->
             <!-- Blank area to input info through form -->
