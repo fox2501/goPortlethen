@@ -1,6 +1,10 @@
 <?php
 session_start();
 ?>
+
+<!-- Database -->
+<? include("includes/dbconnect.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
