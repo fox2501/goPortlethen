@@ -25,10 +25,9 @@ session_start();
         <form name="healthForm" class="ui form" action="submitHealthForm.php" method="POST"
         onsubmit="return validateForm()">
 
-            <label>Date</label>
+            <label>Date Posted</label>
             <div class="field">
-                <input type="date" name="date" placeholder="<?php echo date("l jS \of F Y h:i:s A");?>"
-                value="<?php echo date("l jS \of F Y h:i:s A");?>">
+                <input type="date" name="datePosted" placeholder="<?php echo date("Y-m-d H:i:s")?>">
             </div>
 
             <label>Title</label>
@@ -44,13 +43,10 @@ session_start();
             <label>Main Image</label>
             <div class="field">
                 <div class="ui fluid action input">
-                    Choose Image : <input name="img" size="35" type="file"/><br/>
+                    <input name="img" size="35" type="file"/><br/>
                 </div>
             </div>
 
-
-            <br>
-            <br>
             <button id="submitButton" class="ui primary button" input type="submit" value="SUBMIT">Submit Content</button>
         </form>
     </div>
