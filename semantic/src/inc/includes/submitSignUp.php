@@ -9,8 +9,10 @@ $username = $_POST["username"];
 $password = $_POST["password"];
 $passwordConfirm = $_POST["passwordConfirm"];
 $age = $_POST["age"];
-$requireApproval = $_POST["requireApproval"];
+$accessRequested = $_POST["accessRequested"];
+$requireApproval = "1";
 $userApproved = "0";
+$acccessLevel = "0";
 
 if(empty($firstName)){
     header("Location: ../signUpForm.php?error=formError");
@@ -61,12 +63,23 @@ else{
     }
     else {
         $hashpass = password_hash($password, PASSWORD_DEFAULT);
-        if($requireApproval == "0"){
+        if($accessRequested == "contributor"){
+            $requireApproval = "0";
             $userApproved = "1";
+            $acccessLevel = "4";
+        } else if($accessRequested == "club"){
+            $acccessLevel = "2";
+        } else if($accessRequested == "map"){
+            $acccessLevel = "3";
+        } else if($accessRequested == "site"){
+            $acccessLevel = "1";
         }
+
         $sql = "INSERT INTO users (userName, password, emailAddress, firstName, surname, requireApproval, userApproved, age, location, aboutUser, dateCreated) 
         values('$username', '$hashpass', '$email', '$firstName', '$surname', '$requireApproval', $userApproved, '$age', '', '', CURRENT_DATE)";
+        $result = mysqli_query($db, $sql);
 
+        $sql = "INSERT INTO useraccess (accessID, username) VALUES ('$accessLevel', '$username')";
         $result = mysqli_query($db, $sql);
 
         header("location: /semantic/");
