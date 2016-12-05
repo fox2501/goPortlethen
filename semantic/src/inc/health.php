@@ -73,6 +73,7 @@ session_start();
                                             <p id=\"datePosted\">$datePosted<br></p>
                                             <div class=\"ui divider\"></div>
                                         </div>
+                                   
                                     </div>";}
                                 ?>
                             </ul>
