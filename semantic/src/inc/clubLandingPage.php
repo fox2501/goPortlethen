@@ -59,6 +59,16 @@ session_start();
     <div class="ui grid">
         <div class="ui hidden divider"></div>
         <div class="ui divided items">
+
+            <?php
+
+            $sql_query = "SELECT * FROM club, users WHERE club.userID=users.userID";
+            $result = $db->query($sql_query);
+            while ($row = $result->fetch_array()) {
+                $title = $row['title'];
+                $mainText = $row['mainText'];
+                echo "<div>
+
             <div class="item">
                 <div class="ui small image">
                     <img src="http://secure.cache.images.core.optasports.com/soccer/teams/150x150/961.png">
@@ -68,7 +78,7 @@ session_start();
                         $title
                     </div>
                     <div class="description">
-                        <p> $mainText</p>
+                        <p> $mainText </p>
                     </div>
                     <div class="extra">
                         <div class="ui right floated button">
@@ -77,6 +87,8 @@ session_start();
                     </div>
                 </div>
             </div>
+            </div>; }
+            ?>
         </div>
     </div>
     <div class="ui hidden divider"></div>
