@@ -70,8 +70,7 @@ if(isset($_SESSION['loggedIn'])) {
                     $mainText = $row['mainText'];
                 }
                 echo $mainText;
-                ?>"
-                >
+                ?>"></textarea>
             </div>
 
             <button id="submitButton" class="ui primary button" name = "submit" input type="submit" value="SUBMIT">Submit Content</button>
