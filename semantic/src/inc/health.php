@@ -76,11 +76,11 @@ session_start();
                                         </div>
                                     </div>";}
                                 ?>
+                                <!-- tesy -->
                             </ul>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -91,5 +91,3 @@ session_start();
 <!-- Footer -->
 <?php include("includes/footer.php"); ?>
 </html>
-
-<P>TEUGJSKOAPDOFGSDMA,L.;LDFPGKOJDFMSA,.;sghklc,x.z\</P>
