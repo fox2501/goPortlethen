@@ -26,7 +26,7 @@ session_start();
 
             <label>Date Posted</label>
             <div class="field">
-                <input type="date" name="datePosted" value="<?php echo new datetime()?>">
+                <input type="date" name="datePosted" placeholder="Enter the date">
             </div>
 
             <label>Title</label>
