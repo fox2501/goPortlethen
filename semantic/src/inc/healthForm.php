@@ -26,7 +26,7 @@ session_start();
 
             <label>Date Posted</label>
             <div class="field">
-                <input type="date" name="datePosted">
+                <input type="date" name="datePosted" placeholder="Enter today's date">
             </div>
 
             <label>Title</label>
