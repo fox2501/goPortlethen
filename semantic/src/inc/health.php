@@ -28,7 +28,7 @@ session_start();
     <!-- Only visible to admin/contributor -->
     <!-- When ordinary user on site/not logged in, hide this div -->
     <div class="ui container">
-        <div class="ui grid">
+        <div class="ui two column grid">
             <div class="row">
                 <a href="healthForm.php"><button class="ui primary button" style="margin-right:50px">Submit Content</button></a>
                 <iframe style="margin-right:50px" src="https://calendar.google.com/calendar/embed?src=imdvs1dbg4fm5e9g35o2cj8i2g%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
