@@ -1,5 +1,3 @@
-SUBMIT createclubforum.php
-
 <?php   
 session_start();
   
