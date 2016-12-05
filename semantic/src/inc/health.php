@@ -76,12 +76,10 @@ session_start();
                                         </div>
                                     </div>";}
                                 ?>
-
                             </ul>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
