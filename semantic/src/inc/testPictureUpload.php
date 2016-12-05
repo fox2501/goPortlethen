@@ -1,6 +1,6 @@
 <?php
 
-includes("includes/dbconnect.php");
+include("includes/dbconnect.php");
 
 $img=$_FILES['img'];
 if(isset($_POST['submit'])){
