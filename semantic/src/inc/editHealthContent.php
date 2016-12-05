@@ -29,7 +29,16 @@ $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 
             <label>Date Posted</label>
             <div class="field">
-                <input type="date" name="datePosted" value="<?php echo date("l jS \of F Y h:i:s A")?>">
+                <input type="date" name="datePosted" value=
+                "<?php
+                $userID = $_SESSION['loggedIn'];
+                $sql = "SELECT * FROM healthContent, users WHERE healthContent.userID=users.userID";
+                $result = mysqli_query($db, $sql);
+                while($row = mysqli_fetch_array($result)) {
+                    $datePosted = $row['datePosted'];
+                }
+                echo $datePosted;
+                ?>">
             </div>
 
             <label>Title</label>
@@ -48,7 +57,16 @@ $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 
             <label>Content</label>
             <div class="field">
-                <textarea rows="8" type="text" name="mainText" placeholder="Enter the content of your post"></textarea>
+                <textarea rows="8" type="text" name="mainText" value=
+                "<?php
+                $userID = $_SESSION['loggedIn'];
+                $sql = "SELECT * FROM healthContent, users WHERE healthContent.userID=users.userID";
+                $result = mysqli_query($db, $sql);
+                while($row = mysqli_fetch_array($result)) {
+                $mainText = $row['mainText'];
+                }
+                echo $mainText;
+                ?>">></textarea>
             </div>
 
             <label>Main Image</label>
