@@ -1,19 +1,37 @@
 <?php
 session_start();
 $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+$userID = $_SESSION['loggedIn'];
+include("includes/dbconnect.php");
+if(isset($_SESSION['loggedIn'])) {
     $userID = $_SESSION['loggedIn'];
+    $canAccess = '0';
+    $sql = "SELECT userName from users WHERE userID = '$userID'";
+    $result = mysqli_query($db, $sql);
+    $row = mysqli_fetch_assoc($result);
+    $userName = $row["userName"];
+
+    $sql = "SELECT accessID from useraccess where userName = '$userName'";
+    $result = mysqli_query($db, $sql);
+    $row = mysqli_fetch_assoc($result);
+    $accessID = $row["accessID"];
+    if ($accessID == '1' || $accessID == '4') {
+        $canAccess = '1';
+    } else {
+        $canAccess = '0';
+    }
     ?>
 
     <!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <link rel = "stylesheet" type = "text/css" href = "semantic.css">
+        <link rel="stylesheet" type="text/css" href="semantic.css">
         <title>Semantic UI</title>
     </head>
 
     <!-- Nav bar -->
-    <?include ("includes/header.php"); ?>
+    <? include("includes/header.php"); ?>
 
     <body>
     <!-- Page header -->
@@ -34,7 +52,7 @@ $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
                 $userID = $_SESSION['loggedIn'];
                 $sql = "SELECT * FROM healthContent, users WHERE healthContent.userID=users.userID";
                 $result = mysqli_query($db, $sql);
-                while($row = mysqli_fetch_array($result)) {
+                while ($row = mysqli_fetch_array($result)) {
                     $datePosted = $row['datePosted'];
                 }
                 echo $datePosted;
@@ -43,12 +61,12 @@ $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 
             <label>Title</label>
             <div class="field">
-                <input type = "text" name = "title" value =
+                <input type="text" name="title" value=
                 "<?php
                 $userID = $_SESSION['loggedIn'];
                 $sql = "SELECT * FROM healthContent, users WHERE healthContent.userID=users.userID";
                 $result = mysqli_query($db, $sql);
-                while($row = mysqli_fetch_array($result)) {
+                while ($row = mysqli_fetch_array($result)) {
                     $title = $row['title'];
                 }
                 echo $title;
@@ -62,8 +80,8 @@ $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
                 $userID = $_SESSION['loggedIn'];
                 $sql = "SELECT * FROM healthContent, users WHERE healthContent.userID=users.userID";
                 $result = mysqli_query($db, $sql);
-                while($row = mysqli_fetch_array($result)) {
-                $mainText = $row['mainText'];
+                while ($row = mysqli_fetch_array($result)) {
+                    $mainText = $row['mainText'];
                 }
                 echo $mainText;
                 ?>"></textarea>
@@ -76,7 +94,8 @@ $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
                 </div>
             </div>
 
-            <button id="submitButton" class="ui primary button" input type="submit" value="SUBMIT">Submit Content</button>
+            <button id="submitButton" class="ui primary button" input type="submit" value="SUBMIT">Submit Content
+            </button>
         </form>
     </div>
 
@@ -102,4 +121,7 @@ $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
     </body>
     <!-- Footer -->
     <?php include("includes/footer.php"); ?>
-</html>
+    </html>
+    <?php
+}
+?>
