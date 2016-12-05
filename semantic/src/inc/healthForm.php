@@ -54,12 +54,19 @@ session_start();
     <script type="text/javascript">
         function validateForm() {
             var x = document.forms["healthForm"] ["title"].value;
+            var y = document.forms["healthForm"] ["mainText"].value;
+            var z = document.forms["healthForm"] ["datePosted"].value;
+
             if (x == "") {
                 alert("Please enter a title.")
             }
-            var y = document.forms["healthForm"] ["content"].value;
-            if (y == "") {
+
+            else if (y == "") {
                 alert("Please enter some content.")
+            }
+
+            else if (z == "") {
+                alert("Please enter a date.")
             }
          }
     </script>
