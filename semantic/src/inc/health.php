@@ -5,7 +5,7 @@ include ( "includes/dbconnect.php");
 
 if(isset($_SESSION['loggedIn'])){
     $userID = $_SESSION['loggedIn'];
-    $canAccess = 0;
+    $canAccess = '0';
     $sql = "SELECT userName from users WHERE userID = '$userID'";
     $result = mysqli_query($db, $sql);
     $row = mysqli_fetch_assoc($result);
@@ -13,10 +13,10 @@ if(isset($_SESSION['loggedIn'])){
     $sql = "SELECT accessID from useraccess where userName = '$row'";
     $result = mysqli_query($db, $sql);
     $row = mysqli_fetch_assoc($result);
-    if($row == 1 || $row == 4){
-        $canAccess = 1;
+    if($row == '1' || $row == '4'){
+        $canAccess = '1';
     } else{
-        $canAccess = 0;
+        $canAccess = '0';
     }
 }
 ?>
@@ -48,7 +48,7 @@ if(isset($_SESSION['loggedIn'])){
     <div class="ui two column grid">
         <div class="ten wide column">
             <?php
-            if($canAccess > 0){
+            if($canAccess == '1'){
                 echo "<div class='row'>
                 <a href='healthForm.php'>
                     <button class='ui primary button' style='margin-right:50px'>Submit Content</button>
