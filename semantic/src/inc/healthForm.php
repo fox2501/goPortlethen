@@ -43,8 +43,7 @@ session_start();
             <label>Main Image</label>
             <div class="field">
                 <div class="ui fluid action input">
-                    <input type="file" name="image">
-                    <?php //echo cl_image_upload_tag('imageID',array("callback" => $cors_location));?>
+                    Choose Image : <input name="img" size="35" type="file"/><br/>
                 </div>
             </div>
 
