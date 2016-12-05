@@ -71,7 +71,8 @@ if(isset($_SESSION['loggedIn'])){
                         $mainText = $row['mainText'];
                         $userName = $row['userName'];
                         $datePosted = $row['datePosted'];
-                        echo "
+                        if($canAccess == '1'){
+                            echo "
                             <div>
                                 <div class=\"four wide column\">
                                     <h3 class=\"ui header\" id=\"title\">
@@ -94,7 +95,31 @@ if(isset($_SESSION['loggedIn'])){
                                     </p>
                                     <div class=\"ui divider\"></div>
                                 </div>
-                            </div>";} ?>
+                            </div>";
+                        } else {
+                            echo "
+                            <div>
+                                <div class=\"four wide column\">
+                                    <h3 class=\"ui header\" id=\"title\">
+                                                $title
+                                            </h3>
+
+                                    <img class=\"ui small image\" src=\"https://scontent.flhr4-1.fna.fbcdn.net/v/t1.0-9/13434842_1608517786105160_4523080997776743356_n.jpg?oh=4981b2761c2ef40c4989fc4b74bd440a&oe=58C6B38A\" id=\"image\"></img>
+                                    <br>
+                                    <p id=\"mainText\"style=\"text - align:justify\">$mainText
+                                        <br>
+                                    </p>
+                                    <p id=\"author\">By $userName
+                                        <br>
+                                    </p>
+                                    <p id=\"datePosted\">$datePosted
+                                        <br>
+                                    </p>
+                                    <div class=\"ui divider\"></div>
+                                </div>
+                            </div>";
+                        }
+                        } ?>
                 </ul>
             </div>
         </div>
