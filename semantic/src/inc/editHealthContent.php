@@ -48,7 +48,18 @@ session_start();
 
         <label>Content</label>
         <div class="field">
-            <textarea rows="8" type="text" name="mainText" placeholder="Enter the content of your post"></textarea>
+            <textarea rows="8" type="text" name="mainText" value="
+            <?php
+            $userID = $_SESSION['loggedIn'];
+            $sql = "SELECT mainText FROM healthContent WHERE userID = '$userID'";
+            $result = mysqli_query($db, $sql);
+            while ($row = mysqli_fetch_array($result)) {
+                $title = $row['mainText'];
+            }
+            echo $mainText;
+            ?>
+            ">
+            </textarea>
         </div>
 
         <label>Main Image</label>
