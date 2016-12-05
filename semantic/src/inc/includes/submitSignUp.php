@@ -10,7 +10,7 @@ $password = $_POST["password"];
 $passwordConfirm = $_POST["passwordConfirm"];
 $age = $_POST["age"];
 $requireApproval = $_POST["accessRequested"];
-$userApproved;
+$userApproved = '0';
 
 if(empty($firstName)){
     header("Location: ../signUpForm.php?error=formError");
