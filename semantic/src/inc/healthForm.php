@@ -1,5 +1,22 @@
 <?php
 session_start();
+if(isset($_SESSION['loggedIn'])){
+    $userID = $_SESSION['loggedIn'];
+    $canAccess = '0';
+    $sql = "SELECT userName from users WHERE userID = '$userID'";
+    $result = mysqli_query($db, $sql);
+    $row = mysqli_fetch_assoc($result);
+    $userName = $row["userName"];
+
+    $sql = "SELECT accessID from useraccess where userName = '$userName'";
+    $result = mysqli_query($db, $sql);
+    $row = mysqli_fetch_assoc($result);
+    $accessID = $row["accessID"];
+    if($accessID == '1' || $accessID == '4'){
+        $canAccess = '1';
+    } else{
+        $canAccess = '0';
+    }
 ?>
 
 <!DOCTYPE html>
@@ -74,3 +91,4 @@ session_start();
 <?php include("includes/footer.php"); ?>
 
 </html>
+<?php }; ?>
