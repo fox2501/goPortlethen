@@ -59,7 +59,6 @@ session_start();
                                     $title = $row['title'];
                                     $mainText = $row['mainText'];
                                     $userName = $row['userName'];
-                                    $date = $row['date'];
                                     echo "<div>
                                         <div class=\"four wide column\">
                                             <h3 class=\"ui header\" id=\"title\">
@@ -73,7 +72,7 @@ session_start();
                                             </p>
                                             <p id=\"author\">By $userName</p>
                                             <p id=\"date\">
-                                                $date
+                                                <?php echo $currentDate;?>
                                             </p>
                                             <div class=\"ui divider\"></div>
                                         </div>
