@@ -5,7 +5,7 @@ include ( "includes/dbconnect.php");
 
 if(isset($_SESSION['loggedIn'])){
     $userID = $_SESSION['loggedIn'];
-    $canAccess = 0;
+    $canAccess = '0';
     $sql = "SELECT userName from users WHERE userID = '$userID'";
     $result = mysqli_query($db, $sql);
     $row = mysqli_fetch_assoc($result);
@@ -13,10 +13,10 @@ if(isset($_SESSION['loggedIn'])){
     $sql = "SELECT accessID from useraccess where userName = '$row'";
     $result = mysqli_query($db, $sql);
     $row = mysqli_fetch_assoc($result);
-    if($row == 1 || $row == 4){
-        $canAccess = 1;
+    if($row == '1' || $row == '4'){
+        $canAccess = '1';
     } else{
-        $canAccess = 0;
+        $canAccess = '0';
     }
 }
 ?>
