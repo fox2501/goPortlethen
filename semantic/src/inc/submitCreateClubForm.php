@@ -20,14 +20,12 @@ $calendarID = $_POST["calendarID"];
 $feePaid = $_POST["feePaid"];
  
 $feeCost = $_POST["feeCost"];
-
-$url = $_POST[""];
  
 $userID = $_SESSION['loggedIn'];
   /*$imageID = new PreloadedFile($_POST['imageID']); if (!$imageID->is_valid()) {    echo "Invalid upload signature"; } else {    $photo->image_identifier = $imageID->identifier(); }*/
   
 $sql = "INSERT INTO club (clubName, clubDescription, email, contactNumber, calendarID, feePaid, feeCost, url, clubCategory) 
-    VALUES ('$clubName', '$clubDescription', '$email', '$contactNumber', '$calendarID', '$feePaid', '$feeCost', '$url', '$clubCategory')";
+    VALUES ('$clubName', '$clubDescription', '$email', '$contactNumber', '$calendarID', '$feePaid', '$feeCost', '', '$clubCategory')";
   
 $result = mysqli_query($db, $sql);
    
