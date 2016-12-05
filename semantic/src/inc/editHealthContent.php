@@ -53,6 +53,7 @@ if(isset($_SESSION['loggedIn'])){
                     $datePosted = $row['datePosted'];
                 }
                 echo $datePosted;
+
                 ?>">
             </div>
 
