@@ -25,5 +25,5 @@ $sql = "INSERT INTO club (clubName, email, clubCategory, clubDescription, contac
   
 $result = mysqli_query($db, $sql);
    
-header("location:createClubPage.php");
+header("location: ../createClubPage.php");
    ?>
