@@ -55,7 +55,7 @@ session_start();
                 <div class="default text">Select a content type of the post
                 </div>
                 <div class="menu">
-                    <div class="item" data-value="0"></div>
+                    <div class="item" data-value="0">Sport</div>
                     <div class="item" data-value="1">Dance</div>
                     <div class="item" data-value="2">Outdoors</div>
                 </div>
