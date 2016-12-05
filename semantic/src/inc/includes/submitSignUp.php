@@ -51,7 +51,7 @@ if(empty($age)){
 if($requireApproval == '0'){
     $requireApproval = '0';
     $userApproved = '1';
-} elseif($requireApproval != '0'){
+} elseif(!($requireApproval == '0')){
     $requireApproval = '1';
     $userApproved = '0';
 }
