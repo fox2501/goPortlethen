@@ -53,7 +53,7 @@ session_start();
             $sql = "SELECT mainText FROM healthContent WHERE userID = '$userID'";
             $result = mysqli_query($db, $sql);
             while ($row = mysqli_fetch_array($result)) {
-                $title = $row['mainText'];
+                $mainText = $row['mainText'];
             }
             echo $mainText;
             ?>
