@@ -79,7 +79,7 @@ else{
         values('$username', '$hashpass', '$email', '$firstName', '$surname', '$requireApproval', $userApproved, '$age', '', '', CURRENT_DATE)";
         $result = mysqli_query($db, $sql);
 
-        $sql = "INSERT INTO useraccess (accessID, username) VALUES ('$accessLevel', '$username')";
+        $sql = "INSERT INTO useraccess (accessID, userName) VALUES ('$accessLevel', '$username')";
         $result = mysqli_query($db, $sql);
 
         header("location: /semantic/");
