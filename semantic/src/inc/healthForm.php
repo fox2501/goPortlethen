@@ -22,12 +22,11 @@ session_start();
 
     <!-- Form -->
     <div class="ui container">
-        <form name="healthForm" class="ui form" action="submitHealthForm.php" method="POST"
-        onsubmit="return validateForm()">
+        <form name="healthForm" class="ui form" action="submitHealthForm.php" method="POST" onsubmit="return validateForm()">
 
             <label>Date Posted</label>
             <div class="field">
-                <input type="date" name="datePosted" value="<?php echo date("l jS \of F Y h:i:s A")?>">
+                <input type="date" name="datePosted">
             </div>
 
             <label>Title</label>

@@ -1,87 +1,75 @@
-<?php
-session_start();
-?>
+<?php session_start(); ?>
 <!-- Database -->
-<? include ("includes/dbconnect.php");?>
+<? include ( "includes/dbconnect.php");?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <link rel = "stylesheet" type = "text/css" href = "semantic.css">
+    <link rel="stylesheet" type="text/css" href="semantic.css">
     <title>Semantic UI</title>
 </head>
 
 <!-- Nav bar -->
-<?include ("includes/header.php"); ?>
+<?include ( "includes/header.php"); ?>
 
 <body>
-    <!-- Page header -->
-    <h1 align="center">Health & Wellbeing</h1>
-    <div class="ui horizontal section divider">
-        <p>Keeping Portlethen Healthy</p>
-    </div>
+<!-- Page header -->
+<h1 align="center">Health & Wellbeing</h1>
+<div class="ui horizontal section divider">
+    <p>Keeping Portlethen Healthy</p>
+</div>
 
-
-    <!-- Submit content button -->
-    <!-- Takes user to SubmitHealth.php -->
-    <!-- Only visible to admin/contributor -->
-    <!-- When ordinary user on site/not logged in, hide this div -->
-    <div class="ui container">
-        <div class="ui two column grid">
+<!-- Submit content button -->
+<!-- Takes user to SubmitHealth.php -->
+<!-- Only visible to admin/contributor -->
+<!-- When ordinary user on site/not logged in, hide this div -->
+<div class="ui container">
+    <div class="ui two column grid">
+        <div class="column">
             <div class="row">
-                <a href="healthForm.php"><button class="ui primary button" style="margin-right:50px">Submit Content</button></a>
-                <iframe style="margin-right:50px" src="https://calendar.google.com/calendar/embed?src=imdvs1dbg4fm5e9g35o2cj8i2g%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
-                <div style="height:300px">
-                    <a class="twitter-timeline" data-height="300" href="https://twitter.com/kanyewest">Tweets by kanyewest</a>
-                    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </div>
+                <a href="healthForm.php">
+                    <button class="ui primary button" style="margin-right:50px">Submit Content</button>
+                </a>
             </div>
-
-        </div>
-        <div class="ui divider"></div>
-
-    </div>
-
-    <div class=" ui container">
-        <div class="ui grid">
+            <!-- Info section -->
+            <!-- Sections added as users add info through form -->
+            <!-- Blank area to input info through form -->
             <div class="row">
-                <!-- Info section -->
-                <!-- Sections added as users add info through form -->
-                <div>
-                    <!-- Blank area to input info through form -->
-                    <div class="ui grid">
-                        <div class="row">
-                            <ul>
-                                <?php
-                                $sql_query = "SELECT * FROM healthContent, users WHERE healthContent.userID=users.userID";
-                                $result = $db->query($sql_query);
-                                while($row = $result-> fetch_array()) {
-                                    $title = $row['title'];
-                                    $mainText = $row['mainText'];
-                                    $userName = $row['userName'];
-                                    
-                                    $datePosted = $row['datePosted'];
-                                    echo "<div>
-                                        <div class=\"four wide column\">
-                                            <h3 class=\"ui header\" id=\"title\">
+                <ul>
+                    <?php $sql_query="SELECT * FROM healthContent, users WHERE healthContent.userID=users.userID" ; $result=$ db->query($sql_query); while($row = $result-> fetch_array()) { $title = $row['title']; $mainText = $row['mainText']; $userName = $row['userName']; $datePosted = $row['datePosted']; echo "
+                            <div>
+                                <div class=\"four wide column\">
+                                    <h3 class=\"ui header\" id=\"title\">
                                                 $title
                                             </h3>
-                                            
-                                            <img class=\"ui small image\" src=\"https://scontent.flhr4-1.fna.fbcdn.net/v/t1.0-9/13434842_1608517786105160_4523080997776743356_n.jpg?oh=4981b2761c2ef40c4989fc4b74bd440a&oe=58C6B38A\" id=\"image\"></img>
-                                            <br>
-                                            <a href=editHealthContent.php><button class=\"mini ui button\" style=\"float:right; margin-left:20px\">Edit</button></a>
-                                            <p id=\"mainText\" style=\"text - align:justify\">$mainText<br></p>
-                                            <p id=\"author\">By $userName<br></p>
-                                            <p id=\"datePosted\">$datePosted<br></p>
-                                            <div class=\"ui divider\"></div>
-                                        </div>
-                                    </div>";}
-                                ?>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+
+                                    <img class=\"ui small image\" src=\"https://scontent.flhr4-1.fna.fbcdn.net/v/t1.0-9/13434842_1608517786105160_4523080997776743356_n.jpg?oh=4981b2761c2ef40c4989fc4b74bd440a&oe=58C6B38A\" id=\"image\"></img>
+                                    <br>
+                                    <a href=editHealthContent.php>
+                                        <button class=\"mini ui button\" style=\"float:right; margin-left:20px\">Edit</button>
+                                    </a>
+                                    <p id=\"mainText\"style=\"text - align:justify\">$mainText
+                                        <br>
+                                    </p>
+                                    <p id=\"author\">By $userName
+                                        <br>
+                                    </p>
+                                    <p id=\"datePosted\">$datePosted
+                                        <br>
+                                    </p>
+                                    <div class=\"ui divider\"></div>
+                                </div>
+                            </div>";} ?>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <iframe style="margin-right:50px" src="https://calendar.google.com/calendar/embed?src=imdvs1dbg4fm5e9g35o2cj8i2g%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
+            <div style="height:300px">
+                <a class="twitter-timeline" data-height="300" href="https://twitter.com/kanyewest">Tweets by kanyewest</a>
+                <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
         </div>
     </div>
@@ -90,5 +78,6 @@ session_start();
 </body>
 
 <!-- Footer -->
-<?php include("includes/footer.php"); ?>
+<?php include( "includes/footer.php"); ?>
+
 </html>
