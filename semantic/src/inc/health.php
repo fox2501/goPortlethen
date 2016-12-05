@@ -9,11 +9,13 @@ if(isset($_SESSION['loggedIn'])){
     $sql = "SELECT userName from users WHERE userID = '$userID'";
     $result = mysqli_query($db, $sql);
     $row = mysqli_fetch_assoc($result);
+    $userName = $row["userName"];
 
-    $sql = "SELECT accessID from useraccess where userName = '$row'";
+    $sql = "SELECT accessID from useraccess where userName = '$userName'";
     $result = mysqli_query($db, $sql);
     $row = mysqli_fetch_assoc($result);
-    if($row == '1' || $row == '4'){
+    $accessID = $row["accessID"];
+    if($accessID == '1' || $accessID == '4'){
         $canAccess = '1';
     } else{
         $canAccess = '0';
