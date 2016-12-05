@@ -136,7 +136,6 @@ session_start();
             <div class = "field">
                 <label>Access Requested</label>
                 <select class = "ui select dropdown" name = "requireApproval">
-                        <option value = "">Select access</option>
                         <option value = "0" name = "contributor">Contributor</option>
                         <option value = "1" name = "clubAdmin">Club Admin</option>
                         <option value = "1" name = "mapAdmin">Map Admin</option>

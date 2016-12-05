@@ -48,11 +48,7 @@ if(empty($age)){
     header("Location: ../signUpForm.php?error=formError");
     exit();
 }
-if(empty($requireApproval)){
-    header("Location: ../signUpForm.php?error=formError");
-    exit();
-}
-elseif($requireApproval = 0){
+if($requireApproval = 0){
     $requireApproval = 0;
     $userApproved = 1;
 } elseif($requireApproval > 0){
