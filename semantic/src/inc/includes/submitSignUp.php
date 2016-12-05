@@ -51,11 +51,9 @@ if(empty($age)){
 if(empty($requireApproval)){
     header("Location: ../signUpForm.php?error=formError");
     exit();
-} elseif($requireApproval == 'Contributor'){
-    $requireApproval = 0;
+} elseif($requireApproval == '0'){
     $userApproved = 1;
-} elseif($requireApproval == 'Club Admin' || $requireApproval == 'Site Admin' || $requireApproval == 'Map Admin'){
-    $requireApproval = 1;
+} elseif($requireApproval == '1'){
     $userApproved = 0;
 }
 else{
