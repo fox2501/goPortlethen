@@ -33,16 +33,15 @@ session_start();
         <label>Title</label>
         <div class="field">
             <input type="text" name="title" value="
-                <?php
+                "<?php
                 $userID = $_SESSION['loggedIn'];
                 $sql = "SELECT title FROM healthContent WHERE userID = '$userID'";
                 $result = mysqli_query($db, $sql);
-                while ($row = mysqli_fetch_array($result)) {
+                while($row = mysqli_fetch_array($result)) {
                     $title = $row['title'];
                 }
                 echo $title;
-                ?>
-            ">
+                ?>">
         </div>
 
 
