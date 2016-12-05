@@ -48,12 +48,12 @@ if(empty($age)){
     header("Location: ../signUpForm.php?error=formError");
     exit();
 }
-if($requireApproval = 0){
-    $requireApproval = 0;
-    $userApproved = 1;
-} elseif($requireApproval > 0){
-    $requireApproval = 1;
-    $userApproved = 0;
+if($requireApproval == '0'){
+    $requireApproval = '0';
+    $userApproved = '1';
+} elseif($requireApproval != '0'){
+    $requireApproval = '1';
+    $userApproved = '0';
 }
 else{
     $sql = "SELECT username FROM users WHERE username = '$username'";
