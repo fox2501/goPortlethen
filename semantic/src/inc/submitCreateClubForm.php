@@ -1,7 +1,7 @@
 <?php   
 session_start();
   
-include("dbconnect.php");
+include("includes/dbconnect.php");
   
 $clubName = $_POST["clubName"];
  
