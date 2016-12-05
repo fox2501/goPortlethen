@@ -37,7 +37,7 @@ $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
                 <input type = "text" name = "title" value =
                 "<?php
                 $userID = $_SESSION['loggedIn'];
-                $sql = "SELECT * FROM healthContent WHERE userID = '$userID'";
+                $sql = "SELECT * FROM healthContent, users WHERE healthContent.userID=users.userID";
                 $result = mysqli_query($db, $sql);
                 while($row = mysqli_fetch_array($result)) {
                     $title = $row['title'];
