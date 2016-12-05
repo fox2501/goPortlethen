@@ -8,6 +8,7 @@ include("includes/dbconnect.php");
 $title = $_POST["title"];
 $mainText = $_POST["mainText"];
 $userID = $_SESSION["loggedIn"];
+$datePosted = $_POST["datePosted"];
 
 /*$imageID = new PreloadedFile($_POST['imageID']);
 if (!$imageID->is_valid()) {
@@ -19,7 +20,7 @@ if (!$imageID->is_valid()) {
 if(isset($_SESSION['loggedIn'])) {
     echo "exists";
 }
-$sql = "INSERT INTO healthcontent (title, mainText, userID, contentType, approvalStatus) VALUES ('$title', '$mainText', '$userID', 'Blah', '0')";
+$sql = "INSERT INTO healthcontent (title, mainText, userID, approvalStatus, datePosted) VALUES ('$title', '$mainText', '$userID', '0', '$datePosted')";
 
 if (mysqli_query($db, $sql)) {
 } else {
