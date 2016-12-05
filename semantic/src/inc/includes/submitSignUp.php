@@ -10,7 +10,7 @@ $password = $_POST["password"];
 $passwordConfirm = $_POST["passwordConfirm"];
 $age = $_POST["age"];
 $requireApproval = $_POST["accessRequested"];
-$userApproved = '0';
+$userApproved = 0;
 
 if(empty($firstName)){
     header("Location: ../signUpForm.php?error=formError");
@@ -52,11 +52,11 @@ if(empty($requireApproval)){
     header("Location: ../signUpForm.php?error=formError");
     exit();
 }
-//elseif($requireApproval == '0'){
-  //  $userApproved = '1';
-//} elseif($requireApproval == '1' || $requireApproval == '2' || $requireApproval == '3'){
-//    $userApproved = '0';
-//}
+elseif($requireApproval = 0){
+$userApproved = 1;
+} elseif($requireApproval > 0){
+    $userApproved = 0;
+}
 else{
     $sql = "SELECT username FROM users WHERE username = '$username'";
     $result = mysqli_query($db, $sql);
