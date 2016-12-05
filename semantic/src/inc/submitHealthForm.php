@@ -13,7 +13,7 @@ if(isset($_SESSION['loggedIn'])) {
     echo "exists";
 }
 
-$sql = "INSERT INTO healthcontent (title, mainText, userID, approvalStatus, datePosted) VALUES ('$title', '$mainText', '$userID', '0', '$datePosted')";
+$sql = "INSERT INTO healthContent (title, mainText, userID, approvalStatus, datePosted) VALUES ('$title', '$mainText', '$userID', '0', '$datePosted')";
 
 if (mysqli_query($db, $sql)) {
 } else {
