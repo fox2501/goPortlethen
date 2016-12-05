@@ -51,7 +51,7 @@ session_start();
                     <!-- Blank area to input info through form -->
                     <div class="ui grid">
                         <div class="row">
-                            <ul>
+                            <ul reversed>
                                 <?php
                                 $sql_query = "SELECT * FROM healthContent, users WHERE healthContent.userID=users.userID";
                                 $result = $db->query($sql_query);
