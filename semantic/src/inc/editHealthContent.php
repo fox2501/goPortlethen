@@ -1,7 +1,6 @@
 <?php
 session_start();
-if (isset($_SESSION['loggedIn'])) {
-    $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+$url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
     $userID = $_SESSION['loggedIn'];
     ?>
 
@@ -85,5 +84,4 @@ if (isset($_SESSION['loggedIn'])) {
     </body>
     <!-- Footer -->
     <?php include("includes/footer.php"); ?>
-}
 </html>
