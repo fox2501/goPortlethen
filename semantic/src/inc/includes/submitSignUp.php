@@ -70,7 +70,7 @@ else{
         $hashpass = password_hash($password, PASSWORD_DEFAULT);
 
         $sql = "INSERT INTO users (userName, password, emailAddress, firstName, surname, approvalStatus, age, location, aboutUser, dateCreated) 
-        values('$username', '$hashpass', '$email', '$firstName', '$surname', '$approvalStatus', '$age', NULL, NULL, CURRENT_DATE)";
+        values('$username', '$hashpass', '$email', '$firstName', '$surname', '$approvalStatus', '$age', '', '', CURRENT_DATE)";
 
         $result = mysqli_query($db, $sql);
 
