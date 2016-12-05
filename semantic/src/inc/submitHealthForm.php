@@ -1,10 +1,10 @@
 <?php
 
-use Cloudinary\PreloadedFile;
 
 session_start();
 
 include("includes/dbconnect.php");
+include ("includes/header.php");
 $title = $_POST["title"];
 $mainText = $_POST["mainText"];
 $userID = $_SESSION["loggedIn"];
@@ -52,7 +52,7 @@ if(isset($_SESSION['loggedIn'])) {
     echo "exists";
 }
 
-$sql = "INSERT INTO healthcontent (title, mainText, userID, approvalStatus) VALUES ('$title', '$mainText', '$userID', '0')";
+$sql = "INSERT INTO healthcontent (title, mainText, userID, approvalStatus) VALUES ('$title', '$url', '$userID', '0')";
 
 if (mysqli_query($db, $sql)) {
 } else {
