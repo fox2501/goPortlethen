@@ -10,7 +10,7 @@ if(isset($_SESSION['loggedIn'])){
     $result = mysqli_query($db, $sql);
     $row = mysqli_fetch_assoc($result);
 
-    $sql = "SELECT accessLevel from useraccess where userName = '$row'";
+    $sql = "SELECT accessID from useraccess where userName = '$row'";
     $result = mysqli_query($db, $sql);
     $row = mysqli_fetch_assoc($result);
     if($row == 1 || $row == 4){
