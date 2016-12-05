@@ -27,7 +27,7 @@ session_start();
 
             <label>Date Posted</label>
             <div class="field">
-                <input type="date" name="datePosted" placeholder="<?php echo date("Y-m-d H:i:s")?>">
+                <input type="date" name="datePosted">
             </div>
 
             <label>Title</label>
