@@ -67,11 +67,14 @@ else{
             $requireApproval = "0";
             $userApproved = "1";
             $acccessLevel = "4";
-        } else if($accessRequested == "club"){
+        }
+        if($accessRequested == "club"){
             $acccessLevel = "2";
-        } else if($accessRequested == "map"){
+        }
+        if($accessRequested == "map"){
             $acccessLevel = "3";
-        } else if($accessRequested == "site"){
+        }
+        if($accessRequested == "site"){
             $acccessLevel = "1";
         }
 
@@ -79,7 +82,7 @@ else{
         values('$username', '$hashpass', '$email', '$firstName', '$surname', '$requireApproval', $userApproved, '$age', '', '', CURRENT_DATE)";
         $result = mysqli_query($db, $sql);
 
-        $sql = "INSERT INTO useraccess (accessID, userName) VALUES ('1', '$username')";
+        $sql = "INSERT INTO useraccess (accessID, userName) VALUES ('$accessLevel', '$username')";
         $result = mysqli_query($db, $sql);
 
         header("location: /semantic/");
