@@ -59,7 +59,7 @@ session_start();
                                     $title = $row['title'];
                                     $mainText = $row['mainText'];
                                     $userName = $row['userName'];
-                                    $date = $row['date'];
+                                    $date = date("l jS \of F Y h:i:s A");
                                     echo "<div>
                                         <div class=\"four wide column\">
                                             <h3 class=\"ui header\" id=\"title\">
