@@ -9,7 +9,7 @@ $username = $_POST["username"];
 $password = $_POST["password"];
 $passwordConfirm = $_POST["passwordConfirm"];
 $age = $_POST["age"];
-$requireApproval = $_POST["accessRequested"];
+$requireApproval = $_POST["requireApproval"];
 $userApproved = 0;
 
 if(empty($firstName)){
@@ -53,8 +53,10 @@ if(empty($requireApproval)){
     exit();
 }
 elseif($requireApproval = 0){
-$userApproved = 1;
+    $requireApproval = 0;
+    $userApproved = 1;
 } elseif($requireApproval > 0){
+    $requireApproval = 1;
     $userApproved = 0;
 }
 else{
