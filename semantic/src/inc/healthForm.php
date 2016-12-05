@@ -44,7 +44,7 @@ if(isset($_SESSION['loggedIn'])){
 
             <label>Date Posted</label>
             <div class="field">
-                <input type="date" name="datePosted" placeholder="Enter the date">
+                <input type="text" name="datePosted" placeholder="Enter the date">
             </div>
 
             <label>Title</label>
