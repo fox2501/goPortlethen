@@ -7,7 +7,7 @@ $clubDescription = $_POST["clubDescription"];
 $email = $_POST["email"];
 $contactNumber = $_POST["phoneNumber"];
 $calendarID = $_POST["calendarID"];
-$feePaid = $_POST["feePaid"];
+$feePaid = $_POST["isFee"];
 $feeCost = $_POST["feeAmount"]; 
 $clubCategory = $_POST["clubCategory"];
 
