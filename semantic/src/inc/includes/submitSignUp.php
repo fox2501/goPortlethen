@@ -9,6 +9,8 @@ $username = $_POST["username"];
 $password = $_POST["password"];
 $passwordConfirm = $_POST["passwordConfirm"];
 $age = $_POST["age"];
+$requireApproval = $_POST["requireApproval"];
+$userApproved = 0;
 
 if(empty($firstName)){
     header("Location: ../signUpForm.php?error=formError");
@@ -46,6 +48,13 @@ if(empty($age)){
     header("Location: ../signUpForm.php?error=formError");
     exit();
 }
+if($requireApproval < 1){
+    $requireApproval = 0;
+    $userApproved = 1;
+} elseif(($requireApproval > 0)){
+    $requireApproval = 1;
+    $userApproved = 0;
+}
 else{
     $sql = "SELECT username FROM users WHERE username = '$username'";
     $result = mysqli_query($db, $sql);
@@ -60,8 +69,8 @@ else{
     else {
         $hashpass = password_hash($password, PASSWORD_DEFAULT);
 
-        $sql = "INSERT INTO users (userName, password, emailAddress, firstName, surname, approvalStatus, age, dateCreated) 
-        values('$username', '$hashpass', '$email', '$firstName', '$surname', '0', '$age', CURRENT_TIMESTAMP)";
+        $sql = "INSERT INTO users (userName, password, emailAddress, firstName, surname, requireApproval, userApproved, age, location, aboutUser, dateCreated) 
+        values('$username', '$hashpass', '$email', '$firstName', '$surname', '$requireApproval', $userApproved, '$age', '', '', CURRENT_DATE)";
 
         $result = mysqli_query($db, $sql);
 

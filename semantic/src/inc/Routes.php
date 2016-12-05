@@ -38,13 +38,13 @@ session_start();
     <div class="four wide column"></div>
     <div class="eight wide column">
         <h3> Description</h3>
-        <p>The Thames Path is a long distance walking trail, following England's best known river for 184 miles (294
-            Km) as it meanders from its source in the Cotswolds through several rural counties and on into the heart
-            of London.
+        <p>The Portlethen Path is a long distance walking trail, following Scotland's best known river for 184 miles (294
+            Km) as it meanders from its source in the Aberdeenshire coast through several rural counties and on into the heart
+            of Dundee.
         </p>
         <p>
             On its way the Trail passes peaceful water meadows rich in wildlife, historic towns and
-            cities and many lovely villages, finishing at the Thames Barrier in Woolwich just a few miles from the
+            cities and many lovely villages, finishing at the edinburgh town just a few miles from the
             sea.</p>
     </div>
     <div class="four wide column">

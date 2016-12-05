@@ -133,6 +133,15 @@ session_start();
                 }
                 ?>
             </div>
+            <div class = "field">
+                <label>Access Requested</label>
+                <select class = "ui select dropdown" name = "requireApproval">
+                        <option value = "0" >Contributor</option>
+                        <option value = "1" >Club Admin</option>
+                        <option value = "2" >Map Admin</option>
+                        <option value = "3" >Site Admin</option>
+                </select>
+            </div>
             <button class="ui fluid large green submit button" type="submit">Create Account</button>
         </div>
     </form>

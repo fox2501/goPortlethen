@@ -28,16 +28,18 @@ session_start();
     <!-- Only visible to admin/contributor -->
     <!-- When ordinary user on site/not logged in, hide this div -->
     <div class="ui container">
-        <div class="ui grid">
+        <div class="ui two column grid">
             <div class="row">
                 <a href="healthForm.php"><button class="ui primary button" style="margin-right:50px">Submit Content</button></a>
                 <iframe style="margin-right:50px" src="https://calendar.google.com/calendar/embed?src=imdvs1dbg4fm5e9g35o2cj8i2g%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
-                <div style="width:236px;font-size:8px;text-align:right;"><script type="text/javascript">
-                        document.write(unescape("%3Cscript src='http://twitterforweb.com/twitterbox.js?username=kanyewest&settings=1,0,3,236,505,f4f4f4,0,c4c4c4,101010,1,1,336699' type='text/javascript'%3E%3C/script%3E"));</script></div>
-
+                <!--<div style="width:300px">
+                    <a class="twitter-timeline" tweetLimit="1" href="https://twitter.com/kanyewest">Tweets by kanyewest</a>
+                    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>-->
             </div>
         </div>
         <div class="ui divider"></div>
+
     </div>
 
     <div class=" ui container">
@@ -46,21 +48,6 @@ session_start();
                 <!-- Info section -->
                 <!-- Sections added as users add info through form -->
                 <div>
-                    <div class="inline fields">
-                        <label>Filter by content type: </label>
-                        <div class="ui selection dropdown">
-                            <input name="contentType" type="hidden">
-                            <i class="dropdown icon"></i>
-                            <div class="default text"></div>
-                            <div class="menu">
-                                <div class="item" data-value="0">Sport</div>
-                                <div class="item" data-value="1">Dance</div>
-                                <div class="item" data-value="2">Outdoors</div>
-                            </div>
-
-                        </div>
-                    </div>
-
                     <!-- Blank area to input info through form -->
                     <div class="ui grid">
                         <div class="row">
@@ -72,22 +59,20 @@ session_start();
                                     $title = $row['title'];
                                     $mainText = $row['mainText'];
                                     $userName = $row['userName'];
-                                    $date = $row['date'];
                                     echo "<div>
-
                                         <div class=\"four wide column\">
                                             <h3 class=\"ui header\" id=\"title\">
                                                 $title
                                             </h3>
                                             <img class=\"ui small image\" src=\"https://scontent.flhr4-1.fna.fbcdn.net/v/t1.0-9/13434842_1608517786105160_4523080997776743356_n.jpg?oh=4981b2761c2ef40c4989fc4b74bd440a&oe=58C6B38A\" id=\"image\"></img>
                                             <br>
-                                            <a href='healthFormEdit.php'><button class=\"mini ui button\" style=\"float:right; margin-left:20px\">Edit</button></a>
+                                            <a href=editHealthContent.php><button class=\"mini ui button\" style=\"float:right; margin-left:20px\">Edit</button></a>
                                             <p id=\"mainText\" style=\"text - align:justify\">
                                                 $mainText
                                             </p>
                                             <p id=\"author\">By $userName</p>
                                             <p id=\"date\">
-                                                $date;
+                                                <?php echo $currentDate;?>
                                             </p>
                                             <div class=\"ui divider\"></div>
                                         </div>
