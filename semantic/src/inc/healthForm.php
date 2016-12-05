@@ -25,6 +25,11 @@ session_start();
         <form name="healthForm" class="ui form" action="submitHealthForm.php" method="POST"
         onsubmit="return validateForm()">
 
+            <label>Date</label>
+            <div class="field">
+                <input type="date" name="date" placeholder="<?php echo date("l jS \of F Y h:i:s A");?>"
+            </div>
+
             <label>Title</label>
             <div class="field">
                 <input type="text" name="title" placeholder="Enter the title of your post">
