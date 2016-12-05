@@ -8,7 +8,6 @@ include("includes/dbconnect.php");
 $title = $_POST["title"];
 $mainText = $_POST["mainText"];
 $userID = $_SESSION["loggedIn"];
-$contentType = $_POST["contentType"];
 
 /*$imageID = new PreloadedFile($_POST['imageID']);
 if (!$imageID->is_valid()) {
@@ -21,8 +20,7 @@ if(isset($_SESSION['loggedIn'])) {
     echo "exists";
 }
 
-$sql = "INSERT INTO healthContent (contentType) VALUES ('Sport', 'Dance', 'Outdoors')";
-$sql = "INSERT INTO healthcontent (title, mainText, userID, contentType, approvalStatus) VALUES ('$title', '$mainText', '$userID', '$contentType', '0')";
+$sql = "INSERT INTO healthcontent (title, mainText, userID, approvalStatus) VALUES ('$title', '$mainText', '$userID', '0')";
 
 if (mysqli_query($db, $sql)) {
 } else {
