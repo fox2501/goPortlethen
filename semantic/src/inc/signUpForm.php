@@ -136,13 +136,10 @@ session_start();
             <div class = "field">
                 <label>Access Requested</label>
                 <select class = "ui search dropdown" name = "accessRequested">
-                    <input type = "hidden" name = "access">
-                    <i class = "dropdown icon"></i>
-                    <div class = "default text">Select access level</div>
-                        <option value="con">Contributor</option>
-                        <option class = "item" data-value="clubAdmin">Club Admin</option>
-                        <option class = "item" data-value="mapAdmin">Map Admin</option>
-                        <option class = "item" data-value="siteAdmin">Site Admin</option>
+                        <option value="">Contributor</option>
+                        <option class = "">Club Admin</option>
+                        <option class = "">Map Admin</option>
+                        <option class = "">Site Admin</option>
                 </select>
             </div>
             <button class="ui fluid large green submit button" type="submit">Create Account</button>
