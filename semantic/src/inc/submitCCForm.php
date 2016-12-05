@@ -12,8 +12,8 @@ $calendarID = $_POST["calendarID"];
 $feePaid = $_POST["isFee"];
 $feeCost = $_POST["feeAmount"];
 $clubCategory = $_POST["clubCategory"];
-$sql = "INSERT INTO club (clubName, clubDescription, email, contactNumber, calendarID, feePaid, feeCost, clubCategory) 
-VALUES ('$clubName', '$clubDescription', '$email', '$contactNumber', '11', '0', '0.0', '$clubCategory')";
+$sql = "INSERT INTO club (clubName, clubDescription, email, contactNumber, calendarID, feePaid, feeCost, url, clubCategory) 
+VALUES ('$clubName', '$clubDescription', '$email', '$contactNumber', '11', '0', '0.0', 'testurl','$clubCategory')";
 $result = mysqli_query($db, $sql);
 
 //test
