@@ -12,16 +12,22 @@ $clubCategory = $_POST["clubCategory"];
 $clubDescription = $_POST["clubDescription"];
  
 $phoneNumber = $_POST["phoneNumber"];
+
+$contactNumber = $_POST["contactNumber"];
+
+$calendarID = $_POST["calendarID"];
  
-$isFee = $_POST["isFee"];
+$feePaid = $_POST["feePaid"];
  
-$feeAmount = $_POST["feeAmount"];
+$feeCost = $_POST["feeCost"];
+
+$url = $_POST[""];
  
 $userID = $_SESSION['loggedIn'];
   /*$imageID = new PreloadedFile($_POST['imageID']); if (!$imageID->is_valid()) {    echo "Invalid upload signature"; } else {    $photo->image_identifier = $imageID->identifier(); }*/
   
-$sql = "INSERT INTO club (clubName, email, clubCategory, clubDescription, contactNumber, feePaid, feeCost) 
-    VALUES ('$clubName', '$email', '$clubCategory', '$clubDescription', '$phoneNumber', '$isFee', '$feeAmount', '$userID')";
+$sql = "INSERT INTO club (clubName, clubDescription, email, contactNumber, calendarID, feePaid, feeCost, url, clubCategory) 
+    VALUES ('$clubName', '$clubDescription', '$email', '$contactNumber', '$calendarID', '$feePaid', '$feeCost', '$url', '$clubCategory')";
   
 $result = mysqli_query($db, $sql);
    
