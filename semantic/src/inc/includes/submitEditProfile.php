@@ -17,7 +17,7 @@ SET firstName = '$firstName',
 surname = '$surname', 
 age = $age, 
 location = '$location', 
-aboutUser = '$aboutUser'
+aboutUser = "$aboutUser"
 WHERE userID = $userID;
 ";
 $result = mysqli_query($db, $sql);
