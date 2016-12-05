@@ -7,13 +7,13 @@ include("includes/dbconnect.php");
 $title = $_POST["title"];
 $mainText = $_POST["mainText"];
 $userID = $_SESSION["loggedIn"];
-$date = $_POST["date"];
+$datePosted = $_POST["datePosted"];
 
 if(isset($_SESSION['loggedIn'])) {
     echo "exists";
 }
 
-$sql = "INSERT INTO healthcontent (title, mainText, userID, approvalStatus, date) VALUES ('$title', '$url', '$userID', '0', '$date')";
+$sql = "INSERT INTO healthcontent (title, mainText, userID, approvalStatus, datePosted) VALUES ('$title', '$url', '$userID', '0', '$datePosted')";
 
 if (mysqli_query($db, $sql)) {
 } else {

@@ -25,9 +25,9 @@ session_start();
         <form name="healthForm" class="ui form" action="submitHealthForm.php" method="POST"
         onsubmit="return validateForm()">
 
-            <label>Date</label>
+            <label>Date Posted</label>
             <div class="field">
-                <input type="date" name="date" placeholder="<?php echo date("Y-m-d H:i:s")?>">
+                <input type="date" name="datePosted" placeholder="<?php echo date("Y-m-d H:i:s")?>">
             </div>
 
             <label>Title</label>
