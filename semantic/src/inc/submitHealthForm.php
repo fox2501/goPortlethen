@@ -7,7 +7,6 @@ include("includes/dbconnect.php");
 $title = $_POST["title"];
 $mainText = $_POST["mainText"];
 $userID = $_SESSION["loggedIn"];
-$datePosted = $_POST["datePosted"];
 
 $img=$_FILES['img'];
 if(isset($_POST['submit'])){
@@ -45,7 +44,7 @@ if(isset($_POST['submit'])){
 if(isset($_SESSION['loggedIn'])) {
     echo "exists";
 }
-$sql = "INSERT INTO healthcontent (title, mainText, userID, approvalStatus, datePosted) VALUES ('$title', '$mainText', '$userID', '0', '$datePosted')";
+$sql = "INSERT INTO healthcontent (title, mainText, userID, approvalStatus) VALUES ('$title', '$mainText', '$userID', '0')";
 
 
 
