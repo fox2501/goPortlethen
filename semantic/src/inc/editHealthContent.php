@@ -47,7 +47,7 @@ if(isset($_SESSION['loggedIn'])){
                 <input type = "text" name = "datePosted" value =
                 "<?php
                 $userID = $_SESSION['loggedIn'];
-                $sql = "SELECT * FROM healthContent, users WHERE userID = '$userID'";
+                $sql = "SELECT * FROM healthContent WHERE datePosted = '$datePosted'";
                 $result = mysqli_query($db, $sql);
                 while($row = mysqli_fetch_array($result)) {
                     $datePosted = $row['datePosted'];
