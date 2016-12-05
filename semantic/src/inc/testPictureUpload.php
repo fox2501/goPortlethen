@@ -30,4 +30,10 @@ if(isset($_POST['submit'])){
             echo $pms['data']['error'];
         }
     }
+    $sql1 = "INSERT INTO photos (caption,url,clubID,locationID,healthContentID,routeID) VALUES ('test',$url,'1','1','1','1')";
+
+    if (mysqli_query($db, $sql1)) {
+    } else {
+        echo "Error: " . $sql1 . "<br>" . mysqli_error($db);
+    }
 }
