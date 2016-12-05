@@ -70,7 +70,7 @@ if(isset($_SESSION['loggedIn'])) {
                     $mainText = $row['mainText'];
                 }
                 echo $mainText;
-                ?>">
+                ?>"
                 </textarea>
             </div>
 
