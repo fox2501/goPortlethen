@@ -114,7 +114,7 @@ if(isset($_SESSION['loggedIn'])){
                                     <p id=\"mainText\"style=\"text - align:justify\">$mainText
                                         <br>
                                     </p>
-                                    <p id=\"author\">By $userName
+                                    <p id=\"author\">By $userName;
                                         <br>
                                     </p>
                                     
