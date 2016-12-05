@@ -44,7 +44,7 @@ if(isset($_SESSION['loggedIn'])){
 
             <label>Date Posted</label>
             <div class="field">
-                <input type = "text" name = "datePosted" value =
+                <input type="text" name="datePosted" value =
                 "<?php
                 $userID = $_SESSION['loggedIn'];
                 $sql = "SELECT * FROM healthContent WHERE datePosted = '$datePosted'";

@@ -42,10 +42,7 @@ if(isset($_SESSION['loggedIn'])){
     <div class="ui container">
         <form name="healthForm" class="ui form" action="submitHealthForm.php" method="POST" onsubmit="return validateForm()">
 
-            <label>Date Posted</label>
-            <div class="field">
-                <input type="text" name="datePosted" placeholder="Enter the date">
-            </div>
+
 
             <label>Title</label>
             <div class="field">
