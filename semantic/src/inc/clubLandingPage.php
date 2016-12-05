@@ -12,7 +12,7 @@ if(isset($_SESSION['loggedIn'])) {
     $result = mysqli_query($db, $sql);
     $row = mysqli_fetch_assoc($result);
     $accessID = $row["accessID"];
-    if ($accessID == '1' || $accessID == '4') {
+    if ($accessID == '1' || $accessID == '2') {
         $canAccess = '1';
     } else {
         $canAccess = '0';
