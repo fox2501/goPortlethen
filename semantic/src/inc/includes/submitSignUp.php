@@ -12,7 +12,7 @@ $age = $_POST["age"];
 $accessRequested = $_POST["accessRequested"];
 $requireApproval = "1";
 $userApproved = "0";
-$acccessLevel = "0";
+$accessLevel = "0";
 
 if(empty($firstName)){
     header("Location: ../signUpForm.php?error=formError");
@@ -66,16 +66,16 @@ else{
         if($accessRequested == "contributor"){
             $requireApproval = "0";
             $userApproved = "1";
-            $acccessLevel = "4";
+            $accessLevel = "4";
         }
         if($accessRequested == "club"){
-            $acccessLevel = "2";
+            $accessLevel = "2";
         }
         if($accessRequested == "map"){
-            $acccessLevel = "3";
+            $accessLevel = "3";
         }
         if($accessRequested == "site"){
-            $acccessLevel = "1";
+            $accessLevel = "1";
         }
 
         $sql = "INSERT INTO users (userName, password, emailAddress, firstName, surname, requireApproval, userApproved, age, location, aboutUser, dateCreated) 

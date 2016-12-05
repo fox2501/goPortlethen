@@ -51,7 +51,7 @@ session_start();
                     <!-- Blank area to input info through form -->
                     <div class="ui grid">
                         <div class="row">
-                            <ul>
+                            <ol reversed>
                                 <?php
                                 $sql_query = "SELECT * FROM healthContent, users WHERE healthContent.userID=users.userID";
                                 $result = $db->query($sql_query);
@@ -59,8 +59,8 @@ session_start();
                                     $title = $row['title'];
                                     $mainText = $row['mainText'];
                                     $userName = $row['userName'];
-                                    $date = $row['date'];
-                                    echo "<div>
+                                    $datePosted = $row['datePosted'];
+                                    echo "<li><div>
                                         <div class=\"four wide column\">
                                             <h3 class=\"ui header\" id=\"title\">
                                                 $title
@@ -68,18 +68,14 @@ session_start();
                                             <img class=\"ui small image\" src=\"https://scontent.flhr4-1.fna.fbcdn.net/v/t1.0-9/13434842_1608517786105160_4523080997776743356_n.jpg?oh=4981b2761c2ef40c4989fc4b74bd440a&oe=58C6B38A\" id=\"image\"></img>
                                             <br>
                                             <a href=editHealthContent.php><button class=\"mini ui button\" style=\"float:right; margin-left:20px\">Edit</button></a>
-                                            <p id=\"mainText\" style=\"text - align:justify\">
-                                                $mainText
-                                            </p>
-                                            <p id=\"author\">By $userName</p>
-                                            <p id=\"date\">
-                                                $date
-                                            </p>
+                                            <p id=\"mainText\" style=\"text - align:justify\">$mainText<br></p>
+                                            <p id=\"author\">By $userName<br></p>
+                                            <p id=\"datePosted\">$datePosted<br></p>
                                             <div class=\"ui divider\"></div>
                                         </div>
-                                    </div>";}
+                                    </div></li>";}
                                 ?>
-                            </ul>
+                            </ol>
                         </div>
                     </div>
                 </div>
@@ -93,6 +89,4 @@ session_start();
 
 <!-- Footer -->
 <?php include("includes/footer.php"); ?>
-
-
 </html>
