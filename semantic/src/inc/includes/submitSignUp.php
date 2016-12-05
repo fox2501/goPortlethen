@@ -67,11 +67,14 @@ else{
             $requireApproval = "0";
             $userApproved = "1";
             $acccessLevel = "4";
-        } else if($accessRequested == "club"){
+        }
+        if($accessRequested == "club"){
             $acccessLevel = "2";
-        } else if($accessRequested == "map"){
+        }
+        if($accessRequested == "map"){
             $acccessLevel = "3";
-        } else if($accessRequested == "site"){
+        }
+        if($accessRequested == "site"){
             $acccessLevel = "1";
         }
 
