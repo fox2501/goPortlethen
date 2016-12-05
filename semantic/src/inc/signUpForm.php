@@ -135,7 +135,7 @@ session_start();
             </div>
             <div class = "field">
                 <label>Access Requested</label>
-                <select class = "ui search dropdown" name = "accessRequested">
+                <select class = "ui dropdown" name = "accessRequested">
                         <option value = "">Select access</option>
                         <option value = "0" name = "contributor">Contributor</option>
                         <option value = "1" name = "clubAdmin">Club Admin</option>

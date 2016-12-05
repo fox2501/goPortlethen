@@ -50,6 +50,10 @@ if(empty($age)){
 if(empty($approvalStatus)){
     header("Location: ../signUpForm.php?error=formError");
     exit();
+} elseif($approvalStatus == 'Contributor'){
+    $approvalStatus = 0;
+} elseif($approvalStatus == 'Club Admin' || $approvalStatus == 'Site Admin' || $approvalStatus == 'Map Admin'){
+    $approvalStatus = 1;
 }
 else{
     $sql = "SELECT username FROM users WHERE username = '$username'";
