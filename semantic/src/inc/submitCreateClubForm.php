@@ -20,8 +20,15 @@ if (!$imageID->is_valid()) {
    $photo->image_identifier = $imageID->identifier();
 }*/
 
-$sql = "INSERT INTO club (clubName, email, clubCategory, clubDescription, contactNumber, feePaid, feeCost)
-    VALUES ('$clubName', '$email', '$clubCategory', '$clubDescription', '$phoneNumber', '$isFee', '$feeAmount', '$userID')";
+$sql = "UPDATE club 
+SET clubName = '$clubName',
+email = '$email',
+clubCategory = '$clubCategory',
+clubDescription = '$clubDescription',
+phoneNumber = '$phoneNumber',
+isFee = '$isFee',
+feeAmount = '$feeAmount'
+WHERE userID = $userID;
 
 $result = mysqli_query($db, $sql);
 
