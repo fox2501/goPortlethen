@@ -1,6 +1,5 @@
 <?php
 
-use Cloudinary\PreloadedFile;
 
 session_start();
 
@@ -17,7 +16,7 @@ if (!$imageID->is_valid()) {
 }*/
 
 $img=$_FILES['img'];
-if(isset($_POST['submit'])){
+if(isset($_POST['SUBMIT'])){
     if($img['name']==''){
         echo "<h2>An Image Please.</h2>";
     }else{
@@ -52,7 +51,7 @@ if(isset($_SESSION['loggedIn'])) {
     echo "exists";
 }
 
-$sql = "INSERT INTO healthcontent (title, mainText, userID, approvalStatus) VALUES ('$title', '$mainText', '$userID', '0')";
+$sql = "INSERT INTO healthcontent (title, mainText, userID, approvalStatus) VALUES ('$title', '$url', '$userID', '0')";
 
 if (mysqli_query($db, $sql)) {
 } else {
