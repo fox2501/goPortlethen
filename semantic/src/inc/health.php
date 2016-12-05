@@ -48,7 +48,7 @@ if(isset($_SESSION['loggedIn'])){
     <div class="ui two column grid">
         <div class="ten wide column">
             <?php
-            if($canAccess > 0){
+            if($canAccess == "1"){
                 echo "<div class='row'>
                 <a href='healthForm.php'>
                     <button class='ui primary button' style='margin-right:50px'>Submit Content</button>
