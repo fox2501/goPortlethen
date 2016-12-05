@@ -22,8 +22,7 @@ session_start();
 
     <!-- Form -->
     <div class="ui container">
-        <form name="healthForm" class="ui form" action="submitHealthForm.php" method="POST"
-        onsubmit="return validateForm()">
+        <form name="healthForm" class="ui form" action="submitHealthForm.php" method="POST" onsubmit="return validateForm()">
 
             <label>Date Posted</label>
             <div class="field">
