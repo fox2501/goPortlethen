@@ -70,17 +70,6 @@ if (isset($_SESSION['loggedIn'])) {
                                     ?>
                                 </span>
                             </div>
-                            <div class="description">
-                                <?php
-                                $userID = $_SESSION['loggedIn'];
-                                $sql = "SELECT aboutUser FROM users WHERE userID = '$userID'";
-                                $result = mysqli_query($db, $sql);
-                                while($row = mysqli_fetch_array($result)) {
-                                    $aboutUser = $row['aboutUser'];
-                                }
-                                echo $aboutUser;
-                                ?>
-                            </div>
                         </div>
                     </div>
                 </div>
