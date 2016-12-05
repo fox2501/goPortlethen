@@ -27,8 +27,7 @@ session_start();
 
             <label>Date</label>
             <div class="field">
-                <input type="date" name="date" placeholder="<?php echo DATETIME();?>"
-                value="<?php DATETIME();?>">
+                <input type="date" name="date" placeholder="<?php echo DATETIME()?>">
             </div>
 
             <label>Title</label>
