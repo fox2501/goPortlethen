@@ -36,7 +36,7 @@ if (isset($_SESSION['loggedIn'])) {
                 </form>
             </div>
         </div>
-        <div class="ui two column grid">
+        <div class="ui grid">
             <div class="row">
                 <div class="column">
                     <div class="ui one column grid">
