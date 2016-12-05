@@ -9,7 +9,8 @@ $username = $_POST["username"];
 $password = $_POST["password"];
 $passwordConfirm = $_POST["passwordConfirm"];
 $age = $_POST["age"];
-$approvalStatus = $_POST["accessRequested"];
+$requireApproval = $_POST["accessRequested"];
+$userApproved;
 
 if(empty($firstName)){
     header("Location: ../signUpForm.php?error=formError");
@@ -47,13 +48,15 @@ if(empty($age)){
     header("Location: ../signUpForm.php?error=formError");
     exit();
 }
-if(empty($approvalStatus)){
+if(empty($requireApproval)){
     header("Location: ../signUpForm.php?error=formError");
     exit();
-} elseif($approvalStatus == 'Contributor'){
-    $approvalStatus = 0;
-} elseif($approvalStatus == 'Club Admin' || $approvalStatus == 'Site Admin' || $approvalStatus == 'Map Admin'){
-    $approvalStatus = 1;
+} elseif($requireApproval == 'Contributor'){
+    $requireApproval = 0;
+    $userApproved = 1;
+} elseif($requireApproval == 'Club Admin' || $requireApproval == 'Site Admin' || $requireApproval == 'Map Admin'){
+    $requireApproval = 1;
+    $userApproved = 0;
 }
 else{
     $sql = "SELECT username FROM users WHERE username = '$username'";
@@ -69,8 +72,8 @@ else{
     else {
         $hashpass = password_hash($password, PASSWORD_DEFAULT);
 
-        $sql = "INSERT INTO users (userName, password, emailAddress, firstName, surname, approvalStatus, age, location, aboutUser, dateCreated) 
-        values('$username', '$hashpass', '$email', '$firstName', '$surname', '$approvalStatus', '$age', '', '', CURRENT_DATE)";
+        $sql = "INSERT INTO users (userName, password, emailAddress, firstName, surname, requireApproval, userApproved, age, location, aboutUser, dateCreated) 
+        values('$username', '$hashpass', '$email', '$firstName', '$surname', '$requireApproval', $userApproved, '$age', '', '', CURRENT_DATE)";
 
         $result = mysqli_query($db, $sql);
 
