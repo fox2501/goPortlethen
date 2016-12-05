@@ -38,7 +38,14 @@
             <!-- Blank area to input info through form -->
             <div class="row">
                 <ul>
-                    <?php $sql_query="SELECT * FROM healthContent, users WHERE healthContent.userID=users.userID" ; $result=$ db->query($sql_query); while($row = $result-> fetch_array()) { $title = $row['title']; $mainText = $row['mainText']; $userName = $row['userName']; $datePosted = $row['datePosted']; echo "
+                    <?php $sql_query="SELECT * FROM healthContent, users WHERE healthContent.userID=users.userID";
+                    $result=$db->query($sql_query);
+                    while($row = $result-> fetch_array()){
+                        $title = $row['title'];
+                        $mainText = $row['mainText'];
+                        $userName = $row['userName'];
+                        $datePosted = $row['datePosted'];
+                        echo "
                             <div>
                                 <div class=\"four wide column\">
                                     <h3 class=\"ui header\" id=\"title\">
