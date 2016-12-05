@@ -43,13 +43,10 @@ session_start();
             <label>Main Image</label>
             <div class="field">
                 <div class="ui fluid action input">
-                    Choose Image : <input name="img" size="35" type="file"/><br/>
+                    <input name="img" size="35" type="file"/><br/>
                 </div>
             </div>
 
-
-            <br>
-            <br>
             <button id="submitButton" class="ui primary button" input type="submit" value="SUBMIT">Submit Content</button>
         </form>
     </div>
