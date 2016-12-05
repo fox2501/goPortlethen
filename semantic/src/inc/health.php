@@ -22,35 +22,19 @@ session_start();
         <p>Keeping Portlethen Healthy</p>
     </div>
 
-
     <!-- Submit content button -->
     <!-- Takes user to SubmitHealth.php -->
     <!-- Only visible to admin/contributor -->
     <!-- When ordinary user on site/not logged in, hide this div -->
     <div class="ui container">
         <div class="ui two column grid">
+            <div class = "column">
             <div class="row">
                 <a href="healthForm.php"><button class="ui primary button" style="margin-right:50px">Submit Content</button></a>
-                <iframe style="margin-right:50px" src="https://calendar.google.com/calendar/embed?src=imdvs1dbg4fm5e9g35o2cj8i2g%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
-                <div style="height:300px">
-                    <a class="twitter-timeline" data-height="300" href="https://twitter.com/kanyewest">Tweets by kanyewest</a>
-                    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </div>
             </div>
-
-        </div>
-        <div class="ui divider"></div>
-
-    </div>
-
-    <div class=" ui container">
-        <div class="ui grid">
-            <div class="row">
                 <!-- Info section -->
                 <!-- Sections added as users add info through form -->
-                <div>
                     <!-- Blank area to input info through form -->
-                    <div class="ui grid">
                         <div class="row">
                             <ul>
                                 <?php
@@ -82,10 +66,14 @@ session_start();
                         </div>
                     </div>
                 </div>
+        <div class = "column">
+            <iframe style="margin-right:50px" src="https://calendar.google.com/calendar/embed?src=imdvs1dbg4fm5e9g35o2cj8i2g%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
+            <div style="height:300px">
+                <a class="twitter-timeline" data-height="300" href="https://twitter.com/kanyewest">Tweets by kanyewest</a>
+                <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
         </div>
-    </div>
-</div>
+            </div>
 
 </body>
 
