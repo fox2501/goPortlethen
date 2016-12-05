@@ -100,7 +100,7 @@ if(isset($_SESSION['loggedIn'])) {
         </div>
     </div>
     <div class = 'ui ten wide column'>
-        <div class='middle aligned content''>
+        <div class='content''>
             <div class='header'>
                         $title
             </div>
