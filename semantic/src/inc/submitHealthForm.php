@@ -1,6 +1,5 @@
 <?php
 
-use Cloudinary\PreloadedFile;
 
 session_start();
 
@@ -20,7 +19,7 @@ if (!$imageID->is_valid()) {
 if(isset($_SESSION['loggedIn'])) {
     echo "exists";
 }
-$sql = "INSERT INTO healthcontent (title, mainText, userID, approvalStatus, datePosted) VALUES ('$title', '$mainText', '$userID', '1', '$datePosted')";
+$sql = "INSERT INTO healthcontent (title, mainText, userID, approvalStatus, datePosted) VALUES ('$title', '$mainText', '$userID', '0', '$datePosted')";
 
 if (mysqli_query($db, $sql)) {
 } else {
