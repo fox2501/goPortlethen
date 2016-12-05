@@ -51,7 +51,7 @@ session_start();
                     <!-- Blank area to input info through form -->
                     <div class="ui grid">
                         <div class="row">
-                            <ol reversed>
+                            <ul>
                                 <?php
                                 $sql_query = "SELECT * FROM healthContent, users WHERE healthContent.userID=users.userID";
                                 $result = $db->query($sql_query);
@@ -60,7 +60,7 @@ session_start();
                                     $mainText = $row['mainText'];
                                     $userName = $row['userName'];
                                     $datePosted = $row['datePosted'];
-                                    echo "<li><div>
+                                    echo "<div>
                                         <div class=\"four wide column\">
                                             <h3 class=\"ui header\" id=\"title\">
                                                 $title
@@ -73,9 +73,10 @@ session_start();
                                             <p id=\"datePosted\">$datePosted<br></p>
                                             <div class=\"ui divider\"></div>
                                         </div>
-                                    </div></li>";}
+                                   
+                                    </div>";}
                                 ?>
-                            </ol>
+                            </ul>
                         </div>
                     </div>
                 </div>
