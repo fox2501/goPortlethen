@@ -43,7 +43,7 @@ if(isset($_SESSION['loggedIn'])){
 
             <label>Date Posted</label>
             <div class="field">
-                <input type="date" name="datePosted" placeholder="Enter today's date">
+                <input type="date" name="datePosted" placeholder="Enter the date">
             </div>
 
             <label>Title</label>
