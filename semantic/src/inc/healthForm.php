@@ -29,7 +29,7 @@ session_start();
                 <input type="date" name="datePosted" placeholder="Enter the date">
             </div>
 
-            <label>Title</label>
+            <label>Titl11111111111111e</label>
             <div class="field">
                 <input type="text" name="title" placeholder="Enter the title of your post">
             </div>
