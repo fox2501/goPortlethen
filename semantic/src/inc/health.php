@@ -44,7 +44,6 @@ session_start();
                                     $title = $row['title'];
                                     $mainText = $row['mainText'];
                                     $userName = $row['userName'];
-                                    
                                     $datePosted = $row['datePosted'];
                                     echo "<div>
                                         <div class=\"four wide column\">
