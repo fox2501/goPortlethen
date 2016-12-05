@@ -1,5 +1,6 @@
 <?php
 session_start();
+include("includes/dbconnect.php");
 if(isset($_SESSION['loggedIn'])) {
     $userID = $_SESSION['loggedIn'];
     $canAccess = '0';

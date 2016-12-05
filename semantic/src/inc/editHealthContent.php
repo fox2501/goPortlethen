@@ -66,7 +66,7 @@ $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
                 $mainText = $row['mainText'];
                 }
                 echo $mainText;
-                ?>">></textarea>
+                ?>"></textarea>
             </div>
 
             <label>Main Image</label>
