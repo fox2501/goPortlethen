@@ -9,8 +9,6 @@ $mainText = $_POST["mainText"];
 $userID = $_SESSION["loggedIn"];
 $date = $_POST["date"];
 
-
-
 if(isset($_SESSION['loggedIn'])) {
     echo "exists";
 }
