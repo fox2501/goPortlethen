@@ -31,8 +31,8 @@ if(isset($_POST['submit'])){
         }
     }
     $sql1 = "INSERT INTO photos (caption,url,clubID,locationID,healthContentID,routeID) VALUES ('test','$url','1','1','1','1')";
-
-    if (mysqli_query($db, $sql1)) {
+    $result = mysqli_query($db, $sql1);
+    if ($row = $mysqli_fetch_assoc($result)) {
     } else {
         echo "Error: " . $sql1 . "<br>" . mysqli_error($db);
     }
