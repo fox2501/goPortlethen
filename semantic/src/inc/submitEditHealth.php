@@ -14,7 +14,7 @@ WHERE userID = '$userID';
 ";
 $result = mysqli_query($db, $sql);
 
-header("location: ../health.php");
+header("location:health.php");
 ?>
 
 
