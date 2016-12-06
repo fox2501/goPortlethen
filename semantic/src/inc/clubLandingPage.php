@@ -109,7 +109,7 @@ if(isset($_SESSION['loggedIn'])) {
             </div>
             <div class='extra'>
                    <div class='ui right floated button'>
-                      <a href='/semantic/src/inc/clubPage.php'>For more info click here!</a>
+                      <a href='/semantic/src/inc/clubPage.php?club=$clubID'>For more info click here!</a>
                    </div>
             </div>
      </div>
@@ -123,5 +123,5 @@ if(isset($_SESSION['loggedIn'])) {
     <div class="ui hidden divider"></div>
 </div>
 </body>
-<?php include("includes /footer.php"); ?>
 </html>
+<?php include("includes /footer.php"); ?>
