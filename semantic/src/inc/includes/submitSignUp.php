@@ -62,7 +62,7 @@ else{
         exit();
     }
     else {
-        $hashpass = password_hash($password, PASSWORD_DEFAULT);
+        $hashpass = password_hash($password);
         if($accessRequested == "contributor"){
             $requireApproval = "0";
             $userApproved = "1";
