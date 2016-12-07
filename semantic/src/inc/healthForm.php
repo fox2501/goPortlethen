@@ -57,7 +57,7 @@ if(isset($_SESSION['loggedIn'])){
             <label>Main Image</label>
             <div class="field">
                 <div class="ui fluid action input">
-                    Choose Image : <input name="img" size="35" type="file"/><br/>
+                    <input name="img" size="35" type="file"/>
                 </div>
             </div>
 
@@ -85,7 +85,7 @@ if(isset($_SESSION['loggedIn'])){
          }
     </script>
 </body>
-<!-- Footer -->
+<!-- Footerccc -->
 <?php include("includes/footer.php"); ?>
 
 </html>
