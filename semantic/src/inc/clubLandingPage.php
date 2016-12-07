@@ -128,6 +128,5 @@ if(isset($_SESSION['loggedIn'])) {
     </div>
     <div class="ui hidden divider"></div>
 </div>
-</div>
 <?php include("/src/inc/includes/footer.php"); ?>
 </html>
