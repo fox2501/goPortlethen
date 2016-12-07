@@ -40,7 +40,7 @@ if (isset($_SESSION['loggedIn'])) {
 
     <!-- Form -->
     <div class="ui container">
-        <form name="healthForm" class="ui form" action="submitHealthForm.php" method="POST"
+        <form class="ui form" action="submitHealthForm.php" enctype="multipart/form-data" method="POST"
               onsubmit="return validateForm()">
 
 
