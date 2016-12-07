@@ -13,6 +13,7 @@ if(isset($_SESSION['loggedIn'])){
             while ($row = mysqli_fetch_assoc($result)) {
                 $title = $row['title'];
                 $mainText = $row['mainText'];
+                $healthContentID = $row['healthContentID'];
             }
 ?>
 <!DOCTYPE html>
@@ -44,7 +45,7 @@ if(isset($_SESSION['loggedIn'])){
             <textarea rows = 8 type = "text" name = "editMainText"><?php echo $mainText; ?></textarea>
         </div>
         <input type = "hidden" name = "editContent" value = <?php $healthContentID ?>>
-        <button class="ui fluid large green submit button" type="submit" onclick = "submitEditHealth.php">Submit</button>
+        <button class="ui fluid large green submit button" type="submit">Submit</button>
     </form>
 </div>
 
