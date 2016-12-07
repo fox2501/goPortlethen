@@ -53,7 +53,7 @@ if(isset($_SESSION['loggedIn'])){
             if($canAccess == '1'){
                 echo "<div class='row'>
                 <a href='healthForm.php'>
-                    <button class='ui submit button' style='margin-right:50px'>Submit Content</button>
+                    <button class='ui green submit button' style='margin-right:50px'>Submit Content</button>
                 </a>
             </div>";
             }
@@ -78,6 +78,7 @@ if(isset($_SESSION['loggedIn'])){
                                     <div class = 'ui raised segment'>
                                         <h3 class='ui header' id='title'>
                                                 $title
+                                                $healthContentID
                                     </h3>
                                     <p id='datePosted'>$datePosted
                                         <br>

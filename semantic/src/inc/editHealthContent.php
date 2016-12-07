@@ -19,6 +19,8 @@ if(isset($_SESSION['loggedIn'])) {
         $canAccess = '0';
     }
 }
+$healthContentID = $_POST['editHealth'];
+echo $healthContentID;
     ?>
 
     <!DOCTYPE html>
