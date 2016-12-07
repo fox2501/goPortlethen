@@ -44,7 +44,10 @@ if(isset($_SESSION['loggedIn'])){
             <label>Edit Main Text</label>
             <textarea rows = 8 type = "text" name = "editMainText"><?php echo $mainText; ?></textarea>
         </div>
-        <input type = "hidden" name = "healthContentToEdit" value = "1171">
+        <div class = "field">
+            <input type = "hidden" name = "healthContentToEdit" value =
+            "<?php echo $healthContentId ?>">
+        </div>
         <button class="ui fluid large green submit button" type="submit">Submit</button>
     </form>
 </div>
