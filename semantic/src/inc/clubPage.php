@@ -15,9 +15,9 @@ while ($row = $result->fetch_array()) {
      <meta charset="UTF-8">
      <title>Club Page</title>
 </head>
-<? include("includes/header.php"); ?>
 <?php
-echo ""?>
+include("includes/header.php");
+echo "
 <body>
 <div class='ui container'>
     <div class = 'ui grid'>
