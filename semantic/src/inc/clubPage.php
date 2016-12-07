@@ -17,16 +17,16 @@ while ($row = $result->fetch_array()) {
 </head>
 <? include("includes/header.php"); ?>
 <?php
-    echo "";?>
+echo ""?>
 <body>
 <div class='ui container'>
-    <div class = "ui grid">
-        <div class = "eight wide column">
-            <header class = "ui blue huge header">$clubName Club Profile Page</header>
+    <div class = 'ui grid'>
+        <div class = 'eight wide column'>
+            <header class = 'ui blue huge header'>$clubName Club Profile Page</header>
         </div>
-        <div class = "eight wide column">
-            <button class = "ui right floated button">
-                <i class = "ui settings icon"></i>
+        <div class = 'eight wide column'>
+            <button class = 'ui right floated button'>
+                <i class = 'ui settings icon'</i>
                     Edit Profile Page
             </button>
         </div>
