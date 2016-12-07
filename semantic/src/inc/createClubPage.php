@@ -184,5 +184,6 @@ if(isset($_SESSION['loggedIn'])) {
     <?php include("includes/footer.php"); ?>
     </html>
     <?php
+    //t
 }
 ?>
