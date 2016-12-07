@@ -17,7 +17,7 @@ while ($row = $result->fetch_array()) {
 </head>
 <? include("includes/header.php"); ?>
 <?php
-    echo "";?>
+    echo "
 <body>
 <div class='ui container'>
     <h2 class='ui blue header'>
@@ -43,7 +43,7 @@ while ($row = $result->fetch_array()) {
                     </div>
                 </div>
             </div>
-            <div class = 'ten wide column'>
+            <div class = 'twelve wide column'>
             <div class='ui segment '>
                 <h5 class='ui top attached header '>
                     Club Category:
