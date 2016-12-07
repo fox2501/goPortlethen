@@ -5,7 +5,7 @@ if(isset($_SESSION['loggedIn'])){
     $userID = $_SESSION['loggedIn'];
     $sql = "SELECT healthContentID from healthContent where userID = $userID";
     $result = mysqli_query($db, $sql);
-    while($row = mysqli_fetch_assoc($result)){
+    $row = mysqli_fetch_assoc($result);
         if($row['healthContentID'] == $_POST['editHealth']) {
             $healthContentID = $_POST['editHealth'];
             $sql = "SELECT * from healthContent WHERE healthContentID = $healthContentID";
@@ -66,10 +66,9 @@ if(isset($_SESSION['loggedIn'])){
 </html>
 <!-- Footer -->
 <?php
-            include("includes/footer.php");
+include("includes/footer.php");
         } else{
             echo "You do not have permission.";
         }
-    }
 };
 ?>
