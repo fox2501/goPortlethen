@@ -85,12 +85,15 @@ AND A.healthContentID = C.healthContentID";
                             echo "
                                 <div class='four wide column'>
                                     <div class = 'ui raised segment'>
+                                    <div class = 'ui grid'>
                                     <form class = 'ui form' method = 'POST' action = 'editHealthContent.php'>
                                         <button class = 'ui right floated mini button' onclick = '/semantic/src/inc/editHealthContent.php' type = 'submit'>
                                             <input type = 'hidden' name = 'editHealth' value = $healthContentID>
                                             Edit
                                         </button>
                                     </form>
+                                    <div class = 'ui column'>
+                                   
                                     <h3 class='ui header' id='title'>
                                                 $title
                                     </h3>
@@ -100,12 +103,15 @@ AND A.healthContentID = C.healthContentID";
                                     <div class='ui small image'>
                                         <img src='$photoURL'>
                                     </div>
+                                    </div>
+                                    <div class = 'ui column'>
                                     <p id = 'mainText'style = 'text - align:justify' > $mainText
                                         <br >
                                     </p >
                                     <p id = 'author' > By $userName
                                     <br>
                                     </p >
+                                    </div>
                                     </div>
                                     <div class='ui hidden section divider'></div>
                                 </div>";
