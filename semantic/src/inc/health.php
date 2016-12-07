@@ -76,7 +76,6 @@ A.healthContentID = C.healthContentID;";
                         $datePosted = $row['datePosted'];
                         $healthContentID = $row['healthContentID'];
                         $photoURL = $row['url'];
-                        $result = $db->query($sql);
                         if($canAccess == '1'){
                             echo "
                                 <div class='four wide column'>
