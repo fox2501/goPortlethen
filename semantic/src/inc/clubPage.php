@@ -25,7 +25,7 @@ while ($row = $result->fetch_array()) {
             <header class = "ui blue huge header">$clubName Club Profile Page</header>
         </div>
         <div class = "eight wide column">
-            <button class = "ui button">
+            <button class = "ui right floated button">
                 <i class = "ui settings icon"></i>
                     Edit Profile Page
             </button>
