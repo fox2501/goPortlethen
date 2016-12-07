@@ -7,13 +7,13 @@ $mainText = $_POST["editMainText"];
 $healthContentID = $_POST["editContent"];
 $userID = $_SESSION['loggedIn'];
 
-$sql = "
-UPDATE healthContent
-SET title = '$title',
-mainText = '$mainText',
-WHERE healthContentID = 1161;
-";
-$result = mysqli_query($db, $sql);
+//$sql = "
+//UPDATE healthContent
+//SET title = '$title',
+//mainText = '$mainText',
+//WHERE healthcontentID = 1161;
+//";
+//$result = mysqli_query($db, $sql);
 
 echo $title;
 echo $mainText;
