@@ -48,7 +48,7 @@ while ($row = $result->fetch_array()) {
                     </div>
                 </div>
             </div>
-            <div class='ui padded segment'>
+            <div class='ui segment'>
                 <h5 class='ui top attached header'>
                     Club Category:
                 </h5>
