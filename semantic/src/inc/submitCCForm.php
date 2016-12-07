@@ -52,4 +52,4 @@ $result = (mysqli_query($db, $sql1));
 
 //t
 
-header("location:clubPage.php");?>
+header("location:clubLandingPage.php");?>
