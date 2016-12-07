@@ -78,7 +78,6 @@ if(isset($_SESSION['loggedIn'])){
                                     <div class = 'ui raised segment'>
                                         <h3 class='ui header' id='title'>
                                                 $title
-                                                $healthContentID
                                     </h3>
                                     <p id='datePosted'>$datePosted
                                         <br>
