@@ -78,13 +78,9 @@ if (isset($_SESSION['loggedIn'])) {
                                     About
                                 </h5>
                                 <div class = "ui attached segment">
-                                    <textarea rows = 8>
-                                        <?php
-                                            echo $aboutUser;
-                                        ?>
-                                    </textarea>
-                                    </div>
+                                    <textarea><?php echo $aboutUser;?></textarea>
                                 </div>
+                            </div>
                             </div>
                         </div>
                     </div>
