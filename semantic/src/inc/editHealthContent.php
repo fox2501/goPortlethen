@@ -40,11 +40,10 @@ while($row = mysqli_fetch_assoc($result)){
 <? include("includes/header.php"); ?>
 
 <body>
-<!-- Page header -->
-<header class = "ui huge blue header">Edit Health & Wellbeing Content</header>
 
 <!-- Form -->
 <div class="ui container">
+    <header class = "ui huge blue header">Edit Health & Wellbeing Content</header>
     <form class="ui form" action="submitEditHealth.php" method="POST" onsubmit="return validateForm()">
         <div class = "field">
             <label>Edit Title</label>
