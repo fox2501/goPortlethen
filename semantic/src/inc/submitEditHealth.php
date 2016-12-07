@@ -11,7 +11,7 @@ $sql = "
 UPDATE healthContent 
 SET title = '$title', 
 mainText = '$mainText',
-WHERE healthContentID = $healthContentID;
+WHERE healthContentID = 1161;
 ";
 $result = mysqli_query($db, $sql);
 
