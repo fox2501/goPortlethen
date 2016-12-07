@@ -10,7 +10,7 @@ while ($row = $result->fetch_array()) {
         $clubDesc = $row['clubDescription'];
         $contactNum = $row['contactNumber'];
 }
-$sql = "SELECT * from photos WHERE photoID = 11";
+$sql = "SELECT * from photos WHERE clubID = $clubID";
 $result = $db->query($sql);
 while ($row = $result ->fetch_array()){
     $photoURL = $row['url'];
