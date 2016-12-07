@@ -36,7 +36,7 @@ if(isset($_SESSION['loggedIn'])){
             <label>Edit Title</label>
             <input type="text" name="editTitle" value=
             "<?php
-            echo $title;
+            echo $title.$healthContentID;
             ?>">
         </div>
         <div class = "field">
