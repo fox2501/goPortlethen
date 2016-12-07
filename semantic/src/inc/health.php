@@ -63,7 +63,11 @@ if(isset($_SESSION['loggedIn'])){
             <!-- Blank area to input info through form -->
             <div class="row">
                 <ul>
-                    <?php $sql_query="SELECT * FROM healthcontent, users WHERE healthContent.userID=users.userID";
+                    <?php $sql_query="
+SELECT A.title, A.mainText, B.userName, A.datePosted, A.healthContentID, C.url  
+FROM healthcontent A, users B, photos C 
+WHERE A.userID=B.userID, 
+A.healthContentID = C.healthContentID;";
                     $result=$db->query($sql_query);
                     while($row = $result-> fetch_array()){
                         $title = $row['title'];
@@ -71,11 +75,8 @@ if(isset($_SESSION['loggedIn'])){
                         $userName = $row['userName'];
                         $datePosted = $row['datePosted'];
                         $healthContentID = $row['healthContentID'];
-                        $sql = "SELECT * from photos WHERE healthContentID = $healthContentID";
+                        $photoURL = $row['url'];
                         $result = $db->query($sql);
-                        while ($row = $result ->fetch_array()){
-                            $photoURL = $row['url'];
-                        }
                         if($canAccess == '1'){
                             echo "
                                 <div class='four wide column'>
