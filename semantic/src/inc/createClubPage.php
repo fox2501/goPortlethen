@@ -147,7 +147,7 @@ if(isset($_SESSION['loggedIn'])) {
                     </div>
                 </div>
             </div>
-            <button class="ui fluid large green submit button" id="createClub" type="submit" name="submit">Create Club</button>
+            <button class="ui fluid large green submit button" id="createClub" type="submit" >Create Club</button>
         </form>
 
         <script type="text/javascript">
