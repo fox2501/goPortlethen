@@ -10,6 +10,11 @@ while ($row = $result->fetch_array()) {
         $clubDesc = $row['clubDescription'];
         $contactNum = $row['contactNumber'];
 }
+$sql = "SELECT * from photos WHERE photoID = 11";
+$result = $db->query($sql);
+while ($row = $result ->fetch_array()){
+    $photoURL = $row['url'];
+}
 ?>
 <head>
      <meta charset="UTF-8">
@@ -36,7 +41,7 @@ echo "
                 <div class='ui card'>
                     <div class='image'>
                         <img
-                            src='https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/1024px-Manchester_City_FC_badge.svg.png '>
+                            src='$photoURL'>
                     </div>
                     <div class='content'>
                         <a class='header'>$clubName</a>
