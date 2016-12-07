@@ -64,7 +64,7 @@ if(isset($_SESSION['loggedIn'])){
             <div class="row">
                 <ul>
                     <?php $sql_query="
-SELECT A.title, A.mainText, B.userName, A.datePosted, A.healthContentID  
+SELECT A.title, A.mainText, B.userName, A.datePosted, A.healthContentID, C.url
 FROM healthcontent A, users B, photos C
 WHERE 
 A.userID=B.userID
@@ -120,7 +120,7 @@ AND A.healthContentID = C.healthContentID";
                                         <br>
                                     </p>
                                     <div class='ui small image'>
-                                        <img src='$photo'>
+                                        <img src='$photoURL'>
                                     </div>
                                     <p id='mainText' style='text - align:justify'>$mainText
                                         <br>
