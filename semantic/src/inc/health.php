@@ -64,10 +64,13 @@ if(isset($_SESSION['loggedIn'])){
             <div class="row">
                 <ul>
                     <?php $sql_query="
-SELECT A.title, A.mainText, B.userName, A.datePosted, A.healthContentID, C.url  
-FROM healthcontent A, users B, photos C 
-WHERE A.userID=B.userID, 
-A.healthContentID = C.healthContentID;";
+SELECT A.title, A.mainText, B.userName, A.datePosted, A.healthContentID  
+FROM healthcontent A, users B
+WHERE A.userID=B.userID";
+//SELECT A.title, A.mainText, B.userName, A.datePosted, A.healthContentID, C.url
+//FROM healthcontent A, users B, photos C
+//WHERE A.userID=B.userID,
+//A.healthContentID = C.healthContentID
                     $result=$db->query($sql_query);
                     while($row = $result-> fetch_array()){
                         $title = $row['title'];
@@ -75,7 +78,7 @@ A.healthContentID = C.healthContentID;";
                         $userName = $row['userName'];
                         $datePosted = $row['datePosted'];
                         $healthContentID = $row['healthContentID'];
-                        $photoURL = $row['url'];
+                        //$photoURL = $row['url'];
                         if($canAccess == '1'){
                             echo "
                                 <div class='four wide column'>
