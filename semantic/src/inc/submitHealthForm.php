@@ -31,24 +31,22 @@ if(empty($img)){
     $pms = json_decode($out,true);
     $url=$pms['data']['link'];
 }
-echo $url;
-//$sql = "INSERT INTO healthcontent (title, mainText, userID, approvalStatus) VALUES ('$title', '$mainText', '$userID', '0')";
-//
-//$result = (mysqli_query($db, $sql));
-//
-//$sql2 ="SELECT healthContentID FROM healthContent WHERE healthContentID = (SELECT MAX(healthContentID) FROM healthContent)";
-//
-//$result = mysqli_query($db, $sql2);
-//
-//while($row = mysqli_fetch_assoc($result)){
-//    $healthID = $row['healthContentID'];
-//}
-//
-//$sql = "INSERT INTO photos (caption,url,clubID,locationID,healthContentID,routeID) VALUES ('test','$url','0','0','$healthID','0')";
-//
-//$result = (mysqli_query($db, $sql));
-//
-//
-//header("location:health.php");
-//g
+$sql = "INSERT INTO healthcontent (title, mainText, userID, approvalStatus) VALUES ('$title', '$mainText', '$userID', '0')";
+
+$result = (mysqli_query($db, $sql));
+
+$sql2 ="SELECT healthContentID FROM healthContent WHERE healthContentID = (SELECT MAX(healthContentID) FROM healthContent)";
+
+$result = mysqli_query($db, $sql2);
+
+while($row = mysqli_fetch_assoc($result)){
+    $healthID = $row['healthContentID'];
+}
+
+$sql = "INSERT INTO photos (caption,url,clubID,locationID,healthContentID,routeID) VALUES ('test','$url','0','0','$healthID','0')";
+
+$result = (mysqli_query($db, $sql));
+
+
+header("location:health.php");
 ?>
