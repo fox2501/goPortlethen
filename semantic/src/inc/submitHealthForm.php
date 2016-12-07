@@ -9,7 +9,7 @@ $mainText = $_POST["mainText"];
 $userID = $_SESSION["loggedIn"];
 
 $img = $_FILES['healthPhoto'];
-if($img['name']==''){
+if(empty($img)){
     echo "<h2>An Image Please.</h2>";
 }else{
     $filename = $img['tmp_name'];
