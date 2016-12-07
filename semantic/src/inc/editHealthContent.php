@@ -59,15 +59,13 @@ while($row = mysqli_fetch_assoc($result)){
         </div>
         <div class = "field">
             <label>Edit Main Text</label>
-            <textarea rows = 8 type = "text" name = "editMainText">
-                <?php
+            <textarea rows = 8 type = "text" name = "editMainText"><?php
                 $sql = "SELECT mainText FROM healthContent WHERE healthContentID = $healthContentID'";
                 $result = mysqli_query($db, $sql);
                 while ($row = mysqli_fetch_array($result)) {
                     $mainText = $row['mainText'];
                 }
-                echo $mainText;
-                ?></textarea>
+                echo $mainText; ?></textarea>
         </div>
         <button class="ui fluid large green submit button" type="submit">Submit</button>
     </form>
