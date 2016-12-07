@@ -57,7 +57,7 @@ if(isset($_SESSION['loggedIn'])){
             <label>Main Image</label>
             <div class="field">
                 <div class="ui fluid action input">
-                    <input name="img" size="35" type="file"/>
+                    <input name="healthPhoto" size="35" type="file"/>
                 </div>
             </div>
             <button id="submitButton" class="ui primary button" type="submit">Submit Content</button>
