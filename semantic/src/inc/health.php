@@ -67,7 +67,8 @@ if(isset($_SESSION['loggedIn'])){
 SELECT A.title, A.mainText, B.userName, A.datePosted, A.healthContentID  
 FROM healthcontent A, users B, photos C
 WHERE 
-A.userID=B.userID";
+A.userID=B.userID
+AND A.healthContentID = C.healthContentID";
 //SELECT A.title, A.mainText, B.userName, A.datePosted, A.healthContentID, C.url
 //FROM healthcontent A, users B, photos C
 //WHERE A.userID=B.userID,
