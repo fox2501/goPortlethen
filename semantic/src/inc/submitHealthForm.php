@@ -8,7 +8,7 @@ $title = $_POST["title"];
 $mainText = $_POST["mainText"];
 $userID = $_SESSION["loggedIn"];
 
-$img = $_POST['healthPhoto'];
+$img = $_FILES['healthPhoto'];
 if(empty($img)){
     echo "<h2>An Image Please.</h2>";
 }else{
