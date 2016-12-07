@@ -115,29 +115,29 @@ if(isset($_SESSION['loggedIn'])) {
                         Choose Image : <input name="img" size="35" type="file"/></br>
 
                     </div>
-                    <script>
-                        $('input:text, .ui.button', '.ui.action.input')
-                            .on('click', function (e) {
-                                $('input:file', $(e.target).parents()).click();
-                            })
-                        ;
-
-                        $('input:file', '.ui.action.input')
-                            .on('change', function (e) {
-                                var name = e.target.files[0].name;
-                                $('input:text', $(e.target).parent()).val(name);
-                            })
-                        ;
-                    </script>
-                    <style>
-                        body {
-                            padding: 1em;
-                        }
-
-                        .ui.action.input input[type="file"] {
-                            display: none;
-                        }
-                    </style>
+<!--                    <script>-->
+<!--                        $('input:text, .ui.button', '.ui.action.input')-->
+<!--                            .on('click', function (e) {-->
+<!--                                $('input:file', $(e.target).parents()).click();-->
+<!--                            })-->
+<!--                        ;-->
+<!---->
+<!--                        $('input:file', '.ui.action.input')-->
+<!--                            .on('change', function (e) {-->
+<!--                                var name = e.target.files[0].name;-->
+<!--                                $('input:text', $(e.target).parent()).val(name);-->
+<!--                            })-->
+<!--                        ;-->
+<!--                    </script>-->
+<!--                    <style>-->
+<!--                        body {-->
+<!--                            padding: 1em;-->
+<!--                        }-->
+<!---->
+<!--                        .ui.action.input input[type="file"] {-->
+<!--                            display: none;-->
+<!--                        }-->
+<!--                    </style>-->
                 </div>
                 <div class="required inline field">
                     <div class="ui checkbox">
