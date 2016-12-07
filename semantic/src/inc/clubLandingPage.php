@@ -91,7 +91,7 @@ if(isset($_SESSION['loggedIn'])) {
             while ($row = $result-> fetch_array()) {
                 $title = $row['clubName'];
                 $mainText = $row['clubDescription'];
-                $_SESSION['clubID'] = $row['clubID'];
+                $clubID = $row['clubID'];
                 echo "
 <div class = 'ui container'>
     <div class = 'ui grid'>
@@ -109,7 +109,7 @@ if(isset($_SESSION['loggedIn'])) {
                    <p> $mainText </p>
             </div>
             <div class='extra' >
-                   <button class='ui right floated button'>
+                   <button class='ui right floated button' type = 'submit' value = '$clubID' name = 'viewClub'>
                       <a href='/semantic/src/inc/clubPage.php'>For more info click here!</a>
                    </button>
             </div>
