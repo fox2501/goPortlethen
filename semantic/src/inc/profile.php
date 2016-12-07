@@ -78,7 +78,7 @@ if (isset($_SESSION['loggedIn'])) {
                                     About
                                 </h5>
                                 <div class = "ui attached segment">
-                                    <textarea style = "width: 100%;"><?php echo $aboutUser;?></textarea>
+                                    <textarea readonly style = "width: 100%;"><?php echo $aboutUser;?></textarea>
                                 </div>
                             </div>
                             </div>
