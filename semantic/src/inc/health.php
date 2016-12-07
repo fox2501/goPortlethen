@@ -73,9 +73,8 @@ if(isset($_SESSION['loggedIn'])){
                         $datePosted = $row['datePosted'];
                         if($canAccess == '1'){
                             echo "
-                            <div>
                                 <div class='four wide column'>
-                                    <div class = 'ui vertical raised segment'>
+                                    <div class = 'ui raised segment'>
                                         <h3 class='ui header' id='title'>
                                                 $title
                                     </h3>
@@ -92,15 +91,11 @@ if(isset($_SESSION['loggedIn'])){
                                         <br >
                                     </p >
                                     <p id = 'author' > By $userName
-                            < br>
+                                    <br>
                                     </p >
                                     </div>
-                                    
-                                    
-                                    
                                     <div class='ui divider'></div>
-                                </div>
-                            </div>";
+                                </div>";
                         } else {
                             echo "
                             <div>
