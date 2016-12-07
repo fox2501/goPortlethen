@@ -26,7 +26,7 @@ while ($row = $result->fetch_array()) {
         </div>
     </h2>
     <div class='ui two column grid'>
-            <div class='4 wide column'>
+            <div class='four wide column'>
                 <div class='ui card'>
                     <div class='image'>
                         <img
