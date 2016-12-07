@@ -36,15 +36,15 @@ if(isset($_SESSION['loggedIn'])){
             <label>Edit Title</label>
             <input type="text" name="editTitle" value=
             "<?php
-            echo $title.$healthContentID;
+            echo $title;
             ?>">
         </div>
         <div class = "field">
             <label>Edit Main Text</label>
             <textarea rows = 8 type = "text" name = "editMainText"><?php echo $mainText; ?></textarea>
-            <input type = "hidden" name = 'editContent' value = <?php $healthContentID; ?>>
+            <input type = "hidden" name = "editContent" value = <?php $healthContentID; ?>>
         </div>
-        <button class="ui fluid large green submit button" type="submit">Submit</button>
+        <button class="ui fluid large green submit button" type="submit" onclick = "submitEditHealth.php">Submit</button>
     </form>
 </div>
 
