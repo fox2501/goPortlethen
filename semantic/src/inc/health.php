@@ -53,7 +53,7 @@ if(isset($_SESSION['loggedIn'])){
             if($canAccess == '1'){
                 echo "<div class='row'>
                 <a href='healthForm.php'>
-                    <button class='ui primary button' style='margin-right:50px'>Submit Content</button>
+                    <button class='ui submit button' style='margin-right:50px'>Submit Content</button>
                 </a>
             </div>";
             }
@@ -75,6 +75,7 @@ if(isset($_SESSION['loggedIn'])){
                             echo "
                                 <div class='four wide column'>
                                     <div class = 'ui raised segment'>
+                                    <div class = 'fourteen wide column'>
                                         <h3 class='ui header' id='title'>
                                                 $title
                                     </h3>
@@ -84,15 +85,17 @@ if(isset($_SESSION['loggedIn'])){
 
                                     <img class='ui small image' src='https://scontent.flhr4-1.fna.fbcdn.net/v/t1.0-9/13434842_1608517786105160_4523080997776743356_n.jpg?oh=4981b2761c2ef40c4989fc4b74bd440a&oe=58C6B38A' id='image'></img>
                                     <br >
-                                    <a href = editHealthContent . php >
-                                        <button class='mini ui button' style = 'float:right; margin-left:20px' > Edit</button >
-                                    </a >
                                     <p id = 'mainText'style = 'text - align:justify' > $mainText
                                         <br >
                                     </p >
                                     <p id = 'author' > By $userName
                                     <br>
                                     </p >
+                                    <div class = 'two wide column'>
+                                        <a href = editHealthContent . php >
+                                            <button class='mini ui button'> Edit</button >
+                                        </a >
+                                    </div>
                                     </div>
                                     <div class='ui hidden section divider'></div>
                                 </div>";
