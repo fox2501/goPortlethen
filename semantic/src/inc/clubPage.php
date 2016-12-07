@@ -26,7 +26,6 @@ while ($row = $result->fetch_array()) {
         </div>
     </h2>
     <div class='ui two column grid'>
-        <div class='row '>
             <div class='4 wide column'>
                 <div class='ui card'>
                     <div class='image'>
@@ -79,8 +78,6 @@ while ($row = $result->fetch_array()) {
             </div>
             </div>
         </div>
-    </div>
-</div>
 </div>
 </body>";
 include("includes/footer.php");
