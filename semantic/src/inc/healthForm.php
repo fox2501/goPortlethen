@@ -60,7 +60,7 @@ if(isset($_SESSION['loggedIn'])){
                     <input name="healthPhoto" size="35" type="file"/>
                 </div>
             </div>
-            <button id="submitButton" class="ui primary button" type="submit">Submit Content</button>
+            <button class="ui fluid large green submit button" id="createHealthContent" type="submit">Submit Content</button>
         </form>
     </div>
 
