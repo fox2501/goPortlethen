@@ -86,7 +86,7 @@ if(isset($_SESSION['loggedIn'])) {
 
             <?php
 
-            $sql_query = "SELECT clubName, clubDescription, $clubID FROM club";
+            $sql_query = "SELECT clubName, clubDescription, clubID FROM club";
             $result = $db->query($sql_query);
             while ($row = $result-> fetch_array()) {
                 $title = $row['clubName'];
