@@ -31,7 +31,7 @@ if(isset($_SESSION['loggedIn'])){
 <!-- Form -->
 <div class="ui container">
     <header class = "ui huge blue header">Edit Health & Wellbeing Content</header>
-    <form class="ui form" action="submitEditHealth.php" method="POST" onsubmit="return validateForm()">
+    <form class="ui form" action="submitEditHealth.php" method="POST">
         <div class = "field">
             <label>Edit Title</label>
             <input type="text" name="editTitle" value=
@@ -42,9 +42,9 @@ if(isset($_SESSION['loggedIn'])){
         <div class = "field">
             <label>Edit Main Text</label>
             <textarea rows = 8 type = "text" name = "editMainText"><?php echo $mainText; ?></textarea>
-            <input type = "hidden" name = 'editContent' value = <?php $healthContentID; ?>>
+            <input type = "hidden" name = "editContent" value = <?php $healthContentID; ?>>
         </div>
-        <button class="ui fluid large green submit button" type="submit">Submit</button>
+        <button class="ui fluid large green submit button" type="submit" onclick = "submitEditHealth.php">Submit</button>
     </form>
 </div>
 

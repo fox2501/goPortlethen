@@ -1,10 +1,10 @@
 <?php
 session_start();
-include("dbconnect.php");
+include("includes/dbconnect.php");
 
-$title =  $_POST["editTitle"];
+$title = $_POST["editTitle"];
 $mainText = $_POST["editMainText"];
-$healthContentID = $_POST["healthContentID"];
+$healthContentID = $_POST["editContent"];
 $userID = $_SESSION['loggedIn'];
 
 $sql = "
