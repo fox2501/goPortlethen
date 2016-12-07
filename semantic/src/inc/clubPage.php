@@ -1,7 +1,6 @@
 <?php
 session_start();
 include("includes/dbconnect.php");
-if(isset($_SESSION['clubID'])) {
     $clubID = $_POST['viewClub'];
     $sql = "SELECT * FROM CLUB WHERE clubID = '$clubID'";
     $result = $db->query($sql_query);
@@ -100,5 +99,4 @@ if(isset($_SESSION['clubID'])) {
 </div>
 </body>";
     include("includes/footer.php");
-}
 ?>
