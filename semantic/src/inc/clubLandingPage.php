@@ -91,7 +91,7 @@ if(isset($_SESSION['loggedIn'])) {
             while ($row = $result-> fetch_array()) {
                 $title = $row['clubName'];
                 $mainText = $row['clubDescription'];
-                $clubID= $row['clubID'];
+                $clubID = $row['clubID'];
                 echo "
 <div class = 'ui container'>
     <div class = 'ui grid'>
