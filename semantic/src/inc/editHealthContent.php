@@ -41,7 +41,7 @@ while($row = mysqli_fetch_assoc($result)){
 
 <body>
 <!-- Page header -->
-<h1 align="center">Edit Health & Wellbeing Content</h1>
+<header class = "ui huge blue header">Edit Health & Wellbeing Content</header>
 
 <!-- Form -->
 <div class="ui container">
