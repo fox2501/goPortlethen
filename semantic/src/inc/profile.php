@@ -93,7 +93,7 @@ if (isset($_SESSION['loggedIn'])) {
     <?php
     include("includes/footer.php");
 } else{
-    header("Location: /semantic/");
+    echo "You do not have permission to view this page.";
 }
 ?>
 
