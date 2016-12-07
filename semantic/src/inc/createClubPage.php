@@ -34,7 +34,7 @@ if(isset($_SESSION['loggedIn'])) {
     include("includes/dbconnect.php"); ?>
     <body>
     <div class="ui container">
-        <form class="ui form" action="submitCCForm.php" method="POST">
+        <form class="ui form" action="submitCCForm.php" enctype="multipart/form-data" method="POST">
             <h2 class="ui center aligned blue header">
                 <div class="content">
                     Create Your Club
@@ -112,11 +112,7 @@ if(isset($_SESSION['loggedIn'])) {
                 <div class="field">
                     <label>Please upload your clubs profile picture: </label>
                     <div class="ui fluid action input">
-                        <input type="text" readonly>
-                        <input type="file">
-                        <div class="ui icon button">
-                            <i class="cloud upload icon"></i>
-                        </div>
+                        <input name="img" size="35" type="file"/>
                     </div>
                     <script>
                         $('input:text, .ui.button', '.ui.action.input')
@@ -150,7 +146,7 @@ if(isset($_SESSION['loggedIn'])) {
                     </div>
                 </div>
             </div>
-            <button class="ui fluid large green submit button" id="createClub" type="submit">Create Club</button>
+            <button class="ui fluid large green submit button" id="createClub" type="submit" name="submit">Create Club</button>
         </form>
 
         <script type="text/javascript">
