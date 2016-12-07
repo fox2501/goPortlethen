@@ -119,8 +119,9 @@ AND A.healthContentID = C.healthContentID";
                                     <p id='datePosted'>$datePosted
                                         <br>
                                     </p>
-                                    <img class='ui small image' src='$photoURL' id='image'></img>
-                                    <br>
+                                    <div class='ui small image'>
+                                        <img src='$photo'>
+                                    </div>
                                     <p id='mainText' style='text - align:justify'>$mainText
                                         <br>
                                     </p>
