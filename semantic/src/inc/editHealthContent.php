@@ -31,7 +31,7 @@ if(isset($_SESSION['loggedIn'])){
 <!-- Form -->
 <div class="ui container">
     <header class = "ui huge blue header">Edit Health & Wellbeing Content</header>
-    <form class="ui form" action="submitEditHealth.php" method="POST" onsubmit="return validateForm()">
+    <form class="ui form" action="submitEditHealth.php" method="POST">
         <div class = "field">
             <label>Edit Title</label>
             <input type="text" name="editTitle" value=
