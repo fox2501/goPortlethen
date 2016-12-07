@@ -32,10 +32,6 @@ if($img['name']==''){
     $url=$pms['data']['link'];
 }
 
-
-if(isset($_SESSION['loggedIn'])) {
-    echo "exists";
-}
 $sql = "INSERT INTO healthcontent (title, mainText, userID, approvalStatus) VALUES ('$title', '$mainText', '$userID', '0')";
 
 $result = (mysqli_query($db, $sql));
@@ -48,9 +44,9 @@ while($row = mysqli_fetch_assoc($result)){
     $healthID = $row['healthContentID'];
 }
 
-$sql1 = "INSERT INTO photos (caption,url,clubID,locationID,healthContentID,routeID) VALUES ('test','$url','0','0','$healthID','0')";
+$sql = "INSERT INTO photos (caption,url,clubID,locationID,healthContentID,routeID) VALUES ('test','$url','0','0','$healthID','0')";
 
-$result = (mysqli_query($db, $sql1));
+$result = (mysqli_query($db, $sql));
 
 
 header("location:health.php");
