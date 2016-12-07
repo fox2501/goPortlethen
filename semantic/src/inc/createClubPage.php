@@ -112,7 +112,7 @@ if(isset($_SESSION['loggedIn'])) {
                 <div class="field">
                     <label>Please upload your clubs profile picture: </label>
                     <div class="ui fluid action input">
-                        Choose Image : <input name="img" size="35" type="file"/></br>
+                        <input name="img" size="35" type="file"/>
 
                     </div>
 <!--                    <script>-->
