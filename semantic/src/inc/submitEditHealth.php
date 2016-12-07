@@ -2,8 +2,8 @@
 session_start();
 include("dbconnect.php");
 
-$title =  $_POST["title"];
-$mainText = $_POST["mainText"];
+$title =  $_POST["editTitle"];
+$mainText = $_POST["editMainText"];
 $healthContentID = $_POST["healthContentID"];
 $userID = $_SESSION['loggedIn'];
 
