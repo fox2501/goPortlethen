@@ -1,12 +1,13 @@
 <?php
 session_start();
 include("includes/dbconnect.php");
-$clubID = $_POST['viewClub'];
+$_SESSION['viewClub'] = $_POST['viewClub'];
+$clubID = $_SESSION['viewClub'];
 echo "I am testing to see if this works $clubID";
-if(!(isset($_POST['viewClub']))){
+if(!(isset($_SESSION['viewClub']))){
     echo "no club";
 }
-$sql = "SELECT * FROM club WHERE clubID = '$clubID'";
+$sql = "SELECT * FROM club WHERE clubID = '$clubID''";
 $result = $db->query($sql);
 while ($row = $result->fetch_array()) {
         $clubName = $row['clubName'];
