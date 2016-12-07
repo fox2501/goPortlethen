@@ -17,7 +17,15 @@ if (isset($_SESSION['loggedIn'])) {
     include("includes/dbconnect.php");
     $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
     $userID = $_SESSION['loggedIn'];
-    //header("Location: ../profile.php?user=".$userID);
+    $sql = "SELECT firstName, surname, age, location, aboutUser FROM users WHERE userID = '$userID'";
+    $result = mysqli_query($db, $sql);
+    while($row = mysqli_fetch_array($result)) {
+        $firstName = $row['firstName'];
+        $surname = $row['surname'];
+        $age = $row['age'];
+        $location = $row['location'];
+        $aboutUser = $row['aboutUser'];
+    }
     ?>
     <body>
     <div class="ui container">
@@ -47,13 +55,6 @@ if (isset($_SESSION['loggedIn'])) {
                                 </h5>
                                 <div class = "ui attached segment">
                                     <?php
-                                    $userID = $_SESSION['loggedIn'];
-                                    $sql = "SELECT firstName, surname FROM users WHERE userID = '$userID'";
-                                    $result = mysqli_query($db, $sql);
-                                    while($row = mysqli_fetch_array($result)) {
-                                        $firstName = $row['firstName'];
-                                        $surname = $row['surname'];
-                                    }
                                     echo $firstName.' '.$surname;
                                     ?>
                                 </div>
@@ -62,12 +63,6 @@ if (isset($_SESSION['loggedIn'])) {
                                 </h5>
                                 <div class = "ui attached segment">
                                     <?php
-                                    $userID = $_SESSION['loggedIn'];
-                                    $sql = "SELECT age FROM users WHERE userID = '$userID'";
-                                    $result = mysqli_query($db, $sql);
-                                    while($row = mysqli_fetch_array($result)) {
-                                        $age = $row['age'];
-                                    }
                                     echo $age;
                                     ?>
                                 </div>
@@ -76,12 +71,6 @@ if (isset($_SESSION['loggedIn'])) {
                                 </h5>
                                 <div class = "ui attached segment">
                                     <?php
-                                    $userID = $_SESSION['loggedIn'];
-                                    $sql = "SELECT location FROM users WHERE userID = '$userID'";
-                                    $result = mysqli_query($db, $sql);
-                                    while($row = mysqli_fetch_array($result)) {
-                                        $location = $row['location'];
-                                    }
                                     echo $location;
                                     ?>
                                 </div>
@@ -89,18 +78,11 @@ if (isset($_SESSION['loggedIn'])) {
                                     About
                                 </h5>
                                 <div class = "ui attached segment">
-                                    <div class = "ui textbox">
-
-
-                                    <?php
-                                    $userID = $_SESSION['loggedIn'];
-                                    $sql = "SELECT aboutUser FROM users WHERE userID = '$userID'";
-                                    $result = mysqli_query($db, $sql);
-                                    while($row = mysqli_fetch_array($result)) {
-                                        $aboutUser = $row['aboutUser'];
-                                    }
-                                    echo $aboutUser;
-                                    ?>
+                                    <textarea rows = 8>
+                                        <?php
+                                            echo $aboutUser;
+                                        ?>
+                                    </textarea>
                                     </div>
                                 </div>
                             </div>
