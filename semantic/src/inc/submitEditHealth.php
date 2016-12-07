@@ -4,6 +4,7 @@ include("dbconnect.php");
 
 $title =  $_POST["title"];
 $mainText = $_POST["mainText"];
+$healthContentID = $_POST["healthContentID"];
 $userID = $_SESSION['loggedIn'];
 
 $sql = "

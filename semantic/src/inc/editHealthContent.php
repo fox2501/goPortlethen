@@ -1,34 +1,20 @@
 <?php
 session_start();
 include("includes/dbconnect.php");
-if(isset($_SESSION['loggedIn'])) {
+if(isset($_SESSION['loggedIn'])){
     $userID = $_SESSION['loggedIn'];
-    $canAccess = '0';
-    $sql = "SELECT userName from users WHERE userID = '$userID'";
-    $result = mysqli_query($db, $sql);
-    $row = mysqli_fetch_assoc($result);
-    $userName = $row["userName"];
-
-    $sql = "SELECT accessID from useraccess where userName = '$userName'";
-    $result = mysqli_query($db, $sql);
-    $row = mysqli_fetch_assoc($result);
-    $accessID = $row["accessID"];
-    if ($accessID == '1' || $accessID == '4') {
-        $canAccess = '1';
-    } else {
-        $canAccess = '0';
-    }
-
-    $healthContentID = $_POST['editHealth'];
-    $sql = "SELECT * from healthContent WHERE healthContentID = $healthContentID";
+    $sql = "SELECT healthContentID from healthContent where userID = $userID";
     $result = mysqli_query($db, $sql);
     while($row = mysqli_fetch_assoc($result)){
-        $title = $row['title'];
-        $mainText = $row['mainText'];
-    }
-
+        if($row['healthContentID'] == $_POST["healthContentID"]) {
+            $healthContentID = $_POST['editHealth'];
+            $sql = "SELECT * from healthContent WHERE healthContentID = $healthContentID";
+            $result = mysqli_query($db, $sql);
+            while ($row = mysqli_fetch_assoc($result)) {
+                $title = $row['title'];
+                $mainText = $row['mainText'];
+            }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,7 +24,7 @@ if(isset($_SESSION['loggedIn'])) {
 </head>
 
 <!-- Nav bar -->
-<? include("includes/header.php"); ?>
+<? include("includes/header.php");?>
 
 <body>
 
@@ -77,8 +63,13 @@ if(isset($_SESSION['loggedIn'])) {
     }
 </script>
 </body>
+</html>
 <!-- Footer -->
-<?php include("includes/footer.php");
-}?>
-
-    </html>
+<?php
+            include("includes/footer.php");
+        } else{
+            echo "You do not have permission.";
+        }
+    }
+};
+?>
