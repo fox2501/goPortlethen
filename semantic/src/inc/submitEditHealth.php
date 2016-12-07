@@ -4,7 +4,7 @@ include("includes/dbconnect.php");
 
 $title = $_POST["editTitle"];
 $mainText = $_POST["editMainText"];
-$healthContentID = $_POST["editContent"];
+$healthContentID = $_POST["healthContentToEdit"];
 $userID = $_SESSION['loggedIn'];
 
 //$sql = "
