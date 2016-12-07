@@ -1,6 +1,5 @@
-<?php session_start(); ?>
-<!-- Database -->
-<?
+<?php
+session_start();
 include ( "includes/dbconnect.php");
 
 if(isset($_SESSION['loggedIn'])){
