@@ -1,24 +1,24 @@
 <?php
 session_start();
 include("includes/dbconnect.php");
-if(isset($_SESSION['clubID'])){
+if(isset($_SESSION['clubID'])) {
     $clubID = $_SESSION['clubID'];
     $sql = "SELECT * FROM CLUB WHERE clubID = '$clubID'";
     $result = $db->query($sql_query);
-    while ($row = $result-> fetch_array()) {
+    while ($row = $result->fetch_array()) {
         $clubName = $row['clubName'];
         $category = $row['clubCategory'];
         $clubDesc = $row['clubDescription'];
         $contactNum = $row['contactNumber'];
     }
-?>
-<head>
-    <meta charset="UTF-8">
-    <title>Club Page</title>
-</head>
-<? include("includes/header.php"); ?>
-<?php
-echo "
+    ?>
+    <head>
+        <meta charset="UTF-8">
+        <title>Club Page</title>
+    </head>
+    <? include("includes/header.php"); ?>
+    <?php
+    echo "
 <body>
 <div class='ui container''>
     <h2 class='ui blue header'>
@@ -98,10 +98,7 @@ echo "
     </div>
 </div>
 </div>
-</body>
-";
+</body>";
+    include("includes/footer.php");
+}
 ?>
-<? include("includes/footer.php"); ?>
-<?php
-    echo "</html>";
-    ?>
