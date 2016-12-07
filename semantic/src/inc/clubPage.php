@@ -17,7 +17,7 @@ while ($row = $result->fetch_array()) {
 </head>
 <? include("includes/header.php"); ?>
 <?php
-echo "
+echo ""?>
 <body>
 <div class='ui container'>
     <div class = 'ui grid'>
