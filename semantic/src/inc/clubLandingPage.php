@@ -109,10 +109,10 @@ if(isset($_SESSION['loggedIn'])) {
                    <p> $mainText </p>
             </div>
             <div class='extra' >
-            <form class = 'ui form' method = 'GET' action = '/semantic/src/inc/clubPage.php'>
-                   <button class='ui right floated button' type = 'submit'>
+            <form class = 'ui form' method = 'POST' action = '/semantic/src/inc/clubPage.php'>
+                   <button class='ui right floated button' type = 'submit' onclick = '/semantic/src/inc/clubPage.php'>
                       <input type = 'hidden' name = 'viewClub' value = $clubID>
-                      <a href='/semantic/src/inc/clubPage.php'>For more info click here!</a>
+                      For more info click here!
                    </button>
             </form>
 

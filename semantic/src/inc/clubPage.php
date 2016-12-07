@@ -1,7 +1,7 @@
 <?php
 session_start();
 include("includes/dbconnect.php");
-$clubID = $_GET['viewClub'];
+$clubID = $_POST['viewClub'];
 echo "I am testing to see if this works $clubID";
 if(!(isset($_POST['viewClub']))){
     echo "no club";
