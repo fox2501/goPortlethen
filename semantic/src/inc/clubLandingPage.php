@@ -111,6 +111,7 @@ if(isset($_SESSION['loggedIn'])) {
             <div class='extra' >
             <form action = 'POST'>
                    <button class='ui right floated button' type = 'submit' value = '$clubID' name = 'viewClub' formmethod = 'POST'>
+                      <input type = 'hidden' name = 'viewClub' value = '$clubID'>
                       <a href='/semantic/src/inc/clubPage.php'>For more info click here!</a>
                    </button>
             </form>
