@@ -25,9 +25,9 @@ while ($row = $result->fetch_array()) {
             <p>$clubName Club Profile Page</p>
         </div>
     </h2>
-    <div class='ui three column grid'>
+    <div class='ui two column grid'>
         <div class='row'>
-            <div class='column'>
+            <div class='4 wide column'>
                 <div class='ui card'>
                     <div class='image'>
                         <img
@@ -44,6 +44,7 @@ while ($row = $result->fetch_array()) {
                     </div>
                 </div>
             </div>
+            <div class = 'twelve wide column'>
             <div class='ui segment'>
                 <h5 class='ui top attached header'>
                     Club Category:
@@ -75,6 +76,7 @@ while ($row = $result->fetch_array()) {
                 <div class='ui bottom attached segment'>
                     <p>£1,000,000,000</p>
                 </div>
+            </div>
             </div>
         </div>
     </div>
