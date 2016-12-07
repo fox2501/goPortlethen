@@ -85,7 +85,7 @@ if(isset($_SESSION['loggedIn'])){
          }
     </script>
 </body>
-<!-- Footer -->
+<!-- Footerccc -->
 <?php include("includes/footer.php"); ?>
 
 </html>
