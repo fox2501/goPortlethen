@@ -110,27 +110,27 @@ AND A.healthContentID = C.healthContentID";
                                 </div>";
                         } else {
                             echo "
-                            <div>
-                                <div class=\"four wide column\">
-                                    <h3 class=\"ui header\" id=\"title\">
+                                <div class='four wide column'>
+                                <div class = 'ui raised segment'>
+                                    <h3 class='ui header' id='title'>
                                                 $title
                                             </h3>
-                                    <p id=\"datePosted\">$datePosted
+                                    <p id='datePosted'>$datePosted
                                         <br>
                                     </p>
 
-                                    <img class=\"ui small image\" src=\"https://scontent.flhr4-1.fna.fbcdn.net/v/t1.0-9/13434842_1608517786105160_4523080997776743356_n.jpg?oh=4981b2761c2ef40c4989fc4b74bd440a&oe=58C6B38A\" id=\"image\"></img>
+                                    <img class='ui small image' src=$photoURL id='image'></img>
                                     <br>
-                                    <p id=\"mainText\"style=\"text - align:justify\">$mainText
+                                    <p id='mainText' style='text - align:justify'>$mainText
                                         <br>
                                     </p>
-                                    <p id=\"author\">By $userName;
+                                    <p id='author'>By $userName;
                                         <br>
                                     </p>
                                     
-                                    <div class=\"ui divider\"></div>
+                                    <div class='ui hidden section divider'></div>
                                 </div>
-                            </div>";
+                                </div>";
                         }
                         } ?>
                 </ul>
