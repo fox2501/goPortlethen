@@ -86,12 +86,13 @@ if(isset($_SESSION['loggedIn'])) {
 
             <?php
 
-            $sql_query = "SELECT clubName, clubDescription, clubID FROM club";
+            $sql_query = "SELECT A.clubName, A.clubDescription, A.clubID, B.url FROM club A, photos B WHERE A.clubID = B.clubID";
             $result = $db->query($sql_query);
             while ($row = $result-> fetch_array()) {
                 $title = $row['clubName'];
                 $mainText = $row['clubDescription'];
                 $clubID = $row['clubID'];
+                $photo = $row['url'];
                 echo "
 <div class = 'ui container'>
     <div class = 'ui grid'>
