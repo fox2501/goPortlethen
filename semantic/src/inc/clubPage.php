@@ -31,7 +31,7 @@ echo "
             </button>
         </div>
     </div>
-    <div class='ui two column grid'>
+    <div class='ui grid'>
             <div class='four wide column'>
                 <div class='ui card'>
                     <div class='image'>
