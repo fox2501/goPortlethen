@@ -65,8 +65,9 @@ if(isset($_SESSION['loggedIn'])){
                 <ul>
                     <?php $sql_query="
 SELECT A.title, A.mainText, B.userName, A.datePosted, A.healthContentID  
-FROM healthcontent A, users B
-WHERE A.userID=B.userID";
+FROM healthcontent A, users B, photos C
+WHERE 
+A.userID=B.userID";
 //SELECT A.title, A.mainText, B.userName, A.datePosted, A.healthContentID, C.url
 //FROM healthcontent A, users B, photos C
 //WHERE A.userID=B.userID,
