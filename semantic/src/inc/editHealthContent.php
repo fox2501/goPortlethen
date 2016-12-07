@@ -3,10 +3,10 @@ session_start();
 include("includes/dbconnect.php");
 if(isset($_SESSION['loggedIn'])){
     $userID = $_SESSION['loggedIn'];
-    $sql = "SELECT healthContentID from healthContent where userID = $userID";
+    $sql = "SELECT userID from healthContent where healthContentID = $healthContentID";
     $result = mysqli_query($db, $sql);
     while($row = mysqli_fetch_assoc($result)){
-        if($row['healthContentID'] == $_POST['editHealth']) {
+        if($row['userID'] == $userID) {
             $healthContentID = $_POST['editHealth'];
             $sql = "SELECT * from healthContent WHERE healthContentID = $healthContentID";
             $result = mysqli_query($db, $sql);
