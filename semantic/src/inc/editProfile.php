@@ -16,7 +16,7 @@ if (isset($_SESSION['loggedIn'])) {
     include("includes/header.php");
     $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
     $userID = $_SESSION['loggedIn'];
-    $sql = "SELECT firstName, surname FROM users WHERE userID = '$userID'";
+    $sql = "SELECT firstName, surname, age, location, aboutUser FROM users WHERE userID = '$userID'";
     $result = mysqli_query($db, $sql);
     while($row = mysqli_fetch_array($result)) {
         $firstName = $row['firstName'];
