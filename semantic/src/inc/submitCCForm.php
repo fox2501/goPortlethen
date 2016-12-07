@@ -14,7 +14,6 @@ $feeCost = $_POST["feeAmount"];
 $clubCategory = $_POST["clubCategory"];
 
 $img=$_FILES['img'];
-if(isset($_POST['submit'])){
     if($img['name']==''){
         echo "<h2>An Image Please.</h2>";
     }else{
@@ -36,13 +35,6 @@ if(isset($_POST['submit'])){
         curl_close ($curl);
         $pms = json_decode($out,true);
         $url=$pms['data']['link'];
-if($url!=""){
-    echo "<h2>Uploaded Without Any Problem</h2>";
-    echo "<img src='$url'/>";
-    }else{
-        echo "<h2>There's a Problem</h2>";
-        echo $pms['data']['error'];
-    }
     }
     $sql1 = "INSERT INTO photos (caption,url,clubID,locationID,healthContentID,routeID) VALUES ('test','$url','1','1','1','1')";
 
