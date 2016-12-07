@@ -126,8 +126,8 @@ AND A.healthContentID = C.healthContentID";
                                     <p id='author'>By $userName;
                                         <br>
                                     </p>
-                                    <div class='ui hidden section divider'></div>
                                 </div>
+                                <div class='ui hidden section divider'></div>
                                 </div>";
                         }
                         } ?>
