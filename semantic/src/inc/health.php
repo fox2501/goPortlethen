@@ -85,7 +85,7 @@ if(isset($_SESSION['loggedIn'])){
                                     <img class='ui small image' src='https://scontent.flhr4-1.fna.fbcdn.net/v/t1.0-9/13434842_1608517786105160_4523080997776743356_n.jpg?oh=4981b2761c2ef40c4989fc4b74bd440a&oe=58C6B38A' id='image'></img>
                                     <br >
                                     <form class = 'ui form' method = 'POST' action = 'editHealthContent.php'>
-                                        <button class = 'ui mini button' onclick = '/semantic/src/inc/editHealthContent.php' type = 'submit'>
+                                        <button class = 'ui right floating mini button' onclick = '/semantic/src/inc/editHealthContent.php' type = 'submit'>
                                             <input type = 'hidden' name = 'editHealth' value = $healthContentID>
                                             Edit
                                         </button>
