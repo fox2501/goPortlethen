@@ -2,7 +2,7 @@
 session_start();
 include("includes/dbconnect.php");
 if(isset($_SESSION['clubID'])) {
-    $clubID = $_SESSION['clubID'];
+    $clubID = $_POST['viewClub'];
     $sql = "SELECT * FROM CLUB WHERE clubID = '$clubID'";
     $result = $db->query($sql_query);
     while ($row = $result->fetch_array()) {
