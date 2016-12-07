@@ -114,11 +114,10 @@ AND A.healthContentID = C.healthContentID";
                                 <div class = 'ui raised segment'>
                                     <h3 class='ui header' id='title'>
                                                 $title
-                                            </h3>
+                                    </h3>
                                     <p id='datePosted'>$datePosted
                                         <br>
                                     </p>
-
                                     <img class='ui small image' src=$photoURL id='image'></img>
                                     <br>
                                     <p id='mainText' style='text - align:justify'>$mainText
@@ -127,7 +126,6 @@ AND A.healthContentID = C.healthContentID";
                                     <p id='author'>By $userName;
                                         <br>
                                     </p>
-                                    
                                     <div class='ui hidden section divider'></div>
                                 </div>
                                 </div>";
