@@ -80,7 +80,7 @@ AND A.healthContentID = C.healthContentID";
                         $userName = $row['userName'];
                         $datePosted = $row['datePosted'];
                         $healthContentID = $row['healthContentID'];
-                        //$photoURL = $row['url'];
+                        $photoURL = $row['url'];
                         if($canAccess == '1'){
                             echo "
                                 <div class='four wide column'>
@@ -97,8 +97,9 @@ AND A.healthContentID = C.healthContentID";
                                     <p id='datePosted'>$datePosted
                                         <br>
                                     </p>
-                                    <img class='ui small image' src='$photoURL' id='image'></img>
-                                    <br >
+                                    <div class='ui small image'>
+                                        <img src='$photoURL'>
+                                    </div>
                                     <p id = 'mainText'style = 'text - align:justify' > $mainText
                                         <br >
                                     </p >
