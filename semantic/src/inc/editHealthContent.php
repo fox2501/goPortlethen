@@ -4,15 +4,16 @@ include("includes/dbconnect.php");
 if(isset($_SESSION['loggedIn'])){
     $userID = $_SESSION['loggedIn'];
     $healthContentID = $_POST['editHealth'];
-    $sql = "SELECT userID from healthContent where healthContentID = $healthContentID";
+    $sql = "SELECT userID from healthcontent where healthContentID = $healthContentID";
     $result = mysqli_query($db, $sql);
     while($row = mysqli_fetch_assoc($result)){
         if($row['userID'] == $userID) {
-            $sql = "SELECT * from healthContent WHERE healthContentID = $healthContentID";
+            $sql = "SELECT * from healthcontent WHERE healthContentID = $healthContentID";
             $result = mysqli_query($db, $sql);
             while ($row = mysqli_fetch_assoc($result)) {
                 $title = $row['title'];
                 $mainText = $row['mainText'];
+                $healthContentID = $row['healthContentID'];
             }
 ?>
 <!DOCTYPE html>
@@ -42,9 +43,9 @@ if(isset($_SESSION['loggedIn'])){
         <div class = "field">
             <label>Edit Main Text</label>
             <textarea rows = 8 type = "text" name = "editMainText"><?php echo $mainText; ?></textarea>
-            <input type = "hidden" name = "editContent" value = <?php $healthContentID; ?>>
         </div>
-        <button class="ui fluid large green submit button" type="submit" onclick = "submitEditHealth.php">Submit</button>
+        <input type = "hidden" name = "editContent" value = <?php $healthContentID ?>>
+        <button class="ui fluid large green submit button" type="submit">Submit</button>
     </form>
 </div>
 
