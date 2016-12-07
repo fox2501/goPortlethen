@@ -94,7 +94,7 @@ if(isset($_SESSION['loggedIn'])){
                                     <br>
                                     </p >
                                     </div>
-                                    <div class='ui divider'></div>
+                                    <div class='ui hidden section divider'></div>
                                 </div>";
                         } else {
                             echo "
