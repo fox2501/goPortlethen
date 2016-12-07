@@ -71,6 +71,11 @@ if(isset($_SESSION['loggedIn'])){
                         $userName = $row['userName'];
                         $datePosted = $row['datePosted'];
                         $healthContentID = $row['healthContentID'];
+                        $sql = "SELECT * from photos WHERE healthContentID = $healthContentID";
+                        $result = $db->query($sql);
+                        while ($row = $result ->fetch_array()){
+                            $photoURL = $row['url'];
+                        }
                         if($canAccess == '1'){
                             echo "
                                 <div class='four wide column'>
@@ -87,7 +92,7 @@ if(isset($_SESSION['loggedIn'])){
                                     <p id='datePosted'>$datePosted
                                         <br>
                                     </p>
-                                    <img class='ui small image' src='https://scontent.flhr4-1.fna.fbcdn.net/v/t1.0-9/13434842_1608517786105160_4523080997776743356_n.jpg?oh=4981b2761c2ef40c4989fc4b74bd440a&oe=58C6B38A' id='image'></img>
+                                    <img class='ui small image' src=$photoURL id='image'></img>
                                     <br >
                                     <p id = 'mainText'style = 'text - align:justify' > $mainText
                                         <br >

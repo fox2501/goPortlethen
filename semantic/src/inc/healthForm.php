@@ -61,7 +61,7 @@ if(isset($_SESSION['loggedIn'])){
                 </div>
             </div>
 
-            <button id="submitButton" class="ui primary button" name = "submit" input type="submit" value="SUBMIT">Submit Content</button>
+            <button id="submitButton" class="ui primary button"  input type="submit" value="SUBMIT">Submit Content</button>
         </form>
     </div>
 
