@@ -26,6 +26,7 @@ echo "
         </div>
         <div class = 'eight wide column'>
             <button class = 'ui right floated button'>
+            <i class = 'ui settings icon'></i>
                     Edit Profile Page
             </button>
         </div>
