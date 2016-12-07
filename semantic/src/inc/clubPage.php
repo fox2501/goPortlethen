@@ -1,15 +1,15 @@
 <?php
 session_start();
 include("includes/dbconnect.php");
-$clubID = $_POST['viewClub'];
-$sql = "SELECT * FROM CLUB WHERE clubID = '$clubID'";
-$result = $db->query($sql_query);
-while ($row = $result->fetch_array()) {
-        $clubName = $row['clubName'];
-        $category = $row['clubCategory'];
-        $clubDesc = $row['clubDescription'];
-        $contactNum = $row['contactNumber'];
-}
+//$clubID = $_POST['viewClub'];
+//$sql = "SELECT * FROM CLUB WHERE clubID = '$clubID'";
+//$result = $db->query($sql_query);
+//while ($row = $result->fetch_array()) {
+//        $clubName = $row['clubName'];
+//        $category = $row['clubCategory'];
+//        $clubDesc = $row['clubDescription'];
+//        $contactNum = $row['contactNumber'];
+//}
 ?>
 <head>
      <meta charset="UTF-8">
@@ -20,7 +20,7 @@ test
 </body>
 <? include("includes/header.php"); ?>
 <?php
-    echo $clubID;
+    echo "test";
 //<body>
 //<div class='ui container''>
 //    <h2 class='ui blue header'>
