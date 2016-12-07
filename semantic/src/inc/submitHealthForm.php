@@ -8,7 +8,7 @@ $title = $_POST["title"];
 $mainText = $_POST["mainText"];
 $userID = $_SESSION["loggedIn"];
 
-$img=$_FILES['img'];
+$img = $_FILES['img'];
 if($img['name']==''){
     echo "<h2>An Image Please.</h2>";
 }else{
