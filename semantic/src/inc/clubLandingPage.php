@@ -98,7 +98,7 @@ if(isset($_SESSION['loggedIn'])) {
     <div class = 'ui grid'>
     <div class = 'ui two wide column'>
         <div class='ui small image'>
-                    <img src='http://secure.cache.images.core.optasports.com/soccer/teams/150x150/961.png'>
+                    <img src='$photo'>
         </div>
     </div>
     <div class = 'ui ten wide column'>
