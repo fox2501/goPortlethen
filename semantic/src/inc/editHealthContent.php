@@ -46,7 +46,7 @@ if(isset($_SESSION['loggedIn'])){
         </div>
         <div class = "field">
             <input type = "hidden" name = "healthContentToEdit" value =
-            "<?php echo $healthContentId ?>">
+            "<?php echo $healthContentID ?>"/>
         </div>
         <button class="ui fluid large green submit button" type="submit">Submit</button>
     </form>
