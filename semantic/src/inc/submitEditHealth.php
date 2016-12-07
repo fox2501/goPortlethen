@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("dbconnect.php");
+include("includes/dbconnect.php");
 
 $title =  $_POST["editTitle"];
 $mainText = $_POST["editMainText"];
