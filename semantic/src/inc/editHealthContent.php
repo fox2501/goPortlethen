@@ -66,9 +66,8 @@ while($row = mysqli_fetch_assoc($result)){
                 while ($row = mysqli_fetch_array($result)) {
                     $mainText = $row['mainText'];
                 }
-                echo "test".$mainText;
-                ?>"
-            </textarea>
+                echo $mainText;
+                ?></textarea>
         </div>
         <button class="ui fluid large green submit button" type="submit">Submit</button>
     </form>
