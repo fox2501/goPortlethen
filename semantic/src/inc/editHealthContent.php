@@ -6,7 +6,7 @@ if(isset($_SESSION['loggedIn'])){
     $sql = "SELECT healthContentID from healthContent where userID = $userID";
     $result = mysqli_query($db, $sql);
     while($row = mysqli_fetch_assoc($result)){
-        if($row['healthContentID'] == $_POST["healthContentID"]) {
+        if($row['healthContentID'] == $_POST['editHealth']) {
             $healthContentID = $_POST['editHealth'];
             $sql = "SELECT * from healthContent WHERE healthContentID = $healthContentID";
             $result = mysqli_query($db, $sql);
