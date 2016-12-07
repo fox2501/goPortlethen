@@ -1,8 +1,8 @@
 <?php
 session_start();
 include("includes/dbconnect.php");
-$clubID = $_POST['viewClub'];
-$sql = "SELECT * FROM club WHERE clubID = '$clubID'";
+//$clubID = $_POST['viewClub'];
+$sql = "SELECT * FROM club WHERE clubID = '61'";
 $result = $db->query($sql_query);
 while ($row = $result->fetch_array()) {
         $clubName = $row['clubName'];
