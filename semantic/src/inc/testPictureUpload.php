@@ -40,7 +40,7 @@ if(isset($_POST['submit'])){
     $healthID =1;
     $routeID =1;
 
-    $sql ="INSERT INTO photos VALUES (?,?,?,?,?,?)";
+    $sql ="INSERT INTO photos(caption,url,clubID,locationID,healthContentID,routeID) VALUES (?,?,?,?,?,?)";
     $pdo->prepare($sql)->execute([$caption,$url,$clubID,$locationID,$healthID,$routeID]);
 
 //    $sql1 = "INSERT INTO photos (caption,url,clubID,locationID,healthContentID,routeID) VALUES ('test','$url','1','1','1','1')";
