@@ -14,4 +14,6 @@ mainText = '$mainText',
 WHERE healthcontentID = $healthContentID;
 ";
 $result = mysqli_query($db, $sql);
+
+header('Location: ../health.php');
 ?>
