@@ -40,10 +40,11 @@ if(empty($img)){
     $url=$pms['data']['link'];
 }
 
+$sql2 = 'SELECT FROM healtContent WHERE healtContentID =?';
+$stmt =$pdo->prepare($sql2);
+$stmt->execute([$healthContentID]);
 
-$stmt = $pdo->query("SELECT FROM healthContent WHERE healthContentID = $healthContentID");
-
-while ($row = $stmt->fetch()){
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
     $healthID = $row['healthContentID'];
 }
 
