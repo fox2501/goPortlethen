@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION['loggedIn'])){
+if (isset($_SESSION['loggedIn'])) {
     $userID = $_SESSION['loggedIn'];
     $canAccess = '0';
     $sql = "SELECT userName from users WHERE userID = '$userID'";
@@ -12,14 +12,17 @@ if(isset($_SESSION['loggedIn'])){
     $result = mysqli_query($db, $sql);
     $row = mysqli_fetch_assoc($result);
     $accessID = $row["accessID"];
-    if($accessID == '1' || $accessID == '4'){
+    if ($accessID == '1' || $accessID == '4') {
         $canAccess = '1';
-    } else{
+    } else {
         $canAccess = '0';
     }
 }
 include("includes/header.php");
 ?>
+<head>
+    <title></title>
+</head>
 <body>
 <h1 align="center">Map Landing Page</h1>
 <div class="ui horizontal section divider">
@@ -28,26 +31,34 @@ include("includes/header.php");
 <div class='ui container'>
     <div class='ui grid'>
         <?php
-        if($canAccess == 1 || $canAccess == 0){
+        if ($canAccess == 1 || $canAccess == 0) {
             echo "        <div class='three wide column'>
-            <a href = 'createRoute.php'>
-                <button class='ui left floating positive fluid button'>Create Route</button>
-            </a>
-        </div>";
+			                        <a href = 'createRoute.php'>
+			                            <button class='ui left floating positive fluid button'>Create Route</button>
+			                        </a>
+			                    </div>";
+        }
+        ?><?php
+        $sql = "SELECT locationName, caption, type FROM locations";
+        $result = $db->query($sql_query);
+        while ($row = $result->fetch_array()) {
+            $locationName = $row['locationName'];
+            $caption = $row['caption'];
+            $type = $row['type'];
+            echo "
+			        <div class='sixteen wide column'>
+			            <div class='ui raised segment'>
+			                <div class='header''>
+			                    $locationName
+			                </div>
+			                <div class='header'>
+			                    $type
+			                </div>
+			            </div>
+			        </div>
+			        ";
         }
         ?>
-        <div class='sixteen wide column'>
-            <div class='ui raised segment'>
-                <div class="item">
-                    <i class="marker icon"></i>
-                    <div class="content">
-                        <a class="header"></a><a href="mapPage.php">Test Route 1</a>
-                    </div>
-                    4.2miles
-                </div>
-            </div>
-        </div>
     </div>
-</div>
-<?php include("includes/footer.php"); ?>
+</div><?php include("includes/footer.php"); ?>
 </body>

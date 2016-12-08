@@ -1,5 +1,6 @@
 <?php
 session_start();
+include("includes/dbconnect.php");
 include("includes/header.php");
 ?>
 <head>
@@ -8,9 +9,9 @@ include("includes/header.php");
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css">
     <title>Map Landing Page</title>
 </head>
-<h1>
-    <center>Maps</center>
-</h1>
+<header class = 'ui centered header'>
+    Maps
+</header>
 <div class="ui horizontal section divider">
     Walking Routes in Porthlethen
 </div>
