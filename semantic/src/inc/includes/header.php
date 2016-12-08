@@ -47,10 +47,14 @@ session_start();
                         <div class = 'ui menu'>
                             <div class = 'item'>
                                 <a href = '/semantic/src/inc/profile.php'>
-                                My Profile
+                                <h2>My Profile</h2>
                                 </a>
                             </div>
-                            <div class = 'item' href = '/semantic/src/inc/profile.php'>Settings</div>
+                            <div class = 'item'>
+                                <a  href = '/semantic/src/inc/profile.php'>
+                                Settings
+                                </a>
+                            </div>
                         </div>
                         </div>
                         <form action = '/semantic/src/inc/includes/logout.php'>
