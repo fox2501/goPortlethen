@@ -1,32 +1,44 @@
 function initMap() {
-    var latlng = {lat: 57.063171, lng: -2.139793};
-    var mapOptions = new google.maps.Map(document.getElementById('map'), {
-        zoom: 12,
-        center: {lat: 57.061681, lng: -2.129468}  // Portlethen.
-    });
+//     var latlng = {lat: 57.063171, lng: -2.139793};
+//     var mapOptions = new google.maps.Map(document.getElementById('map'), {
+//         zoom: 12,
+//         center: {lat: 57.061681, lng: -2.129468}  // Portlethen.
+//     });
+//
+//     // var directionsService = new google.maps.DirectionsService;
+//     // var directionsDisplay = new google.maps.DirectionsRenderer({
+//     //     draggable: true,
+//     //     map: map,
+//     //     panel: document.getElementById('right-panel')
+//     // });
+//     //
+//     // directionsDisplay.addListener('directions_changed', function() {
+//     //     computeTotalDistance(directionsDisplay.getDirections());
+//     // });
+//     //
+//     // displayRoute('57.061959, -2.131337', '57.054993, -2.145402', directionsService,
+//     //     directionsDisplay);
+//     var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+//
+//     var marker = new google.maps.Marker({
+//         position: myLatlng,
+//         title:"Hello World!"
+//     });
+//
+// // To add the marker to the map, call setMap();
+//     marker.setMap(map);
+    var myLatLng = {lat: -25.363, lng: 131.044};
 
-    // var directionsService = new google.maps.DirectionsService;
-    // var directionsDisplay = new google.maps.DirectionsRenderer({
-    //     draggable: true,
-    //     map: map,
-    //     panel: document.getElementById('right-panel')
-    // });
-    //
-    // directionsDisplay.addListener('directions_changed', function() {
-    //     computeTotalDistance(directionsDisplay.getDirections());
-    // });
-    //
-    // displayRoute('57.061959, -2.131337', '57.054993, -2.145402', directionsService,
-    //     directionsDisplay);
-    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 4,
+        center: myLatLng
+    });
 
     var marker = new google.maps.Marker({
-        position: myLatlng,
-        title:"Hello World!"
+        position: myLatLng,
+        map: map,
+        title: 'Hello World!'
     });
-
-// To add the marker to the map, call setMap();
-    marker.setMap(map);
 }
 
 function displayRoute(origin, destination, service, display) {
