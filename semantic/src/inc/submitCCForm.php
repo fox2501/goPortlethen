@@ -11,6 +11,9 @@ if(empty($feePaid)){
     $feePaid = 0;
 }
 $feeCost = $_POST["feeAmount"];
+if(empty($feeCost)){
+    $feeCost = 0;
+}
 $clubCategory = $_POST["clubCategory"];
 
 
