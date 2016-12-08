@@ -83,7 +83,7 @@ if(isset($_SESSION['loggedIn'])) {
                 <div class="field">
                     <label>Please toggle if your club requires a fee: </label>
                     <div class="ui toggle checkbox">
-                        <input type="checkbox" name = "feeRequired" tabindex="0" class="hidden" id="isFee">
+                        <input type="checkbox" name = "feeRequired" tabindex="0" class="hidden" id="isFee" value = "0">
                         <label for = "isFee">Fee does apply</label>
                     </div>
                 </div>
@@ -100,6 +100,7 @@ if(isset($_SESSION['loggedIn'])) {
                         checker.onchange = function () {
                             if (this.checked) {
                                 sendbtn.style.display = 'block';
+                                checker.value = 1;
                             } else {
                                 sendbtn.style.display = 'none';
                             }
