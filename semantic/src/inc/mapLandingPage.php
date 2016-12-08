@@ -40,11 +40,14 @@ include("includes/header.php");
         }
         ?><?php
         $sql = "SELECT locationName, caption, locationType FROM locations";
-        $result = $db->query($sql_query);
-        while ($row = $result->fetch_array()) {
+        $result = mysqli_query($db, $sql);
+        while ($row = mysqli_fetch_assoc($result)) {
             $locationName = $row['locationName'];
             $caption = $row['caption'];
-            $type = $row['type'];
+            $locationType = $row['locationType'];
+            if($locationType == 'hist'){
+                $locationType = 'Historical Landmark';
+            }
             echo "
 			        <div class='sixteen wide column'>
 			            <div class='ui raised segment'>
@@ -52,7 +55,7 @@ include("includes/header.php");
 			                    $locationName
 			                </div>
 			                <div class='header'>
-			                    $type
+			                    $locationType
 			                </div>
 			            </div>
 			        </div>
