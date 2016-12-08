@@ -68,7 +68,8 @@ SELECT A.title, A.mainText, B.userName, A.datePosted, A.healthContentID, C.url
 FROM healthcontent A, users B, photos C
 WHERE 
 A.userID=B.userID
-AND A.healthContentID = C.healthContentID";
+AND A.healthContentID = C.healthContentID
+AND A.approvalStatus = 1;";
                     $result=$db->query($sql_query);
                     while($row = $result-> fetch_array()){
                         $title = $row['title'];
