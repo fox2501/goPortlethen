@@ -39,68 +39,68 @@ if (isset($_SESSION['loggedIn'])) {
             <?php
             include("includes/header.php");
             echo "
-            <body>
-            <div class='ui container'>
-                <div class = 'ui grid'>
-                    <div class = 'eight wide column'>
-                        <header class = 'ui blue huge header'>Edit club: $clubName</header>
-                    </div>
-                </div>
-                <div class='ui grid'>
-                        <div class='four wide column'>
-                            <div class='ui card'>
-                                <div class='image'>
-                                    <img
-                                        src='$photoURL'>
-                                </div>
-                            </div>
-                        </div>
-                        <div class = 'twelve wide column'>
-                        <div class='ui form' action = 'submitEditClub.php' method = 'POST'>
-                            <div class = 'field'>
-                                <label>Edit Club Name</label>
-                                <input type = 'text' name = 'editClubName' value = '$clubName'>
-                            </div>
-                            <div class = 'field'>
-                                <label>Edit Club Description</label>
-                                <textarea rows=8 type='text' name='editDescription'>$clubDesc</textarea>
-                            </div>
-                            <div class = 'field'>
-                                <label>Edit Contact Number</label>
-                                <input type = 'number' name = 'editNumber' value = '$contactNum'>
-                            </div>
-                            <div class = 'field'>
-                                <label>Edit Website</label>
-                                <input type = 'number' name = 'editURL' value = '$websiteURL'>
-                            </div>
-                            <div class = 'field'>
-                                <label>Edit Fee</label>
-                                <input type = 'text' name = 'editFee' value = 'N/A'>
-                            </div>
-                            <div class = 'field'>
-                                <label>Fee Required?</label>
-                                <div class = 'ui selection dropdown'>
-                                    <input type = 'hidden' name = 'editFeeRequired'>
-                                    <i class = 'ui dropdown icon'></i>
-                                    <div class = 'default text'>$feeRequired</div>
-                                        <div class = 'menu'>
-                                            <div class = 'item' data-value = 'yes'>Yes</div>
-                                            <div class = 'item' data-value = 'no'>No</div>
-                                </div>
-                            </div>
-                            <div class = 'field'>
-                                <label>Edit Monthly Cost</label>
-                                <input type = 'number' name = 'editNumber' value = '$feeCost'>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-            </div>
-            </body>
-            <scipt>
-            $('select.dropdown')
+<body>
+	<div class='ui container'>
+		<div class='ui grid'>
+			<div class='eight wide column'>
+				<header class='ui blue huge header'>
+					Edit club: $clubName
+				</header>
+			</div>
+		</div>
+		<div class='ui grid'>
+			<div class='four wide column'>
+				<div class='ui card'>
+					<div class='image'><img src='$photoURL'></div>
+				</div>
+			</div>
+			<div class='twelve wide column'>
+				<div class='ui form'>
+					<div class='field'>
+						<label>Edit Club Name</label> <input name='editClubName' type='text' value='$clubName'>
+					</div>
+					<div class='field'>
+						<label>Edit Club Description</label> 
+						<textarea name='editDescription' rows=\"8\">$clubDesc</textarea>
+					</div>
+					<div class='field'>
+						<label>Edit Contact Number</label> <input name='editNumber' type='number' value='$contactNum'>
+					</div>
+					<div class='field'>
+						<label>Edit Website</label> <input name='editURL' type='number' value='$websiteURL'>
+					</div>
+					<div class='field'>
+						<label>Edit Fee</label> <input name='editFee' type='text' value='N/A'>
+					</div>
+					<div class='field'>
+						<label>Fee Required?</label>
+						<div class='ui selection dropdown' id = 'dropdown'>
+							<input name='editFeeRequired' type='hidden'> <i class='ui dropdown icon'></i>
+							<div class='default text'>
+								$feeRequired
+							</div>
+							<div class='menu'>
+								<div class='item' data-value='yes'>
+									Yes
+								</div>
+								<div class='item' data-value='no'>
+									No
+								</div>
+							</div>
+						</div>
+						<div class='field'>
+							<label>Edit Monthly Cost</label> <input name='editNumber' type='number' value='$feeCost'>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+            <script>
+            $('#dropdown')
                 .dropdown()
-            ;</scipt>";
+            ;</script>";
             include("includes/footer.php");
         } else {
             echo "You do not have permission";
