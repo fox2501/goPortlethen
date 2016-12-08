@@ -33,8 +33,6 @@ if (isset($_SESSION['loggedIn'])) {
 <div class="ui container">
     <div class="ui grid">
         <div class="row">
-        </div>
-        <div class="row">
             <?php
             if ($canAccess == 1) {
                 echo "<div class='four wide column''>
@@ -42,7 +40,6 @@ if (isset($_SESSION['loggedIn'])) {
             </div>";
             }
             ?>
-
             <div class="eight wide column">
                 <div class="ui form">
                     <div class="inline fields">
@@ -77,9 +74,7 @@ if (isset($_SESSION['loggedIn'])) {
     <div class="ui grid">
         <div class="ui hidden divider"></div>
         <div class="ui divided items">
-
             <?php
-
             $sql_query = "SELECT A.clubName, A.clubDescription, A.clubID, B.url FROM club A, photos B WHERE A.clubID = B.clubID";
             $result = $db->query($sql_query);
             while ($row = $result->fetch_array()) {
@@ -88,6 +83,7 @@ if (isset($_SESSION['loggedIn'])) {
                 $clubID = $row['clubID'];
                 $photo = $row['url'];
                 echo "
+<div class = 'ui raised segment'>
 <div class = 'ui container'>
     <div class = 'ui grid'>
     <div class = 'ui two wide column'>
@@ -113,6 +109,7 @@ if (isset($_SESSION['loggedIn'])) {
 
             </div>
      </div>
+</div>
 </div>
 </div>
 <div class = 'ui divider'></div>
