@@ -27,11 +27,11 @@ function initMap() {
 //
 // // To add the marker to the map, call setMap();
 //     marker.setMap(map);
-    var myLatLng = {lat: -25.363, lng: 131.044};
+    var myLatLng = {lat: 57.063171, lng: -2.139793};
 
     var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 4,
-        center: myLatLng
+        zoom: 12,
+        center: {lat: 57.061681, lng: -2.129468}
     });
 
     var marker = new google.maps.Marker({
