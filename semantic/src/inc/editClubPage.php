@@ -19,6 +19,12 @@ if (isset($_SESSION['loggedIn'])) {
                 $contactNum = $row['contactNumber'];
                 $feeRequired = $row['feePaid'];
                 $feeCost = $row['feeCost'];
+                $websiteURL = $row['websiteURL'];
+            }
+            if($feeRequired == 1){
+                $feeRequired = 'Yes';
+            } else{
+                $feeRequired = 'No';
             }
             $sql = "SELECT * from photos WHERE clubID = $clubID";
             $result = $db->query($sql);
@@ -47,15 +53,6 @@ if (isset($_SESSION['loggedIn'])) {
                                     <img
                                         src='$photoURL'>
                                 </div>
-                                <div class='content'>
-                                    <a class='header'>$clubName</a>
-                                    <div class='meta'>
-                                        <span class='date '>Joined in 2016</span>
-                                    </div>
-                                    <div class='description'>
-                                        Best EPL team
-                                    </div>
-                                </div>
                             </div>
                         </div>
                         <div class = 'twelve wide column'>
@@ -69,12 +66,24 @@ if (isset($_SESSION['loggedIn'])) {
                                 <textarea rows=8 type='text' name='editDescription'>$clubDesc</textarea>
                             </div>
                             <div class = 'field'>
-                                <label>Edit Club Location</label>
-                                <input type = 'text' name = 'editClubLoc' value = 'N/A'>
-                            </div>
-                            <div class = 'field'>
                                 <label>Edit Contact Number</label>
                                 <input type = 'number' name = 'editNumber' value = '$contactNum'>
+                            </div>
+                            <div class = 'field'>
+                                <label>Edit Website</label>
+                                <input type = 'number' name = 'editURL' value = '$websiteURL'>
+                            </div>
+                            <div class = 'field'>
+                                <label>Edit Fee</label>
+                                <input type = 'text' name = 'editFee' value = 'N/A'>
+                            </div>
+                            <div class = 'field'>
+                                <label>Fee Required?</label>
+                                <input type = 'text' name = 'editFee' value = '$feeRequired'>
+                            </div>
+                            <div class = 'field'>
+                                <label>Monthly Cost</label>
+                                <input type = 'number' name = 'editNumber' value = '$feeCost'>
                             </div>
                             <div class = 'field'>
                                 <label>Edit Fee</label>

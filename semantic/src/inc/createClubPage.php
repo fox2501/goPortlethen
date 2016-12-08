@@ -66,10 +66,10 @@ if(isset($_SESSION['loggedIn'])) {
                     <label>Club Category</label>
                     <select class="ui search dropdown" name="clubCategory">
                         <option value="">Select Category</option>
-                        <option value="AR">Art</option>
-                        <option value="EP">E-Sport</option>
-                        <option value="HE">Health</option>
-                        <option value="SP">Sport</option>
+                        <option value="ART">Art</option>
+                        <option value="E-SPORT">E-Sport</option>
+                        <option value="HEALTH">Health</option>
+                        <option value="SPORT">Sport</option>
                     </select>
                 </div>
                 <div class="field">
@@ -79,6 +79,10 @@ if(isset($_SESSION['loggedIn'])) {
                 <div class="field">
                     <label>Phone Number</label>
                     <input type="text" name="phoneNumber" maxlength="11" placeholder="Phone Number">
+                </div>
+                <div class="field">
+                    <label>Website URL</label>
+                    <input type="text" name="websiteURL" placeholder="Website URL">
                 </div>
                 <div class="field">
                     <label>Please toggle if your club requires a fee: </label>

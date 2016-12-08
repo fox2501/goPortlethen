@@ -11,6 +11,7 @@ while ($row = $result->fetch_array()) {
         $contactNum = $row['contactNumber'];
         $feeRequired = $row['feePaid'];
         $feeCost = $row['feeCost'];
+        $websiteURL = $row['websiteURL'];
 }
 if($feeRequired == 1){
     $feeRequired = 'Yes';
@@ -70,16 +71,16 @@ echo "
                     <p>$clubDesc</p>
                 </div>
                 <h5 class='ui attached header '>
-                    Location:
-                </h5>
-                <div class='ui attached segment '>
-                    <p>Manchester</p>
-                </div>
-                <h5 class='ui attached header '>
                     Contact Number:
                 </h5>
                 <div class='ui attached segment '>
                     <p>$contactNum</p>
+                </div>
+                <h5 class='ui attached header '>
+                    Website URL:
+                </h5>
+                <div class='ui attached segment '>
+                    <p>$websiteURL</p>
                 </div>
                 <h5 class='ui attached header '>
                     Fee Required?
