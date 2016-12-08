@@ -9,6 +9,14 @@ while ($row = $result->fetch_array()) {
         $category = $row['clubCategory'];
         $clubDesc = $row['clubDescription'];
         $contactNum = $row['contactNumber'];
+        $feeRequired = $row['feePaid'];
+        $feeCost = $row['feeCost'];
+        $websiteURL = $row['websiteURL'];
+}
+if($feeRequired == 1){
+    $feeRequired = 'Yes';
+} else{
+    $feeRequired = 'No';
 }
 $sql = "SELECT * from photos WHERE clubID = $clubID";
 $result = $db->query($sql);
@@ -31,7 +39,7 @@ echo "
         </div>
         <div class = 'eight wide column'>
         <form class = 'ui form' method = 'POST' action = 'editClubPage.php'>
-            <button class = 'ui right floated button' onclick = '/semantic/src/inc/editHealthContent.php' type = 'submit'>
+            <button class = 'ui right floated button' onclick = '/semantic/src/inc/editClubPage.php' type = 'submit'>
                 <input type = 'hidden' name = 'editClub' value = $clubID>
                 <i class = 'ui settings icon'></i>
                     Edit Club
@@ -45,15 +53,6 @@ echo "
                     <div class='image'>
                         <img
                             src='$photoURL'>
-                    </div>
-                    <div class='content'>
-                        <a class='header'>$clubName</a>
-                        <div class='meta'>
-                            <span class='date '>Joined in 2016</span>
-                        </div>
-                        <div class='description'>
-                            Best EPL team
-                        </div>
                     </div>
                 </div>
             </div>
@@ -72,22 +71,28 @@ echo "
                     <p>$clubDesc</p>
                 </div>
                 <h5 class='ui attached header '>
-                    Location:
-                </h5>
-                <div class='ui attached segment '>
-                    <p>Manchester</p>
-                </div>
-                <h5 class='ui attached header '>
                     Contact Number:
                 </h5>
                 <div class='ui attached segment '>
                     <p>$contactNum</p>
                 </div>
                 <h5 class='ui attached header '>
+                    Website URL:
+                </h5>
+                <div class='ui attached segment '>
+                    <p>$websiteURL</p>
+                </div>
+                <h5 class='ui attached header '>
+                    Fee Required?
+                </h5>
+                <div class='ui attached segment '>
+                    <p>$feeRequired</p>
+                </div>
+                <h5 class='ui attached header '>
                     Monthly Fee:
                 </h5>
-                <div class='ui bottom attached segment '>
-                    <p>£1,000,000,000</p>
+                <div class='ui attached segment '>
+                    <p>$feeCost</p>
                 </div>
             </div>
             </div>

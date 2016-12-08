@@ -1,6 +1,7 @@
 <?php
 session_start();
 include("includes/dbconnect.php");
+$userID = $_SESSION['loggedIn'];
 $clubName = $_POST["clubName"];
 $clubDescription = $_POST["clubDescription"];
 $email = $_POST["email"];
@@ -40,8 +41,8 @@ $img=$_FILES['img'];
         $pms = json_decode($out,true);
         $url=$pms['data']['link'];
     }
-$sql = "INSERT INTO club (clubName, clubDescription, email, contactNumber, calendarID, feePaid, feeCost, url, clubCategory, timeStamp)
-VALUES ('$clubName', '$clubDescription', '$email', '$contactNumber', '11', '$feePaid', '$feeCost', 'testurl','$clubCategory', CURRENT_TIMESTAMP)";
+$sql = "INSERT INTO club (clubName, clubDescription, email, contactNumber, calendarID, feePaid, feeCost, url, clubCategory, timeStamp, userID)
+VALUES ('$clubName', '$clubDescription', '$email', '$contactNumber', '11', '$feePaid', '$feeCost', 'testurl','$clubCategory', CURRENT_TIMESTAMP, $userID)";
 $result = mysqli_query($db, $sql);
 
 if($result){
