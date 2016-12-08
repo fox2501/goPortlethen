@@ -31,6 +31,9 @@ if(empty($img)){
     $pms = json_decode($out,true);
     $url=$pms['data']['link'];
 }
+
+
+
 $sql = "INSERT INTO healthcontent (title, mainText, userID, approvalStatus) VALUES ('$title', '$mainText', '$userID', '0')";
 
 $result = (mysqli_query($db, $sql));
