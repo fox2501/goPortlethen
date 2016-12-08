@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("includes/PDOConnect.php.php");
+include("includes/PDOConnect.php");
 
 $title = $_POST["editTitle"];
 $mainText = $_POST["editMainText"];
