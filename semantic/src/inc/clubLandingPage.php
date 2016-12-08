@@ -38,61 +38,55 @@ include("includes/header.php");
             <?php
             if ($canAccess == 1) {
                 echo "
-<div class='four wide column'>
-    <button class='ui button'><a href='/semantic/src/inc/CreateClubPage.php'>Create Club</a></button>
-</div>
-<div class='eight wide column'>
-    <div class='ui form'>
-    <div class='inline field'>
-    <label>Filter clubs by: </label>
-    <div class='field'>
-        <div class='ui radio checkbox'>
-            <input type='radio' name='Club' checked='' tabindex='0' class='hidden' id='A-Z'>
-            <label for='A-Z'>Name A-Z</label>
-        </div>
-    </div>
-    <div class='ui radio checkbox'>
-        <input type='radio' name='Club' tabindex='0' class='hidden' id='fee'>
-        <label for='fee'>Fee does apply</label>
-    </div>
-</div>
-</div>
-</div>
-<div class='four wide column'>
-    <div class='ui fluid category search'>
-        <div class='ui right floated icon input'>
-            <input class='prompt' type='text' placeholder='Search clubs...'>
-            <i class='search icon'></i>
-        </div>
-    </div>
-</div>";
+	<div class='four wide column'>
+		<button class='ui button'><a href='/semantic/src/inc/CreateClubPage.php'>Create Club</a></button>
+	</div>
+	<div class='eight wide column'>
+		<div class='ui form'>
+			<div class='inline field'>
+				<label>Filter clubs by:</label>
+				<div class='field'>
+					<div class='ui radio checkbox'>
+						<input checked class='hidden' id='A-Z' name='Club' tabindex='0' type='radio'> <label for='A-Z'>Name A-Z</label>
+					</div>
+				</div>
+				<div class='ui radio checkbox'>
+					<input class='hidden' id='fee' name='Club' tabindex='0' type='radio'> <label for='fee'>Fee does apply</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class='four wide column'>
+		<div class='ui fluid category search'>
+			<div class='ui right floated icon input'>
+				<input class='prompt' placeholder='Search clubs...' type='text'> <i class='search icon'></i>
+			</div>
+		</div>
+	</div>";
             } else {
                 echo "
-<div class='eight wide column'>
-    <div class='ui form'>
-                    <div class='inline field'>
-    <label>Filter clubs by: </label>
-    <div class='field'>
-        <div class='ui radio checkbox'>
-            <input type='radio' name='Club' checked='' tabindex='0' class='hidden' id='A-Z'>
-            <label for='A-Z'>Name A-Z</label>
-        </div>
-    </div>
-    <div class='ui radio checkbox'>
-        <input type='radio' name='Club' tabindex='0' class='hidden' id='fee'>
-        <label for='fee'>Fee does apply</label>
-    </div>
-</div>
-</div>
-</div>
-<div class='eight wide column'>
-    <div class='ui fluid category search'>
-        <div class='ui right floated icon input'>
-            <input class='prompt' type='text' placeholder='Search clubs...'>
-            <i class='search icon'></i>
-        </div>
-    </div>
-</div>";
+	<div class='eight wide column'>
+		<div class='ui form'>
+			<div class='inline field'>
+				<label>Filter clubs by:</label>
+				<div class='field'>
+					<div class='ui radio checkbox'>
+						<input checked class='hidden' id='A-Z' name='Club' tabindex='0' type='radio'> <label for='A-Z'>Name A-Z</label>
+					</div>
+				</div>
+				<div class='ui radio checkbox'>
+					<input class='hidden' id='fee' name='Club' tabindex='0' type='radio'> <label for='fee'>Fee does apply</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class='eight wide column'>
+		<div class='ui fluid category search'>
+			<div class='ui right floated icon input'>
+				<input class='prompt' placeholder='Search clubs...' type='text'> <i class='search icon'></i>
+			</div>
+		</div>
+	</div>";
             }
             ?>
             <div class="eight wide column">
