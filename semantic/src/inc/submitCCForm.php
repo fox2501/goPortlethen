@@ -40,7 +40,7 @@ $result = mysqli_query($db, $sql);
 
 sleep(2);
 
-if(mysqli_affected_rows() > 0){
+if(mysqli_affected_rows($db) > 0){
     $sql2 ="SELECT clubID FROM club WHERE timeStamp = (SELECT MAX(timeStamp) FROM club)";
     $result = mysqli_query($db, $sql2);
     while($row = mysqli_fetch_assoc($result)){
