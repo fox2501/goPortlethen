@@ -1,3 +1,17 @@
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <!--<![endif]-->
+<!-- Set the viewport width to device width for mobile -->
+<!-- Included CSS Files -->
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="stylesheets/ie.css">
+<![endif]--><script type="text/javascript" src="javascripts/modernizr.foundation.js"></script>
+<!-- IE Fix for HTML5 Tags -->
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
 <?
 session_start();
 include("dbconnect.php");
