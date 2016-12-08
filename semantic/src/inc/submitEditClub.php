@@ -19,7 +19,7 @@ clubDescription = '$clubDesc',
 contactNumber = '$contactNum',
 websiteURL = '$websiteURL',
 feePaid = 0,
-feeCost = '$feeCost',
+feeCost = '$feeCost'
 WHERE clubID = '$clubID';
 ";
 $result = mysqli_query($db, $sql);
