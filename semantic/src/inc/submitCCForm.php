@@ -38,7 +38,11 @@ $sql = "INSERT INTO club (clubName, clubDescription, email, contactNumber, calen
 VALUES ('$clubName', '$clubDescription', '$email', '$contactNumber', '11', '$feePaid', '$feeCost', 'testurl','$clubCategory', CURRENT_TIMESTAMP)";
 $result = mysqli_query($db, $sql);
 
-sleep(2);
+if($result){
+    sleep(2);
+} else{
+    die;
+}
 
 if(mysqli_affected_rows($db) > 0){
     $sql2 ="SELECT clubID FROM club WHERE timeStamp = (SELECT MAX(timeStamp) FROM club)";
