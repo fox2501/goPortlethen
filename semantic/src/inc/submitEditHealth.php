@@ -44,7 +44,7 @@ if(empty($img)){
 }
 
 
-$stmt = $pdo->query("SELECT FROM healthContent WHERE healthContentID = (SELECT MAX(healthContentID) FROM healthContent)");
+$stmt = $pdo->query("SELECT FROM healthContent WHERE healthContentID = $healthContentID");
 
 while ($row = $stmt->fetch()){
     $healthID = $row['healthContentID'];
