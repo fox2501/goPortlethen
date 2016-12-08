@@ -33,7 +33,7 @@ if (isset($_SESSION['loggedIn'])) {
             $datePosted = $row['datePosted'];
             $healthContentID = $row['healthContentID'];
             $photoURL = $row['url'];
-        echo "
+            echo "
 <div class='row'>
     <ul>
 <div class = 'ui container'>
@@ -75,6 +75,7 @@ if (isset($_SESSION['loggedIn'])) {
 </div>
 <div class='ui hidden section divider'></div>
 ";
+        }
     }
 }
 ?>
