@@ -7,6 +7,9 @@ $email = $_POST["email"];
 $contactNumber = $_POST["phoneNumber"];
 //$calendarID = $_POST["calendarID"];
 $feePaid = $_POST["feeRequired"];
+if(empty($feePaid)){
+    $feePaid = 0;
+}
 $feeCost = $_POST["feeAmount"];
 $clubCategory = $_POST["clubCategory"];
 
