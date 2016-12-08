@@ -39,7 +39,7 @@ include("includes/header.php");
 			                    </div>";
         }
         ?><?php
-        $sql = "SELECT locationName, caption, type FROM locations";
+        $sql = "SELECT locationName, caption, locationType FROM locations";
         $result = $db->query($sql_query);
         while ($row = $result->fetch_array()) {
             $locationName = $row['locationName'];
