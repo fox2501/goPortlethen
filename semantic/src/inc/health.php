@@ -122,26 +122,33 @@ AND A.healthContentID = C.healthContentID";
 ";
                         } else {
                             echo "
-                                <div class='four wide column'>
-                                <div class = 'ui raised segment'>
-                                    <h3 class='ui header' id='title'>
-                                                $title
-                                    </h3>
-                                    <p id='datePosted'>$datePosted
-                                        <br>
-                                    </p>
-                                    <div class='ui small image'>
-                                        <img src='$photoURL'>
-                                    </div>
-                                    <p id='mainText' style='text - align:justify'>$mainText
-                                        <br>
-                                    </p>
-                                    <p id='author'>By $userName;
-                                        <br>
-                                    </p>
-                                </div>
-                                <div class='ui hidden section divider'></div>
-                                </div>";
+<div class='ui raised segment'>
+    <div class='ui container'>
+        <div class='ui grid'>
+                <div class='eight wide column'>
+                    <h3 class='ui header' id='title'>
+                        $title
+                    </h3>
+                    <p id='datePosted'>$datePosted
+                        <br>
+                    </p>
+                    <div class='ui small image'>
+                        <img src='$photoURL'>
+                    </div>
+                </div>
+                <div class='eight wide column'>
+                    <p id='mainText' style='text - align:justify'> $mainText
+                        <br>
+                    </p>
+                    <p id='author'> By $userName
+                        <br>
+                    </p>
+                </div>
+        </div>
+    </div>
+</div>
+<div class='ui hidden section divider'></div>
+                                ";
                         }
                         } ?>
                 </ul>
