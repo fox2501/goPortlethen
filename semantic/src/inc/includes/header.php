@@ -22,7 +22,7 @@ include("dbconnect.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://drive.google.com/host/0B2m83bREH_c9dzU2WkVMcU1BNGs/">
+    <link rel="stylesheet" href="https://dl.dropbox.com/s/fc45fa0c4s1o95c/semantic.css?dl=0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
