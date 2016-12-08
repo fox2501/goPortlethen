@@ -18,7 +18,7 @@ SET clubName = '$clubName',
 clubDescription = '$clubDesc',
 contactNumber = '$contactNum',
 websiteURL = '$websiteURL',
-feePaid = 1,
+feePaid = '$feeRequired',
 feeCost = '$feeCost'
 WHERE clubID = '$clubID';
 ";
