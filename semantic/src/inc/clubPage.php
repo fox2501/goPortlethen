@@ -30,10 +30,13 @@ echo "
             <header class = 'ui blue huge header'>$clubName Club Profile Page</header>
         </div>
         <div class = 'eight wide column'>
-            <button class = 'ui right floated button'>
-            <i class = 'ui settings icon'></i>
-                    Edit Profile Page
+        <form class = 'ui form' method = 'POST' action = 'editClubPage.php'>
+            <button class = 'ui right floated button' onclick = '/semantic/src/inc/editHealthContent.php' type = 'submit'>
+                <input type = 'hidden' name = 'editClub' value = $clubID>
+                <i class = 'ui settings icon'></i>
+                    Edit Club
             </button>
+        </form>
         </div>
     </div>
     <div class='ui grid'>
