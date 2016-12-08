@@ -98,7 +98,7 @@ if (isset($_SESSION['loggedIn'])) {
 	</div>
 </body>
             <script>
-            $('select.dropdown')
+            $('ui.selection.dropdown')
                 .dropdown()
             ;</script>";
             include("includes/footer.php");
