@@ -48,7 +48,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
     $healthID = $row['healthContentID'];
 }
 
-if($url =""){
+if(empty($url)){
 
 }
 else{
