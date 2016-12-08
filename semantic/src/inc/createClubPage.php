@@ -149,8 +149,7 @@ if(isset($_SESSION['loggedIn'])) {
         </form>
 
         <script type="text/javascript">
-            $('.ui.form')
-                .form({
+            $('.ui.form').form({
                     fields: {
                         name: {
                             identifier: 'clubName',
