@@ -50,7 +50,7 @@ if(isset($_SESSION['loggedIn'])) {
             </div>
             <div class="ui form attached fluid segment">
                 <div class="ui error message"></div>
-                <div class="field">
+                <div class="required field">
                     <label>Club Name</label>
                     <div class="field">
                         <input type="text" name="clubName" placeholder="Enter your club name." id="clubName">
