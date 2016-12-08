@@ -61,7 +61,7 @@ $pdo->prepare($sql)->execute([$title,$mainText,$userID,$approvalLvl]);
 $healthID = $pdo->lastInsertId();
 
 $sql = "INSERT INTO photos (caption,url,clubID,locationID,healthContentID,routeID) VALUES (?,?,?,?,?,?)";
-$pdo->prepare($sql)->execute('',$url,0,0,$healthID,0);
+$pdo->prepare($sql)->execute(['',$url,0,0,$healthID,0]);
 
 
 
