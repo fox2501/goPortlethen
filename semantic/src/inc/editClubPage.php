@@ -5,7 +5,7 @@ include("includes/dbconnect.php");
 if (isset($_SESSION['loggedIn'])) {
     $userID = $_SESSION['loggedIn'];
     $clubID = $_POST['editClub'];
-    $sql = "SELECT userID from club where clubID = $healthContentID";
+    $sql = "SELECT userID from club where clubID = $clubID";
     $result = mysqli_query($db, $sql);
     while ($row = mysqli_fetch_assoc($result)) {
         if ($row['userID'] == $userID) {
