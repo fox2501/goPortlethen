@@ -35,11 +35,10 @@ $img=$_FILES['img'];
         $url=$pms['data']['link'];
     }
 $sql = "INSERT INTO club (clubName, clubDescription, email, contactNumber, calendarID, feePaid, feeCost, url, clubCategory)
-VALUES ('$clubName', '$clubDescription', '$email', '$contactNumber', '11', '$feePaid', '$feeCost', 'testurl','$clubCategory')";
+VALUES ('$clubName', '$clubDescription', '$email', '$contactNumber', '11', '$feePaid', '$feeCost', 'testurl','$clubCategory', CURRENT_TIMESTAMP)";
 $result = mysqli_query($db, $sql);
 
-if($result){
-    $sql2 ="SELECT clubID FROM club WHERE clubID = (SELECT MAX(clubID) FROM club)";
+    $sql2 ="SELECT clubID FROM club WHERE timeStamp = (SELECT MAX(timeStamp) FROM club)";
     $result = mysqli_query($db, $sql2);
     while($row = mysqli_fetch_assoc($result)){
         $clubID = $row['clubID'];
@@ -48,8 +47,5 @@ if($result){
     $sql1 = "INSERT INTO photos (caption,url,clubID,locationID,healthContentID,routeID) VALUES ('test','$url',$clubID,'0','0','0')";
 
     $result = (mysqli_query($db, $sql1));
-}
-
-//t
 
 header("location:clubLandingPage.php");?>
