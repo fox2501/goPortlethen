@@ -1,6 +1,8 @@
 <?php
+
 session_start();
 include("includes/dbconnect.php");
+
 if (isset($_SESSION['loggedIn'])) {
     include("includes/header.php");
     echo "<h1 align='center'>Approvals</h1>
