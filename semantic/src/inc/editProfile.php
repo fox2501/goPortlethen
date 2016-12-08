@@ -63,7 +63,7 @@ if (isset($_SESSION['loggedIn'])) {
                             <label>Email Address</label>
                             <input type = "text" name = "email" value =
                             "<?php
-                            echo $emailAddress;
+                            echo $email;
                             ?>">
                         </div>
                         <button class="ui fluid large green submit button" type="submit">Submit</button>
