@@ -53,8 +53,9 @@ if (isset($_SESSION['loggedIn'])) {
 								<form action='approveHealthContent.php' class='ui form' method='post'>
 									<button class='ui positive right floated mini button' onclick='/semantic/src/inc/approveHealthContent.php' type='submit'><input name='approveHealth' type='hidden' value='$healthContentID'> Approve</button>
 								</form>
+								<br>
 								<form action='denyHealthContent.php' class='ui form' method='post'>
-									<button class='ui negative right floated mini button' onclick='/semantic/src/inc/denyHealthContent.php' type='submit'><input name='denyHealth' type='hidden' value='$healthContentID'> Approve</button>
+									<button class='ui negative right floated mini button' onclick='/semantic/src/inc/denyHealthContent.php' type='submit'><input name='denyHealth' type='hidden' value='$healthContentID'> Deny</button>
 								</form>
 							</div>
 						</div>
