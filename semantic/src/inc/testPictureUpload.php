@@ -1,7 +1,7 @@
 <?php
 
 include("includes/dbconnect.php");
-includeW("includes/PDOConnect.php");
+include("includes/PDOConnect.php");
 
 $img=$_FILES['img'];
 if(isset($_POST['submit'])){
