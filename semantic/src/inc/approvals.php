@@ -40,12 +40,12 @@ if (isset($_SESSION['loggedIn'])) {
 				<div class='ui container'>
 					<div class='ui grid'>
 						<div class='row'>
-							<div class='seven wide column'>
+							<div class='four wide column'>
 								<h3 class='ui header' id='title'>$title</h3>
 								<p id='datePosted'>$datePosted<br></p>
 								<div class='ui small image'><img src='$photoURL'></div>
 							</div>
-							<div class='seven wide column'>
+							<div class='ten wide column'>
 								<p id='mainText' style='text - align:justify'>$mainText<br></p>
 								<p id='author'>By $userName<br></p>
 							</div>
