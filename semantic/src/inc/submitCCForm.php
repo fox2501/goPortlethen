@@ -12,7 +12,7 @@ $clubName        = $_POST["clubName"];
 $clubDescription = $_POST["clubDescription"];
 $email           = $_POST["email"];
 $contactNumber   = $_POST["phoneNumber"];
-$feePaid         = $_POST["feeRequired"];
+//$feePaid         = $_POST["feeRequired"];
 if (empty($feePaid)) {
     $feePaid = 0;
 }
