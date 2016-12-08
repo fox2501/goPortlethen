@@ -39,6 +39,11 @@ if (isset($_SESSION['loggedIn'])) {
             <?php
             include("includes/header.php");
             echo "
+<script>
+$('#dropdown')
+    .dropdown()
+;
+</script>
 <body>
 	<div class='ui container'>
 		<div class='ui grid'>
@@ -97,10 +102,7 @@ if (isset($_SESSION['loggedIn'])) {
 		</div>
 	</div>
 </body>
-            <script>
-            $('#dropdown')
-                .dropdown()
-            ;</script>";
+";
             include("includes/footer.php");
         } else {
             echo "You do not have permission";
