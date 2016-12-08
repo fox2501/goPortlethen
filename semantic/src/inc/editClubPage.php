@@ -97,8 +97,9 @@ $('#dropdown')
 					<div class='field'>
 						<input name='clubToEdit' type='hidden' value='$clubID'>
 					</div>
+					<button class='ui fluid large green submit button' type='submit'>Submit</button> 
 				</form>
-			</div><button class='ui fluid large green submit button' type='submit'>Submit</button> 
+			</div>
 		</div>
 	</div>
 </body>
