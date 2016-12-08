@@ -10,31 +10,19 @@ $websiteURL = $_POST['editURL'];
 $feeRequired = $_POST['editFeeRequired'];
 $feeCost = $_POST['editCost'];
 
-echo $clubName;
-echo '        ';
-echo $clubID;
-echo '        ';
-echo $clubDesc;
-echo '        ';
-echo $contactNum;
-echo '        ';
-echo $websiteURL;
-echo '        ';
-echo $feeRequired;
-echo '        ';
-echo $feeCost;
+//FEE REQUIRED DOES NOT WORK
 
-//$sql = "
-//UPDATE club
-//SET clubName = '$clubName',
-//clubDescription = '$clubDesc',
-//contactNumber = '$contactNum',
-//websiteURL = '$websiteURL',
-//feePaid = '$feeRequired',
-//feeCost = '$feeCost',
-//WHERE clubID = $clubID;
-//";
-//$result = mysqli_query($db, $sql);
-//
-//header('Location: /semantic/src/inc/clubLandingPage.php');
+$sql = "
+UPDATE club
+SET clubName = '$clubName',
+clubDescription = '$clubDesc',
+contactNumber = '$contactNum',
+websiteURL = '$websiteURL',
+feePaid = '0',
+feeCost = '0.0',
+WHERE clubID = $clubID;
+";
+$result = mysqli_query($db, $sql);
+
+header('Location: /semantic/src/inc/clubLandingPage.php');
 ?>
