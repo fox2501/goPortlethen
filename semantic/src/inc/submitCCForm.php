@@ -51,7 +51,7 @@ if ($img['name'] == '') {
     $url = $pms['data']['link'];
 }
 
-$sql    = "INSERT INTO club (clubName, clubDescription, email, contactNumbe, feePaid, feeCost, websiteURL, clubCategory, userID)
+$sql    = "INSERT INTO club (clubName, clubDescription, email, contactNumber, feePaid, feeCost, websiteURL, clubCategory, userID)
 VALUES (?,?,?,?,?,?,?,?,?,?,?)";
 $pdo->prepare($sql)->execute([$clubName,$clubDescription,$email,$contactNumber,$feePaid,$feeCost,'',$clubCategory,$userID]);
 
