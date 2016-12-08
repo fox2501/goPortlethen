@@ -3,6 +3,9 @@ session_start();
 include("includes/dbconnect.php");
 if (isset($_SESSION['loggedIn'])) {
     include("includes/header.php");
+    echo "<h1 align='center'>Approvals</h1>
+        <div class='ui horizontal section divider'>
+        </div>";
     $userID = $_SESSION['loggedIn'];
     $sql = "SELECT userName from users where userID = '$userID'";
     $result = mysqli_query($db, $sql);
@@ -30,49 +33,36 @@ if (isset($_SESSION['loggedIn'])) {
             $datePosted = $row['datePosted'];
             $healthContentID = $row['healthContentID'];
             $photoURL = $row['url'];
-        }
-        echo "
+            echo "
 <div class='row'>
-    <ul>
-<div class = 'ui container'>
-<div class='ui raised segment'>
-    <div class='ui container'>
-        <div class='ui grid'>
-            <div class='sixteen wide column'>
-                <form class='ui form' method='POST' action='editHealthContent.php'>
-                    <button class='ui positive right floated mini button' onclick='/semantic/src/inc/editHealthContent.php'
-                            type='submit'>
-                        <input type='hidden' name='editHealth' value=$healthContentID> Approve
-                    </button>
-                </form>
-            </div>
-            <div class='row'>
-                <div class='eight wide column'>
-                    <h3 class='ui header' id='title'>
-                        $title
-                    </h3>
-                    <p id='datePosted'>$datePosted
-                        <br>
-                    </p>
-                    <div class='ui small image'>
-                        <img src='$photoURL'>
-                    </div>
-                </div>
-                <div class='eight wide column'>
-                    <p id='mainText' style='text - align:justify'> $mainText
-                        <br>
-                    </p>
-                    <p id='author'> By $userName
-                        <br>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-<div class='ui hidden section divider'></div>
+		<div class='ui container'>
+			<div class='ui raised segment'>
+				<div class='ui container'>
+					<div class='ui grid'>
+						<div class='sixteen wide column'>
+							<form action='editHealthContent.php' class='ui form' method='post'>
+								<button class='ui positive right floated mini button' onclick='/semantic/src/inc/editHealthContent.php' type='submit'><input name='editHealth' type='hidden' value=\"\&quot;$healthContentID\&quot;\"> Approve</button>
+							</form>
+						</div>
+						<div class='row'>
+							<div class='eight wide column'>
+								<h3 class='ui header' id='title'>$title</h3>
+								<p id='datePosted'>$datePosted<br></p>
+								<div class='ui small image'><img src='$photoURL'></div>
+							</div>
+							<div class='eight wide column'>
+								<p id='mainText' style='text - align:justify'>$mainText<br></p>
+								<p id='author'>By $userName<br></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='ui hidden section divider'></div>
+	</div>
 ";
+        }
     }
 }
 ?>
