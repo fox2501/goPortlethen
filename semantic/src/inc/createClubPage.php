@@ -150,8 +150,8 @@ if(isset($_SESSION['loggedIn'])) {
         </form>
 
         <script type="text/javascript">
-            $('.ui.form')
-                .form({
+            $('.ui.form').form({
+                    fields: {
                         email: {
                             identifier: 'email',
                             rules: [
@@ -171,7 +171,8 @@ if(isset($_SESSION['loggedIn'])) {
                             ]
                         }
                     }
-                )
+                }
+            )
             ;
         </script>
 
