@@ -1,16 +1,13 @@
 <?php
 session_start();
 ?>
-<!DOCTYPE html>
-<html lang="en">
+<?php include("includes/header.php"); ?>
 <head>
     <script type="text/javascript" src="https://goportlethencs8.azurewebsites.net/semantic/dist/routeplot.js"></script>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css">
     <title>Map Landing Page</title>
 </head>
-<?php include("includes/header.php"); ?>
-
 <h1>
     <center>Maps</center>
 </h1>
