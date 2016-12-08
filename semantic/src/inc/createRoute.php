@@ -1,5 +1,6 @@
 <?php
 session_start();
+include ( "includes/dbconnect.php");
 include("includes/header.php");
 ?>
 <h1 align="center">Submit Map Content</h1>

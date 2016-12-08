@@ -1,7 +1,25 @@
 <?php
 session_start();
+if(isset($_SESSION['loggedIn'])){
+    $userID = $_SESSION['loggedIn'];
+    $canAccess = '0';
+    $sql = "SELECT userName from users WHERE userID = '$userID'";
+    $result = mysqli_query($db, $sql);
+    $row = mysqli_fetch_assoc($result);
+    $userName = $row["userName"];
+
+    $sql = "SELECT accessID from useraccess where userName = '$userName'";
+    $result = mysqli_query($db, $sql);
+    $row = mysqli_fetch_assoc($result);
+    $accessID = $row["accessID"];
+    if($accessID == '1' || $accessID == '4'){
+        $canAccess = '1';
+    } else{
+        $canAccess = '0';
+    }
+}
+include("includes/header.php");
 ?>
-<?php include("includes/header.php"); ?>
 <body>
 <h1 align="center">Map Landing Page</h1>
 <div class="ui horizontal section divider">
@@ -9,11 +27,15 @@ session_start();
 </div>
 <div class='ui container'>
     <div class='ui grid'>
-        <div class='three wide column'>
+        <?php
+        if($canAccess == 1 || $canAccess == 0){
+            echo "        <div class='three wide column'>
             <a href = 'createRoute.php'>
-                <button class="ui left floating positive fluid button">Create Route</button>
+                <button class='ui left floating positive fluid button'>Create Route</button>
             </a>
-        </div>
+        </div>";
+        }
+        ?>
         <div class='sixteen wide column'>
             <div class='ui raised segment'>
                 <div class="item">
