@@ -141,9 +141,9 @@ if(isset($_SESSION['loggedIn'])) {
                 </div>
                 <div class="required inline field">
                     <div class="ui checkbox">
-                        <input type="checkbox" tabindex="0" class="hidden" name="termsAndConditions"
-                               id="termsAndConditions">
-                        <label for="termsAndConditions">I agree to the terms and conditions</label>
+                        <input type="checkbox" tabindex="0" class="hidden" name="terms"
+                               id="terms">
+                        <label for="terms">I agree to the terms and conditions</label>
                     </div>
                 </div>
             <button class="ui fluid large green submit button" id="createClub" type="submit">Create Club</button>
@@ -159,6 +159,24 @@ if(isset($_SESSION['loggedIn'])) {
                                 {
                                     type   : 'empty',
                                     prompt : 'Please enter your clubs name'
+                                }
+                            ]
+                        },
+                        terms: {
+                            identifier: 'terms',
+                            rules: [
+                                {
+                                    type   : 'checked',
+                                    prompt : 'You must agree to the terms and conditions'
+                                }
+                            ]
+                        },
+                        dropdown: {
+                            identifier  : 'clubCategory',
+                            rules: [
+                                {
+                                    type   : 'empty',
+                                    prompt : 'Please select a club category'
                                 }
                             ]
                         }
