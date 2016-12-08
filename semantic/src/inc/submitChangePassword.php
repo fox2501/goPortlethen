@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("dbconnect.php");
+include("includes/dbconnect.php");
 
 $password = $_POST["passwordOne"];
 $passwordConfirm = $_POST["passwordConfirm"];
