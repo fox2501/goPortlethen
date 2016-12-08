@@ -39,13 +39,15 @@ session_start();
         <?php
             if(isset($_SESSION['loggedIn'])){
                 echo "  
-<div class = 'ui dropdown'>
-    <div class = 'text'>
-        <i class='user icon'></i> " .$_SESSION['name']. " <i class='dropdown icon'></i>
-        <div class = 'menu'>
-            <div class = 'item'>
-                <a class = 'item' href = '/semantic/src/inc/profile.php'>My Profile</a>
-            </div>
+<div class='ui menu'>
+    <!--<a class = 'browse item' href = '/semantic/src/inc/profile.php'>-->
+    <i class='user icon'></i> " .$_SESSION['name']. " <i class='dropdown icon'></i>
+    <div class='ui menu'>
+        <div class='item'>
+            My Profile
+        </div>
+        <div class='item'>
+            Settings
         </div>
     </div>
 </div>
