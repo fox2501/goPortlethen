@@ -53,7 +53,7 @@ if(isset($_SESSION['loggedIn'])) {
                 <div class="field">
                     <label>Club Name</label>
                     <div class="field">
-                        <input type="text" name="clubName" placeholder="Enter your club name.">
+                        <input type="text" name="clubName" placeholder="Enter your club name." id="clubName">
                     </div>
                 </div>
                 <div class="field">
@@ -151,6 +151,16 @@ if(isset($_SESSION['loggedIn'])) {
         <script type="text/javascript">
             $('.ui.form')
                 .form({
+                    fields: {
+                        name: {
+                            identifier: 'clubName',
+                            rules: [
+                                {
+                                    type: 'empty',
+                                    prompt: 'Please enter the name of your club'
+                                }
+                            ]
+                        },
                         email: {
                             identifier: 'email',
                             rules: [
