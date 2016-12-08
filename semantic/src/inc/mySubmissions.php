@@ -47,7 +47,7 @@ if (isset($_SESSION['loggedIn'])) {
                                 <p id='datePosted'>$datePosted<br></p>
                                 <div class='ui small image'><img src='$photoURL'></div>
                             </div>
-                            <div class='eight wide column'>
+                            <div class='twelve wide column'>
                                 <p id='mainText' style='text - align:justify'>$mainText<br></p>
                                 <p id='author'>By $userName<br></p>
                             </div>
