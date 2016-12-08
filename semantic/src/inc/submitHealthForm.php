@@ -21,6 +21,7 @@ $stmt = $pdo->prepare($sql);
 $stmt->execute([$userName]);
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
 $accessID = $row["accessID"];
+$accessLevel = $row["accessID"];
 
 $img = $_FILES['healthPhoto'];
 if(empty($img)){
