@@ -35,18 +35,15 @@ if (isset($_SESSION['loggedIn'])) {
                 <form class="ui form" action="submitEditHealth.php" method="POST">
                     <div class="field">
                         <label>Edit Title</label>
-                        <input type="text" name="editTitle" value=
-                        "<?php
-                        echo $title;
-                        ?>">
+                        <input type="text" name="editTitle" value='$title'>
                     </div>
                     <div class="field">
                         <label>Edit Main Text</label>
-                        <textarea rows=8 type="text" name="editMainText"><?php echo $mainText; ?></textarea>
+                        <textarea rows=8 type="text" name="editMainText" value ='$mainText'</textarea>
                     </div>
                     <div class="field">
                         <input type="hidden" name="healthContentToEdit" value=
-                        "<?php echo $healthContentID ?>"/>
+                        '$healthContentID'/>
                     </div>
                     <button class="ui fluid large green submit button" type="submit">Submit</button>
                 </form>
