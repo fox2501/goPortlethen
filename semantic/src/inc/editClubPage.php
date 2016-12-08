@@ -1,24 +1,18 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
 session_start();
-
-include("includes/PDOConnect.php");
+include("includes/dbconnect.php");
 
 if (isset($_SESSION['loggedIn'])) {
     $userID = $_SESSION['loggedIn'];
     $clubID = $_POST['editClub'];
-    $sql = "SELECT userID from club where clubID = ?";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([$clubID]);
-    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+    $sql = "SELECT userID from club where clubID = $clubID";
+    $result = mysqli_query($db, $sql);
+    while ($row = mysqli_fetch_assoc($result)) {
         if ($row['userID'] == $userID) {
             $clubID = $_POST['editClub'];
-            $sql = "SELECT * FROM club WHERE clubID = ?";
-            $stmt = $pdo->prepare($sql);
-            $stmt->execute([$clubID]);
-            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $sql = "SELECT * FROM club WHERE clubID = '$clubID'";
+            $result = $db->query($sql);
+            while ($row = $result->fetch_array()) {
                 $clubName = $row['clubName'];
                 $category = $row['clubCategory'];
                 $clubDesc = $row['clubDescription'];
@@ -32,10 +26,9 @@ if (isset($_SESSION['loggedIn'])) {
             } else{
                 $feeRequired = 'No';
             }
-            $sql = "SELECT * from photos WHERE clubID = ?";
-            $stmt =  $pdo->prepare($sql);
-            $stmt->execute([$clubID]);
-            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $sql = "SELECT * from photos WHERE clubID = $clubID";
+            $result = $db->query($sql);
+            while ($row = $result->fetch_array()) {
                 $photoURL = $row['url'];
             }
             ?>
