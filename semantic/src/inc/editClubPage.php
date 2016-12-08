@@ -17,6 +17,8 @@ if (isset($_SESSION['loggedIn'])) {
                 $category = $row['clubCategory'];
                 $clubDesc = $row['clubDescription'];
                 $contactNum = $row['contactNumber'];
+                $feeRequired = $row['feePaid'];
+                $feeCost = $row['feeCost'];
             }
             $sql = "SELECT * from photos WHERE clubID = $clubID";
             $result = $db->query($sql);

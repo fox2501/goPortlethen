@@ -9,6 +9,8 @@ while ($row = $result->fetch_array()) {
         $category = $row['clubCategory'];
         $clubDesc = $row['clubDescription'];
         $contactNum = $row['contactNumber'];
+        $feeRequired = $row['feePaid'];
+        $feeCost = $row['feeCost'];
 }
 $sql = "SELECT * from photos WHERE clubID = $clubID";
 $result = $db->query($sql);
@@ -84,10 +86,22 @@ echo "
                     <p>$contactNum</p>
                 </div>
                 <h5 class='ui attached header '>
-                    Monthly Fee:
+                    Fee Required?
                 </h5>
                 <div class='ui bottom attached segment '>
-                    <p>£1,000,000,000</p>
+                    <p>
+                    if($feeRequired == 1){
+                        echo 'Yes';
+                    } else{
+                        echo 'No';
+                    }
+                    </p>
+                </div>
+                <h5 class='ui attached header '>
+                    Fee Cost:
+                </h5>
+                <div class='ui bottom attached segment '>
+                    <p>$feeCost</p>
                 </div>
             </div>
             </div>
