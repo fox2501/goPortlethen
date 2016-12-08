@@ -3,21 +3,22 @@
 
 session_start();
 
-include("includes/dbconnect.php");
+include("includes/PDOConnect.php");
 $title = $_POST["title"];
 $mainText = $_POST["mainText"];
 $userID = $_SESSION["loggedIn"];
 
-$sql = "SELECT userName from users where userID = '$userID'";
-$result = mysqli_query($db, $sql);
-while ($row = mysqli_fetch_assoc($result)) {
-    $userName = $row['userName'];
-}
-$sql = "SELECT accessID from useraccess WHERE userName = '$userName'";
-$result = mysqli_query($db, $sql);
-while ($row = mysqli_fetch_assoc($result)) {
-    $accessLevel = $row['accessID'];
-}
+$sql = "SELECT userName from users WHERE userID = ?";
+$stmt = $pdo->prepare($sql);
+$stmt->execute([$userID]);
+$row = $stmt->fetch(PDO::FETCH_ASSOC);
+$userName = $row["userName"];
+
+$sql = "SELECT accessID from useraccess where userName = ? ";
+$stmt = $pdo->prepare($sql);
+$stmt->execute([$userName]);
+$row = $stmt->fetch(PDO::FETCH_ASSOC);
+$accessID = $row["accessID"];
 
 $img = $_FILES['healthPhoto'];
 if(empty($img)){
@@ -43,27 +44,22 @@ if(empty($img)){
     $url=$pms['data']['link'];
 }
 
-
+$approvalLvl = 0;
+$sql = "INSERT INTO healthcontent (title, mainText, userID, approvalStatus) VALUES (?, ?, ?, ?)";
 if($accessLevel == 1){
-    $sql = "INSERT INTO healthcontent (title, mainText, userID, approvalStatus) VALUES ('$title', '$mainText', '$userID', '1')";
+    $approvalLvl = 1;
+
 }
 if($accessLevel == 4){
-    $sql = "INSERT INTO healthcontent (title, mainText, userID, approvalStatus) VALUES ('$title', '$mainText', '$userID', '0')";
+    $approvalLvl = 0;
 }
+$pdo->prepare($sql)->execute([$title,$mainText,$userID,$approvalLvl]);
 
-$result = (mysqli_query($db, $sql));
+$healthID = $db->lastInsertId();
 
-$sql2 ="SELECT healthContentID FROM healthContent WHERE healthContentID = (SELECT MAX(healthContentID) FROM healthContent)";
+$sql = "INSERT INTO photos (caption,url,clubID,locationID,healthContentID,routeID) VALUES (?,?,?,?,?,?)";
+$pdo->prepare($sql)->execute('',$url,0,0,$healthID,0);
 
-$result = mysqli_query($db, $sql2);
-
-while($row = mysqli_fetch_assoc($result)){
-    $healthID = $row['healthContentID'];
-}
-
-$sql = "INSERT INTO photos (caption,url,clubID,locationID,healthContentID,routeID) VALUES ('test','$url','0','0','$healthID','0')";
-
-$result = (mysqli_query($db, $sql));
 
 
 header("location:health.php");
