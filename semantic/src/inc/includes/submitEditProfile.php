@@ -4,7 +4,7 @@ include("dbconnect.php");
 
 $firstName =  $_POST["firstName"];
 $surname = $_POST["surname"];
-$email = $_POST["emailAddress"];
+$email = $_POST["email"];
 $username = $_POST["username"];
 $age = $_POST["age"];
 $userID = $_SESSION['loggedIn'];
