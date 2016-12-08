@@ -46,8 +46,8 @@ session_start();
                             </a>
                         <div class = 'ui menu'>
                             <div class = 'item'>
-                                <a href = '/semantic/src/inc/profile.php'>
-                                <h2>My Profile</h2>
+                                <a class = 'header' href = '/semantic/src/inc/profile.php'>
+                                My Profile
                                 </a>
                             </div>
                             <div class = 'item'>
