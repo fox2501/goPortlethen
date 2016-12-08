@@ -159,7 +159,7 @@ if (isset($_SESSION['loggedIn'])) {
 
                     $('.ui.form').form({
                             fields: {
-                                name: {
+                                clubName: {
                                     identifier: 'clubName',
                                     rules: [
                                         {
@@ -177,7 +177,7 @@ if (isset($_SESSION['loggedIn'])) {
                                         }
                                     ]
                                 },
-                                dropdown: {
+                                clubCategory: {
                                     identifier: 'clubCategory',
                                     rules: [
                                         {
