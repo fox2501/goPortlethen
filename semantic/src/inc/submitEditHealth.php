@@ -54,12 +54,11 @@ if($url =""){
 else{
     $sql3 = "DELETE FROM photos WHERE healthContentID =?";
     $pdo->prepare($sql3)->execute([$healthID]);
-    if(mysqli_affected_rows()>0){
-        $caption = 'test';
-        $sql1 = "INSERT INTO photos(caption,url,clubID,locationID,healthContentID,routeID) VALUES(?,?,?,?,?,?)";
+    usleep(10000);
+    $caption = 'test';
+    $sql1 = "INSERT INTO photos(caption,url,clubID,locationID,healthContentID,routeID) VALUES(?,?,?,?,?,?)";
+    $pdo->prepare($sql1)->execute([$caption,$url,0,0,$healthID,0]);
 
-        $pdo->prepare($sql1)->execute([$caption,$url,0,0,$healthID,0]);
-    }
 
 }
 
