@@ -46,7 +46,7 @@ if (isset($_SESSION['loggedIn'])) {
 						</div>
 						<div class='sixteen wide column'>
 							<form action='denyHealthContent.php' class='ui form' method='post'>
-								<button class='ui negative right floated mini button' onclick='/semantic/src/inc/denyHealthContent.php' type='submit'><input name='denyHealth' type='hidden' value='$healthContentID'> Deny</button>
+								<button class='ui negative right floated mini button' onclick='/semantic/src/inc/denyHealthContent.php' type='submit'><input name='denyHealth' type='hidden' value='$healthContentID''> Approve</button>
 							</form>
 						</div>
 						<div class='row'>
