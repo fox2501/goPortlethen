@@ -44,7 +44,7 @@ if(empty($img)){
 }
 
 
-$stmt = $pdo->query("SELECT FROM healthContent WHERE healthContentID = (SELECT MAX(healthContentID) FROM HealthContent)");
+$stmt = $pdo->query("SELECT FROM healthContent WHERE healthContentID = (SELECT MAX(healthContentID) FROM healthContent)");
 
 while ($row = $stmt->fetch()){
     $healthID = $row['healthContentID'];
@@ -52,7 +52,7 @@ while ($row = $stmt->fetch()){
 
 
 $caption = 'test';
-$sql1 = "INSERT INTO photos(caption,url,clubID,locationID,healthContentID,routeID) VALUES(?,?,?,?,?,?);
+$sql1 = "INSERT INTO photos(caption,url,clubID,locationID,healthContentID,routeID) VALUES(?,?,?,?,?,?)";
 
 $pdo->prepare($sql1)->execute([$caption,$url,0,0,$healthID,0]);
 
