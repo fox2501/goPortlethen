@@ -53,15 +53,6 @@ echo "
                         <img
                             src='$photoURL'>
                     </div>
-                    <div class='content'>
-                        <a class='header'>$clubName</a>
-                        <div class='meta'>
-                            <span class='date '>Joined in 2016</span>
-                        </div>
-                        <div class='description'>
-                            Best EPL team
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class = 'twelve wide column'>
@@ -97,7 +88,7 @@ echo "
                     <p>$feeRequired</p>
                 </div>
                 <h5 class='ui attached header '>
-                    Fee Cost:
+                    Monthly Fee:
                 </h5>
                 <div class='ui attached segment '>
                     <p>$feeCost</p>
