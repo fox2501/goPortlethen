@@ -14,7 +14,7 @@ $sql = "
 UPDATE club
 SET clubName = '$clubName',
 clubDescription = '$clubDesc',
-contactNum = '$contactNum',
+contactNumber = '$contactNum',
 websiteURL = '$websiteURL',
 feePaid = '$feeRequired',
 feeCost = '$feeCost',
