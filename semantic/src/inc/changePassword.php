@@ -16,7 +16,7 @@ if (isset($_SESSION['loggedIn'])) {
         <div class="ui grid">
             <div class="row">
                 <div class = "column">
-                    <form class = "ui form" action="includes/submitChangePassword.php" method="POST">
+                    <form class = "ui form" action="submitChangePassword.php" method="POST">
                         <div class = "field">
                             <label>New Password</label>
                             <input type = "password" name = "passwordOne" value = ''/>
