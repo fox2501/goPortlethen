@@ -10,7 +10,7 @@ session_start();
 <div class='ui container'>
     <div class='ui grid'>
         <div class='row'>
-            <button class="ui left floating positive fluid button"><a href="">Create Route</a></button>
+            <button class="ui left floating positive fluid button">Create Route</button>
         </div>
         <div class='sixteen wide column'
         <div class='ui raised segment'>
