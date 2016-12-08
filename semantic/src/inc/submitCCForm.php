@@ -34,7 +34,7 @@ $img=$_FILES['img'];
         $pms = json_decode($out,true);
         $url=$pms['data']['link'];
     }
-$sql = "INSERT INTO club (clubName, clubDescription, email, contactNumber, calendarID, feePaid, feeCost, url, clubCategory)
+$sql = "INSERT INTO club (clubName, clubDescription, email, contactNumber, calendarID, feePaid, feeCost, url, clubCategory, timeStamp)
 VALUES ('$clubName', '$clubDescription', '$email', '$contactNumber', '11', '$feePaid', '$feeCost', 'testurl','$clubCategory', CURRENT_TIMESTAMP)";
 $result = mysqli_query($db, $sql);
 
