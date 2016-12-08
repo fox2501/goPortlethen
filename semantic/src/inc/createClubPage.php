@@ -144,13 +144,12 @@ if(isset($_SESSION['loggedIn'])) {
                         <label for="termsAndConditions">I agree to the terms and conditions</label>
                     </div>
                 </div>
-            </div>
-
-            <div class="field">
-                <img src="captcha_code_file.php?rand=<?php echo rand(); ?>"
-                     id="captchaimg">
-                <label for="message">Enter the code above here :</label>
-                <input id="6_letters_code" name="6_letters_code" type="text">
+                <div class="field">
+                    <img src="captcha_code_file.php?rand=<?php echo rand(); ?>"
+                         id="captchaimg">
+                    <label for="message">Enter the code above here :</label>
+                    <input id="6_letters_code" name="6_letters_code" type="text">
+                </div>
             </div>
 
             <button class="ui fluid large green submit button" id="createClub" type="submit">Create Club</button>
