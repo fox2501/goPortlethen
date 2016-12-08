@@ -13,5 +13,5 @@ $sql = "INSERT INTO locations (longitude, latitude, type, caption, locationName,
 
 $pdo->prepare($sql)->execute([$long,$lat,$mapType,$desc, $title, '0']);
 
-header("location:health.php");
+header("location: mapLandingPage.php");
 ?>
