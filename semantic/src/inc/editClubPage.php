@@ -55,7 +55,7 @@ if (isset($_SESSION['loggedIn'])) {
 				</div>
 			</div>
 			<div class='twelve wide column'>
-				<div class='ui form' method = 'POST' action = 'submitEditClub.php'>
+				<form class='ui form' method = 'POST' action = 'submitEditClub.php'>
 					<div class='field'>
 						<label>Edit Club Name</label> <input name='editClubName' type='text' value='$clubName'>
 					</div>
@@ -67,7 +67,7 @@ if (isset($_SESSION['loggedIn'])) {
 						<label>Edit Contact Number</label> <input name='editNumber' type='number' value='$contactNum'>
 					</div>
 					<div class='field'>
-						<label>Edit Website</label> <input name='editURL' type='number' value='$websiteURL'>
+						<label>Edit Website</label> <input name='editURL' type='text' value='$websiteURL'>
 					</div>
 					<div class='field'>
 						<label>Fee Required?</label>
@@ -93,7 +93,7 @@ if (isset($_SESSION['loggedIn'])) {
                         </div>
 					</div>
 					<button class='ui fluid large green submit button' type='submit'>Submit</button>
-				</div>
+				</form>
 			</div>
 		</div>
 	</div>
