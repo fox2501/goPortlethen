@@ -79,10 +79,10 @@ if(isset($_SESSION['loggedIn'])) {
                     <label>Phone Number</label>
                     <input type="text" name="phoneNumber" maxlength="11" placeholder="Phone Number">
                 </div>
-                <div class="field">
+                <div class="inline field">
                     <label>Please toggle if your club requires a fee: </label>
                     <div class="ui toggle checkbox">
-                        <input type="checkbox" name = "isFee" tabindex="0" class="hidden" id="isFee">
+                        <input type="checkbox" name = "feeRequired" tabindex="0" class="hidden" id="isFee">
                         <label>Fee does apply</label>
                     </div>
                 </div>
