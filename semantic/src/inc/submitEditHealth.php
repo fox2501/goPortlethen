@@ -15,5 +15,5 @@ WHERE healthcontentID = $healthContentID;
 ";
 $result = mysqli_query($db, $sql);
 
-header('Location: ../health.php');
+header('Location: /semantic/src/inc/health.php');
 ?>
