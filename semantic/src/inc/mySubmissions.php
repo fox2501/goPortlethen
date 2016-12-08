@@ -13,7 +13,7 @@ if (isset($_SESSION['loggedIn'])) {
     while ($row = mysqli_fetch_assoc($result)) {
         $accessLevel = $row['accessID'];
     }
-    if ($accessLevel == 1) {
+    if ($accessLevel == 4) {
     include("includes/header.php");
         echo "<h1 align='center'>My Submissions</h1>
         <div class='ui horizontal section divider'>
