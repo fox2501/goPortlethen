@@ -41,29 +41,7 @@ include("includes/header.php");
 	<div class='four wide column'>
 		<button class='ui button'><a href='/semantic/src/inc/CreateClubPage.php'>Create Club</a></button>
 	</div>";
-	}?>
-	<div class='eight wide column'>
-		<div class='ui form'>
-			<div class='inline field'>
-				<label>Filter clubs by:</label>
-				<div class='field'>
-					<div class='ui radio checkbox'>
-						<input checked class='hidden' id='A-Z' name='Club' tabindex='0' type='radio'> <label for='A-Z'>Name A-Z</label>
-					</div>
-				</div>
-				<div class='ui radio checkbox'>
-					<input class='hidden' id='fee' name='Club' tabindex='0' type='radio'> <label for='fee'>Fee does apply</label>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class='four wide column'>
-		<div class='ui fluid category search'>
-			<div class='ui right floated icon input'>
-				<input class='prompt' placeholder='Search clubs...' type='text'> <i class='search icon'></i>
-			</div>
-		</div>
-	</div>
+            }?>
             <div class="eight wide column">
                 <div class="ui form">
                     <div class="inline fields">
@@ -138,9 +116,7 @@ include("includes/header.php");
     </div>
     <div class="ui hidden divider"></div>
 </div>
-</div>
 </body>
 <?php
 include("/includes/footer.php");
 ?>
-</html>
