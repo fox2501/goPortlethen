@@ -59,8 +59,9 @@ $('#dropdown')
 					<div class='image'><img src='$photoURL'></div>
 				</div>
 			</div>
+			
 			<div class='twelve wide column'>
-				<form action='submitEditClub.php' class='ui form' method='post'>
+				<form action='submitEditClub.php' class='ui form' enctype=\"multipart/form-data\" method='post'>
 					<div class='field'>
 						<label>Edit Club Name</label> <input name='editClubName' type='text' value='$clubName'>
 					</div>
