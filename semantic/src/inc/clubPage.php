@@ -5,29 +5,29 @@ $clubID = $_POST['viewClub'];
 $sql = "SELECT * FROM club WHERE clubID = '$clubID'";
 $result = $db->query($sql);
 while ($row = $result->fetch_array()) {
-        $clubName = $row['clubName'];
-        $category = $row['clubCategory'];
-        $clubDesc = $row['clubDescription'];
-        $contactNum = $row['contactNumber'];
-        $feeRequired = $row['feePaid'];
-        $feeCost = $row['feeCost'];
-        $websiteURL = $row['websiteURL'];
+    $clubName = $row['clubName'];
+    $category = $row['clubCategory'];
+    $clubDesc = $row['clubDescription'];
+    $contactNum = $row['contactNumber'];
+    $feeRequired = $row['feePaid'];
+    $feeCost = $row['feeCost'];
+    $websiteURL = $row['websiteURL'];
 }
-if($feeRequired == 1){
+if ($feeRequired == 1) {
     $feeRequired = 'Yes';
-} else{
+} else {
     $feeRequired = 'No';
 }
 $sql = "SELECT * from photos WHERE clubID = $clubID";
 $result = $db->query($sql);
-while ($row = $result ->fetch_array()){
+while ($row = $result->fetch_array()) {
     $photoURL = $row['url'];
 }
 ?>
-<head>
-     <meta charset="UTF-8">
-     <title>Club Page</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Club Page</title>
+    </head>
 <?php
 include("includes/header.php");
 echo "
