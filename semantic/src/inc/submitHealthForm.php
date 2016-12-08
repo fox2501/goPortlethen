@@ -8,6 +8,17 @@ $title = $_POST["title"];
 $mainText = $_POST["mainText"];
 $userID = $_SESSION["loggedIn"];
 
+$sql = "SELECT userName from users where userID = '$userID'";
+$result = mysqli_query($db, $sql);
+while ($row = mysqli_fetch_assoc($result)) {
+    $userName = $row['userName'];
+}
+$sql = "SELECT accessID from useraccess WHERE userName = '$userName'";
+$result = mysqli_query($db, $sql);
+while ($row = mysqli_fetch_assoc($result)) {
+    $accessLevel = $row['accessID'];
+}
+
 $img = $_FILES['healthPhoto'];
 if(empty($img)){
     echo "<h2>An Image Please.</h2>";
@@ -33,8 +44,12 @@ if(empty($img)){
 }
 
 
-
-$sql = "INSERT INTO healthcontent (title, mainText, userID, approvalStatus) VALUES ('$title', '$mainText', '$userID', '0')";
+if($accessLevel == 1){
+    $sql = "INSERT INTO healthcontent (title, mainText, userID, approvalStatus) VALUES ('$title', '$mainText', '$userID', '1')";
+}
+if($accessLevel == 4){
+    $sql = "INSERT INTO healthcontent (title, mainText, userID, approvalStatus) VALUES ('$title', '$mainText', '$userID', '0')";
+}
 
 $result = (mysqli_query($db, $sql));
 
