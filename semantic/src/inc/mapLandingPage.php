@@ -10,7 +10,9 @@ session_start();
 <div class='ui container'>
     <div class='ui grid'>
         <div class='three wide column'>
-            <button class="ui left floating positive fluid button">Create Route</button>
+            <a href = 'createRoute.php'>
+                <button class="ui left floating positive fluid button">Create Route</button>
+            </a>
         </div>
         <div class='sixteen wide column'>
             <div class='ui raised segment'>
