@@ -29,9 +29,7 @@ if(isset($_SESSION['loggedIn'])) {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
         <title>Create Club Page</title>
     </head>
-    <?php
-    include("includes/header.php");
-    include("includes/dbconnect.php"); ?>
+    <?php include("includes/dbconnect.php"); ?>
     <body>
     <div class="ui container">
         <form class="ui form" action="submitCCForm.php" enctype="multipart/form-data" method="POST">
@@ -60,7 +58,7 @@ if(isset($_SESSION['loggedIn'])) {
                 <div class="field">
                     <label>Email Address</label>
                     <div class="field">
-                        <input type="text" name="email" placeholder="Please enter your email address." id="email">
+                        <input type="email" name="email" placeholder="Please enter your email address." id="email">
                     </div>
                 </div>
                 <div class="field">
@@ -84,16 +82,15 @@ if(isset($_SESSION['loggedIn'])) {
                 <div class="field">
                     <label>Please toggle if your club requires a fee: </label>
                     <div class="ui toggle checkbox">
-                        <input type="checkbox" tabindex="0" class="hidden" id="isFee">
-                        <label for="isFee">Fee does apply</label>
+                        <input type="checkbox" name = "feeRequired" tabindex="0" class="hidden" id="isFee">
+                        <label for = "isFee">Fee does apply</label>
                     </div>
                 </div>
                 <div class="field" id="feeAmount" style="display: none;">
-                    <label>Please enter your clubs monthly fee: </label>
+                    <label>Please enter your clubs monthly fee (e.g. 10.00): </label>
                     <div class="ui  right labeled input">
                         <div class="ui label">£</div>
                         <input type="text" placeholder="Amount" name="feeAmount">
-                        <div class="ui basic label">.00</div>
                     </div>
                     <script>
                         var checker = document.getElementById('isFee');
