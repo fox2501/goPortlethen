@@ -1,7 +1,6 @@
 <?
 session_start();
 include("dbconnect.php");
-include("PDOConnect.php");
 ?>
 
 <!DOCTYPE html>
