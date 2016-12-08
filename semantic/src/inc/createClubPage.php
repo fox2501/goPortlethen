@@ -50,7 +50,7 @@ if(isset($_SESSION['loggedIn'])) {
             </div>
             <div class="ui form attached fluid segment">
                 <div class="ui error message"></div>
-                <div class="field">
+                <div class="required field">
                     <label>Club Name</label>
                     <div class="field">
                         <input type="text" name="clubName" placeholder="Enter your club name." id="clubName">
@@ -141,8 +141,7 @@ if(isset($_SESSION['loggedIn'])) {
                 </div>
                 <div class="required inline field">
                     <div class="ui checkbox">
-                        <input type="checkbox" tabindex="0" class="hidden" name="terms"
-                               id="terms">
+                        <input type="checkbox" tabindex="0" class="hidden" name="terms"">
                         <label for="terms">I agree to the terms and conditions</label>
                     </div>
                 </div>
