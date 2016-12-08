@@ -48,6 +48,12 @@ if (isset($_SESSION['loggedIn'])) {
                         <input type="hidden" name="healthContentToEdit" value=
                         "<?php echo $healthContentID ?>"/>
                     </div>
+                    <div class="field">
+                        <label>Choose a new image for the content</label>
+                        <div class="ui fluid action input">
+                            <input name="healthPhoto" size="35" type="file"/>
+                        </div>
+                    </div>
                     <button class="ui fluid large green submit button" type="submit">Submit</button>
                 </form>
             </div>
