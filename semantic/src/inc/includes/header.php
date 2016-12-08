@@ -47,12 +47,12 @@ session_start();
                         <div class = 'ui menu'>
                             <div class = 'item'>
                                 <a class = 'header' href = '/semantic/src/inc/profile.php'>
-                                    <h3 style = 'color: black;'>My Profile</h3>
+                                    <p style = 'color: black;'>My Profile</p>
                                 </a>
                             </div>
                             <div class = 'item'>
                                 <a  href = '/semantic/src/inc/profile.php'>
-                                Settings
+                                    <p style = 'color: black;'>Settings</p>
                                 </a>
                             </div>
                         </div>
