@@ -37,7 +37,7 @@ $img=$_FILES['img'];
         $url=$pms['data']['link'];
     }
 $sql = "INSERT INTO club (clubName, clubDescription, email, contactNumber, calendarID, feePaid, feeCost, url, clubCategory) 
-VALUES ('$clubName', '$clubDescription', '$email', '$contactNumber', '11', '0', '0.0', 'testurl','$clubCategory')";
+VALUES ('$clubName', '$clubDescription', '$email', '$contactNumber', '11', '$feePaid', '$feeCost', 'testurl','$clubCategory')";
 $result = mysqli_query($db, $sql);
 
 $sql2 ="SELECT clubID FROM club WHERE clubID = (SELECT MAX(clubID) FROM club)";
