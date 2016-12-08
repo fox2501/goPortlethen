@@ -79,15 +79,18 @@ if (isset($_SESSION['loggedIn'])) {
                             </div>
                             <div class = 'field'>
                                 <label>Fee Required?</label>
-                                <input type = 'text' name = 'editFee' value = '$feeRequired'>
+                                <div class = 'ui selection dropdown'>
+                                    <input type = 'hidden' name = 'editFeeRequired'>
+                                    <i class = 'ui dropdown icon'></i>
+                                    <div class = 'default text'>$feeRequired</div>
+                                        <div class = 'menu'>
+                                            <div class = 'item' data-value = 'yes'>Yes</div>
+                                            <div class = 'item' data-value = 'no'>No</div>
+                                </div>
                             </div>
                             <div class = 'field'>
-                                <label>Monthly Cost</label>
+                                <label>Edit Monthly Cost</label>
                                 <input type = 'number' name = 'editNumber' value = '$feeCost'>
-                            </div>
-                            <div class = 'field'>
-                                <label>Edit Fee</label>
-                                <input type = 'text' name = 'editFee' value = 'N/A'>
                             </div>
                         </div>
                         </div>
