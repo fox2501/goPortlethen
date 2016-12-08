@@ -71,7 +71,7 @@ include("dbconnect.php");
                         </form>
                         ";
                 }
-                if($accessLevel == 2 || $accessLevel == 4){
+                if($accessLevel == 2){
                     echo "  <div class = 'ui simple dropdown'>
                            <a class = 'browse item'>
                                 <i class = 'user icon'></i>
@@ -82,6 +82,31 @@ include("dbconnect.php");
                             <div class = 'item'>
                                 <a class = 'header' href = '/semantic/src/inc/profile.php'>
                                     <p style = 'color: black;'>My Profile</p>
+                                </a>
+                            </div>
+                        </div>
+                        </div>
+                        <form action = '/semantic/src/inc/includes/logout.php'>
+                            <button class = 'ui fluid submit button' type = 'submit'>Log Out</div>
+                        </form>
+                        ";
+                }
+                if($accessLevel == 4){
+                    echo "  <div class = 'ui simple dropdown'>
+                           <a class = 'browse item'>
+                                <i class = 'user icon'></i>
+                                " .$_SESSION['name']. "
+                                <i class='dropdown icon'></i>
+                            </a>
+                        <div class = 'ui menu'>
+                            <div class = 'item'>
+                                <a class = 'header' href = '/semantic/src/inc/profile.php'>
+                                    <p style = 'color: black;'>My Profile</p>
+                                </a>
+                            </div>
+                            <div class = 'item'>
+                                <a class = 'header' href = '/semantic/src/inc/mySubmissions.php'>
+                                    <p style = 'color: black;'>My health submissions</p>
                                 </a>
                             </div>
                         </div>
