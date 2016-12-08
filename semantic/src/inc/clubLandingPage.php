@@ -73,50 +73,46 @@ if (isset($_SESSION['loggedIn'])) {
 <div class="ui container">
     <div class="ui grid">
         <div class="ui hidden divider"></div>
-        <div class="ui divided items">
-            <?php
-            $sql_query = "SELECT A.clubName, A.clubDescription, A.clubID, B.url FROM club A, photos B WHERE A.clubID = B.clubID";
-            $result = $db->query($sql_query);
-            while ($row = $result->fetch_array()) {
-                $title = $row['clubName'];
-                $mainText = $row['clubDescription'];
-                $clubID = $row['clubID'];
-                $photo = $row['url'];
-                echo "
-<div class = 'ui raised segment'>
-<div class = 'ui container'>
-    <div class = 'ui grid'>
-    <div class = 'ui two wide column'>
-        <div class='ui small image'>
+        <?php
+        $sql_query = "SELECT A.clubName, A.clubDescription, A.clubID, B.url FROM club A, photos B WHERE A.clubID = B.clubID";
+        $result = $db->query($sql_query);
+        while ($row = $result->fetch_array()) {
+            $title = $row['clubName'];
+            $mainText = $row['clubDescription'];
+            $clubID = $row['clubID'];
+            $photo = $row['url'];
+            echo "
+<div class='ui raised segment'>
+    <div class='ui container'>
+        <div class='ui grid'>
+            <div class='ui two wide column'>
+                <div class='ui small image'>
                     <img src='$photo'>
+                </div>
+            </div>
+            <div class='ui fourteen wide column'>
+                <div class='header'>
+                    $title
+                </div>
+                <div class='description'>
+                    <p> $mainText </p>
+                </div>
+                <div class='extra'>
+                    <form class='ui form' method='POST' action='/semantic/src/inc/clubPage.php'>
+                        <button class='ui right floated button' type='submit' onclick='/semantic/src/inc/clubPage.php'>
+                            <input type='hidden' name='viewClub' value=$clubID>
+                            For more info click here!
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
-    <div class = 'ui ten wide column'>
-        <div class='content''>
-            <div class='header'>
-                        $title
-            </div>
-            <div class='description'>
-                   <p> $mainText </p>
-            </div>
-            <div class='extra' >
-            <form class = 'ui form' method = 'POST' action = '/semantic/src/inc/clubPage.php'>
-                   <button class='ui right floated button' type = 'submit' onclick = '/semantic/src/inc/clubPage.php'>
-                      <input type = 'hidden' name = 'viewClub' value = $clubID>
-                      For more info click here!
-                   </button>
-            </form>
-
-            </div>
-     </div>
 </div>
-</div>
-</div>
-<div class = 'ui divider'></div>
+<div class='ui divider'></div>
 ";
-            }
-            ?>
-        </div>
+        }
+        ?>
     </div>
     <div class="ui hidden divider"></div>
 </div>
