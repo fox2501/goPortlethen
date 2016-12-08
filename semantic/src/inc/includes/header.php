@@ -39,7 +39,7 @@ session_start();
         <?php
             if(isset($_SESSION['loggedIn'])){
                 echo "  <div class = 'ui simple dropdown'>
-                           <a class = 'browse item' href = '/semantic/src/inc/profile.php'>
+                           <a class = 'browse item'>
                                 <i class = 'user icon'></i>
                                 " .$_SESSION['name']. "
                                 <i class='dropdown icon'></i>
