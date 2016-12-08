@@ -10,7 +10,7 @@ if(!(empty($password)) && (!(empty($passwordConfirm)))){
     if($password == $passwordConfirm){
         $hashpass = password_hash($password, PASSWORD_BCRYPT);
 
-        $sql = "UPDATE users SET password = '$hashpass' WHERE userID = $userID'";
+        $sql = "UPDATE users SET password = '$hashpass' WHERE userID = '$userID'";
         $result = mysqli_query($db, $sql);
         header("Location: /semantic/src/inc/profile.php");
 
