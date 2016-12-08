@@ -2,12 +2,24 @@
 session_start();
 include("includes/dbconnect.php");
 if (isset($_SESSION['loggedIn'])) {
+    $userID = $_SESSION['loggedIn'];
+    $sql = "SELECT userName from users where userID = '$userID'";
+    $result = mysqli_query($db, $sql);
+    while ($row = mysqli_fetch_assoc($result)) {
+        $userName = $row['userName'];
+    }
+    $sql = "SELECT accessID from useraccess WHERE userName = '$userName'";
+    $result = mysqli_query($db, $sql);
+    while ($row = mysqli_fetch_assoc($result)) {
+        $accessLevel = $row['accessID'];
+    }
+    if ($accessLevel == 1) {
     include("includes/header.php");
-    echo "<h1 align='center'>My Submissions</h1>
+        echo "<h1 align='center'>My Submissions</h1>
         <div class='ui horizontal section divider'>
         </div>";
-    $userID = $_SESSION['loggedIn'];
-    $sql = "
+
+        $sql_query = "
     SELECT A.title, A.mainText, B.userName, A.datePosted, A.healthContentID, A.approvalStatus, C.url
     FROM healthcontent A, users B, photos C
     WHERE 
@@ -48,5 +60,6 @@ if (isset($_SESSION['loggedIn'])) {
 	</div>
 ";
         }
+    }
 }
 ?>
