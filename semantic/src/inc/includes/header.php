@@ -45,9 +45,10 @@ session_start();
                                 <i class='dropdown icon'></i>
                             </a>
                         <div class = 'ui menu'>
+                        <div class = 'ui link items'>
                             <div class = 'item'>
-                                <a href = '/semantic/src/inc/profile.php'>
-                                <h2>My Profile</h2>
+                                <a class = 'header' href = '/semantic/src/inc/profile.php'>
+                                My Profile
                                 </a>
                             </div>
                             <div class = 'item'>
@@ -55,6 +56,7 @@ session_start();
                                 Settings
                                 </a>
                             </div>
+                        </div>
                         </div>
                         </div>
                         <form action = '/semantic/src/inc/includes/logout.php'>
