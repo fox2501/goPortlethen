@@ -1,7 +1,7 @@
 <?php
 session_start();
 include("includes/dbconnect.php");
-$clubID = $_POST['viewClub'];
+$clubID = $_POST['editClub'];
 $sql = "SELECT * FROM club WHERE clubID = '$clubID'";
 $result = $db->query($sql);
 while ($row = $result->fetch_array()) {
