@@ -38,20 +38,20 @@ session_start();
     <div class = "right menu">
         <?php
             if(isset($_SESSION['loggedIn'])){
-                echo "  <div class = 'ui simple dropdown'>
-                            <a class = 'browse item' href = '/semantic/src/inc/profile.php'>
-                                <i class = 'user icon'></i>
-                                " .$_SESSION['name']. "
-                                <i class='dropdown icon'></i>
-                            </a>
-                        <div class = 'ui menu'>
-                            <div class = 'item' href = '/semantic/src/inc/profile.php' onclick = '/semantic/src/inc/profile.php'>My Profile</div>
-                            <div class = 'item' href = '/semantic/src/inc/profile.php'>Settings</div>
-                        </div>
-                        </div>
-                        <form action = '/semantic/src/inc/includes/logout.php'>
-                            <button class = 'ui fluid submit button' type = 'submit'>Log Out</div>
-                        </form>
+                echo "  
+<div class = 'ui menu'>
+    <div class = 'ui dropdown item'>
+        <i class='user icon'></i> " .$_SESSION['name']. " <i class='dropdown icon'></i>
+        <div class = 'menu'>
+            <a class = 'item' href = '/semantic/src/inc/profile.php'>My Profile</a>
+            <a class = 'item' href = '/semantic/src/inc/profile.php'>Approvals</a>
+            <a class = 'item' href = '/semantic/src/inc/profile.php'>Change Password</a>
+        </div>
+    </div>
+</div>
+<form action = '/semantic/src/inc/includes/logout.php'>
+    <button class = 'ui fluid submit button' type = 'submit'>Log Out</div>
+</form>
                         ";
             } else {
                 echo "<a class = 'item' href = '/semantic/src/inc/signUpForm.php'>
