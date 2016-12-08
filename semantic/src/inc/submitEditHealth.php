@@ -12,7 +12,7 @@ $mainText = $_POST["editMainText"];
 $healthContentID = $_POST["healthContentToEdit"];
 $userID = $_SESSION['loggedIn'];
 
-$sql ="UPDATE healtcontent SET title = ?,mainText= ? WHERE healthContentID = ?";
+$sql ="UPDATE healthcontent SET title = ?,mainText= ? WHERE healthContentID = ?";
 $pdo->prepare($sql)->execute([$title,$mainText,$healthContentID]);
 
 
