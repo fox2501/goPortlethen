@@ -152,15 +152,6 @@ if(isset($_SESSION['loggedIn'])) {
         <script type="text/javascript">
             $('.ui.form')
                 .form({
-                        name: {
-                            identifier: 'clubName',
-                            rules: [
-                                {
-                                    type: 'empty',
-                                    prompt: 'Please enter the name of your club'
-                                }
-                            ]
-                        },
                         email: {
                             identifier: 'email',
                             rules: [
