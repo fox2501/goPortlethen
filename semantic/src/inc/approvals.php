@@ -31,6 +31,11 @@ if (isset($_SESSION['loggedIn'])) {
             $healthContentID = $row['healthContentID'];
             $photoURL = $row['url'];
         }
+        ?>
+        <h1 align="center">Approvals</h1>
+        <div class="ui horizontal section divider">
+        </div>
+<?php
         echo "
 <div class='row'>
     <ul>
