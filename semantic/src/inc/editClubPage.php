@@ -55,13 +55,13 @@ if (isset($_SESSION['loggedIn'])) {
 				</div>
 			</div>
 			<div class='twelve wide column'>
-				<form class='ui form' method = 'POST' action = 'submitEditClub.php'>
+				<form action='submitEditClub.php' class='ui form' method='post'>
 					<div class='field'>
 						<label>Edit Club Name</label> <input name='editClubName' type='text' value='$clubName'>
 					</div>
 					<div class='field'>
 						<label>Edit Club Description</label> 
-						<textarea name='editDescription' rows=\"8\">$clubDesc</textarea>
+						<textarea name='editDescription' rows=\"\&quot;8\&quot;\">$clubDesc</textarea>
 					</div>
 					<div class='field'>
 						<label>Edit Contact Number</label> <input name='editNumber' type='number' value='$contactNum'>
@@ -71,30 +71,29 @@ if (isset($_SESSION['loggedIn'])) {
 					</div>
 					<div class='field'>
 						<label>Fee Required?</label>
-						<div class='ui selection dropdown' id = 'dropdown'>
+						<div class='ui selection dropdown' id='dropdown'>
 							<input name='editFeeRequired' type='hidden'> <i class='ui dropdown icon'></i>
 							<div class='default text'>
 								$feeRequired
 							</div>
 							<div class='menu'>
-								<div class='ui simple dropdown item' value='1'>
+								<div class='ui simple dropdown item'>
 									Yes
 								</div>
-								<div class='ui simple downdown item' value='0'>
+								<div class='ui simple downdown item'>
 									No
 								</div>
 							</div>
 						</div>
-						<div class='field'>
-							<label>Edit Monthly Cost</label> <input name='editCost' type='text' value='$feeCost'>
-						</div>
-                        <div class='field'>
-                            <input type='hidden' name='clubToEdit' value= '$clubID'/>
-                        </div>
 					</div>
-					<button class='ui fluid large green submit button' type='submit'>Submit</button>
+					<div class='field'>
+						<label>Edit Monthly Cost</label> <input name='editCost' type='text' value='$feeCost'>
+					</div>
+					<div class='field'>
+						<input name='clubToEdit' type='hidden' value='$clubID'>
+					</div>
 				</form>
-			</div>
+			</div><button class='ui fluid large green submit button' type='submit'>Submit</button> 
 		</div>
 	</div>
 </body>
