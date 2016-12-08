@@ -1,7 +1,7 @@
 <?php
 session_start();
 include("includes/dbconnect.php");
-if(isset($_SESSION['loggedIn'])) {
+if (isset($_SESSION['loggedIn'])) {
     $userID = $_SESSION['loggedIn'];
     $canAccess = '0';
     $sql = "SELECT userName from users WHERE userID = '$userID'";
@@ -83,8 +83,8 @@ if(isset($_SESSION['loggedIn'])) {
                 <div class="field">
                     <label>Please toggle if your club requires a fee: </label>
                     <div class="ui toggle checkbox">
-                        <input type="checkbox" name = "feeRequired" tabindex="0" class="hidden" id="isFee" value = "0">
-                        <label for = "isFee">Fee does apply</label>
+                        <input type="checkbox" name="feeRequired" tabindex="0" class="hidden" id="isFee" value="0">
+                        <label for="isFee">Fee does apply</label>
                     </div>
                 </div>
                 <div class="field" id="feeAmount" style="display: none;">
@@ -115,28 +115,28 @@ if(isset($_SESSION['loggedIn'])) {
                         <input name="img" size="35" type="file"/>
 
                     </div>
-<!--                    <script>-->
-<!--                        $('input:text, .ui.button', '.ui.action.input')-->
-<!--                            .on('click', function (e) {-->
-<!--                                $('input:file', $(e.target).parents()).click();-->
-<!--                            })-->
-<!--                        ;-->
-<!---->
-<!--                        $('input:file', '.ui.action.input')-->
-<!--                            .on('change', function (e) {-->
-<!--                                var name = e.target.files[0].name;-->
-<!--                                $('input:text', $(e.target).parent()).val(name);-->
-<!--                            })-->
-<!--                        ;-->
-<!--                    </script>-->
-<!--                    <style>-->
-<!--                        body {-->
-<!--                            padding: 1em;-->
-<!--                        }-->
-<!---->
-<!--                        .ui.action.input input[type="file"] {-->
-<!--                            display: none;-->
-<!--                        }-->
+                    <!--                    <script>-->
+                    <!--                        $('input:text, .ui.button', '.ui.action.input')-->
+                    <!--                            .on('click', function (e) {-->
+                    <!--                                $('input:file', $(e.target).parents()).click();-->
+                    <!--                            })-->
+                    <!--                        ;-->
+                    <!---->
+                    <!--                        $('input:file', '.ui.action.input')-->
+                    <!--                            .on('change', function (e) {-->
+                    <!--                                var name = e.target.files[0].name;-->
+                    <!--                                $('input:text', $(e.target).parent()).val(name);-->
+                    <!--                            })-->
+                    <!--                        ;-->
+                    <!--                    </script>-->
+                    <!--                    <style>-->
+                    <!--                        body {-->
+                    <!--                            padding: 1em;-->
+                    <!--                        }-->
+                    <!---->
+                    <!--                        .ui.action.input input[type="file"] {-->
+                    <!--                            display: none;-->
+                    <!--                        }-->
                     <!--                    </style>-->
                 </div>
                 <div class="required inline field">
@@ -145,48 +145,49 @@ if(isset($_SESSION['loggedIn'])) {
                         <label for="terms">I agree to the terms and conditions</label>
                     </div>
                 </div>
-            <button class="ui fluid large green submit button" id="createClub" type="submit">Create Club</button>
-        </form>
+                <button class="ui fluid large green submit button" id="createClub" type="submit">Create Club</button>
 
-        <script type="text/javascript">
+                <script type="text/javascript">
 
-            $('createClub').on('click', function(){
-                $('.ui.form').form('validate form');
-            });
+                    $('createClub').on('click', function () {
+                        $('.ui.form').form('validate form');
+                    });
 
-            $('.ui.form').form({
-                    fields: {
-                        name: {
-                            identifier: 'clubName',
-                            rules: [
-                                {
-                                    type   : 'empty',
-                                    prompt : 'Please enter your clubs name'
+                    $('.ui.form').form({
+                            fields: {
+                                name: {
+                                    identifier: 'clubName',
+                                    rules: [
+                                        {
+                                            type: 'empty',
+                                            prompt: 'Please enter your clubs name'
+                                        }
+                                    ]
+                                },
+                                terms: {
+                                    identifier: 'terms',
+                                    rules: [
+                                        {
+                                            type: 'checked',
+                                            prompt: 'You must agree to the terms and conditions'
+                                        }
+                                    ]
+                                },
+                                dropdown: {
+                                    identifier: 'clubCategory',
+                                    rules: [
+                                        {
+                                            type: 'empty',
+                                            prompt: 'Please select a club category'
+                                        }
+                                    ]
                                 }
-                            ]
-                        },
-                        terms: {
-                            identifier: 'terms',
-                            rules: [
-                                {
-                                    type   : 'checked',
-                                    prompt : 'You must agree to the terms and conditions'
-                                }
-                            ]
-                        },
-                        dropdown: {
-                            identifier  : 'clubCategory',
-                            rules: [
-                                {
-                                    type   : 'empty',
-                                    prompt : 'Please select a club category'
-                                }
-                            ]
+                            }
                         }
-                    }
-                }
-            );
-        </script>
+                    );
+                </script>
+
+        </form>
 
         <div class="ui bottom attached warning message">
             <i class="icon help"></i>
