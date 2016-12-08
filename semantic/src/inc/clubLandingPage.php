@@ -42,12 +42,12 @@ include("includes/header.php");
     <button class='ui button'><a href='/semantic/src/inc/CreateClubPage.php'>Create Club</a></button>
 </div>
 <div class='eight wide column'>
-    <div class='ui form>
-                    <div class=' inline field'>
+    <div class='ui form'>
+    <div class='inline field'>
     <label>Filter clubs by: </label>
     <div class='field'>
         <div class='ui radio checkbox'>
-            <input type='radio' name='Club' checked=''' tabindex='0' class='hidden' id='A-Z'>
+            <input type='radio' name='Club' checked='' tabindex='0' class='hidden' id='A-Z'>
             <label for='A-Z'>Name A-Z</label>
         </div>
     </div>
@@ -69,12 +69,12 @@ include("includes/header.php");
             } else {
                 echo "
 <div class='eight wide column'>
-    <div class='ui form>
-                    <div class=' inline field'>
+    <div class='ui form'>
+                    <div class='inline field'>
     <label>Filter clubs by: </label>
     <div class='field'>
         <div class='ui radio checkbox'>
-            <input type='radio' name='Club' checked=''' tabindex='0' class='hidden' id='A-Z'>
+            <input type='radio' name='Club' checked='' tabindex='0' class='hidden' id='A-Z'>
             <label for='A-Z'>Name A-Z</label>
         </div>
     </div>
