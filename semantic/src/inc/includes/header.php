@@ -7,7 +7,7 @@
 <!-- Included CSS Files -->
 <!--[if lt IE 9]>
 <link rel="stylesheet" href="stylesheets/ie.css">
-<![endif]--><script type="text/javascript" src="javascripts/modernizr.foundation.js"></script>
+<![endif]--><script type="text/javascript" src="/semantic/dist/modernizr.foundation.js"></script>
 <!-- IE Fix for HTML5 Tags -->
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -21,7 +21,8 @@ include("dbconnect.php");
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="/semantic/dist/semantic.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../semantic.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
