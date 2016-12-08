@@ -45,11 +45,11 @@ if (isset($_SESSION['loggedIn'])) {
 								<p id='datePosted'>$datePosted<br></p>
 								<div class='ui small image'><img src='$photoURL'></div>
 							</div>
-							<div class='ten wide column'>
+							<div class='eight wide column'>
 								<p id='mainText' style='text - align:justify'>$mainText<br></p>
 								<p id='author'>By $userName<br></p>
 							</div>
-							<div class='two wide column'>
+							<div class='four wide column'>
 								<form action='approveHealthContent.php' class='ui form' method='post'>
 									<button class='ui positive basic right floated button' onclick='/semantic/src/inc/approveHealthContent.php' type='submit'><input name='approveHealth' type='hidden' value='$healthContentID'> Approve</button>
 								</form>
