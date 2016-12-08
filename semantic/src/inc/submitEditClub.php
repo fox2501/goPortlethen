@@ -18,7 +18,7 @@ SET clubName = '$clubName',
 clubDescription = '$clubDesc',
 contactNumber = '$contactNum',
 websiteURL = '$websiteURL',
-feePaid = 0,
+feePaid = 1,
 feeCost = '$feeCost'
 WHERE clubID = '$clubID';
 ";
@@ -27,13 +27,13 @@ $result = mysqli_query($db, $sql);
 if($result){
     header('Location: /semantic/src/inc/clubLandingPage.php');
 } else{
-    echo $clubName."\r\n";
-    echo $clubID."\r\n";
-    echo $clubDesc."\r\n";
-    echo $contactNum."\r\n";
-    echo $websiteURL."\r\n";
-    echo $feeRequired."\r\n";
-    echo $feeCost."\r\n";
+    echo $clubName."<br>";
+    echo $clubID."<br>";
+    echo $clubDesc."<br>";
+    echo $contactNum."<br>";
+    echo $websiteURL."<br>";
+    echo $feeRequired."<br>";
+    echo $feeCost."<br>";
 }
 
 ?>
