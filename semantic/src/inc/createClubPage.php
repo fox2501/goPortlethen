@@ -103,6 +103,7 @@ if(isset($_SESSION['loggedIn'])) {
                                 checker.value = 1;
                             } else {
                                 sendbtn.style.display = 'none';
+                                checker.value = 0;
                             }
 
                         }
