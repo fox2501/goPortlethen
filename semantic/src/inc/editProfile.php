@@ -16,14 +16,13 @@ if (isset($_SESSION['loggedIn'])) {
     include("includes/header.php");
     $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
     $userID = $_SESSION['loggedIn'];
-    $sql = "SELECT firstName, surname, age, location, aboutUser FROM users WHERE userID = '$userID'";
+    $sql = "SELECT firstName, surname, age, emailAddress FROM users WHERE userID = '$userID'";
     $result = mysqli_query($db, $sql);
     while($row = mysqli_fetch_array($result)) {
         $firstName = $row['firstName'];
         $surname = $row['surname'];
         $age = $row['age'];
-        $location = $row['location'];
-        $aboutUser = $row['aboutUser'];
+        $email = $row['emailAddress'];
     }
     ?>
     <body>
@@ -61,17 +60,10 @@ if (isset($_SESSION['loggedIn'])) {
                             ?>">
                         </div>
                         <div class = "field">
-                            <label>Location</label>
-                            <input type = "text" name = "location" value =
+                            <label>Email Address</label>
+                            <input type = "text" name = "email" value =
                             "<?php
-                            echo $location;
-                            ?>">
-                        </div>
-                        <div class = "field">
-                            <label>About</label>
-                            <input type = "text" name = "aboutUser" value =
-                            "<?php
-                            echo $aboutUser;
+                            echo $emailAddress;
                             ?>">
                         </div>
                         <button class="ui fluid large green submit button" type="submit">Submit</button>
