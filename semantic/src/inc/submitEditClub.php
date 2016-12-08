@@ -2,18 +2,25 @@
 session_start();
 include("includes/dbconnect.php");
 
-$title = $_POST["editTitle"];
-$mainText = $_POST["editMainText"];
-$healthContentID = $_POST["healthContentToEdit"];
-$userID = $_SESSION['loggedIn'];
+$clubName = $_POST["editClubName"];
+$clubID = $_POST['clubToEdit'];
+$clubDesc = $_POST["editDescription"];
+$contactNum = $_POST["editNumber"];
+$websiteURL = $_POST['editURL'];
+$feeRequired = $_POST['editFeeRequired'];
+$feeCost = $_POST['editCost'];
 
 $sql = "
-UPDATE healthcontent
-SET title = '$title',
-mainText = '$mainText',
-WHERE healthContentID = $healthContentID;
+UPDATE club
+SET clubName = '$clubName',
+clubDescription = '$clubDesc',
+contactNum = '$contactNum',
+websiteURL = '$websiteURL',
+feePaid = '$feeRequired',
+feeCost = '$feeCost',
+WHERE clubID = $clubID;
 ";
 $result = mysqli_query($db, $sql);
 
-header('Location: /semantic/src/inc/health.php');
+header('Location: /semantic/src/inc/clubLandingPage.php');
 ?>
