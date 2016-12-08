@@ -149,6 +149,11 @@ if(isset($_SESSION['loggedIn'])) {
         </form>
 
         <script type="text/javascript">
+
+            $('createClub').on('click', function(){
+                $('.ui.form').form('validate form');
+            });
+
             $('.ui.form').form({
                     fields: {
                         name: {
