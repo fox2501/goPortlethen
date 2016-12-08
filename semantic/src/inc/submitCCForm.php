@@ -51,11 +51,11 @@ if ($img['name'] == '') {
     $url = $pms['data']['link'];
 }
 
-$timestamp = time();
+
 
 $sql    = "INSERT INTO club (clubName, clubDescription, email, contactNumber, feePaid, feeCost, websiteURL, clubCategory, userID)
 VALUES (?,?,?,?,?,?,?,?,?)";
-$pdo->prepare($sql)->execute([$clubName,$clubDescription,$email,$contactNumber,$feePaid,$feeCost,'',$clubCategory,$timestamp,$userID]);
+$pdo->prepare($sql)->execute([$clubName,$clubDescription,$email,$contactNumber,$feePaid,$feeCost,'',$clubCategory,$userID]);
 
 usleep(10000);
 
