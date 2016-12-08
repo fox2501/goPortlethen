@@ -86,12 +86,14 @@ AND A.healthContentID = C.healthContentID";
 <div class='ui raised segment'>
     <div class='ui container'>
         <div class='ui grid'>
-            <form class='ui form' method='POST' action='editHealthContent.php'>
-                <button class='ui right floated mini button' onclick='/semantic/src/inc/editHealthContent.php'
-                        type='submit'>
-                    <input type='hidden' name='editHealth' value=$ healthContentID> Edit
-                </button>
-            </form>
+            <div class='sixteen wide column'>
+                <form class='ui form' method='POST' action='editHealthContent.php'>
+                    <button class='ui right floated mini button' onclick='/semantic/src/inc/editHealthContent.php'
+                            type='submit'>
+                        <input type='hidden' name='editHealth' value=$ healthContentID> Edit
+                    </button>
+                </form>
+            </div>
             <div class='row'>
                 <div class='eight wide column'>
                     <h3 class='ui header' id='title'>
@@ -114,10 +116,9 @@ AND A.healthContentID = C.healthContentID";
                 </div>
             </div>
         </div>
-        <div class='ui hidden section divider'></div>
     </div>
 </div>
-
+<div class='ui hidden section divider'></div>
 ";
                         } else {
                             echo "
