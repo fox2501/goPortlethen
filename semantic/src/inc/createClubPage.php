@@ -150,30 +150,21 @@ if(isset($_SESSION['loggedIn'])) {
         </form>
 
         <script type="text/javascript">
-            $('.ui.form').form({
+            $('.ui.form')
+                .form({
                     fields: {
-                        email: {
-                            identifier: 'email',
+                        name: {
+                            identifier: 'clubName',
                             rules: [
                                 {
-                                    type: 'email',
-                                    prompt: 'Please enter a valid e-mail'
-                                }
-                            ]
-                        },
-                        checkbox: {
-                            identifier: 'termsAndConditions',
-                            rules: [
-                                {
-                                    type: 'checked',
-                                    prompt: 'Please agree to the terms & conditions'
+                                    type   : 'empty',
+                                    prompt : 'Please enter your clubs name'
                                 }
                             ]
                         }
                     }
                 }
-            )
-            ;
+            );
         </script>
 
         <div class="ui bottom attached warning message">
