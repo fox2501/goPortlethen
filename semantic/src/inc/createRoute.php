@@ -15,7 +15,7 @@ include("includes/header.php");
         </div>
         <div class="field">
             <label>Type</label>
-            <select class="ui select dropdown" name="accessRequested">
+            <select class="ui select dropdown" name="mapType">
                 <option value="viewpoint">Viewpoint</option>
                 <option value="loi">Location of Interest</option>
                 <option value="hist">Historical Landmark</option>
