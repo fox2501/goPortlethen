@@ -8,7 +8,7 @@ $healthContentID = $_POST["healthContentToEdit"];
 $userID = $_SESSION['loggedIn'];
 
 $sql = "
-UPDATE healthContent
+UPDATE healthcontent
 SET title = '$title',
 mainText = '$mainText',
 WHERE healthcontentID = $healthContentID;
