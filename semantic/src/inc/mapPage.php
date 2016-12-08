@@ -1,7 +1,7 @@
 <?php
 session_start();
+include("includes/header.php");
 ?>
-<?php include("includes/header.php"); ?>
 <head>
     <script type="text/javascript" src="https://goportlethencs8.azurewebsites.net/semantic/dist/routeplot.js"></script>
     <meta charset="UTF-8">
@@ -35,8 +35,10 @@ session_start();
     <div class="four wide column"></div>
     <div class="eight wide column">
         <h3> Description</h3>
-        <p>The Portlethen Path is a long distance walking trail, following Scotland's best known river for 184 miles (294
-            Km) as it meanders from its source in the Aberdeenshire coast through several rural counties and on into the heart
+        <p>The Portlethen Path is a long distance walking trail, following Scotland's best known river for 184 miles
+            (294
+            Km) as it meanders from its source in the Aberdeenshire coast through several rural counties and on into the
+            heart
             of Dundee.
         </p>
         <p>
