@@ -70,7 +70,8 @@ include("dbconnect.php");
                             <button class = 'ui fluid submit button' type = 'submit'>Log Out</div>
                         </form>
                         ";
-                } else if($accessLevel == 2 || $accessLevel == 4){
+                }
+                if($accessLevel == 2 || $accessLevel == 4){
                     echo "  <div class = 'ui simple dropdown'>
                            <a class = 'browse item'>
                                 <i class = 'user icon'></i>
@@ -105,8 +106,6 @@ include("dbconnect.php");
                       </a>";
             }
         ?>
-
-
     </div>
 </div>
 </body>
