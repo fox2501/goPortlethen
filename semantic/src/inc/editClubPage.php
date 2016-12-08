@@ -85,6 +85,7 @@ if (isset($_SESSION['loggedIn'])) {
 								</div>
 							</div>
 						</div>
+						</div>
 						<div class='field'>
 							<label>Edit Monthly Cost</label> <input name='editCost' type='text' value='$feeCost'>
 						</div>
