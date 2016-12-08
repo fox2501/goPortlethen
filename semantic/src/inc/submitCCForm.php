@@ -38,15 +38,17 @@ $sql = "INSERT INTO club (clubName, clubDescription, email, contactNumber, calen
 VALUES ('$clubName', '$clubDescription', '$email', '$contactNumber', '11', '$feePaid', '$feeCost', 'testurl','$clubCategory')";
 $result = mysqli_query($db, $sql);
 
-$sql2 ="SELECT clubID FROM club WHERE clubID = (SELECT MAX(clubID) FROM club)";
-$result = mysqli_query($db, $sql2);
-while($row = mysqli_fetch_assoc($result)){
-    $clubID = $row['clubID'];
+if($result){
+    $sql2 ="SELECT clubID FROM club WHERE clubID = (SELECT MAX(clubID) FROM club)";
+    $result = mysqli_query($db, $sql2);
+    while($row = mysqli_fetch_assoc($result)){
+        $clubID = $row['clubID'];
+    }
+
+    $sql1 = "INSERT INTO photos (caption,url,clubID,locationID,healthContentID,routeID) VALUES ('test','$url',$clubID,'0','0','0')";
+
+    $result = (mysqli_query($db, $sql1));
 }
-
-$sql1 = "INSERT INTO photos (caption,url,clubID,locationID,healthContentID,routeID) VALUES ('test','$url',$clubID,'0','0','0')";
-
-$result = (mysqli_query($db, $sql1));
 
 //t
 
