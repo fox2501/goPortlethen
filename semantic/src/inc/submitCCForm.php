@@ -53,8 +53,8 @@ if ($img['name'] == '') {
 
 $timestamp = time();
 
-$sql    = "INSERT INTO club (clubName, clubDescription, email, contactNumber, feePaid, feeCost, websiteURL, clubCategory,TIMESTAMP, userID)
-VALUES (?,?,?,?,?,?,?,?,?,?)";
+$sql    = "INSERT INTO club (clubName, clubDescription, email, contactNumber, feePaid, feeCost, websiteURL, clubCategory, userID)
+VALUES (?,?,?,?,?,?,?,?,?)";
 $pdo->prepare($sql)->execute([$clubName,$clubDescription,$email,$contactNumber,$feePaid,$feeCost,'',$clubCategory,$timestamp,$userID]);
 
 usleep(10000);
