@@ -58,12 +58,11 @@ if (isset($_SESSION['loggedIn'])) {
                 </div>
             </div>
             <div class="eight wide column">
-                <div class="ui right floated fluid category search">
-                    <div class="ui icon input">
+                <div class="ui fluid category search">
+                    <div class="ui right floated icon input">
                         <input class="prompt" type="text" placeholder="Search clubs...">
                         <i class="search icon"></i>
                     </div>
-                    <div class="results"></div>
                 </div>
             </div>
         </div>
