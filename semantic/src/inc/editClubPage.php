@@ -3,6 +3,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 session_start();
+
 include("includes/PDOConnect.php");
 
 if (isset($_SESSION['loggedIn'])) {
@@ -15,7 +16,7 @@ if (isset($_SESSION['loggedIn'])) {
         if ($row['userID'] == $userID) {
             $clubID = $_POST['editClub'];
             $sql = "SELECT * FROM club WHERE clubID = ?";
-            $stmt = prepare($sql);
+            $stmt = $pdo->prepare($sql);
             $stmt->execute([$clubID]);
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                 $clubName = $row['clubName'];
