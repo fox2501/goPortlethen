@@ -40,14 +40,6 @@ if (isset($_SESSION['loggedIn'])) {
 				<div class='ui container'>
 					<div class='ui grid'>
 						<div class='row'>
-							<div class='two wide column'>
-								<form action='approveHealthContent.php' class='ui form' method='post'>
-									<button class='ui positive right floated mini button' onclick='/semantic/src/inc/approveHealthContent.php' type='submit'><input name='approveHealth' type='hidden' value='$healthContentID'> Approve</button>
-								</form>
-								<form action='denyHealthContent.php' class='ui form' method='post'>
-									<button class='ui negative right floated mini button' onclick='/semantic/src/inc/denyHealthContent.php' type='submit'><input name='denyHealth' type='hidden' value='$healthContentID'> Approve</button>
-								</form>
-							</div>
 							<div class='seven wide column'>
 								<h3 class='ui header' id='title'>$title</h3>
 								<p id='datePosted'>$datePosted<br></p>
@@ -56,6 +48,14 @@ if (isset($_SESSION['loggedIn'])) {
 							<div class='seven wide column'>
 								<p id='mainText' style='text - align:justify'>$mainText<br></p>
 								<p id='author'>By $userName<br></p>
+							</div>
+							<div class='two wide column'>
+								<form action='approveHealthContent.php' class='ui form' method='post'>
+									<button class='ui positive right floated mini button' onclick='/semantic/src/inc/approveHealthContent.php' type='submit'><input name='approveHealth' type='hidden' value='$healthContentID'> Approve</button>
+								</form>
+								<form action='denyHealthContent.php' class='ui form' method='post'>
+									<button class='ui negative right floated mini button' onclick='/semantic/src/inc/denyHealthContent.php' type='submit'><input name='denyHealth' type='hidden' value='$healthContentID'> Approve</button>
+								</form>
 							</div>
 						</div>
 					</div>
