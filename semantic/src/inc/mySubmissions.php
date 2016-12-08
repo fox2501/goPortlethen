@@ -59,6 +59,7 @@ if (isset($_SESSION['loggedIn'])) {
 		<div class='ui hidden section divider'></div>
 	</div>
 ";
+        }
             echo "<h1 align='center'>Approved Submissions</h1>
         <div class='ui horizontal section divider'>
         </div>";
