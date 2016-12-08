@@ -1,7 +1,4 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
 
 session_start();
 
@@ -21,6 +18,7 @@ $stmt = $pdo->prepare($sql);
 $stmt->execute([$userName]);
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
 $accessID = $row["accessID"];
+$accessLevel = $row["accessID"];
 
 $img = $_FILES['healthPhoto'];
 if(empty($img)){
@@ -57,10 +55,10 @@ if($accessLevel == 4){
 }
 $pdo->prepare($sql)->execute([$title,$mainText,$userID,$approvalLvl]);
 
-$healthID = $db->lastInsertId();
+$healthID = $pdo->lastInsertId();
 
 $sql = "INSERT INTO photos (caption,url,clubID,locationID,healthContentID,routeID) VALUES (?,?,?,?,?,?)";
-$pdo->prepare($sql)->execute('',$url,0,0,$healthID,0);
+$pdo->prepare($sql)->execute(['',$url,0,0,$healthID,0]);
 
 
 
