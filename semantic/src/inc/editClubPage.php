@@ -98,10 +98,10 @@ $('#dropdown')
 					<div class='field'>
 						<input name='clubToEdit' type='hidden' value='$clubID'>
 					</div>
-					<div class=\"field\">
+					<div class='field'>
                     <label>Please upload your clubs profile picture: </label>
-                    <div class=\"ui fluid action input\">
-                        <input name=\"img\" size=\"35\" type=\"file\"/>
+                    <div class='ui fluid action input'>
+                        <input name='img' size='35'type='file'>
                     </div>
                     </div>
 					<button class='ui fluid large green submit button' type='submit'>Submit</button> 
