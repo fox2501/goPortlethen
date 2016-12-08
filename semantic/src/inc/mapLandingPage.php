@@ -52,7 +52,7 @@ include("includes/header.php");
             echo "
 	<div class='sixteen wide column'>
 		<div class='ui raised segment'>
-			<div class='fourteen wide column'>
+			<div class='ten wide column'>
 				<div class='header'>
 					$locationName
 				</div>
@@ -60,7 +60,7 @@ include("includes/header.php");
 					$locationType
 				</div>
 			</div>
-			<div class='two wide column'>
+			<div class='six wide column'>
 				<div class='extra'>
 					<form action='/semantic/src/inc/mapPage.php' class='ui form' method='post'>
 						<button class='ui right floated button' onclick='/semantic/src/inc/mapPage.php' type='submit'><input name='viewMap' type='hidden' value='$locationID'>Click here to view this on a map</button>
