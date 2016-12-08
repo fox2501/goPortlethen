@@ -49,11 +49,12 @@ if (isset($_SESSION['loggedIn'])) {
 								<p id='mainText' style='text - align:justify'>$mainText<br></p>
 								<p id='author'>By $userName<br></p>
 							</div>
-							<div class='four wide column'>
+							<div class='two wide column'>
 								<form action='approveHealthContent.php' class='ui form' method='post'>
 									<button class='ui positive basic right floated button' onclick='/semantic/src/inc/approveHealthContent.php' type='submit'><input name='approveHealth' type='hidden' value='$healthContentID'> Approve</button>
 								</form>
-								<br>
+							</div>
+							<div class = 'two wide column'>
 								<form action='denyHealthContent.php' class='ui form' method='post'>
 									<button class='ui negative basic right floated button' onclick='/semantic/src/inc/denyHealthContent.php' type='submit'><input name='denyHealth' type='hidden' value='$healthContentID'> Deny</button>
 								</form>
