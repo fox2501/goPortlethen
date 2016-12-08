@@ -20,17 +20,11 @@ if (isset($_SESSION['loggedIn'])) {
     }
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css">
     <title>Club Landing Page</title>
 </head>
 <? include("includes/header.php"); ?>
 <body>
-
 <h1 align="center">Club Landing Page</h1>
 <div class="ui horizontal section divider">
     Become more involved
