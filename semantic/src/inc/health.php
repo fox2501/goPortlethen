@@ -90,7 +90,7 @@ AND A.healthContentID = C.healthContentID";
                 <form class='ui form' method='POST' action='editHealthContent.php'>
                     <button class='ui right floated mini button' onclick='/semantic/src/inc/editHealthContent.php'
                             type='submit'>
-                        <input type='hidden' name='editHealth' value=$ healthContentID> Edit
+                        <input type='hidden' name='editHealth' value=$healthContentID> Edit
                     </button>
                 </form>
             </div>
