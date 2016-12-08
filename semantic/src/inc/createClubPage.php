@@ -82,16 +82,15 @@ if(isset($_SESSION['loggedIn'])) {
                 <div class="field">
                     <label>Please toggle if your club requires a fee: </label>
                     <div class="ui toggle checkbox">
-                        <input type="checkbox" tabindex="0" class="hidden" id="isFee">
-                        <label for="isFee">Fee does apply</label>
+                        <input type="checkbox" name = "feeRequired" tabindex="0" class="hidden" id="isFee">
+                        <label for = "isFee">Fee does apply</label>
                     </div>
                 </div>
                 <div class="field" id="feeAmount" style="display: none;">
-                    <label>Please enter your clubs monthly fee: </label>
+                    <label>Please enter your clubs monthly fee (e.g. 10.00): </label>
                     <div class="ui  right labeled input">
                         <div class="ui label">£</div>
                         <input type="text" placeholder="Amount" name="feeAmount">
-                        <div class="ui basic label">.00</div>
                     </div>
                     <script>
                         var checker = document.getElementById('isFee');
