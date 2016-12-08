@@ -146,6 +146,7 @@ if (isset($_SESSION['loggedIn'])) {
                 <div class="required inline field">
                     <div class="ui checkbox">
                         <input type="checkbox" tabindex="0" class="hidden" name="terms"">
+                        <input type="checkbox" name="gender" value="Female">Female</input>
                         <label for="terms">I agree to the terms and conditions</label>
                     </div>
                 </div>
