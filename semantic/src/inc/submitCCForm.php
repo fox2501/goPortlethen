@@ -14,7 +14,7 @@ $feeCost = $_POST["feeAmount"];
 $clubCategory = $_POST["clubCategory"];
 
 echo $feePaid;
-echo $feeCost;
+//echo $feeCost;
 
 //$img=$_FILES['img'];
 //    if($img['name']==''){
