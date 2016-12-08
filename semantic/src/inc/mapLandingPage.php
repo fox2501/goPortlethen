@@ -39,26 +39,36 @@ include("includes/header.php");
 			                    </div>";
         }
         ?><?php
-        $sql = "SELECT locationName, caption, locationType FROM locations";
+        $sql = "SELECT locationID, locationName, caption, locationType FROM locations";
         $result = mysqli_query($db, $sql);
         while ($row = mysqli_fetch_assoc($result)) {
             $locationName = $row['locationName'];
             $caption = $row['caption'];
             $locationType = $row['locationType'];
+            $locationID = $row['locationID'];
             if($locationType == 'hist'){
                 $locationType = 'Historical Landmark';
             }
             echo "
-			        <div class='sixteen wide column'>
-			            <div class='ui raised segment'>
-			                <div class='header''>
-			                    $locationName
-			                </div>
-			                <div class='header'>
-			                    $locationType
-			                </div>
-			            </div>
-			        </div>
+	<div class='sixteen wide column'>
+		<div class='ui raised segment'>
+			<div class='fourteen wide column'>
+				<div class='header'>
+					$locationName
+				</div>
+				<div class='header'>
+					$locationType
+				</div>
+			</div>
+			<div class='two wide column'>
+				<div class='extra'>
+					<form action='/semantic/src/inc/mapPage.php' class='ui form' method='post'>
+						<button class='ui right floated button' onclick='/semantic/src/inc/mapPage.php' type='submit'><input name='viewMap' type='hidden' value='$locationID'>Click here to view this on a map</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 			        ";
         }
         ?>
