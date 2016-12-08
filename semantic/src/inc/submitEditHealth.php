@@ -15,9 +15,6 @@ $userID = $_SESSION['loggedIn'];
 $sql ="UPDATE healthcontent SET title = ?,mainText= ? WHERE healthContentID = ?";
 $pdo->prepare($sql)->execute([$title,$mainText,$healthContentID]);
 
-$title = $_POST["title"];
-$mainText = $_POST["mainText"];
-$userID = $_SESSION["loggedIn"];
 
 $img = $_FILES['healthPhoto'];
 if(empty($img)){
@@ -44,7 +41,7 @@ if(empty($img)){
 }
 
 
-$stmt = $pdo->query("SELECT FROM healthContent WHERE healthContentID = (SELECT MAX(healthContentID) FROM healthContent)");
+$stmt = $pdo->query("SELECT FROM healthContent WHERE healthContentID = $healthContentID");
 
 while ($row = $stmt->fetch()){
     $healthID = $row['healthContentID'];
