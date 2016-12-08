@@ -77,10 +77,10 @@ if (isset($_SESSION['loggedIn'])) {
 								$feeRequired
 							</div>
 							<div class='menu'>
-								<div class='item' data-value='1'>
+								<div class='item' value='1'>
 									Yes
 								</div>
-								<div class='item' data-value='0'>
+								<div class='item' value='0'>
 									No
 								</div>
 							</div>

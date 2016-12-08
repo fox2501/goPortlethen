@@ -11,11 +11,17 @@ $feeRequired = $_POST['editFeeRequired'];
 $feeCost = $_POST['editCost'];
 
 echo $clubName;
+echo '        ';
 echo $clubID;
+echo '        ';
 echo $clubDesc;
+echo '        ';
 echo $contactNum;
+echo '        ';
 echo $websiteURL;
+echo '        ';
 echo $feeRequired;
+echo '        ';
 echo $feeCost;
 
 //$sql = "
