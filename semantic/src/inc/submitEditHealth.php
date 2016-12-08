@@ -15,9 +15,6 @@ $userID = $_SESSION['loggedIn'];
 $sql ="UPDATE healthcontent SET title = ?,mainText= ? WHERE healthContentID = ?";
 $pdo->prepare($sql)->execute([$title,$mainText,$healthContentID]);
 
-$title = $_POST["title"];
-$mainText = $_POST["mainText"];
-$userID = $_SESSION["loggedIn"];
 
 $img = $_FILES['healthPhoto'];
 if(empty($img)){
