@@ -2,16 +2,16 @@
 session_start();
 include("includes/dbconnect.php");
 if (isset($_SESSION['loggedIn'])) {
-    $userID = $_SESSION['loggedIn'];
+    $userID    = $_SESSION['loggedIn'];
     $canAccess = '0';
-    $sql = "SELECT userName from users WHERE userID = '$userID'";
-    $result = mysqli_query($db, $sql);
-    $row = mysqli_fetch_assoc($result);
-    $userName = $row["userName"];
+    $sql       = "SELECT userName from users WHERE userID = '$userID'";
+    $result    = mysqli_query($db, $sql);
+    $row       = mysqli_fetch_assoc($result);
+    $userName  = $row["userName"];
 
-    $sql = "SELECT accessID from useraccess where userName = '$userName'";
-    $result = mysqli_query($db, $sql);
-    $row = mysqli_fetch_assoc($result);
+    $sql      = "SELECT accessID from useraccess where userName = '$userName'";
+    $result   = mysqli_query($db, $sql);
+    $row      = mysqli_fetch_assoc($result);
     $accessID = $row["accessID"];
     if ($accessID == '1' || $accessID == '2') {
         $canAccess = '1';
@@ -23,7 +23,9 @@ if (isset($_SESSION['loggedIn'])) {
 <head>
     <title>Club Landing Page</title>
 </head>
-<? include("includes/header.php"); ?>
+<?
+include("includes/header.php");
+?>
 <body>
 <h1 align="center">Club Landing Page</h1>
 <div class="ui horizontal section divider">
@@ -35,9 +37,62 @@ if (isset($_SESSION['loggedIn'])) {
         <div class="row">
             <?php
             if ($canAccess == 1) {
-                echo "<div class='four wide column''>
-                <button class='ui button'><a href='/semantic/src/inc/CreateClubPage.php'>Create Club</a></button>
-            </div>";
+                echo "
+<div class='four wide column'>
+    <button class='ui button'><a href='/semantic/src/inc/CreateClubPage.php'>Create Club</a></button>
+</div>
+<div class='eight wide column'>
+    <div class='ui form>
+                    <div class=' inline field'>
+    <label>Filter clubs by: </label>
+    <div class='field'>
+        <div class='ui radio checkbox'>
+            <input type='radio' name='Club' checked=''' tabindex='0' class='hidden' id='A-Z'>
+            <label for='A-Z'>Name A-Z</label>
+        </div>
+    </div>
+    <div class='ui radio checkbox'>
+        <input type='radio' name='Club' tabindex='0' class='hidden' id='fee'>
+        <label for='fee'>Fee does apply</label>
+    </div>
+</div>
+</div>
+</div>
+<div class='four wide column'>
+    <div class='ui fluid category search'>
+        <div class='ui right floated icon input'>
+            <input class='prompt' type='text' placeholder='Search clubs...'>
+            <i class='search icon'></i>
+        </div>
+    </div>
+</div>";
+            } else {
+                echo "
+<div class='eight wide column'>
+    <div class='ui form>
+                    <div class=' inline field'>
+    <label>Filter clubs by: </label>
+    <div class='field'>
+        <div class='ui radio checkbox'>
+            <input type='radio' name='Club' checked=''' tabindex='0' class='hidden' id='A-Z'>
+            <label for='A-Z'>Name A-Z</label>
+        </div>
+    </div>
+    <div class='ui radio checkbox'>
+        <input type='radio' name='Club' tabindex='0' class='hidden' id='fee'>
+        <label for='fee'>Fee does apply</label>
+    </div>
+</div>
+</div>
+</div>
+<div class='eight wide column'>
+    <div class='ui fluid category search'>
+        <div class='ui right floated icon input'>
+            <input class='prompt' type='text' placeholder='Search clubs...'>
+            <i class='search icon'></i>
+        </div>
+    </div>
+</div>";
             }
             ?>
             <div class="eight wide column">
@@ -57,7 +112,7 @@ if (isset($_SESSION['loggedIn'])) {
                     </div>
                 </div>
             </div>
-            <div class="eight wide column">
+            <div class="four wide column">
                 <div class="ui fluid category search">
                     <div class="ui right floated icon input">
                         <input class="prompt" type="text" placeholder="Search clubs...">
@@ -74,12 +129,12 @@ if (isset($_SESSION['loggedIn'])) {
         <div class="ui hidden divider"></div>
         <?php
         $sql_query = "SELECT A.clubName, A.clubDescription, A.clubID, B.url FROM club A, photos B WHERE A.clubID = B.clubID";
-        $result = $db->query($sql_query);
+        $result    = $db->query($sql_query);
         while ($row = $result->fetch_array()) {
-            $title = $row['clubName'];
+            $title    = $row['clubName'];
             $mainText = $row['clubDescription'];
-            $clubID = $row['clubID'];
-            $photo = $row['url'];
+            $clubID   = $row['clubID'];
+            $photo    = $row['url'];
             echo "
 <div class='ui raised segment'>
     <div class='ui container'>
@@ -116,5 +171,7 @@ if (isset($_SESSION['loggedIn'])) {
 </div>
 </div>
 </body>
-<?php include("/includes/footer.php"); ?>
+<?php
+include("/includes/footer.php");
+?>
 </html>
