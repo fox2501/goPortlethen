@@ -29,7 +29,8 @@ if(isset($_SESSION['loggedIn'])) {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
         <title>Create Club Page</title>
     </head>
-    <?php include("includes/dbconnect.php"); ?>
+    <?php include("includes/dbconnect.php");
+    include("includes/header.php") ?>
     <body>
     <div class="ui container">
         <form class="ui form" action="submitCCForm.php" enctype="multipart/form-data" method="POST">
@@ -134,7 +135,7 @@ if(isset($_SESSION['loggedIn'])) {
 <!--                        .ui.action.input input[type="file"] {-->
 <!--                            display: none;-->
 <!--                        }-->
-<!--                    </style>-->
+                    <!--                    </style>-->
                 </div>
                 <div class="required inline field">
                     <div class="ui checkbox">
@@ -145,14 +146,14 @@ if(isset($_SESSION['loggedIn'])) {
                 </div>
             </div>
 
-            <div class="captch">
-            <img src="captcha_code_file.php?rand=<?php echo rand(); ?>"
-                 id="captchaimg" >
-            <label for="message">Enter the code above here :</label>
-            <input id="6_letters_code" name="6_letters_code" type="text">
-                </div>
+            <div class="field">
+                <img src="captcha_code_file.php?rand=<?php echo rand(); ?>"
+                     id="captchaimg">
+                <label for="message">Enter the code above here :</label>
+                <input id="6_letters_code" name="6_letters_code" type="text">
+            </div>
 
-            <button class="ui fluid large green submit button" id="createClub" type="submit" >Create Club</button>
+            <button class="ui fluid large green submit button" id="createClub" type="submit">Create Club</button>
         </form>
 
         <script type="text/javascript">
