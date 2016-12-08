@@ -74,7 +74,7 @@ if (isset($_SESSION['loggedIn'])) {
 					</div>
 					<div class='field'>
 						<label>Fee Required?</label>
-						<div class='ui selection dropdown'>
+						<div class='ui selection dropdown' id = 'dropdown'>
 							<input name='editFeeRequired' type='hidden'> <i class='ui dropdown icon'></i>
 							<div class='default text'>
 								$feeRequired
@@ -98,7 +98,7 @@ if (isset($_SESSION['loggedIn'])) {
 	</div>
 </body>
             <script>
-            $('ui.selection.dropdown')
+            $('#dropdown')
                 .dropdown()
             ;</script>";
             include("includes/footer.php");
