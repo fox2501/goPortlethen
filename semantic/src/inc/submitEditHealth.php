@@ -40,7 +40,7 @@ if(empty($img)){
     $url=$pms['data']['link'];
 }
 
-$sql2 = 'SELECT FROM healtContent WHERE healtContentID =?';
+$sql2 = 'SELECT FROM healthContent WHERE healtContentID =?';
 $stmt =$pdo->prepare($sql2);
 $stmt->execute([$healthContentID]);
 
