@@ -1,7 +1,4 @@
 <?php
-echo ini_set('display_errors', 1);
-echo ini_set('display_startup_errors', 1);
-echo error_reporting(E_ALL);
 session_start();
 include("includes/dbconnect.php");
 $clubName = $_POST["clubName"];

@@ -155,8 +155,7 @@ AND A.healthContentID = C.healthContentID";
             </div>
         </div>
         <div class="six wide column">
-            <div data-tockify-component="mini" data-tockify-calendar="healthevents"></div>
-            <script data-tockify-script="embed" src="https://public.tockify.com/browser/embed.js"></script>
+            <iframe style="margin-right:50px" src="https://calendar.google.com/calendar/embed?src=imdvs1dbg4fm5e9g35o2cj8i2g%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="yes"></iframe>
             <div style="height:600px">
                 <a class="twitter-timeline" data-height="500" href="https://twitter.com/BoringMilner">Tweets by James Milner</a>
                 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
