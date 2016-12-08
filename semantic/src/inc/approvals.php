@@ -50,8 +50,8 @@ if (isset($_SESSION['loggedIn'])) {
 								<p id='author'>By $userName<br></p>
 							</div>
 							<div class='two wide column'>
-								<form action='approveHealthContent.php' class='ui form' method='post'>
-									<button class='ui positive basic right floated button' onclick='/semantic/src/inc/approveHealthContent.php' type='submit'><input name='approveHealth' type='hidden' value='$healthContentID'> Approve</button>
+								<form action='submitHealthApproval.php' class='ui form' method='POST'>
+									<button class='ui positive basic right floated button' onclick='/semantic/src/inc/submitHealthApproval.php' type='submit'><input name='approveHealth' type='hidden' value='$healthContentID'> Approve</button>
 								</form>
 							</div>
 							<div class = 'two wide column'>
