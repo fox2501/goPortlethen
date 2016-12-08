@@ -38,7 +38,7 @@ $sql = "INSERT INTO club (clubName, clubDescription, email, contactNumber, calen
 VALUES ('$clubName', '$clubDescription', '$email', '$contactNumber', '11', '$feePaid', '$feeCost', 'testurl','$clubCategory')";
 $result = mysqli_query($db, $sql);
 
-if($result){
+if(mysqli_affected_rows() > 0){
     $sql2 ="SELECT clubID FROM club WHERE clubID = (SELECT MAX(clubID) FROM club)";
     $result = mysqli_query($db, $sql2);
     while($row = mysqli_fetch_assoc($result)){
