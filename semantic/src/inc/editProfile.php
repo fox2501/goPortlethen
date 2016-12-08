@@ -33,6 +33,14 @@ if (isset($_SESSION['loggedIn'])) {
                     User settings
                 </div>
             </div>
+            <div class = "ui column">
+                <form>
+                    <button class = "ui right floated button" formaction="changePassword.php">
+                        <i class="settings icon"></i>
+                        Change Password
+                    </button>
+                </form>
+            </div>
         </div>
         <div class="ui grid">
             <div class="row">
