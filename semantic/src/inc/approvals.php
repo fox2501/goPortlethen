@@ -3,6 +3,9 @@ session_start();
 include("includes/dbconnect.php");
 if (isset($_SESSION['loggedIn'])) {
     include("includes/header.php");
+    echo "<h1 align='center'>Approvals</h1>
+        <div class='ui horizontal section divider'>
+        </div>";
     $userID = $_SESSION['loggedIn'];
     $sql = "SELECT userName from users where userID = '$userID'";
     $result = mysqli_query($db, $sql);
@@ -30,12 +33,6 @@ if (isset($_SESSION['loggedIn'])) {
             $datePosted = $row['datePosted'];
             $healthContentID = $row['healthContentID'];
             $photoURL = $row['url'];
-        }
-        ?>
-        <h1 align="center">Approvals</h1>
-        <div class="ui horizontal section divider">
-        </div>
-<?php
         echo "
 <div class='row'>
     <ul>
