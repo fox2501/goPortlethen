@@ -183,8 +183,8 @@ if (isset($_SESSION['loggedIn'])) {
                                     ]
                                 }
                             }
-                        }
-                    );
+                    })
+                    ;
                 </script>
 
         </form>
