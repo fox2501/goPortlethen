@@ -29,7 +29,8 @@ if(isset($_SESSION['loggedIn'])) {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
         <title>Create Club Page</title>
     </head>
-    <?php include("includes/dbconnect.php"); ?>
+    <?php include("includes/dbconnect.php");
+    include("includes/header.php") ?>
     <body>
     <div class="ui container">
         <form class="ui form" action="submitCCForm.php" enctype="multipart/form-data" method="POST">
@@ -49,10 +50,10 @@ if(isset($_SESSION['loggedIn'])) {
             </div>
             <div class="ui form attached fluid segment">
                 <div class="ui error message"></div>
-                <div class="field">
+                <div class="required field">
                     <label>Club Name</label>
                     <div class="field">
-                        <input type="text" name="clubName" placeholder="Enter your club name.">
+                        <input type="text" name="clubName" placeholder="Enter your club name." id="clubName">
                     </div>
                 </div>
                 <div class="field">
@@ -82,7 +83,7 @@ if(isset($_SESSION['loggedIn'])) {
                 <div class="field">
                     <label>Please toggle if your club requires a fee: </label>
                     <div class="ui toggle checkbox">
-                        <input type="checkbox" name = "feeRequired" tabindex="0" class="hidden" id="isFee">
+                        <input type="checkbox" name = "feeRequired" tabindex="0" class="hidden" id="isFee" value = "0">
                         <label for = "isFee">Fee does apply</label>
                     </div>
                 </div>
@@ -99,8 +100,10 @@ if(isset($_SESSION['loggedIn'])) {
                         checker.onchange = function () {
                             if (this.checked) {
                                 sendbtn.style.display = 'block';
+                                checker.value = 1;
                             } else {
                                 sendbtn.style.display = 'none';
+                                checker.value = 0;
                             }
 
                         }
@@ -134,43 +137,51 @@ if(isset($_SESSION['loggedIn'])) {
 <!--                        .ui.action.input input[type="file"] {-->
 <!--                            display: none;-->
 <!--                        }-->
-<!--                    </style>-->
+                    <!--                    </style>-->
                 </div>
                 <div class="required inline field">
                     <div class="ui checkbox">
-                        <input type="checkbox" tabindex="0" class="hidden" name="termsAndConditions"
-                               id="termsAndConditions">
-                        <label for="termsAndConditions">I agree to the terms and conditions</label>
+                        <input type="checkbox" tabindex="0" class="hidden" name="terms"">
+                        <label for="terms">I agree to the terms and conditions</label>
                     </div>
                 </div>
-            </div>
-            <button class="ui fluid large green submit button" id="createClub" type="submit" >Create Club</button>
+            <button class="ui fluid large green submit button" id="createClub" type="submit">Create Club</button>
         </form>
 
         <script type="text/javascript">
             $('.ui.form')
                 .form({
-                        email: {
-                            identifier: 'email',
+                    fields: {
+                        name: {
+                            identifier: 'clubName',
                             rules: [
                                 {
-                                    type: 'email',
-                                    prompt: 'Please enter a valid e-mail'
+                                    type   : 'empty',
+                                    prompt : 'Please enter your clubs name'
                                 }
                             ]
                         },
-                        checkbox: {
-                            identifier: 'termsAndConditions',
+                        terms: {
+                            identifier: 'terms',
                             rules: [
                                 {
-                                    type: 'checked',
-                                    prompt: 'Please agree to the terms & conditions'
+                                    type   : 'checked',
+                                    prompt : 'You must agree to the terms and conditions'
+                                }
+                            ]
+                        },
+                        dropdown: {
+                            identifier  : 'clubCategory',
+                            rules: [
+                                {
+                                    type   : 'empty',
+                                    prompt : 'Please select a club category'
                                 }
                             ]
                         }
                     }
-                )
-            ;
+                }
+            );
         </script>
 
         <div class="ui bottom attached warning message">
