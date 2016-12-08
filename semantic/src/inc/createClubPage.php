@@ -145,6 +145,14 @@ if(isset($_SESSION['loggedIn'])) {
                     </div>
                 </div>
             </div>
+
+            <div class="captch">
+            <img src="captcha_code_file.php?rand=<?php echo rand(); ?>"
+                 id="captchaimg" >
+            <label for="message">Enter the code above here :</label>
+            <input id="6_letters_code" name="6_letters_code" type="text">
+                </div>
+
             <button class="ui fluid large green submit button" id="createClub" type="submit" >Create Club</button>
         </form>
 
