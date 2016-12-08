@@ -97,10 +97,10 @@ if (isset($_SESSION['loggedIn'])) {
                     </div>
             </div>
             </body>
-            <scipt>
+            <script>
             $('select.dropdown')
                 .dropdown()
-            ;</scipt>";
+            ;</script>";
             include("includes/footer.php");
         } else {
             echo "You do not have permission";
