@@ -139,6 +139,15 @@ include("includes/dbconnect.php");
                                     }
                                 ]
                             },
+                            match2: {
+                                identifier  : 'passwordConfirm',
+                                rules: [
+                                    {
+                                        type   : 'match[password]',
+                                        prompt : 'Please ensure your passwords match!'
+                                    }
+                                ]
+                            },
                         }
                     })
             })(jQuery);
