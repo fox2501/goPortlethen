@@ -7,8 +7,8 @@ include("includes/dbconnect.php");
 <head>
     <meta charset="UTF-8">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
     <title>goPortlethen</title>
 </head><?php include("includes/header.php"); ?>
 <body>
@@ -81,40 +81,41 @@ include("includes/dbconnect.php");
             <div class="ui error message"></div>
         </div>
         <script type = "text/javascript">
-            $('.ui.form')
-                .form({
-                    on: 'blur',
-                    fields: {
-                        firstName: {
-                            identifier  : 'firstName',
-                            rules: [
-                                {
-                                    type   : 'empty',
-                                    prompt : 'Please enter a value'
-                                }
-                            ]
-                        },
-                        surname: {
-                            identifier  : 'surname',
-                            rules: [
-                                {
-                                    type   : 'empty',
-                                    prompt : 'Please enter a value'
-                                }
-                            ]
-                        },
-                        email: {
-                            identifier  : 'email',
-                            rules: [
-                                {
-                                    type   : 'email',
-                                    prompt : 'Please enter a valid email.'
-                                }
-                            ]
+            ;(function($){
+                $('.ui.form').form({
+                        on: 'blur',
+                        fields: {
+                            firstName: {
+                                identifier  : 'firstName',
+                                rules: [
+                                    {
+                                        type   : 'empty',
+                                        prompt : 'Please enter a value'
+                                    }
+                                ]
+                            },
+                            surname: {
+                                identifier  : 'surname',
+                                rules: [
+                                    {
+                                        type   : 'empty',
+                                        prompt : 'Please enter a value'
+                                    }
+                                ]
+                            },
+                            email: {
+                                identifier  : 'email',
+                                rules: [
+                                    {
+                                        type   : 'email',
+                                        prompt : 'Please enter a valid email.'
+                                    }
+                                ]
+                            }
                         }
-                    }
-                })
-            ;
+                    })
+            })(jQuery);
+
 
         </script>
     </form>
