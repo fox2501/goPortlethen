@@ -36,7 +36,7 @@ include("includes/header.php");
     </header>
     <div class='ui grid'>
         <div class="sixteen wide column">
-            <div = "map_canvas"></div>
+            <div id = "map_canvas" style="width: 600px; height: 350px"></div>
 <!--            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsaPQGyO2SHJumHMC2k8RTYfy3z7OXIk&callback=initMap">-->
 <!--            </script>-->
 <!--            initMap();-->
