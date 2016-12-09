@@ -34,7 +34,7 @@ include("includes/header.php");
     <header class='ui header'>
         <?php echo $locationName ?>
     </header>
-    <div class='ui centered grid'>
+    <div class='ui grid'>
         <div class="sixteen wide column">
             <div id="map" style="width: 600px; height: 350px"></div>
             <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsaPQGyO2SHJumHMC2k8RTYfy3z7OXIk&callback=initMap">
@@ -46,7 +46,8 @@ include("includes/header.php");
             <h3>Description</h3>
             <p><?php echo $caption ?></p>
         </div>
-    </div><?php include("includes/footer.php"); ?>
+    </div>
 </div>
+<?php include("includes/footer.php"); ?>
 </body>
 </html>
