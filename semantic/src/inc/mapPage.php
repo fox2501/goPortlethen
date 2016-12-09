@@ -40,25 +40,26 @@ include("includes/header.php");
     Discover Portlethen
 </div>
 <div class="ui container">
-    <header class='ui header'>
-        <?php echo $locationName ?>
-    </header>
     <div class='ui grid'>
-        <div class="sixteen wide column">
-            <div id="map" style="width: 600px; height: 350px"></div>
+        <div class = 'two wide column'></div>
+        <div class="twelve wide column">
+            <header class='ui header'>
+                <?php echo $locationName ?>
+            </header>
+            <div id="map" style="width: 100%; height: 350px"></div>
             <script>
                 function initMap() {
                     var myLatLng = {lat: <?php echo $lat ?>, lng: <?php echo $long ?>};
 
                     var map = new google.maps.Map(document.getElementById('map'), {
-                        zoom: 5,
+                        zoom: 4,
                         center: {lat: <?php echo $lat ?>, lng: <?php echo $long ?>}
                     });
 
                     var marker = new google.maps.Marker({
                         position: myLatLng,
                         map: map,
-                        title: 'Hello World!'
+                        title: '<?php echo $locationName ?>'
                     });
                 }
 
@@ -77,6 +78,7 @@ include("includes/header.php");
 
         </div>
     </div>
+    <div class = 'two wide column'></div>
     <div class="ui grid">
         <div class="eight wide column">
             <h3>Description</h3>
