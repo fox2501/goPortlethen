@@ -4,7 +4,7 @@ include("includes/dbconnect.php");
 $locationID = $_POST['viewMap'];
 $sql = "SELECT * FROM locations where locationID = '$locationID'";
 $result = mysqli_query($db, $sql);
-while($row = mysqli_fetch_assoc($result)){
+while ($row = mysqli_fetch_assoc($result)) {
     $locationName = $row['locationName'];
     $lat = $row['latitude'];
     $long = $row['longitude'];
@@ -36,36 +36,35 @@ include("includes/header.php");
     </header>
     <div class='ui grid'>
         <div class="sixteen wide column">
-            <div id = "map" style="width: 600px; height: 350px"></div>
-                <script>
-                    function initialize() {
-                        var myLatLng = {lat: 57.063171, lng: -2.139793};
+            <div id="map" style="width: 600px; height: 350px"></div>
+            <script>
+                function initMap() {
+                    var myLatLng = {lat: 57.063171, lng: -2.139793};
 
-                        var map = new google.maps.Map(document.getElementById('map'), {
-                            zoom: 12,
-                            center: {lat: 57.061681, lng: -2.129468}
-                        });
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        zoom: 12,
+                        center: {lat: 57.061681, lng: -2.129468}
+                    });
 
-                        var marker = new google.maps.Marker({
-                            position: myLatLng,
-                            map: map,
-                            title: 'Hello World!'
-                        });
-                    }
+                    var marker = new google.maps.Marker({
+                        position: myLatLng,
+                        map: map,
+                        title: 'Hello World!'
+                    });
+                }
 
-                    function loadScript() {
-                        var script = document.createElement("script");
-                        script.type = "text/javascript";
-                        script.src = "http://maps.google.com/maps/api/js?sensor=false&callback=initialize";
-                        document.body.appendChild(script);
-                    }
+                function loadScript() {
+                    var script = document.createElement("script");
+                    script.type = "text/javascript";
+                    script.src = "http://maps.google.com/maps/api/js?sensor=false&callback=initialize";
+                    document.body.appendChild(script);
+                }
 
-                    window.onload = loadScript;
-
-                </script>
-<!--            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsaPQGyO2SHJumHMC2k8RTYfy3z7OXIk&callback=initMap">-->
-<!--            </script>-->
-<!--            initMap();-->
+                window.onload = loadScript;
+            </script>
+            <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsaPQGyO2SHJumHMC2k8RTYfy3z7OXIk&callback=initMap">
+            </script>
 
         </div>
     </div>
