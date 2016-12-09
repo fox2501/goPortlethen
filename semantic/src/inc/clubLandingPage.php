@@ -47,14 +47,14 @@ include("includes/header.php");
                     <div class="inline fields">
                         <label>Filter clubs by: </label>
                         <div class="field">
-                            <div class="ui radio checkbox">
-                                <input type="radio" name="Club" checked="" tabindex="0" class="hidden" id="A-Z">
+                            <div class="ui checkbox">
+                                <input type="checkbox" tabindex="0" class="hidden" id="A-Z">
                                 <label for="A-Z">Name A-Z</label>
                             </div>
-                        </div>
-                        <div class="ui radio checkbox">
-                            <input type="radio" name="Club" tabindex="0" class="hidden" id="fee">
-                            <label for="fee">Fee does apply</label>
+                            <div class="ui checkbox">
+                                <input type="checkbox" tabindex="0" class="hidden" id="fee">
+                                <label for="fee">Fee does apply</label>
+                            </div>
                         </div>
                     </div>
                 </div>
