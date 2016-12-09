@@ -92,7 +92,7 @@ AND A.approvalStatus = 1;";
                 </form>
             </div>
             <div class='row'>
-                <div class='eight wide column'>
+                <div class='five wide column'>
                     <h3 class='ui header' id='title'>
                         $title
                     </h3>
@@ -103,7 +103,7 @@ AND A.approvalStatus = 1;";
                         <img src='$photoURL' style = 'height: 150px; width: 100%;'>
                     </div>
                 </div>
-                <div class='eight wide column'>
+                <div class='eleven wide column'>
                     <p id='mainText' style='text - align:justify'> $mainText
                         <br>
                     </p>
@@ -122,7 +122,7 @@ AND A.approvalStatus = 1;";
 <div class='ui raised segment' style = 'height: 300px;'>
     <div class='ui container'>
         <div class='ui grid'>
-                <div class='eight wide column'>
+                <div class='five wide column'>
                     <h3 class='ui header' id='title'>
                         $title
                     </h3>
@@ -133,7 +133,7 @@ AND A.approvalStatus = 1;";
                         <img src='$photoURL' style = 'height: 150px; width: 100%;'>
                     </div>
                 </div>
-                <div class='eight wide column'>
+                <div class='eleven wide column'>
                     <p id='mainText' style='text - align:justify'> $mainText
                         <br>
                     </p>
