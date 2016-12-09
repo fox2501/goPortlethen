@@ -26,6 +26,7 @@ if (isset($_SESSION['loggedIn'])) {
     <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="goPortlethen/semantic/dist/semantic.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -160,35 +161,35 @@ if (isset($_SESSION['loggedIn'])) {
                     });
 
                     $('.ui.form').form({
-                            fields: {
-                                clubName: {
-                                    identifier: 'clubName',
-                                    rules: [
-                                        {
-                                            type: 'empty',
-                                            prompt: 'Please enter your clubs name'
-                                        }
-                                    ]
-                                },
-                                terms: {
-                                    identifier: 'terms',
-                                    rules: [
-                                        {
-                                            type: 'checked',
-                                            prompt: 'You must agree to the terms and conditions'
-                                        }
-                                    ]
-                                },
-                                clubCategory: {
-                                    identifier: 'clubCategory',
-                                    rules: [
-                                        {
-                                            type: 'empty',
-                                            prompt: 'Please select a club category'
-                                        }
-                                    ]
-                                }
+                        fields: {
+                            clubName: {
+                                identifier: 'clubName',
+                                rules: [
+                                    {
+                                        type: 'empty',
+                                        prompt: 'Please enter your clubs name'
+                                    }
+                                ]
+                            },
+                            terms: {
+                                identifier: 'terms',
+                                rules: [
+                                    {
+                                        type: 'checked',
+                                        prompt: 'You must agree to the terms and conditions'
+                                    }
+                                ]
+                            },
+                            clubCategory: {
+                                identifier: 'clubCategory',
+                                rules: [
+                                    {
+                                        type: 'empty',
+                                        prompt: 'Please select a club category'
+                                    }
+                                ]
                             }
+                        }
                     })
                     ;
                 </script>
