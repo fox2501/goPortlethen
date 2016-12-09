@@ -154,11 +154,11 @@ if (isset($_SESSION['loggedIn'])) {
                 </div>
                 <button class="ui fluid large green submit button" id="createClub" type="submit">Create Club</button>
 
-                <script type="text/javascript" src="jquery.js">
+                <script type="text/javascript">
 
-                    ;
-                    (function ($) {
+                    ;(function ($) {
                         $('.ui.form').form({
+                            on: 'blur',
                             clubName: {
                                 identifier: 'clubName',
                                 rules: [
