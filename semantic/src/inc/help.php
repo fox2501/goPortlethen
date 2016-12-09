@@ -13,7 +13,7 @@ session_start();
 </head>
 <?php include("includes/header.php");?>
 <body>
-<header>Help Page</header>
+<h2 class="ui center aligned header">Help Page</h2>
 <div class = "ui container">
     <div class = "ui horizontal section divider">FAQs</div>
     <div class = "ui three column grid">
