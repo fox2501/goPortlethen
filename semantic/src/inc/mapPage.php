@@ -38,12 +38,12 @@ include("includes/header.php");
         <div class="sixteen wide column">
             <div id="map" style="width: 600px; height: 350px"></div>
             <script>
-                function initMap() {
-                    var myLatLng = {lat: 57.063171, lng: -2.139793};
+                function initMap(lat, long) {
+                    var myLatLng = {lat: $lat, lng: $long};
 
                     var map = new google.maps.Map(document.getElementById('map'), {
                         zoom: 12,
-                        center: {lat: 57.061681, lng: -2.129468}
+                        center: {lat: $lat, lng: $long}
                     });
 
                     var marker = new google.maps.Marker({
