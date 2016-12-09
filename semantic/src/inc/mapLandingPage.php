@@ -52,24 +52,26 @@ include("includes/header.php");
             echo "
 	<div class='row'>
 		<div class='ui raised segment'>
-			<div class='ten wide column'>
-				<div class='header'>
-					$locationName
+			<div class='ui two column grid'>
+				<div class='column'>
+					<div class='header'>
+						$locationName
+					</div>
+					<div class='header'>
+						$locationType
+					</div>
 				</div>
-				<div class='header'>
-					$locationType
-				</div>
-			</div>
-			<div class='six wide column'>
-				<div class='extra'>
-					<form action='/semantic/src/inc/mapPage.php' class='ui form' method='post'>
-						<button class='ui right floated button' onclick='/semantic/src/inc/mapPage.php' type='submit'><input name='viewMap' type='hidden' value='$locationID'>Click here to view this on a map</button>
-					</form>
+				<div class='column'>
+					<div class='extra'>
+						<form action='/semantic/src/inc/mapPage.php' class='ui form' method='post'>
+							<button class='ui right floated button' onclick='/semantic/src/inc/mapPage.php' type='submit'><input name='viewMap' type='hidden' value='$locationID'>Click here to view this on a map</button>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
+		<div class='ui hidden section divider'></div>
 	</div>
-	<div class = 'ui hidden section divider'></div>
 			        ";
         }
         ?>
