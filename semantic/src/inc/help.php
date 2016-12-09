@@ -14,7 +14,7 @@ session_start();
 <?php include("includes/header.php");?>
 <body>
 <div class = "ui container">
-    <div class = "ui huge centered header">FAQs</div>
+    <div class = "ui horizontal section divider">FAQs</div>
     <div class = "ui three column grid">
         <div class = "row">
             <div class = "column">
