@@ -11,13 +11,13 @@ while ($row = mysqli_fetch_assoc($result)) {
     $caption = $row['caption'];
     $locationType = $row['locationType'];
 }
-if($locationType == 'hist'){
+if ($locationType == 'hist') {
     $locationType = "Historical Landmark";
 }
-if($locationType == 'view'){
+if ($locationType == 'view') {
     $loctionType == 'Viewpoint';
 }
-if($locationType == 'LOI'){
+if ($locationType == 'LOI') {
     $locationType = 'Location of Interest';
 }
 include("includes/header.php");
@@ -41,7 +41,7 @@ include("includes/header.php");
 </div>
 <div class="ui container">
     <div class='ui grid'>
-        <div class = 'two wide column'></div>
+        <div class='two wide column'></div>
         <div class="twelve wide column">
             <header class='ui header'>
                 <?php echo $locationName ?>
@@ -62,15 +62,6 @@ include("includes/header.php");
                         title: '<?php echo $locationName ?>'
                     });
                 }
-
-                function loadScript() {
-                    var script = document.createElement("script");
-                    script.type = "text/javascript";
-                    script.src = "http://maps.google.com/maps/api/js?sensor=false&callback=initialize";
-                    document.body.appendChild(script);
-                }
-
-                window.onload = loadScript;
             </script>
             <script async defer
                     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsaPQGyO2SHJumHMC2k8RTYfy3z7OXIk&callback=initMap">
@@ -78,12 +69,14 @@ include("includes/header.php");
 
         </div>
     </div>
-    <div class = 'two wide column'></div>
+    <div class='two wide column'></div>
     <div class="ui grid">
+        <div class='two wide column'></div>
         <div class="eight wide column">
             <h3>Description</h3>
             <p><?php echo $caption ?></p>
         </div>
+        <div class='two wide column'></div>
     </div>
 </div>
 <?php include("includes/footer.php"); ?>
