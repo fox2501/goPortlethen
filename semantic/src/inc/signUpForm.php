@@ -134,7 +134,7 @@ include("includes/dbconnect.php");
                                 identifier  : 'password',
                                 rules: [
                                     {
-                                        type   : 'password[passwordConfirm]',
+                                        type   : 'match[passwordConfirm]',
                                         prompt : 'Please ensure your passwords match!'
                                     }
                                 ]
