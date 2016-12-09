@@ -15,8 +15,7 @@ include("includes/dbconnect.php");
 
 
     <title>goPortlethen</title>
-</head><?php include("includes/header.php"); ?><?php $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-?>
+</head><?php include("includes/header.php"); ?>
 <body>
 <div class="ui container">
     <form action="includes/submitSignUp.php" class="ui form" method="post">

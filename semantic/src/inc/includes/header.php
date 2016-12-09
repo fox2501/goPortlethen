@@ -7,7 +7,7 @@
 <!-- Included CSS Files -->
 <!--[if lt IE 9]>
 <link rel="stylesheet" href="stylesheets/ie.css">
-<![endif]--><script type="text/javascript" src="/semantic/dist/modernizr.foundation.js"></script>
+<![endif]-->
 <!-- IE Fix for HTML5 Tags -->
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
