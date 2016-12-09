@@ -51,10 +51,13 @@ include("includes/header.php");
                                 <input type="checkbox" tabindex="0" class="hidden" name="A-Z">
                                 <label for="A-Z">Name A-Z</label>
                             </div>
-                        </div>
-                        <div class="ui checkbox">
-                            <input type="checkbox" tabindex="0" class="hidden" name="fee">
-                            <label for="fee">Fee does apply</label>
+                            <div class="ui checkbox">
+                                <input type="checkbox" tabindex="0" class="hidden" name="fee">
+                                <label for="fee">Fee does apply</label>
+                            </div>
+                            <script>
+                                $('.ui.checkbox').checkbox();
+                            </script>
                         </div>
                     </div>
                 </div>
