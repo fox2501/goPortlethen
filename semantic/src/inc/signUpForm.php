@@ -138,15 +138,7 @@ include("includes/dbconnect.php");
                                     prompt: 'Please enter a password!'
                                 ]}
                             },
-                            emptyPassword:{
-                                identifier: 'passwordConfirm',
-                                rules:[
-                                    {
-                                        type: 'empty',
-                                        prompt: 'Please confirm your password!'
-                                ]}
-                            },
-                            match: {
+                            matchPassword: {
                                 identifier  : 'password',
                                 rules: [
                                     {
@@ -155,7 +147,7 @@ include("includes/dbconnect.php");
                                     }
                                 ]
                             },
-                            match2: {
+                            matchPassword2: {
                                 identifier  : 'passwordConfirm',
                                 rules: [
                                     {
