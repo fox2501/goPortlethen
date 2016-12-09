@@ -1,22 +1,44 @@
 function initMap() {
+//     var latlng = {lat: 57.063171, lng: -2.139793};
+//     var mapOptions = new google.maps.Map(document.getElementById('map'), {
+//         zoom: 12,
+//         center: {lat: 57.061681, lng: -2.129468}  // Portlethen.
+//     });
+//
+//     // var directionsService = new google.maps.DirectionsService;
+//     // var directionsDisplay = new google.maps.DirectionsRenderer({
+//     //     draggable: true,
+//     //     map: map,
+//     //     panel: document.getElementById('right-panel')
+//     // });
+//     //
+//     // directionsDisplay.addListener('directions_changed', function() {
+//     //     computeTotalDistance(directionsDisplay.getDirections());
+//     // });
+//     //
+//     // displayRoute('57.061959, -2.131337', '57.054993, -2.145402', directionsService,
+//     //     directionsDisplay);
+//     var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+//
+//     var marker = new google.maps.Marker({
+//         position: myLatlng,
+//         title:"Hello World!"
+//     });
+//
+// // To add the marker to the map, call setMap();
+//     marker.setMap(map);
+    var myLatLng = {lat: 57.063171, lng: -2.139793};
+
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 12,
-        center: {lat: 57.061681, lng: -2.129468}  // Portlethen.
+        center: {lat: 57.061681, lng: -2.129468}
     });
 
-    var directionsService = new google.maps.DirectionsService;
-    var directionsDisplay = new google.maps.DirectionsRenderer({
-        draggable: true,
+    var marker = new google.maps.Marker({
+        position: myLatLng,
         map: map,
-        panel: document.getElementById('right-panel')
+        title: 'Hello World!'
     });
-
-    directionsDisplay.addListener('directions_changed', function() {
-        computeTotalDistance(directionsDisplay.getDirections());
-    });
-
-    displayRoute('57.061959, -2.131337', '57.054993, -2.145402', directionsService,
-        directionsDisplay);
 }
 
 function displayRoute(origin, destination, service, display) {

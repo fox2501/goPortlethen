@@ -1,17 +1,20 @@
 <?php
 session_start();
-include("includes/dbconnect.php");
+
+include("includes/PDOConnect.php");
 if (isset($_SESSION['loggedIn'])) {
     $userID = $_SESSION['loggedIn'];
     $canAccess = '0';
-    $sql = "SELECT userName from users WHERE userID = '$userID'";
-    $result = mysqli_query($db, $sql);
-    $row = mysqli_fetch_assoc($result);
+    $sql = "SELECT userName from users WHERE userID = ?";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$userID]);
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
     $userName = $row["userName"];
 
-    $sql = "SELECT accessID from useraccess where userName = '$userName'";
-    $result = mysqli_query($db, $sql);
-    $row = mysqli_fetch_assoc($result);
+    $sql = "SELECT accessID from useraccess where userName = ? ";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$userName]);
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
     $accessID = $row["accessID"];
     if ($accessID == '1' || $accessID == '2') {
         $canAccess = '1';
