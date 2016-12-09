@@ -97,7 +97,7 @@ AND A.approvalStatus = 1;";
 					</div>
 					<div class='two wide column'>
 						<form action='editHealthContent.php' class='ui form' method='post'>
-							<button class='ui right floated mini button' onclick='/semantic/src/inc/editHealthContent.php' type='submit'><input name='editHealth' type='hidden' value=\"\\&quot;$healthContentID\\&quot;\"> Edit</button>
+							<button class='ui right floated mini button' onclick='/semantic/src/inc/editHealthContent.php' type='submit'><input name='editHealth' type='hidden' value='$healthContentID'> Edit</button>
 						</form>
 					</div>
 				</div>
