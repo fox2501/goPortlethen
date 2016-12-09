@@ -80,7 +80,7 @@ AND A.approvalStatus = 1;";
                         $photoURL = $row['url'];
                         if($canAccess == '1'){
                             echo "
-<div class='ui raised segment' style = 'height: 300px;'>
+<div class='ui raised segment'>
     <div class='ui container'>
         <div class='ui grid'>
             <div class='sixteen wide column'>
@@ -96,9 +96,8 @@ AND A.approvalStatus = 1;";
                     <h3 class='ui header' id='title'>
                         $title
                     </h3>
-                    <p id='datePosted'>$datePosted
-                        <br>
-                    </p>
+                    <h4 class = 'ui header' id='datePosted'>$datePosted
+                    </h4>
                     <div class='ui small image' style = 'height: 100%; width: 100%;'>
                         <img src='$photoURL' style = 'height: 100%; width: 100%;'>
                     </div>
@@ -119,16 +118,14 @@ AND A.approvalStatus = 1;";
 ";
                         } else {
                             echo "
-<div class='ui raised segment' style = 'height: 300px;'>
+<div class='ui raised segment'>
     <div class='ui container'>
         <div class='ui grid'>
                 <div class='four wide column'>
                     <h3 class='ui header' id='title'>
                         $title
                     </h3>
-                    <p id='datePosted'>$datePosted
-                        <br>
-                    </p>
+                    <h4 class = 'ui header' id ='datePosted'>$datePosted</h4>
                     <div class='ui small image' style = 'height: 100%; width: 100%;'>
                         <img src='$photoURL' style = 'height: 100%; width: 100%;'>
                     </div>
