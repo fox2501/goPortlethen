@@ -49,6 +49,12 @@ include("includes/header.php");
             if($locationType == 'hist'){
                 $locationType = 'Historical Landmark';
             }
+            if($locationType == 'view'){
+                $loctionType == 'Viewpoint';
+            }
+            if($locationType == 'LOI'){
+                $locationType = 'Location of Interest';
+            }
             echo "
 	<div class='sixteen wide column'>
 		<div class='ui raised segment'>
