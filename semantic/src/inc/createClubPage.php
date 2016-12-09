@@ -153,12 +153,7 @@ if (isset($_SESSION['loggedIn'])) {
                 </div>
                 <button class="ui fluid large green submit button" id="createClub" type="submit">Create Club</button>
 
-                <script type="text/javascript" src="jquery.js">
-
-                    $('createClub').on('click', function () {
-                        $('.ui.form').form('validate form');
-                    });
-
+                <script type="text/javascript">
                     $('.ui.form').form({
                             fields: {
                                 clubName: {
@@ -192,7 +187,6 @@ if (isset($_SESSION['loggedIn'])) {
                     })
                     ;
                 </script>
-
         </form>
 
         <div class="ui bottom attached warning message">
