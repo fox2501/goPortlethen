@@ -81,70 +81,51 @@ AND A.approvalStatus = 1;";
                         if($canAccess == '1'){
                             echo "
 <div class='ui raised segment'>
-    <div class='ui container'>
-        <div class='ui grid'>
-            <div class='sixteen wide column'>
-                <form class='ui form' method='POST' action='editHealthContent.php'>
-                    <button class='ui right floated mini button' onclick='/semantic/src/inc/editHealthContent.php'
-                            type='submit'>
-                        <input type='hidden' name='editHealth' value=$healthContentID> Edit
-                    </button>
-                </form>
-            </div>
-            <div class='row'>
-                <div class='eight wide column'>
-                    <h3 class='ui header' id='title'>
-                        $title
-                    </h3>
-                    <p id='datePosted'>$datePosted
-                        <br>
-                    </p>
-                    <div class='ui small image'>
-                        <img src='$photoURL'>
-                    </div>
-                </div>
-                <div class='eight wide column'>
-                    <p id='mainText' style='text - align:justify'> $mainText
-                        <br>
-                    </p>
-                    <p id='author'> By $userName
-                        <br>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class='ui hidden section divider'></div>
+		<div class='ui container'>
+			<div class='ui grid'>
+				<div class='sixteen wide column'>
+					<form action='editHealthContent.php' class='ui form' method='post'>
+						<button class='ui right floated mini button' onclick='/semantic/src/inc/editHealthContent.php' type='submit'><input name='editHealth' type='hidden' value=\"$healthContentID\"> Edit</button>
+					</form>
+				</div>
+				<div class='row'>
+					<div class='two wide column'>
+						<div class='ui small image' style='height: 100%; width: 100%;'><img src='$photoURL' style='height: 100%; width: 100%;'></div>
+					</div>
+					<div class='two wide column'>
+						<h3 class='ui header' id='title'>$title</h3>
+						<h4 class='ui header' id='datePosted'>$datePosted</h4>
+					</div>
+					<div class='twelve wide column'>
+						<p id='mainText' style='text - align:justify'>$mainText<br></p>
+						<p id='author'>By $userName<br></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class='ui hidden section divider'></div>
 ";
                         } else {
                             echo "
-<div class='ui raised segment'>
-    <div class='ui container'>
-        <div class='ui grid'>
-                <div class='eight wide column'>
-                    <h3 class='ui header' id='title'>
-                        $title
-                    </h3>
-                    <p id='datePosted'>$datePosted
-                        <br>
-                    </p>
-                    <div class='ui small image'>
-                        <img src='$photoURL'>
-                    </div>
-                </div>
-                <div class='eight wide column'>
-                    <p id='mainText' style='text - align:justify'> $mainText
-                        <br>
-                    </p>
-                    <p id='author'> By $userName
-                        <br>
-                    </p>
-                </div>
-        </div>
-    </div>
-</div>
-<div class='ui hidden section divider'></div>
+	<div class='ui raised segment'>
+		<div class='ui container'>
+			<div class='ui grid'>
+				<div class='two wide column'>
+					<div class='ui small image' style='height: 100%; width: 100%;'><img src='$photoURL' style='height: 100%; width: 100%;'></div>
+				</div>
+				<div class='two wide column'>
+					<h3 class='ui header' id='title'>$title</h3>
+					<h4 class='ui header' id='datePosted'>$datePosted</h4>
+				</div>
+			</div>
+			<div class='twelve wide column'>
+				<p id='mainText' style='text - align:justify'>$mainText<br></p>
+				<p id='author'>By $userName<br></p>
+			</div>
+		</div>
+	</div>
+	<div class='ui hidden section divider'></div>
                                 ";
                         }
                         } ?>
