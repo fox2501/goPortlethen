@@ -5,7 +5,6 @@ session_start();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel = "stylesheet" type = "text/css" href = "C:\Users\ross1\Documents\PHPStormProjects\goPortlethen\semantic\dist\semantic.css">
     <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css">
     <title>goPortlethen</title>
 </head>
