@@ -52,14 +52,14 @@ include("includes/header.php");
                     var myLatLng = {lat: <?php echo $lat ?>, lng: <?php echo $long ?>};
 
                     var map = new google.maps.Map(document.getElementById('map'), {
-                        zoom: 5,
+                        zoom: 4,
                         center: {lat: <?php echo $lat ?>, lng: <?php echo $long ?>}
                     });
 
                     var marker = new google.maps.Marker({
                         position: myLatLng,
                         map: map,
-                        title: 'Hello World!'
+                        title: '<?php echo $locationName ?>'
                     });
                 }
 
