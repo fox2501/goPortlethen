@@ -36,16 +36,21 @@ include("includes/header.php");
     </header>
     <div class='ui grid'>
         <div class="sixteen wide column">
-            <div id = "map_canvas" style="width: 600px; height: 350px">
+            <div id = "map" style="width: 600px; height: 350px"></div>
                 <script>
                     function initialize() {
-                        var myLatlng = new google.maps.LatLng(-34.397, 150.644);
-                        var myOptions = {
+                        var myLatLng = {lat: 57.063171, lng: -2.139793};
+
+                        var map = new google.maps.Map(document.getElementById('map'), {
                             zoom: 12,
-                            center: myLatlng,
-                            mapTypeId: google.maps.MapTypeId.ROADMAP
-                        }
-                        var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+                            center: {lat: 57.061681, lng: -2.129468}
+                        });
+
+                        var marker = new google.maps.Marker({
+                            position: myLatLng,
+                            map: map,
+                            title: 'Hello World!'
+                        });
                     }
 
                     function loadScript() {
@@ -58,7 +63,6 @@ include("includes/header.php");
                     window.onload = loadScript;
 
                 </script>
-            </div>
 <!--            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsaPQGyO2SHJumHMC2k8RTYfy3z7OXIk&callback=initMap">-->
 <!--            </script>-->
 <!--            initMap();-->
