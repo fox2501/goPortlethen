@@ -130,6 +130,20 @@ include("includes/dbconnect.php");
                                     }
                                 ]
                             },
+                            usernameDifferent: {
+                                identifier  : 'username',
+                                rules: [
+                                    {
+                                        type   : 'different[<?php
+                                    $sql = "SELECT userName FROM users;";
+                                    $result = mysqli_query($db, $sql);
+                                    while($row = mysqli_fetch_assoc($result)){
+                                    $userName = row['userName'];
+                                    echo $userName ?>],<?php } ?>
+                                        prompt : 'This username is already taken!'
+                                    }
+                                ]
+                            },
                             match: {
                                 identifier  : 'password',
                                 rules: [
