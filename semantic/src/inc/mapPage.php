@@ -1,58 +1,47 @@
 <?php
 session_start();
 include("includes/dbconnect.php");
+$locationID = $_POST['viewMap'];
+$sql = "SELECT * FROM locations where locationID = '$locationID'";
+$result = mysqli_query($db, $sql);
+while($row = mysqli_fetch_assoc($result)){
+    $locationName = $row['locationName'];
+    $lat = $row['latitude'];
+    $long = $row['longitude'];
+    $caption = $row['caption'];
+    $locationType = $row['locationType'];
+}
 include("includes/header.php");
 ?>
 <head>
-    <script type="text/javascript" src="https://goportlethencs8.azurewebsites.net/semantic/dist/routeplot.js"></script>
+
+    <script src="https://goportlethencs8.azurewebsites.net/semantic/dist/routeplot.js" type="text/javascript">
+    </script>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css" rel="stylesheet" type="text/css">
     <title>Map Landing Page</title>
 </head>
-<header class = 'ui centered header'>
+<body>
+<header class='ui centered header'>
     Maps
 </header>
 <div class="ui horizontal section divider">
-    Walking Routes in Porthlethen
+    Discover Portlethen
 </div>
 <div class="ui equal width grid">
-    <div class="four wide column"></div>
+    <header class = 'ui header'><?php echo $locationName ?></header>
     <div class="twelve wide column">
-        <body onload="load()">
         <div id="map" style="width: 600px; height: 350px"></div>
-        </body>
-        <script async defer
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsaPQGyO2SHJumHMC2k8RTYfy3z7OXIk&callback=initMap">
-
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsaPQGyO2SHJumHMC2k8RTYfy3z7OXIk&callback=initMap">
         </script>
-
     </div>
-    <div class="four wide column"></div>
 </div>
-</div>
-
-<html class="container">
 <div class="ui grid">
-    <div class="four wide column"></div>
     <div class="eight wide column">
-        <h3> Description</h3>
-        <p>The Portlethen Path is a long distance walking trail, following Scotland's best known river for 184 miles
-            (294
-            Km) as it meanders from its source in the Aberdeenshire coast through several rural counties and on into the
-            heart
-            of Dundee.
-        </p>
-        <p>
-            On its way the Trail passes peaceful water meadows rich in wildlife, historic towns and
-            cities and many lovely villages, finishing at the edinburgh town just a few miles from the
-            sea.</p>
+        <h3>Description</h3>
+        <p><?php echo $caption ?></p>
+        <p>On its way the Trail passes peaceful water meadows rich in wildlife, historic towns and cities and many lovely villages, finishing at the edinburgh town just a few miles from the sea.</p>
     </div>
-    <div class="four wide column">
-    </div>
-    <div class="sixteen wide column"></div>
-    <div class="sixteen wide column"></div>
-    <div class="sixteen wide column"></div>
 </div>
-
 <?php include("includes/footer.php"); ?>
-</html>
+</body>
