@@ -114,7 +114,6 @@ include("includes/dbconnect.php");
                             }
                         }
                     })
-                ;
             })(jQuery);
 
 
