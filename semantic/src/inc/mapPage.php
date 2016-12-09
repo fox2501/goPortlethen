@@ -11,6 +11,15 @@ while ($row = mysqli_fetch_assoc($result)) {
     $caption = $row['caption'];
     $locationType = $row['locationType'];
 }
+if($locationType == 'hist'){
+    $locationType = "Historical Landmark";
+}
+if($locationType == 'view'){
+    $loctionType == 'Viewpoint';
+}
+if($locationType == 'LOI'){
+    $locationType = 'Location of Interest';
+}
 include("includes/header.php");
 ?>
 <!DOCTYPE html>
