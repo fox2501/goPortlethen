@@ -40,13 +40,13 @@ include("includes/header.php");
     Discover Portlethen
 </div>
 <div class="ui container">
-    <header class='ui header'>
-        <?php echo $locationName ?>
-    </header>
     <div class='ui grid'>
         <div class = 'two wide column'></div>
         <div class="twelve wide column">
-            <div id="map" style="width: 600px; height: 350px"></div>
+            <header class='ui header'>
+                <?php echo $locationName ?>
+            </header>
+            <div id="map" style="width: 100%; height: 350px"></div>
             <script>
                 function initMap() {
                     var myLatLng = {lat: <?php echo $lat ?>, lng: <?php echo $long ?>};
