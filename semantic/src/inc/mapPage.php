@@ -44,7 +44,8 @@ include("includes/header.php");
         <?php echo $locationName ?>
     </header>
     <div class='ui grid'>
-        <div class="sixteen wide column">
+        <div class = 'two wide column'></div>
+        <div class="twelve wide column">
             <div id="map" style="width: 600px; height: 350px"></div>
             <script>
                 function initMap() {
@@ -77,6 +78,7 @@ include("includes/header.php");
 
         </div>
     </div>
+    <div class = 'two wide column'></div>
     <div class="ui grid">
         <div class="eight wide column">
             <h3>Description</h3>
