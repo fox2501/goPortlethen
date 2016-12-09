@@ -24,9 +24,9 @@ include("includes/header.php");
     <title>Map Landing Page</title>
 </head>
 <body>
-<header class='ui centered header'>
+<h1 class='ui centered header'>
     Maps
-</header>
+</h1>
 <div class="ui horizontal section divider">
     Discover Portlethen
 </div>
