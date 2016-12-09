@@ -88,7 +88,7 @@ include("includes/header.php");
         <div class='ui grid'>
             <div class='ui two wide column'>
                 <div class='ui image' style = 'height: 100%;'>
-                    <img src='$photo'>
+                    <img src='$photo' style = 'height: 100%;'>
                 </div>
             </div>
             <div class='ui fourteen wide column'>
