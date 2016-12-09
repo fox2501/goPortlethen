@@ -134,9 +134,19 @@ include("includes/dbconnect.php");
                                 identifier: 'password',
                                 rules:[
                                     {
-                                    type: 'empty',
-                                    prompt: 'Please enter a password!'
-                                ]}
+                                        type: 'empty',
+                                        prompt: 'Please enter a password!'
+                                    }
+                                ]
+                            },
+                            emptyPassword2:{
+                                identifier: 'passwordConfirm',
+                                rules:[
+                                    {
+                                        type: 'empty',
+                                        prompt: 'Please enter a password!'
+                                    }
+                                ]
                             },
                             matchPassword: {
                                 identifier  : 'password',
