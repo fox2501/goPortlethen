@@ -6,10 +6,8 @@ $sql = "SELECT * FROM locations where locationID = '$locationID'";
 $result = mysqli_query($db, $sql);
 while ($row = mysqli_fetch_assoc($result)) {
     $locationName = $row['locationName'];
-    //$lat = $row['latitude'];
-    //$long = $row['longitude'];
-    $lat = 5.580998;
-    $long = -60.679690;
+    $lat = $row['latitude'];
+    $long = $row['longitude'];
     $caption = $row['caption'];
     $locationType = $row['locationType'];
 }
