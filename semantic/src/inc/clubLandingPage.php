@@ -83,7 +83,7 @@ include("includes/header.php");
             $clubID   = $row['clubID'];
             $photo    = $row['url'];
             echo "
-<div class='ui raised segment'>
+<div class='ui raised segment' style = 'height: 200px;'>
     <div class='ui container'>
         <div class='ui grid'>
             <div class='ui two wide column'>
