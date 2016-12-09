@@ -37,7 +37,29 @@ include("includes/header.php");
     <div class='ui grid'>
         <div class="sixteen wide column">
             <div id="map" style="width: 600px; height: 350px"></div>
-            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsaPQGyO2SHJumHMC2k8RTYfy3z7OXIk&callback=initMap">
+<!--            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsaPQGyO2SHJumHMC2k8RTYfy3z7OXIk&callback=initMap">-->
+<!--            </script>-->
+<!--            initMap();-->
+            <script>
+                function initialize(lat, long) {
+                    var myLatlng = new google.maps.LatLng($lat, $long);
+                    var myOptions = {
+                        zoom: 12,
+                        center: myLatlng,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                    }
+                    var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+                }
+
+                function loadScript() {
+                    var script = document.createElement("script");
+                    script.type = "text/javascript";
+                    script.src = "http://maps.google.com/maps/api/js?sensor=false&callback=initialize";
+                    document.body.appendChild(script);
+                }
+
+                window.onload = loadScript;
+
             </script>
         </div>
     </div>
