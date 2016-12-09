@@ -111,17 +111,17 @@ AND A.approvalStatus = 1;";
 	<div class='ui raised segment'>
 		<div class='ui container'>
 			<div class='ui grid'>
-				<div class='two wide column'>
+				<div class='four wide column'>
 					<div class='ui small image' style='height: 100%; width: 100%;'><img src='$photoURL' style='height: 100%; width: 100%;'></div>
 				</div>
-				<div class='two wide column'>
+				<div class='four wide column'>
 					<h3 class='ui header' id='title'>$title</h3>
 					<h4 class='ui header' id='datePosted'>$datePosted</h4>
 				</div>
-			</div>
-			<div class='twelve wide column'>
-				<p id='mainText' style='text - align:justify'>$mainText<br></p>
-				<p id='author'>By $userName<br></p>
+				<div class='eight wide column'>
+					<p id='mainText' style='text - align:justify'>$mainText<br></p>
+					<p id='author'>By $userName<br></p>
+				</div>
 			</div>
 		</div>
 	</div>
