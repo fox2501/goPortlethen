@@ -88,10 +88,9 @@ if (isset($_SESSION['loggedIn'])) {
                     <input type="text" name="websiteURL" placeholder="Website URL">
                 </div>
                 <div class="field">
-                    <label>Please check if your club requires a fee: </label>
-                    <div class="ui checkbox">
-                        <input type="checkbox" name="isFee" tabindex="0" class="hidden" id="isFee" value="0">
-                        <input type="text" name="feeRequired" placeholder="Amount" id="feeRequired">
+                    <label>Please toggle if your club requires a fee: </label>
+                    <div class="ui toggle checkbox">
+                        <input type="checkbox" name="feeRequired" tabindex="0" class="hidden" id="isFee" value="0">
                         <label for="isFee">Fee does apply</label>
                     </div>
                 </div>
