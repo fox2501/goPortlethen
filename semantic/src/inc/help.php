@@ -22,13 +22,13 @@ session_start();
                 <div class = "ui header">
                     How do I create an account?
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce velit tellus, porta efficitur blandit eget, lobortis eget libero. Aliquam id augue a sapien efficitur consequat. Pellentesque commodo tempor rutrum. Vestibulum sit amet mi quis purus viverra viverra. Mauris sit amet molestie quam. Vestibulum a convallis diam.</p>
+                <p>Please use the sign up button at the top right hand side of the page.</p>
             </div>
             <div class = "column">
                 <div class = "ui header">
-                    How do I create an account?
+                    How do I add a club to the site as a club admin?
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce velit tellus, porta efficitur blandit eget, lobortis eget libero. Aliquam id augue a sapien efficitur consequat. Pellentesque commodo tempor rutrum. Vestibulum sit amet mi quis purus viverra viverra. Mauris sit amet molestie quam. Vestibulum a convallis diam.</p>
+                <p>Please sign up first as a club admin from the sign up page and then navigate to the clubs page. Once signed in as a club admin you will be able to create a club from the create new club button</p>
             </div>
             <div class = "column">
                 <div class = "ui header">
