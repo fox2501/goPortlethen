@@ -156,40 +156,39 @@ if (isset($_SESSION['loggedIn'])) {
 
                 <script type="text/javascript" src="jquery.js">
 
-                    ;(function ($) {
+                    ;
+                    (function ($) {
                         $('.ui.form').form({
-                            fields: {
-                                clubName: {
-                                    identifier: 'clubName',
-                                    rules: [
-                                        {
-                                            type: 'empty',
-                                            prompt: 'Please enter your clubs name'
-                                        }
-                                    ]
-                                },
-                                terms: {
-                                    identifier: 'terms',
-                                    rules: [
-                                        {
-                                            type: 'checked',
-                                            prompt: 'You must agree to the terms and conditions'
-                                        }
-                                    ]
-                                },
-                                clubCategory: {
-                                    identifier: 'clubCategory',
-                                    rules: [
-                                        {
-                                            type: 'empty',
-                                            prompt: 'Please select a club category'
-                                        }
-                                    ]
-                                }
+                            clubName: {
+                                identifier: 'clubName',
+                                rules: [
+                                    {
+                                        type: 'empty',
+                                        prompt: 'Please enter your clubs name'
+                                    }
+                                ]
+                            },
+                            terms: {
+                                identifier: 'terms',
+                                rules: [
+                                    {
+                                        type: 'checked',
+                                        prompt: 'You must agree to the terms and conditions'
+                                    }
+                                ]
+                            },
+                            clubCategory: {
+                                identifier: 'clubCategory',
+                                rules: [
+                                    {
+                                        type: 'empty',
+                                        prompt: 'Please select a club category'
+                                    }
+                                ]
                             }
-                        })
-                        ;
+                        }
                     })
+                    (jQuery);
                 </script>
 
         </form>
