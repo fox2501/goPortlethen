@@ -54,12 +54,10 @@ include("includes/header.php");
 		<div class='ui raised segment'>
 			<div class='ui two column grid'>
 				<div class='column'>
-					<div class='header'>
+					<h2 class='ui header'>
 						$locationName
-					</div>
-					<div class='header'>
-						$locationType
-					</div>
+						<div class='sub header'>$locationType</div>
+					</h2>
 				</div>
 				<div class='column'>
 					<div class='extra'>
