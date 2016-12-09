@@ -80,7 +80,7 @@ AND A.approvalStatus = 1;";
                         $photoURL = $row['url'];
                         if($canAccess == '1'){
                             echo "
-<div class='ui raised segment'>
+<div class='ui raised segment' style = 'height: 300px;'>
     <div class='ui container'>
         <div class='ui grid'>
             <div class='sixteen wide column'>
@@ -99,8 +99,8 @@ AND A.approvalStatus = 1;";
                     <p id='datePosted'>$datePosted
                         <br>
                     </p>
-                    <div class='ui small image'>
-                        <img src='$photoURL'>
+                    <div class='ui small image' style = 'height: 150px; width: 100%;'>
+                        <img src='$photoURL' style = 'height: 150px; width: 100%;'>
                     </div>
                 </div>
                 <div class='eight wide column'>
