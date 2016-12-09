@@ -28,8 +28,8 @@ if (isset($_SESSION['loggedIn'])) {
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="goPortlethen/semantic/dist/semantic.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <title>Create Club Page</title>
     </head>
     <?php include("includes/dbconnect.php");
@@ -154,7 +154,7 @@ if (isset($_SESSION['loggedIn'])) {
                 </div>
                 <button class="ui fluid large green submit button" id="createClub" type="submit">Create Club</button>
 
-                <script type="text/javascript">
+                <script type="text/javascript" src="jquery.js">
 
                     $('createClub').on('click', function () {
                         $('.ui.form').form('validate form');
