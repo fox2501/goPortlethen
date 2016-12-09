@@ -42,7 +42,7 @@ include("includes/header.php");
                     var myLatLng = {lat: <?php echo $lat ?>, lng: <?php echo $long ?>};
 
                     var map = new google.maps.Map(document.getElementById('map'), {
-                        zoom: 12,
+                        zoom: 5,
                         center: {lat: <?php echo $lat ?>, lng: <?php echo $long ?>}
                     });
 
