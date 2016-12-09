@@ -119,7 +119,7 @@ AND A.approvalStatus = 1;";
 ";
                         } else {
                             echo "
-<div class='ui raised segment'>
+<div class='ui raised segment' style = 'height: 300px;'>
     <div class='ui container'>
         <div class='ui grid'>
                 <div class='eight wide column'>
@@ -129,8 +129,8 @@ AND A.approvalStatus = 1;";
                     <p id='datePosted'>$datePosted
                         <br>
                     </p>
-                    <div class='ui small image'>
-                        <img src='$photoURL'>
+                    <div class='ui small image' style = 'height: 150px; width: 100%;'>
+                        <img src='$photoURL' style = 'height: 150px; width: 100%;'>
                     </div>
                 </div>
                 <div class='eight wide column'>
