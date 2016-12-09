@@ -154,6 +154,11 @@ if (isset($_SESSION['loggedIn'])) {
                 <button class="ui fluid large green submit button" id="createClub" type="submit">Create Club</button>
 
                 <script type="text/javascript">
+
+                    $('createClub').on('click', function () {
+                        $('.ui.form').form('validate form');
+                    });
+
                     $('.ui.form').form({
                             fields: {
                                 clubName: {
