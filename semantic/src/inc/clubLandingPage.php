@@ -1,7 +1,7 @@
 <?php
 session_start();
 include("includes/dbconnect.php");
-if(isset($_SESSION['loggedIn'])) {
+if (isset($_SESSION['loggedIn'])) {
     $userID = $_SESSION['loggedIn'];
     $canAccess = '0';
     $sql = "SELECT userName from users WHERE userID = '$userID'";
@@ -42,7 +42,7 @@ if(isset($_SESSION['loggedIn'])) {
         </div>
         <div class="row">
             <?php
-            if($canAccess == 1){
+            if ($canAccess == 1) {
                 echo "<div class='four wide column''>
                 <button class='ui button'><a href='/semantic/src/inc/CreateClubPage.php'>Create Club</a></button>
             </div>";
@@ -88,7 +88,7 @@ if(isset($_SESSION['loggedIn'])) {
 
             $sql_query = "SELECT A.clubName, A.clubDescription, A.clubID, B.url FROM club A, photos B WHERE A.clubID = B.clubID";
             $result = $db->query($sql_query);
-            while ($row = $result-> fetch_array()) {
+            while ($row = $result->fetch_array()) {
                 $title = $row['clubName'];
                 $mainText = $row['clubDescription'];
                 $clubID = $row['clubID'];
@@ -122,11 +122,14 @@ if(isset($_SESSION['loggedIn'])) {
 </div>
 </div>
 <div class = 'ui divider'></div>
-"; }
+";
+            }
             ?>
         </div>
     </div>
     <div class="ui hidden divider"></div>
 </div>
+</div>
+</body>
 <?php include("/src/inc/includes/footer.php"); ?>
 </html>

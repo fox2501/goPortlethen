@@ -1,6 +1,6 @@
 <?php
 
-include("includes/dbconnect.php");
+include("includes/PDOConnect.php");
 
 $img=$_FILES['img'];
 if(isset($_POST['submit'])){
@@ -33,10 +33,20 @@ if(isset($_POST['submit'])){
             echo $pms['data']['error'];
         }
     }
-    $sql1 = "INSERT INTO photos (caption,url,clubID,locationID,healthContentID,routeID) VALUES ('test','$url','1','1','1','1')";
 
-    if (mysqli_query($db, $sql1)) {
-    } else {
-        echo "Error: " . $sql1 . "<br>" . mysqli_error($db);
-    }
+    $caption = "test";
+    $clubID =1;
+    $locationID =1;
+    $healthID =1;
+    $routeID =1;
+
+    $sql ="INSERT INTO photos(caption,url,clubID,locationID,healthContentID,routeID) VALUES (?,?,?,?,?,?)";
+    $pdo->prepare($sql)->execute([$caption,$url,$clubID,$locationID,$healthID,$routeID]);
+
+//    $sql1 = "INSERT INTO photos (caption,url,clubID,locationID,healthContentID,routeID) VALUES ('test','$url','1','1','1','1')";
+//
+//    if (mysqli_query($db, $sql1)) {
+//    } else {
+//        echo "Error: " . $sql1 . "<br>" . mysqli_error($db);
+//    }
 }

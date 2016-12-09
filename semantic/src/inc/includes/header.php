@@ -1,8 +1,8 @@
 <?
 session_start();
-
+include("dbconnect.php");
+include("PDOConnect.php");
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,8 +13,6 @@ session_start();
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
-
-
     <title>goPortlethen</title>
 </head>
 <body>
@@ -38,21 +36,62 @@ session_start();
     <div class = "right menu">
         <?php
             if(isset($_SESSION['loggedIn'])){
-                echo "  <div class = 'ui simple dropdown'>
-                            <a class = 'browse item' href = '/semantic/src/inc/profile.php'>
+                $userID = $_SESSION['loggedIn'];
+                $sql = "SELECT userName from users where userID = '$userID'";
+                $result = mysqli_query($db, $sql);
+                while($row = mysqli_fetch_assoc($result)){
+                    $userName = $row['userName'];
+                }
+                $sql = "SELECT accessID from useraccess WHERE userName = '$userName'";
+                $result = mysqli_query($db, $sql);
+                while($row = mysqli_fetch_assoc($result)){
+                    $accessLevel = $row['accessID'];
+                }
+                if($accessLevel == 1 || $accessLevel == 3){
+                    echo "  <div class = 'ui simple dropdown'>
+                           <a class = 'browse item'>
                                 <i class = 'user icon'></i>
                                 " .$_SESSION['name']. "
                                 <i class='dropdown icon'></i>
                             </a>
                         <div class = 'ui menu'>
-                            <div class = 'item' href = '/semantic/src/inc/profile.php'>My Profile</div>
-                            <div class = 'item' href = '/semantic/src/inc/profile.php'>Settings</div>
+                            <div class = 'item'>
+                                <a class = 'header' href = '/semantic/src/inc/profile.php'>
+                                    <p style = 'color: black;'>My Profile</p>
+                                </a>
+                            </div>
+                            <div class = 'item'>
+                                <a  href = '/semantic/src/inc/approvals.php'>
+                                    <p style = 'color: black;'>Approvals</p>
+                                </a>
+                            </div>
                         </div>
                         </div>
                         <form action = '/semantic/src/inc/includes/logout.php'>
                             <button class = 'ui fluid submit button' type = 'submit'>Log Out</div>
                         </form>
                         ";
+                }
+                if($accessLevel == 2 || $accessLevel == 4){
+                    echo "  <div class = 'ui simple dropdown'>
+                           <a class = 'browse item'>
+                                <i class = 'user icon'></i>
+                                " .$_SESSION['name']. "
+                                <i class='dropdown icon'></i>
+                            </a>
+                        <div class = 'ui menu'>
+                            <div class = 'item'>
+                                <a class = 'header' href = '/semantic/src/inc/profile.php'>
+                                    <p style = 'color: black;'>My Profile</p>
+                                </a>
+                            </div>
+                        </div>
+                        </div>
+                        <form action = '/semantic/src/inc/includes/logout.php'>
+                            <button class = 'ui fluid submit button' type = 'submit'>Log Out</div>
+                        </form>
+                        ";
+                }
             } else {
                 echo "<a class = 'item' href = '/semantic/src/inc/signUpForm.php'>
                         <div class = 'ui teal button'>
@@ -68,8 +107,6 @@ session_start();
                       </a>";
             }
         ?>
-
-
     </div>
 </div>
 </body>

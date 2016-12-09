@@ -17,14 +17,13 @@ if (isset($_SESSION['loggedIn'])) {
     include("includes/dbconnect.php");
     $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
     $userID = $_SESSION['loggedIn'];
-    $sql = "SELECT firstName, surname, age, location, aboutUser FROM users WHERE userID = '$userID'";
+    $sql = "SELECT firstName, surname, age, emailAddress FROM users WHERE userID = '$userID'";
     $result = mysqli_query($db, $sql);
     while($row = mysqli_fetch_array($result)) {
         $firstName = $row['firstName'];
         $surname = $row['surname'];
+        $emailAddress = $row['emailAddress'];
         $age = $row['age'];
-        $location = $row['location'];
-        $aboutUser = $row['aboutUser'];
     }
     ?>
     <body>
@@ -67,18 +66,12 @@ if (isset($_SESSION['loggedIn'])) {
                                     ?>
                                 </div>
                                 <h5 class = "ui top attached header">
-                                    Location
+                                    Email Address
                                 </h5>
                                 <div class = "ui attached segment">
                                     <?php
-                                    echo $location;
+                                    echo $emailAddress;
                                     ?>
-                                </div>
-                                <h5 class = "ui top attached header">
-                                    About
-                                </h5>
-                                <div class = "ui attached segment">
-                                    <textarea readonly style = "width: 100%;"><?php echo $aboutUser;?></textarea>
                                 </div>
                             </div>
                             </div>

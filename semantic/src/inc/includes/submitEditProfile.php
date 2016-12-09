@@ -7,8 +7,6 @@ $surname = $_POST["surname"];
 $email = $_POST["email"];
 $username = $_POST["username"];
 $age = $_POST["age"];
-$location = $_POST["location"];
-$aboutUser = $_POST["aboutUser"];
 $userID = $_SESSION['loggedIn'];
 
 $sql = "
@@ -16,8 +14,7 @@ UPDATE users
 SET firstName = '$firstName', 
 surname = '$surname', 
 age = $age, 
-location = '$location', 
-aboutUser = '$aboutUser'
+emailAddress = '$email'
 WHERE userID = $userID;
 ";
 $result = mysqli_query($db, $sql);

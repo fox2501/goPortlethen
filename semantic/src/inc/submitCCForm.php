@@ -1,17 +1,22 @@
 <?php
-echo ini_set('display_errors', 1);
-echo ini_set('display_startup_errors', 1);
-echo error_reporting(E_ALL);
 session_start();
 include("includes/dbconnect.php");
+$userID = $_SESSION['loggedIn'];
 $clubName = $_POST["clubName"];
 $clubDescription = $_POST["clubDescription"];
 $email = $_POST["email"];
 $contactNumber = $_POST["phoneNumber"];
-$calendarID = $_POST["calendarID"];
-$feePaid = $_POST["isFee"];
+//$calendarID = $_POST["calendarID"];
+$feePaid = $_POST["feeRequired"];
+if(empty($feePaid)){
+    $feePaid = 0;
+}
 $feeCost = $_POST["feeAmount"];
+if(empty($feeCost)){
+    $feeCost = 0;
+}
 $clubCategory = $_POST["clubCategory"];
+
 
 $img=$_FILES['img'];
     if($img['name']==''){
@@ -36,20 +41,29 @@ $img=$_FILES['img'];
         $pms = json_decode($out,true);
         $url=$pms['data']['link'];
     }
-$sql = "INSERT INTO club (clubName, clubDescription, email, contactNumber, calendarID, feePaid, feeCost, url, clubCategory) 
-VALUES ('$clubName', '$clubDescription', '$email', '$contactNumber', '11', '0', '0.0', 'testurl','$clubCategory')";
+$sql = "INSERT INTO club (clubName, clubDescription, email, contactNumber, calendarID, feePaid, feeCost, url, clubCategory, timeStamp, userID)
+VALUES ('$clubName', '$clubDescription', '$email', '$contactNumber', '11', '$feePaid', '$feeCost', 'testurl','$clubCategory', CURRENT_TIMESTAMP, $userID)";
 $result = mysqli_query($db, $sql);
 
-$sql2 ="SELECT clubID FROM club WHERE clubID = (SELECT MAX(clubID) FROM club)";
-$result = mysqli_query($db, $sql2);
-while($row = mysqli_fetch_assoc($result)){
-    $clubID = $row['clubID'];
+if($result){
+    sleep(2);
+} else{
+    die;
 }
 
-$sql1 = "INSERT INTO photos (caption,url,clubID,locationID,healthContentID,routeID) VALUES ('test','$url',$clubID,'0','0','0')";
+if(mysqli_affected_rows($db) > 0){
+    $sql2 ="SELECT clubID FROM club WHERE timeStamp = (SELECT MAX(timeStamp) FROM club)";
+    $result = mysqli_query($db, $sql2);
+    while($row = mysqli_fetch_assoc($result)){
+        $clubID = $row['clubID'];
+    }
 
-$result = (mysqli_query($db, $sql1));
+    $sql1 = "INSERT INTO photos (caption,url,clubID,locationID,healthContentID,routeID) VALUES ('test','$url',$clubID,'0','0','0')";
 
-//t
+    $result = (mysqli_query($db, $sql1));
 
-header("location:clubLandingPage.php");?>
+    header("location:clubLandingPage.php");
+} else{
+    echo "Create club failed.";
+}
+?>

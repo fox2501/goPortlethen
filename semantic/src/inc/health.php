@@ -64,15 +64,12 @@ if(isset($_SESSION['loggedIn'])){
             <div class="row">
                 <ul>
                     <?php $sql_query="
-SELECT A.title, A.mainText, B.userName, A.datePosted, A.healthContentID  
+SELECT A.title, A.mainText, B.userName, A.datePosted, A.healthContentID, C.url
 FROM healthcontent A, users B, photos C
 WHERE 
 A.userID=B.userID
-AND A.healthContentID = C.healthContentID";
-//SELECT A.title, A.mainText, B.userName, A.datePosted, A.healthContentID, C.url
-//FROM healthcontent A, users B, photos C
-//WHERE A.userID=B.userID,
-//A.healthContentID = C.healthContentID
+AND A.healthContentID = C.healthContentID
+AND A.approvalStatus = 1;";
                     $result=$db->query($sql_query);
                     while($row = $result-> fetch_array()){
                         $title = $row['title'];
@@ -80,62 +77,84 @@ AND A.healthContentID = C.healthContentID";
                         $userName = $row['userName'];
                         $datePosted = $row['datePosted'];
                         $healthContentID = $row['healthContentID'];
-                        //$photoURL = $row['url'];
+                        $photoURL = $row['url'];
                         if($canAccess == '1'){
                             echo "
-                                <div class='four wide column'>
-                                    <div class = 'ui raised segment'>
-                                    <form class = 'ui form' method = 'POST' action = 'editHealthContent.php'>
-                                        <button class = 'ui right floated mini button' onclick = '/semantic/src/inc/editHealthContent.php' type = 'submit'>
-                                            <input type = 'hidden' name = 'editHealth' value = $healthContentID>
-                                            Edit
-                                        </button>
-                                    </form>
-                                    <h3 class='ui header' id='title'>
-                                                $title
-                                    </h3>
-                                    <p id='datePosted'>$datePosted
-                                        <br>
-                                    </p>
-                                    <img class='ui small image' src=$photoURL id='image'></img>
-                                    <br >
-                                    <p id = 'mainText'style = 'text - align:justify' > $mainText
-                                        <br >
-                                    </p >
-                                    <p id = 'author' > By $userName
-                                    <br>
-                                    </p >
-                                    </div>
-                                    <div class='ui hidden section divider'></div>
-                                </div>";
+<div class='ui raised segment'>
+    <div class='ui container'>
+        <div class='ui grid'>
+            <div class='sixteen wide column'>
+                <form class='ui form' method='POST' action='editHealthContent.php'>
+                    <button class='ui right floated mini button' onclick='/semantic/src/inc/editHealthContent.php'
+                            type='submit'>
+                        <input type='hidden' name='editHealth' value=$healthContentID> Edit
+                    </button>
+                </form>
+            </div>
+            <div class='row'>
+                <div class='eight wide column'>
+                    <h3 class='ui header' id='title'>
+                        $title
+                    </h3>
+                    <p id='datePosted'>$datePosted
+                        <br>
+                    </p>
+                    <div class='ui small image'>
+                        <img src='$photoURL'>
+                    </div>
+                </div>
+                <div class='eight wide column'>
+                    <p id='mainText' style='text - align:justify'> $mainText
+                        <br>
+                    </p>
+                    <p id='author'> By $userName
+                        <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class='ui hidden section divider'></div>
+";
                         } else {
                             echo "
-                                <div class='four wide column'>
-                                <div class = 'ui raised segment'>
-                                    <h3 class='ui header' id='title'>
-                                                $title
-                                    </h3>
-                                    <p id='datePosted'>$datePosted
-                                        <br>
-                                    </p>
-                                    <img class='ui small image' src=$photoURL id='image'></img>
-                                    <br>
-                                    <p id='mainText' style='text - align:justify'>$mainText
-                                        <br>
-                                    </p>
-                                    <p id='author'>By $userName;
-                                        <br>
-                                    </p>
-                                    <div class='ui hidden section divider'></div>
-                                </div>
-                                </div>";
+<div class='ui raised segment'>
+    <div class='ui container'>
+        <div class='ui grid'>
+                <div class='eight wide column'>
+                    <h3 class='ui header' id='title'>
+                        $title
+                    </h3>
+                    <p id='datePosted'>$datePosted
+                        <br>
+                    </p>
+                    <div class='ui small image'>
+                        <img src='$photoURL'>
+                    </div>
+                </div>
+                <div class='eight wide column'>
+                    <p id='mainText' style='text - align:justify'> $mainText
+                        <br>
+                    </p>
+                    <p id='author'> By $userName
+                        <br>
+                    </p>
+                </div>
+        </div>
+    </div>
+</div>
+<div class='ui hidden section divider'></div>
+                                ";
                         }
                         } ?>
                 </ul>
             </div>
         </div>
         <div class="six wide column">
-            <iframe style="margin-right:50px" src="https://calendar.google.com/calendar/embed?src=imdvs1dbg4fm5e9g35o2cj8i2g%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="400" height="300" frameborder="0" scrolling="yes"></iframe>
+            <div data-tockify-component="mini" data-tockify-calendar="healthevents"></div>
+            <script data-tockify-script="embed" src="https://public.tockify.com/browser/embed.js"></script>
+            <button class="ui button"><a href="https://tockify.com/tkf2/submitEvent/42648d506ec74f769ce92685c0fe921e" target="_blank">Submit an Event</a></button>
             <div style="height:600px">
                 <a class="twitter-timeline" data-height="500" href="https://twitter.com/BoringMilner">Tweets by James Milner</a>
                 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
