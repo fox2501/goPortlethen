@@ -90,7 +90,6 @@ include("includes/dbconnect.php");
 </div><?php include("includes/footer.php"); ?>
 </body>
 <script>
-    $(function(){
         $('.ui.form')
             .form({
                 on: 'blur',
@@ -125,7 +124,6 @@ include("includes/dbconnect.php");
                 }
             })
         ;
-    })
 
 </script>
 </html>
