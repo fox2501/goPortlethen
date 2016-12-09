@@ -32,9 +32,9 @@ session_start();
             </div>
             <div class = "column">
                 <div class = "ui header">
-                    How do I create an account?
+                    What are the different access levels?
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce velit tellus, porta efficitur blandit eget, lobortis eget libero. Aliquam id augue a sapien efficitur consequat. Pellentesque commodo tempor rutrum. Vestibulum sit amet mi quis purus viverra viverra. Mauris sit amet molestie quam. Vestibulum a convallis diam.</p>
+                <p>There are 4 different types of account you may hold. Contributor, Club admin Map admin and Site admin. The most common account is contributor.</p>
             </div>
         </div>
         <div class = "row">
