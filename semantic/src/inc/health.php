@@ -80,7 +80,7 @@ AND A.approvalStatus = 1;";
                         $photoURL = $row['url'];
                         if($canAccess == '1'){
                             echo "
-<div class='ui raised segment'>
+<div class='ui raised segment' style = 'height: 250px;'>
 		<div class='ui container'>
 			<div class='ui grid'>
 				<div class='sixteen wide column'>
@@ -89,14 +89,14 @@ AND A.approvalStatus = 1;";
 					</form>
 				</div>
 				<div class='row'>
-					<div class='two wide column'>
+					<div class='four wide column'>
 						<div class='ui small image' style='height: 100%; width: 100%;'><img src='$photoURL' style='height: 100%; width: 100%;'></div>
 					</div>
-					<div class='two wide column'>
+					<div class='four wide column'>
 						<h3 class='ui header' id='title'>$title</h3>
 						<h4 class='ui header' id='datePosted'>$datePosted</h4>
 					</div>
-					<div class='twelve wide column'>
+					<div class='eight wide column'>
 						<p id='mainText' style='text - align:justify'>$mainText<br></p>
 						<p id='author'>By $userName<br></p>
 					</div>
@@ -108,7 +108,7 @@ AND A.approvalStatus = 1;";
 ";
                         } else {
                             echo "
-	<div class='ui raised segment'>
+	<div class='ui raised segment' style = 'height: 250px;'>
 		<div class='ui container'>
 			<div class='ui grid'>
 				<div class='four wide column'>
