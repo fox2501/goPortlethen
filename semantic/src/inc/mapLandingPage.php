@@ -58,6 +58,7 @@ include("includes/header.php");
 						$locationName
 						<div class='sub header'>$locationType</div>
 					</h2>
+					<p>$caption</p>
 				</div>
 				<div class='column'>
 					<div class='extra'>
