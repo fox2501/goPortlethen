@@ -90,7 +90,7 @@ include("includes/dbconnect.php");
                                 rules: [
                                     {
                                         type   : 'empty',
-                                        prompt : 'Please enter a value'
+                                        prompt : 'Please enter your firstname.'
                                     }
                                 ]
                             },
@@ -99,7 +99,7 @@ include("includes/dbconnect.php");
                                 rules: [
                                     {
                                         type   : 'empty',
-                                        prompt : 'Please enter a value'
+                                        prompt : 'Please enter your surname.'
                                     }
                                 ]
                             },
@@ -111,12 +111,37 @@ include("includes/dbconnect.php");
                                         prompt : 'Please enter a valid email.'
                                     }
                                 ]
-                            }
+                            },
+                            age: {
+                                identifier  : 'age',
+                                rules: [
+                                    {
+                                        type   : 'empty',
+                                        prompt : 'Please enter your age.'
+                                    }
+                                ]
+                            },
+                            username: {
+                                identifier  : 'username',
+                                rules: [
+                                    {
+                                        type   : 'empty',
+                                        prompt : 'Please enter a username.'
+                                    }
+                                ]
+                            },
+                            match: {
+                                identifier  : 'password',
+                                rules: [
+                                    {
+                                        type   : 'password[passwordConfirm]',
+                                        prompt : 'Please ensure your passwords match!'
+                                    }
+                                ]
+                            },
                         }
                     })
             })(jQuery);
-
-
         </script>
     </form>
 </div><?php include("includes/footer.php"); ?>
