@@ -38,7 +38,7 @@ include("includes/dbconnect.php");
                 <label>Age</label>
                 <div class='field'>
                     <input name='age' placeholder='Please enter your age.' type='number'>
-                </div>";
+                </div>
             </div>
             <div class="field">
                 <label>Email Address</label>
@@ -79,7 +79,9 @@ include("includes/dbconnect.php");
                         Site Admin
                     </option>
                 </select>
-            </div><button class="ui fluid large green submit button" type="submit">Create Account</button>
+            </div>
+            <button class="ui fluid large green submit button" type="submit">Create Account</button>
+            <div class="ui error message"></div>
         </div>
     </form>
 </div><?php include("includes/footer.php"); ?>
