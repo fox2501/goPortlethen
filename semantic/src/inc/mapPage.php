@@ -31,22 +31,22 @@ include("includes/header.php");
     Discover Portlethen
 </div>
 <div class="ui container">
-    <header class = 'ui header'>
+    <header class='ui header'>
         <?php echo $locationName ?>
     </header>
-    <div class = 'ui grid'>
-    <div class="sixteen wide column">
-        <div id="map" style="width: 600px; height: 350px"></div>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsaPQGyO2SHJumHMC2k8RTYfy3z7OXIk&callback=initMap">
-        </script>
+    <div class='ui centered grid'>
+        <div class="sixteen wide column">
+            <div id="map" style="width: 600px; height: 350px"></div>
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsaPQGyO2SHJumHMC2k8RTYfy3z7OXIk&callback=initMap">
+            </script>
+        </div>
     </div>
+    <div class="ui grid">
+        <div class="eight wide column">
+            <h3>Description</h3>
+            <p><?php echo $caption ?></p>
+        </div>
+    </div><?php include("includes/footer.php"); ?>
 </div>
-<div class="ui grid">
-    <div class="four wide column"></div>
-    <div class="eight wide column">
-        <h3>Description</h3>
-        <p><?php echo $caption ?></p>
-    </div>
-</div><?php include("includes/footer.php"); ?>
 </body>
 </html>
