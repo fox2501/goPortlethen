@@ -81,40 +81,43 @@ include("includes/dbconnect.php");
             <div class="ui error message"></div>
         </div>
         <script type = "text/javascript">
-            $('.ui.form')
-                .form({
-                    on: 'blur',
-                    fields: {
-                        firstName: {
-                            identifier  : 'firstName',
-                            rules: [
-                                {
-                                    type   : 'empty',
-                                    prompt : 'Please enter a value'
-                                }
-                            ]
-                        },
-                        surname: {
-                            identifier  : 'surname',
-                            rules: [
-                                {
-                                    type   : 'empty',
-                                    prompt : 'Please enter a value'
-                                }
-                            ]
-                        },
-                        email: {
-                            identifier  : 'email',
-                            rules: [
-                                {
-                                    type   : 'email',
-                                    prompt : 'Please enter a valid email.'
-                                }
-                            ]
+            ;(function($){
+                $('.ui.form')
+                    .form({
+                        on: 'blur',
+                        fields: {
+                            firstName: {
+                                identifier  : 'firstName',
+                                rules: [
+                                    {
+                                        type   : 'empty',
+                                        prompt : 'Please enter a value'
+                                    }
+                                ]
+                            },
+                            surname: {
+                                identifier  : 'surname',
+                                rules: [
+                                    {
+                                        type   : 'empty',
+                                        prompt : 'Please enter a value'
+                                    }
+                                ]
+                            },
+                            email: {
+                                identifier  : 'email',
+                                rules: [
+                                    {
+                                        type   : 'email',
+                                        prompt : 'Please enter a valid email.'
+                                    }
+                                ]
+                            }
                         }
-                    }
-                })
-            ;
+                    })
+                ;
+            })(jQuery);
+
 
         </script>
     </form>
