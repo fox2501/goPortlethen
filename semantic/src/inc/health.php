@@ -99,8 +99,8 @@ AND A.approvalStatus = 1;";
                     <p id='datePosted'>$datePosted
                         <br>
                     </p>
-                    <div class='ui small image' style = 'height: 150px; width: 100%;'>
-                        <img src='$photoURL' style = 'height: 150px; width: 100%;'>
+                    <div class='ui small image' style = 'height: 200px; width: 100%;'>
+                        <img src='$photoURL' style = 'height: 200px; width: 100%;'>
                     </div>
                 </div>
                 <div class='twelve wide column'>
@@ -129,8 +129,8 @@ AND A.approvalStatus = 1;";
                     <p id='datePosted'>$datePosted
                         <br>
                     </p>
-                    <div class='ui small image' style = 'height: 150px; width: 100%;'>
-                        <img src='$photoURL' style = 'height: 150px; width: 100%;'>
+                    <div class='ui small image' style = 'height: 200px; width: 100%;'>
+                        <img src='$photoURL' style = 'height: 200px; width: 100%;'>
                     </div>
                 </div>
                 <div class='twelve wide column'>
