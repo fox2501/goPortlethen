@@ -7,9 +7,9 @@ include("includes/dbconnect.php");
 <head>
     <meta charset="UTF-8">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css" rel="stylesheet">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
     </script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js">
     </script>
     <title>goPortlethen</title>
 </head><?php include("includes/header.php"); ?><?php $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
