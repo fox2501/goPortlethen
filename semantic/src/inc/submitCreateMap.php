@@ -9,7 +9,7 @@ $lat = $_POST["lat"];
 $desc = $_POST["mapDesc"];
 $userID = $_SESSION["loggedIn"];
 
-$sql = "INSERT INTO locations (longitude, latitude, type, caption, locationName, approvalStatus) VALUES (?, ?, ?, ?, ?, ?)";
+$sql = "INSERT INTO locations (longitude, latitude, locationType, caption, locationName, approvalStatus) VALUES (?, ?, ?, ?, ?, ?)";
 
 $pdo->prepare($sql)->execute([$long,$lat,$mapType,$desc, $title, '0']);
 
