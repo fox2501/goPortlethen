@@ -82,7 +82,6 @@ include("includes/dbconnect.php");
         </div>
         <script type = "text/javascript">
             ;(function($){
-                $('.ui.form')
                     .form({
                         on: 'blur',
                         fields: {
