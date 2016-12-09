@@ -50,7 +50,7 @@ include("includes/header.php");
                 $locationType = 'Historical Landmark';
             }
             echo "
-	<div class='row'>
+	<div class='column'>
 		<div class='ui raised segment'>
 			<div class='ui two column grid'>
 				<div class='column'>
