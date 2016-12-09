@@ -24,9 +24,8 @@ include("dbconnect.php");
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://dl.dropbox.com/s/fc45fa0c4s1o95c/semantic.css?dl=0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>-->
     <title>goPortlethen</title>
 </head>
 <body>
