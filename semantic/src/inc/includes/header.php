@@ -47,6 +47,11 @@ include("dbconnect.php");
         <i class="map icon"></i>
         Maps
     </a>
+    <a class="item" href="/semantic/src/inc/help.php">
+        <i class="help circle icon"></i>
+        Help
+    </a>
+
     <div class="right menu">
         <?php
         if (isset($_SESSION['loggedIn'])) {
