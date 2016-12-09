@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 include("includes/PDOConnect.php");
 if (isset($_SESSION['loggedIn'])) {
     $userID = $_SESSION['loggedIn'];
@@ -28,12 +27,11 @@ if (isset($_SESSION['loggedIn'])) {
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="goPortlethen/semantic/dist/semantic.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
         <title>Create Club Page</title>
     </head>
-    <?php include("includes/dbconnect.php");
-    include("includes/header.php") ?>
+    <?php include("includes/header.php"); ?>
     <body>
     <div class="ui container">
         <form class="ui form" action="submitCCForm.php" enctype="multipart/form-data" method="POST">
@@ -154,44 +152,41 @@ if (isset($_SESSION['loggedIn'])) {
                 </div>
                 <button class="ui fluid large green submit button" id="createClub" type="submit">Create Club</button>
 
-                <script type="text/javascript" src="jquery.js">
-
-                    $('createClub').on('click', function () {
-                        $('.ui.form').form('validate form');
-                    });
-
-                    $('.ui.form').form({
-                        fields: {
-                            clubName: {
-                                identifier: 'clubName',
-                                rules: [
-                                    {
-                                        type: 'empty',
-                                        prompt: 'Please enter your clubs name'
-                                    }
-                                ]
-                            },
-                            terms: {
-                                identifier: 'terms',
-                                rules: [
-                                    {
-                                        type: 'checked',
-                                        prompt: 'You must agree to the terms and conditions'
-                                    }
-                                ]
-                            },
-                            clubCategory: {
-                                identifier: 'clubCategory',
-                                rules: [
-                                    {
-                                        type: 'empty',
-                                        prompt: 'Please select a club category'
-                                    }
-                                ]
-                            }
-                        }
-                    })
+                <script type="text/javascript">
                     ;
+                    (function ($) {
+                        $('.ui.form').form({
+                            fields: {
+                                clubName: {
+                                    identifier: 'clubName',
+                                    rules: [
+                                        {
+                                            type: 'empty',
+                                            prompt: 'Please enter your clubs name'
+                                        }
+                                    ]
+                                },
+                                terms: {
+                                    identifier: 'terms',
+                                    rules: [
+                                        {
+                                            type: 'checked',
+                                            prompt: 'You must agree to the terms and conditions'
+                                        }
+                                    ]
+                                },
+                                clubCategory: {
+                                    identifier: 'clubCategory',
+                                    rules: [
+                                        {
+                                            type: 'empty',
+                                            prompt: 'Please select a club category'
+                                        }
+                                    ]
+                                }
+                            }
+                        })
+                    })(jQuery);
                 </script>
 
         </form>
