@@ -204,6 +204,7 @@ if (isset($_SESSION['loggedIn'])) {
                                 },
                                 url: {
                                     identifier: 'websiteURL',
+                                    optional   : true,
                                     rules: [
                                         {
                                             type: 'url',
