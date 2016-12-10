@@ -130,12 +130,17 @@ include("includes/dbconnect.php");
                                     }
                                 ]
                             },
-                            matchPassword: {
+                            password: {
                                 identifier  : 'password',
                                 rules: [
                                     {
                                         type   : 'match[passwordConfirm]',
                                         prompt : 'Please ensure your passwords match!'
+                                    },
+                                    {
+                                        type: 'empty',
+                                        prompt: 'Please enter a password!'
+
                                     }
                                 ]
                             },
@@ -145,24 +150,10 @@ include("includes/dbconnect.php");
                                     {
                                         type   : 'match[password]',
                                         prompt : 'Please ensure your passwords match!'
-                                    }
-                                ]
-                            },
-                            emptyPassword:{
-                                identifier: 'password',
-                                rules:[
+                                    },
                                     {
                                         type: 'empty',
-                                        prompt: 'Please enter a password!'
-                                    }
-                                ]
-                            },
-                            emptyPassword2:{
-                                identifier: 'passwordConfirm',
-                                rules:[
-                                    {
-                                        type: 'empty',
-                                        prompt: 'Please enter a password!'
+                                        prompt: 'Please confirm your password!'
                                     }
                                 ]
                             },
