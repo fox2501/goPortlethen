@@ -65,8 +65,82 @@ if (isset($_SESSION['loggedIn'])) {
                     <input name="healthPhoto" size="35" type="file"/>
                 </div>
             </div>
-            <button class="ui fluid large green submit button" id="createHealthContent" type="submit">Submit Content
-            </button>
+            <button class="ui fluid large green submit button" id="createHealthContent" type="submit">Submit Content</button>
+
+            <script type="text/javascript">
+                ;
+                (function ($) {
+                    $('.ui.form').form({
+                        fields: {
+                            clubName: {
+                                identifier: 'clubName',
+                                rules: [
+                                    {
+                                        type: 'empty',
+                                        prompt: 'Please enter your clubs name'
+                                    }
+                                ]
+                            },
+                            clubEmail: {
+                                identifier: 'email',
+                                rules: [
+                                    {
+                                        type: 'empty' + 'email',
+                                        prompt: 'Please enter a valid email address'
+                                    }
+                                ]
+                            },
+                            clubCategory: {
+                                identifier: 'clubCategory',
+                                rules: [
+                                    {
+                                        type: 'empty',
+                                        prompt: 'Please select a club category'
+                                    }
+                                ]
+                            },
+                            clubDescription: {
+                                identifier: 'clubDescription',
+                                rules: [
+                                    {
+                                        type: 'empty',
+                                        prompt: 'Please select a club category'
+                                    }
+                                ]
+                            },
+                            number: {
+                                identifier: 'phoneNumber',
+                                rules: [
+                                    {
+                                        type: 'number',
+                                        prompt: 'Please enter a valid phone number'
+                                    }
+                                ]
+                            },
+                            url: {
+                                identifier: 'websiteURL',
+                                optional   : true,
+                                rules: [
+                                    {
+                                        type: 'url',
+                                        prompt: 'Please enter a valid url'
+                                    }
+                                ]
+                            },
+                            terms: {
+                                identifier: 'terms',
+                                rules: [
+                                    {
+                                        type: 'checked',
+                                        prompt: 'You must agree to the terms and conditions'
+                                    }
+                                ]
+                            }
+                        }
+                    })
+                })(jQuery);
+            </script>
+
         </form>
     </div>
     </body>
