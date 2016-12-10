@@ -121,6 +121,15 @@ include("includes/dbconnect.php");
                                     }
                                 ]
                             },
+                            usernameEmpty: {
+                                identifier: 'username',
+                                rules: [
+                                    {
+                                        type: 'empty',
+                                        prompt: 'Please enter a username.'
+                                    },
+                                ]
+                            },
                             <?php
                             $sql = "SELECT userName from users";
                             $result = mysqli_query($db, $sql);
@@ -130,10 +139,6 @@ include("includes/dbconnect.php");
                             username: {
                                 identifier  : 'username',
                                 rules: [
-                                    {
-                                        type   : 'empty',
-                                        prompt : 'Please enter a username.'
-                                    },
                                     {
                                         type: different[<?php echo $userName ?>]
                                         prompt: 'This username already exists!'
