@@ -127,7 +127,7 @@ include("includes/dbconnect.php");
                                     {
                                         type: 'empty',
                                         prompt: 'Please enter a username.'
-                                    },
+                                    }
                                 ]
                             },
                             <?php
