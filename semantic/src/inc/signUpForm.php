@@ -130,22 +130,6 @@ include("includes/dbconnect.php");
                                     }
                                 ]
                             },
-                            <?php
-                            $sql = "SELECT userName from users";
-                            $result = mysqli_query($db, $sql);
-                            while($row = mysqli_fetch_assoc($result)){
-                                    $userName = $row['userName'];
-                            ?>
-                            username: {
-                                identifier  : 'username',
-                                rules: [
-                                    {
-                                        type: different[<?php echo $userName ?>]
-                                        prompt: 'This username already exists!'
-                                    }
-                                ]
-                            },
-                            <?php } ?>
                             password: {
                                 identifier  : 'password',
                                 rules: [
