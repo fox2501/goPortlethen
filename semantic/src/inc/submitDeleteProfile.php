@@ -10,11 +10,10 @@ $sql = "SELECT userAccessID from useraccess A, users B WHERE A.userName = B.user
 $stmt = $pdo->prepare($sql);
 $stmt->execute($userID);
 
-while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-    $userAccessID= $row['userAccessID'];
-}
+$result = $stmt->fetch(PDO::FETCH_ASSOC);
+
 echo $userID."<br>";
-echo $userAccessID;
+echo $result;
 
 $sql = "DELETE FROM useraccess WHERE userAccessID = '?'";
 $execute = $pdo->prepare($sql)->execute($userAccessID);
