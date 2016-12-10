@@ -73,7 +73,7 @@ if (isset($_SESSION['loggedIn'])) {
                         <option value="SPORT">Sport</option>
                     </select>
                 </div>
-                <div class="field">
+                <div class="required field">
                     <label>Club Description</label>
                     <textarea rows="4" name="clubDescription"></textarea>
                 </div>
@@ -197,7 +197,7 @@ if (isset($_SESSION['loggedIn'])) {
                                 identifier  : 'phoneNumber',
                                 rules: [
                                     {
-                                        type   : 'number',
+                                        type   : 'number'+ 'empty',
                                         prompt : 'Please enter a valid phone number'
                                     }
                                 ]
@@ -216,7 +216,7 @@ if (isset($_SESSION['loggedIn'])) {
                                     rules: [
                                         {
                                             type: 'empty'+'email',
-                                            prompt: 'Please select enter a valid email address'
+                                            prompt: 'Please enter a valid email address'
                                         }
                                     ]
                                 }
