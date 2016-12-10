@@ -10,11 +10,11 @@ include("includes/header.php");
     <title>goPortlethen</title>
 </head>
 <body>
-<h2 class="ui blue header"></h2>
-<div class="content">
-    <h2 class="ui blue header">Delete your account</h2>
-</div>
 <div class='ui center aligned container'>
+    <h2 class="ui blue header"></h2>
+    <div class="content">
+        <h2 class="ui blue header">Delete your account</h2>
+    </div>
     <div class='ui middle aligned center aligned grid'>
         <div class='ui ten wide column'>
             <div class="ui large form">
