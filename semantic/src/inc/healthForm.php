@@ -51,7 +51,7 @@ if (isset($_SESSION['loggedIn'])) {
             <div class="required field">
                 <label>Title</label>
                 <div class="field">
-                    <input type="text" name="title" placeholder="Enter the title of your post">>
+                    <input type="text" name="title" placeholder="Enter the title of your post">
                 </div>
             </div>
 
