@@ -39,10 +39,6 @@ include("includes/header.php");
                                         identifier: 'passwordOne',
                                         rules: [
                                             {
-                                                type: 'match[passwordConfirm]',
-                                                prompt: 'Please ensure your passwords match!'
-                                            },
-                                            {
                                                 type: 'minLength[8]',
                                                 prompt: 'Please ensure your password is atleast 8 characters!'
                                             }

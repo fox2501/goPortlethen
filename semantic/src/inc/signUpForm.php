@@ -148,10 +148,6 @@ $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
                             identifier: 'password',
                             rules: [
                                 {
-                                    type: 'match[passwordConfirm]',
-                                    prompt: 'Please ensure your passwords match!'
-                                },
-                                {
                                     type: 'minLength[8]',
                                     prompt: 'Please ensure your password is atleast 8 characters!'
                                 }
