@@ -166,12 +166,12 @@ if (isset($_SESSION['loggedIn'])) {
                                         }
                                     ]
                                 },
-                                terms: {
-                                    identifier: 'terms',
+                                clubEmail: {
+                                    identifier: 'email',
                                     rules: [
                                         {
-                                            type: 'checked',
-                                            prompt: 'You must agree to the terms and conditions'
+                                            type: 'empty' + 'email',
+                                            prompt: 'Please enter a valid email address'
                                         }
                                     ]
                                 },
@@ -193,30 +193,30 @@ if (isset($_SESSION['loggedIn'])) {
                                         }
                                     ]
                                 },
-                            number: {
-                                identifier  : 'phoneNumber',
-                                rules: [
-                                    {
-                                        type   : 'number'+ 'empty',
-                                        prompt : 'Please enter a valid phone number'
-                                    }
-                                ]
-                            },
-                                url: {
-                                    identifier  : 'websiteURL',
+                                number: {
+                                    identifier: 'phoneNumber',
                                     rules: [
                                         {
-                                            type   : 'url',
-                                            prompt : 'Please enter a url'
+                                            type: 'number',
+                                            prompt: 'Please enter a valid phone number'
                                         }
                                     ]
                                 },
-                                clubEmail: {
-                                    identifier: 'email',
+                                url: {
+                                    identifier: 'websiteURL',
                                     rules: [
                                         {
-                                            type: 'empty'+'email',
-                                            prompt: 'Please enter a valid email address'
+                                            type: 'url',
+                                            prompt: 'Please enter a url'
+                                        }
+                                    ]
+                                },
+                                terms: {
+                                    identifier: 'terms',
+                                    rules: [
+                                        {
+                                            type: 'checked',
+                                            prompt: 'You must agree to the terms and conditions'
                                         }
                                     ]
                                 }
