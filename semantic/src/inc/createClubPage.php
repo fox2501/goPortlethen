@@ -73,7 +73,7 @@ if (isset($_SESSION['loggedIn'])) {
                         <option value="SPORT">Sport</option>
                     </select>
                 </div>
-                <div class="required field">
+                <div class="field">
                     <label>Club Description</label>
                     <textarea rows="4" name="clubDescription"></textarea>
                 </div>
@@ -83,7 +83,7 @@ if (isset($_SESSION['loggedIn'])) {
                 </div>
                 <div class="field">
                     <label>Website URL</label>
-                    <input type="text" name="websiteURL" placeholder="Website URL">
+                    <input type="URL" name="websiteURL" placeholder="Website URL">
                 </div>
                 <div class="required field">
                     <label>Please toggle if your club requires a fee: </label>
@@ -181,6 +181,15 @@ if (isset($_SESSION['loggedIn'])) {
                                         {
                                             type: 'empty',
                                             prompt: 'Please select a club category'
+                                        }
+                                    ]
+                                },
+                                url: {
+                                    identifier  : 'websiteURL',
+                                    rules: [
+                                        {
+                                            type   : 'url',
+                                            prompt : 'Please enter a url'
                                         }
                                     ]
                                 }
