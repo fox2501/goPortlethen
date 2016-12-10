@@ -210,6 +210,15 @@ if (isset($_SESSION['loggedIn'])) {
                                             prompt : 'Please enter a url'
                                         }
                                     ]
+                                },
+                                clubEmail: {
+                                    identifier: 'email',
+                                    rules: [
+                                        {
+                                            type: 'empty'+'email',
+                                            prompt: 'Please select enter a valid email address'
+                                        }
+                                    ]
                                 }
                             }
                         })
