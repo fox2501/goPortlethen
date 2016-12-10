@@ -79,7 +79,7 @@ if (isset($_SESSION['loggedIn'])) {
                 </div>
                 <div class="field">
                     <label>Phone Number</label>
-                    <input type="number" name="phoneNumber" maxlength="11" placeholder="Phone Number">
+                    <input type="text" name="phoneNumber" maxlength="11" placeholder="Phone Number">
                 </div>
                 <div class="field">
                     <label>Website URL</label>
