@@ -13,20 +13,22 @@ $stmt->execute($userID);
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
     $userAccessID= $row['userAccessID'];
 }
+echo $userID."<br>";
+echo $userAccessID;
 
 $sql = "DELETE FROM useraccess WHERE userAccessID = '?'";
 $execute = $pdo->prepare($sql)->execute($userAccessID);
-
-if ($execute)
-{
-    $sql = "DELETE FROM users WHERE userID = '?'";
-    $pdo->prepare($sql)->execute($userID);
-
-    header('Location: /semantic/');
-} else{
-    header('Location: /semantic/src/inc/deleteProfile.php');
-    exit();
-}
+//
+//if ($execute)
+//{
+//    $sql = "DELETE FROM users WHERE userID = '?'";
+//    $pdo->prepare($sql)->execute($userID);
+//
+//    header('Location: /semantic/');
+//} else{
+//    header('Location: /semantic/src/inc/deleteProfile.php');
+//    exit();
+//}
 
 
 ?>
