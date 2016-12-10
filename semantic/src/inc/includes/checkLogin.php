@@ -14,15 +14,15 @@ $hashpass = $row['password'];
 $dehashedpass = password_verify($password, $hashpass);
 
 if($dehashedpass == 0){
-    header("Location: ../login.php?error=password");
+    header("Location: ../login.php?error=loginerror");
     exit();
-
 }else{
     $sql = "SELECT * FROM users where username = '$username' AND password = '$hashpass'";
     $result = mysqli_query($db, $sql);
 
     if (!$row = mysqli_fetch_assoc($result)){
-        echo "Your username or password is incorrect!";
+        header("Location: ../login.php?error=loginerror");
+        exit();
     } else{
         $_SESSION['loggedIn'] = $row['userID'];
         $_SESSION['name'] = $row['firstName'];
