@@ -2,7 +2,7 @@
 session_start();
 include("includes/PDOConnect.php");
 
-$userID = $_POST["deleteProfile"];
+$userID = $_SESSION['loggedIn'];
 
 //FEE REQUIRED DOES NOT WORK
 
