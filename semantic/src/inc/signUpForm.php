@@ -1,6 +1,7 @@
 <?php
 session_start();
 include("includes/dbconnect.php");
+$url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,6 +21,18 @@ include("includes/dbconnect.php");
         </div>
         <div class="ui segment">
             <div class="ui error message"></div>
+            <?php
+            if (strpos($url, 'error=usernameExists') !== false) {
+                echo "
+                <div class='ui negative message'>
+                    <i class='close icon'></i>
+                    <div class='header'>
+                        Sorry. The username you have chosen already exists.
+                    </div>
+                </div>
+                ";
+            }
+            ?>
             <div class="field">
                 <label>First Name</label>
                 <div class='field'>
@@ -80,84 +93,85 @@ include("includes/dbconnect.php");
             </div>
             <button class="ui fluid large green submit button" type="submit">Create Account</button>
         </div>
-        <script type = "text/javascript">
-            ;(function($){
+        <script type="text/javascript">
+            ;
+            (function ($) {
                 $('.ui.form').form({
-                        on: 'blur',
-                        fields: {
-                            firstName: {
-                                identifier  : 'firstName',
-                                rules: [
-                                    {
-                                        type   : 'empty',
-                                        prompt : 'Please enter your firstname.'
-                                    }
-                                ]
-                            },
-                            surname: {
-                                identifier  : 'surname',
-                                rules: [
-                                    {
-                                        type   : 'empty',
-                                        prompt : 'Please enter your surname.'
-                                    }
-                                ]
-                            },
-                            email: {
-                                identifier  : 'email',
-                                rules: [
-                                    {
-                                        type   : 'email',
-                                        prompt : 'Please enter a valid email.'
-                                    }
-                                ]
-                            },
-                            age: {
-                                identifier  : 'age',
-                                rules: [
-                                    {
-                                        type   : 'empty',
-                                        prompt : 'Please enter your age.'
-                                    }
-                                ]
-                            },
-                            usernameEmpty: {
-                                identifier: 'username',
-                                rules: [
-                                    {
-                                        type: 'empty',
-                                        prompt: 'Please enter a username.'
-                                    }
-                                ]
-                            },
-                            password: {
-                                identifier  : 'password',
-                                rules: [
-                                    {
-                                        type   : 'match[passwordConfirm]',
-                                        prompt : 'Please ensure your passwords match!'
-                                    },
-                                    {
-                                        type: 'minLength[8]',
-                                        prompt: 'Please ensure your password is atleast 8 characters!'
-                                    }
-                                ]
-                            },
-                            matchPassword2: {
-                                identifier  : 'passwordConfirm',
-                                rules: [
-                                    {
-                                        type   : 'match[password]',
-                                        prompt : 'Please ensure your passwords match!'
-                                    },
-                                    {
-                                        type: 'minLength[8]',
-                                        prompt: 'Please confirm your password ensuring it is atleast 8 characters!'
-                                    }
-                                ]
-                            },
-                        }
-                    })
+                    on: 'blur',
+                    fields: {
+                        firstName: {
+                            identifier: 'firstName',
+                            rules: [
+                                {
+                                    type: 'empty',
+                                    prompt: 'Please enter your firstname.'
+                                }
+                            ]
+                        },
+                        surname: {
+                            identifier: 'surname',
+                            rules: [
+                                {
+                                    type: 'empty',
+                                    prompt: 'Please enter your surname.'
+                                }
+                            ]
+                        },
+                        email: {
+                            identifier: 'email',
+                            rules: [
+                                {
+                                    type: 'email',
+                                    prompt: 'Please enter a valid email.'
+                                }
+                            ]
+                        },
+                        age: {
+                            identifier: 'age',
+                            rules: [
+                                {
+                                    type: 'empty',
+                                    prompt: 'Please enter your age.'
+                                }
+                            ]
+                        },
+                        usernameEmpty: {
+                            identifier: 'username',
+                            rules: [
+                                {
+                                    type: 'empty',
+                                    prompt: 'Please enter a username.'
+                                }
+                            ]
+                        },
+                        password: {
+                            identifier: 'password',
+                            rules: [
+                                {
+                                    type: 'match[passwordConfirm]',
+                                    prompt: 'Please ensure your passwords match!'
+                                },
+                                {
+                                    type: 'minLength[8]',
+                                    prompt: 'Please ensure your password is atleast 8 characters!'
+                                }
+                            ]
+                        },
+                        matchPassword2: {
+                            identifier: 'passwordConfirm',
+                            rules: [
+                                {
+                                    type: 'match[password]',
+                                    prompt: 'Please ensure your passwords match!'
+                                },
+                                {
+                                    type: 'minLength[8]',
+                                    prompt: 'Please confirm your password ensuring it is atleast 8 characters!'
+                                }
+                            ]
+                        },
+                    }
+                })
             })(jQuery);
         </script>
     </form>

@@ -18,10 +18,7 @@ $sql = "SELECT username FROM users WHERE username = '$username'";
 $result = mysqli_query($db, $sql);
 $usernameCheck = mysqli_num_rows($result);
 if($usernameCheck > 0){
-    header("Location: ../signUpForm.php?error=username");
-    exit();
-} else if(!($password == $passwordConfirm)){
-    header("Location: ../signUpForm.php?error=passwordConfirm");
+    header("Location: ../signUpForm.php?error=usernameExists");
     exit();
 }
 else {
