@@ -127,6 +127,9 @@ include("includes/dbconnect.php");
                                     {
                                         type   : 'empty',
                                         prompt : 'Please enter a username.'
+                                    },
+                                    {
+
                                     }
                                 ]
                             },
@@ -138,9 +141,8 @@ include("includes/dbconnect.php");
                                         prompt : 'Please ensure your passwords match!'
                                     },
                                     {
-                                        type: 'empty',
-                                        prompt: 'Please enter a password!'
-
+                                        type: 'minLength[8]',
+                                        prompt: 'Please ensure your password is atleast 8 characters!'
                                     }
                                 ]
                             },
@@ -152,7 +154,7 @@ include("includes/dbconnect.php");
                                         prompt : 'Please ensure your passwords match!'
                                     },
                                     {
-                                        type: 'empty',
+                                        type: 'minLength[8]',
                                         prompt: 'Please confirm your password!'
                                     }
                                 ]
