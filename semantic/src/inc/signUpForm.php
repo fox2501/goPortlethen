@@ -155,7 +155,7 @@ include("includes/dbconnect.php");
                                     },
                                     {
                                         type: 'minLength[8]',
-                                        prompt: 'Please confirm your password!'
+                                        prompt: 'Please confirm your password ensuring it is atleast 8 characters!'
                                     }
                                 ]
                             },
