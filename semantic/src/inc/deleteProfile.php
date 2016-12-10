@@ -2,6 +2,7 @@
 session_start();
 include("includes/dbconnect.php");
 if(isset($_SESSION['loggedIn'])){
+include("includes/header.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -20,6 +21,7 @@ if(isset($_SESSION['loggedIn'])){
         </div>
     </div>
 </div><?php
+include("includes/footer.php");
 }
 ?>
 </body>
