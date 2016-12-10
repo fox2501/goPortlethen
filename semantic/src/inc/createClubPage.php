@@ -45,7 +45,7 @@ if (isset($_SESSION['loggedIn'])) {
             </div>
             <div class="ui attached message">
                 <div class="header">
-                    Welcome to goPortlethen!
+                    Welcome to goPortlet`hen!
                 </div>
                 <p>Please fill out the form below to create your club page</p>
             </div>
@@ -57,13 +57,13 @@ if (isset($_SESSION['loggedIn'])) {
                         <input type="text" name="clubName" placeholder="Enter your club name." id="clubName">
                     </div>
                 </div>
-                <div class="field">
+                <div class="required field">
                     <label>Email Address</label>
                     <div class="field">
                         <input type="email" name="email" placeholder="Please enter your email address." id="email">
                     </div>
                 </div>
-                <div class="field">
+                <div class="required field">
                     <label>Club Category</label>
                     <select class="ui search dropdown" name="clubCategory">
                         <option value="">Select Category</option>
@@ -73,7 +73,7 @@ if (isset($_SESSION['loggedIn'])) {
                         <option value="SPORT">Sport</option>
                     </select>
                 </div>
-                <div class="field">
+                <div class="required field">
                     <label>Club Description</label>
                     <textarea rows="4" name="clubDescription"></textarea>
                 </div>
@@ -85,7 +85,7 @@ if (isset($_SESSION['loggedIn'])) {
                     <label>Website URL</label>
                     <input type="text" name="websiteURL" placeholder="Website URL">
                 </div>
-                <div class="field">
+                <div class="required field">
                     <label>Please toggle if your club requires a fee: </label>
                     <div class="ui toggle checkbox">
                         <input type="checkbox" name="feeRequired" tabindex="0" class="hidden" id="isFee" value="0">
