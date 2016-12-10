@@ -85,7 +85,7 @@ if (isset($_SESSION['loggedIn'])) {
                     <label>Website URL</label>
                     <input type="URL" name="websiteURL" placeholder="Website URL">
                 </div>
-                <div class="required field">
+                <div class="field">
                     <label>Please toggle if your club requires a fee: </label>
                     <div class="ui toggle checkbox">
                         <input type="checkbox" name="feeRequired" tabindex="0" class="hidden" id="isFee" value="0">
