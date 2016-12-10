@@ -10,8 +10,9 @@ include("includes/header.php");
     <title>goPortlethen</title>
 </head>
 <body>
-<div class='ui container'>
-    <div class='ui grid'>
+<div class='ui center aligned container'>
+    <div class='ui middle aligned center aligned grid'>
+        <div class = 'four wide column'></div>
         <div class='ui column'>
             <div class="ui large form">
                 <div class='ui negative message'>
@@ -19,6 +20,7 @@ include("includes/header.php");
                 </div>
             </div><button class="ui fluid large red submit button" type="submit">Delete Profile</button>
         </div>
+        <div class = 'four wide column'></div>
     </div>
 </div><?php
 include("includes/footer.php");
