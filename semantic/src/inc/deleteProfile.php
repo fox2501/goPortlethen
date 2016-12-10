@@ -19,7 +19,7 @@ include("includes/header.php");
                     <h1 class='header'>ARE YOU SURE YOU WANT TO DELETE YOUR PROFILE?</h1>
                 </div>
                 <div class='field'>
-                    <input name='deleteProfile' type='hidden' value="$userID">
+                    <input name='deleteProfile' type='hidden' value= <?php echo $userID ?>>
                 </div><button class="ui fluid large red submit button" type="submit">Delete Profile</button>
             </form>
         </div>
