@@ -23,13 +23,18 @@ while($row = mysqli_fetch_array($result)) {
 ?>
 <body>
 <div class="ui container">
-    <div class="ui two column grid">
-        <div class="ui column">
+    <div class="ui three column grid">
+        <div class="eight wide column">
             <div class="ui huge blue header">
                 User settings
             </div>
         </div>
-        <div class="ui column">
+        <div class="four wide column">
+            <form>
+                <button class="ui red right floated button" formaction="deleteProfile.php"><i class="remove user icon"></i>Delete Profile</button>
+            </form>
+        </div>
+        <div class="four wide column">
             <form>
                 <button class="ui right floated button" formaction="changePassword.php"><i class="settings icon"></i> Change Password</button>
             </form>
