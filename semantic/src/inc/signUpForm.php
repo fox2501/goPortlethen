@@ -19,6 +19,7 @@ include("includes/dbconnect.php");
             <h2 class="ui center aligned blue header">Sign up </h2>
         </div>
         <div class="ui segment">
+            <div class="ui error message"></div>
             <div class="field">
                 <label>First Name</label>
                 <div class='field'>
@@ -78,7 +79,6 @@ include("includes/dbconnect.php");
                 </select>
             </div>
             <button class="ui fluid large green submit button" type="submit">Create Account</button>
-            <div class="ui error message"></div>
         </div>
         <script type = "text/javascript">
             ;(function($){
