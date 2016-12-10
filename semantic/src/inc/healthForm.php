@@ -46,6 +46,7 @@ if (isset($_SESSION['loggedIn'])) {
         <form class="ui form" action="submitHealthForm.php" enctype="multipart/form-data" method="POST"
               onsubmit="return validateForm()">
 
+            <div class="ui error message"></div>
 
             <div class="field">
                 <label>Title</label>
