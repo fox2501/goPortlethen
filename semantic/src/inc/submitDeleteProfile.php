@@ -15,11 +15,18 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
 }
 
 $sql = "DELETE FROM useraccess WHERE userAccessID = '?'";
-$pdo->prepare($sql)->execute($userAccessID);
-usleep(10000);
-$sql = "DELETE FROM users WHERE userID = '?'";
-$pdo->prepare($sql)->execute($userID);
+$execute = $pdo->prepare($sql)->execute($userAccessID);
 
-header('Location: /semantic/');
+if ($execute)
+{
+    $sql = "DELETE FROM users WHERE userID = '?'";
+    $pdo->prepare($sql)->execute($userID);
+
+    header('Location: /semantic/');
+} else{
+    header('Location: /semantic/src/inc/deleteProfile.php');
+    exit();
+}
+
 
 ?>
