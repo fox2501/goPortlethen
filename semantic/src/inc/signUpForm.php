@@ -130,24 +130,6 @@ include("includes/dbconnect.php");
                                     }
                                 ]
                             },
-                            emptyPassword:{
-                                identifier: 'password',
-                                rules:[
-                                    {
-                                        type: 'empty',
-                                        prompt: 'Please enter a password!'
-                                    }
-                                ]
-                            },
-                            emptyPassword2:{
-                                identifier: 'passwordConfirm',
-                                rules:[
-                                    {
-                                        type: 'empty',
-                                        prompt: 'Please enter a password!'
-                                    }
-                                ]
-                            },
                             matchPassword: {
                                 identifier  : 'password',
                                 rules: [
@@ -163,6 +145,24 @@ include("includes/dbconnect.php");
                                     {
                                         type   : 'match[password]',
                                         prompt : 'Please ensure your passwords match!'
+                                    }
+                                ]
+                            },
+                            emptyPassword:{
+                                identifier: 'password',
+                                rules:[
+                                    {
+                                        type: 'empty',
+                                        prompt: 'Please enter a password!'
+                                    }
+                                ]
+                            },
+                            emptyPassword2:{
+                                identifier: 'passwordConfirm',
+                                rules:[
+                                    {
+                                        type: 'empty',
+                                        prompt: 'Please enter a password!'
                                     }
                                 ]
                             },
