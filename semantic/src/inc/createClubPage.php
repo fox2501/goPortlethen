@@ -79,7 +79,7 @@ if (isset($_SESSION['loggedIn'])) {
                 </div>
                 <div class="field">
                     <label>Phone Number</label>
-                    <input type="text" name="phoneNumber" maxlength="11" placeholder="Phone Number">
+                    <input type="number" name="phoneNumber" maxlength="11" placeholder="Phone Number">
                 </div>
                 <div class="field">
                     <label>Website URL</label>
@@ -184,6 +184,24 @@ if (isset($_SESSION['loggedIn'])) {
                                         }
                                     ]
                                 },
+                                clubDescription: {
+                                    identifier: 'clubDescription',
+                                    rules: [
+                                        {
+                                            type: 'empty',
+                                            prompt: 'Please select a club category'
+                                        }
+                                    ]
+                                },
+                            number: {
+                                identifier  : 'phoneNumber',
+                                rules: [
+                                    {
+                                        type   : 'number',
+                                        prompt : 'Please enter a valid phone number'
+                                    }
+                                ]
+                            },
                                 url: {
                                     identifier  : 'websiteURL',
                                     rules: [
