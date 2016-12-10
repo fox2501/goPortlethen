@@ -14,7 +14,7 @@ while($row = mysqli_fetch_assoc($result)){
 
 $sql = "DELETE FROM useraccess WHERE userAccessID = '?'";
 $pdo->prepare($sql)->execute($userAccessID);
-
+usleep(10000);
 $sql = "DELETE FROM users WHERE userID = '?'";
 $pdo->prepare($sql)->execute($userID);
 
