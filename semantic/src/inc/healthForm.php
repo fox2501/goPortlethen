@@ -48,13 +48,15 @@ if (isset($_SESSION['loggedIn'])) {
 
             <div class="ui error message"></div>
 
-            <div class="field">
+            <div class="required field">
                 <label>Title</label>
-                <input type="text" name="title" placeholder="Enter the title of your post">
+                <div class="field">
+                    <input type="text" name="title" placeholder="Enter the title of your post">>
+                </div>
             </div>
 
 
-            <div class="field">
+            <div class="required field">
                 <label>Content</label>
                 <textarea rows="8" type="text" name="mainText" placeholder="Enter the content of your post"></textarea>
             </div>
@@ -74,7 +76,7 @@ if (isset($_SESSION['loggedIn'])) {
                     $('.ui.form').form({
                         fields: {
                             Title: {
-                                identifier: 'Title',
+                                identifier: 'title',
                                 rules: [
                                     {
                                         type: 'empty',
