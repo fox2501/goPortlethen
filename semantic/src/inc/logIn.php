@@ -20,6 +20,7 @@ include("includes/header.php");
             </div>
             <form action="includes/checkLogin.php" class="ui large form" method="post">
                 <div class="ui stacked segment">
+                    <div class="ui error message"></div>
                     <?php
                     if (strpos($url, 'error=loginerror') !== false) {
                         echo "
