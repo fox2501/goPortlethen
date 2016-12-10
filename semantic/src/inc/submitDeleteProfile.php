@@ -11,12 +11,12 @@ $stmt = $pdo->prepare($sql);
 $stmt->execute($userID);
 
 $result = $stmt->fetch(PDO::FETCH_ASSOC);
-
+$userAccessID['userAccessID'];
 echo $userID."<br>";
-echo $result;
+echo $userAccessID;
 
-$sql = "DELETE FROM useraccess WHERE userAccessID = '?'";
-$execute = $pdo->prepare($sql)->execute($userAccessID);
+//$sql = "DELETE FROM useraccess WHERE userAccessID = '?'";
+//$execute = $pdo->prepare($sql)->execute($userAccessID);
 //
 //if ($execute)
 //{
