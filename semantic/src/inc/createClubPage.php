@@ -45,7 +45,7 @@ if (isset($_SESSION['loggedIn'])) {
             </div>
             <div class="ui attached message">
                 <div class="header">
-                    Welcome to goPortlet`hen!
+                    Welcome to goPortlethen!
                 </div>
                 <p>Please fill out the form below to create your club page</p>
             </div>
