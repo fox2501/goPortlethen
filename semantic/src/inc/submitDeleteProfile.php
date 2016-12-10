@@ -12,7 +12,7 @@ while($row = mysqli_fetch_assoc($result)){
     $userAccessID = $row['userAccessID'];
 }
 
-$sql = "DELETE FROM useraccess WHERE userID = '?'";
+$sql = "DELETE FROM useraccess WHERE userAccessID = '?'";
 $pdo->prepare($sql)->execute($userAccessID);
 
 $sql = "DELETE FROM users WHERE userID = '?'";
