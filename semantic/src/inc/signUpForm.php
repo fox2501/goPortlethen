@@ -14,7 +14,7 @@ $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
     <form class="ui form" action="includes/submitSignUp.php" method="post">
         <h2 class="ui center aligned blue header"></h2>
         <div class="content">
-            <h2 class="ui center aligned blue header">Sign up </h2>
+            <h2 class="ui center aligned blue header">Sign Up </h2>
         </div>
         <div class="ui segment">
             <div class="ui error message"></div>
