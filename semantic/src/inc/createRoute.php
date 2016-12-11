@@ -59,25 +59,27 @@ include("includes/header.php");
         var marker;
 
         function initMap() {
-            var myLatLng = myCenter;
 
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 4,
                 center: myCenter
             });
 
-            var marker = new google.maps.Marker({
+            marker = new google.maps.Marker({
                 position: myCenter,
                 map: map,
                 draggable:true
             });
+
             var infowindow = new google.maps.InfoWindow({
                 content: '<p>Marker Location:' + marker.getPosition() + '</p>'
             });
+
             map.setZoom(5);
             google.maps.event.addListener(marker, 'click', function() {
                 infowindow.open(map, marker);
             });
+
             google.maps.event.addDomListener(window, 'load', initialize);
         }
     </script>
