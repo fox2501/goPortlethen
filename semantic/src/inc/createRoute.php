@@ -58,14 +58,14 @@ include("includes/header.php");
         var myCenter=new google.maps.LatLng(49.716,-2.196);
         var marker;
 
-        function initialize() {
+        function initMap() {
             var mapProp = {
                 center:myCenter,
                 zoom:13,
                 mapTypeId:google.maps.MapTypeId.HYBRID
             };
 
-            var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+            var map = new google.maps.Map(document.getElementById("map"),mapProp);
 
             marker = new google.maps.Marker({
                 position:myCenter,
@@ -79,7 +79,7 @@ include("includes/header.php");
             });
         }
 
-        google.maps.event.addDomListener(window, 'load', initialize);
+        google.maps.event.addDomListener(window, 'load', initMap);
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsaPQGyO2SHJumHMC2k8RTYfy3z7OXIk&callback=initMap">
     </script>
