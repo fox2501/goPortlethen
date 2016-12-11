@@ -30,7 +30,7 @@ $row = $stmt -> fetch(PDO::FETCH_ASSOC);
     <form method ="post" action ="deleteMap.php">
         <button class="ui red right floated button" type ="submit" name = "deleteMap" value = "<?php echo $locationID ?>">Delete Map</button>
     </form>
-    <div id="map" style="width: 100%; height: 350px"></div>
+    <div id="map" style="width: 100%; height: 350px; padding-top: 10px;"></div>
     <div class='ui raised segment'>
         <h3 class='ui header' id="current">Drag the marker to select a position on the map.</h3>
         <script>
@@ -39,7 +39,7 @@ $row = $stmt -> fetch(PDO::FETCH_ASSOC);
                 var myCenter = new google.maps.LatLng(57.061681, -2.129468);
 
                 var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 12,
+                    zoom: 13,
                     center: myLatLng
                 });
 
