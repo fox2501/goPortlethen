@@ -1,11 +1,12 @@
 <?php
 session_start();
-include ( "includes/dbconnect.php");
+include ("includes/dbconnect.php");
 include("includes/header.php");
 ?>
 <!DOCTYPE html>
 <html>
 <head>
+    <title></title>
 </head>
 <body>
 <h1 align="center">Submit Map Content</h1>
@@ -14,13 +15,15 @@ include("includes/header.php");
 </div>
 <div class="ui container">
     <div id="map" style="width: 100%; height: 350px"></div>
-    <div id="current">Nothing yet...</div>
+    <div id="current">
+        Nothing yet...
+    </div>
     <script>
         function initMap() {
             var latlng = new google.maps.LatLng(49.716, -2.196);
 
             var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 1,
+                zoom: 5,
                 center: latlng,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             });
@@ -31,11 +34,11 @@ include("includes/header.php");
             });
 
             google.maps.event.addListener(myMarker, 'dragend', function(evt){
-                document.getElementById('current').innerHTML = '<p>Marker dropped: Current Lat: ' + evt.latLng.lat().toFixed(3) + ' Current Lng: ' + evt.latLng.lng().toFixed(3) + '</p>';
+                document.getElementById('current').innerHTML = '<p>Marker dropped: Current Lat: ' + evt.latLng.lat().toFixed(3) + ' Current Lng: ' + evt.latLng.lng().toFixed(3) + '<\/p>';
             });
 
             google.maps.event.addListener(myMarker, 'dragstart', function(evt){
-                document.getElementById('current').innerHTML = '<p>Currently dragging marker...</p>';
+                document.getElementById('current').innerHTML = '<p>Currently dragging marker...<\/p>';
             });
             map.setCenter(myMarker.position);
             myMarker.setMap(map);
