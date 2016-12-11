@@ -45,7 +45,7 @@ $('#dropdown')
 ;
 </script>
 <body>
-    <form method =\"post\" action =\"deleteHealth.php\">
+    <form method =\"post\" action =\"deleteClub.php\">
         <button class=\"ui red right floated button\" type =\"submit\" name = \"clubID\" value = \"<?php echo $clubID; ?>\">Delete Club</button>
     </form>
 	<div class='ui container'>
