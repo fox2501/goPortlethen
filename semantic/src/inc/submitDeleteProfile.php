@@ -9,7 +9,7 @@ $userID = $_SESSION['loggedIn'];
 
 //FEE REQUIRED DOES NOT WORK
 
-$sql = "SELECT userAccessID from useraccess A, users B WHERE A.userName = B.userName AND B.userID = '?'";
+$sql = "SELECT userAccessID from useraccess , users  WHERE useraccess.userName = users.userName AND users.userID = ?";
 $stmt = $pdo->prepare($sql);
 $stmt->execute([$userID]);
 
