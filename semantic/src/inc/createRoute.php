@@ -30,7 +30,7 @@ include("includes/header.php");
                 content: '<p>Marker Location:' + marker.getPosition() + '</p>'
             });
 
-            map.setZoom(5);
+            //map.setZoom(5);
             google.maps.event.addListener(marker, 'click', function() {
                 infowindow.open(map, marker);
             });
