@@ -15,7 +15,7 @@ $clubID =$_POST["clubID"];
 <div class='ui center aligned container'>
     <div class='ui middle aligned center aligned grid'>
         <div class='ui ten wide column'>
-            <form action="submitHealthDelete.php" class="ui large form" method="post">
+            <form action="submitClubDelete.php" class="ui large form" method="post">
                 <div class='ui negative message'>
                     <h1 class='header'>ARE YOU SURE YOU WANT TO DELETE THIS CLUB?<input type="hidden" name="deleteClub" value='<?php echo $clubID; ?>'></h1>
                 </div>
