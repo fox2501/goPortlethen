@@ -686,6 +686,7 @@ input::selection {
 *******************************/
 
 .ui.button {
+    display: block;
     cursor: pointer;
     display: inline-block;
     min-height: 1em;

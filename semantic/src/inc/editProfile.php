@@ -8,7 +8,9 @@ if (isset($_SESSION['loggedIn'])) {
 <head>
     <meta charset="UTF-8">
     <title>goPortlethen</title>
-</head><?php
+</head>
+
+<?php
 include("includes/header.php");
 $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 $userID = $_SESSION['loggedIn'];
