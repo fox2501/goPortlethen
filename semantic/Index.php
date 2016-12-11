@@ -1,8 +1,22 @@
 <?php
 session_start();
 include("/src/inc/includes/header.php");
+$url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+
 ?>
 <body>
+<?php
+if(strpos($url, 'newUser') !== false){
+    echo "
+        <div class='ui warning message'>
+      <i class='close icon'></i>
+      <div class='header'>
+        You have successfully signed up. Please login!
+      </div>
+    </div>
+    ";
+}
+?>
 <div class = "ui container">
     <div class = "ui one column grid">
         <div class = "row">

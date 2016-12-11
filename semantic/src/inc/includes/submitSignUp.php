@@ -45,6 +45,6 @@ else {
     $sql = "INSERT INTO useraccess (accessID, userName) VALUES ('$accessLevel', '$username')";
     $result = mysqli_query($db, $sql);
 
-    header("location: /semantic/");
+    header("location: /semantic/?newUser");
 }
 ?>
