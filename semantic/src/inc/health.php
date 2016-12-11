@@ -87,7 +87,7 @@ if (isset($_SESSION['loggedIn'])) {
                         </div>
                         <div class='seven wide column'>
                             <p id='mainText' style='text - align:justify'>$mainText<br></p>
-                            <p id='author'>By $firstname $lastName<br></p>
+                            <p id='author'>By $userName<br></p>
                         </div>
                         <div class='two wide column'>
                             <form action='editHealthContent.php' class='ui form' method='post'>
@@ -113,7 +113,7 @@ if (isset($_SESSION['loggedIn'])) {
                         </div>
                         <div class='eight wide column'>
                             <p id='mainText' style='text - align:justify'>$mainText<br></p>
-                            <p id='author'>By $firstname $lastName<br></p>
+                            <p id='author'>By $userName<br></p>
                         </div>
                     </div>
                 </div>
