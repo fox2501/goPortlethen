@@ -22,7 +22,7 @@ include("includes/header.php");
                 var latlng = new google.maps.LatLng(57.061681, -2.129468);
 
                 var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 12,
+                    zoom: 13,
                     center: latlng
                 });
 

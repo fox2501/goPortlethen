@@ -33,7 +33,7 @@ include("includes/header.php");
         <?php
         if ($canAccess == 1 || $canAccess == 0) {
             echo "        <div class='three wide column'>
-			                        <a href = 'createRoute.php'>
+			                        <a href = 'createMap.php'>
 			                            <button class='ui left floating positive fluid button'>Create Route</button>
 			                        </a>
 			                    </div>";
