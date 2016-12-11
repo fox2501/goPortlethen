@@ -34,7 +34,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 <body>
 <!-- Form -->
 <form>
-    <button class="ui red right floated button" formaction="deleteHealth.php">Delete Health Content</button>
+    <button class="ui red right floated button" formaction="deleteHealth.php">Delete Health Content<input type="hidden" name="healthID" value='<?php echo $healthContentID; ?>'></button>
 </form>
 <div class="ui container">
     <header class="ui huge blue header">
