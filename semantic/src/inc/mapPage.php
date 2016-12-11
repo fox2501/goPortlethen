@@ -41,7 +41,7 @@ include("includes/header.php");
     <div class='ui grid'>
         <div class='fourteen wide column'></div>
         <div class='two wide column'>
-            <form action='editMap.php' class='ui form' method='POST'>
+            <form action='editMap.php' class='ui form' method='post'>
                 <button class='ui right floated button' onclick='/semantic/src/inc/editMap.php' type='submit'><input name='editMap' type='hidden' value='<?php echo $locationID ?>'> Edit</button>
             </form>
         </div>
