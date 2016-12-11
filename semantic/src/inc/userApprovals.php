@@ -26,20 +26,20 @@ if (isset($_SESSION['loggedIn'])) {
 
     if ($accessLevel == 1) {
         echo "HELLO YOU ARE SITE ADMIN";
-        $sql_query = "
+        $sql = "
     SELECT U.userName, U.firstName, U.surname, AL.description 
     FROM users U, useraccess UA, accesslevel AL
     WHERE U.userName = UA.userName 
     AND UA.accessID = AL.accessID
     AND U.userApproved = ?;";
-     $stmt = $pdo -> prepare($sql);
-     $stmt -> execute([0]);
-     WHILE($row = $stmt -> fetch(PDO::FETCH_ASSOC)){
-         $userName = $row['userName'];
-         $firstName = $row['firstName'];
-         $surname = $row['surname'];
-         $accessRequired = $row['description'];
-         echo "
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([0]);
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        $userName = $row['userName'];
+        $firstName = $row['firstName'];
+        $surname = $row['surname'];
+        $accessRequired = $row['description'];
+        echo "
          <div class = 'row'>
             <div class = 'ui container'>
                 <div class = 'ui raised segment'>
@@ -75,7 +75,6 @@ if (isset($_SESSION['loggedIn'])) {
 		</div>
                             ";
 
-        }
     }
 }
 ?>
