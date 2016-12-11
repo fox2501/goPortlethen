@@ -30,7 +30,7 @@ include("includes/header.php");
 <div class='ui container'>
     <div class='ui grid'>
         <?php
-        if ($canAccess == 1 || $canAccess == 0) {
+        if ($canAccess == 1) {
             echo "        <div class='three wide column'>
 			                        <a href = 'createMap.php'>
 			                            <button class='ui left floating positive fluid button'>Create Route</button>
