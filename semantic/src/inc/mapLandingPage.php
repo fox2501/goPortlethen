@@ -38,9 +38,9 @@ include("includes/header.php");
 			                    </div>";
         }
         ?><?php
-        $sql = "SELECT locationID, locationName, caption, locationType FROM locations";
+        $sql = "SELECT locationID, locationName, caption, locationType FROM locations WHERE approvalStatus = ?";
         $stmt = $pdo -> prepare($sql);
-        $stmt -> execute();
+        $stmt -> execute([1]);
         while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
             $locationName = $row['locationName'];
             $caption = $row['caption'];
