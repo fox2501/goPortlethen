@@ -16,6 +16,6 @@ $sql = "UPDATE locations SET locationName = ?, locationType = ?, latitude = ?, l
 $stmt = $pdo -> prepare($sql);
 $stmt -> execute([$title, $mapType, $lat, $lng, $mapDesc, $locationID]);
 
-header("Location: ../mapLandingPage.php");
+header("Location: /semantic/src/inc/mapLandingPage.php");
 
 ?>

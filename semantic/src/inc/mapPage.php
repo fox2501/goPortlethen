@@ -55,7 +55,7 @@ include("includes/header.php");
                     var myLatLng = new google.maps.LatLng(57.061681, -2.129468);
 
                     var map = new google.maps.Map(document.getElementById('map'), {
-                        zoom: 12,
+                        zoom: 13,
                         center: myLatLng
                     });
 
@@ -63,8 +63,7 @@ include("includes/header.php");
                     var marker = new google.maps.Marker({
                         position: myLatLng,
                         map: map,
-                        title: '<?php echo $locationName ?>',
-                        draggable:true
+                        title: '<?php echo $locationName ?>'
                     });
 
                     var infowindow = new google.maps.InfoWindow({
