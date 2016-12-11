@@ -11,7 +11,7 @@ if (isset($_SESSION['loggedIn'])) {
     $row = $stmt -> fetch(PDO::FETCH_ASSOC);
     $accessID = $row["accessID"];
 
-    if ($accessID == '1' || $accessID == '3') {
+    if ($accessID == '1' || $accessID == '3' || $accessID == '4') {
         $canAccess = '1';
     } else {
         $canAccess = '0';
