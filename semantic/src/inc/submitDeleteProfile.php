@@ -6,10 +6,14 @@ $userID = $_SESSION['loggedIn'];
 
 //FEE REQUIRED DOES NOT WORK
 
-$sql = "SELECT userAccessID from useraccess A, users B WHERE A.userName = B.userName AND B.userID = '?'";
-$stmt = $pdo->prepare($sql)->execute([$userID]);
+$sql = "SELECT userAccessID from useraccess A, users B WHERE A.userName = B.userName AND B.userID = '$userID'";
+//$stmt = $pdo->prepare($sql)->execute([$userID]);
+$result = mysqli_query($db, $sql);
+while($row = mysqli_fetch_assoc($result)){
+    $userAccessID = $row['userAccessID'];
+}
 
-$result = $stmt->fetch(PDO::FETCH_ASSOC);
+//$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 echo $result;
 //echo $userID."<br>";
