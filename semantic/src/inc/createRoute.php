@@ -38,7 +38,6 @@ include("includes/header.php");
                 });
 
                 map.setCenter(myMarker.position);
-                map.setZoom(5);
                 myMarker.setMap(map);
 
             }
