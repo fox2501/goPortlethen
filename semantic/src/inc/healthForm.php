@@ -80,7 +80,7 @@ if (isset($_SESSION['loggedIn'])) {
                                 rules: [
                                     {
                                         type: 'empty',
-                                        prompt: 'Please enter a Title'
+                                        prompt: 'Please enter a title'
                                     }
                                 ]
                             },
@@ -90,6 +90,15 @@ if (isset($_SESSION['loggedIn'])) {
                                     {
                                         type: 'empty',
                                         prompt: 'Please enter text to populate the main text section'
+                                    }
+                                ]
+                            },
+                            photo: {
+                                identifier: 'healthPhoto',
+                                rules: [
+                                    {
+                                        type: 'empty',
+                                        prompt: 'Please choose a photo for the post'
                                     }
                                 ]
                             }

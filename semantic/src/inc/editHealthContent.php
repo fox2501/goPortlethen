@@ -60,20 +60,12 @@ while ($row = mysqli_fetch_assoc($result)) {
         </div><button class="ui fluid large green submit button" type="submit">Submit</button>
     </form>
 </div>
-<script type="text/javascript">
-    function validateForm() {
-        var x = document.forms["healthForm"] ["title"].value;
-        var y = document.forms["healthForm"] ["mainText"].value;
 
-        if (x == "") {
-            alert("Please enter a title.")
-        }
 
-        else if (y == "") {
-            alert("Please enter some content.")
-        }
-    }
-</script><!-- Footer -->
+
+
+
+<!-- Footer -->
 <?php
 include("includes/footer.php");
 } else {
