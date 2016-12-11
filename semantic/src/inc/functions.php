@@ -18,9 +18,9 @@ if(isset($_POST['func']) && !empty($_POST['func'])){
 /*
  * Get calendar full HTML
  */
-function getCalender($year = '',$month = '',$db)
+function getCalender($year = '',$month = '')
 {
-
+    global $db;
     $dateYear = ($year != '')?$year:date("Y");
     $dateMonth = ($month != '')?$month:date("m");
     $date = $dateYear.'-'.$dateMonth.'-01';
@@ -181,7 +181,8 @@ function getYearList($selected = ''){
 /*
  * Get events by date
  */
-function getEvents($date = '',$db){
+function getEvents($date = ''){
+    global $db;
     //Include db configuration file
     include 'includes/dbconnect.php';
     $eventListHTML = '';
