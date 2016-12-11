@@ -33,13 +33,17 @@ while ($row = mysqli_fetch_assoc($result)) {
 <? include("includes/header.php"); ?>
 <body>
 <!-- Form -->
-<form method ="post" action ="deleteHealth.php">
-    <button class="ui red right floated button" type ="submit" name = "healthID" value = "<?php echo $healthContentID; ?>">Delete Health Content</button>
-</form>
+
 <div class="ui container">
-    <header class="ui huge blue header">
+    <h1 align="center">
         Edit Health & Wellbeing Content
-    </header>
+    </h1>
+    <div class="ui horizontal section divider">
+        <p>Keeping Portlethen Healthy</p>
+
+    <form method ="post" action ="deleteHealth.php">
+        <button class="ui red right floated button" style="float: right" type ="submit" name = "healthID" value = "<?php echo $healthContentID; ?>">Delete Health Content</button>
+    </form>
 
     <form action="submitEditHealth.php" class="ui form" enctype="multipart/form-data" method="post">
         <div class="field">
