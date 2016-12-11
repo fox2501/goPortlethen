@@ -73,6 +73,9 @@ $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
             </div>
             <div class="field">
                 <label>Access Requested</label> <select class="ui select dropdown" name="accessRequested">
+                    <option value="emptyDropdown">
+
+                    </option>
                     <option value="contributor">
                         Contributor
                     </option>
@@ -110,6 +113,15 @@ $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
                                 {
                                     type: 'empty',
                                     prompt: 'Please enter your surname.'
+                                }
+                            ]
+                        },
+                        emptyDropdown: {
+                            identifier: 'emptyDropdown',
+                            rules: [
+                                {
+                                    type: 'empty',
+                                    prompt: 'Please select a value!'
                                 }
                             ]
                         },
