@@ -79,7 +79,7 @@ include("dbconnect.php");
                                 </a>
                             </div>
                             <div class = 'item'>
-                                <a  href = '/semantic/src/inc/approvals.php'>
+                                <a  href = '/semantic/src/inc/healthApprovals.php'>
                                     <p style = 'color: black;'>Approvals</p>
                                 </a>
                             </div>

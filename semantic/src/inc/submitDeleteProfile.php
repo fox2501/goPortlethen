@@ -12,7 +12,7 @@ $stmt->execute($userID);
 
 $result = $stmt->fetch(PDO::FETCH_ASSOC);
 $userAccessID['userAccessID'];
-echo $userID."<br>";
+//echo $userID."<br>";
 echo $userAccessID;
 
 //$sql = "DELETE FROM useraccess WHERE userAccessID = '?'";

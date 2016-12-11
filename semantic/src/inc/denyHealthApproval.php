@@ -12,6 +12,6 @@ $healthContentID = $_POST['denyHealth'];
 $sql = "DELETE FROM healthcontent WHERE healthContentID = $healthContentID";
 $result = mysqli_query($db, $sql);
 
-header("Location: /semantic/src/inc/approvals.php");
+header("Location: /semantic/src/inc/healthApprovals.php");
 
 ?>
