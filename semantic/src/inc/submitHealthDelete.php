@@ -5,11 +5,11 @@ $healthID =$_POST["deleteHealth"];
 
 
 $sql = "DELETE FROM healthContent WHERE healthContentID = ?";
-$stmt = $pdo->prepare($sql);
-$stmt -> execute([$healthID]);
+$stmt = $pdo->prepare($sql)->execute([$healthID]);
 
-session_destroy();
+echo "$healthID";
 
-header('Location: /semantic/?accountDeleted');
+
+//header('Location: /semantic/');
 
 ?>

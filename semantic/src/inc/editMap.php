@@ -32,7 +32,7 @@ $row = $stmt -> fetch(PDO::FETCH_ASSOC);
         <h3 class='ui header' id="current">Drag the marker to select a position on the map.</h3>
         <script>
             function initialize() {
-                var myLatLng = new google.maps.LatLng(<?php echo $lat ?>, <?php echo $long ?>);
+                var myLatLng = new google.maps.LatLng(<?php echo $latitude ?>, <?php echo $longitude ?>);
                 var myCenter = new google.maps.LatLng(57.061681, -2.129468);
 
                 var map = new google.maps.Map(document.getElementById('map'), {
@@ -80,11 +80,11 @@ $row = $stmt -> fetch(PDO::FETCH_ASSOC);
             </div>
             <div class="field">
                 <label>Latitude</label>
-                <input name="lat" placeholder="Enter the location longitude." id = "lat" type="text">
+                <input name="lat" placeholder="Enter the location longitude." id = "lat" type="text" value = "<? echo $latitude ?>">
             </div>
             <div class="field">
                 <label>Longitude</label>
-                <input name="long" placeholder="Enter the location latitude." id = "long" type="text">
+                <input name="long" placeholder="Enter the location latitude." id = "long" type="text" value = "<? echo $longitude ?>">
             </div>
             <div class="field">
                 <label>Description</label>
