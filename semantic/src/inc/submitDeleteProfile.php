@@ -16,13 +16,16 @@ $stmt->execute([$userID]);
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
 $userAccessID = $row['userAccessID'];
 
-$sql = "DELETE FROM useraccess WHERE userAccessID = '?'";
-$stmt = $pdo->prepare($sql);
-$stmt -> execute([$userAccessID]);
+echo $userAccessID;
+echo $userID;
 
-$sql = "DELETE FROM users WHERE userID = '?'";
-$stmt = $pdo->prepare($sql);
-$stmt->execute([$userID]);
-header('Location: /semantic/');
+//$sql = "DELETE FROM useraccess WHERE userAccessID = '?'";
+//$stmt = $pdo->prepare($sql);
+//$stmt -> execute([$userAccessID]);
+//
+//$sql = "DELETE FROM users WHERE userID = '?'";
+//$stmt = $pdo->prepare($sql);
+//$stmt->execute([$userID]);
+//header('Location: /semantic/?accountDeleted');
 
 ?>
