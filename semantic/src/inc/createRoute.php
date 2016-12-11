@@ -18,7 +18,7 @@ include("includes/header.php");
 
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 4,
-                center: myCenter
+                center: {lat: 57.061681, lng: -2.129468}
             });
 
             var marker = new google.maps.Marker({
@@ -29,8 +29,7 @@ include("includes/header.php");
             var infowindow = new google.maps.InfoWindow({
                 content: '<p>Marker Location:' + marker.getPosition() + '</p>'
             });
-
-            //map.setZoom(5);
+            map.setZoom(5);
             google.maps.event.addListener(marker, 'click', function() {
                 infowindow.open(map, marker);
             });
