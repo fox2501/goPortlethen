@@ -20,12 +20,9 @@ if($dehashedpass == 0){
     exit();
 }
 if($userApproved == 0){
-    header("Location:: ../login.php?error=requireApproval");
+    header("Location: ../login.php?error=requireApproval");
     exit();
 }
-
-
-
     else{
     $sql = "SELECT * FROM users where userName = ? AND password = ?";
     $stmt = $pdo -> prepare($sql);
