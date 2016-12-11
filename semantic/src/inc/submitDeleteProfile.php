@@ -12,6 +12,9 @@ $stmt->execute($userID);
 
 $result = $stmt->fetch(PDO::FETCH_ASSOC);
 $userAccessID['userAccessID'];
+while($row = $stmt -> fetch(PDO::FETCH_ASSOC)){
+    $userAccessID = $row['userAccessID'];
+}
 //echo $userID."<br>";
 echo $userAccessID;
 
