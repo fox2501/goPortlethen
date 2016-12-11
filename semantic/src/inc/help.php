@@ -107,6 +107,7 @@ session_start();
             </div>
         </div>
     </div>
+        </div>
     <div class="actions">
         <div class="ui black deny button">
             Cancel
