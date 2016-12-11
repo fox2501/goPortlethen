@@ -49,11 +49,16 @@ include("includes/header.php");
             <div id="map" style="width: 100%; height: 350px"></div>
             <script>
                 function initMap() {
-                    var myLatLng = new google.maps.LatLng(57.061681, -2.129468);
+                    //var myLatLng = new google.maps.LatLng(57.061681, -2.129468);
 
+//                    var map = new google.maps.Map(document.getElementById('map'), {
+//                        zoom: 4,
+//                        center: myLatLng
+//                    });
+                    var uluru = {lat: -25.363, lng: 131.044};
                     var map = new google.maps.Map(document.getElementById('map'), {
                         zoom: 4,
-                        center: myLatLng
+                        center: uluru
                     });
 
 //                    var marker = new google.maps.Marker({
@@ -72,11 +77,11 @@ include("includes/header.php");
 //                    });
 
                 }
-                google.maps.event.addDomListener(window, 'load', initMap);
+                //google.maps.event.addDomListener(window, 'load', initMap);
             </script>
-<!--            <script async defer-->
-<!--                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsaPQGyO2SHJumHMC2k8RTYfy3z7OXIk&callback=initMap">-->
-<!--            </script>-->
+            <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsaPQGyO2SHJumHMC2k8RTYfy3z7OXIk&callback=initMap">
+            </script>
 
         </div>
     </div>
