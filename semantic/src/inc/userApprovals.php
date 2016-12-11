@@ -34,12 +34,12 @@ if (isset($_SESSION['loggedIn'])) {
     AND U.userApproved = ?;";
         $stmt = $pdo->prepare($sql);
         $stmt->execute([0]);
-        $row = $stmt->fetch(PDO::FETCH_ASSOC);
-        $userName = $row['userName'];
-        $firstName = $row['firstName'];
-        $surname = $row['surname'];
-        $accessRequired = $row['description'];
-        echo "
+        while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $userName = $row['userName'];
+            $firstName = $row['firstName'];
+            $surname = $row['surname'];
+            $accessRequired = $row['description'];
+            echo "
          <div class = 'row'>
             <div class = 'ui container'>
                 <div class = 'ui raised segment'>
@@ -74,7 +74,7 @@ if (isset($_SESSION['loggedIn'])) {
 		<div class='ui hidden section divider'></div>
 		</div>
                             ";
-
+        }
     }
 }
 ?>
