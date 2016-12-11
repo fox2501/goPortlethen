@@ -30,23 +30,23 @@ include("dbconnect.php");
 </head>
 <body>
 <div class="ui blue inverted secondary pointing stackable menu">
-    <a class="ui header item" href="/semantic">
+    <a class="header item" href="/semantic">
         <i class="home icon"></i>
         goPortlethen
     </a>
-    <a class="ui item" href="/semantic/src/inc/health.php">
+    <a class="item" href="/semantic/src/inc/health.php">
         <i class="heartbeat icon"></i>
         Health & Wellbeing
     </a>
-    <a class="ui item" href="/semantic/src/inc/clubLandingPage.php">
+    <a class="item" href="/semantic/src/inc/clubLandingPage.php">
         <i class="users icon"></i>
         Clubs
     </a>
-    <a class="ui item" href="/semantic/src/inc/mapLandingPage.php">
+    <a class="item" href="/semantic/src/inc/mapLandingPage.php">
         <i class="map icon"></i>
         Maps
     </a>
-    <a class="ui item" href="/semantic/src/inc/help.php">
+    <a class="item" href="/semantic/src/inc/help.php">
         <i class="help circle icon"></i>
         Help
     </a>
@@ -73,17 +73,17 @@ include("dbconnect.php");
                                 <i class='dropdown icon'></i>
                             </a>
                         <div class = 'ui menu'>
-                            <div class = 'ui item'>
+                            <div class = 'item'>
                                 <a class = 'header' href = '/semantic/src/inc/profile.php'>
                                     <p style = 'color: black;'>My Profile</p>
                                 </a>
                             </div>
-                            <div class = 'ui item'>
+                            <div class = 'item'>
                                 <a  href = '/semantic/src/inc/healthApprovals.php'>
                                     <p style = 'color: black;'>Health Approvals</p>
                                 </a>
                             </div>
-                            <div class = 'ui item'>
+                            <div class = 'item'>
                                 <a  href = '/semantic/src/inc/userApprovals.php'>
                                     <p style = 'color: black;'>Account Approvals</p>
                                 </a>
@@ -103,7 +103,7 @@ include("dbconnect.php");
                                 <i class='dropdown icon'></i>
                             </a>
                         <div class = 'ui menu'>
-                            <div class = 'ui item'>
+                            <div class = 'item'>
                                 <a class = 'header' href = '/semantic/src/inc/profile.php'>
                                     <p style = 'color: black;'>My Profile</p>
                                 </a>
@@ -123,12 +123,12 @@ include("dbconnect.php");
                                 <i class='dropdown icon'></i>
                             </a>
                         <div class = 'ui menu'>
-                            <div class = 'ui item'>
+                            <div class = 'item'>
                                 <a class = 'header' href = '/semantic/src/inc/profile.php'>
                                     <p style = 'color: black;'>My Profile</p>
                                 </a>
                             </div>
-                            <div class = 'ui item'>
+                            <div class = 'item'>
                                 <a class = 'header' href = '/semantic/src/inc/mySubmissions.php'>
                                     <p style = 'color: black;'>My Health Submissions</p>
                                 </a>
@@ -141,13 +141,13 @@ include("dbconnect.php");
                         ";
             }
         } else {
-            echo "<a class = 'ui item' href = '/semantic/src/inc/signUpForm.php'>
+            echo "<a class = 'item' href = '/semantic/src/inc/signUpForm.php'>
                         <div class = 'ui teal button'>
                             <i class='add user icon'></i>
                                 Sign up
                         </div>
                       </a>
-                      <a class = 'ui item' href = '/semantic/src/inc/logIn.php'>
+                      <a class = 'item' href = '/semantic/src/inc/logIn.php'>
                         <div class = 'ui button'>
                             <i class='sign in icon'></i>
                                 Log In
