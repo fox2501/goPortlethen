@@ -20,9 +20,6 @@ include("includes/header.php");
                 Drag the marker to select a position on the map.
         </h3>
     </div>
-    <div id="current">
-        Nothing yet...
-    </div>
     <script>
         function initMap() {
             var latlng = new google.maps.LatLng(57.061681, -2.129468);
