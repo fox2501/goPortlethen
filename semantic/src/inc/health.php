@@ -80,7 +80,7 @@ if (isset($_SESSION['loggedIn'])) {
                     <div class='ui grid'>
                         <div class='row'>
                             <div class='three wide column'>
-                                <div class='ui small image'><img src='$photoURL'></div>
+                                <div class='ui medium image'><img src='$photoURL'></div>
                             </div>
                             <div class='four wide column'>
                                 <h3 class='ui header' id='title'>$title</h3>
@@ -107,7 +107,7 @@ if (isset($_SESSION['loggedIn'])) {
                 <div class='ui container'>
                     <div class='ui grid'>
                         <div class='four wide column'>
-                            <div class='ui small image'><img src='$photoURL'></div>
+                            <div class='ui medium image'><img src='$photoURL'></div>
                         </div>
                         <div class='four wide column'>
                             <h3 class='ui header' id='title'>$title</h3>
