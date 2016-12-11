@@ -78,7 +78,7 @@ session_start();
     </div>
     <div class = "ui segment">
         <div class="ui form">
-            <div class="four fields">
+            <div class="three fields">
                 <div class="field">
                     <label>First name</label>
                     <input type="text" placeholder="First Name">
@@ -93,7 +93,7 @@ session_start();
                 </div>
                     <div class="field">
                         <label>Text</label>
-                        <textarea> test ladd </textarea>
+                        <textarea></textarea>
                     </div>
             </div>
         </div>
