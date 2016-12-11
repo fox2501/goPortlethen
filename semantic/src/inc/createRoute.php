@@ -58,7 +58,7 @@ include("includes/header.php");
         var myCenter=new google.maps.LatLng(49.716,-2.196);
         var marker;
 
-        function initialize() {
+        function initMap() {
             var mapProp = {
                 center:myCenter,
                 zoom:13,
