@@ -7,7 +7,6 @@ include ("includes/PDOConnect.php");
 include("includes/header.php");
 
 $locationID = $_POST['editMap'];
-echo $locationID;
 
 $sql = "SELECT * FROM locations WHERE locationID = ?";
 $stmt = $pdo -> prepare($sql);
@@ -20,8 +19,9 @@ $row = $stmt -> fetch(PDO::FETCH_ASSOC);
     $caption = $row['caption'];
     $locationName = $row['locationName'];
 
+    echo $longitude;
 ?>
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html>
 <head>
     <title></title>
@@ -92,6 +92,6 @@ $row = $stmt -> fetch(PDO::FETCH_ASSOC);
         </form>
     </div>
 </div>
-<?php include("includes/footer.php"); ?>
+<?php /*include("includes/footer.php"); */?>
 </body>
-</html>
+</html>-->
