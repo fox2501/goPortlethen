@@ -1,5 +1,8 @@
 <?php//Include the event calendar functions file
 include_once('functions.php');
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
