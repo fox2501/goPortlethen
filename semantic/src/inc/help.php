@@ -91,10 +91,12 @@ session_start();
                     <label>Contact Number</label>
                     <input type="text" placeholder="Contact Number">
                 </div>
+                <div class="field"
                     <div class="field">
-                        <label>Text</label>
+                        <label>Enter your question here : </label>
                         <textarea></textarea>
                     </div>
+                </div>
             </div>
         </div>
     </div>
