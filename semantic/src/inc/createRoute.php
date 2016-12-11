@@ -8,6 +8,34 @@ include("includes/header.php");
     Discover Portlethen
 </div>
 <div class="ui container">
+    <div id="map" style="width: 100%; height: 350px"></div>
+    <script>
+        function initMap() {
+            var myLatLng = {lat: 0, lng: 0};
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 4,
+                center: {lat: 0, lng: 0}
+            });
+
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                draggable:true
+            });
+            var infowindow = new google.maps.InfoWindow({
+                content: '<p>Marker Location:' + marker.getPosition() + '</p>'
+            });
+
+            google.maps.event.addListener(marker, 'click', function() {
+                infowindow.open(map, marker);
+            });
+            google.maps.event.addDomListener(window, 'load', initialize);
+        }
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsaPQGyO2SHJumHMC2k8RTYfy3z7OXIk&callback=initMap">
+    </script>
     <form class="ui form" action="submitCreateMap.php" enctype="multipart/form-data" method="POST">
         <div class="field">
             <label>Title</label>
