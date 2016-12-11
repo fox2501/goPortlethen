@@ -22,8 +22,6 @@ include("includes/header.php");
                 var latlng = new google.maps.LatLng(57.061681, -2.129468);
 
                 var map = new google.maps.Map(document.getElementById('map'), {
-                    mapTypeId: google.maps.MapTypeId.ROADMAP,
-                    maxZoom: 6,
                     zoom: 5,
                     center: latlng
 
@@ -40,11 +38,6 @@ include("includes/header.php");
                     document.getElementById('long').value = evt.latLng.lng().toFixed(3).toString();
                 });
 
-
-//                google.maps.event.addListener(myMarker, 'dragstart', function(evt){
-//                    //document.getElementById('current').innerHTML = '<p>Currently dragging marker...<\/p>';
-//                    document.getElementById('long').value = evt.latLng.long().toFixed(3).toString();
-//                });
                 map.setCenter(myMarker.position);
                 map.setZoom(5);
                 myMarker.setMap(map);
