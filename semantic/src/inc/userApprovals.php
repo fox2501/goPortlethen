@@ -25,8 +25,8 @@ if (isset($_SESSION['loggedIn'])) {
         $sql_query = "
     SELECT U.userName, U.firstName, U.surname, AL.description 
     FROM users U, useraccess UA, accesslevel AL
-    WHERE A.userName = B.userName 
-    AND B.accessID = C.accessID
+    WHERE U.userName = UA.userName 
+    AND UA.accessID = AL.accessID
     AND U.userApproved = 0;";
      $stmt = $pdo -> prepare($sql);
      $stmt -> execute();
