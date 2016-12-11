@@ -25,7 +25,6 @@ if (isset($_SESSION['loggedIn'])) {
     $accessLevel = $row['accessID'];
 
     if ($accessLevel == 1) {
-        echo "HELLO YOU ARE SITE ADMIN";
         $sql = "
     SELECT U.userName, U.firstName, U.surname, AL.description 
     FROM users U, useraccess UA, accesslevel AL
@@ -44,7 +43,7 @@ if (isset($_SESSION['loggedIn'])) {
             <div class = 'ui container'>
                 <div class = 'ui raised segment'>
                  <div class = 'ui grid'>
-                    <div class = 'eight wide column'>
+                    <div class = 'twelve wide column'>
                         <div class = 'row'>
                             <h3 class = 'ui header' id = 'userName'>Username: $userName</h3>
                         </div>
