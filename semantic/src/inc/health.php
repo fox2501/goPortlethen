@@ -131,7 +131,7 @@ if (isset($_SESSION['loggedIn'])) {
 
 
             <?php
-                if ($canAccess == '1') {
+                if ($canAccess == '1' || $canAccess == '4') {
 
                echo "
                 <button class=\"ui green submit button\" ><a href = \"https://tockify.com/tkf2/submitEvent/42648d506ec74f769ce92685c0fe921e\"
