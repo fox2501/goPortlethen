@@ -55,7 +55,7 @@ $row = $stmt -> fetch(PDO::FETCH_ASSOC);
             }
         </script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsaPQGyO2SHJumHMC2k8RTYfy3z7OXIk&callback=initialize"></script>
-        <form action="submitCreateMap.php" class="ui form" enctype="multipart/form-data" method="post">
+        <form action="submitEditMap.php" class="ui form" enctype="multipart/form-data" method="post">
             <div class="field">
                 <label>Title</label> <input name="title" placeholder="Enter the title of your route." type="text" value = "<?php echo $locationName ?>">
             </div>
@@ -88,7 +88,11 @@ $row = $stmt -> fetch(PDO::FETCH_ASSOC);
             <div class="field">
                 <label>Description</label>
                 <textarea name="mapDesc" placeholder="Enter a description." rows="8"><?php echo $caption ?></textarea>
-            </div><button class="ui fluid large green submit button" id="createMapContent" type="submit">Submit Content</button>
+            </div>
+            <div class = "field">
+                <input name='editMap' type='hidden' value='<?php echo $locationID ?>'>
+            </div>
+            <button class="ui fluid large green submit button" id="editMapContent" type="submit">Submit Content</button>
         </form>
     </div>
 </div>
