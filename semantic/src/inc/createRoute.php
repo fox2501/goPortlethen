@@ -10,6 +10,9 @@ include("includes/header.php");
 <div class="ui container">
     <div id="map" style="width: 100%; height: 350px"></div>
     <script>
+        var myCenter=new google.maps.LatLng(57.061681,-2.129468);
+        var marker;
+
         function initMap() {
             var myLatLng = {lat: 0, lng: 0};
 
