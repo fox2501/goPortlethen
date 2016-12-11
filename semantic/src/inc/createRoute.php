@@ -69,11 +69,11 @@ include("includes/header.php");
             </div>
             <div class="field" id = "lat">
                 <label>Latitude</label>
-                <input name="lat" placeholder="Enter the location longitude." id = "lat" type="text" value = "lat">
+                <input name="lat" placeholder="Enter the location longitude." id = "lat" type="text">
             </div>
             <div class="field" id = "long">
                 <label>Longitude</label>
-                <input name="long" placeholder="Enter the location latitude." id = "long" type="text" value = "">
+                <input name="long" placeholder="Enter the location latitude." id = "long" type="text">
             </div>
             <div class="field">
                 <label>Description</label>
