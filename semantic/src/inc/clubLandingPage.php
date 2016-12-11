@@ -60,6 +60,7 @@ include("includes/header.php");
                 </div>
             </div>
             <div class="four wide column">
+
                 <div class="ui fluid category search">
                     <div class="ui right floated icon input">
                         <input class="prompt" type="text" placeholder="Search clubs...">
