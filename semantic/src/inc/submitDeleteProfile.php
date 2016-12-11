@@ -26,6 +26,7 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
     echo $userID;
 
 }
+echo $userID;
 //header('Location: /semantic/');
 //$result = mysqli_query($db, $sql);
 //while($row = $result ->fetch_assoc()){
