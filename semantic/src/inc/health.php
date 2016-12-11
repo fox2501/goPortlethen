@@ -78,7 +78,7 @@ if (isset($_SESSION['loggedIn'])) {
             <div class='ui raised segment'>
                 <div class='ui container'>
                     <div class='ui grid'>
-                        <div class='four wide column'>
+                        <div class='three wide column'>
                             <div class='ui medium image'><img src='$photoURL'></div>
                         </div>
                         <div class='four wide column'>
