@@ -80,7 +80,7 @@ if (isset($_SESSION['loggedIn'])) {
                     <div class='ui grid'>
                         <div class='row'>
                             <div class='three wide column'>
-                                <div class='ui small image' style='height: 100%; width: 100%;'><img src='$photoURL' style='height: 100%; width: 100%;'></div>
+                                <div class='ui small image'><img src='$photoURL'></div>
                             </div>
                             <div class='four wide column'>
                                 <h3 class='ui header' id='title'>$title</h3>
@@ -103,11 +103,11 @@ if (isset($_SESSION['loggedIn'])) {
         ";
                         } else {
                             echo "
-            <div class='ui raised segment' style = 'height: 250px;'>
+            <div class='ui raised segment'>
                 <div class='ui container'>
                     <div class='ui grid'>
                         <div class='four wide column'>
-                            <div class='ui small image' style='height: 100%; width: 100%;'><img src='$photoURL' style='height: 100%; width: 100%;'></div>
+                            <div class='ui small image'><img src='$photoURL'></div>
                         </div>
                         <div class='four wide column'>
                             <h3 class='ui header' id='title'>$title</h3>
@@ -131,7 +131,7 @@ if (isset($_SESSION['loggedIn'])) {
             <div data-tockify-component="mini" data-tockify-calendar="healthevents"></div>
             <script data-tockify-script="embed" src="https://public.tockify.com/browser/embed.js"></script>
             <button class="ui green submit button"><a href="https://tockify.com/tkf2/submitEvent/42648d506ec74f769ce92685c0fe921e"
-                                         target="_blank">Submit an Event</a></button>
+                                         target="_blank" style="color: white">Submit an Event</a></button>
             <div style="height:600px">
                 <a class="twitter-timeline" data-height="500" href="https://twitter.com/BoringMilner">Tweets by James
                     Milner</a>
