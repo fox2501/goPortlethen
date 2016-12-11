@@ -29,6 +29,7 @@ $row = $stmt -> fetch(PDO::FETCH_ASSOC);
     Discover Portlethen
 </div>
 <div class="ui container">
+    <div class = "ui right floated button">Delete Map</div>
     <div id="map" style="width: 100%; height: 350px"></div>
     <div class='ui raised segment'>
         <h3 class='ui header' id="current">Drag the marker to select a position on the map.</h3>
