@@ -23,6 +23,7 @@ include("includes/header.php");
 
                 var map = new google.maps.Map(document.getElementById('map'), {
                     mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    maxZoom: 6,
                     zoom: 5,
                     center: latlng
 
