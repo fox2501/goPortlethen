@@ -2,14 +2,17 @@
 
 session_start();
 
-include("dbconnect.php");
+include("PDOConnect.php");
 
 $username = $_POST["username"];
 $password = $_POST["password"];
 
-$sql = "SELECT * FROM users WHERE username = '$username'";
-$result = mysqli_query($db, $sql);
-$row = mysqli_fetch_assoc($result);
+//$sql = "SELECT * FROM users WHERE username = ?";
+//$stmt = $pdo -> prepare($sql);
+//$stmt -> execute([$username]);
+//$result = mysqli_query($db, $sql);
+//$row = $stmt -> fetch(PDO::FETCH_ASSOC);
+
 $hashpass = $row['password'];
 $dehashedpass = password_verify($password, $hashpass);
 
@@ -17,10 +20,12 @@ if($dehashedpass == 0){
     header("Location: ../login.php?error=loginerror");
     exit();
 }else{
-    $sql = "SELECT * FROM users where username = '$username' AND password = '$hashpass'";
-    $result = mysqli_query($db, $sql);
+    $sql = "SELECT * FROM users where username = ? AND password = ?";
+    $stmt = $pdo -> prepare($sql);
+    $stmt -> execute([$username, $hashpass]);
+    $row = $stmt -> fetch(PDO::FETCH_ASSOC);
 
-    if (!$row = mysqli_fetch_assoc($result)){
+    if (!$row){
         header("Location: ../login.php?error=loginerror");
         exit();
     } else{
