@@ -9,7 +9,7 @@ $userID = $_SESSION['loggedIn'];
 $sql = "SELECT userAccessID from useraccess A, users B WHERE A.userName = B.userName AND B.userID = '?'";
 $stmt = $pdo->prepare($sql)->execute([$userID]);
 
-$result = $stmt->fetch();
+$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 //echo $userID."<br>";
 echo $result['userAccessID'];
