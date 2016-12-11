@@ -15,6 +15,11 @@ include("includes/header.php");
 </div>
 <div class="ui container">
     <div id="map" style="width: 100%; height: 350px"></div>
+    <div class = 'ui raised segment'>
+        <h3 class = 'ui header' id="current">
+                Drag the marker to select a position on the map.
+        </h3>
+    </div>
     <div id="current">
         Nothing yet...
     </div>
