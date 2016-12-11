@@ -17,9 +17,9 @@ $healthID =$_POST["healthID"];
         <div class='ui ten wide column'>
             <form action="submitHealthDelete.php" class="ui large form" method="post">
                 <div class='ui negative message'>
-                    <h1 class='header'>ARE YOU SURE YOU WANT TO DELETE THIS CONTENT?</h1>
+                    <h1 class='header'>ARE YOU SURE YOU WANT TO DELETE THIS CONTENT?<input type="hidden" name="deleteHealth" value='<?php echo $healthID; ?>'></h1>
                 </div>
-                <input type="hidden" name="deleteHealth" value='<?php echo $healthID; ?>'>
+
                 <button class="ui fluid large red submit button" type="submit">Delete Content</button>
             </form>
         </div>

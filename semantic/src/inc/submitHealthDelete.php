@@ -5,10 +5,11 @@ $healthID =$_POST["deleteHealth"];
 
 
 $sql = "DELETE FROM healthContent WHERE healthContentID = ?";
-$stmt = $pdo->prepare($sql);
-$stmt -> execute([$healthID]);
+$stmt = $pdo->prepare($sql)->execute([$healthID]);
+
+echo "$healthID";
 
 
-header('Location: /semantic/);
+//header('Location: /semantic/');
 
 ?>
