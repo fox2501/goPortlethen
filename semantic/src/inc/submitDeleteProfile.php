@@ -23,6 +23,8 @@ $stmt -> execute([$userAccessID]);
 $sql = "DELETE FROM users WHERE userID = ?";
 $stmt = $pdo->prepare($sql);
 $stmt->execute([$userID]);
+session_destroy();
+
 header('Location: /semantic/?accountDeleted');
 
 ?>
