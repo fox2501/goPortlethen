@@ -59,7 +59,8 @@ include("includes/header.php");
                     var marker = new google.maps.Marker({
                         position: myLatLng,
                         map: map,
-                        title: '<?php echo $locationName ?>'
+                        title: '<?php echo $locationName ?>',
+                        draggable:true
                     });
                     var infowindow = new google.maps.InfoWindow({
                         content: '<p>Marker Location:' + marker.getPosition() + '</p>'
@@ -68,16 +69,8 @@ include("includes/header.php");
                     google.maps.event.addListener(marker, 'click', function() {
                         infowindow.open(map, marker);
                     });
-                    marker.setMap( map );
-                    moveBus( map, marker );
                     google.maps.event.addDomListener(window, 'load', initialize);
                 }
-                function moveBus( map, marker ) {
-
-                    marker.setPosition( new google.maps.LatLng( <?php echo $lat ?>, <?php echo $long ?> ) );
-                    map.panTo( new google.maps.LatLng(<?php echo $lat ?>, <?php echo $long ?> ) );
-
-                };
             </script>
             <script async defer
                     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsaPQGyO2SHJumHMC2k8RTYfy3z7OXIk&callback=initMap">
