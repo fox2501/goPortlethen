@@ -93,7 +93,7 @@ session_start();
                 </div>
                     <div class="field">
                         <label>Text</label>
-                        <textarea></textarea>
+                        <textarea> test ladd </textarea>
                     </div>
             </div>
         </div>
