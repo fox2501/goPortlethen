@@ -52,11 +52,12 @@ include("includes/header.php");
             <div id="map" style="width: 100%; height: 350px"></div>
             <script>
                 function initialize() {
-                    var myLatLng = new google.maps.LatLng(57.061681, -2.129468);
+                    var myLatLng = new google.maps.LatLng(<?php echo $lat ?>, <?php echo $long ?>);
+                    var myCenter = new google.maps.LatLng(57.061681, -2.129468);
 
                     var map = new google.maps.Map(document.getElementById('map'), {
                         zoom: 13,
-                        center: myLatLng
+                        center: myCenter
                     });
 
 
