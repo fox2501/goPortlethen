@@ -78,7 +78,7 @@ session_start();
     </div>
     <div class = "ui segment">
         <div class="ui form">
-            <div class="three fields">
+            <div class="four fields">
                 <div class="field">
                     <label>First name</label>
                     <input type="text" placeholder="First Name">
