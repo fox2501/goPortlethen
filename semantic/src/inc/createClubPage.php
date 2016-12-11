@@ -153,7 +153,7 @@ if (isset($_SESSION['loggedIn'])) {
                 <button class="ui fluid large green submit button" id="createClub" type="submit">Create Club</button>
 
                 <script type="text/javascript">
-                    ;
+
                     (function ($) {
                         $('.ui.form').form({
                             fields: {
