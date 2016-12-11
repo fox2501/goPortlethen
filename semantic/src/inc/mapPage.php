@@ -58,7 +58,7 @@ include("includes/header.php");
                     var marker = new google.maps.Marker({
                         position: myLatLng,
                         map: map,
-                        title: '<?php //echo $locationName ?>',
+                        title: '<?php echo $locationName ?>',
                         draggable:true
                     });
 
