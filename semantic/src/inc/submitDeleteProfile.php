@@ -9,7 +9,7 @@ $userID = $_SESSION['loggedIn'];
 
 //FEE REQUIRED DOES NOT WORK
 
-$sql = "SELECT userAccessID from useraccess A, users B WHERE A.userName = B.userName AND B.userID = '?'";
+$sql = "SELECT * from useraccess A, users B WHERE A.userName = B.userName AND B.userID = '?'";
 $stmt = $pdo->prepare($sql);
 $stmt->execute([$userID]);
 
@@ -22,8 +22,8 @@ $userAccessID = $row['userAccessID'];
 //    $sql = "DELETE FROM users WHERE userID = '?'";
 //    $stmt = $pdo->prepare($sql);
 //    $stmt->execute([$userID]);
-    echo $userAccessID;
-    echo $userID;
+echo $userAccessID;
+echo $userID;
 
 
 echo $userID;
