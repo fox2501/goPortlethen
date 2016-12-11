@@ -18,7 +18,7 @@ include("includes/header.php");
     <div class='ui raised segment'>
         <h3 class='ui header' id="current">Drag the marker to select a position on the map.</h3>
         <script>
-            function initMap() {
+            function initialize() {
                 var latlng = new google.maps.LatLng(57.061681, -2.129468);
 
                 var map = new google.maps.Map(document.getElementById('map'), {
@@ -44,7 +44,7 @@ include("includes/header.php");
 
             }
         </script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsaPQGyO2SHJumHMC2k8RTYfy3z7OXIk&callback=initMap"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsaPQGyO2SHJumHMC2k8RTYfy3z7OXIk&callback=initialize"></script>
         <form action="submitCreateMap.php" class="ui form" enctype="multipart/form-data" method="post">
             <div class="field">
                 <label>Title</label> <input name="title" placeholder="Enter the title of your route." type="text">
