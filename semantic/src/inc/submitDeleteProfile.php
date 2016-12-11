@@ -13,7 +13,7 @@ $sql = "SELECT userAccessID from useraccess A, users B WHERE A.userName = B.user
 $stmt = $pdo->prepare($sql);
 $stmt->execute([$userID]);
 
-while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+$row = $stmt->fetch(PDO::FETCH_ASSOC))
     $userAccessID = $row['userAccessID'];
 //    $sql = "DELETE FROM useraccess WHERE userAccessID = '?'";
 //    $stmt = $pdo->prepare($sql);
@@ -25,7 +25,7 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
     echo $userAccessID;
     echo $userID;
 
-}
+
 echo $userID;
 //header('Location: /semantic/');
 //$result = mysqli_query($db, $sql);
