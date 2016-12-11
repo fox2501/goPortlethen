@@ -90,6 +90,11 @@ session_start();
                     <label>Contact Number</label>
                     <input type="text" placeholder="Contact Number">
                 </div>
+                <div class="ui form">
+                    <div class="field">
+                        <label>Text</label>
+                        <textarea></textarea>
+                    </div>
             </div>
         </div>
     </div>
