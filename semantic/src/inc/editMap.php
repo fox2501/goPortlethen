@@ -18,8 +18,6 @@ $row = $stmt -> fetch(PDO::FETCH_ASSOC);
     $locationType = $row['locationType'];
     $caption = $row['caption'];
     $locationName = $row['locationName'];
-
-    echo $longitude;
 ?>
 <!DOCTYPE html>
 <html>
@@ -62,7 +60,7 @@ $row = $stmt -> fetch(PDO::FETCH_ASSOC);
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsaPQGyO2SHJumHMC2k8RTYfy3z7OXIk&callback=initialize"></script>
         <form action="submitCreateMap.php" class="ui form" enctype="multipart/form-data" method="post">
             <div class="field">
-                <label>Title</label> <input name="title" placeholder="Enter the title of your route." type="text">
+                <label>Title</label> <input name="title" placeholder="Enter the title of your route." type="text" value = "<?php echo $locationName ?>">
             </div>
             <div class="field">
                 <label>Type</label> <select class="ui select dropdown" name="mapType">
