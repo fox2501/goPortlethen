@@ -59,20 +59,16 @@ include("includes/header.php");
         var marker;
 
         function initMap() {
-            var mapProp = {
-                center:myCenter,
-                zoom:13,
-                mapTypeId:google.maps.MapTypeId.HYBRID
-            };
-
-            var map = new google.maps.Map(document.getElementById("map"),mapProp);
-
-            marker = new google.maps.Marker({
-                position:myCenter,
-                draggable:true,
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 4,
+                center: myCenter
             });
 
-            marker.setMap(map);
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                draggable:true
+            });
 
             google.maps.event.addListener(marker, "drag", function(){
                 document.getElementById("grid").value=marker.position.toUrlValue();
