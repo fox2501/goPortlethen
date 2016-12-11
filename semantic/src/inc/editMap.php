@@ -5,6 +5,8 @@ include("includes/header.php");
 
 $locationID = $_POST['editMap'];
 
+echo $locationID;
+
 $sql = "SELECT * FROM locations WHERE locationID = ?";
 $stmt = $pdo -> prepare($sql);
 $stmt -> execute([$locationID]);

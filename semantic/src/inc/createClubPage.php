@@ -170,7 +170,7 @@ if (isset($_SESSION['loggedIn'])) {
                                     identifier: 'email',
                                     rules: [
                                         {
-                                            type: 'empty' + 'email',
+                                            type: 'email',
                                             prompt: 'Please enter a valid email address'
                                         }
                                     ]
