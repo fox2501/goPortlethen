@@ -64,11 +64,12 @@ include("includes/header.php");
                 center: myCenter
             });
 
-            var marker = new google.maps.Marker({
+            marker = new google.maps.Marker({
                 position: myLatLng,
-                map: map,
                 draggable:true
             });
+
+            marker.setMap(map);
 
             google.maps.event.addListener(marker, "drag", function(){
                 document.getElementById("grid").value=marker.position.toUrlValue();
