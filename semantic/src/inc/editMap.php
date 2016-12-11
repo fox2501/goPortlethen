@@ -63,7 +63,7 @@ $row = $stmt -> fetch(PDO::FETCH_ASSOC);
                 <label>Title</label> <input name="title" placeholder="Enter the title of your route." type="text" value = "<?php echo $locationName ?>">
             </div>
             <div class="field">
-                <label>Type</label> <select class="ui select dropdown" name="mapType" value = "<?php $locationType ?>">
+                <label>Type</label> <select class="ui select dropdown" id = "mapType" name="mapType" value = "<?php $locationType ?>">
                     <option value="view">
                         Viewpoint
                     </option>
@@ -73,6 +73,11 @@ $row = $stmt -> fetch(PDO::FETCH_ASSOC);
                     <option value="hist">
                         Historical Landmark
                     </option>
+                    <script>
+                        $( document ).ready(function() {
+                            $("#mapType").val("<?php echo $locationType ?>");
+                        });
+                    </script>
                 </select>
             </div>
             <div class="field">
