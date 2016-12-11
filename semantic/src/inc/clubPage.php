@@ -38,7 +38,7 @@ echo "
             <header class = 'ui blue huge header'>$clubName Club Profile Page</header>
         </div>
         <div class = 'eight wide column'>
-        <form class = 'ui form' method = 'POST' action = 'editClubPage.php'>
+        <form class = 'ui form' method = 'POST' action = 'editClubPage.php' onclick = '/semantic/src/inc/editClubPage.php'>
             <button class = 'ui right floated button' onclick = '/semantic/src/inc/editClubPage.php' type = 'submit'>
                 <input type = 'hidden' name = 'editClub' value = $clubID>
                 <i class = 'ui settings icon'></i>
