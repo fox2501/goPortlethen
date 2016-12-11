@@ -33,8 +33,8 @@ while ($row = mysqli_fetch_assoc($result)) {
 <? include("includes/header.php"); ?>
 <body>
 <!-- Form -->
-<form>
-    <button class="ui red right floated button" formaction="deleteHealth.php">Delete Health Content<input type="hidden" name="healthID" value='<?php echo $healthContentID; ?>'></button>
+<form method ="post" action ="deleteHealth.php">
+    <button class="ui red right floated button" type ="submit" name = "healthID" value = "<?php echo $healthContentID; ?>">Delete Health Content</button>
 </form>
 <div class="ui container">
     <header class="ui huge blue header">
