@@ -56,6 +56,8 @@ if (isset($_SESSION['loggedIn'])) {
 	</div>
 			        ";
         }
+    } eLSE{
+        echo "You cannot access this page.";
     }
 }
 ?>
