@@ -33,16 +33,12 @@ include("includes/header.php");
                 });
 
                 var lat = google.maps.event.addListener(myMarker, 'dragend', function(evt){
-                    document.getElementById('lat').innerText.val = 'Latitude: ' + evt.latLng.lat().toFixed(3);
+                    document.getElementById('current').innerHTML= '<p>Latitude: ' + evt.latLng.lat().toFixed(3) + ' Longitude: ' + evt.latLng.lng().toFixed(3) + '<\/p>';
                 });
 
-                var long = google.maps.event.addListener(myMarker, 'dragend', function(evt){
-                    document.getElementById('long').innerText.val = 'Longitude: ' + evt.latLng.lng().toFixed(3);
+                google.maps.event.addListener(myMarker, 'dragstart', function(evt){
+                    document.getElementById('current').innerHTML = '<p>Currently dragging marker...<\/p>';
                 });
-//
-//                google.maps.event.addListener(myMarker, 'dragstart', function(evt){
-//                    document.getElementById('current').innerHTML = '<p>Currently dragging marker...<\/p>';
-//                });
                 map.setCenter(myMarker.position);
                 map.setZoom(5);
                 myMarker.setMap(map);
