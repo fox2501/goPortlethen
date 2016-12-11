@@ -55,31 +55,31 @@ include("includes/header.php");
 <!--        }-->
 <!--    </script>-->
     <script>
-        var myCenter=new google.maps.LatLng(49.716,-2.196);
-        var marker;
-
         function initMap() {
-            var mapProp = {
-                center:myCenter,
-                zoom:13,
-                mapTypeId:google.maps.MapTypeId.HYBRID
-            };
-
-            var map = new google.maps.Map(document.getElementById("map"),mapProp);
-
-            marker = new google.maps.Marker({
-                position:myCenter,
-                draggable:true,
+            var latlng = new google.maps.LatLng(49.716, -2.196);
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: latlng,
+                zoom: 11,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+            var marker = new google.maps.Marker({
+                position: latlng,
+                map: map,
+                title: 'Set lat/lon values for this property',
+                draggable: true
             });
 
-            marker.setMap(map);
-
-            google.maps.event.addListener(marker, "drag", function(){
-                document.getElementById("grid").value=marker.position.toUrlValue();
+            var infowindow = new google.maps.InfoWindow({
+                content: '<p>Lat' + marker.getPosition().lat() + 'Long: ' + marker.getPosition().lng() + '</p>'
             });
+
+            map.setZoom(5);
+            google.maps.event.addListener(marker, 'click', function() {
+                infowindow.open(map, marker);
+            });
+
+            google.maps.event.addDomListener(window, 'load', initialize);
         }
-
-        google.maps.event.addDomListener(window, 'load', initMap);
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsaPQGyO2SHJumHMC2k8RTYfy3z7OXIk&callback=initMap">
     </script>
