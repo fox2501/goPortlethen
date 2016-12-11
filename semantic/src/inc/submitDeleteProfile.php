@@ -11,6 +11,7 @@ $stmt = $pdo->prepare($sql)->execute([$userID]);
 
 $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
+echo $result;
 //echo $userID."<br>";
 echo $result['userAccessID'];
 echo $userAccessID;
