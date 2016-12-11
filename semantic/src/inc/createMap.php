@@ -50,6 +50,7 @@ include("includes/header.php");
             </div>
             <div class="field">
                 <label>Type</label> <select class="ui select dropdown" name="mapType">
+                    <option></option>
                     <option value="view">
                         Viewpoint
                     </option>
