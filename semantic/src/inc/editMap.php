@@ -1,9 +1,20 @@
 <?php
 session_start();
-include ("includes/dbconnect.php");
+include ("includes/PDOConnect.php");
 include("includes/header.php");
 
-$sql = "SELECT * FROM locations WHERE"
+$locationID = $_POST['editMap'];
+
+$sql = "SELECT * FROM locations WHERE locationID = ?";
+$stmt = $pdo -> prepare($sql);
+$stmt -> execute([$locationID]);
+
+$row = $stmt -> fetch(PDO::FETCH_ASSOC);
+    $longitude = $row['longitude'];
+    $latitude = $row['latitude'];
+    $locationType = $row['locationType'];
+    $caption = $row['caption'];
+    $locationName = $row['locationName'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -44,12 +55,12 @@ $sql = "SELECT * FROM locations WHERE"
             }
         </script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsaPQGyO2SHJumHMC2k8RTYfy3z7OXIk&callback=initialize"></script>
-        <form action="submitCreateMap.php" class="ui form" enctype="multipart/form-data" method="post">
+        <form action="submitEditMap.php" class="ui form" enctype="multipart/form-data" method="post">
             <div class="field">
-                <label>Title</label> <input name="title" placeholder="Enter the title of your route." type="text">
+                <label>Title</label> <input name="title" placeholder="Enter the title of your route." type="text" value = "<?php echo $locationName ?>">
             </div>
             <div class="field">
-                <label>Type</label> <select class="ui select dropdown" name="mapType">
+                <label>Type</label> <select class="ui select dropdown" id = "mapType" name="mapType" value = "<?php $locationType ?>">
                     <option value="view">
                         Viewpoint
                     </option>
@@ -59,22 +70,32 @@ $sql = "SELECT * FROM locations WHERE"
                     <option value="hist">
                         Historical Landmark
                     </option>
+                    <script>
+                        $( document ).ready(function() {
+                            $("#mapType").val("<?php echo $locationType ?>");
+                        });
+                    </script>
                 </select>
             </div>
             <div class="field">
                 <label>Latitude</label>
-                <input name="lat" placeholder="Enter the location longitude." id = "lat" type="text">
+                <input name="lat" placeholder="Enter the location longitude." id = "lat" type="text" value = "<?php echo $latitude ?>">
             </div>
             <div class="field">
                 <label>Longitude</label>
-                <input name="long" placeholder="Enter the location latitude." id = "long" type="text">
+                <input name="long" placeholder="Enter the location latitude." id = "long" type="text" value = "<?php echo $longitude ?>">
             </div>
             <div class="field">
                 <label>Description</label>
-                <textarea name="mapDesc" placeholder="Enter a description." rows="8"></textarea>
-            </div><button class="ui fluid large green submit button" id="createMapContent" type="submit">Submit Content</button>
+                <textarea name="mapDesc" placeholder="Enter a description." rows="8"><?php echo $caption ?></textarea>
+            </div>
+            <div class = "field">
+                <input name='editMap' type='hidden' value='<?php echo $locationID ?>'>
+            </div>
+            <button class="ui fluid large green submit button" id="editMapContent" type="submit">Submit Content</button>
         </form>
     </div>
 </div>
+<?php include("includes/footer.php"); ?>
 </body>
 </html>
