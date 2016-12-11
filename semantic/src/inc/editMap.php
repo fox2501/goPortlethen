@@ -5,8 +5,6 @@ include("includes/header.php");
 
 $locationID = $_POST['editMap'];
 
-echo $locationID;
-
 $sql = "SELECT * FROM locations WHERE locationID = ?";
 $stmt = $pdo -> prepare($sql);
 $stmt -> execute([$locationID]);
@@ -29,7 +27,9 @@ $row = $stmt -> fetch(PDO::FETCH_ASSOC);
     Discover Portlethen
 </div>
 <div class="ui container">
-    <div class = "ui right floated button">Delete Map</div>
+    <form method ="post" action ="deleteMap.php">
+        <button class="ui red right floated button" type ="submit" name = "deleteMap" value = "<?php echo $locationID ?>">Delete Map</button>
+    </form>
     <div id="map" style="width: 100%; height: 350px"></div>
     <div class='ui raised segment'>
         <h3 class='ui header' id="current">Drag the marker to select a position on the map.</h3>
