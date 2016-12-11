@@ -16,6 +16,7 @@ include("includes/header.php");
 <div class="ui container">
     <div id="map" style="width: 100%; height: 350px"></div>
     <div class='ui raised segment'>
+        <div class="ui error message"></div>
         <h3 class='ui header' id="current">Drag the marker to select a position on the map.</h3>
         <script>
             function initialize() {
@@ -43,6 +44,7 @@ include("includes/header.php");
         </script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsaPQGyO2SHJumHMC2k8RTYfy3z7OXIk&callback=initialize"></script>
         <form action="submitCreateMap.php" class="ui form" enctype="multipart/form-data" method="post">
+
             <div class="field">
                 <label>Title</label> <input name="title" placeholder="Enter the title of your route." type="text">
             </div>
@@ -71,6 +73,52 @@ include("includes/header.php");
                 <label>Description</label>
                 <textarea name="mapDesc" placeholder="Enter a description." rows="8"></textarea>
             </div><button class="ui fluid large green submit button" id="createMapContent" type="submit">Submit Content</button>
+            <script type="text/javascript">
+                ;
+                (function ($) {
+                    $('.ui.form').form({
+                        on: 'blur',
+                        fields: {
+                            locationName: {
+                                identifier: 'title',
+                                rules: [
+                                    {
+                                        type: 'empty',
+                                        prompt: 'Please enter your firstname.'
+                                    }
+                                ]
+                            },
+                            lat: {
+                                identifier: 'lat',
+                                rules: [
+                                    {
+                                        type: 'empty',
+                                        prompt: 'There must be a latitude value.'
+                                    }
+                                ]
+                            },
+                            long: {
+                                identifier: 'long',
+                                rules: [
+                                    {
+                                        type: 'empty',
+                                        prompt: 'There must be a longitude value.'
+                                    }
+                                ]
+                            },
+                            mapType: {
+                                identifier: 'mapType',
+                                rules: [
+                                    {
+                                        type: 'empty',
+                                        prompt: 'Please select a value for map type.'
+                                    }
+                                ]
+                            }
+                        }
+                    })
+                })(jQuery);
+            </script>
         </form>
     </div>
 </div>
