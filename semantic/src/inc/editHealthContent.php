@@ -47,6 +47,7 @@ while ($row = mysqli_fetch_assoc($result)) {
         <button class="ui red right floated button" type ="submit" name = "healthID" value = "<?php echo $healthContentID; ?>">Delete Health Content</button>
     </form>
 
+    <br>
 
     <form action="submitEditHealth.php" class="ui form" enctype="multipart/form-data" method="post">
         <div class="field">
