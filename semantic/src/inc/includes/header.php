@@ -30,7 +30,6 @@ include("dbconnect.php");
 </head>
 <body>
 <div class="ui blue inverted secondary pointing stackable menu">
-    <h1> LIAM IS A CUNT</h1>
     <a class="header item" href="/semantic">
         <i class="home icon"></i>
         goPortlethen
