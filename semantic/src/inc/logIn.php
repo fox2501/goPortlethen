@@ -82,9 +82,11 @@ include("includes/header.php");
             </form>
             <div class="ui warning message">
                 New to us? <a href="signUpForm.php">Sign Up</a>
+
             </div>
         </div>
     </div>
+    <br><br><br><br><br><br>
 </div><?php include("includes/footer.php");?>
 </body>
 </html>
