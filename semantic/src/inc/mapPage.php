@@ -42,7 +42,7 @@ include("includes/header.php");
         <div class='fourteen wide column'></div>
         <div class='two wide column'>
             <form action='editMap.php' class='ui form' method='post'>
-                <button class='ui right floated button' onclick='/semantic/src/inc/editMap.php' type='submit'><input name='editMap' type='hidden' value='$locationID'> Edit</button>
+                <button class='ui right floated button' onclick='/semantic/src/inc/editMap.php' type='submit'><input name='editMap' type='hidden' value='<?php echo $locationID ?>'> Edit</button>
             </form>
         </div>
         <div class="sixteen wide column">
@@ -76,7 +76,6 @@ include("includes/header.php");
                     });
 
                 }
-                google.maps.event.addDomListener(window, 'load', initialize);
             </script>
             <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsaPQGyO2SHJumHMC2k8RTYfy3z7OXIk&callback=initialize">
             </script>
