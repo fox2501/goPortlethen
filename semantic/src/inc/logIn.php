@@ -15,7 +15,7 @@ include("includes/header.php");
         <div class="column">
             <h2 class="ui blue header"></h2>
             <div class="content">
-                <h2 class="ui blue header">Log-in to your account</h2>
+                <h2 class="ui blue header">Log-In to Your Account</h2>
             </div>
             <form action="includes/checkLogin.php" class="ui large form" method="post">
                 <div class="ui stacked segment">
