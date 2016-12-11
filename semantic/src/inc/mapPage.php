@@ -48,7 +48,7 @@ include("includes/header.php");
             </header>
             <div id="map" style="width: 100%; height: 350px"></div>
             <script>
-                function initialize() {
+                function initMap() {
                     var myLatLng = {lat: <?php echo $lat ?>, lng: <?php echo $long ?>};
 
                     var map = new google.maps.Map(document.getElementById('map'), {
@@ -69,11 +69,11 @@ include("includes/header.php");
                     google.maps.event.addListener(marker, 'click', function() {
                         infowindow.open(map, marker);
                     });
-                    google.maps.event.addDomListener(window, 'load', initialize);
+                    google.maps.event.addDomListener(window, 'load', initMap);
                 }
             </script>
             <script async defer
-                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsaPQGyO2SHJumHMC2k8RTYfy3z7OXIk&callback=initialize">
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsaPQGyO2SHJumHMC2k8RTYfy3z7OXIk&callback=initMap">
             </script>
 
         </div>
