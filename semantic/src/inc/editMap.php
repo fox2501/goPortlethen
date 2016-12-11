@@ -21,7 +21,7 @@ $row = $stmt -> fetch(PDO::FETCH_ASSOC);
 
     echo $longitude;
 ?>
-<!--<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <title></title>
@@ -79,19 +79,19 @@ $row = $stmt -> fetch(PDO::FETCH_ASSOC);
             </div>
             <div class="field">
                 <label>Latitude</label>
-                <input name="lat" placeholder="Enter the location longitude." id = "lat" type="text">
+                <input name="lat" placeholder="Enter the location longitude." id = "lat" type="text" value = "<?php echo $latitude ?>">
             </div>
             <div class="field">
                 <label>Longitude</label>
-                <input name="long" placeholder="Enter the location latitude." id = "long" type="text">
+                <input name="long" placeholder="Enter the location latitude." id = "long" type="text" value = "<?php echo $longitude ?>">
             </div>
             <div class="field">
                 <label>Description</label>
-                <textarea name="mapDesc" placeholder="Enter a description." rows="8"></textarea>
+                <textarea name="mapDesc" placeholder="Enter a description." rows="8"><?php echo $caption ?></textarea>
             </div><button class="ui fluid large green submit button" id="createMapContent" type="submit">Submit Content</button>
         </form>
     </div>
 </div>
-<?php /*include("includes/footer.php"); */?>
+<?php include("includes/footer.php"); ?>
 </body>
-</html>-->
+</html>
