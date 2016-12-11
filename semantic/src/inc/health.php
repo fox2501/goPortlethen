@@ -80,7 +80,7 @@ if (isset($_SESSION['loggedIn'])) {
                     <div class='ui grid'>
                         <div class='row'>
                             <div class='three wide column'>
-                                <div class='ui small image' style='height: 100%; width: 100%;'><img src='$photoURL' style='height: 100%; width: 100%;'></div>
+                                <div class='ui small image' style='height: 100%; width: 100%;'><img src='$photoURL'></div>
                             </div>
                             <div class='four wide column'>
                                 <h3 class='ui header' id='title'>$title</h3>
@@ -103,11 +103,11 @@ if (isset($_SESSION['loggedIn'])) {
         ";
                         } else {
                             echo "
-            <div class='ui raised segment' style = 'height: 250px;'>
+            <div class='ui raised segment'>
                 <div class='ui container'>
                     <div class='ui grid'>
                         <div class='four wide column'>
-                            <div class='ui small image'><img src='$photoURL' style='height: 100%; width: 100%;'></div>
+                            <div class='ui small image'><img src='$photoURL'></div>
                         </div>
                         <div class='four wide column'>
                             <h3 class='ui header' id='title'>$title</h3>
