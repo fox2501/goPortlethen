@@ -23,16 +23,13 @@ if($dehashedpass == 0){
     $sql = "SELECT * FROM users where userName = ? AND password = ?";
     $stmt = $pdo -> prepare($sql);
     $stmt -> execute([$username, $hashpass]);
-    $row = $stmt -> fetch(PDO::FETCH_ASSOC);
-
-    if (!$row){
-        header("Location: ../login.php?error=loginerror");
-        exit();
-    } else{
-        $_SESSION['loggedIn'] = $row['userID'];
-        $_SESSION['name'] = $row['firstName'];
-        $_SESSION['surname'] = $row['surname'];
+    while($row = $stmt -> fetch(PDO::FETCH_ASSOC)){
+            $_SESSION['loggedIn'] = $row['userID'];
+            $_SESSION['name'] = $row['firstName'];
+            $_SESSION['surname'] = $row['surname'];
     }
+
+
 
     header('Location: /semantic/');
 }
