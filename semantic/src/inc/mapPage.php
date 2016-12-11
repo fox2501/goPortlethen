@@ -70,8 +70,9 @@ include("includes/header.php");
 //                    google.maps.event.addListener(marker, 'click', function() {
 //                        infowindow.open(map, marker);
 //                    });
-                   google.maps.event.addDomListener(window, 'load', initMap);
+
                 }
+                google.maps.event.addDomListener(window, 'load', initMap);
             </script>
             <script async defer
                     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsaPQGyO2SHJumHMC2k8RTYfy3z7OXIk&callback=initMap">
