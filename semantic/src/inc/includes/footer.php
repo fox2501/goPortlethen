@@ -14,32 +14,19 @@ session_start();
     <div class="ui center aligned container">
         <div class="ui stackable inverted grid">
             <div class="three wide column">
-                <h4 class="ui inverted header">Community</h4>
+                <h4 class="ui inverted header">Navigation</h4>
                 <div class="ui inverted link list">
-                    <a class="item" href="https://www.transifex.com/organization/semantic-org/" target="_blank">Help Translate</a>
-                    <a class="item" href="https://github.com/Semantic-Org/Semantic-UI/issues" target="_blank">Submit an Issue</a>
-                    <a class="item" href="https://gitter.im/Semantic-Org/Semantic-UI" target="_blank">Join our Chat</a>
-                    <a class="item" href="/cla.html" target="_blank">CLA</a>
+                    <a class="item" href="/semantic/src/inc/health.php" target="_blank">Health & Wellbeing</a>
+                    <a class="item" href="/semantic/src/inc/clubLandingPage.php" target="_blank">Clubs</a>
+                    <a class="item" href="/semantic/src/inc/mapLandingPage.php" target="_blank">Maps</a>
+                    <a class="item" href="/semantic/src/inc/help.php" target="_blank">Help</a>
                 </div>
             </div>
             <div class="three wide column">
-                <h4 class="ui inverted header">Network</h4>
-                <div class="ui inverted link list">
-                    <a class="item" href="https://github.com/Semantic-Org/Semantic-UI" target="_blank">GitHub Repo</a>
-                    <a class="item" href="https://forums.semantic-ui.com" target="_blank">User Forums</a>
-                    <a class="item" href="http://1.semantic-ui.com">1.x Docs</a>
-                    <a class="item" href="http://legacy.semantic-ui.com">0.x Docs</a>
-                </div>
+                <h4 class="ui inverted header">This website uses cookies... blah blah</h4>
+                <h4 class="ui inverted header">Terms and Conditions</h4>
             </div>
-            <div class="seven wide right floated column">
-                <h4 class="ui inverted header">Help Preserve This Project</h4>
-                <p> Support for the continued development of Semantic UI comes directly from the community.</p>
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                    <input type="hidden" name="cmd" value="_s-xclick">
-                    <input type="hidden" name="hosted_button_id" value="7ZAF2Q8DBZAQL">
-                    <button type="submit" class="ui large button">Donate Today</button>
-                </form>
-            </div>
+
         </div>
     </div>
 </div>
