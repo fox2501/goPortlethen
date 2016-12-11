@@ -20,7 +20,7 @@ if($dehashedpass == 0){
     header("Location: ../login.php?error=loginerror");
     exit();
 }else{
-    $sql = "SELECT * FROM users where username = ? AND password = ?";
+    $sql = "SELECT * FROM users where userName = ? AND password = ?";
     $stmt = $pdo -> prepare($sql);
     $stmt -> execute([$username, $hashpass]);
     $row = $stmt -> fetch(PDO::FETCH_ASSOC);
