@@ -55,24 +55,22 @@ include("includes/header.php");
 <!--        }-->
 <!--    </script>-->
     <script>
-        var myCenter=new google.maps.LatLng(49.716,-2.196);
-        var marker;
-
         function initMap() {
-
+            var latlng = new google.maps.LatLng(49.716, -2.196);
             var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 4,
-                center: myCenter
+                center: latlng,
+                zoom: 11,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
             });
-
-            marker = new google.maps.Marker({
-                position: myCenter,
+            var marker = new google.maps.Marker({
+                position: latlng,
                 map: map,
-                draggable:true
+                title: 'Set lat/lon values for this property',
+                draggable: true
             });
 
             var infowindow = new google.maps.InfoWindow({
-                content: '<p>Marker Location:' + marker.getPosition() + '</p>'
+                content: '<p>Lat' + marker.getPosition().lat() + 'Long: ' + marker.getPosition().lng() + '</p>'
             });
 
             map.setZoom(5);
