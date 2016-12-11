@@ -78,24 +78,24 @@ if (isset($_SESSION['loggedIn'])) {
             <div class='ui raised segment'>
                 <div class='ui container'>
                     <div class='ui grid'>
-                            <div class='three wide column'>
-                                <div class='ui medium image'><img src='$photoURL'></div>
-                            </div>
-                            <div class='four wide column'>
-                                <h3 class='ui header' id='title'>$title</h3>
-                                <h4 class='ui header' id='datePosted'>$datePosted</h4>
-                            </div>
-                            <div class='seven wide column'>
-                                <p id='mainText' style='text - align:justify'>$mainText<br></p>
-                                <p id='author'>By $userName<br></p>
-                            </div>
-                            <div class='two wide column'>
-                                <form action='editHealthContent.php' class='ui form' method='post'>
-                                    <button class='ui right floated mini button' onclick='/semantic/src/inc/editHealthContent.php' type='submit'><input name='editHealth' type='hidden' value='$healthContentID'> Edit</button>
-                                </form>
-                            </div>
+                        <div class='three wide column'>
+                            <div class='ui medium image'><img src='$photoURL'></div>
+                        </div>
+                        <div class='four wide column'>
+                            <h3 class='ui header' id='title'>$title</h3>
+                            <h4 class='ui header' id='datePosted'>$datePosted</h4>
+                        </div>
+                        <div class='seven wide column'>
+                            <p id='mainText' style='text - align:justify'>$mainText<br></p>
+                            <p id='author'>By $userName<br></p>
+                        </div>
+                        <div class='two wide column'>
+                            <form action='editHealthContent.php' class='ui form' method='post'>
+                                <button class='ui right floated mini button' onclick='/semantic/src/inc/editHealthContent.php' type='submit'><input name='editHealth' type='hidden' value='$healthContentID'> Edit</button>
+                            </form>
                         </div>
                     </div>
+                </div>
             </div>
             <div class='ui hidden section divider'></div>
         ";
