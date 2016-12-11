@@ -68,8 +68,16 @@ include("includes/header.php");
                     google.maps.event.addListener(marker, 'click', function() {
                         infowindow.open(map, marker);
                     });
+                    marker.setMap( map );
+                    moveBus( map, marker );
                     google.maps.event.addDomListener(window, 'load', initialize);
                 }
+                function moveBus( map, marker ) {
+
+                    marker.setPosition( new google.maps.LatLng( 0, 0 ) );
+                    map.panTo( new google.maps.LatLng( 0, 0 ) );
+
+                };
             </script>
             <script async defer
                     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsaPQGyO2SHJumHMC2k8RTYfy3z7OXIk&callback=initMap">
