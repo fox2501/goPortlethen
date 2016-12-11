@@ -4,7 +4,6 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 session_start();
 include("includes/PDOConnect.php");
-include("includes/dbconnect.php");
 
 $userID = $_SESSION['loggedIn'];
 
