@@ -43,27 +43,6 @@ include("includes/header.php");
                 map.setZoom(5);
                 myMarker.setMap(map);
 
-                google.maps.event.addListener(map, 'click', function(event) {
-                    placeMarker(event.latLng);
-                });
-
-                function placeMarker(location) {
-
-
-
-                    if (marker == undefined){
-                        marker = new google.maps.Marker({
-                            position: location,
-                            map: map,
-                            animation: google.maps.Animation.DROP,
-                        });
-                    }
-                    else{
-                        marker.setPosition(location);
-                    }
-                    map.setCenter(location);
-
-                }
             }
         </script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsaPQGyO2SHJumHMC2k8RTYfy3z7OXIk&callback=initMap">
