@@ -14,11 +14,11 @@ include("includes/header.php");
         var marker;
 
         function initMap() {
-            var myLatLng = {lat: 0, lng: 0};
+            var myLatLng = myCenter;
 
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 4,
-                center: {lat: 0, lng: 0}
+                center: myCenter
             });
 
             var marker = new google.maps.Marker({
