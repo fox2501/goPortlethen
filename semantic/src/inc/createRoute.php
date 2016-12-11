@@ -19,7 +19,7 @@ include("includes/header.php");
         function initMap() {
             var latlng = new google.maps.LatLng(49.716, -2.196);
 
-            var map = new google.maps.Map(document.getElementById('map_canvas'), {
+            var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 1,
                 center: latlng,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
