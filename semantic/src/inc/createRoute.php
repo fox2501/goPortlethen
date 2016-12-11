@@ -20,7 +20,7 @@ include("includes/header.php");
     </div>
     <script>
         function initMap() {
-            var latlng = new google.maps.LatLng(49.716, -2.196);
+            var latlng = new google.maps.LatLng(57.061681, -2.129468);
 
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 5,
