@@ -136,7 +136,7 @@ if (isset($_SESSION['loggedIn'])) {
                echo "
                 <button class=\"ui green submit button\" ><a href = \"https://tockify.com/tkf2/submitEvent/42648d506ec74f769ce92685c0fe921e\"
                                          target = \"_blank\" style = \"color: white\" > Submit an Event </a ></button >
-            }
+            ";}
             ?>
 
 
