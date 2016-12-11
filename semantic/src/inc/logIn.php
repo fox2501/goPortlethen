@@ -30,6 +30,15 @@ include("includes/header.php");
 						                </div>
 						                ";
                     }
+                    if (strpos($url, 'error=requireApproval') !== false) {
+                        echo "
+						                <div class='ui negative message'>
+						                    <div class='header'>
+						                        Your account still requires approval!
+						                    </div>
+						                </div>
+						                ";
+                    }
                     ?>
                     <div class='field'>
                         <div class='ui left icon input'>

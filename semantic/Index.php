@@ -15,6 +15,15 @@ if(strpos($url, 'newUser') !== false){
     </div>
     ";
 }
+if(strpos($url, 'accountDeleted') !== false){
+    echo "
+        <div class='ui error message'>
+      <div class='centered header'>
+        You have deleted your account.
+      </div>
+    </div>
+    ";
+}
 ?>
 <div class = "ui container">
     <div class = "ui one column grid">
