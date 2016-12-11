@@ -84,7 +84,7 @@ include("includes/header.php");
                                 rules: [
                                     {
                                         type: 'empty',
-                                        prompt: 'Please enter your firstname.'
+                                        prompt: 'Please enter your a name for your map.'
                                     }
                                 ]
                             },
