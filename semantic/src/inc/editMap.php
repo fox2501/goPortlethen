@@ -88,5 +88,6 @@ $row = $stmt -> fetch(PDO::FETCH_ASSOC);
         </form>
     </div>
 </div>
+<?php include("includes/footer.php"); ?>
 </body>
 </html>
