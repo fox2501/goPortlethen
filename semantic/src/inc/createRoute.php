@@ -33,11 +33,11 @@ include("includes/header.php");
                 });
 
                 var lat = google.maps.event.addListener(myMarker, 'dragend', function(evt){
-                    document.getElementById('lat').innerText = 'Latitude: ' + evt.latLng.lat().toFixed(3);
+                    document.getElementById('lat').innerText.val = 'Latitude: ' + evt.latLng.lat().toFixed(3);
                 });
 
                 var long = google.maps.event.addListener(myMarker, 'dragend', function(evt){
-                    document.getElementById('long').innerText = 'Longitude: ' + evt.latLng.lng().toFixed(3);
+                    document.getElementById('long').innerText.val = 'Longitude: ' + evt.latLng.lng().toFixed(3);
                 });
 //
 //                google.maps.event.addListener(myMarker, 'dragstart', function(evt){
