@@ -78,7 +78,6 @@ if (isset($_SESSION['loggedIn'])) {
             <div class='ui raised segment'>
                 <div class='ui container'>
                     <div class='ui grid'>
-                        <div class='row'>
                             <div class='three wide column'>
                                 <div class='ui medium image'><img src='$photoURL'></div>
                             </div>
@@ -97,7 +96,6 @@ if (isset($_SESSION['loggedIn'])) {
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
             <div class='ui hidden section divider'></div>
         ";
