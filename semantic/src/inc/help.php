@@ -78,24 +78,32 @@ session_start();
     </div>
     <div class = "ui segment">
         <div class="ui form">
-            <div class="three fields">
+        <div class="ui grid">
+            <div class="four wide column">
                 <div class="field">
                     <label>First name</label>
                     <input type="text" placeholder="First Name">
                 </div>
+                </div>
+            <div class="four wide column">
                 <div class="field">
                     <label>Last name</label>
                     <input type="text" placeholder="Middle Name">
                 </div>
+                </div>
+            <div class="four wide column">
                 <div class="field">
                     <label>Contact Number</label>
                     <input type="text" placeholder="Contact Number">
                 </div>
+                </div>
+                <div class="sixteen wide column">
+                <div class="field">
                     <div class="field">
                         <label>Enter your question here : </label>
                         <textarea></textarea>
                     </div>
-
+                </div>
             </div>
         </div>
     </div>
