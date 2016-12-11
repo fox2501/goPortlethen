@@ -34,6 +34,7 @@ include("includes/header.php");
 
                 var lat = google.maps.event.addListener(myMarker, 'dragend', function(evt){
                     document.getElementById('current').innerHTML= '<p>Latitude: ' + evt.latLng.lat().toFixed(3) + ' Longitude: ' + evt.latLng.lng().toFixed(3) + '<\/p>';
+                    document.getElementById('lat').value= evt.latLng.lat().toString();
                 });
 
                 google.maps.event.addListener(myMarker, 'dragstart', function(evt){
