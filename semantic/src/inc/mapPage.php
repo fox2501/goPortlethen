@@ -1,10 +1,29 @@
 <?php
 session_start();
-include("includes/dbconnect.php");
+include("includes/PDOConnect.php");
+if (isset($_SESSION['loggedIn'])) {
+    $userID = $_SESSION['loggedIn'];
+    $canAccess = '0';
+    $sql = "SELECT accessID from users U, useraccess UA WHERE U.userName = UA.userName AND U.userID = ?";
+    $stmt = $pdo -> prepare($sql);
+    $stmt -> execute([$userID]);
+
+    $row = $stmt -> fetch(PDO::FETCH_ASSOC);
+    $accessID = $row["accessID"];
+
+    if ($accessID == '1' || $accessID == '4') {
+        $canAccess = '1';
+    } else {
+        $canAccess = '0';
+    }
+}
+
+
 $locationID = $_POST['viewMap'];
-$sql = "SELECT * FROM locations where locationID = '$locationID'";
-$result = mysqli_query($db, $sql);
-while ($row = mysqli_fetch_assoc($result)) {
+$sql = "SELECT * FROM locations where locationID = ?";
+$stmt = $pdo -> prepare($sql);
+$stmt -> execute([$locationID]);
+while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
     $locationName = $row['locationName'];
     $lat = $row['latitude'];
     $long = $row['longitude'];
@@ -40,11 +59,15 @@ include("includes/header.php");
 <div class="ui container">
     <div class='ui grid'>
         <div class='fourteen wide column'></div>
-        <div class='two wide column'>
+        <?php
+        if($canAccess == 1){
+            echo "        <div class='two wide column'>
             <form action='editMap.php' class='ui form' method='post'>
                 <button class='ui right floated button' onclick='/semantic/src/inc/editMap.php' type='submit'><input name='editMap' type='hidden' value='<?php echo $locationID ?>'> Edit</button>
             </form>
-        </div>
+        </div>";
+        }
+        ?>
         <div class="sixteen wide column">
             <header class='ui header'>
                 <?php echo $locationName ?>
