@@ -59,8 +59,8 @@ if (isset($_SESSION['loggedIn'])) {
 							</form>
 							</div>
 					<div class = 'two wide column'>
-							<form action='denyUserApproval.php' class='ui form' method='POST'>
-								<button class='ui negative basic right floated button' onclick='/semantic/src/inc/denyUserApproval.php' type='submit'><input name='denyUser' type='hidden' value='$userName'> Deny</button>
+							<form action='submitDenyUserApproval.php' class='ui form' method='POST'>
+								<button class='ui negative basic right floated button' onclick='/semantic/src/inc/submitDenyUserApproval.php' type='submit'><input name='denyUser' type='hidden' value='$userName'> Deny</button>
 							</form>
 					</div>
 				</div>
