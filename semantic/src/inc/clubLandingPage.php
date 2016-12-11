@@ -42,6 +42,7 @@ include("includes/header.php");
 		<button class='ui green submit button' style='color: white'><a href='/semantic/src/inc/CreateClubPage.php'>Create a Club</a></button>
 	</div>";
             }?>
+
             <div class="eight wide column">
                 <div class="ui form">
                     <div class="inline fields">
