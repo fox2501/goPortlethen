@@ -19,9 +19,7 @@ while($row = $result ->fetch_assoc()){
 
 //$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
-echo $result;
 //echo $userID."<br>";
-echo $result['userAccessID'];
 echo $userAccessID;
 
 //$sql = "DELETE FROM useraccess WHERE userAccessID = '?'";
