@@ -22,7 +22,7 @@ feePaid = ?,
 feeCost = ?
 WHERE clubID = ?;
 ";
-$pdo->prepare($sql)->execute($clubName,$clubDesc,$contactNum,$websiteURL,1,$feeCost,$clubID);
+$pdo->prepare($sql)->execute([$clubName,$clubDesc,$contactNum,$websiteURL,1,$feeCost,$clubID]);
 
 $img = $_FILES['img'];
 if(empty($img)){
