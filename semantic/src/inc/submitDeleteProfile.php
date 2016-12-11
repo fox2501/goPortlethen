@@ -16,24 +16,26 @@ $stmt->execute([$userID]);
 
 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
     $userAccessID = $row['userAccessID'];
+    $sql = "DELETE FROM useraccess WHERE userAccessID = '?'";
+    $stmt = $pdo->prepare($sql);
+    $stmt -> execute([$userAccessID]);
+
+    $sql = "DELETE FROM users WHERE userID = '?'";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$userID]);
+
+
 }
+header('Location: /semantic/');
 //$result = mysqli_query($db, $sql);
 //while($row = $result ->fetch_assoc()){
 //    $userAccessID = $row['userAccessID'];
 //}
-echo $userAccessID;
-echo $userID;
+//echo $userAccessID;
+//echo $userID;
 
 
-//$sql = "DELETE FROM useraccess WHERE userAccessID = '?'";
-//$stmt = $pdo->prepare($sql);
-//$stmt -> execute([$userAccessID]);
-//
-//    $sql = "DELETE FROM users WHERE userID = '?'";
-//    $stmt = $pdo->prepare($sql);
-//    $stmt->execute([$userID]);
-//
-//    header('Location: /semantic/');
+
 
 
 ?>
