@@ -33,9 +33,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 <? include("includes/header.php"); ?>
 <body>
 <!-- Form -->
-<form method ="post" action ="deleteHealth.php">
-    <button class="ui red right floated button" style="float: right" type ="submit" name = "healthID" value = "<?php echo $healthContentID; ?>">Delete Health Content</button>
-</form>
+
 
 <div class="ui container">
     <h1 align="center">
@@ -45,7 +43,11 @@ while ($row = mysqli_fetch_assoc($result)) {
         <p>Keeping Portlethen Healthy</p>
     </div>
 
+    <form method ="post" action ="deleteHealth.php">
+        <button class="ui red right floated button" type ="submit" name = "healthID" value = "<?php echo $healthContentID; ?>">Delete Health Content</button>
+    </form>
 
+    <br>
 
     <form action="submitEditHealth.php" class="ui form" enctype="multipart/form-data" method="post">
         <div class="field">
@@ -65,6 +67,7 @@ while ($row = mysqli_fetch_assoc($result)) {
             </div>
         </div><button class="ui fluid large green submit button" type="submit">Submit</button>
     </form>
+
 </div>
 
 
