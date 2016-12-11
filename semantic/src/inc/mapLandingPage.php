@@ -1,5 +1,6 @@
 <?php
 session_start();
+include("includes/PDOConnect.php");
 if (isset($_SESSION['loggedIn'])) {
     $userID = $_SESSION['loggedIn'];
     $canAccess = '0';
@@ -38,8 +39,9 @@ include("includes/header.php");
         }
         ?><?php
         $sql = "SELECT locationID, locationName, caption, locationType FROM locations";
-        $result = mysqli_query($db, $sql);
-        while ($row = mysqli_fetch_assoc($result)) {
+        $stmt = $pdo -> prepare($sql);
+        $stmt -> execute();
+        while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
             $locationName = $row['locationName'];
             $caption = $row['caption'];
             $locationType = $row['locationType'];
