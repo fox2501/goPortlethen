@@ -31,15 +31,11 @@ $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
             ?>
             <div class="required field">
                 <label>First Name</label>
-                <div class='field'>
                     <input name='firstName' placeholder='Please enter your first name.' type='text'>
-                </div>
             </div>
             <div class="required field">
                 <label>Surname</label>
-                <div class='field'>
                     <input name='surname' placeholder='Please enter your surname.' type='text'>
-                </div>
             </div>
             <div class="required field">
                 <label>Age</label>
