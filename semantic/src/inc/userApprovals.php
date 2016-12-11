@@ -22,6 +22,7 @@ if (isset($_SESSION['loggedIn'])) {
     $accessLevel = $row['accessID'];
 
     if ($accessLevel == 1) {
+        echo "HELLO YOU ARE SITE ADMIN";
         $sql_query = "
     SELECT U.userName, U.firstName, U.surname, AL.description 
     FROM users U, useraccess UA, accesslevel AL
