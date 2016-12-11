@@ -37,7 +37,7 @@ $row = $stmt -> fetch(PDO::FETCH_ASSOC);
 
                 var map = new google.maps.Map(document.getElementById('map'), {
                     zoom: 12,
-                    center: myCenter
+                    center: myLatLng
                 });
 
                 var myMarker = new google.maps.Marker({
