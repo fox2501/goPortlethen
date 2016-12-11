@@ -56,20 +56,21 @@ include("includes/header.php");
                         center: myLatLng
                     });
 
-                    var marker = new google.maps.Marker({
-                        position: myLatLng,
-                        map: map,
-                        title: '<?php echo $locationName ?>',
-                        draggable:true
-                    });
-                    var infowindow = new google.maps.InfoWindow({
-                        content: '<p>Marker Location:' + marker.getPosition() + '</p>'
-                    });
-
-                    google.maps.event.addListener(marker, 'click', function() {
-                        infowindow.open(map, marker);
-                    });
-                    google.maps.event.addDomListener(window, 'load', initMap);
+//                    var marker = new google.maps.Marker({
+//                        position: myLatLng,
+//                        map: map,
+//                        title: '<?php //echo $locationName ?>//',
+//                        draggable:true
+//                    });
+//
+//                    var infowindow = new google.maps.InfoWindow({
+//                        content: '<p>Marker Location:' + marker.getPosition() + '</p>'
+//                    });
+//
+//                    google.maps.event.addListener(marker, 'click', function() {
+//                        infowindow.open(map, marker);
+//                    });
+//                    google.maps.event.addDomListener(window, 'load', initMap);
                 }
             </script>
             <script async defer
