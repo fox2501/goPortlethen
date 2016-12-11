@@ -61,6 +61,14 @@ include("includes/header.php");
                         map: map,
                         title: '<?php echo $locationName ?>'
                     });
+                    var infowindow = new google.maps.InfoWindow({
+                        content: '<p>Marker Location:' + marker.getPosition() + '</p>'
+                    });
+
+                    google.maps.event.addListener(marker, 'click', function() {
+                        infowindow.open(map, marker);
+                    });
+                    google.maps.event.addDomListener(window, 'load', initialize);
                 }
             </script>
             <script async defer

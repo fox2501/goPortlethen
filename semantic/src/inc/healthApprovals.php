@@ -5,7 +5,7 @@ include("includes/dbconnect.php");
 
 if (isset($_SESSION['loggedIn'])) {
     include("includes/header.php");
-    echo "<h1 align='center'>Approvals</h1>
+    echo "<h1 align='center'>Health Content Approvals</h1>
         <div class='ui horizontal section divider'>
         </div>";
     $userID = $_SESSION['loggedIn'];
