@@ -5,7 +5,7 @@ $clubID =$_POST["deleteClub"];
 
 
 $sql = "DELETE FROM clubs WHERE clubID = ?";
-$stmt = $pdo->prepare($sql)->execute([$healthID]);
+$stmt = $pdo->prepare($sql)->execute([$clubID]);
 
 
 
