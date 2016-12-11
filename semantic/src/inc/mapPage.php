@@ -45,8 +45,7 @@ include("includes/header.php");
                 <button class='ui right floated button' onclick='/semantic/src/inc/editMap.php' type='submit'><input name='editMap' type='hidden' value='$locationID'> Edit</button>
             </form>
         </div>
-        <div class="two wide column"></div>
-        <div class="twelve wide column">
+        <div class="sixteen wide column">
             <header class='ui header'>
                 <?php echo $locationName ?>
             </header>
@@ -82,15 +81,10 @@ include("includes/header.php");
             <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsaPQGyO2SHJumHMC2k8RTYfy3z7OXIk&callback=initialize">
             </script>
         </div>
-    </div>
-    <div class='two wide column'></div>
-    <div class="ui grid">
-        <div class='two wide column'></div>
-        <div class="eight wide column">
+        <div class="sixteen wide column">
             <h3>Description</h3>
             <p><?php echo $caption ?></p>
         </div>
-        <div class='two wide column'></div>
     </div>
 </div><?php include("includes/footer.php"); ?>
 </body>
