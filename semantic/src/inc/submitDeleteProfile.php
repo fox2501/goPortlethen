@@ -13,7 +13,7 @@ $stmt->execute($userID);
 $result = $stmt->fetch();
 
 //echo $userID."<br>";
-echo $result;
+echo $result['userAccessID'];
 echo $userAccessID;
 
 //$sql = "DELETE FROM useraccess WHERE userAccessID = '?'";
