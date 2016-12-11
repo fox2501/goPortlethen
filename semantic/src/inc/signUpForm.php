@@ -39,33 +39,23 @@ $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
             </div>
             <div class="required field">
                 <label>Age</label>
-                <div class='field'>
                     <input name='age' placeholder='Please enter your age.' type='number'>
-                </div>
             </div>
             <div class="required field">
                 <label>Email Address</label>
-                <div class='field'>
                     <input name='email' placeholder='Please enter an email address.' type='text'>
-                </div>
             </div>
             <div class="required field">
                 <label>Username</label>
-                <div class='field'>
                     <input name='username' placeholder='Please enter a username.' type='text'>
-                </div>
             </div>
             <div class="required field">
                 <label>Password</label>
-                <div class='field'>
                     <input name='password' placeholder='Please enter a password.' type='password'>
-                </div>
             </div>
             <div class="required field">
                 <label>Confirm Password</label>
-                <div class='field'>
                     <input name='passwordConfirm' placeholder='Please now confirm your password.' type='password'>
-                </div>
             </div>
             <div class="required field">
                 <label>Access Requested</label> <select class="ui select dropdown" name="accessRequested">
