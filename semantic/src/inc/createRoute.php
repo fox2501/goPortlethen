@@ -33,7 +33,7 @@ include("includes/header.php");
                 });
 
                 google.maps.event.addListener(myMarker, 'dragend', function(evt){
-                    document.getElementById('current').innerHTML = '<p>Marker dropped: Current Lat: ' + evt.latLng.lat().toFixed(3) + ' Current Lng: ' + evt.latLng.lng().toFixed(3) + '<\/p>';
+                    document.getElementById('current').innerHTML = '<p>Latitude: ' + evt.latLng.lat().toFixed(3) + ' Longitude: ' + evt.latLng.lng().toFixed(3) + '<\/p>';
                 });
 
                 google.maps.event.addListener(myMarker, 'dragstart', function(evt){
