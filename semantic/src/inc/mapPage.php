@@ -33,9 +33,7 @@ include("includes/header.php");
     <title>Map Landing Page</title>
 </head>
 <body>
-<h1 class='ui centered header'>
-    Maps
-</h1>
+<h1 class='ui centered header'>Maps</h1>
 <div class="ui horizontal section divider">
     Discover Portlethen
 </div>
@@ -49,36 +47,34 @@ include("includes/header.php");
             <div id="map" style="width: 100%; height: 350px"></div>
             <script>
                 function initMap() {
-                    //var myLatLng = new google.maps.LatLng(57.061681, -2.129468);
+                    var myLatLng = new google.maps.LatLng(57.061681, -2.129468);
 
-//                    var map = new google.maps.Map(document.getElementById('map'), {
-//                        zoom: 4,
-//                        center: myLatLng
-//                    });
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        zoom: 12,
+                        center: myLatLng
+                    });
 
 
-//                    var marker = new google.maps.Marker({
-//                        position: myLatLng,
-//                        map: map,
-//                        title: '<?php //echo $locationName ?>//',
-//                        draggable:true
-//                    });
-//
-//                    var infowindow = new google.maps.InfoWindow({
-//                        content: '<p>Marker Location:' + marker.getPosition() + '</p>'
-//                    });
-//
-//                    google.maps.event.addListener(marker, 'click', function() {
-//                        infowindow.open(map, marker);
-//                    });
+                    var marker = new google.maps.Marker({
+                        position: myLatLng,
+                        map: map,
+                        title: '<?php //echo $locationName ?>',
+                        draggable:true
+                    });
+
+                    var infowindow = new google.maps.InfoWindow({
+                        content: '<p>Marker Location:' + marker.getPosition() + '<\/p>'
+                    });
+
+                    google.maps.event.addListener(marker, 'click', function() {
+                        infowindow.open(map, marker);
+                    });
 
                 }
-                //google.maps.event.addDomListener(window, 'load', initMap);
+                google.maps.event.addDomListener(window, 'load', initMap);
             </script>
-            <script async defer
-                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsaPQGyO2SHJumHMC2k8RTYfy3z7OXIk&callback=initMap">
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsaPQGyO2SHJumHMC2k8RTYfy3z7OXIk&callback=initMap">
             </script>
-
         </div>
     </div>
     <div class='two wide column'></div>
@@ -90,7 +86,6 @@ include("includes/header.php");
         </div>
         <div class='two wide column'></div>
     </div>
-</div>
-<?php include("includes/footer.php"); ?>
+</div><?php include("includes/footer.php"); ?>
 </body>
 </html>
