@@ -9,8 +9,7 @@ $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 if(strpos($url, 'newUser') !== false){
     echo "
         <div class='ui warning message'>
-      <i class='close icon'></i>
-      <div class='header'>
+      <div class='centered header'>
         You have successfully signed up. Please login!
       </div>
     </div>
