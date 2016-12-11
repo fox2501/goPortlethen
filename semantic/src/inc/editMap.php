@@ -39,7 +39,7 @@ $row = $stmt -> fetch(PDO::FETCH_ASSOC);
                 var myCenter = new google.maps.LatLng(57.061681, -2.129468);
 
                 var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 12,
+                    zoom: 13,
                     center: myLatLng
                 });
 
