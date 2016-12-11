@@ -220,8 +220,18 @@ if (isset($_SESSION['loggedIn'])) {
                                             prompt: 'You must agree to the terms and conditions'
                                         }
                                     ]
+                                },
+                                photo: {
+                                    identifier: 'img',
+                                    rules: [
+                                        {
+                                            type: 'empty',
+                                            prompt: 'Please choose a photo for the post'
+                                        }
+                                    ]
                                 }
                             }
+
                         })
                     })(jQuery);
                 </script>
