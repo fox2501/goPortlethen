@@ -74,8 +74,8 @@ include("includes/header.php");
                 }
                 function moveBus( map, marker ) {
 
-                    marker.setPosition( new google.maps.LatLng( 0, 0 ) );
-                    map.panTo( new google.maps.LatLng( 0, 0 ) );
+                    marker.setPosition( new google.maps.LatLng( <?php echo $lat ?>, <?php echo $long ?> ) );
+                    map.panTo( new google.maps.LatLng(<?php echo $lat ?>, <?php echo $long ?> ) );
 
                 };
             </script>
