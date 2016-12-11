@@ -75,7 +75,7 @@ if (isset($_SESSION['loggedIn'])) {
                         $photoURL = $row['url'];
                         if ($canAccess == '1') {
                             echo "
-            <div class='ui raised segment' style='height: 250px;'>
+            <div class='ui raised segment'>
                 <div class='ui container'>
                     <div class='ui grid'>
                         <div class='row'>
