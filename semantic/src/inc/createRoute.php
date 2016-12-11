@@ -23,6 +23,7 @@ include("includes/header.php");
 
                 var map = new google.maps.Map(document.getElementById('map'), {
                     zoom: 5,
+                    mapTypeId: google.maps.mapTypeId.ROADMAP,
                     center: latlng
 
                 });
@@ -33,7 +34,6 @@ include("includes/header.php");
                 });
 
                 var lat = google.maps.event.addListener(myMarker, 'dragend', function(evt){
-                    //document.getElementById('current').innerHTML= '<p>Latitude: ' + evt.latLng.lat().toFixed(3) + ' Longitude: ' + evt.latLng.lng().toFixed(3) + '<\/p>';
                     document.getElementById('lat').value = evt.latLng.lat().toFixed(3).toString();
                     document.getElementById('long').value = evt.latLng.lng().toFixed(3).toString();
                 });
@@ -44,8 +44,7 @@ include("includes/header.php");
 
             }
         </script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsaPQGyO2SHJumHMC2k8RTYfy3z7OXIk&callback=initMap">
-        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsaPQGyO2SHJumHMC2k8RTYfy3z7OXIk&callback=initMap"></script>
         <form action="submitCreateMap.php" class="ui form" enctype="multipart/form-data" method="post">
             <div class="field">
                 <label>Title</label> <input name="title" placeholder="Enter the title of your route." type="text">
