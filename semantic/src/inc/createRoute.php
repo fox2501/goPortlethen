@@ -33,7 +33,11 @@ include("includes/header.php");
                 });
 
                 google.maps.event.addListener(myMarker, 'dragend', function(evt){
-                    document.getElementById('current').innerHTML = '<p>Latitude: ' + evt.latLng.lat().toFixed(3) + ' Longitude: ' + evt.latLng.lng().toFixed(3) + '<\/p>';
+                    document.getElementById('lat').innerHTML = '<p>Latitude: ' + evt.latLng.lat().toFixed(3) + '<\/p>';
+                });
+
+                google.maps.event.addListener(myMarker, 'dragend', function(evt){
+                    document.getElementById('long').innerHTML = '<p>Longitude: ' + evt.latLng.lng().toFixed(3) + '<\/p>';
                 });
 
                 google.maps.event.addListener(myMarker, 'dragstart', function(evt){
@@ -64,10 +68,10 @@ include("includes/header.php");
                 </select>
             </div>
             <div class="field">
-                <label>Longitude</label> <input name="long" placeholder="Enter the location longitude." type="text">
+                <label>Latitude</label> <input name="lat" placeholder="Enter the location longitude." id = "lat" type="text">
             </div>
             <div class="field">
-                <label>Latitude</label> <input name="lat" placeholder="Enter the location latitude." type="text">
+                <label>Longitude</label> <input name="long" placeholder="Enter the location latitude." id = "long" type="text">
             </div>
             <div class="field">
                 <label>Description</label>
