@@ -38,6 +38,8 @@ while ($row = mysqli_fetch_assoc($result)) {
     <h1 align="center">
         Edit Health & Wellbeing Content
     </h1>
+    <div class="ui horizontal section divider">
+        <p>Keeping Portlethen Healthy</p>
 
     <form method ="post" action ="deleteHealth.php">
         <button class="ui red right floated button" style="float: right" type ="submit" name = "healthID" value = "<?php echo $healthContentID; ?>">Delete Health Content</button>
