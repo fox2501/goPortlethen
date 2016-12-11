@@ -39,7 +39,7 @@ include("includes/header.php");
             if ($canAccess == 1) {
                 echo "
 	<div class='four wide column'>
-		<button class='ui button'><a href='/semantic/src/inc/CreateClubPage.php'>Create Club</a></button>
+		<button class='ui green submit button' style='colour: white'><a href='/semantic/src/inc/CreateClubPage.php'>Create a Club</a></button>
 	</div>";
             }?>
             <div class="eight wide column">
@@ -47,19 +47,21 @@ include("includes/header.php");
                     <div class="inline fields">
                         <label>Filter clubs by: </label>
                         <div class="field">
-                            <div class="ui radio checkbox">
-                                <input type="radio" name="Club" checked="" tabindex="0" class="hidden" id="A-Z">
+                            <div class="ui checkbox">
+                                <input type="checkbox" tabindex="0" class="hidden" id="A-Z">
                                 <label for="A-Z">Name A-Z</label>
                             </div>
-                        </div>
-                        <div class="ui radio checkbox">
-                            <input type="radio" name="Club" tabindex="0" class="hidden" id="fee">
-                            <label for="fee">Fee does apply</label>
+
+                            <div class="ui checkbox">
+                                <input type="checkbox" tabindex="0" class="hidden" id="fee">
+                                <label for="fee">Fee does apply</label>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="four wide column">
+
                 <div class="ui fluid category search">
                     <div class="ui right floated icon input">
                         <input class="prompt" type="text" placeholder="Search clubs...">
@@ -87,7 +89,7 @@ include("includes/header.php");
     <div class='ui container'>
         <div class='ui grid'>
             <div class='ui two wide column'>
-                <div class='ui small image'>
+                <div class='ui image'>
                     <img src='$photo'>
                 </div>
             </div>

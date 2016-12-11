@@ -7,10 +7,10 @@
 <!-- Included CSS Files -->
 <!--[if lt IE 9]>
 <link rel="stylesheet" href="stylesheets/ie.css">
-<![endif]--><script type="text/javascript" src="/semantic/dist/modernizr.foundation.js"></script>
+<![endif]-->
 <!-- IE Fix for HTML5 Tags -->
 <!--[if lt IE 9]>
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<!--<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 <?
 session_start();
@@ -23,10 +23,9 @@ include("dbconnect.php");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://dl.dropbox.com/s/fc45fa0c4s1o95c/semantic.css?dl=0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
     <title>goPortlethen</title>
 </head>
 <body>
@@ -80,8 +79,13 @@ include("dbconnect.php");
                                 </a>
                             </div>
                             <div class = 'item'>
-                                <a  href = '/semantic/src/inc/approvals.php'>
-                                    <p style = 'color: black;'>Approvals</p>
+                                <a  href = '/semantic/src/inc/healthApprovals.php'>
+                                    <p style = 'color: black;'>Health Approvals</p>
+                                </a>
+                            </div>
+                            <div class = 'item'>
+                                <a  href = '/semantic/src/inc/userApprovals.php'>
+                                    <p style = 'color: black;'>Account Approvals</p>
                                 </a>
                             </div>
                         </div>

@@ -4,73 +4,89 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel = "stylesheet" type = "text/css" href = "/goportlethen/semantic/dist/semantic.css">
-    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src = "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
     <title>goPortlethen</title>
-</head>
-<?php
+</head><?php
 $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 include("includes/header.php");
 ?>
 <body>
-<div class = "ui center aligned container">
+<div class="ui center aligned container">
     <div class="ui middle aligned center aligned grid">
         <div class="column">
-            <h2 class="ui blue header">
-                <div class="content">
-                    Log-in to your account
-                </div>
-            </h2>
-            <form class="ui large form" action = "includes/checkLogin.php" method = "POST">
-                    <div class="ui stacked segment">
-                        <?php
-                        if(strpos($url, 'error=password') !== false){
-                            echo "
-                                  <div class='field error'>
-                                    <div class='ui left icon input'>
-                                        <i class='user icon'></i>
-                                        <input type='text' name='username' placeholder='Username'>
-                                    </div>
-                                  </div>
-                                  <div class='field error'>
-                                    <div class='ui left icon input'>
-                                        <i class='lock icon'></i>
-                                        <input type='password' name='password' placeholder='Password'>
-                                    </div>
-                                  </div>";
-                        } else{
-                            echo "
-                                  <div class='field'>
-                                    <div class='ui left icon input'>
-                                        <i class='user icon'></i>
-                                        <input type='text' name='username' placeholder='Username'>
-                                    </div>
-                                  </div>
-                                  <div class='field'>
-                                    <div class='ui left icon input'>
-                                        <i class='lock icon'></i>
-                                        <input type='password' name='password' placeholder='Password'>
-                                    </div>
-                                  </div>";
-                        }
-
-                        ?>
-
-                        <button class="ui fluid large blue submit button" type = "submit">Login</button>
+            <h2 class="ui blue header"></h2>
+            <div class="content">
+                <h2 class="ui blue header">Log-In to Your Account</h2>
+            </div>
+            <form action="includes/checkLogin.php" class="ui large form" method="post">
+                <div class="ui stacked segment">
+                    <div class="ui error message"></div>
+                    <?php
+                    if (strpos($url, 'error=loginerror') !== false) {
+                        echo "
+						                <div class='ui negative message'>
+						                    <div class='header'>
+						                        Incorrect username or password!
+						                    </div>
+						                </div>
+						                ";
+                    }
+                    if (strpos($url, 'error=requireApproval') !== false) {
+                        echo "
+						                <div class='ui negative message'>
+						                    <div class='header'>
+						                        Your account still requires approval!
+						                    </div>
+						                </div>
+						                ";
+                    }
+                    ?>
+                    <div class='field'>
+                        <div class='ui left icon input'>
+                            <i class='user icon'></i> <input name='username' placeholder='Username' type='text'>
+                        </div>
                     </div>
+                    <div class='field'>
+                        <div class='ui left icon input'>
+                            <i class='lock icon'></i> <input name='password' placeholder='Password' type='password'>
+                        </div>
+                    </div><button class="ui fluid large green submit button" type="submit">Login</button>
+                </div>
+                <script type="text/javascript">
+                    ;
+                    (function ($) {
+                        $('.ui.form').form({
+                            on: 'blur',
+                            fields: {
+                                usernameEmpty: {
+                                    identifier: 'username',
+                                    rules: [
+                                        {
+                                            type: 'empty',
+                                            prompt: 'Please enter your username.'
+                                        }
+                                    ]
+                                },
+                                password: {
+                                    identifier: 'password',
+                                    rules: [
+                                        {
+                                            type: 'empty',
+                                            prompt: 'Please enter your password.'
+                                        }
+                                    ]
+                                }
+                            }
+                        })
+                    })(jQuery);
+                </script>
             </form>
-
-
             <div class="ui warning message">
                 New to us? <a href="signUpForm.php">Sign Up</a>
+
             </div>
         </div>
     </div>
-    </div>
-</div>
+    <br><br><br><br><br><br>
+</div><?php include("includes/footer.php");?>
 </body>
-<?php include("includes/footer.php");?>
 </html>

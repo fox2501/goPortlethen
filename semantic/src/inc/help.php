@@ -59,6 +59,7 @@ session_start();
         </div>
     </div>
     <br>
+    <br>
     <div class = "ui container">
         <div class = "ui grid">
             <div class = "eleven wide column">

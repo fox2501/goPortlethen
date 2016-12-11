@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 include("includes/PDOConnect.php");
 if (isset($_SESSION['loggedIn'])) {
     $userID = $_SESSION['loggedIn'];
@@ -32,8 +31,7 @@ if (isset($_SESSION['loggedIn'])) {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
         <title>Create Club Page</title>
     </head>
-    <?php include("includes/dbconnect.php");
-    include("includes/header.php") ?>
+    <?php include("includes/header.php"); ?>
     <body>
     <div class="ui container">
         <form class="ui form" action="submitCCForm.php" enctype="multipart/form-data" method="POST">
@@ -59,13 +57,13 @@ if (isset($_SESSION['loggedIn'])) {
                         <input type="text" name="clubName" placeholder="Enter your club name." id="clubName">
                     </div>
                 </div>
-                <div class="field">
+                <div class="required field">
                     <label>Email Address</label>
                     <div class="field">
                         <input type="email" name="email" placeholder="Please enter your email address." id="email">
                     </div>
                 </div>
-                <div class="field">
+                <div class="required field">
                     <label>Club Category</label>
                     <select class="ui search dropdown" name="clubCategory">
                         <option value="">Select Category</option>
@@ -75,7 +73,7 @@ if (isset($_SESSION['loggedIn'])) {
                         <option value="SPORT">Sport</option>
                     </select>
                 </div>
-                <div class="field">
+                <div class="required field">
                     <label>Club Description</label>
                     <textarea rows="4" name="clubDescription"></textarea>
                 </div>
@@ -85,7 +83,7 @@ if (isset($_SESSION['loggedIn'])) {
                 </div>
                 <div class="field">
                     <label>Website URL</label>
-                    <input type="text" name="websiteURL" placeholder="Website URL">
+                    <input type="URL" name="websiteURL" placeholder="Website URL">
                 </div>
                 <div class="field">
                     <label>Please toggle if your club requires a fee: </label>
@@ -155,12 +153,9 @@ if (isset($_SESSION['loggedIn'])) {
                 <button class="ui fluid large green submit button" id="createClub" type="submit">Create Club</button>
 
                 <script type="text/javascript">
-
-                    $('createClub').on('click', function () {
-                        $('.ui.form').form('validate form');
-                    });
-
-                    $('.ui.form').form({
+                    ;
+                    (function ($) {
+                        $('.ui.form').form({
                             fields: {
                                 clubName: {
                                     identifier: 'clubName',
@@ -171,12 +166,12 @@ if (isset($_SESSION['loggedIn'])) {
                                         }
                                     ]
                                 },
-                                terms: {
-                                    identifier: 'terms',
+                                clubEmail: {
+                                    identifier: 'email',
                                     rules: [
                                         {
-                                            type: 'checked',
-                                            prompt: 'You must agree to the terms and conditions'
+                                            type: 'empty' + 'email',
+                                            prompt: 'Please enter a valid email address'
                                         }
                                     ]
                                 },
@@ -188,10 +183,47 @@ if (isset($_SESSION['loggedIn'])) {
                                             prompt: 'Please select a club category'
                                         }
                                     ]
+                                },
+                                clubDescription: {
+                                    identifier: 'clubDescription',
+                                    rules: [
+                                        {
+                                            type: 'empty',
+                                            prompt: 'Please select a club category'
+                                        }
+                                    ]
+                                },
+                                number: {
+                                    identifier: 'phoneNumber',
+                                    rules: [
+                                        {
+                                            type: 'number',
+                                            prompt: 'Please enter a valid phone number'
+                                        }
+                                    ]
+                                },
+                                url: {
+                                    identifier: 'websiteURL',
+                                    optional   : true,
+                                    rules: [
+                                        {
+                                            type: 'url',
+                                            prompt: 'Please enter a url'
+                                        }
+                                    ]
+                                },
+                                terms: {
+                                    identifier: 'terms',
+                                    rules: [
+                                        {
+                                            type: 'checked',
+                                            prompt: 'You must agree to the terms and conditions'
+                                        }
+                                    ]
                                 }
                             }
-                    })
-                    ;
+                        })
+                    })(jQuery);
                 </script>
 
         </form>
