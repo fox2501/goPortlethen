@@ -82,6 +82,7 @@ include("includes/header.php");
             </form>
             <div class="ui warning message">
                 New to us? <a href="signUpForm.php">Sign Up</a>
+
             </div>
         </div>
     </div>
