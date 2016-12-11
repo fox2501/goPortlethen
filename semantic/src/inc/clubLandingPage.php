@@ -40,6 +40,13 @@ include("includes/header.php");
                 echo "
 	<div class='four wide column'>
                 <button class='ui green submit button' style='color: white'><a href='/semantic/src/inc/CreateClubPage.php'>Create a Club</a></button>
+            
+            <style>
+            .button {
+    display: block;
+}
+</style>
+            
             </div>";
             } ?>
 
