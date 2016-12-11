@@ -9,13 +9,13 @@ $sql = "SELECT * FROM locations WHERE locationID = ?";
 $stmt = $pdo -> prepare($sql);
 $stmt -> execute([$locationID]);
 
-while($row = $stmt -> fetch(PDO::FETCH_ASSOC)){
+$row = $stmt -> fetch(PDO::FETCH_ASSOC);
     $longitude = $row['longitude'];
     $latitude = $row['latitude'];
     $locationType = $row['locationType'];
     $caption = $row['caption'];
     $locationName = $row['locationName'];
-}
+
 ?>
 <!DOCTYPE html>
 <html>
