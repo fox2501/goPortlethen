@@ -65,7 +65,7 @@ include("includes/header.php");
                     var infowindow = new google.maps.InfoWindow({
                         content: '<p>Marker Location:' + marker.getPosition() + '</p>'
                     });
-
+                    map.setZoom(5);
                     google.maps.event.addListener(marker, 'click', function() {
                         infowindow.open(map, marker);
                     });
