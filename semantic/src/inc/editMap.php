@@ -3,7 +3,7 @@ session_start();
 include ("includes/dbconnect.php");
 include("includes/header.php");
 
-$sql = ""
+$sql = "SELECT * FROM locations WHERE"
 ?>
 <!DOCTYPE html>
 <html>
