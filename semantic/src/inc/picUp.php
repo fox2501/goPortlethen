@@ -1,4 +1,4 @@
-//Include the event calendar functions file
+<?php//Include the event calendar functions file
 include_once('functions.php');
 ?>
 <!DOCTYPE html>
