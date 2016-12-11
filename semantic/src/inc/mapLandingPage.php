@@ -3,15 +3,13 @@ session_start();
 if (isset($_SESSION['loggedIn'])) {
     $userID = $_SESSION['loggedIn'];
     $canAccess = '0';
-    $sql = "SELECT userName from users WHERE userID = '$userID'";
-    $result = mysqli_query($db, $sql);
-    $row = mysqli_fetch_assoc($result);
-    $userName = $row["userName"];
+    $sql = "SELECT accessID from users U, useraccess UA WHERE U.userName = UA.userName AND U.userID = ?";
+    $stmt = $pdo -> prepare($sql);
+    $stmt -> execute([$userID]);
 
-    $sql = "SELECT accessID from useraccess where userName = '$userName'";
-    $result = mysqli_query($db, $sql);
-    $row = mysqli_fetch_assoc($result);
+    $row = $stmt -> fetch(PDO::FETCH_ASSOC);
     $accessID = $row["accessID"];
+
     if ($accessID == '1' || $accessID == '4') {
         $canAccess = '1';
     } else {
