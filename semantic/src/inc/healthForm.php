@@ -92,6 +92,15 @@ if (isset($_SESSION['loggedIn'])) {
                                         prompt: 'Please enter text to populate the main text section'
                                     }
                                 ]
+                            },
+                            photo: {
+                                identifier: 'healthPhoto',
+                                rules: [
+                                    {
+                                        type: 'empty',
+                                        prompt: 'Please choose a photo the post'
+                                    }
+                                ]
                             }
                         }
                     })
