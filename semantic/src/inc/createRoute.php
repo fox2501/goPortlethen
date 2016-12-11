@@ -67,11 +67,11 @@ include("includes/header.php");
                     </option>
                 </select>
             </div>
-            <div class="field" id = "lat">
+            <div class="field">
                 <label>Latitude</label>
                 <input name="lat" placeholder="Enter the location longitude." id = "lat" type="text">
             </div>
-            <div class="field" id = "long">
+            <div class="field">
                 <label>Longitude</label>
                 <input name="long" placeholder="Enter the location latitude." id = "long" type="text">
             </div>
