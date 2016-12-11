@@ -31,9 +31,9 @@ if (isset($_SESSION['loggedIn'])) {
     FROM users U, useraccess UA, accesslevel AL
     WHERE U.userName = UA.userName 
     AND UA.accessID = AL.accessID
-    AND U.userApproved = 0;";
+    AND U.userApproved = ?;";
      $stmt = $pdo -> prepare($sql);
-     $stmt -> execute();
+     $stmt -> execute([0]);
      WHILE($row = $stmt -> fetch(PDO::FETCH_ASSOC)){
          $userName = $row['userName'];
          $firstName = $row['firstName'];
