@@ -13,7 +13,7 @@ $userID = $_SESSION['loggedIn'];
 $sql = "SELECT userAccessID from useraccess A, users B WHERE A.userName = B.userName AND B.userID = $userID";
 //$stmt = $pdo->prepare($sql)->execute([$userID]);
 $result = mysqli_query($db, $sql);
-while($row = mysqli_fetch_array($result)){
+while($row = $result ->fetch_assoc()){
     $userAccessID = $row['userAccessID'];
 }
 
