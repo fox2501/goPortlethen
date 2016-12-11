@@ -40,6 +40,7 @@ include("includes/header.php");
                     document.getElementById('current').innerHTML = '<p>Currently dragging marker...<\/p>';
                 });
                 map.setCenter(myMarker.position);
+                map.setZoom(5);
                 myMarker.setMap(map);
             }
         </script>
