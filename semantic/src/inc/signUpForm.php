@@ -60,7 +60,7 @@ $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
             <div class="required field">
                 <label>Access Requested</label>
                 <select class="ui search dropdown" name="accessRequested">
-                    <option value="emptyDropdown"></option>
+                    <option></option>
                     <option value="contributor">
                         Contributor
                     </option>
