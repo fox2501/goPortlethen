@@ -128,8 +128,18 @@ if (isset($_SESSION['loggedIn'])) {
         <div class="six wide column">
             <div data-tockify-component="mini" data-tockify-calendar="healthevents"></div>
             <script data-tockify-script="embed" src="https://public.tockify.com/browser/embed.js"></script>
-            <button class="ui green submit button"><a href="https://tockify.com/tkf2/submitEvent/42648d506ec74f769ce92685c0fe921e"
-                                         target="_blank" style="color: white">Submit an Event</a></button>
+
+
+            <?php
+                if ($canAccess == '1') {
+
+               echo "
+                <button class=\"ui green submit button\" ><a href = \"https://tockify.com/tkf2/submitEvent/42648d506ec74f769ce92685c0fe921e\"
+                                         target = \"_blank\" style = \"color: white\" > Submit an Event </a ></button >
+            }
+            ?>
+
+
             <div style="height:600px">
                 <a class="twitter-timeline" data-height="500" href="https://twitter.com/BoringMilner">Tweets by James
                     Milner</a>
