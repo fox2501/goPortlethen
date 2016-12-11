@@ -14,7 +14,7 @@ include("includes/header.php");
         var marker;
 
         function initMap() {
-            var myLatLng = myCenter;
+            var myLatLng = {lat: 57.061681, lng: -2.129468};
 
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 4,
