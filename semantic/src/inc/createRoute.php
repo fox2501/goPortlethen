@@ -42,6 +42,10 @@ include("includes/header.php");
                 map.setCenter(myMarker.position);
                 map.setZoom(5);
                 myMarker.setMap(map);
+
+                jQuery(document).bind('em_maps_location_hook', function (e, map, infowindow, marker) {
+                    map.setZoom(5);
+                });
             }
         </script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsaPQGyO2SHJumHMC2k8RTYfy3z7OXIk&callback=initMap">
