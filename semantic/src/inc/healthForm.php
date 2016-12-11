@@ -46,14 +46,17 @@ if (isset($_SESSION['loggedIn'])) {
         <form class="ui form" action="submitHealthForm.php" enctype="multipart/form-data" method="POST"
               onsubmit="return validateForm()">
 
+            <div class="ui error message"></div>
 
-            <div class="field">
+            <div class="required field">
                 <label>Title</label>
-                <input type="text" name="title" placeholder="Enter the title of your post">
+                <div class="field">
+                    <input type="text" name="title" placeholder="Enter the title of your post">
+                </div>
             </div>
 
 
-            <div class="field">
+            <div class="required field">
                 <label>Content</label>
                 <textarea rows="8" type="text" name="mainText" placeholder="Enter the content of your post"></textarea>
             </div>
@@ -65,8 +68,36 @@ if (isset($_SESSION['loggedIn'])) {
                     <input name="healthPhoto" size="35" type="file"/>
                 </div>
             </div>
-            <button class="ui fluid large green submit button" id="createHealthContent" type="submit">Submit Content
-            </button>
+            <button class="ui fluid large green submit button" id="createHealthContent" type="submit">Submit Content</button>
+
+            <script type="text/javascript">
+                ;
+                (function ($) {
+                    $('.ui.form').form({
+                        fields: {
+                            Title: {
+                                identifier: 'title',
+                                rules: [
+                                    {
+                                        type: 'empty',
+                                        prompt: 'Please enter a Title'
+                                    }
+                                ]
+                            },
+                            mainText: {
+                                identifier: 'mainText',
+                                rules: [
+                                    {
+                                        type: 'empty',
+                                        prompt: 'Please enter text to populate the main text section'
+                                    }
+                                ]
+                            }
+                        }
+                    })
+                })(jQuery);
+            </script>
+
         </form>
     </div>
     </body>
