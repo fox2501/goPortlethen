@@ -28,7 +28,8 @@ $stmt = $pdo->prepare($sql);
 $stmt -> execute([$userAccessID]);
 
     $sql = "DELETE FROM users WHERE userID = '?'";
-    $pdo->prepare($sql)->execute([$userID]);
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$userID]);
 
     header('Location: /semantic/');
 
