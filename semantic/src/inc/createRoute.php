@@ -24,7 +24,6 @@ include("includes/header.php");
                 var map = new google.maps.Map(document.getElementById('map'), {
                     zoom: 12,
                     center: latlng
-
                 });
 
                 var myMarker = new google.maps.Marker({
