@@ -83,7 +83,7 @@ $row = $stmt -> fetch(PDO::FETCH_ASSOC);
             </div>
             <div class="field">
                 <label>Longitude</label>
-                <input name="long" placeholder="Enter the location latitude." id = "long" type="text" value = "<?php echo $longitude ?>">
+                <input name="long" placeholder="Enter the location latitude." id = "long" type="text">
             </div>
             <div class="field">
                 <label>Description</label>
