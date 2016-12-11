@@ -39,7 +39,7 @@ include("includes/header.php");
             if ($canAccess == 1) {
                 echo "
 	<div class='four wide column'>
-		<button class='ui green submit button' style='colour: white'><a href='/semantic/src/inc/CreateClubPage.php'>Create Club</a></button>
+		<button class='ui green submit button' style='colour: white'><a href='/semantic/src/inc/CreateClubPage.php'>Create a Club</a></button>
 	</div>";
             }?>
             <div class="eight wide column">
@@ -60,6 +60,7 @@ include("includes/header.php");
                 </div>
             </div>
             <div class="four wide column">
+
                 <div class="ui fluid category search">
                     <div class="ui right floated icon input">
                         <input class="prompt" type="text" placeholder="Search clubs...">
