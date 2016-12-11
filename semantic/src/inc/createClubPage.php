@@ -152,6 +152,7 @@ if (isset($_SESSION['loggedIn'])) {
                 </div>
                 <button class="ui fluid large green submit button" id="createClub" type="submit">Create Club</button>
 
+
                 <script type="text/javascript">
 
                     (function ($) {
@@ -220,8 +221,18 @@ if (isset($_SESSION['loggedIn'])) {
                                             prompt: 'You must agree to the terms and conditions'
                                         }
                                     ]
+                                },
+                                photo: {
+                                    identifier: 'img',
+                                    rules: [
+                                        {
+                                            type: 'empty',
+                                            prompt: 'Please choose a photo for the post'
+                                        }
+                                    ]
                                 }
                             }
+
                         })
                     })(jQuery);
                 </script>
