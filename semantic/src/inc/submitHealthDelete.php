@@ -10,6 +10,6 @@ $stmt = $pdo->prepare($sql)->execute([$healthID]);
 echo "$healthID";
 
 
-//header('Location: /semantic/');
+header('Location: /semantic/');
 
 ?>
