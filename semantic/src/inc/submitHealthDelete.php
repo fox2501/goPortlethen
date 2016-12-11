@@ -8,8 +8,7 @@ $sql = "DELETE FROM healthContent WHERE healthContentID = ?";
 $stmt = $pdo->prepare($sql);
 $stmt -> execute([$healthID]);
 
-session_destroy();
 
-header('Location: /semantic/?accountDeleted');
+header('Location: /semantic/);
 
 ?>
