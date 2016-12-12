@@ -11,6 +11,15 @@ session_start();
 </head>
 
 <body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
     <div class="ui stackable blue inverted footer segment" id = "footer"
     style="width:100%; height:150px">
 
