@@ -29,7 +29,7 @@ include("includes/header.php");
 <div class="ui horizontal section divider">
     Discover Portlethen
 </div>
-<div class='ui container'>
+<div class='ui stackable container'>
     <?php
     if(strpos($url, 'mapEditApproval') !== false){
     echo "
@@ -50,7 +50,7 @@ include("includes/header.php");
     ";
     }
     ?>
-    <div class='ui grid'>
+    <div class='ui stackable grid'>
         <?php
         if ($canAccess == 1) {
             echo "        <div class='three wide column'>
