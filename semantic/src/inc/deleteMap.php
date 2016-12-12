@@ -2,7 +2,7 @@
 //session begins
 session_start();
 //connects to database server
-include("includes/dbconnect.php");
+include("includes/PDOConnect.php");
 if(isset($_SESSION['loggedIn'])){
 $userID = $_SESSION['loggedIn'];
 $sql = "SELECT accessID from users U, useraccess UA WHERE U.userName = UA.userName AND U.userID = ?";
