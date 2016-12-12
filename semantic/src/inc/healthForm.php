@@ -66,7 +66,7 @@ if (isset($_SESSION['loggedIn'])) {
             </div>
 
 
-            <div class="field">
+            <div class="required field">
                 <label>Main Image</label>
                 <div class="ui fluid action input">
                     <input name="healthPhoto" size="35" type="file"/>
