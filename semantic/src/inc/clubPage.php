@@ -12,10 +12,11 @@ $accessLevel = $row['accessID'];
 
 $clubID = htmlentities($_POST['viewClub']);
 
+if(!(empty($clubID))){
 $sql = "SELECT * FROM club WHERE clubID = ?";
-$stmt = $pdo -> prepare($sql);
-$stmt -> execute([$clubID]);
-while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
+$stmt = $pdo->prepare($sql);
+$stmt->execute([$clubID]);
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $clubName = $row['clubName'];
     $category = $row['clubCategory'];
     $clubDesc = $row['clubDescription'];
@@ -30,9 +31,9 @@ if ($feeRequired == 1) {
     $feeRequired = 'No';
 }
 $sql = "SELECT * from photos WHERE clubID = ?";
-$stmt = $pdo -> prepare($sql);
+$stmt = $pdo->prepare($sql);
 $stmt->execute([$clubID]);
-while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $photoURL = $row['url'];
 }
 ?>
@@ -48,8 +49,8 @@ include("includes/header.php");
 <div class='ui stackable container'>
     <div class='ui stackable grid'>
         <?php
-        if ($accessLevel == 1 || $accessLevel == 2){
-            echo"
+        if ($accessLevel == 1 || $accessLevel == 2) {
+            echo "
                 <div class='eight wide column'>
                     <header class='ui blue huge header'>
                         $clubName Club Profile Page
@@ -65,8 +66,7 @@ include("includes/header.php");
 			            <button class='ui right floated button' type='submit'><input name='clubEvent' type='hidden' value='$clubID'> Club Events </button>
 			        </form>
 			    </div>";
-        }
-        else{
+        } else {
             echo "
                 <div class='eight wide column'>
                     <header class='ui blue huge header'>    
@@ -77,46 +77,48 @@ include("includes/header.php");
 			        <form action='clubEvents.php' class='ui form' method='post'>
 			            <button class='ui right floated button' type='submit'><input name='clubEvent' type='hidden' value='$clubID'> Club Events </button>
 			        </form>
-			    </div>"
-            ;
-        }?>
+			    </div>";
+        } ?>
 
-            <div class='four wide column'>
-                <div class='ui card'>
-                    <div class='image'><img src='<?php echo $photoURL ?>'></div>
-                </div>
+        <div class='four wide column'>
+            <div class='ui card'>
+                <div class='image'><img src='<?php echo $photoURL ?>'></div>
             </div>
-            <div class='twelve wide column'>
-                <div class='ui segment'>
-                    <h5 class='ui top attached header'>Club Category:</h5>
-                    <div class='ui attached segment'>
-                        <p><?php echo $category?></p>
-                    </div>
-                    <h5 class='ui attached header'>Club Description:</h5>
-                    <div class='ui attached segment'>
-                        <p><?php echo $clubDesc?></p>
-                    </div>
-                    <h5 class='ui attached header'>Contact Number:</h5>
-                    <div class='ui attached segment'>
-                        <p><?php echo $contactNum?></p>
-                    </div>
-                    <h5 class='ui attached header'>Website URL:</h5>
-                    <div class='ui attached segment'>
-                        <p><?php echo $websiteURL?></p>
-                    </div>
-                    <h5 class='ui attached header'>Fee Required?</h5>
-                    <div class='ui attached segment'>
-                        <p><?php echo $feeRequired?></p>
-                    </div>
-                    <h5 class='ui attached header'>Monthly Fee:</h5>
-                    <div class='ui attached segment'>
-                        <p><?php echo $feeCost?></p>
-                    </div>
+        </div>
+        <div class='twelve wide column'>
+            <div class='ui segment'>
+                <h5 class='ui top attached header'>Club Category:</h5>
+                <div class='ui attached segment'>
+                    <p><?php echo $category ?></p>
+                </div>
+                <h5 class='ui attached header'>Club Description:</h5>
+                <div class='ui attached segment'>
+                    <p><?php echo $clubDesc ?></p>
+                </div>
+                <h5 class='ui attached header'>Contact Number:</h5>
+                <div class='ui attached segment'>
+                    <p><?php echo $contactNum ?></p>
+                </div>
+                <h5 class='ui attached header'>Website URL:</h5>
+                <div class='ui attached segment'>
+                    <p><?php echo $websiteURL ?></p>
+                </div>
+                <h5 class='ui attached header'>Fee Required?</h5>
+                <div class='ui attached segment'>
+                    <p><?php echo $feeRequired ?></p>
+                </div>
+                <h5 class='ui attached header'>Monthly Fee:</h5>
+                <div class='ui attached segment'>
+                    <p><?php echo $feeCost ?></p>
                 </div>
             </div>
         </div>
-    </div><?php
+    </div>
+</div><?php
 include("includes/footer.php");
+} else{
+    header("Location: /semantic/src/inc/clubLandingPage.php?noClub");
+}
 ?>
 </body>
 </html>
