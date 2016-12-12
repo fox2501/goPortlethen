@@ -27,6 +27,7 @@ include("includes/header.php");
         <div class="row">
             <div class="column">
                 <div class='ui stackable raised segment'>
+                    <div class = 'ui error message'></div>
                     <form action="submitChangePassword.php" class="ui form" method="post">
                         <div class="field">
                             <label>New Password</label>
