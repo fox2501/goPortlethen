@@ -70,12 +70,12 @@ if (isset($_SESSION['loggedIn'])) {
 
             <div class="required field">
                 <label>Title</label>
-                <div class="field"><?php echo $title;?><input type="text" name="title">
+                <div class="field"><input type="text" name="title" value ="<?php echo $title;?>">
 
                 </div>
             </div>
             <div class="required field">
-                <label>Event Date</label> <?php echo $date;?><input type="date" name ="date">
+                <label>Event Date</label> <input type="date" name ="date" value="<?php echo $date;?>">
 
             </div>
             <div class="required field">
