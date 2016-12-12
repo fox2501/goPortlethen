@@ -41,6 +41,8 @@ include("includes/footer.php");
 else{
     header("Location: /semantic/src/inc/mapLandingPage.php?restricted");
 }
+}else{
+    header("Location: /semantic/src/inc/mapLandingPage.php?restricted");
 }
 ?>
 </body>
