@@ -78,7 +78,7 @@ include("includes/header.php");
             <div class="four wide column">
                 <div class="ui fluid category search">
                     <div class="ui right floated icon input">
-                        <form action="submitClubSearch.php" method="post">
+                        <form action="clubLandingPageSearched.php" method="post">
                             <input class="prompt" name="search" placeholder="Search clubs..." type="text">
                             <button type="submit">
                                 <i class="search icon"><?php header("Location: /semantic/src/inc/clubLandingPageSearched.php"); ?></i>
