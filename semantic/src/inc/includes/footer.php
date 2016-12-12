@@ -26,7 +26,8 @@ session_start();
                 </div>
                 <div class="three wide column">
                     <div class="ui inverted link list">
-                        <a clas="item"> </a>
+                        <a class="item"> </a>
+                        <a class="item"> </a>
                         <a class="item" href="/semantic/src/inc/help.php" target="_blank">Help</a>
                         <a class="item" href="#" target="_blank">Terms & Conditions</a>
                     </div>
@@ -34,11 +35,11 @@ session_start();
                 <!--cookies and terms links-->
                 <div class="three wide column">
                     <h4 class="ui inverted header">This website uses cookies... blah blah</h4>
+                    <h4 class="ui inverted header"> </h4>
+                    <h4 class="ui inverted header">Copyright © 2016 GoPortlethen</h4>
+
                 </div>
 
-                <div class="five wide column">
-                    <h4 class="ui inverted header">Copyright © 2016 GoPortlethen</h4>
-                </div>
 
             </div>
         </div>
