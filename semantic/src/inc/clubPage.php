@@ -59,8 +59,8 @@ if (isset($_SESSION['loggedIn'])) {
         $canAccess = '0';
     }
 }
-?>
 
+echo "
 <body>
 <div class='ui container'>
     <div class = 'ui grid'>
@@ -75,7 +75,7 @@ if (isset($_SESSION['loggedIn'])) {
                 <i class = 'ui settings icon'></i>
                     Edit Club
             </button>
-
+            
         </form>
         </div>
     </div>
@@ -130,7 +130,7 @@ if (isset($_SESSION['loggedIn'])) {
             </div>
         </div>
 </div>
-</body>
+</body>";
 
 
 
