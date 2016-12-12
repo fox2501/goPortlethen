@@ -65,7 +65,7 @@ echo"
                 <div class='ui card'>
                     <div class='image'>
                         <img
-                            src='<$photoURL>'
+                            src='$photoURL'
                     </div>
                 </div>
             </div>
@@ -75,7 +75,7 @@ echo"
                     Club Category:
                 </h5>
                 <div class='ui attached segment '>
-                    <p><$category</p>
+                    <p>$category</p>
                 </div>
                 <h5 class='ui attached header '>
                     Club Description:
