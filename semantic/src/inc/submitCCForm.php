@@ -67,6 +67,6 @@ $sql1 = "INSERT INTO photos (caption,url,clubID,locationID,healthContentID,route
 $pdo->prepare($sql1)->execute(['',$url,$clubID,0,0,0]);
 
 
-    header("location:clubLandingPage.php");
+    header("location:clubLandingPage.php?newclub");
 
 ?>
