@@ -7,13 +7,13 @@ session_start();
 include("dbconnect.php");
 
 //puts entered fields into variables
-$firstName =  $_POST["firstName"];
+$firstName = (htmlentities($_POST["firstName"])) ;
 $surname = $_POST["surname"];
 $email = $_POST["email"];
 $username = $_POST["username"];
 $password = $_POST["password"];
 $passwordConfirm = $_POST["passwordConfirm"];
-$age = $_POST["age"];
+$age = htmlentities($_POST["age"]);
 $accessRequested = $_POST["accessRequested"];
 $requireApproval = "1";
 $userApproved = "0";
