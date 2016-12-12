@@ -51,5 +51,5 @@ else{
 
 }
 
-header('Location: /semantic/');
+header('Location: /semantic/?contentEdited');
 ?>
