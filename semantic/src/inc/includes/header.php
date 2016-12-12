@@ -104,7 +104,7 @@ include("PDOConnect.php");
                 echo "  <div class = 'ui simple dropdown'>
                            <a class = 'browse item'>
                                 <i class = 'user icon'></i>
-                                " . $name . "
+                                $firstName
                                 <i class='dropdown icon'></i>
                             </a>
                         <div class = 'ui menu'>
@@ -124,7 +124,7 @@ include("PDOConnect.php");
                 echo "  <div class = 'ui simple dropdown'>
                            <a class = 'browse item'>
                                 <i class = 'user icon'></i>
-                                " . $name . "
+                                $firstName
                                 <i class='dropdown icon'></i>
                             </a>
                         <div class = 'ui menu'>
@@ -149,7 +149,7 @@ include("PDOConnect.php");
                 echo "  <div class = 'ui simple dropdown'>
                            <a class = 'browse item'>
                                 <i class = 'user icon'></i>
-                                " . $name . "
+                                $firstName
                                 <i class='dropdown icon'></i>
                             </a>
                         <div class = 'ui menu'>
