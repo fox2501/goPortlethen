@@ -3,9 +3,17 @@ session_start();
 include("includes/dbconnect.php");
 
 if(isset($_SESSION['loggedIn'])){
-    $userID = $_SESSION['loggedIn'];
-    include("includes/header.php");
-    $healthID =$_POST["healthID"];
+$userID = $_SESSION['loggedIn'];
+include("includes/header.php");
+$healthID = $_POST["healthID"];
+$canAccess = '0';
+$sql = "SELECT accessID from users U, useraccess UA WHERE U.userName = UA.userName AND userID = ?";
+$stmt = $pdo->prepare($sql);
+$stmt->execute([$userID]);
+$row = $stmt->fetch(PDO::FETCH_ASSOC);
+$accessLevel = $row["accessID"];
+
+if ($accessLevel == 1 || $accessLevel == 4) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -34,7 +42,12 @@ if(isset($_SESSION['loggedIn'])){
 </div>
 
 <?php
-    include("includes/footer.php");
+include("includes/footer.php");
+}else{
+    header("Location: /semantic/src/inc/logIn.php?restricted");
+}
+}else{
+    header("Location: /semantic/src/inc/logIn.php?restricted");
 }
 ?>
 </body>
