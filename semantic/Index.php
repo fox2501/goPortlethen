@@ -86,6 +86,8 @@ if(strpos($url, 'accountDeleted') !== false){
             Need help? Click <a href="/semantic/src/inc/help.php">here</a> for FAQs!
         </div>
     </div>
-</div><?php include("/src/inc/includes/footer.php");?>
+</div>
+</div>
+<?php include("/src/inc/includes/footer.php");?>
 </body>
 </html>
