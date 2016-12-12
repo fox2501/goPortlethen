@@ -75,7 +75,7 @@ include("includes/header.php");
         <div class="ui hidden divider"></div><?php
         $sql = "SELECT A.clubName, A.clubDescription, A.clubID, B.url FROM club A, photos B WHERE A.clubID = B.clubID";
         $stmt = $pdo -> prepare($sql);
-        $stmt -> execute();
+        $stmt -> execute([]);
         while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
             $title = $row['clubName'];
             $mainText = $row['clubDescription'];
