@@ -82,7 +82,6 @@ if (isset($_SESSION['loggedIn'])) {
                 <?php echo $clubName ?>Club Profile Page
             </header>
         </div>
-        <div class='ui stackable grid'>
             <div class='four wide column'>
                 <div class='ui card'>
                     <div class='image'><img src='<?php echo $photoURL ?>'></div>
@@ -117,8 +116,7 @@ if (isset($_SESSION['loggedIn'])) {
                 </div>
             </div>
         </div>
-    </div>
-</div><?php
+    </div><?php
 
 include("includes/footer.php");
 ?>
