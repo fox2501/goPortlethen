@@ -88,7 +88,6 @@ if (isset($_SESSION['loggedIn'])) {
                         </div>
                     <input type="URL" name="websiteURL" placeholder="Website URL" >
                 </div>
-
                 <div class="ui labeled input">
                     <div class="ui label">
                         http://
