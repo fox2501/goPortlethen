@@ -5,6 +5,7 @@ $userID = $_SESSION['loggedIn'];
 $title = $_POST["editTitle"];
 $mainText = $_POST["editMainText"];
 $healthContentID = $_POST["healthContentToEdit"];
+$approvalStatus = 1;
 
 $sql = "SELECT accessID from useraccess UA, users U where UA.userName = U.userName AND U.userID = ?";
 $stmt = $pdo->prepare($sql);
@@ -12,12 +13,14 @@ $stmt->execute([$userID]);
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $accessLevel = $row['accessID'];
 }
-
+if($accessLevel = 4){
+    $approvalStatus = 0;
+}
 //ACCESS LEVEL QUERY IS ABOVE. IF ACCESSLEVEL = 4 THEN NEEDS APPROVAL, SO UPDATE APPROVAL STATUS TO 0.
 // IF ACCESSLEVEL = 1 THEN APPROVAL STATUS IS SET TO 1. I THINK...
 
-$sql ="UPDATE healthcontent SET title = ?,mainText= ? WHERE healthContentID = ?";
-$pdo->prepare($sql)->execute([$title,$mainText,$healthContentID]);
+$sql ="UPDATE healthcontent SET title = ?,mainText= ?, approvalStatus =? WHERE healthContentID = ?";
+$pdo->prepare($sql)->execute([$title,$mainText,$healthContentID, $approvalStatus]);
 
 
 $img = $_FILES['healthPhoto'];
