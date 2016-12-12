@@ -20,7 +20,6 @@ while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
     $healthUserID = $row['userID'];
 }
 
-
 if($accessLevel == 1) {
     $canAccess = 1;
 }
