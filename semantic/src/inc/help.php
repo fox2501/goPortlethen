@@ -83,7 +83,7 @@ session_start();
         Send a message to a Site Administrator for help
     </div>
     <div class="ui segment">
-        <form class="ui form" method = "post">
+        <form class="ui form" action= "submitHelp.php" method = "post">
             <div class="ui grid">
                 <div class="four wide column">
                     <div class="field">

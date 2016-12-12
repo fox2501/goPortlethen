@@ -26,13 +26,13 @@ if (isset($_SESSION['loggedIn'])) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Club Search Results</title>
+    <title>goPortlethen</title>
 </head><?
 
 include("includes/header.php");
 ?>
 <body>
-<h1 align="center">Club Landing Page</h1>
+<h1 align="center">Club Search Results</h1>
 <div class="ui horizontal section divider">
     Become More Involved
 </div>

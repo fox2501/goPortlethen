@@ -13,10 +13,7 @@ $clubName        = $_POST["clubName"];
 $clubDescription = $_POST["clubDescription"];
 $email           = $_POST["email"];
 $contactNumber   = $_POST["phoneNumber"];
-//$feePaid         = $_POST["feeRequired"];
-if (empty($feePaid)) {
-    $feePaid = 0;
-}
+$feePaid         = $_POST["isFee"];
 $feeCost = $_POST["feeAmount"];
 if (empty($feeCost)) {
     $feeCost = 0;
@@ -67,6 +64,6 @@ $sql1 = "INSERT INTO photos (caption,url,clubID,locationID,healthContentID,route
 $pdo->prepare($sql1)->execute(['',$url,$clubID,0,0,0,0]);
 
 
-    header("location:clubLandingPage.php?newclub");
+    header("location:clubLandingPage.php?newClub");
 
 ?>

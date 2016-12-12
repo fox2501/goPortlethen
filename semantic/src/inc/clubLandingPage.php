@@ -38,11 +38,11 @@ include("includes/header.php");
 </div>
 <div class="ui stackable container">
     <?php
-    if(strpos($url, 'newclub') !== false){
+    if(strpos($url, 'newClub') !== false){
         echo "
 	            <div class='ui warning message'>
 	          <div class='centered header'>
-	            You have successfully created a club.
+	            You have successfully created a club. Please login with your new club account! 
 	          </div>
 	        </div>
 	        ";
@@ -74,16 +74,20 @@ include("includes/header.php");
                     </div>
                 </div>
             </div>
+
             <div class="four wide column">
                 <div class="ui fluid category search">
                     <div class="ui right floated icon input">
                         <form action="submitClubSearch.php" method="post">
-                            <input class="prompt" placeholder="Search clubs..." type="text">
-                            <button><i class="search icon"><?php header("Location: /semantic/src/inc/clubLandingPageSearched.php"); ?></i></button>
+                            <input class="prompt" name="search" placeholder="Search clubs..." type="text">
+                            <button type="submit">
+                                <i class="search icon"><?php header("Location: /semantic/src/inc/clubLandingPageSearched.php"); ?></i>
+                            </button>
                         </form>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </div>

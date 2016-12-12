@@ -1,11 +1,11 @@
 <?php
 session_start();
-include("includes/PDOConnect.php");
+//connects to database server
+include("includes/dbconnect.php");
 
-$clubCategory = $_POST['clubCategory'];
+$clubCategory = $_POST["search"];
 
-$sql = "SELECT * FROM clubs WHERE clubCaterogy = ?";
+$sql = "SELECT * FROM clubs WHERE $clubCategory = clubs.clubCategory";
 
-
-header ("Location: /semantic/src/inc/clubLandingPageSearched.php");
+header("Location: /semantic/src/inc/clubLandingPageSearched.php");
 ?>

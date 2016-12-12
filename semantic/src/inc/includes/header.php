@@ -31,7 +31,7 @@ include("dbconnect.php");
 </head>
 <body>
 <!--Main site buttons-->
-<div class="ui blue inverted secondary pointing stackable menu">
+<div class="ui stackable blue inverted secondary pointing menu">
     <a class="header item" href="/semantic">
         <i class="home icon"></i>
         goPortlethen
@@ -53,7 +53,7 @@ include("dbconnect.php");
         Help
     </a>
     <!--Access levels check for various logged in users-->
-    <div class="ui blue inverted right stackable menu">
+    <div class="ui stackable blue inverted right menu">
         <?php
         if (isset($_SESSION['loggedIn'])) {
             $userID = $_SESSION['loggedIn'];
