@@ -6,7 +6,7 @@ include("includes/PDOConnect.php");
 if (isset($_SESSION['loggedIn'])) {
     $userID = $_SESSION['loggedIn'];
     $canAccess = '0';
-    $sql = "SELECT accessID from users U, useraccess UA WHERE U.userName = UA.userNamem AND userID = ?";
+    $sql = "SELECT accessID from users U, useraccess UA WHERE U.userName = UA.userName AND userID = ?";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([$userID]);
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
