@@ -84,7 +84,7 @@ include("includes/header.php");
 include("includes/footer.php");
 }
 else {
-    header("Location: /semantic/src/inc/logIn.php");
+    header("Location: /semantic/src/inc/logIn.php?restricted");
 }
 ?>
 </body>
