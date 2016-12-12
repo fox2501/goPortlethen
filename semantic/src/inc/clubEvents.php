@@ -28,6 +28,9 @@ if (isset($_SESSION['loggedIn'])) {
         $canAccess = '0';
     }
 }
+else{
+    $canAccess = 0;
+}
 $sql = 'SELECT * FROM club WHERE clubID = ?';
 $stmt = $pdo->prepare($sql);
 $stmt->execute([$clubID]);
