@@ -59,8 +59,8 @@ if (isset($_SESSION['loggedIn'])) {
         $canAccess = '0';
     }
 }
+?>
 
-echo "
 <body>
 <div class='ui container'>
     <div class = 'ui grid'>
@@ -70,13 +70,12 @@ echo "
         <div class = 'eight wide column'>
         <form class = 'ui form' method = 'POST' action = 'editClubPage.php' onclick = '/semantic/src/inc/editClubPage.php'>
             
-            if ($canAccess = '1'){
             <button class = 'ui right floated button' onclick = '/semantic/src/inc/editClubPage.php' type = 'submit'>
                 <input type = 'hidden' name = 'editClub' value = $clubID>
                 <i class = 'ui settings icon'></i>
                     Edit Club
             </button>
-            }
+
         </form>
         </div>
     </div>
@@ -131,7 +130,7 @@ echo "
             </div>
         </div>
 </div>
-</body>";
+</body>
 
 
 
