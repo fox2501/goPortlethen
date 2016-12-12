@@ -65,11 +65,11 @@ if (isset($_SESSION['loggedIn'])) {
 <div class='ui container'>
     <div class = 'ui grid'>
         <div class = 'eight wide column'>
-            <header class = 'ui blue huge header'>$clubName Club Profile Page</header>
+            <header class = 'ui blue huge header'><?php echo"$clubName"?> Club Profile Page</header>
         </div>
 
         <?php
-            if ($canAccess == 1) {
+            if ($canAccess == '1') {
         echo "<div class = 'eight wide column'>
         <form class = 'ui form' method = 'POST' action = 'editClubPage.php' onclick = '/semantic/src/inc/editClubPage.php'>
             <button class = 'ui right floated button' onclick = '/semantic/src/inc/editClubPage.php' type = 'submit'>
@@ -87,7 +87,7 @@ if (isset($_SESSION['loggedIn'])) {
                 <div class='ui card'>
                     <div class='image'>
                         <img
-                            src='$photoURL'>
+                            src='<?php echo"$photoURL"?>'>
                     </div>
                 </div>
             </div>
