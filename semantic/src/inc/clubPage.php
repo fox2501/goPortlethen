@@ -68,25 +68,20 @@ if (isset($_SESSION['loggedIn'])) {
 <body>
 <div class='ui stackable container'>
     <div class='ui stackable grid'>
-        <div class='eight wide column'>
+        <?php
+        if ($canAccess == 1){
+            echo"
+	<div class='sixteen wide column'>
+		<form action='editClubPage.php' class='ui form' method='post'>
+			<button class='ui right floated button' type='submit'><input name='editClub' type='hidden' value=\"$clubID\"> <i class='ui settings icon'></i> Edit Club</button>
+		</form>
+	</div>";
+        }?>
+        <div class='sixteen wide column'>
             <header class='ui blue huge header'>
                 <?php echo $clubName ?> Club Profile Page
             </header>
         </div>
-        <?php
-        if ($canAccess == 1){
-            echo"
-        <div class='eight wide column'>
-            <form action='editClubPage.php' class='ui form' method='post' onclick='/semantic/src/inc/editClubPage.php'>
-					            <button class = 'ui right floated button' onclick = '/semantic/src/inc/editClubPage.php' type = 'submit'>
-					                <input type = 'hidden' name = 'editClub' value = $clubID>
-					                <i class = 'ui settings icon'></i>
-					                    Edit Club
-					            </button>";
-                }?>
-            </form>
-        </div>
-    </div>
     <div class='ui stackable grid'>
         <div class='four wide column'>
             <div class='ui card'>
@@ -122,6 +117,7 @@ if (isset($_SESSION['loggedIn'])) {
             </div>
         </div>
     </div>
+</div>
 </div>
 <?php
 
