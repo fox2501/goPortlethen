@@ -119,7 +119,7 @@ while($row = mysqli_fetch_array($result)) {
 </div><?php
 include("includes/footer.php");
 } else{
-    header("Location: /semantic/");
+    header("Location: /semantic/src/inc/logIn.php");
 }
 ?>
 </body>
