@@ -135,9 +135,10 @@ if ($canAccess == '1') {
         </div>
 </div>
 </body>";
+}
 
 
-    if ($canAccess == '0') {
+    else if ($canAccess == '0') {
         echo "<body>
 <div class='ui container'>
     <div class = 'ui grid'>
@@ -197,8 +198,8 @@ if ($canAccess == '1') {
             </div>
         </div>
 </div>
-</body>\";
+</body>";
+}
 
-    
 include("includes/footer.php");
 ?>
