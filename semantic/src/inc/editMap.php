@@ -44,7 +44,7 @@ include("includes/header.php");
     if(!($accessLevel == 4)){
         echo "
             <form method ='post' action ='deleteMap.php'>
-                <button class='ui red right floated button' type ='submit' name = 'deleteMap' value = '<?php echo $locationID ?>'>Delete Map</button>
+                <button class='ui red right floated button' type ='submit' name = 'deleteMap' value = '$locationID'>Delete Map</button>
             </form>
         ";
     }
