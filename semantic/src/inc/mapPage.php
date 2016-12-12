@@ -84,9 +84,9 @@ if(!(empty($locationID))) {
             }
             ?>
             <div class="sixteen wide column">
-                <header class='ui header'>
+                <h1 class='ui header'>
                     <?php echo $locationName ?>
-                </header>
+                </h1>
                 <div id="map" style="width: 100%; height: 350px"></div>
                 <script>
                     function initialize() {
