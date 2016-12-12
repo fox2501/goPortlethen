@@ -71,6 +71,7 @@ if(strpos($url, 'accountDeleted') !== false){
             </div>
             ";
         }
+
         ?>
         <div class="sixteen wide column">
             <div class="ui huge blue centered header">
