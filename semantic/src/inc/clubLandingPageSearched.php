@@ -2,7 +2,7 @@
 //session begins
 session_start();
 //connects to database server
-include("includes/dbconnect.php");
+include("includes/PDOConnect.php");
 //access levels
 if (isset($_SESSION['loggedIn'])) {
     $userID = $_SESSION['loggedIn'];
@@ -24,11 +24,7 @@ if (isset($_SESSION['loggedIn'])) {
 }
 
 
-$clubCategory = $_POST["search"];
 
-$sql = "SELECT * FROM clubs WHERE $clubCategory = ?";
-$stmt = $pdo->prepare($sql);
-$stmt->execute([$clubCategory]);
 ?>
 <!DOCTYPE html>
 <html>
@@ -47,7 +43,11 @@ include("includes/header.php");
 <div class="ui stackable container">
     <div class="ui stackable grid">
         <div class="ui hidden divider"></div><?php
-        $sql_query = "SELECT A.clubName, A.clubDescription, A.clubID, B.url FROM club A, photos B WHERE A.clubID = B.clubID";
+        $clubCategory = $_POST["search"];
+        $sql_query = "SELECT A.clubName, A.clubDescription, A.clubID, B.url FROM club A, photos B WHERE A.clubID = B.clubID
+AND $clubCategory = ?";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([$clubCategory]);
         $result = $db->query($sql_query);
         while ($row = $result->fetch_array()) {
             $title = $row['clubName'];
