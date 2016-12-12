@@ -76,6 +76,15 @@ include("includes/header.php");
     </div>
     ";
     }
+    if(strpos($url, 'restricted') !== false){
+        echo "
+    <div class='ui error message'>
+        <div class='centered header'>
+            You do not have access to that page.
+        </div>
+    </div>
+    ";
+    }
     ?>
     <div class='ui stackable grid'>
         <?php
