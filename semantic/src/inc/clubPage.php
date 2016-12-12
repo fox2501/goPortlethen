@@ -47,7 +47,7 @@ include("includes/header.php");
     <div class='ui grid'>
         <div class='eight wide column'>
             <header class='ui blue huge header'>
-                $clubName Club Profile Page
+                <?php echo $clubName ?> Club Profile Page
             </header>
         </div><?php
         if($accessLevel == 1 || $accessLevel == 2){
@@ -62,7 +62,7 @@ include("includes/header.php");
         ?>
         <div class='four wide column'>
             <div class='ui card'>
-                <div class='image'><img src='<?php $photoURL ?>'></div>
+                <div class='image'><img src='<?php echo $photoURL ?>'></div>
             </div>
         </div>
         <div class='twelve wide column'>
