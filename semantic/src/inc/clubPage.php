@@ -59,12 +59,8 @@ if (isset($_SESSION['loggedIn'])) {
         $canAccess = '0';
     }
 }
+?>
 
-echo"";
-
-
-if ($canAccess == '1') {
-    echo "
 <body>
 <div class='ui container'>
     <div class = 'ui grid'>
@@ -74,12 +70,12 @@ if ($canAccess == '1') {
         <div class = 'eight wide column'>
         <form class = 'ui form' method = 'POST' action = 'editClubPage.php' onclick = '/semantic/src/inc/editClubPage.php'>
             
-            <!-- If ordinary user, hide this button -->
             <button class = 'ui right floated button' onclick = '/semantic/src/inc/editClubPage.php' type = 'submit'>
                 <input type = 'hidden' name = 'editClub' value = $clubID>
                 <i class = 'ui settings icon'></i>
                     Edit Club
             </button>
+
         </form>
         </div>
     </div>
@@ -134,72 +130,9 @@ if ($canAccess == '1') {
             </div>
         </div>
 </div>
-</body>";
-}
+</body>
 
 
-    else if ($canAccess == '0') {
-        echo "<body>
-<div class='ui container'>
-    <div class = 'ui grid'>
-        <div class = 'eight wide column'>
-            <header class = 'ui blue huge header'>$clubName Club Profile Page</header>
-        </div>
-        
-    </div>
-    <div class='ui grid'>
-            <div class='four wide column'>
-                <div class='ui card'>
-                    <div class='image'>
-                        <img
-                            src='$photoURL'>
-                    </div>
-                </div>
-            </div>
-            <div class = 'twelve wide column'>
-            <div class='ui segment '>
-                <h5 class='ui top attached header '>
-                    Club Category:
-                </h5>
-                <div class='ui attached segment '>
-                    <p>$category</p>
-                </div>
-                <h5 class='ui attached header '>
-                    Club Description:
-                </h5>
-                <div class='ui attached segment '>
-                    <p>$clubDesc</p>
-                </div>
-                <h5 class='ui attached header '>
-                    Contact Number:
-                </h5>
-                <div class='ui attached segment '>
-                    <p>$contactNum</p>
-                </div>
-                <h5 class='ui attached header '>
-                    Website URL:
-                </h5>
-                <div class='ui attached segment '>
-                    <p>$websiteURL</p>
-                </div>
-                <h5 class='ui attached header '>
-                    Fee Required?
-                </h5>
-                <div class='ui attached segment '>
-                    <p>$feeRequired</p>
-                </div>
-                <h5 class='ui attached header '>
-                    Monthly Fee:
-                </h5>
-                <div class='ui attached segment '>
-                    <p>$feeCost</p>
-                </div>
-            </div>
-            </div>
-        </div>
-</div>
-</body>";
-}
 
 include("includes/footer.php");
 ?>
