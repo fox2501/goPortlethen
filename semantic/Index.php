@@ -48,8 +48,8 @@ if(strpos($url, 'accountDeleted') !== false){
 <div class="ui stackable container">
     <div class="ui stackable grid">
         <div class="sixteen wide column">
-            <form action='editHomePage.php' class='ui form' method='post' onclick='/semantic/src/inc/editHomePage.php'>
-                <button class='ui right floated button' onclick='/semantic/src/inc/editHomePage.php' type='submit'><input name='editHome' type='hidden' value = '<?php echo $contentID ?>'> <i class='ui settings icon'></i> Edit Home</button>
+            <form action='editHome.php' class='ui form' method='post' onclick='/semantic/src/inc/editHome.php'>
+                <button class='ui right floated button' onclick='/semantic/src/inc/editHome.php' type='submit'><input name='editHome' type='hidden' value = '<?php echo $contentID ?>'> <i class='ui settings icon'></i> Edit Home</button>
             </form>
         </div>
         <div class="sixteen wide column">
