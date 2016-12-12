@@ -20,7 +20,7 @@ if (isset($_SESSION['loggedIn'])) {
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
     $accessID = $row["accessID"];
     usleep(10000);
-    $sql = "SELECT userID FROM clubs WHERE userID =?";
+    $sql = "SELECT userID FROM club WHERE userID =?";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([$userID]);
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
