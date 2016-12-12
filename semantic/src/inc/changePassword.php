@@ -12,7 +12,7 @@ include("includes/header.php");
     <title>goPortlethen</title>
 </head>
 <body>
-<div class="ui container" style="height:80%">
+<div class="ui container">
     <div class="ui two column grid">
         <div class="ui column">
             <div class="ui huge blue header">

@@ -26,7 +26,7 @@ while($row = mysqli_fetch_array($result)) {
 ?>
 <!--main body-->
 <body>
-<div class="ui container" style="height:70%">
+<div class="ui container">
     <div class="ui three column grid">
         <div class="eight wide column">
             <div class="ui huge blue header">
