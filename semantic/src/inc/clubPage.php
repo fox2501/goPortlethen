@@ -59,8 +59,8 @@ include("includes/header.php");
 			        </form>
 			    </div>
 			    <div class='four wide column'>
-			        <form action='editClubPage.php' class='ui form' method='post'>
-			            <button class='ui right floated button' type='submit'><input name='editClub' type='hidden' value='$clubID'> <i class='ui settings icon'></i> Edit Club</button>
+			        <form action='clubEvents.php' class='ui form' method='post'>
+			            <button class='ui right floated button' type='submit'><input name='clubEvent' type='hidden' value='$clubID'> Club Events </button>
 			        </form>
 			    </div>";
         }
@@ -72,10 +72,11 @@ include("includes/header.php");
                 </header>
                 </div>
 			    <div class='eight wide column'>
-			        <form action='editClubPage.php' class='ui form' method='post'>
-			            <button class='ui right floated button' type='submit'><input name='editClub' type='hidden' value='$clubID'> <i class='ui settings icon'></i> Edit Club</button>
+			        <form action='clubEvents.php' class='ui form' method='post'>
+			            <button class='ui right floated button' type='submit'><input name='clubEvent' type='hidden' value='$clubID'> Club Events </button>
 			        </form>
-			    </div>";
+			    </div>"
+            ;
         }?>
 
             <div class='four wide column'>

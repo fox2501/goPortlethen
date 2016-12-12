@@ -38,11 +38,11 @@ include("includes/header.php");
 </div>
 <div class="ui stackable container">
     <?php
-    if(strpos($url, 'newclub') !== false){
+    if(strpos($url, 'newClub') !== false){
         echo "
 	            <div class='ui warning message'>
 	          <div class='centered header'>
-	            You have successfully created a club.
+	            You have successfully created a club. Please login with your new club account! 
 	          </div>
 	        </div>
 	        ";
