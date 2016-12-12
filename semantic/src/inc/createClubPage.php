@@ -98,9 +98,9 @@ if (isset($_SESSION['loggedIn'])) {
                     <div class="ui checkbox">
                         <label for="feeRequired1">Requires Free</label>
                         <input type="checkbox" tabindex="0" class="hidden" id="feeRequired1">
-                    </div>
-                    <div>
-                        <input type="number" name="feeRequired2">
+                        <div class="ui right labeled input">
+                        <div class="ui label">$</div><input type="number" name="feeRequired2">
+                            </div>
                     </div>
                 </div>
 
