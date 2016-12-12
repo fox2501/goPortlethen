@@ -2,7 +2,7 @@
 session_start();
 //connects to database server
 include("includes/PDOConnect.php");
-$locationID =$_POST["deleteMap"];
+$locationID =htmlentities($_POST["deleteMap"]);
 
 
 $sql = "DELETE FROM locations WHERE locationID = ?";

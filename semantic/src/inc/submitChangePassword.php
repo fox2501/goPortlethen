@@ -3,8 +3,8 @@ session_start();
 //connects to database server
 include("includes/dbconnect.php");
 
-$password = $_POST["passwordOne"];
-$passwordConfirm = $_POST["passwordConfirm"];
+$password = htmlentities($_POST["passwordOne"]);
+$passwordConfirm = htmlentities($_POST["passwordConfirm"]);
 $userID = $_SESSION['loggedIn'];
 //checks passwords match
 if(!(empty($password)) && (!(empty($passwordConfirm)))){

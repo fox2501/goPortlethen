@@ -9,16 +9,19 @@ error_reporting(E_ALL);
 //connects to database server
 include("includes/PDOConnect.php");
 $userID          = $_SESSION['loggedIn'];
-$clubName        = $_POST["clubName"];
-$clubDescription = $_POST["clubDescription"];
-$email           = $_POST["email"];
-$contactNumber   = $_POST["phoneNumber"];
-$feePaid         = $_POST["isFee"];
-$feeCost = $_POST["feeAmount"];
+$clubName        = htmlentities($_POST["clubName"]);
+$clubDescription = htmlentities($_POST["clubDescription"]);
+$email           = htmlentities($_POST["email"]);
+$contactNumber   = htmlentities($_POST["phoneNumber"]);
+$feePaid         = htmlentities($_POST["isFee"]);
+$feeCost = htmlentities($_POST["feeAmount"]);
 if (empty($feeCost)) {
     $feeCost = 0;
 }
-$clubCategory = $_POST["clubCategory"];
+if (empty($feePaid)) {
+    $feePaid = 0;
+}
+$clubCategory = htmlentities($_POST["clubCategory"]);
 
 
 $img = $_FILES['img'];

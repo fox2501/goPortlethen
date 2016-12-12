@@ -3,12 +3,12 @@ session_start();
 //connects to database server
 include("includes/PDOConnect.php");
 
-$title = $_POST["title"];
-$mapType = $_POST["mapType"];
-$long = $_POST["long"];
-$lat = $_POST["lat"];
-$desc = $_POST["mapDesc"];
-$userID = $_SESSION["loggedIn"];
+$title = htmlentities($_POST["title"]);
+$mapType = htmlentities($_POST["mapType"]);
+$long = htmlentities($_POST["long"]);
+$lat = htmlentities($_POST["lat"]);
+$desc = htmlentities($_POST["mapDesc"]);
+$userID = htmlentities($_SESSION["loggedIn"]);
 $approvalStatus = 1;
 
 $userID = $_SESSION['loggedIn'];;

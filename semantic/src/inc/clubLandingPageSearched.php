@@ -2,7 +2,12 @@
 //session begins
 session_start();
 //connects to database server
-include("includes/dbconnect.php");
+include("includes/PDOConnect.php");
+
+$clubCategory = $_POST["search"];
+
+
+
 //access levels
 if (isset($_SESSION['loggedIn'])) {
     $userID = $_SESSION['loggedIn'];
@@ -22,13 +27,14 @@ if (isset($_SESSION['loggedIn'])) {
         $canAccess = '0';
     }
 }
+
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <title>goPortlethen</title>
-</head><?
-
+</head>
+<?
 include("includes/header.php");
 ?>
 <body>
@@ -39,10 +45,14 @@ include("includes/header.php");
 
 <div class="ui stackable container">
     <div class="ui stackable grid">
-        <div class="ui hidden divider"></div><?php
-        $sql_query = "SELECT A.clubName, A.clubDescription, A.clubID, B.url FROM club A, photos B WHERE A.clubID = B.clubID";
-        $result = $db->query($sql_query);
-        while ($row = $result->fetch_array()) {
+        <div class="ui hidden divider"></div>
+        <?php
+        $sql_query = "SELECT A.clubName, A.clubDescription, A.clubID, B.url FROM club A, photos B
+                      WHERE A.clubID = B.clubID
+                      AND $clubCategory = 'ART'";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([$clubCategory]);
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             $title = $row['clubName'];
             $mainText = $row['clubDescription'];
             $clubID = $row['clubID'];

@@ -4,8 +4,8 @@ session_start();
 
 include("PDOConnect.php");
 
-$username = $_POST["username"];
-$password = $_POST["password"];
+$username = htmlentities($_POST["username"]);
+$password = htmlentities($_POST["password"]);
 
 $sql = "SELECT * FROM users WHERE username = ?";
 $stmt = $pdo -> prepare($sql);
@@ -31,8 +31,6 @@ else {
     $stmt -> execute([$username, $hashpass]);
     while($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
         $_SESSION['loggedIn'] = $row['userID'];
-        $_SESSION['name'] = $row['firstName'];
-        $_SESSION['surname'] = $row['surname'];
     }
     header('Location: /semantic/');
 }
