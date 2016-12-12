@@ -34,6 +34,7 @@ $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
                     Welcome to goPortlethen!
                 </div>
                 <p>Please fill out the form below to sign up</p>
+
             </div>
             <div class="required field">
                 <label>First Name</label>
