@@ -1,77 +1,91 @@
 <?php
-//session begins
+// Begin session
 session_start();
-//connects to database server
+
+// Connect to DB server
 include("includes/dbconnect.php");
+
 if (isset($_SESSION['loggedIn'])) {
-include("includes/header.php");
+    include("includes/header.php");
 ?>
+
 <!DOCTYPE html>
 <html>
-<head>
-    <title>goPortlethen</title>
-</head>
+    <head>
+        <title>goPortlethen</title>
+    </head>
+
 <body>
-<div class="ui container">
-    <div class="ui two column grid">
-        <div class="ui column">
-            <div class="ui huge blue header">
-                Change Password
+    <!-- Begin container -->
+    <div class="ui container">
+        <!-- Heading -->
+        <div class="ui two column grid">
+            <div class="ui column">
+                <div class="ui huge blue header">Change Password</div>
             </div>
         </div>
-    </div><!--changing password logic-->
-    <div class="ui grid">
-        <div class="row">
-            <div class="column">
-                <form action="submitChangePassword.php" class="ui form" method="post">
-                    <div class="ui error message"></div>
-                    <div class="field">
-                        <label>New Password</label> <input name="passwordOne" type="password" value=''>
-                    </div>
-                    <div class="field">
-                        <label>Confirm Password</label> <input name="passwordConfirm" type="password" value=''>
-                    </div><button class="ui fluid large green submit button" type="submit">Submit</button>
-                    <script type="text/javascript">
-                        ;
-                        (function ($) {
-                            $('.ui.form').form({
-                                on: 'blur',
-                                fields: {
-                                    passwordOne: {
-                                        identifier: 'passwordOne',
-                                        <!--checks password is atleast 8 chars and if not gives error message-->
-                                        rules: [
-                                            {
-                                                type: 'minLength[8]',
-                                                prompt: 'Please ensure your password is atleast 8 characters!'
+        <!-- Main body -->
+        <div class="ui grid">
+            <div class="row">
+                <div class="column">
+                    <form action="submitChangePassword.php" class="ui form" method="post">
+
+                        <!-- IS THIS NEEDED???? -->
+                        <!--<div class="ui error message"></div>-->
+
+                        <div class="field">
+                            <label>New Password</label> <input name="passwordOne" type="password" value=''>
+                        </div>
+                        <div class="field">
+                            <label>Confirm Password</label> <input name="passwordConfirm" type="password" value=''>
+                        </div>
+                        <button class="ui fluid large green submit button" type="submit">Submit</button>
+
+                        <!-- Begin validation -->
+                        <script type="text/javascript">
+                            (function ($) {
+                                $('.ui.form').form({
+                                    on: 'blur',
+                                    fields: {
+                                        passwordOne: {
+                                            identifier: 'passwordOne',
+                                            rules: [
+                                                {
+                                                    // Password must be at least 8 characters long
+                                                    type: 'minLength[8]',
+                                                    prompt: 'Please ensure your password is at least 8 characters!'
+                                                }
+                                            ]
+                                        },
+                                            passwordConfirm: {
+                                                identifier: 'passwordConfirm',
+                                                rules: [
+                                                    {
+                                                        // Passwords entered must match
+                                                        type: 'match[passwordOne]',
+                                                        prompt: 'Please ensure your passwords match!'
+                                                    },
+                                                    {
+                                                        type: 'minLength[8]',
+                                                        prompt: 'Please confirm your password ensuring it is atleast 8 characters!'
+                                                    }
+                                                ]
                                             }
-                                        ]
-                                    },
-                                    passwordConfirm: {
-                                        identifier: 'passwordConfirm',
-                                        <!--makes sure same passwords are entered-->
-                                        rules: [
-                                            {
-                                                type: 'match[passwordOne]',
-                                                prompt: 'Please ensure your passwords match!'
-                                            },
-                                            {
-                                                type: 'minLength[8]',
-                                                prompt: 'Please confirm your password ensuring it is atleast 8 characters!'
-                                            }
-                                        ]
-                                    }
-                                }
-                            })
-                        })(jQuery);
-                    </script>
-                </form>
+                                        }
+                                    })
+                                })
+                            (jQuery);
+                        </script>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div><?php
+
+<?php
 include("includes/footer.php");
-} else{
+}
+else {
     header("Location: /semantic/src/inc/logIn.php");
 }
 ?>
