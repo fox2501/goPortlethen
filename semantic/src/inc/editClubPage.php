@@ -65,15 +65,15 @@ $('#dropdown')
     <form method='post' action='deleteClub.php'>
         <button class='ui red right floated button' type='submit' name='clubID' value='$clubID' >Delete Club</button>
     </form>
-	<div class='ui container'>
-		<div class='ui grid'>
+	<div class='ui stackable container'>
+		<div class='ui stackable grid'>
 			<div class='eight wide column'>
 				<header class='ui blue huge header'>
 					Edit club: $clubName
 				</header>
 			</div>
 		</div>
-		<div class='ui grid'>
+		<div class='ui stackable grid'>
 			<div class='four wide column'>
 				<div class='ui card'>
 					<div class='image'><img src='$photoURL'></div>

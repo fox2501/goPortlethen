@@ -35,7 +35,7 @@ if (isset($_SESSION['loggedIn'])) {
     </head>
     <?php include("includes/header.php"); ?>
     <body>
-    <div class="ui container">
+    <div class="ui stackable container">
         <form class="ui form" action="submitCCForm.php" enctype="multipart/form-data" method="POST">
             <h1 align="center">
                 <div class="content">
