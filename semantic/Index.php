@@ -49,6 +49,7 @@ if(strpos($url, 'newUser') !== false){
 	        </div>
 	        ";
 }
+
 if(strpos($url, 'accountDeleted') !== false){
     echo "
 	            <div class='ui error message'>
