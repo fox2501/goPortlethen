@@ -11,7 +11,8 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 $accessLevel = $row['accessID'];
 
 $clubID = htmlentities($_POST['viewClub']);
-if(isset($clubID)){
+
+if(!(empty($clubID))){
 $sql = "SELECT * FROM club WHERE clubID = ?";
 $stmt = $pdo->prepare($sql);
 $stmt->execute([$clubID]);
