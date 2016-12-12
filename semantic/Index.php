@@ -42,9 +42,6 @@ if(strpos($url, 'accountDeleted') !== false){
                     Welcome to goPortlethen.org.uk
                 </div>
             </div>
-            <div class = "column">
-
-            </div>
         </div>
         <div class="row">
             <div class="column"><img class="ui medium centered circular image" src="https://scontent.flhr4-1.fna.fbcdn.net/v/t1.0-9/13434842_1608517786105160_4523080997776743356_n.jpg?oh=4981b2761c2ef40c4989fc4b74bd440a&oe=58C6B38A"></div>
