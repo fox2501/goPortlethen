@@ -83,11 +83,6 @@ if (isset($_SESSION['loggedIn'])) {
 					                <input type = 'hidden' name = 'editClub' value = $clubID>
 					                <i class = 'ui settings icon'></i>
 					                    Edit Club
-					            </button>
-					            <button class = 'ui right floated button' onclick = '/semantic/src/inc/createClubEvent.php' type = 'submit'>
-					                <input type = 'hidden' name = 'createClubEvent' value = $clubID>
-					                <i class = 'ui settings icon'></i>
-					                    Create Club Event
 					            </button>";
                 }?>
             </form>
