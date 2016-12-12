@@ -140,6 +140,10 @@ $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
                                     type: 'empty',
                                     prompt: 'Please enter your age.'
                                 }
+                                {
+                                    type: integer[1..100]',
+                                    prompt: 'Please enter an arge between 1 and 100.'
+                                }
                             ]
                         },
                         usernameEmpty: {
