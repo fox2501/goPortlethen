@@ -28,6 +28,8 @@ session_start();
                     <div class="ui inverted link list">
                         <a class="item"> </a>
                         <a class="item"> </a>
+                        <a class="item"> </a>
+                        <a class="item"> </a>
                         <a class="item" href="/semantic/src/inc/help.php" target="_blank">Help</a>
                         <a class="item" href="#" target="_blank">Terms & Conditions</a>
                     </div>
