@@ -104,7 +104,7 @@ $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
                             rules: [
                                 {
                                     type: 'empty',
-                                    prompt: 'Please select a value!'
+                                    prompt: 'Please select an access level!'
                                 }
                             ]
                         },
