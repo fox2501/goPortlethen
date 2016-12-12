@@ -66,36 +66,15 @@ include("includes/header.php");
     }
     ?>
     <div class="ui stackable grid">
-        <div class="row">
-            <?php
-            if ($accessLevel == 1 || $accessLevel == 2) {
-                echo "
-				                <div class='four wide column'>
+        <?php
+        if ($accessLevel == 1 || $accessLevel == 2) {
+            echo "
+				                <div class='sixteen wide column'>
 				                    <a href='createClubPage.php'>
 				                        <button class='ui green submit button' style='margin-right:50px'>Create a club</button>
 				                    </a>      
 				                </div>
 				                ";}?>
-            <div class="eight wide column">
-                <div class="ui form">
-                    <div class="inline fields">
-                        <label>Filter clubs by:</label>
-                        <div class="field">
-                            <div class="ui checkbox">
-                                <input class="hidden" id="A-Z" tabindex="0" type="checkbox"> <label for="A-Z">Name A-Z</label>
-                            </div>
-                            <div class="ui checkbox">
-                                <input class="hidden" id="fee" tabindex="0" type="checkbox"> <label for="fee">Fee does apply</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="ui stackable container">
-    <div class="ui stackable grid">
         <div class="ui hidden divider"></div><?php
         $sql = "SELECT A.clubName, A.clubDescription, A.clubID, B.url FROM club A, photos B WHERE A.clubID = B.clubID";
         $stmt = $pdo -> prepare($sql);
