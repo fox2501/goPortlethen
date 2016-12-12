@@ -77,13 +77,10 @@ if(strpos($url, 'newUser') !== false){
             <div class="four wide column">
                 <div class="ui fluid category search">
                     <div class="ui right floated icon input">
-                        <form action="submitClubSearch.php" method="post">
+                        <form action="clubLandingPageSearched.php" method="post">
                             <input class="prompt" placeholder="Search clubs..." type="text">
                             <button><i class="search icon"><?php header("Location: /semantic/src/inc/clubLandingPageSearched.php"); ?></i></button>
                         </form>
-                        <!-- User types in search query
-                        Find corresponding clubs with that category/name
-                        Echo them here -->
                     </div>
                 </div>
             </div>
