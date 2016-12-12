@@ -93,7 +93,7 @@ if (isset($_SESSION['loggedIn'])) {
                     </div>
                 </div>-->
 
-                <div class="field">
+                <div class="inline field">
                     <label>Please check if your club requires a fee: </label>
                     <div class="ui checkbox">
                         <input type="checkbox" tabindex="0" class="hidden" id="feeRequired1">
