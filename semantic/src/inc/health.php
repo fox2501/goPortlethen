@@ -46,7 +46,7 @@ if (isset($_SESSION['loggedIn'])) {
 
 <div class="ui stackable container">
     <?php
-    if(strpos($url, 'newUser') !== false){
+    if(strpos($url, 'restricted') !== false){
         echo"
         <div class = 'ui warning message'>
         <h3 class = 'ui header''>
