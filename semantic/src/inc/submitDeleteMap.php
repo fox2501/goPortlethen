@@ -11,7 +11,8 @@ $locationID = $_POST["deleteMap"];
 echo $locationID;
 
 $sql = "DELETE FROM locations WHERE locationID = ?";
-$stmt = $pdo->prepare($sql)->execute([$locationID]);
+$stmt = $pdo->prepare($sql);
+$stmt -> execute([$locationID]);
 
 //header('Location: /semantic/src/inc/mapLandingPage.php?DeletedMap');
 
