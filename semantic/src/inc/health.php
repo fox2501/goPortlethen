@@ -4,6 +4,7 @@
 session_start();
 //connects to database server
 include("includes/dbconnect.php");
+$url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 
 if (isset($_SESSION['loggedIn'])) {
     $userID = $_SESSION['loggedIn'];
@@ -44,6 +45,18 @@ if (isset($_SESSION['loggedIn'])) {
 </div>
 
 <div class="ui stackable container">
+    <?php
+    if(strpos($url, 'newUser') !== false){
+        echo"
+        <div class = 'ui warning message'>
+        <h3 class = 'ui header''>
+        You can only edit content that you have submitted!
+        </h3>
+    </div>
+    ";
+    }
+    ?>
+
     <div class="ui two column stackable grid">
         <div class="ten wide column">
             <?php

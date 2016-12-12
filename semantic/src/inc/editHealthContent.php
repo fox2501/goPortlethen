@@ -118,7 +118,7 @@ while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
 <?php
 include("includes/footer.php");
 } else {
-    header("Location: /semantic/src/inc/mapLandingPage?restricted");
+    header("Location: /semantic/src/inc/health?restricted");
 }
 };
 ?>
