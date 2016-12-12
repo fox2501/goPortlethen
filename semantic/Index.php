@@ -33,15 +33,15 @@ if(strpos($url, 'accountDeleted') !== false){
 ?>
 <div class="ui stackable container">
     <div class="ui stackable grid">
-        <div class="fourteen wide column">
-            <div class="ui huge blue centered header">
-                Welcome to goPortlethen.org.uk
-            </div>
-        </div>
-        <div class="two wide column">
+        <div class="sixteen wide column">
             <form action='editHomePage.php' class='ui form' method='post' onclick='/semantic/src/inc/editHomePage.php'>
                 <button class='ui right floated button' onclick='/semantic/src/inc/editHomePage.php' type='submit'><input name='editHome' type='hidden'> <i class='ui settings icon'></i> Edit Home</button>
             </form>
+        </div>
+        <div class="sixteen wide column">
+            <div class="ui huge blue centered header">
+                Welcome to goPortlethen.org.uk
+            </div>
         </div>
         <div class="sixteen wide column">
             <div class="column"><img class="ui medium centered circular image" src="https://scontent.flhr4-1.fna.fbcdn.net/v/t1.0-9/13434842_1608517786105160_4523080997776743356_n.jpg?oh=4981b2761c2ef40c4989fc4b74bd440a&oe=58C6B38A"></div>
