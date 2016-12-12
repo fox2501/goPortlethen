@@ -46,7 +46,7 @@ include("includes/header.php");
 <div class='ui stackable container'>
     <div class='ui stackable grid'>
         <?php
-        if ($accessLevel == 1 || $accessLevel == 3){
+        if ($accessLevel == 1 || $accessLevel == 2){
             echo"
 			    <div class='sixteen wide column'>
 			        <form action='editClubPage.php' class='ui form' method='post'>
