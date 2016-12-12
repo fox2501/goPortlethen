@@ -1,10 +1,19 @@
 <?php
 session_start();
-include("includes/dbconnect.php");
+include("includes/PDOConnect.php");
+
+$userID = $_SESSION['loggedIn'];
+$sql = "SELECT userAccessID from useraccess A, users B WHERE A.userName = B.userName AND B.userID = ?";
+$stmt = $pdo->prepare($sql);
+$stmt->execute([$userID]);
+$row = $stmt->fetch(PDO::FETCH_ASSOC);
+$userAccessID = $row['userAccessID'];
+
 $clubID = $_POST['viewClub'];
-$sql = "SELECT * FROM club WHERE clubID = '$clubID'";
-$result = $db->query($sql);
-while ($row = $result->fetch_array()) {
+$sql = "SELECT * FROM club WHERE clubID = ?";
+$stmt = $pdo -> prepare($sql);
+$stmt -> execute([$clubID]);
+while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
     $clubName = $row['clubName'];
     $category = $row['clubCategory'];
     $clubDesc = $row['clubDescription'];
@@ -18,9 +27,10 @@ if ($feeRequired == 1) {
 } else {
     $feeRequired = 'No';
 }
-$sql = "SELECT * from photos WHERE clubID = $clubID";
-$result = $db->query($sql);
-while ($row = $result->fetch_array()) {
+$sql = "SELECT * from photos WHERE clubID = ?";
+$stmt = $pdo -> prepare($sql);
+$stmt->execute([$clubID]);
+while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
     $photoURL = $row['url'];
 }
 ?>

@@ -39,7 +39,10 @@ include("includes/header.php");
             if ($canAccess == 1) {
                 echo "
 	<div class='four wide column'>
-        <button class='ui green submit button' type='submit' formtarget='/semantic/src/inc/createClubPage.php' id='link'>Create a Club</button>    
+	                            <a href='createClubPage.php'>
+                                    <button class='ui green submit button' style='margin-right:50px'>Create a club</button>
+                                </a>
+
                   
                   <style>
                   
