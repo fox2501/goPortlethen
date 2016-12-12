@@ -67,7 +67,7 @@ if(strpos($url, 'accountDeleted') !== false){
             echo "
             <div class='eight wide column'>
                 <div class='ui huge blue centered header'>
-                    <?php echo $title ?>
+                    $title
                 </div>
             </div>
             <div class='eight wide column'>
@@ -80,7 +80,7 @@ if(strpos($url, 'accountDeleted') !== false){
             echo"
         <div class='sixteen wide column'>
             <div class='ui huge blue centered header'>
-                <?php echo $title ?>
+                $title
             </div>
         </div>
         ";
