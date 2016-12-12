@@ -16,12 +16,12 @@ session_start();
 </head><?php include("includes/header.php"); ?>
 <!--main body-->
 <body>
-<h2 class="ui center aligned header">Help Page</h2>
-<div class="ui container">
-    <div class="ui horizontal section divider">
-        FAQs
-    </div>
-    <div class="ui three column grid">
+<h1 align="center">FAQS</h1>
+<div class="ui horizontal section divider">
+    <p>Here to help!</p>
+</div>
+<div class="ui stackable container">
+    <div class="ui stackable three column grid">
         <div class="row">
             <div class="column">
                 <div class="ui header">

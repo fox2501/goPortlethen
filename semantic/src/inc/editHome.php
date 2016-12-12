@@ -31,7 +31,7 @@ $caption = $row['caption'];
 <body>
 <!--main body-->
 <!-- Form -->
-<div class="ui container">
+<div class="ui stackable container">
     <h1 align="center">Edit Home Page Content</h1>
     <div class="ui horizontal section divider">
         <p>Give users a good first impression!</p>

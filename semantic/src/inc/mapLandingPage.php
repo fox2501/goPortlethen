@@ -27,7 +27,7 @@ include("includes/header.php");
 <body>
 <h1 align="center">Map Landing Page</h1>
 <div class="ui horizontal section divider">
-    Discover Portlethen
+    <p>Discover North kincardineshire</p>
 </div>
 <div class='ui stackable container'>
     <?php

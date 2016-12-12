@@ -50,7 +50,7 @@ while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
 <!-- Form -->
 
 
-<div class="ui container">
+<div class="ui stackable container">
     <h1 align="center">
         Edit Health & Wellbeing Content
     </h1>

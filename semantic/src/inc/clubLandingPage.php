@@ -32,22 +32,22 @@ if (isset($_SESSION['loggedIn'])) {
 include("includes/header.php");
 ?>
 <body>
-<?php
-if(strpos($url, 'newUser') !== false){
-    echo "
-	            <div class='ui warning message'>
-	          <div class='centered header'>
-	            You have successfully craeted a club.
-	          </div>
-	        </div>
-	        ";
-}
-?>
 <h1 align="center">Club Landing Page</h1>
 <div class="ui horizontal section divider">
     Become More Involved
 </div>
 <div class="ui stackable container">
+    <?php
+    if(strpos($url, 'newclub') !== false){
+        echo "
+	            <div class='ui warning message'>
+	          <div class='centered header'>
+	            You have successfully created a club.
+	          </div>
+	        </div>
+	        ";
+    }
+    ?>
     <div class="ui stackable grid">
         <div class="row">
             <?php

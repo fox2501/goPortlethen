@@ -102,7 +102,7 @@ if (isset($_SESSION['loggedIn'])) {
     }
     ?>
 
-    <div class="ui two column stackable grid">
+    <div class="ui stackable two column grid">
         <div class="ten wide column">
             <?php
             if ($canAccess == '1') {
