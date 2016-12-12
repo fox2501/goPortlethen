@@ -28,7 +28,7 @@ if (isset($_SESSION['loggedIn'])) {
     }
     ?>
     <body>
-    <div class="ui container">
+    <div class="ui container" style="height:100%">
         <div class = "ui two column grid">
             <div class = "ui column">
                 <div class = "ui huge blue header">

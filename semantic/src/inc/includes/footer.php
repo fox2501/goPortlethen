@@ -11,7 +11,7 @@ session_start();
 </head>
 
 <body>
-    <div class="ui blue inverted footer segment" id = "footer" style = "position:fixed; height: 150px; width: 100%">
+    <div class="ui blue inverted footer segment" id = "footer" style = "position:absolute; height: 150px; width: 100%">
 
         <div class="ui center aligned container">
             <div class="ui stackable inverted grid">
