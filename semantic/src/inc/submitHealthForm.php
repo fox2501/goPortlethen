@@ -7,7 +7,7 @@ $userID = $_SESSION["loggedIn"];
 $title = $_POST["title"];
 $mainText = $_POST["mainText"];
 
-//checknig username
+//checking username
 $sql = "SELECT userName from users WHERE userID = ?";
 $stmt = $pdo->prepare($sql);
 $stmt->execute([$userID]);
