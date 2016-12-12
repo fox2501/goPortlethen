@@ -107,7 +107,7 @@ include("dbconnect.php");
                 echo "  <div class = 'ui simple dropdown'>
                            <a class = 'browse item'>
                                 <i class = 'user icon'></i>
-                                " . $_SESSION['name'] . "
+                                " . $name . "
                                 <i class='dropdown icon'></i>
                             </a>
                         <div class = 'ui menu'>
@@ -127,7 +127,7 @@ include("dbconnect.php");
                 echo "  <div class = 'ui simple dropdown'>
                            <a class = 'browse item'>
                                 <i class = 'user icon'></i>
-                                " . $_SESSION['name'] . "
+                                " . $name . "
                                 <i class='dropdown icon'></i>
                             </a>
                         <div class = 'ui menu'>
@@ -152,7 +152,7 @@ include("dbconnect.php");
                 echo "  <div class = 'ui simple dropdown'>
                            <a class = 'browse item'>
                                 <i class = 'user icon'></i>
-                                " . $_SESSION['name'] . "
+                                " . $name . "
                                 <i class='dropdown icon'></i>
                             </a>
                         <div class = 'ui menu'>
