@@ -36,11 +36,12 @@ while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
     $photoURL = $row['url'];
 }
 ?>
-    <head>
-        <meta charset="UTF-8">
-        <title>Club Page</title>
-    </head>
-<?php
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Club Page</title>
+</head><?php
 include("includes/header.php");
 //checks user access level can view club
 if (isset($_SESSION['loggedIn'])) {
@@ -64,8 +65,8 @@ if (isset($_SESSION['loggedIn'])) {
 //echoes out club page main body
 echo "
 <body>
-<div class='ui container'>
-    <div class = 'ui grid'>
+<div class='ui stackable container'>
+    <div class = 'ui stackable grid'>
         <div class = 'eight wide column'>
             <header class = 'ui blue huge header'>$clubName Club Profile Page</header>
         </div>
@@ -82,7 +83,7 @@ echo "
         </form>
         </div>
     </div>
-    <div class='ui grid'>
+    <div class='ui stackable grid'>
             <div class='four wide column'>
                 <div class='ui card'>
                     <div class='image'>
@@ -139,3 +140,6 @@ echo "
 
 include("includes/footer.php");
 ?>
+<body>
+</body>
+</html>
