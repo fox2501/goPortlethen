@@ -88,7 +88,7 @@ if (isset($_SESSION['loggedIn'])) {
     <?php
     include("includes/footer.php");
 } else{
-    echo "You do not have permission to view this page.";
+    header("Location: /semantic/src/inc/logIn.php");
 }
 ?>
 
