@@ -91,22 +91,7 @@ $clubName = $row['clubName'];
             </div>
             <div class='ui hidden section divider'></div>
         ";
-                        echo "
-            <div class='ui raised segment'>
-                <div class='ui stackable container'>
-                    <div class='ui stackable grid'>
-                        <div class='four wide column'>
-                            <h3 class='ui header' id='title'>$title</h3>
-                            <h4 class='ui header' id='datePosted'>$created</h4>
-                        </div>
-                        <div class='eight wide column'>
-                            <p id='mainText' style='text - align:justify'>$description<br></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class='ui hidden section divider'></div>
-                                        ";
+
 
                 } ?>
             </ul>
