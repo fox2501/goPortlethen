@@ -1,8 +1,8 @@
 <?php
 session_start();
-include("includes/dbconnect.php");
 include("includes/PDOConnect.php");
 if (isset($_SESSION['loggedIn'])) {
+$canAccess = 0;
 $userID = $_SESSION['loggedIn'];
 $sql = "SELECT A.accessID from useraccess A, users B WHERE A.userName = B.userName AND B.userID = ?";
 $stmt = $pdo->prepare($sql);
@@ -11,11 +11,14 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 $accessLevel = $row['accessID'];
 
 $healthContentID = $_POST['editHealth'];
-$sql = "SELECT userID from healthcontent where healthContentID = $healthContentID";
-$result = mysqli_query($db, $sql);
-while ($row = mysqli_fetch_assoc($result)) {
+$sql = "SELECT userID from healthcontent where healthContentID = ?";
+$stmt = $pdo -> prepare($sql);
+$stmt -> execute([$healthContentID]);
+
+while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
     $healthUserID = $row['userID'];
 }
+
 if($accessLevel = 1) {
     $canAccess = 1;
 }
@@ -23,9 +26,10 @@ if($healthUserID = $userID) {
     $canAccess = 1;
 }
 if ($canAccess = 1) {
-$sql = "SELECT * from healthcontent WHERE healthContentID = $healthContentID";
-$result = mysqli_query($db, $sql);
-while ($row = mysqli_fetch_assoc($result)) {
+$sql = "SELECT * from healthcontent WHERE healthContentID = ?";
+$stmt = $pdo -> prepare($sql);
+$stmt -> execute([$healthContentID]);
+while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
     $title = $row['title'];
     $mainText = $row['mainText'];
     $healthContentID = $row['healthContentID'];
