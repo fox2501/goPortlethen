@@ -85,14 +85,23 @@ if (isset($_SESSION['loggedIn'])) {
                     <label>Website URL</label>
                     <input type="URL" name="websiteURL" placeholder="Website URL" value="http://">
                 </div>
-                <div class="field">
+                <!--<div class="field">
                     <label>Please toggle if your club requires a fee: </label>
                     <div class="ui toggle checkbox">
                         <input type="checkbox" name="feeRequired" tabindex="0" class="hidden" id="isFee" value="0">
                         <label for="isFee">Fee does apply</label>
                     </div>
+                </div>-->
+
+                <div class="field">
+                    <label>Please check if your club requires a fee: </label>
+                    <div class="ui checkbox">
+                        <input type="checkbox" tabindex="0" class="hidden" id="feeRequired">
+                        <label for="A-Z">Name A-Z</label>
+                    </div>
                 </div>
-                <div class="field" id="feeAmount" style="display: none;">
+
+                <!--<div class="field" id="feeAmount" style="display: none;">
                     <label>Please enter your clubs monthly fee (e.g. 10.00): </label>
                     <div class="ui  right labeled input">
                         <div class="ui label">£</div>
@@ -112,7 +121,7 @@ if (isset($_SESSION['loggedIn'])) {
                             }
 
                         }
-                    </script>
+                    </script>-->
                 </div>
                 <div class="field">
                     <label>Please upload your clubs profile picture: </label>

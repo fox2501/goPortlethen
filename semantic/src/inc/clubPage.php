@@ -59,25 +59,28 @@ if (isset($_SESSION['loggedIn'])) {
         $canAccess = '0';
     }
 }
+?>
 
-echo "
 <body>
 <div class='ui container'>
     <div class = 'ui grid'>
         <div class = 'eight wide column'>
             <header class = 'ui blue huge header'>$clubName Club Profile Page</header>
         </div>
-        <div class = 'eight wide column'>
+
+        <?php
+            if ($canAccess == 1) {
+        echo "<div class = 'eight wide column'>
         <form class = 'ui form' method = 'POST' action = 'editClubPage.php' onclick = '/semantic/src/inc/editClubPage.php'>
-            
             <button class = 'ui right floated button' onclick = '/semantic/src/inc/editClubPage.php' type = 'submit'>
                 <input type = 'hidden' name = 'editClub' value = $clubID>
                 <i class = 'ui settings icon'></i>
-                    Edit Club
-            </button>
+        Edit Club
+        </button>
             
         </form>
-        </div>
+        </div>"
+                ?>
     </div>
     <div class='ui grid'>
             <div class='four wide column'>
@@ -94,45 +97,46 @@ echo "
                     Club Category:
                 </h5>
                 <div class='ui attached segment '>
-                    <p>$category</p>
+                    <p><?php echo"$category"?></p>
                 </div>
                 <h5 class='ui attached header '>
                     Club Description:
                 </h5>
                 <div class='ui attached segment '>
-                    <p>$clubDesc</p>
+                    <p><?php echo"$clubDesc"?></p>
                 </div>
                 <h5 class='ui attached header '>
                     Contact Number:
                 </h5>
                 <div class='ui attached segment '>
-                    <p>$contactNum</p>
+                    <p><?php echo"$contactNum"?></p>
                 </div>
                 <h5 class='ui attached header '>
                     Website URL:
                 </h5>
                 <div class='ui attached segment '>
-                    <p>$websiteURL</p>
+                    <p><?php echo"$websiteURL"?></p>
                 </div>
                 <h5 class='ui attached header '>
                     Fee Required?
                 </h5>
                 <div class='ui attached segment '>
-                    <p>$feeRequired</p>
+                    <p><?php echo"$feeRequired"?></p>
                 </div>
                 <h5 class='ui attached header '>
                     Monthly Fee:
                 </h5>
                 <div class='ui attached segment '>
-                    <p>$feeCost</p>
+                    <p><?php echo"$feeCost"?></p>
                 </div>
             </div>
             </div>
         </div>
 </div>
-</body>";
+</body>
 
 
-
+<?php
 include("includes/footer.php");
 ?>
+</html>
