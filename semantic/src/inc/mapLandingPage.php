@@ -34,7 +34,7 @@ include("includes/header.php");
         if ($canAccess == 1) {
             echo "        <div class='three wide column'>
 			                        <a href = 'createMap.php'>
-			                            <button class='ui left floating positive fluid button'>Create Route</button>
+			                            <button class='ui left floating positive fluid button'>Create Map Content</button>
 			                        </a>
 			                    </div>";
         }

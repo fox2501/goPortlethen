@@ -18,7 +18,7 @@ if($accessLevel == 1 || $accessLevel == 3 || $accessLevel == 4) {
     <!DOCTYPE html>
     <html>
     <head>
-        <title></title>
+        <title>Create Map Content</title>
     </head>
     <body>
     <h1 align="center">Submit Map Content</h1>
