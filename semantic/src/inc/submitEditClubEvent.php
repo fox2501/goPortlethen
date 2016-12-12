@@ -10,15 +10,9 @@ $mainText = htmlentities($_POST['mainText']);
 if (isset($_SESSION['loggedIn'])) {
     $userID = $_SESSION['loggedIn'];
     $canAccess = '0';
-    $sql = "SELECT userName from users WHERE userID = ?";
+    $sql = "SELECT accessID from users U, useraccess UA WHERE U.userName = UA.userName AND userID = ?";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([$userID]);
-    $row = $stmt->fetch(PDO::FETCH_ASSOC);
-    $userName = $row["userName"];
-
-    $sql = "SELECT accessID from useraccess where userName = ? ";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([$userName]);
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
     $accessID = $row["accessID"];
 
@@ -27,10 +21,10 @@ if (isset($_SESSION['loggedIn'])) {
     } else {
         $canAccess = '0';
     };
-    $clubID = $_POST['editClubEvent'];
+
 }
 
-$sql = 'UPDATE clubEvents SET title =? ,date =?,description = ?,clubID = ?';
+$sql = 'UPDATE clubEvents SET title =? ,date =?,description = ? WHERE clubID = ?';
 $stmt = $pdo->prepare($sql)->execute([$title,$date,$mainText,$clubID]);
 
 header("location: /semantic/src/inc/clublandingpage.php");
