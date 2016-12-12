@@ -50,7 +50,7 @@ include("includes/header.php");
         $sql_query = "SELECT A.clubName, A.clubDescription, A.clubID, B.url FROM club A, photos B
                       WHERE A.clubID = B.clubID
                       AND $clubCategory = ?";
-        $stmt = $pdo->prepare($sql);
+        $stmt = $pdo->prepare($sql_query);
         $stmt->execute([$clubCategory]);
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             $title = $row['clubName'];
@@ -74,7 +74,7 @@ include("includes/header.php");
 			                            </div>
 			                            <div class='extra'>
 			                                <form action='/semantic/src/inc/clubPage.php' class='ui form' method='post'>
-			                                    <button class='ui right floated button' onclick='/semantic/src/inc/clubPage.php' type='submit'><input name='viewClub' type='hidden' value=\"$clubID\"> For more info click here!</button>
+			                                    <button class='ui right floated button' onclick='/semantic/src/inc/clubPage.php' type='submit'><input name='viewClub' type='hidden' value='$clubID'> For more info click here!</button>
 			                                </form>
 			                            </div>
 			                            </div>

@@ -1,28 +1,26 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 //session begins
 session_start();
 //connects to database server
-include("includes/dbconnect.php");
+include("includes/PDOConnect.php");
 $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 //access levels
-if (isset($_SESSION['loggedIn'])) {
     $userID = $_SESSION['loggedIn'];
     $canAccess = '0';
-    $sql = "SELECT userName from users WHERE userID = '$userID'";
-    $result = mysqli_query($db, $sql);
-    $row = mysqli_fetch_assoc($result);
-    $userName = $row["userName"];
-
-    $sql = "SELECT accessID from useraccess where userName = '$userName'";
-    $result = mysqli_query($db, $sql);
-    $row = mysqli_fetch_assoc($result);
-    $accessID = $row["accessID"];
-    if ($accessID == '1' || $accessID == '2') {
-        $canAccess = '1';
+    $sql = "SELECT accessID from users U, useraccess UA WHERE U.userName = UA.userName AND userID = ?";
+    $stmt = $pdo -> prepare($sql);
+    $stmt -> execute([$userID]);
+    $row = $stmt -> fetch(PDO::FETCH_ASSOC);
+    $userName = $row['userName'];
+    $accessLevel = $row['accessID'];
+    if ($accessLevel == 1 || $accessLevel == 2) {
+        $canAccess = 1;
     } else {
-        $canAccess = '0';
+        $canAccess = 0;
     }
-}
 ?>
 <!DOCTYPE html>
 <html>
@@ -75,18 +73,18 @@ include("includes/header.php");
                 </div>
             </div>
 
-            <div class="four wide column">
-                <div class="ui fluid category search">
-                    <div class="ui right floated icon input">
-                        <form action="clubLandingPageSearched.php" method="post">
-                            <input class="prompt" name="search" placeholder="Search clubs..." type="text">
-                            <button type="submit">
-                                <i class="search icon"><?php header("Location: /semantic/src/inc/clubLandingPageSearched.php"); ?></i>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
+<!--            <div class="four wide column">-->
+<!--                <div class="ui fluid category search">-->
+<!--                    <div class="ui right floated icon input">-->
+<!--                        <form action="clubLandingPageSearched.php" method="post">-->
+<!--                            <input class="prompt" name="search" placeholder="Search clubs..." type="text">-->
+<!--                            <button type="submit">-->
+<!--                                <i class="search icon">--><?php //header("Location: /semantic/src/inc/clubLandingPageSearched.php"); ?><!--</i>-->
+<!--                            </button>-->
+<!--                        </form>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
 
         </div>
     </div>
@@ -96,9 +94,9 @@ include("includes/header.php");
 <div class="ui stackable container">
     <div class="ui stackable grid">
         <div class="ui hidden divider"></div><?php
-        $sql_query = "SELECT A.clubName, A.clubDescription, A.clubID, B.url FROM club A, photos B WHERE A.clubID = B.clubID";
-        $result = $db->query($sql_query);
-        while ($row = $result->fetch_array()) {
+        $sql = "SELECT A.clubName, A.clubDescription, A.clubID, B.url FROM club A, photos B WHERE A.clubID = B.clubID";
+        $stmt = $pdo -> prepare($sql) -> execute();
+        while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
             $title = $row['clubName'];
             $mainText = $row['clubDescription'];
             $clubID = $row['clubID'];
