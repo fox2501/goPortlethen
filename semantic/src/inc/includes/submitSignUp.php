@@ -22,7 +22,7 @@ $userApproved = "0";
 $accessLevel = "0";
 
 //sql statement that takes username entered
-$sql = "SELECT username FROM users WHERE username = ?";
+$sql = "SELECT userName FROM users WHERE userName = ?";
 $stmt = $pdo -> prepare($sql);
 $stmt -> execute([$username]);
 $usernameCheck = $stmt->rowCount();
