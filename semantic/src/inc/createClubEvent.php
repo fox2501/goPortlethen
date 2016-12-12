@@ -28,7 +28,7 @@ if (isset($_SESSION['loggedIn'])) {
         $canAccess = '1';
     } else {
         $canAccess = '0';
-        header("location: /semantic/src/inc/logIn.php");
+        header("location: /semantic/src/inc/logIn?restricted.php");
     };
     $clubID = $_POST['createClubEvent']
     ?>
@@ -117,4 +117,7 @@ if (isset($_SESSION['loggedIn'])) {
     <?php include("includes/footer.php"); ?>
 
     </html>
-<?php }; ?>
+<?php }
+else{
+    header("location: /semantic/src/inc/logIn?restricted.php");
+}?>
