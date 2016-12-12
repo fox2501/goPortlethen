@@ -84,11 +84,14 @@ $clubName = $row['clubName'];
                         <div class='seven wide column'>
                             <p id='mainText' style='text - align:justify'>$description<br></p>
                         </div>
+                        if($canAccess == 1){
                         <div class='two wide column'>
                             <form action='editClubEvent.php' class='ui form' method='post'>
                                 <button class='ui right floated mini button' onclick='/semantic/src/inc/editClubEvent.php' type='submit'><input name='editClub' type='hidden' value='$clubID'>Edit</button> 
                             </form>
                         </div>
+                        }
+                        
                     </div>
                 </div>
             </div>
