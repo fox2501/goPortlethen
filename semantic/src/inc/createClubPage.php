@@ -7,22 +7,13 @@ $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 if (isset($_SESSION['loggedIn'])) {
 $userID = $_SESSION['loggedIn'];
 $canAccess = '0';
-$sql = "SELECT userName from users WHERE userID = ?";
+$sql = "SELECT accessID from users U, useraccess UA WHERE U.userName = UA.userName AND userID = ?";
 $stmt = $pdo->prepare($sql);
 $stmt->execute([$userID]);
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
-$userName = $row["userName"];
+$accessLevel = $row["accessID"];
 
-$sql = "SELECT accessID from useraccess where userName = ? ";
-$stmt = $pdo->prepare($sql);
-$stmt->execute([$userName]);
-$row = $stmt->fetch(PDO::FETCH_ASSOC);
-$accessID = $row["accessID"];
-if ($accessID == '1' || $accessID == '2') {
-    $canAccess = '1';
-} else {
-    $canAccess = '0';
-}
+if ($accessLevel == 1 || $accessLevel == 2) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -253,6 +244,11 @@ if ($accessID == '1' || $accessID == '2') {
         <i class="icon help"></i> Already signed up? <a href="/semantic/src/inc/logIn.php">Login here</a> instead.
     </div>
 </div><?php include("includes/footer.php"); ?><?php
+} else{
+    header("Location: /semantic/src/inc/logIn.php?restricted");
+}
+} else{
+    header("Location: /semantic/src/inc/logIn.php?restricted");
 }
 ?>
 </body>
