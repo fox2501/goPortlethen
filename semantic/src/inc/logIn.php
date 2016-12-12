@@ -41,6 +41,15 @@ include("includes/header.php");
 						                </div>
 						                ";
                     }
+                    if (strpos($url, 'restricted') !== false) {
+                        echo "
+						                <div class='ui negative message'>
+						                    <div class='header'>
+						                        You do not have permission to access that page.
+						                    </div>
+						                </div>
+						                ";
+                    }
                     ?>
                     <div class='field'>
                         <div class='ui left icon input'>

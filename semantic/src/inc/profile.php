@@ -7,28 +7,34 @@ if (isset($_SESSION['loggedIn'])) {
     <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="/goportlethen/semantic/dist/semantic.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
-        <title>goPortlethen</title>
+        <title>My Profile</title>
     </head>
     <?php
     include("includes/header.php");
-    include("includes/dbconnect.php");
+    include("includes/PDOConnect.php");
     $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
     $userID = $_SESSION['loggedIn'];
-    $sql = "SELECT firstName, surname, age, emailAddress FROM users WHERE userID = '$userID'";
-    $result = mysqli_query($db, $sql);
-    while($row = mysqli_fetch_array($result)) {
+    $sql = "SELECT firstName, surname, age, emailAddress FROM users WHERE userID = ?";
+    $stmt = $pdo -> prepare($sql) -> execute([$userID]);
+    $row = $stmt -> fetch(PDO::FETCH_ASSOC);
         $firstName = $row['firstName'];
         $surname = $row['surname'];
         $emailAddress = $row['emailAddress'];
         $age = $row['age'];
-    }
     ?>
     <body>
     <div class="ui container">
+        <?php
+        if(strpos($url, 'editedProfile') !== false){
+            echo "
+	            <div class='ui message'>
+	          <div class='centered header'>
+	            You have successfully edited your profile information.
+	          </div>
+	        </div>
+	        ";
+        }
+        ?>
         <div class = "ui two column grid">
             <div class = "ui column">
 
@@ -88,7 +94,7 @@ if (isset($_SESSION['loggedIn'])) {
     <?php
     include("includes/footer.php");
 } else{
-    header("Location: /semantic/src/inc/logIn.php");
+    header("Location: /semantic/src/inc/logIn.php?restricted");
 }
 ?>
 </html>
