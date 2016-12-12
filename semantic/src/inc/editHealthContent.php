@@ -1,13 +1,15 @@
 <?php
 session_start();
 include("includes/dbconnect.php");
+include("includes/PDOConnect.php");
 if (isset($_SESSION['loggedIn'])) {
 $userID = $_SESSION['loggedIn'];
-$sql = "SELECT A.accessID from useraccess A, users B WHERE A.userName = B.userName AND B.userID = '$userID'";
-$result = mysqli_query($db, $sql);
-while($row = mysqli_fetch_assoc($result)){
-    $accessLevel = $row['accessID'];
-}
+$sql = "SELECT A.accessID from useraccess A, users B WHERE A.userName = B.userName AND B.userID = ?";
+$stmt = $pdo->prepare($sql);
+$stmt->execute([$userID]);
+$row = $stmt->fetch(PDO::FETCH_ASSOC);
+$accessLevel = $row['accessID'];
+
 $healthContentID = $_POST['editHealth'];
 $sql = "SELECT userID from healthcontent where healthContentID = $healthContentID";
 $result = mysqli_query($db, $sql);
@@ -29,6 +31,13 @@ while ($row = mysqli_fetch_assoc($result)) {
     $healthContentID = $row['healthContentID'];
 }
 ?>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="semantic.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
+</head>
 <!-- Nav bar -->
 <? include("includes/header.php"); ?>
 <body>
@@ -67,7 +76,43 @@ while ($row = mysqli_fetch_assoc($result)) {
             </div>
         </div><button class="ui fluid large green submit button" type="submit">Submit</button>
 
-    </form>
+        <script type="text/javascript">
+            ;
+            (function ($) {
+                $('.ui.form').form({
+                    fields: {
+                        Title: {
+                            identifier: 'title',
+                            rules: [
+                                {
+                                    type: 'empty',
+                                    prompt: 'Please enter a title'
+                                }
+                            ]
+                        },
+                        mainText: {
+                            identifier: 'mainText',
+                            rules: [
+                                {
+                                    type: 'empty',
+                                    prompt: 'Please enter text to populate the main text section'
+                                }
+                            ]
+                        },
+                        photo: {
+                            identifier: 'healthPhoto',
+                            rules: [
+                                {
+                                    type: 'empty',
+                                    prompt: 'Please choose a photo for the post'
+                                }
+                            ]
+                        }
+                    }
+                })
+            })(jQuery);
+        </script>
+        </form>
 
 </div>
 
