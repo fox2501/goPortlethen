@@ -51,8 +51,7 @@ include("includes/header.php");
                       AND $clubCategory = ?";
         $stmt = $pdo->prepare($sql);
         $stmt->execute([$clubCategory]);
-        $result = $db->query($sql_query);
-        while ($row = $result->fetch_array()) {
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             $title = $row['clubName'];
             $mainText = $row['clubDescription'];
             $clubID = $row['clubID'];
