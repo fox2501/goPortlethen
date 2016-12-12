@@ -45,15 +45,14 @@ include("includes/header.php");
 <body>
 <div class='ui stackable container'>
     <div class='ui stackable grid'>
-        <div class='sixteen wide column'>
-            <header class='ui blue huge header'>
-                <?php echo $clubName ?>Club Profile Page
-            </header>
-        </div>
-
         <?php
         if ($accessLevel == 1 || $accessLevel == 2){
             echo"
+                <div class='sixteen wide column'>
+                    <header class='ui blue huge header'>
+                        <?php echo $clubName ?>Club Profile Page
+                    </header>
+                </div>
 			    <div class='eight wide column'>
 			        <form action='editClubPage.php' class='ui form' method='post'>
 			            <button class='ui right floated button' type='submit'><input name='editClub' type='hidden' value='$clubID'> <i class='ui settings icon'></i> Edit Club</button>
@@ -61,7 +60,13 @@ include("includes/header.php");
 			    </div>";
         }
         else{
-            echo "<div class = 'eight wide column'></div>";
+            echo "
+                <div class='sixteen wide column'>
+                    <header class='ui blue huge header'>
+                        <?php echo $clubName ?>Club Profile Page
+                </header>
+                </div>
+                ";
         }?>
 
             <div class='four wide column'>
