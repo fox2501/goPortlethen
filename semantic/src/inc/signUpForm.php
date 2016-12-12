@@ -22,7 +22,7 @@ $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
             </div>
             <p>Please fill out the form below to sign up</p>
         </div>
-        <div class="ui segment">
+        <div class="ui form attached fluid segment">
             <div class="ui error message"></div><?php
             if (strpos($url, 'error=usernameExists') !== false) {
                 echo "
