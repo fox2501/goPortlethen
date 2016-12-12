@@ -88,13 +88,6 @@ if (isset($_SESSION['loggedIn'])) {
                         </div>
                     <input type="URL" name="websiteURL" placeholder="Website URL" >
                 </div>
-                <div class="ui labeled input">
-                    <div class="ui label">
-                        http://
-                    </div>
-                    <input type="text" placeholder="mysite.com">
-                </div>
-
                 <div class="field">
                     <label>Please toggle if your club requires a fee: </label>
                     <div class="ui toggle checkbox">
