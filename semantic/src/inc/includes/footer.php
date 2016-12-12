@@ -28,8 +28,9 @@ session_start();
                 <!--cookies and terms links-->
                 <div class="three wide column">
                     <h4 class="ui inverted header">This website uses cookies... blah blah</h4>
-                    <h4 class="ui inverted header">Terms and Conditions</h4>
+                    <h4 class="ui inverted header"><a href="#">Terms and Conditions</a></h4>
                 </div>
+
             </div>
         </div>
     </div>
