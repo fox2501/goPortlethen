@@ -107,7 +107,7 @@ $url = $row['url'];
 
         ?>
         <div class="sixteen wide column">
-            <div class="column"><img class="ui medium centered circular image" src="%3C?php%20echo%20$url%20?%3E"></div>
+            <div class="column"><img class="ui medium centered circular image" src="<?php echo $url ?>"></div>
         </div>
         <div class="sixteen wide column">
             <h3 class='ui header'><?php echo $caption ?></h3>
