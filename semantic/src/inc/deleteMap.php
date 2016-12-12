@@ -11,7 +11,7 @@ $stmt -> execute([$userID]);
 
 $row = $stmt -> fetch(PDO::FETCH_ASSOC);
 $accessID = $row["accessID"];
-if($accessID == 1 ||$accessID == 3){
+if($accessID == 1 || $accessID == 3){
 include("includes/header.php");
 $locationID = $_POST["deleteMap"];
 ?>
