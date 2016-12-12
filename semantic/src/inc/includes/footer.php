@@ -35,7 +35,7 @@ session_start();
                     </div>
                 </div>
                 <!--cookies and terms links-->
-                <div class="three wide column">
+                <div class="eight wide column">
                     <h4 class="ui inverted header">This website uses cookies... blah blah</h4>
                     <h4 class="ui inverted header"> </h4>
                     <h4 class="ui inverted header">Copyright © 2016 GoPortlethen</h4>
