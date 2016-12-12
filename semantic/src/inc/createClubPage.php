@@ -79,24 +79,13 @@ if ($accessLevel == 1 || $accessLevel == 2) {
             </div>
             <div class="field">
                 <label>Website URL</label> <input name="websiteURL" placeholder="Website URL" type="url" value="http://">
-            </div><!--<div class="field">
-                    <label>Please toggle if your club requires a fee: </label>
-                    <div class="ui toggle checkbox">
-                        <input type="checkbox" name="feeRequired" tabindex="0" class="hidden" id="isFee" value="0">
-                        <label for="isFee">Fee does apply</label>
-                    </div>
-                </div>-->
+            </div>
             <div class="field">
                 <label>Please check if your club requires a fee:</label>
                 <div class="inline field">
                     <div class="ui checkbox">
                         <input class="hidden" id="isFee" name="isFee" tabindex="0" type="checkbox"> <label for="isFee">Requires Free</label>
-                    </div><!--<div class="ui fluid right labeled input">
-                            <div class="ui label">£</div>
-                            <input type="number" name="feeRequired2" placeholder="Please enter your clubs fee">
-                        </div>
                     </div>
-                </div>-->
                     <div class="fluid field" id="feeAmount" style="display: none;">
                         <label>Please enter your clubs monthly fee (e.g. 10.00):</label>
                         <div class="ui right labeled input">
@@ -126,29 +115,7 @@ if ($accessLevel == 1 || $accessLevel == 2) {
                 <label>Please upload your clubs profile picture:</label>
                 <div class="ui fluid action input">
                     <input name="img" size="35" type="file">
-                </div><!--                    <script>-->
-                <!--                        $('input:text, .ui.button', '.ui.action.input')-->
-                <!--                            .on('click', function (e) {-->
-                <!--                                $('input:file', $(e.target).parents()).click();-->
-                <!--                            })-->
-                <!--                        ;-->
-                <!---->
-                <!--                        $('input:file', '.ui.action.input')-->
-                <!--                            .on('change', function (e) {-->
-                <!--                                var name = e.target.files[0].name;-->
-                <!--                                $('input:text', $(e.target).parent()).val(name);-->
-                <!--                            })-->
-                <!--                        ;-->
-                <!--                    </script>-->
-                <!--                    <style>-->
-                <!--                        body {-->
-                <!--                            padding: 1em;-->
-                <!--                        }-->
-                <!---->
-                <!--                        .ui.action.input input[type="file"] {-->
-                <!--                            display: none;-->
-                <!--                        }-->
-                <!--                    </style>-->
+                </div>
             </div>
             <div class="required inline field">
                 <div class="ui checkbox">
