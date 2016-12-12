@@ -6,6 +6,13 @@ session_start();
 //connects to database server
 include("includes/PDOConnect.php");
 
+$userID = $_SESSION['loggedIn'];
+$sql = "SELECT UA.accessID FROM useraccess UA, users U WHERE UA.userName = U.userName AND U.userID = ?";
+$stmt = $pdo -> prepare($sql);
+$stmt -> execute([$userID]);
+$row = $stmt -> fetch(PDO::FETCH_ASSOC);
+$accessLevel = $row['accessID'];
+
 $locationID = $_POST['editMap'];
 $title = $_POST['title'];
 $mapType = $_POST['mapType'];
@@ -17,6 +24,13 @@ $sql = "UPDATE locations SET locationName = ?, locationType = ?, latitude = ?, l
 $stmt = $pdo -> prepare($sql);
 $stmt -> execute([$title, $mapType, $lat, $lng, $mapDesc, $locationID]);
 
-header("Location: /semantic/src/inc/mapLandingPage.php");
+
+if($accessLevel == 4){
+    header("Location: /semantic/src/inc/mapLandingPage.php?mapEditApproval");
+}
+if($accessLevel == 1 || $accessLevel == 3){
+    header("Location: /semantic/src/inc/mapLandingPage.php?mapEdited");
+}
+
 
 ?>

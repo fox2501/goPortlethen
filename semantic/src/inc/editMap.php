@@ -11,7 +11,7 @@ $stmt -> execute([$userID]);
 $row = $stmt -> fetch(PDO::FETCH_ASSOC);
 $accessLevel = $row['accessID'];
 
-IF($accessID == 1 || $accessID == 3) {
+IF($accessID == 1 || $accessID == 3 || $accessID == 4) {
 
 $locationID = $_POST['editMap'];
 
@@ -113,7 +113,10 @@ include("includes/header.php");
         </form>
     </div>
 </div>
-<?php include("includes/footer.php"); }
+<?php
+include("includes/footer.php");
+}
+
 else{
     header("Location: /semantic/src/inc/mapLandingPage.php");
 }?>

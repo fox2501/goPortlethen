@@ -2,6 +2,7 @@
 session_start();
 //connects to database server
 include("includes/PDOConnect.php");
+$url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 if (isset($_SESSION['loggedIn'])) {
     $userID = $_SESSION['loggedIn'];
     $canAccess = '0';
@@ -29,12 +30,32 @@ include("includes/header.php");
     Discover Portlethen
 </div>
 <div class='ui container'>
+    <?php
+    if(strpos($url, 'mapEditApproval') !== false){
+    echo "
+    <div class='ui warning message'>
+        <div class='centered header'>
+            Your changes have been submitted for approval.
+        </div>
+    </div>
+    ";
+    }
+    if(strpos($url, 'mapEdited') !== false){
+        echo "
+    <div class='ui message'>
+        <div class='centered header'>
+            You have successfully edited the map.
+        </div>
+    </div>
+    ";
+    }
+    ?>
     <div class='ui grid'>
         <?php
         if ($canAccess == 1) {
             echo "        <div class='three wide column'>
 			                        <a href = 'createMap.php'>
-			                            <button class='ui left floating positive fluid button'>Create Route</button>
+			                            <button class='ui left floating positive fluid button'>Create Map Content</button>
 			                        </a>
 			                    </div>";
         }
