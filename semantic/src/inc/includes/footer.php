@@ -10,20 +10,9 @@ session_start();
     <title>goPortlethen</title>
 </head>
 
-<script>
-document.addEventListener("DOMContentLoaded", function (event) {
-var element = document.getElementById('html');
-var height = element.offsetHeight;
-if (height < screen.height) {
-document.getElementById("footer").classList.add('stikybottom');
-}
-}, false);
-</script>
-
-<footer class="stikybottom" style="position:fixed; left:0; right:0; bottom:0">
-</footer>
 <body>
-    <div class="ui blue inverted footer segment" id = "footer" style = "position:absolute; height: 175px; width: 100%">
+    <div class="ui blue inverted footer segment" id = "footer"
+    style="position:absolute; width:100%; height:150px">
 
         <div class="ui center aligned container">
             <div class="ui stackable inverted grid">
@@ -60,3 +49,16 @@ document.getElementById("footer").classList.add('stikybottom');
     </div>
 </body>
 </html>
+
+<script>
+    x = $('#div-that-increase-height').height()+20; // +20 gives space between div and footer
+    y = $(window).height();
+
+    if (x+100<=y){ // 100 is the height of your footer
+        $('#footer').css('top', y-100+'px');// again 100 is the height of your footer
+        $('#footer').css('display', 'block');
+    }else{
+        $('#footer').css('top', x+'px');
+        $('#footer').css('display', 'block');
+    }
+</script>
