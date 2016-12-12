@@ -14,7 +14,6 @@ $clubDescription = $_POST["clubDescription"];
 $email           = $_POST["email"];
 $contactNumber   = $_POST["phoneNumber"];
 $feePaid         = $_POST["isFee"];
-
 $feeCost = $_POST["feeAmount"];
 if (empty($feeCost)) {
     $feeCost = 0;
