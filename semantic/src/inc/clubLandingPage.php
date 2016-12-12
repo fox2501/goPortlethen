@@ -36,7 +36,7 @@ include("includes/header.php");
     Become More Involved
 </div>
 
-<div class="ui stackable container">
+<div class="ui stackable container" style="height:80%">
     <div class="ui stackable grid">
         <div class="row">
             <?php
