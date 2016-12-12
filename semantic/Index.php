@@ -31,6 +31,9 @@ if(strpos($url, 'accountDeleted') !== false){
 	    ";
 }
 ?>
+<form class='ui form' action='editHomePage.php'  method='post' onclick='/semantic/src/inc/editHomePage.php'>
+    <button class='ui right floated button' onclick='/semantic/src/inc/editHomePage.php' type='submit'><input name='editHome' type='hidden'> <i class='ui settings icon'></i> Edit Home</button>
+</form>
 <div class="ui container">
     <div class="ui one column grid">
         <div class="row">
@@ -40,9 +43,7 @@ if(strpos($url, 'accountDeleted') !== false){
                 </div>
             </div>
             <div class = "column">
-                <form class='ui form' action='editHomePage.php'  method='post' onclick='/semantic/src/inc/editHomePage.php'>
-                    <button class='ui right floated button' onclick='/semantic/src/inc/editHomePage.php' type='submit'><input name='editHome' type='hidden'> <i class='ui settings icon'></i> Edit Home</button>
-                </form>
+
             </div>
         </div>
         <div class="row">
