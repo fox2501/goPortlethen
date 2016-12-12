@@ -68,7 +68,7 @@ if (isset($_SESSION['loggedIn'])) {
                 <div class="required field">
                     <label>Club Category</label>
                     <select class="ui search dropdown" name="clubCategory">
-                        <option value="">Select Category</option>
+                        <option>Select Category</option>
                         <option value="ART">Art</option>
                         <option value="E-SPORT">E-Sport</option>
                         <option value="HEALTH">Health</option>
