@@ -1,5 +1,7 @@
 <?php
+//session begins
 session_start();
+//connects to database server
 include("includes/dbconnect.php");
 if (isset($_SESSION['loggedIn'])) {
     $userID = $_SESSION['loggedIn'];

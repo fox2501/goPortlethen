@@ -1,5 +1,7 @@
 <?php
+//session begins
 session_start();
+//connects to database server
 include("dbconnect.php");
 
 $firstName =  $_POST["firstName"];
@@ -13,7 +15,7 @@ $accessRequested = $_POST["accessRequested"];
 $requireApproval = "1";
 $userApproved = "0";
 $accessLevel = "0";
-
+//sql statement that takes username entered
 $sql = "SELECT username FROM users WHERE username = '$username'";
 $result = mysqli_query($db, $sql);
 $usernameCheck = mysqli_num_rows($result);

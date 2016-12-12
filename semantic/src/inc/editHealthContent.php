@@ -1,5 +1,6 @@
 <?php
 session_start();
+//connects to database server
 include("includes/PDOConnect.php");
 if (isset($_SESSION['loggedIn'])) {
 $canAccess = 0;
@@ -45,6 +46,7 @@ while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
 <!-- Nav bar -->
 <? include("includes/header.php"); ?>
 <body>
+<!--main body-->
 <!-- Form -->
 
 

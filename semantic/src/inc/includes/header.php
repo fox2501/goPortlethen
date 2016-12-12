@@ -13,6 +13,7 @@
 <!--<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 <?
+//session begins
 session_start();
 include("dbconnect.php");
 ?>
@@ -29,6 +30,7 @@ include("dbconnect.php");
     <title>goPortlethen</title>
 </head>
 <body>
+<!--Main site buttons-->
 <div class="ui blue inverted secondary pointing stackable menu">
     <a class="header item" href="/semantic">
         <i class="home icon"></i>
@@ -50,7 +52,7 @@ include("dbconnect.php");
         <i class="help circle icon"></i>
         Help
     </a>
-
+    <!--Access levels check for various logged in users-->
     <div class="right menu">
         <?php
         if (isset($_SESSION['loggedIn'])) {

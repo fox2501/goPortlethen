@@ -1,5 +1,6 @@
 <?php
 session_start();
+//connects to database server
 include("includes/PDOConnect.php");
 $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 if (isset($_SESSION['loggedIn'])) {
@@ -54,6 +55,7 @@ if(!(empty($locationID))) {
     <div class="ui container">
         <div class='ui grid'>
             <div class='ten wide column'></div><?php
+            //sql statement to check for correct access level
             if ($accessID == 1 || $accessID == 3) {
                 if (strpos($url, 'mapApproval') !== false) {
                     echo "

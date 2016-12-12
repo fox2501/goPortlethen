@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+//connects to database server
 include("includes/dbconnect.php");
 
 if (isset($_SESSION['loggedIn'])) {

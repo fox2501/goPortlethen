@@ -1,11 +1,12 @@
 <?php
 session_start();
+//connects to database server
 include("includes/dbconnect.php");
 
 $password = $_POST["passwordOne"];
 $passwordConfirm = $_POST["passwordConfirm"];
 $userID = $_SESSION['loggedIn'];
-
+//checks passwords match
 if(!(empty($password)) && (!(empty($passwordConfirm)))){
     if($password == $passwordConfirm){
         $hashpass = password_hash($password, PASSWORD_BCRYPT);

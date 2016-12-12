@@ -1,4 +1,5 @@
 <?
+//session begins
 session_start();
 ?>
 <!DOCTYPE html>
@@ -14,6 +15,7 @@ session_start();
     <div class="ui center aligned container">
         <div class="ui stackable inverted grid">
             <div class="three wide column">
+                <!--navigation pane for site links-->
                 <h4 class="ui inverted header">Navigation</h4>
                 <div class="ui inverted link list">
                     <a class="item" href="/semantic/src/inc/health.php" target="_blank">Health & Wellbeing</a>
@@ -22,6 +24,7 @@ session_start();
                     <a class="item" href="/semantic/src/inc/help.php" target="_blank">Help</a>
                 </div>
             </div>
+            <!--cookies and terms links-->
             <div class="three wide column">
                 <h4 class="ui inverted header">This website uses cookies... blah blah</h4>
                 <h4 class="ui inverted header">Terms and Conditions</h4>

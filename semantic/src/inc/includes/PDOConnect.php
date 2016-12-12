@@ -5,7 +5,7 @@
  * Date: 08/12/2016
  * Time: 13:12
  */
-
+//connection to DB for pdo
 $host = 'eu-cdbr-azure-west-a.cloudapp.net';
 $db = 'goportlethencs8';
 $user = 'bb78bf129caea6';

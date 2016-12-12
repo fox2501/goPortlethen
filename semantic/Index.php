@@ -1,5 +1,6 @@
 <?php
 session_start();
+//inserts header at top of page
 include("/src/inc/includes/header.php");
 $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 

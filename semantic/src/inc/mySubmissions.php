@@ -1,5 +1,6 @@
 <?php
 session_start();
+//connects to database server
 include("includes/dbconnect.php");
 if (isset($_SESSION['loggedIn'])) {
     $userID = $_SESSION['loggedIn'];
@@ -13,6 +14,7 @@ if (isset($_SESSION['loggedIn'])) {
     while ($row = mysqli_fetch_assoc($result)) {
         $accessLevel = $row['accessID'];
     }
+    //sql statement to check for correct access level
     if ($accessLevel == 4) {
         include("includes/header.php");
         echo "<h1 align='center'>Awaiting Approval</h1>
@@ -63,7 +65,7 @@ if (isset($_SESSION['loggedIn'])) {
         echo "<h1 align='center'>Approved Submissions</h1>
         <div class='ui horizontal section divider'>
         </div>";
-
+//sql statement to get healthcontent from database
         $sql_query = "
     SELECT A.title, A.mainText, B.userName, A.datePosted, A.healthContentID, A.approvalStatus, C.url
     FROM healthcontent A, users B, photos C

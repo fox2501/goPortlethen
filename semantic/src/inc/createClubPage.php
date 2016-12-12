@@ -1,5 +1,7 @@
 <?php
+//session begins
 session_start();
+//connects to database server
 include("includes/PDOConnect.php");
 if (isset($_SESSION['loggedIn'])) {
     $userID = $_SESSION['loggedIn'];
@@ -128,130 +130,132 @@ if (isset($_SESSION['loggedIn'])) {
                                 }
                             </script>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="field">
-                            <label>Please upload your clubs profile picture: </label>
-                            <div class="ui fluid action input">
-                                <input name="img" size="35" type="file"/>
+                <div class="field">
+                    <label>Please upload your clubs profile picture: </label>
+                    <div class="ui fluid action input">
+                        <input name="img" size="35" type="file"/>
 
-                            </div>
-                            <!--                    <script>-->
-                            <!--                        $('input:text, .ui.button', '.ui.action.input')-->
-                            <!--                            .on('click', function (e) {-->
-                            <!--                                $('input:file', $(e.target).parents()).click();-->
-                            <!--                            })-->
-                            <!--                        ;-->
-                            <!---->
-                            <!--                        $('input:file', '.ui.action.input')-->
-                            <!--                            .on('change', function (e) {-->
-                            <!--                                var name = e.target.files[0].name;-->
-                            <!--                                $('input:text', $(e.target).parent()).val(name);-->
-                            <!--                            })-->
-                            <!--                        ;-->
-                            <!--                    </script>-->
-                            <!--                    <style>-->
-                            <!--                        body {-->
-                            <!--                            padding: 1em;-->
-                            <!--                        }-->
-                            <!---->
-                            <!--                        .ui.action.input input[type="file"] {-->
-                            <!--                            display: none;-->
-                            <!--                        }-->
-                            <!--                    </style>-->
-                        </div>
-                        <div class="required inline field">
-                            <div class="ui checkbox">
-                                <input type="checkbox" tabindex="0" class="hidden" name="terms" id="terms">
-                                <label for="terms">I agree to the terms and conditions</label>
-                            </div>
-                        </div>
-                        <button class="ui fluid large green submit button" id="createClub" type="submit">Create Club
-                        </button>
+                    </div>
+                    <!--                    <script>-->
+                    <!--                        $('input:text, .ui.button', '.ui.action.input')-->
+                    <!--                            .on('click', function (e) {-->
+                    <!--                                $('input:file', $(e.target).parents()).click();-->
+                    <!--                            })-->
+                    <!--                        ;-->
+                    <!---->
+                    <!--                        $('input:file', '.ui.action.input')-->
+                    <!--                            .on('change', function (e) {-->
+                    <!--                                var name = e.target.files[0].name;-->
+                    <!--                                $('input:text', $(e.target).parent()).val(name);-->
+                    <!--                            })-->
+                    <!--                        ;-->
+                    <!--                    </script>-->
+                    <!--                    <style>-->
+                    <!--                        body {-->
+                    <!--                            padding: 1em;-->
+                    <!--                        }-->
+                    <!---->
+                    <!--                        .ui.action.input input[type="file"] {-->
+                    <!--                            display: none;-->
+                    <!--                        }-->
+                    <!--                    </style>-->
+                </div>
+                <div class="required inline field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" tabindex="0" class="hidden" name="terms" id="terms">
+                        <label for="terms">I agree to the terms and conditions</label>
+                    </div>
+                </div>
+                <button class="ui fluid large green submit button" id="createClub" type="submit">Create Club
+                </button>
 
 
-                        <script type="text/javascript">
+                <script type="text/javascript">
 
-                            (function ($) {
-                                $('.ui.form').form({
-                                    fields: {
-                                        clubName: {
-                                            identifier: 'clubName',
-                                            rules: [
-                                                {
-                                                    type: 'empty',
-                                                    prompt: 'Please enter your clubs name'
-                                                }
-                                            ]
-                                        },
-                                        clubEmail: {
-                                            identifier: 'email',
-                                            rules: [
-                                                {
-                                                    type: 'email',
-                                                    prompt: 'Please enter a valid email address'
-                                                }
-                                            ]
-                                        },
-                                        clubCategory: {
-                                            identifier: 'clubCategory',
-                                            rules: [
-                                                {
-                                                    type: 'empty',
-                                                    prompt: 'Please select a club category'
-                                                }
-                                            ]
-                                        },
-                                        clubDescription: {
-                                            identifier: 'clubDescription',
-                                            rules: [
-                                                {
-                                                    type: 'empty',
-                                                    prompt: 'Please select a club category'
-                                                }
-                                            ]
-                                        },
-                                        number: {
-                                            identifier: 'phoneNumber',
-                                            rules: [
-                                                {
-                                                    type: 'number',
-                                                    prompt: 'Please enter a valid phone number'
-                                                }
-                                            ]
-                                        },
-                                        url: {
-                                            identifier: 'websiteURL',
-                                            optional: true,
-                                            rules: [
-                                                {
-                                                    type: 'url',
-                                                    prompt: 'Please enter a url'
-                                                }
-                                            ]
-                                        },
-                                        terms: {
-                                            identifier: 'terms',
-                                            rules: [
-                                                {
-                                                    type: 'checked',
-                                                    prompt: 'You must agree to the terms and conditions'
-                                                }
-                                            ]
-                                        },
-                                        photo: {
-                                            identifier: 'img',
-                                            rules: [
-                                                {
-                                                    type: 'empty',
-                                                    prompt: 'Please choose a photo for the post'
-                                                }
-                                            ]
+                    (function ($) {
+                        $('.ui.form').form({
+                            fields: {
+                                clubName: {
+                                    identifier: 'clubName',
+                                    rules: [
+                                        {
+                                            type: 'empty',
+                                            prompt: 'Please enter your clubs name'
                                         }
-                                    }
+                                    ]
+                                },
+                                clubEmail: {
+                                    identifier: 'email',
+                                    rules: [
+                                        {
+                                            type: 'email',
+                                            prompt: 'Please enter a valid email address'
+                                        }
+                                    ]
+                                },
+                                clubCategory: {
+                                    identifier: 'clubCategory',
+                                    rules: [
+                                        {
+                                            type: 'empty',
+                                            prompt: 'Please select a club category'
+                                        }
+                                    ]
+                                },
+                                clubDescription: {
+                                    identifier: 'clubDescription',
+                                    rules: [
+                                        {
+                                            type: 'empty',
+                                            prompt: 'Please select a club category'
+                                        }
+                                    ]
+                                },
+                                number: {
+                                    identifier: 'phoneNumber',
+                                    rules: [
+                                        {
+                                            type: 'number',
+                                            prompt: 'Please enter a valid phone number'
+                                        }
+                                    ]
+                                },
+                                url: {
+                                    identifier: 'websiteURL',
+                                    optional: true,
+                                    rules: [
+                                        {
+                                            type: 'url',
+                                            prompt: 'Please enter a url'
+                                        }
+                                    ]
+                                },
+                                terms: {
+                                    identifier: 'terms',
+                                    rules: [
+                                        {
+                                            type: 'checked',
+                                            prompt: 'You must agree to the terms and conditions'
+                                        }
+                                    ]
+                                },
+                                photo: {
+                                    identifier: 'img',
+                                    rules: [
+                                        {
+                                            type: 'empty',
+                                            prompt: 'Please choose a photo for the post'
+                                        }
+                                    ]
+                                }
+                            }
 
-                                })
-                            })(jQuery);
-                        </script>
+                        })
+                    })(jQuery);
+                </script>
 
         </form>
 
