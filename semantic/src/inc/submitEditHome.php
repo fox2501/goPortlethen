@@ -43,8 +43,8 @@ else{
     $sql = "DELETE FROM photos WHERE homeContentID  =?";
     $pdo->prepare($sql)->execute([$homeContentID]);
     usleep(10000);
-    $sql1 = "INSERT INTO photos(caption,url,clubID,locationID,healthContentID,routeID, homeContentID) VALUES(?,?,?,?,?,?,?)";
-    $pdo->prepare($sql1)->execute([$caption,$url,0,0,0,0, $homeContentID]);
+    $sql = "INSERT INTO photos(caption,url,clubID,locationID,healthContentID,routeID, homeContentID) VALUES(?,?,?,?,?,?,?)";
+    $pdo->prepare($sql)->execute(['',$url,0,0,0,0, $homeContentID]);
 
 
 }
