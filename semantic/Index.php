@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 session_start();
 //inserts header at top of page
 include("/src/inc/includes/header.php");
-include("/src/inc/includes/PDOConnect");
+include("/src/inc/includes/PDOConnect.php");
 $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 
 $sql = "SELECT * FROM homecontent";
