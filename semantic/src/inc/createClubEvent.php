@@ -69,7 +69,7 @@ if (isset($_SESSION['loggedIn'])) {
                 <label>Description</label>
                 <textarea rows="8" name="mainText" placeholder="Enter the content of your event"></textarea>
             </div>
-            <button class="ui fluid large green submit button" id="createClubEvent" name ="createClubEvent" type="submit" value=<?php echo $clubID;?>>Submit Event</button>
+            <button class="ui fluid large green submit button" id="submitCreateEvent" name ="submitCreateEvent" type="submit" value=<?php echo $clubID;?>>Submit Event</button>
             <script type="text/javascript">
 
                 (function ($) {

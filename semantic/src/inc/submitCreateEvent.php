@@ -27,7 +27,7 @@ if (isset($_SESSION['loggedIn'])) {
     } else {
         $canAccess = '0';
     };
-    $clubID = $_POST['createClubEvent'];
+    $clubID = $_POST['submitCreateEvent'];
 }
 
 $sql = 'INSERT INTO clubEvents(title,date,description,clubID) VALUES(?,?,?,?)';
