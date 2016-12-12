@@ -22,13 +22,23 @@ session_start();
                         <a class="item" href="/semantic/src/inc/health.php" target="_blank">Health & Wellbeing</a>
                         <a class="item" href="/semantic/src/inc/clubLandingPage.php" target="_blank">Clubs</a>
                         <a class="item" href="/semantic/src/inc/mapLandingPage.php" target="_blank">Maps</a>
-                        <a class="item" href="/semantic/src/inc/help.php" target="_blank">Help</a>
+
                     </div>
                 </div>
                 <!--cookies and terms links-->
                 <div class="three wide column">
                     <h4 class="ui inverted header">This website uses cookies... blah blah</h4>
-                    <h4 class="ui inverted header"><a href="#">Terms and Conditions</a></h4>
+                </div>
+
+                <div class="three wide column">
+                    <div class="ui inverted link list">
+                        <a class="item" href="/semantic/src/inc/help.php" target="_blank">Help</a>
+                        <a class="item" href="#" target="_blank">Terms & Conditions</a>
+                    </div>
+                </div>
+
+                <div class="three wide column">
+
                 </div>
 
             </div>
