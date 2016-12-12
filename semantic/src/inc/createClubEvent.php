@@ -12,13 +12,20 @@ if (isset($_SESSION['loggedIn'])) {
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
     $userName = $row["userName"];
 
-    $sql = "SELECT accessID from useraccess where userName = ? ";
+    $sql = "SELECT accessID FROM useraccess WHERE userName = ? ";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([$userName]);
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
     $accessID = $row["accessID"];
+    usleep(10000);
+    $sql = "SELECT userID FROM clubs WHERE userID =?";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$userID]);
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+    $clubUserID = $row['userID'];
 
-    if ($accessID == '1' || $accessID == '2') {
+
+    if ($accessID == '1' || $userID == $clubUserID) {
         $canAccess = '1';
     } else {
         $canAccess = '0';
@@ -62,7 +69,7 @@ if (isset($_SESSION['loggedIn'])) {
                 <label>Description</label>
                 <textarea rows="8" name="mainText" placeholder="Enter the content of your event"></textarea>
             </div>
-            <button class="ui fluid large green submit button" id="createClubEvent" type="submit">Submit Event</button>
+            <button class="ui fluid large green submit button" id="createClubEvent" name ="createClubEvent" type="submit" value=<?php echo $clubID;?>>Submit Event</button>
             <script type="text/javascript">
 
                 (function ($) {
