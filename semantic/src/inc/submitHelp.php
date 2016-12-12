@@ -9,7 +9,7 @@ $question = htmlentities($_POST['question']);
 $from = 'From: xander19@btinternet.com';
 $to = 'alexander.ladd@btinternet.com';
 
-$sql = "SELECT emailAddress FROM users A, useraccess B WHERE A.userName = B.userName AND b.accessID = ?";
+$sql = "SELECT emailAddress FROM users A, useraccess B WHERE A.userName = B.userName AND B.accessID = ?";
 $stmt = $pdo->prepare($sql);
 $stmt->execute([1]);
 $emailString;
