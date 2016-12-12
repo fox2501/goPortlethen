@@ -83,7 +83,9 @@ if(strpos($url, 'accountDeleted') !== false){
             <div class="column"><img class="ui medium centered circular image" src="<?php echo $url ?>"></div>
         </div>
         <div class="sixteen wide column">
-            <p><?php echo $caption ?></p>
+            <h3 class = 'ui header'>
+                <?php echo $caption ?>
+            </h3>
         <div class="ui header">
             Need help? Click <a href="/semantic/src/inc/help.php">here</a> for FAQs!
         </div>
