@@ -45,15 +45,6 @@ include("includes/header.php");
 <body>
 <div class='ui stackable container'>
     <div class='ui stackable grid'>
-        <?php
-        if ($accessLevel == 1 || $accessLevel == 2){
-            echo"
-			    <div class='sixteen wide column'>
-			        <form action='editClubPage.php' class='ui form' method='post'>
-			            <button class='ui right floated button' type='submit'><input name='editClub' type='hidden' value='$clubID'> <i class='ui settings icon'></i> Edit Club</button>
-			        </form>
-			    </div>";
-        }?>
         <div class='sixteen wide column'>
             <header class='ui blue huge header'>
                 <?php echo $clubName ?>Club Profile Page
