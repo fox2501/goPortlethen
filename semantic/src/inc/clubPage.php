@@ -62,6 +62,7 @@ if (isset($_SESSION['loggedIn'])) {
 
 echo"";
 
+
 if ($canAccess == '1') {
     echo "
 <body>
