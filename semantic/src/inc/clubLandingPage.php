@@ -46,6 +46,15 @@ include("includes/header.php");
 		            </div>
 		            ";
     }
+    if(strpos($url, 'editedClub') !== false){
+        echo "
+		                <div class='ui error message'>
+		              <div class='centered header'>
+		                You have successfully edited your club.
+		              </div>
+		            </div>
+		            ";
+    }
     ?>
     <div class="ui stackable grid">
         <div class="row">
