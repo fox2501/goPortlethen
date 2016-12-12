@@ -47,10 +47,10 @@ else {
         $accessLevel = "1";
     }
 
-    $sql = "INSERT INTO users (userName, password, emailAddress, firstName, surname, requireApproval, userApproved, age, location, aboutUser, dateCreated) 
+    $sql = "INSERT INTO users (userName, password, emailAddress, firstName, surname, requireApproval, userApproved, age, location, aboutUser) 
         values(?,?,?,?,?,?,?,?,?,?,?)";
     $stmt = $pdo -> prepare($sql);
-    $stmt -> execute([$username, $hashpass, $email, $firstName, $surname, $requireApproval, $userApproved, $age, '', '', CURRENT_DATE]);
+    $stmt -> execute([$username, $hashpass, $email, $firstName, $surname, $requireApproval, $userApproved, $age, '', '']);
 
     $sql = "INSERT INTO useraccess (accessID, userName) VALUES (?,?)";
     $stmt = $pdo -> prepare($sql);
