@@ -18,8 +18,7 @@ $stmt->execute([1]);
 $emailString;
 while($row = $stmt -> fetch(PDO::FETCH_ASSOC)){
 
-    echo $row['emailAddress'].";";
-//$emailString = $emailString.$row['emailAddress'].";";
+    $emailString = $row['emailAddress'].";";
 
 }
 
