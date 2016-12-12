@@ -39,46 +39,46 @@ $url = $row['url'];
     <title>GoPortlethen Home</title>
 </head>
 <body>
-<?php
-if(strpos($url, 'newUser') !== false){
-    echo "
+<div class="ui stackable container">
+    <?php
+    if(strpos($url, 'newUser') !== false){
+        echo "
 	            <div class='ui warning message'>
 	          <div class='centered header'>
 	            You have successfully signed up. Please login!
 	          </div>
 	        </div>
 	        ";
-}
+    }
 
-if(strpos($url, 'accountDeleted') !== false){
-    echo "
+    if(strpos($url, 'accountDeleted') !== false){
+        echo "
 	            <div class='ui error message'>
 	          <div class='centered header'>
 	            You have successfully deleted your account.
 	          </div>
 	        </div>
 	        ";
-}
-if(strpos($url, 'contentEdited') !== false){
-    echo "
+    }
+    if(strpos($url, 'contentEdited') !== false){
+        echo "
 	            <div class='ui message'>
 	          <div class='centered header'>
 	            You have successfully edited the home page content.
 	          </div>
 	        </div>
 	        ";
-}
-if(strpos($url, 'restricted') !== false){
-    echo "
+    }
+    if(strpos($url, 'restricted') !== false){
+        echo "
 	            <div class='ui error message'>
 	          <div class='centered header'>
 	            You do not have access to edit this page.
 	          </div>
 	        </div>
 	        ";
-}
-?>
-<div class="ui stackable container">
+    }
+    ?>
     <div class="ui stackable grid">
         <?php
         if($accessLevel == 1){
