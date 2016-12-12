@@ -96,8 +96,11 @@ if (isset($_SESSION['loggedIn'])) {
                 <div class="field">
                     <label>Please check if your club requires a fee: </label>
                     <div class="ui checkbox">
-                        <input type="checkbox" tabindex="0" class="hidden" id="feeRequired">
-                        <label for="A-Z">Name A-Z</label>
+                        <label for="feeRequired1">Requires Free</label>
+                        <input type="checkbox" tabindex="0" class="hidden" id="feeRequired1">
+                    </div>
+                    <div>
+                        <input type="number" name="feeRequired2">
                     </div>
                 </div>
 
@@ -214,7 +217,7 @@ if (isset($_SESSION['loggedIn'])) {
                                 },
                                 url: {
                                     identifier: 'websiteURL',
-                                    optional   : true,
+                                    optional: true,
                                     rules: [
                                         {
                                             type: 'url',
