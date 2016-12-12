@@ -11,14 +11,7 @@ if (isset($_SESSION['loggedIn'])) {
 
     $row = $stmt -> fetch(PDO::FETCH_ASSOC);
     $accessID = $row["accessID"];
-
-    if ($accessID == '1' || $accessID == '3') {
-        $canAccess = '1';
-    } else {
-        $canAccess = '0';
-    }
 }
-
 
 $locationID = $_POST['viewMap'];
 if(!(empty($locationID))) {
@@ -46,7 +39,6 @@ if(!(empty($locationID))) {
     <!DOCTYPE html>
     <html>
     <head>
-
         <script src="https://goportlethencs8.azurewebsites.net/semantic/dist/routeplot.js" type="text/javascript">
         </script>
         <meta charset="UTF-8">
@@ -62,7 +54,7 @@ if(!(empty($locationID))) {
     <div class="ui container">
         <div class='ui grid'>
             <div class='ten wide column'></div><?php
-            if ($accessID == 1) {
+            if ($accessID == 1 || $accessID == 3) {
                 if (strpos($url, 'mapApproval') !== false) {
                     echo "
 			            <div class='two wide column'>
@@ -75,16 +67,22 @@ if(!(empty($locationID))) {
 			                                    <button class='ui negative right floated button' onclick='/semantic/src/inc/submitMapApproval.php' type='submit'><input name='denyMap' type='hidden' value='$locationID'> Deny</button>
 			                                </form>
 			                            </div>
+			                            <div class='two wide column'>
+			            <form action='editMap.php' class='ui form' method='post'>
+			                <button class='ui right floated button' onclick='/semantic/src/inc/editMap.php' type='submit'><input name='editMap' type='hidden' value='$locationID'> Edit</button>
+			            </form>
+			        </div>
 			                            ";
-                }
-                echo "        <div class='two wide column'>
+                } else{
+                    echo "        <div class='six wide column'>
 			            <form action='editMap.php' class='ui form' method='post'>
 			                <button class='ui right floated button' onclick='/semantic/src/inc/editMap.php' type='submit'><input name='editMap' type='hidden' value='$locationID'> Edit</button>
 			            </form>
 			        </div>";
+                }
             }
-            if ($accessID == 3 || $accessID == 4) {
-                echo "        <div class='two wide column'>
+            if ($accessID == 4) {
+                echo "        <div class='six wide column'>
 			            <form action='editMap.php' class='ui form' method='post'>
 			                <button class='ui right floated button' onclick='/semantic/src/inc/editMap.php' type='submit'><input name='editMap' type='hidden' value='$locationID'> Edit</button>
 			            </form>
