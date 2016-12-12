@@ -65,7 +65,7 @@ if (isset($_SESSION['loggedIn'])) {
 <div class='ui container'>
     <div class = 'ui grid'>
         <div class = 'eight wide column'>
-            <header class = 'ui blue huge header'><?php echo"$clubName"?> Club Profile Page</header>
+            <header class = 'ui blue huge header'><?php echo $clubName ?> Club Profile Page</header>
         </div>
 
         <?php
