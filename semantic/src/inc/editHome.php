@@ -19,10 +19,10 @@ if ($accessLevel == 1) {
 $sql = "SELECT * from homecontent WHERE contentID = ?";
 $stmt = $pdo -> prepare($sql);
 $stmt -> execute([$contentID]);
-while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
-    $title = $row['title'];
-    $caption = $row['caption'];
-}
+$row = $stmt -> fetch(PDO::FETCH_ASSOC);
+$title = $row['title'];
+$caption = $row['caption'];
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -47,11 +47,11 @@ while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
     </div>
     <form action="submitEditHome.php" class="ui form" enctype="multipart/form-data" method="post">
         <div class="field">
-            <label>Edit Title</label> <input name="editTitle" type="text" value="<?php echo $title; ?>">
+            <label>Edit Title</label> <input name="editTitle" type="text" value="<?php echo $title ?>">
         </div>
         <div class="field">
             <label>Edit Caption</label>
-            <textarea name="editCaption" rows="8"><?php echo $caption; ?></textarea>
+            <textarea name="editCaption" rows="8"><?php echo $caption ?></textarea>
         </div>
         <div class="field">
             <input name="editContent" type="hidden" value="<?php echo $contentID ?>">
