@@ -59,7 +59,7 @@ session_start();
                 <div class="ui header">
                     How do I create an account?
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce velit tellus, porta efficitur blandit eget, lobortis eget libero. Aliquam id augue a sapien efficitur consequat. Pellentesque commodo tempor rutrum. Vestibulum sit amet mi quis purus viverra viverra. Mauris sit amet molestie quam. Vestibulum a convallis diam.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. velit tellus, porta efficitur blandit eget, lobortis eget libero. Aliquam id augue a sapien efficitur consequat. Pellentesque commodo tempor rutrum. Vestibulum sit amet mi quis purus viverra viverra. Mauris sit amet molestie quam. Vestibulum a convallis diam.</p>
             </div>
         </div>
     </div><br>
