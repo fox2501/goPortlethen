@@ -65,8 +65,8 @@ if(strpos($url, 'accountDeleted') !== false){
         <?php
         if($accessLevel == 1){
             echo "
-            <div class=\"eight wide column\">
-                <div class=\"ui huge blue right floated header\">
+            <div class='eight wide column'>
+                <div class='ui huge blue header'>
                     <?php echo $title ?>
                 </div>
             </div>
