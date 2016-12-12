@@ -124,7 +124,9 @@ include("includes/header.php");
     </div>
     <div class="ui hidden divider"></div>
 </div>
-</body>
 <?php
 include("/includes/footer.php");
 ?>
+
+</body>
+
