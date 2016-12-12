@@ -10,13 +10,15 @@ $stmt->execute([$userID]);
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
 $accessLevel = $row['accessID'];
 
+$contentID = $_POST['editHome'];
+
 if ($accessLevel == 1) {
 $sql = "SELECT * from homeContent WHERE $contentID = ?";
 $stmt = $pdo -> prepare($sql);
 $stmt -> execute([$contentID]);
 while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
     $title = $row['title'];
-    $mainText = $row['caption'];
+    $caption = $row['caption'];
 }
 ?>
 <head>
@@ -35,31 +37,25 @@ while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
 
 <div class="ui container">
     <h1 align="center">
-        Edit Health & Wellbeing Content
+        Edit Home Page Content
     </h1>
     <div class="ui horizontal section divider">
-        <p>Keeping Portlethen Healthy</p>
+        <p>Give users a good first impression!</p>
     </div>
 
-    <form method ="post" action ="deleteHealth.php">
-        <button class="ui red right floated button" type ="submit" name = "healthID" value = "<?php echo $healthContentID; ?>">Delete Health Content</button>
-    </form>
-
-    <br>
-
-    <form action="submitEditHealth.php" class="ui form" enctype="multipart/form-data" method="post">
+    <form action="submitEditHome.php" class="ui form" enctype="multipart/form-data" method="post">
         <div class="field">
             <label>Edit Title</label> <input name="editTitle" type="text" value="<?php echo $title; ?>">
         </div>
         <div class="field">
-            <label>Edit Main Text</label>
-            <textarea name="editMainText" rows="8"><?php echo $mainText; ?></textarea>
+            <label>Edit Caption</label>
+            <textarea name="editCaption" rows="8"><?php echo $caption; ?></textarea>
         </div>
         <div class="field">
-            <input name="healthContentToEdit" type="hidden" value="<?php echo $healthContentID ?>">
+            <input name="editContent" type="hidden" value="<?php echo $contentID ?>">
         </div>
         <div class="field">
-            <label>Choose a new image for the content</label>
+            <label>Choose a new image for the home page</label>
             <div class="ui fluid action input">
                 <input name="healthPhoto" size="35" type="file">
             </div>
