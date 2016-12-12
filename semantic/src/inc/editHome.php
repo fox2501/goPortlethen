@@ -85,7 +85,7 @@ $caption = $row['caption'];
 <?php
 include("includes/footer.php");
 } else {
-    echo "You do not have permission.";
+    header("Location: /semantic/?restricted");
 }
 };
 ?>
