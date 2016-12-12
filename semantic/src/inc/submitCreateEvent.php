@@ -1,7 +1,5 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+
 session_start();
 //connects to database server
 include("includes/PDOConnect.php");
@@ -35,6 +33,6 @@ if (isset($_SESSION['loggedIn'])) {
 $sql = 'INSERT INTO clubEvents(title,date,description,clubID) VALUES(?,?,?,?)';
 $stmt = $pdo->prepare($sql)->execute([$title,$date,$mainText,$clubID]);
 
-header("location: /semantic/src/inc/clublandingpage.php");
+header("location: /semantic/src/inc/clublandingpage.php?restricted");
 
     ?>
