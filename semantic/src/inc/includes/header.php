@@ -15,7 +15,7 @@
 <?
 //session begins
 session_start();
-include("dbconnect.php");
+include("PDOConnect.php");
 ?>
 
 <!DOCTYPE html>
@@ -57,22 +57,19 @@ include("dbconnect.php");
         <?php
         if (isset($_SESSION['loggedIn'])) {
             $userID = $_SESSION['loggedIn'];
-            $sql = "SELECT userName from users where userID = '$userID'";
-            $result = mysqli_query($db, $sql);
-            while ($row = mysqli_fetch_assoc($result)) {
+            $sql = "SELECT A.userName, A.firstName, B.accessID from users A, useraccess B where A.userName = B.userName AND userID = ?";
+            $stmt = $pdo -> prepare($sql);
+            $stmt -> execute([$userID]);
+            while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
                 $userName = $row['userName'];
-                $name = $row['firstName'];
-            }
-            $sql = "SELECT accessID from useraccess WHERE userName = '$userName'";
-            $result = mysqli_query($db, $sql);
-            while ($row = mysqli_fetch_assoc($result)) {
+                $firstName = $row['firstName'];
                 $accessLevel = $row['accessID'];
             }
             if ($accessLevel == 1) {
                 echo "  <div class = 'ui simple dropdown'>
                            <a class = 'browse item'>
                                 <i class = 'user icon'></i>
-                                " . $name . "
+                                $firstName
                                 <i class='dropdown icon'></i>
                             </a>
                         <div class = 'ui menu'>
