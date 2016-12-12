@@ -5,12 +5,12 @@ error_reporting(E_ALL);
 
 include("includes/PDOConnect.php");
 
-$firstname = htmlentities($_POST['firstName']);
-$lastname = htmlentities($_POST['lastName']);
-$emailAddress = htmlentities($_POST['emailAddress']);
-$question = htmlentities($_POST['question']);
-$from = 'From: xander19@btinternet.com';
-$to = 'alexander.ladd@btinternet.com';
+//$firstname = htmlentities($_POST['firstName']);
+//$lastname = htmlentities($_POST['lastName']);
+//$emailAddress = htmlentities($_POST['emailAddress']);
+//$question = htmlentities($_POST['question']);
+//$from = 'From: xander19@btinternet.com';
+//$to = 'alexander.ladd@btinternet.com';
 
 $sql = "SELECT emailAddress FROM users A, useraccess B WHERE A.userName = B.userName AND B.accessID = ?";
 $stmt = $pdo->prepare($sql);
@@ -18,7 +18,7 @@ $stmt->execute([1]);
 $emailString;
 while($row = $stmt -> fetch(PDO::FETCH_ASSOC)){
 
-    echo $row['emailAddress'];
+    echo $row['emailAddress'].";";
 //$emailString = $emailString.$row['emailAddress'].";";
 
 }
