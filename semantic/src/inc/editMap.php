@@ -2,7 +2,16 @@
 session_start();
 //connects to database server
 include ("includes/PDOConnect.php");
-include("includes/header.php");
+
+
+$userID = $_SESSION['loggedIn'];
+$sql = "SELECT UA.accessID FROM useraccess UA, users U WHERE UA.userName = U.userName AND U.userID = ?";
+$stmt = $pdo -> prepare($sql);
+$stmt -> execute([$userID]);
+$row = $stmt -> fetch(PDO::FETCH_ASSOC);
+$accessLevel = $row['accessID'];
+
+IF($accessID == 1 || $accessID == 3) {
 
 $locationID = $_POST['editMap'];
 
@@ -16,6 +25,8 @@ $row = $stmt -> fetch(PDO::FETCH_ASSOC);
     $locationType = $row['locationType'];
     $caption = $row['caption'];
     $locationName = $row['locationName'];
+
+include("includes/header.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -102,6 +113,9 @@ $row = $stmt -> fetch(PDO::FETCH_ASSOC);
         </form>
     </div>
 </div>
-<?php include("includes/footer.php"); ?>
+<?php include("includes/footer.php"); }
+else{
+    header("Location: ../mapLandingPage.php");
+}?>
 </body>
 </html>
