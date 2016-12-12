@@ -1,8 +1,10 @@
 <?php
 session_start();
-//connects to database server
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 include("includes/dbconnect.php");
-$url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+include("includes/PDOConnect.php");
 $clubID = $_POST['clubEvent'];
 
 if (isset($_SESSION['loggedIn'])) {
