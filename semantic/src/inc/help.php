@@ -107,7 +107,7 @@ session_start();
                             <textarea></textarea>
                         </div>
                     </div>
-                    <button class="ui positive right labeled icon button" type="submit">
+                    <button class="ui positive right labeled icon button" id= "createEmail" type="submit">
                         <a href="submitHelp.php">Send Message</a> <i class="checkmark icon"></i>
                     </button>
                 </div>

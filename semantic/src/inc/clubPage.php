@@ -85,7 +85,7 @@ if (isset($_SESSION['loggedIn'])) {
         <div class='ui stackable grid'>
             <div class='four wide column'>
                 <div class='ui card'>
-                    <div class='image'><img src='%3C?php%20echo%20$photoURL%20?%3E'></div>
+                    <div class='image'><img src='<?php echo $photoURL ?>'></div>
                 </div>
             </div>
             <div class='twelve wide column'>
