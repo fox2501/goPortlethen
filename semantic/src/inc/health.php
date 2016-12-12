@@ -18,7 +18,7 @@ $accessLevel = $row["accessID"];
 <head>
     <meta charset="UTF-8">
     <link href="semantic.css" rel="stylesheet" type="text/css">
-    <title>GoPortlethen</title>
+    <title>Health & Wellbeing</title>
 </head><? include("includes/header.php"); ?>
 <!--main body-->
 <body>
