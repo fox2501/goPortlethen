@@ -127,7 +127,9 @@ session_start();
             Cancel
         </div>
         <div class="ui positive right labeled icon button">
-            Send Message
+            <a href="submitHelp.php">
+                Send Message
+            </a>
             <i class="checkmark icon"></i>
         </div>
     </div>
