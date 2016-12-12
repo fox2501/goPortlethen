@@ -11,7 +11,7 @@ $stmt -> execute([$userID]);
 $row = $stmt -> fetch(PDO::FETCH_ASSOC);
 $accessLevel = $row['accessID'];
 
-IF($accessLevel == 1 || $accessLevel == 3 || $accessLevel == 4) {
+if($accessLevel == 1 || $accessLevel == 3 || $accessLevel == 4) {
 
     include("includes/header.php");
     ?>
