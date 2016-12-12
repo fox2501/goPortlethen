@@ -8,12 +8,10 @@ session_start();
 include("includes/PDOConnect.php");
 $locationID = $_POST["deleteMap"];
 
-echo $locationID;
-
 $sql = "DELETE FROM locations WHERE locationID = ?";
 $stmt = $pdo->prepare($sql);
 $stmt -> execute([$locationID]);
 
-//header('Location: /semantic/src/inc/mapLandingPage.php?DeletedMap');
+header('Location: /semantic/src/inc/mapLandingPage.php?DeletedMap');
 
 ?>
