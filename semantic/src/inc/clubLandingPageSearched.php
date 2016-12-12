@@ -49,7 +49,7 @@ include("includes/header.php");
         <?php
         $sql_query = "SELECT A.clubName, A.clubDescription, A.clubID, B.url FROM club A, photos B
                       WHERE A.clubID = B.clubID
-                      AND $clubCategory = 'ART'";
+                      AND $clubCategory = ?";
         $stmt = $pdo->prepare($sql);
         $stmt->execute([$clubCategory]);
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
