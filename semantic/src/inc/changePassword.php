@@ -1,8 +1,5 @@
 <?php
-// Begin session
 session_start();
-
-// Connect to DB server
 include("includes/dbconnect.php");
 
 if (isset($_SESSION['loggedIn'])) {
@@ -11,9 +8,10 @@ if (isset($_SESSION['loggedIn'])) {
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>goPortlethen</title>
-    </head>
+
+<head>
+    <title>goPortlethen</title>
+</head>
 
 <body>
     <!-- Begin container -->
@@ -29,15 +27,13 @@ if (isset($_SESSION['loggedIn'])) {
             <div class="row">
                 <div class="column">
                     <form action="submitChangePassword.php" class="ui form" method="post">
-
-                        <!-- IS THIS NEEDED???? -->
-                        <!--<div class="ui error message"></div>-->
-
                         <div class="field">
-                            <label>New Password</label> <input name="passwordOne" type="password" value=''>
+                            <label>New Password</label>
+                            <input name="passwordOne" type="password" value=''>
                         </div>
                         <div class="field">
-                            <label>Confirm Password</label> <input name="passwordConfirm" type="password" value=''>
+                            <label>Confirm Password</label>
+                            <input name="passwordConfirm" type="password" value=''>
                         </div>
                         <button class="ui fluid large green submit button" type="submit">Submit</button>
 
