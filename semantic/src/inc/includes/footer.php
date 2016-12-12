@@ -15,7 +15,7 @@ session_start();
 
         <div class="ui center aligned container">
             <div class="ui stackable inverted grid">
-                <div class="two wide column">
+                <div class="three wide column">
                     <!--navigation pane for site links-->
                     <h4 class="ui inverted header">Navigation</h4>
                     <div class="ui inverted link list">
@@ -24,8 +24,9 @@ session_start();
                         <a class="item" href="/semantic/src/inc/mapLandingPage.php" target="_blank">Maps</a>
                     </div>
                 </div>
-                <div class="two wide column">
+                <div class="three wide column">
                     <div class="ui inverted link list">
+                        <a clas="item"> </a>
                         <a class="item" href="/semantic/src/inc/help.php" target="_blank">Help</a>
                         <a class="item" href="#" target="_blank">Terms & Conditions</a>
                     </div>
@@ -35,11 +36,7 @@ session_start();
                     <h4 class="ui inverted header">This website uses cookies... blah blah</h4>
                 </div>
 
-                <div class="three wide column">
-
-                </div>
-
-                <div class="three wide column">
+                <div class="five wide column">
                     <h4 class="ui inverted header">Copyright © 2016 GoPortlethen</h4>
                 </div>
 
