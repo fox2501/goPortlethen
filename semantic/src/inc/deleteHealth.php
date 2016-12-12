@@ -44,10 +44,10 @@ if ($accessLevel == 1 || $accessLevel == 4) {
 <?php
 include("includes/footer.php");
 }else{
-    header("Location: /semantic/src/inc/mapLandingPage.php?restricted");
+    header("Location: /semantic/src/inc/logIn.php?restricted");
 }
 }else{
-    header("Location: /semantic/src/inc/mapLandingPage.php?restricted");
+    header("Location: /semantic/src/inc/logIn.php?restricted");
 }
 ?>
 </body>
