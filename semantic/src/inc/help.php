@@ -112,7 +112,7 @@ while($row = $stmt -> fetch(PDO::FETCH_ASSOC)){
                 <div class="sixteen wide column">
                     <div class="field">
                         <div class="field">
-                            <label>Enter your question here :</label> <input name="question" type="text">
+                            <label>Enter your question here :</label> <input name="question" placeholder="enter your question here"type="text">
                         </div>
                     </div>
 

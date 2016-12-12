@@ -16,6 +16,7 @@
 //session begins
 session_start();
 include("PDOConnect.php");
+
 ?>
 
 <!DOCTYPE html>

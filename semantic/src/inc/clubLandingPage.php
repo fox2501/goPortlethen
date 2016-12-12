@@ -1,28 +1,18 @@
 <?php
+
 //session begins
 session_start();
 //connects to database server
-include("includes/dbconnect.php");
+include("includes/PDOConnect.php");
 $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 //access levels
-if (isset($_SESSION['loggedIn'])) {
-    $userID = $_SESSION['loggedIn'];
-    $canAccess = '0';
-    $sql = "SELECT userName from users WHERE userID = '$userID'";
-    $result = mysqli_query($db, $sql);
-    $row = mysqli_fetch_assoc($result);
-    $userName = $row["userName"];
-
-    $sql = "SELECT accessID from useraccess where userName = '$userName'";
-    $result = mysqli_query($db, $sql);
-    $row = mysqli_fetch_assoc($result);
-    $accessID = $row["accessID"];
-    if ($accessID == '1' || $accessID == '2') {
-        $canAccess = '1';
-    } else {
-        $canAccess = '0';
-    }
-}
+$userID = $_SESSION['loggedIn'];
+$canAccess = '0';
+$sql = "SELECT accessID from users U, useraccess UA WHERE U.userName = UA.userName AND userID = ?";
+$stmt = $pdo -> prepare($sql);
+$stmt -> execute([$userID]);
+$row = $stmt -> fetch(PDO::FETCH_ASSOC);
+$accessLevel = $row["accessID"];
 ?>
 <!DOCTYPE html>
 <html>
@@ -40,25 +30,25 @@ include("includes/header.php");
     <?php
     if(strpos($url, 'newClub') !== false){
         echo "
-	            <div class='ui warning message'>
-	          <div class='centered header'>
-	            You have successfully created a club. Please login with your new club account! 
-	          </div>
-	        </div>
-	        ";
+		                <div class='ui warning message'>
+		              <div class='centered header'>
+		                You have successfully created a club. Please login with your new club account! 
+		              </div>
+		            </div>
+		            ";
     }
     ?>
     <div class="ui stackable grid">
         <div class="row">
             <?php
-            if ($canAccess == 1) {
+            if ($accessLevel == 1 || $accessLevel == 2) {
                 echo "
-				<div class='four wide column'>
-                    <a href='createClubPage.php'>
-                        <button class='ui green submit button' style='margin-right:50px'>Create a club</button>
-                    </a>      
-                </div>
-                ";}?>
+				                <div class='four wide column'>
+				                    <a href='createClubPage.php'>
+				                        <button class='ui green submit button' style='margin-right:50px'>Create a club</button>
+				                    </a>      
+				                </div>
+				                ";}?>
             <div class="eight wide column">
                 <div class="ui form">
                     <div class="inline fields">
@@ -74,67 +64,52 @@ include("includes/header.php");
                     </div>
                 </div>
             </div>
-
-            <div class="four wide column">
-                <div class="ui fluid category search">
-                    <div class="ui right floated icon input">
-                        <form action="clubLandingPageSearched.php" method="post">
-                            <input class="prompt" name="search" placeholder="Search clubs..." type="text">
-                            <button type="submit">
-                                <i class="search icon"><?php header("Location: /semantic/src/inc/clubLandingPageSearched.php"); ?></i>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </div>
 </div>
-
-
 <div class="ui stackable container">
     <div class="ui stackable grid">
         <div class="ui hidden divider"></div><?php
-        $sql_query = "SELECT A.clubName, A.clubDescription, A.clubID, B.url FROM club A, photos B WHERE A.clubID = B.clubID";
-        $result = $db->query($sql_query);
-        while ($row = $result->fetch_array()) {
+        $sql = "SELECT A.clubName, A.clubDescription, A.clubID, B.url FROM club A, photos B WHERE A.clubID = B.clubID";
+        $stmt = $pdo -> prepare($sql);
+        $stmt -> execute([]);
+        while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
             $title = $row['clubName'];
             $mainText = $row['clubDescription'];
             $clubID = $row['clubID'];
             $photo = $row['url'];
             echo "
-			                <div class = 'row'>
-			                    <div class='ui raised segment'>
-			                    <div class = 'ui stackable container'>
-			                    <div class = 'ui stackable grid'>
-			                        <div class='ui three wide column'>
-			                            <div class='ui image'><img src='$photo'></div>
-			                        </div>
-			                        <div class='ui thirteen wide column'>
-			                            <div class='header'>
-			                                $title
+			                            <div class = 'row'>
+			                                <div class='ui raised segment'>
+			                                <div class = 'ui stackable container'>
+			                                <div class = 'ui stackable grid'>
+			                                    <div class='ui three wide column'>
+			                                        <div class='ui image'><img src='$photo'></div>
+			                                    </div>
+			                                    <div class='ui thirteen wide column'>
+			                                        <div class='header'>
+			                                            $title
+			                                        </div>
+			                                        <div class='description'>
+			                                            <p>$mainText</p>
+			                                        </div>
+			                                        <div class='extra'>
+			                                            <form action='/semantic/src/inc/clubPage.php' class='ui form' method='post'>
+			                                                <button class='ui right floated button' onclick='/semantic/src/inc/clubPage.php' type='submit'><input name='viewClub' type='hidden' value=\"$clubID\"> For more info click here!</button>
+			                                            </form>
+			                                        </div>
+			                                        </div>
+			                                        </div>
+			                                    </div>
+			                                </div>
 			                            </div>
-			                            <div class='description'>
-			                                <p>$mainText</p>
-			                            </div>
-			                            <div class='extra'>
-			                                <form action='/semantic/src/inc/clubPage.php' class='ui form' method='post'>
-			                                    <button class='ui right floated button' onclick='/semantic/src/inc/clubPage.php' type='submit'><input name='viewClub' type='hidden' value=\"$clubID\"> For more info click here!</button>
-			                                </form>
-			                            </div>
-			                            </div>
-			                            </div>
-			                        </div>
-			                    </div>
-			                </div>
-			                ";
+			                            ";
         }
         ?>
     </div>
     <div class="ui hidden divider"></div>
 </div><?php
-include("/includes/footer.php");
+include("includes/footer.php");
 ?>
 </body>
 </html>
