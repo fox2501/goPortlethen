@@ -46,7 +46,7 @@ if (isset($_SESSION['loggedIn'])) {
     </div>
 
     <!-- Form -->
-    <div class="ui container">
+    <div class="ui stackable container">
         <form class="ui form" action="submitHealthForm.php" enctype="multipart/form-data" method="POST"
               onsubmit="return validateForm()">
 

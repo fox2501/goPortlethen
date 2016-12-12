@@ -15,8 +15,8 @@ $clubID =$_POST["clubID"];
 </head>
 <!--main body-->
 <body>
-<div class='ui center aligned container'>
-    <div class='ui middle aligned center aligned grid'>
+<div class='ui stackable center aligned container'>
+    <div class='ui stackable middle aligned center aligned grid'>
         <div class='ui ten wide column'>
             <form action="submitClubDelete.php" class="ui large form" method="post">
                 <div class='ui negative message'>

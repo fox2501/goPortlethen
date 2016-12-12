@@ -48,8 +48,8 @@ if(!(empty($locationID))) {
     <div class="ui horizontal section divider">
         Discover Portlethen
     </div>
-    <div class="ui container">
-        <div class='ui grid'>
+    <div class="ui stackable container">
+        <div class='ui stackable grid'>
             <div class='ten wide column'></div><?php
             //sql statement to check for correct access level
             if ($accessID == 1 || $accessID == 3) {

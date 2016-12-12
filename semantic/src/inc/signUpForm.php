@@ -11,7 +11,7 @@ $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
     <title>goPortlethen</title>
 </head><?php include("includes/header.php"); ?>
 <body>
-<div class="ui container">
+<div class="ui stackable container">
     <form action="includes/submitSignUp.php" class="ui form" method="post">
         <h2 class="ui center aligned blue header"></h2>
         <div class="content">
@@ -42,7 +42,7 @@ $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
                 <label>Surname</label> <input name='surname' placeholder='Please enter your surname.' type='text'>
             </div>
             <div class="required field">
-                <label>Age</label> <input max="100" min="0" name='age' placeholder='Please enter your age.' type="range">
+                <label>Age</label> <input max="100" min="0" name='age' placeholder='Please enter your age.' type="number">
             </div>
             <div class="required field">
                 <label>Email Address</label> <input name='email' placeholder='Please enter an email address.' type='text'>

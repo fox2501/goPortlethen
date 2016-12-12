@@ -12,8 +12,8 @@ include("includes/header.php");
 ?>
 <!--main body-->
 <body>
-<div class="ui center aligned container">
-    <div class="ui middle aligned center aligned grid">
+<div class="ui stackable center aligned container">
+    <div class="ui stackable middle aligned center aligned grid">
         <div class="column">
             <h2 class="ui blue header"></h2>
             <div class="content">
