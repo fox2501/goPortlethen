@@ -66,7 +66,7 @@ if(strpos($url, 'accountDeleted') !== false){
             echo "
             <div class='sixteen wide column'>
                 <form action='/semantic/src/inc/editHome.php' class='ui form' method='post'>
-                    <button class='ui right floated button' type='submit'><input name='editHome' type='hidden' value = '<?php echo $contentID ?>'> <i class='ui settings icon'></i> Edit Home</button>
+                    <button class='ui right floated button' type='submit'><input name='editHome' type='hidden' value = '$contentID'> <i class='ui settings icon'></i> Edit Home</button>
                 </form>
             </div>
             ";
