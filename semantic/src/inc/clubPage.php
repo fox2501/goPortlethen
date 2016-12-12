@@ -121,7 +121,7 @@ if (isset($_SESSION['loggedIn'])) {
                     Fee Required?
                 </h5>
                 <div class='ui attached segment '>
-                    <p><?php echo"$feeRequired"?></p>
+                    <p> <?php echo "$feeRequired"?> </p>
                 </div>
                 <h5 class='ui attached header '>
                     Monthly Fee:
