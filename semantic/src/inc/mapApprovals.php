@@ -14,7 +14,9 @@ if (isset($_SESSION['loggedIn'])) {
     if ($accessLevel == 3) {
         echo "<h1 align='center'>Map Content Approvals</h1>
         <div class='ui horizontal section divider'>
-        </div>";
+        </div>
+        <div class = 'ui container'>
+        <div class = 'ui grid'>";
         $sql = "SELECT locationID, locationName, caption, locationType FROM locations WHERE approvalStatus = ?";
         $stmt = $pdo->prepare($sql);
         $stmt->execute([0]);
@@ -45,8 +47,8 @@ if (isset($_SESSION['loggedIn'])) {
                 </div>
                 <div class='column'>
                     <div class='extra'>
-                        <form action='/semantic/src/inc/mapPage.php' class='ui form' method='post'>
-                            <button class='ui right floated button' onclick='/semantic/src/inc/mapPage.php' type='submit'><input name='viewMap' type='hidden' value='$locationID'>Click here to view this on a map</button>
+                        <form action='/semantic/src/inc/mapPage.php?mapApproval' class='ui form' method='post'>
+                            <button class='ui right floated button' onclick='/semantic/src/inc/mapPage.php?mapApproval' type='submit'><input name='viewMap' type='hidden' value='$locationID'>Click here to view this on a map</button>
                         </form>
                     </div>
                 </div>
@@ -56,6 +58,7 @@ if (isset($_SESSION['loggedIn'])) {
     </div>
                     ";
         }
+        echo "</div></div>";
     } eLSE{
         echo "You cannot access this page.";
     }
