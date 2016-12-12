@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-include("includes/dbconnect.php");
+include("includes/PDOConnect.php");
 
 if (isset($_SESSION['loggedIn'])) {
     $userID = $_SESSION['loggedIn'];
@@ -15,9 +15,9 @@ if (isset($_SESSION['loggedIn'])) {
         echo "<h1 align='center'>Map Content Approvals</h1>
         <div class='ui horizontal section divider'>
         </div>";
-        $sql = "SELECT locationID, locationName, caption, locationType FROM locations";
+        $sql = "SELECT locationID, locationName, caption, locationType FROM locations WHERE approvalStatus = ?";
         $stmt = $pdo->prepare($sql);
-        $stmt->execute();
+        $stmt->execute([0]);
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             $locationName = $row['locationName'];
             $caption = $row['caption'];
@@ -56,6 +56,8 @@ if (isset($_SESSION['loggedIn'])) {
 	</div>
 			        ";
         }
+    } eLSE{
+        echo "You cannot access this page.";
     }
 }
 ?>
