@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+//connects to database server
 include("includes/PDOConnect.php");
 if (isset($_SESSION['loggedIn'])) {
     $userID = $_SESSION['loggedIn'];

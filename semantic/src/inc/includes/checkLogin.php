@@ -1,5 +1,5 @@
 <?php
-
+//session begins
 session_start();
 
 include("PDOConnect.php");

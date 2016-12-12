@@ -2,6 +2,7 @@
 
 <?php
 session_start();
+//connects to database server
 include("includes/dbconnect.php");
 
 if (isset($_SESSION['loggedIn'])) {
@@ -34,7 +35,7 @@ if (isset($_SESSION['loggedIn'])) {
 </head>
 
 <? include("includes/header.php"); ?>
-
+<!--main body-->
 <body>
 
 <h1 align="center">Health & Wellbeing</h1>
@@ -42,8 +43,8 @@ if (isset($_SESSION['loggedIn'])) {
     <p>Keeping Portlethen Healthy</p>
 </div>
 
-<div class="ui container">
-    <div class="ui two column grid">
+<div class="ui stackable container">
+    <div class="ui two column stackable grid">
         <div class="ten wide column">
             <?php
             if ($canAccess == '1') {
@@ -76,8 +77,8 @@ if (isset($_SESSION['loggedIn'])) {
                         if ($canAccess == '1') {
                             echo "
             <div class='ui raised segment'>
-                <div class='ui container'>
-                    <div class='ui grid'>
+                <div class='ui stackable container'>
+                    <div class='ui stackable grid'>
                         <div class='three wide column'>
                             <div class='ui medium image'><img src='$photoURL'></div>
                         </div>
@@ -104,8 +105,8 @@ if (isset($_SESSION['loggedIn'])) {
                         } else {
                             echo "
             <div class='ui raised segment'>
-                <div class='ui container'>
-                    <div class='ui grid'>
+                <div class='ui stackable container'>
+                    <div class='ui stackable grid'>
                         <div class='four wide column'>
                             <div class='ui medium image'><img src='$photoURL'></div>
                         </div>

@@ -1,9 +1,11 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 session_start();
 //connects to database server
 include("includes/PDOConnect.php");
 if (isset($_SESSION['loggedIn'])) {
-$canAccess = 0;
 $userID = $_SESSION['loggedIn'];
 $sql = "SELECT A.accessID from useraccess A, users B WHERE A.userName = B.userName AND B.userID = ?";
 $stmt = $pdo->prepare($sql);
@@ -11,77 +13,55 @@ $stmt->execute([$userID]);
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
 $accessLevel = $row['accessID'];
 
-$healthContentID = $_POST['editHealth'];
-$sql = "SELECT userID from healthcontent where healthContentID = ?";
-$stmt = $pdo -> prepare($sql);
-$stmt -> execute([$healthContentID]);
+$contentID = $_POST['editHome'];
 
-while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
-    $healthUserID = $row['userID'];
-}
-
-if($accessLevel = 1) {
-    $canAccess = 1;
-}
-if($healthUserID = $userID) {
-    $canAccess = 1;
-}
-if ($canAccess = 1) {
-$sql = "SELECT * from healthcontent WHERE healthContentID = ?";
+if ($accessLevel == 1) {
+$sql = "SELECT * from homecontent WHERE contentID = ?";
 $stmt = $pdo -> prepare($sql);
-$stmt -> execute([$healthContentID]);
-while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
-    $title = $row['title'];
-    $mainText = $row['mainText'];
-    $healthContentID = $row['healthContentID'];
-}
+$stmt -> execute([$contentID]);
+$row = $stmt -> fetch(PDO::FETCH_ASSOC);
+$title = $row['title'];
+$caption = $row['caption'];
+
 ?>
+<!DOCTYPE html>
+<html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="semantic.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
-</head>
-<!-- Nav bar -->
+    <link href="semantic.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js">
+    </script>
+    <title></title>
+</head><!-- Nav bar -->
 <? include("includes/header.php"); ?>
 <body>
 <!--main body-->
 <!-- Form -->
-
-
 <div class="ui container">
-    <h1 align="center">
-        Edit Health & Wellbeing Content
-    </h1>
+    <h1 align="center">Edit Home Page Content</h1>
     <div class="ui horizontal section divider">
-        <p>Keeping Portlethen Healthy</p>
+        <p>Give users a good first impression!</p>
     </div>
-
-    <form method ="post" action ="deleteHealth.php">
-        <button class="ui red right floated button" type ="submit" name = "healthID" value = "<?php echo $healthContentID; ?>">Delete Health Content</button>
-    </form>
-
-    <br>
-
-    <form action="submitEditHealth.php" class="ui form" enctype="multipart/form-data" method="post">
+    <form action="submitEditHome.php" class="ui form" enctype="multipart/form-data" method="post">
         <div class="field">
-            <label>Edit Title</label> <input name="editTitle" type="text" value="<?php echo $title; ?>">
+            <label>Edit Title</label> <input name="editTitle" type="text" value="<?php echo $title ?>">
         </div>
         <div class="field">
-            <label>Edit Main Text</label>
-            <textarea name="editMainText" rows="8"><?php echo $mainText; ?></textarea>
+            <label>Edit Caption</label>
+            <textarea name="editCaption" rows="8"><?php echo $caption ?></textarea>
         </div>
         <div class="field">
-            <input name="healthContentToEdit" type="hidden" value="<?php echo $healthContentID ?>">
+            <input name="editContent" type="hidden" value="<?php echo $contentID ?>">
         </div>
         <div class="field">
-            <label>Choose a new image for the content</label>
+            <label>Choose a new image for the home page</label>
             <div class="ui fluid action input">
-                <input name="healthPhoto" size="35" type="file">
+                <input name="homePhoto" size="35" type="file">
             </div>
         </div><button class="ui fluid large green submit button" type="submit">Submit</button>
-
         <script type="text/javascript">
             ;
             (function ($) {
@@ -109,12 +89,8 @@ while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
                 })
             })(jQuery);
         </script>
-        </form>
-
-</div>
-
-
-<!-- Footer -->
+    </form>
+</div><!-- Footer -->
 <?php
 include("includes/footer.php");
 } else {
@@ -123,3 +99,4 @@ include("includes/footer.php");
 };
 ?>
 </body>
+</html>

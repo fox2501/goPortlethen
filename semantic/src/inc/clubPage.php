@@ -1,5 +1,7 @@
 <?php
+//session begins
 session_start();
+//connects to database server
 include("includes/PDOConnect.php");
 
 $userID = $_SESSION['loggedIn'];
@@ -40,23 +42,43 @@ while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
     </head>
 <?php
 include("includes/header.php");
-echo"
+//checks user access level can view club
+if (isset($_SESSION['loggedIn'])) {
+    $userID = $_SESSION['loggedIn'];
+    $canAccess = '0';
+    $sql = "SELECT userName from users WHERE userID = '$userID'";
+    $result = mysqli_query($db, $sql);
+    $row = mysqli_fetch_assoc($result);
+    $userName = $row["userName"];
 
+    $sql = "SELECT accessID from useraccess where userName = '$userName'";
+    $result = mysqli_query($db, $sql);
+    $row = mysqli_fetch_assoc($result);
+    $accessID = $row["accessID"];
+    if ($accessID == '1' || $accessID == '4') {
+        $canAccess = '1';
+    } else {
+        $canAccess = '0';
+    }
+}
+//echoes out club page main body
+echo "
 <body>
 <div class='ui container'>
     <div class = 'ui grid'>
         <div class = 'eight wide column'>
             <header class = 'ui blue huge header'>$clubName Club Profile Page</header>
         </div>
-
         <div class = 'eight wide column'>
         <form class = 'ui form' method = 'POST' action = 'editClubPage.php' onclick = '/semantic/src/inc/editClubPage.php'>
+            
+            if ($canAccess = '1'){
             <button class = 'ui right floated button' onclick = '/semantic/src/inc/editClubPage.php' type = 'submit'>
                 <input type = 'hidden' name = 'editClub' value = $clubID>
                 <i class = 'ui settings icon'></i>
-        Edit Club
-        </button>
-            
+                    Edit Club
+            </button>
+            }
         </form>
         </div>
     </div>
@@ -65,7 +87,7 @@ echo"
                 <div class='ui card'>
                     <div class='image'>
                         <img
-                            src='$photoURL'
+                            src='$photoURL'>
                     </div>
                 </div>
             </div>
@@ -110,12 +132,10 @@ echo"
             </div>
             </div>
         </div>
-</div>
-</body>
-"
-?>
+</div>  
+</body>";
 
-<?php
+
+
 include("includes/footer.php");
 ?>
-</html>

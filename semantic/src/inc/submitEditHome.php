@@ -1,31 +1,18 @@
 <?php
-
-
 session_start();
 //connects to database server
 include("includes/PDOConnect.php");
+$userID = $_SESSION['loggedIn'];
+$title = $_POST["editTitle"];
+$caption = $_POST["editCaption"];
+$homeContentID = $_POST["editContent"];
 
-$clubName = $_POST["editClubName"];
-$clubID = $_POST["clubToEdit"];
-$clubDesc = $_POST["editDescription"];
-$contactNum = $_POST["editNumber"];
-$websiteURL = $_POST["editURL"];
-$feeRequired = $_POST["editFeeRequired"];
-$feeCost = $_POST["editCost"];
 
-//FEE REQUIRED DOES NOT WORK
+$sql ="UPDATE homecontent SET title = ?,caption= ? WHERE contentID = ?";
+$pdo->prepare($sql)->execute([$title,$caption, $homeContentID]);
 
-$sql = "UPDATE club SET clubName = ?,
-clubDescription =?,
-contactNumber = ?,
-websiteURL = ?,
-feePaid = ?,
-feeCost = ?
-WHERE clubID = ?;
-";
-$pdo->prepare($sql)->execute([$clubName,$clubDesc,$contactNum,$websiteURL,1,$feeCost,$clubID]);
 
-$img = $_FILES['img'];
+$img = $_FILES['homePhoto'];
 if(empty($img)){
     echo "<h2>An Image Please.</h2>";
 }else{
@@ -48,22 +35,21 @@ if(empty($img)){
     $pms = json_decode($out,true);
     $url=$pms['data']['link'];
 }
-if(empty($url)){
 
-}
-else{
-    $sql3 = "DELETE FROM photos WHERE clubID =?";
-    $pdo->prepare($sql3)->execute([$clubID]);
-    usleep(10000);
-    $caption = 'test';
-    $sql1 = "INSERT INTO photos(caption,url,clubID,locationID,healthContentID,routeID) VALUES(?,?,?,?,?,?)";
-    $pdo->prepare($sql1)->execute([$caption,$url,$clubID,0,0,0]);
+echo $url;
 
+//if(empty($url)){
+//
+//}
+//else{
+//    $sql = "DELETE FROM photos WHERE homeContentID  = 1";
+//    $pdo->prepare($sql)->execute();
+//    usleep(10000);
+//    $sql = "INSERT INTO photos(caption,url,clubID,locationID,healthContentID,routeID, homeContentID) VALUES(?,?,?,?,?,?,?)";
+//    $pdo->prepare($sql)->execute(['',$url,0,0,0,0,1]);
+//
+//
+//}
 
-}
-
-
-
-header('Location: /semantic/src/inc/clubLandingPage.php');
-
+//header('Location: /semantic/');
 ?>

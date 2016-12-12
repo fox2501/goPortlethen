@@ -1,5 +1,6 @@
 <?php
 session_start();
+//connects to database server
 include("includes/PDOConnect.php");
 
 $title = $_POST["title"];

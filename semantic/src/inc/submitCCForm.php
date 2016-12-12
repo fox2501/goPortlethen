@@ -1,11 +1,12 @@
 <?php
+//session begins
 session_start();
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-
+//connects to database server
 include("includes/PDOConnect.php");
 $userID          = $_SESSION['loggedIn'];
 $clubName        = $_POST["clubName"];
@@ -52,7 +53,7 @@ if ($img['name'] == '') {
 }
 
 
-
+//sql statement to insert inputted information on form from user
 $sql    = "INSERT INTO club (clubName, clubDescription, email, contactNumber, feePaid, feeCost, websiteURL, clubCategory, userID)
 VALUES (?,?,?,?,?,?,?,?,?)";
 $pdo->prepare($sql)->execute([$clubName,$clubDescription,$email,$contactNumber,$feePaid,$feeCost,'',$clubCategory,$userID]);

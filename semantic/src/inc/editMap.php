@@ -1,5 +1,6 @@
 <?php
 session_start();
+//connects to database server
 include ("includes/PDOConnect.php");
 include("includes/header.php");
 
@@ -21,6 +22,7 @@ $row = $stmt -> fetch(PDO::FETCH_ASSOC);
 <head>
     <title></title>
 </head>
+<!--main body-->
 <body>
 <h1 align="center">Submit Map Content</h1>
 <div class="ui horizontal section divider">
