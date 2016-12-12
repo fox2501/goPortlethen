@@ -34,8 +34,8 @@ include("includes/header.php");
     Become more involved
 </div>
 
-<div class="ui container">
-    <div class="ui grid">
+<div class="ui stackable container">
+    <div class="ui stackable grid">
         <div class="row">
             <?php
             if ($canAccess == 1) {
@@ -77,8 +77,8 @@ include("includes/header.php");
     </div>
 </div>
 
-<div class="ui container">
-    <div class="ui grid">
+<div class="ui stackable container">
+    <div class="ui stackable grid">
         <div class="ui hidden divider"></div>
         <?php
         $sql_query = "SELECT A.clubName, A.clubDescription, A.clubID, B.url FROM club A, photos B WHERE A.clubID = B.clubID";
@@ -90,8 +90,8 @@ include("includes/header.php");
             $photo = $row['url'];
             echo "
 <div class='ui raised segment'>
-    <div class='ui container'>
-        <div class='ui grid'>
+    <div class='ui stackable container'>
+        <div class='ui stackable grid'>
             <div class='ui two wide column'>
                 <div class='ui image'>
                     <img src='$photo'>
