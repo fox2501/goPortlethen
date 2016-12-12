@@ -51,9 +51,6 @@ include("includes/header.php");
             </div>";
             } ?>
 
-
-
-
             <div class="eight wide column">
                 <div class="ui form">
                     <div class="inline fields">
