@@ -42,7 +42,7 @@ $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
                 <label>Surname</label> <input name='surname' placeholder='Please enter your surname.' type='text'>
             </div>
             <div class="required field">
-                <label>Age</label> <input max="100" min="0" name='age' placeholder='Please enter your age.' type="range">
+                <label>Age</label> <input max="100" min="0" name='age' placeholder='Please enter your age.' type="number">
             </div>
             <div class="required field">
                 <label>Email Address</label> <input name='email' placeholder='Please enter an email address.' type='text'>
