@@ -65,27 +65,37 @@ if(strpos($url, 'accountDeleted') !== false){
         <?php
         if($accessLevel == 1){
             echo "
+            <div class=\"sixteen wide column\">
+                <div class=\"ui huge blue centered header\">
+                    <?php echo $title ?>
+                </div>
+            </div>
             <div class='sixteen wide column'>
                 <form action='/semantic/src/inc/editHome.php' class='ui form' method='post'>
                     <button class='ui right floated button' type='submit'><input name='editHome' type='hidden' value = '$contentID'> <i class='ui settings icon'></i> Edit Home</button>
                 </form>
             </div>
             ";
-        }
-
-        ?>
-        <div class="sixteen wide column">
-            <div class="ui huge blue centered header">
+        }else{
+            echo"
+        <div class='sixteen wide column'>
+            <div class='ui huge blue centered header'>
                 <?php echo $title ?>
             </div>
         </div>
+        ";
+
+        }
+
+        ?>
+
         <div class="sixteen wide column">
             <div class="column"><img class="ui medium centered circular image" src="<?php echo $url ?>"></div>
         </div>
         <div class="sixteen wide column">
-            <h3 class = 'ui header'>
+            <h2 class = 'ui header'>
                 <?php echo $caption ?>
-            </h3>
+            </h2>
         <div class="ui header">
             Need help? Click <a href="/semantic/src/inc/help.php">here</a> for FAQs!
         </div>
