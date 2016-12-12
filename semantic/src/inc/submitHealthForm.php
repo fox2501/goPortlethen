@@ -7,12 +7,14 @@ $userID = $_SESSION["loggedIn"];
 $title = $_POST["title"];
 $mainText = $_POST["mainText"];
 
+//checknig username
 $sql = "SELECT userName from users WHERE userID = ?";
 $stmt = $pdo->prepare($sql);
 $stmt->execute([$userID]);
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
 $userName = $row["userName"];
 
+//checking users access level
 $sql = "SELECT accessID from useraccess where userName = ? ";
 $stmt = $pdo->prepare($sql);
 $stmt->execute([$userName]);
@@ -57,8 +59,8 @@ $pdo->prepare($sql)->execute([$title,$mainText,$userID,$approvalLvl]);
 
 $healthID = $pdo->lastInsertId();
 
-$sql = "INSERT INTO photos (caption,url,clubID,locationID,healthContentID,routeID) VALUES (?,?,?,?,?,?)";
-$pdo->prepare($sql)->execute(['',$url,0,0,$healthID,0]);
+$sql = "INSERT INTO photos (caption,url,clubID,locationID,healthContentID,routeID, homeContentID) VALUES (?,?,?,?,?,?,?)";
+$pdo->prepare($sql)->execute(['',$url,0,0,$healthID,0,0]);
 
 
 

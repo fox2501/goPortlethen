@@ -53,7 +53,7 @@ include("includes/header.php");
             </header>
         </div>
         <?php
-        if ($accessLevel == 1 || $accessLevel == 4){
+        if ($accessLevel == 1 || $accessLevel == 2){
             echo"
 			    <div class='eight wide column'>
 			        <form action='editClubPage.php' class='ui form' method='post'>

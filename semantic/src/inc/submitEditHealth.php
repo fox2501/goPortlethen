@@ -64,8 +64,8 @@ else{
     $pdo->prepare($sql3)->execute([$healthID]);
     usleep(10000);
     $caption = 'test';
-    $sql1 = "INSERT INTO photos(caption,url,clubID,locationID,healthContentID,routeID) VALUES(?,?,?,?,?,?)";
-    $pdo->prepare($sql1)->execute([$caption,$url,0,0,$healthID,0]);
+    $sql1 = "INSERT INTO photos(caption,url,clubID,locationID,healthContentID,routeID, homeContentID) VALUES(?,?,?,?,?,?,?)";
+    $pdo->prepare($sql1)->execute([$caption,$url,0,0,$healthID,0,0]);
 
 
 }
