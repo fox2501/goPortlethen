@@ -82,6 +82,9 @@ if (isset($_SESSION['loggedIn'])) {
                     <input type="text" name="phoneNumber" maxlength="11" placeholder="Phone Number">
                 </div>
                 <div class="field">
+                    <div class="ui label">
+                        http://
+                    </div>
                     <label>Website URL</label>
                     <input type="URL" name="websiteURL" placeholder="Website URL">
                 </div>
