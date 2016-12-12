@@ -62,7 +62,7 @@ include("includes/header.php");
         ?>
         <div class='four wide column'>
             <div class='ui card'>
-                <div class='image'><img src='<?php $photoURL ?>'></div>
+                <div class='image'><img src='<?php echo $photoURL ?>'></div>
             </div>
         </div>
         <div class='twelve wide column'>
