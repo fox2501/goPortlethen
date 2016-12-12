@@ -3,6 +3,7 @@
 session_start();
 //connects to database server
 include("includes/dbconnect.php");
+//access levels
 if (isset($_SESSION['loggedIn'])) {
     $userID = $_SESSION['loggedIn'];
     $canAccess = '0';
@@ -22,6 +23,7 @@ if (isset($_SESSION['loggedIn'])) {
     }
 }
 ?>
+
 <head>
     <title>Club Landing Page</title>
 </head>
@@ -31,7 +33,7 @@ include("includes/header.php");
 <body>
 <h1 align="center">Club Landing Page</h1>
 <div class="ui horizontal section divider">
-    Become more involved
+    Become More Involved
 </div>
 
 <div class="ui stackable container">
@@ -40,12 +42,12 @@ include("includes/header.php");
             <?php
             if ($canAccess == 1) {
                 echo "
-	<div class='four wide column'>
-	                            <a href='createClubPage.php'>
-                                    <button class='ui green submit button' style='margin-right:50px'>Create a club</button>
-                                </a>      
-            </div>";
-            } ?>
+	                <div class='four wide column'>
+	                    <a href='createClubPage.php'>
+                            <button class='ui green submit button' style='margin-right:50px'>Create a club</button>
+                        </a>      
+                    </div>
+                    ";}?>
 
             <div class="eight wide column">
                 <div class="ui form">
@@ -64,8 +66,8 @@ include("includes/header.php");
                     </div>
                 </div>
             </div>
-            <div class="four wide column">
 
+            <div class="four wide column">
                 <div class="ui fluid category search">
                     <div class="ui right floated icon input">
                         <input class="prompt" type="text" placeholder="Search clubs...">
