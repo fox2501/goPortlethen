@@ -5,11 +5,11 @@ session_start();
 include("includes/PDOConnect.php");
 
 $userID = $_SESSION['loggedIn'];
-$sql = "SELECT userAccessID from useraccess A, users B WHERE A.userName = B.userName AND B.userID = ?";
+$sql = "SELECT accessID from useraccess A, users B WHERE A.userName = B.userName AND B.userID = ?";
 $stmt = $pdo->prepare($sql);
 $stmt->execute([$userID]);
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
-$userAccessID = $row['userAccessID'];
+$accessLevel = $row['accessID'];
 
 $clubID = $_POST['viewClub'];
 $sql = "SELECT * FROM club WHERE clubID = ?";
@@ -43,31 +43,12 @@ while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
     <title>Club Page</title>
 </head><?php
 include("includes/header.php");
-//checks user access level can view club
-    $userID = $_SESSION['loggedIn'];
-    $canAccess = '0';
-    $sql = "SELECT userName from users WHERE userID = ?";
-    $stmt = $pdo -> prepare($sql);
-    $stmt -> execute([$userID]);
-    $row = $stmt -> fetch(PDO::FETCH_ASSOC);
-    $userName = $row["userName"];
-
-    $sql = "SELECT accessID from useraccess where userName = ?";
-    $stmt = $pdo -> prepare($sql)->execute([$userName]);
-    $row = $stmt -> fetch(PDO::FETCH_ASSOC);
-    $accessID = $row["accessID"];
-
-    if ($accessID == 1 || $accessID == 4) {
-        $canAccess = 1;
-    } else {
-        $canAccess = 0;
-    }
 ?>
 <body>
 <div class='ui stackable container'>
     <div class='ui stackable grid'>
         <?php
-        if ($canAccess == 1){
+        if ($accessLevel == 1 || $accessLevel == 4){
             echo"
 			    <div class='sixteen wide column'>
 			        <form action='editClubPage.php' class='ui form' method='post'>
