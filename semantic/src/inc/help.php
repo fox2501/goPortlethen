@@ -115,11 +115,10 @@ while($row = $stmt -> fetch(PDO::FETCH_ASSOC)){
                             <label>Enter your question here :</label> <input name="question" type="text">
                         </div>
                     </div>
-                    <button class="ui positive right labeled icon button" id= "createEmail" type="submit">
-                        <a href="submitHelp.php">Send Message</a> <i class="checkmark icon"></i>
-                    </button>
+
                 </div>
             </div>
+            <button class="ui fluid large green submit button" type="submit">Create Account</button>
         </form>
     </div>
     <div class="actions">
