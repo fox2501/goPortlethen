@@ -24,7 +24,7 @@ if (isset($_SESSION['loggedIn'])) {
         $age = $row['age'];
     ?>
     <body>
-    <div class="ui container">
+    <div class="ui stackable container">
         <?php
         if(strpos($url, 'editedProfile') !== false){
             echo "
@@ -45,7 +45,7 @@ if (isset($_SESSION['loggedIn'])) {
 	        ";
         }
         ?>
-        <div class = "ui two column grid">
+        <div class = "ui stackable two column grid">
             <div class = "ui column">
 
                 <div class = "ui huge blue header">
@@ -61,7 +61,7 @@ if (isset($_SESSION['loggedIn'])) {
                 </form>
             </div>
         </div>
-        <div class="ui grid">
+        <div class="ui stackable grid">
             <div class="row">
                 <div class="column">
                     <div class="ui one column grid">

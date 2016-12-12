@@ -2,7 +2,7 @@
 
 session_start();
 //connects to database server
-include("includes/dbconnect.php");
+include("includes/PDOConnect.php");
 
 if (isset($_SESSION['loggedIn'])) {
     include("includes/header.php");
@@ -10,26 +10,23 @@ if (isset($_SESSION['loggedIn'])) {
         <div class='ui horizontal section divider'>
         </div>";
     $userID = $_SESSION['loggedIn'];
-    $sql = "SELECT userName from users where userID = '$userID'";
-    $result = mysqli_query($db, $sql);
-    while ($row = mysqli_fetch_assoc($result)) {
-        $userName = $row['userName'];
-    }
-    $sql = "SELECT accessID from useraccess WHERE userName = '$userName'";
-    $result = mysqli_query($db, $sql);
-    while ($row = mysqli_fetch_assoc($result)) {
-        $accessLevel = $row['accessID'];
-    }
+    $sql = "SELECT accessID from users U, useraccess UA where U.userName = UA.userName AND userID = ?";
+    $stmt = $pdo ->prepare($sql);
+    $stmt -> execute([$userID]);
+    $row = $stmt -> fetch(PDO::FETCH_ASSOC);
+    $accessLevel = $row['accessID'];
+
     if ($accessLevel == 1) {
-        $sql_query = "
+        $sql = "
     SELECT A.title, A.mainText, B.userName, A.datePosted, A.healthContentID, A.approvalStatus, C.url
     FROM healthcontent A, users B, photos C
     WHERE 
     A.userID=B.userID
     AND A.healthContentID = C.healthContentID
-    AND A.approvalStatus = 0;";
-        $result = $db->query($sql_query);
-        while ($row = $result->fetch_array()) {
+    AND A.approvalStatus = ?";
+        $stmt = $pdo ->prepare($sql);
+        $stmt -> execute([0]);
+        while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
             $title = $row['title'];
             $mainText = $row['mainText'];
             $userName = $row['userName'];

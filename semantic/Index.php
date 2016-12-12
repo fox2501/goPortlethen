@@ -59,6 +59,15 @@ if(strpos($url, 'accountDeleted') !== false){
 	        </div>
 	        ";
 }
+if(strpos($url, 'contentEdited') !== false){
+    echo "
+	            <div class='ui message'>
+	          <div class='centered header'>
+	            You have successfully edited the home page content.
+	          </div>
+	        </div>
+	        ";
+}
 ?>
 <div class="ui stackable container">
     <div class="ui stackable grid">

@@ -11,8 +11,8 @@ if(!(empty($password)) && (!(empty($passwordConfirm)))){
     if($password == $passwordConfirm){
         $hashpass = password_hash($password, PASSWORD_BCRYPT);
 
-        $sql = "UPDATE users SET password = '$hashpass' WHERE userID = ?";
-        $stmt = $pdo -> prepare($sql)->execute([$userID]);
+        $sql = "UPDATE users SET password = ? WHERE userID = ?";
+        $stmt = $pdo -> prepare($sql)->execute([$hashpass, $userID]);
         header("Location: /semantic/src/inc/profile.php?passwordChanged");
 
     }else{

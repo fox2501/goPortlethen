@@ -1,7 +1,7 @@
 <?php
 session_start();
 //connects to database server
-include("includes/dbconnect.php");
+include("includes/PDOConnect.php");
 $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 ?>
 <!DOCTYPE html>

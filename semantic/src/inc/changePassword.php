@@ -3,7 +3,7 @@ session_start();
 include("includes/dbconnect.php");
 
 if (isset($_SESSION['loggedIn'])) {
-    include("includes/header.php");
+include("includes/header.php");
 ?>
 
 <!DOCTYPE html>
@@ -14,19 +14,22 @@ if (isset($_SESSION['loggedIn'])) {
 </head>
 
 <body>
-    <!-- Begin container -->
-    <div class="ui stackable container">
-        <!-- Heading -->
-        <div class="ui stackable two column grid">
-            <div class="ui column">
-                <div class="ui huge blue header">Change Password</div>
-            </div>
+<!-- Begin container -->
+<div class="ui stackable container">
+    <!-- Heading -->
+    <div class="ui stackable two column grid">
+        <div class="ui column">
+            <div class="ui huge blue header">Change Password</div>
         </div>
-        <!-- Main body -->
-        <div class="ui stackable grid">
-            <div class="row">
-                <div class="column">
+    </div>
+    <!-- Main body -->
+    <div class="ui stackable grid">
+        <div class="row">
+            <div class="column">
+                <div class='ui stackable raised segment'>
+
                     <form action="submitChangePassword.php" class="ui form" method="post">
+                        <div class = 'ui error message'></div>
                         <div class="field">
                             <label>New Password</label>
                             <input name="passwordOne" type="password" value=''>
@@ -53,23 +56,23 @@ if (isset($_SESSION['loggedIn'])) {
                                                 }
                                             ]
                                         },
-                                            passwordConfirm: {
-                                                identifier: 'passwordConfirm',
-                                                rules: [
-                                                    {
-                                                        // Passwords entered must match
-                                                        type: 'match[passwordOne]',
-                                                        prompt: 'Please ensure your passwords match!'
-                                                    },
-                                                    {
-                                                        type: 'minLength[8]',
-                                                        prompt: 'Please confirm your password ensuring it is atleast 8 characters!'
-                                                    }
-                                                ]
-                                            }
+                                        passwordConfirm: {
+                                            identifier: 'passwordConfirm',
+                                            rules: [
+                                                {
+                                                    // Passwords entered must match
+                                                    type: 'match[passwordOne]',
+                                                    prompt: 'Please ensure your passwords match!'
+                                                },
+                                                {
+                                                    type: 'minLength[8]',
+                                                    prompt: 'Please confirm your password ensuring it is atleast 8 characters!'
+                                                }
+                                            ]
                                         }
-                                    })
+                                    }
                                 })
+                            })
                             (jQuery);
                         </script>
                     </form>
@@ -77,12 +80,13 @@ if (isset($_SESSION['loggedIn'])) {
             </div>
         </div>
     </div>
+</div>
 
 <?php
 include("includes/footer.php");
 }
 else {
-    header("Location: /semantic/src/inc/logIn.php");
+    header("Location: /semantic/src/inc/logIn.php?restricted");
 }
 ?>
 </body>

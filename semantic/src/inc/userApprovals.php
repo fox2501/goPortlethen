@@ -10,15 +10,9 @@ if (isset($_SESSION['loggedIn'])) {
         <div class='ui horizontal section divider'>
         </div>";
     $userID = $_SESSION['loggedIn'];
-    $sql = "SELECT userName from users where userID = ?";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([$userID]);
-    $row = $stmt->fetch(PDO::FETCH_ASSOC);
-    $userName = $row['userName'];
-
-    $sql = "SELECT accessID from useraccess WHERE userName = ?";
-    $stmt = $pdo -> prepare($sql);
-    $stmt -> execute([$userName]);
+    $sql = "SELECT accessID from users U, useraccess UA where U.userName = UA.userName AND userID = ?";
+    $stmt = $pdo ->prepare($sql);
+    $stmt -> execute([$userID]);
     $row = $stmt -> fetch(PDO::FETCH_ASSOC);
     $accessLevel = $row['accessID'];
 
@@ -38,9 +32,9 @@ if (isset($_SESSION['loggedIn'])) {
             $accessRequired = $row['description'];
             echo "
          <div class = 'row'>
-            <div class = 'ui container'>
+            <div class = 'ui stackable container'>
                 <div class = 'ui raised segment'>
-                 <div class = 'ui grid'>
+                 <div class = 'ui stackable grid'>
                     <div class = 'twelve wide column'>
                         <div class = 'row'>
                             <h3 class = 'ui header' id = 'userName'>Username: $userName</h3>

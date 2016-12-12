@@ -52,7 +52,7 @@ include("includes/header.php");
             echo"
                 <div class='eight wide column'>
                     <header class='ui blue huge header'>
-                        <?php echo $clubName ?>Club Profile Page
+                        $clubName Club Profile Page
                     </header>
                 </div>
 			    <div class='four wide column'>
@@ -70,7 +70,7 @@ include("includes/header.php");
             echo "
                 <div class='eight wide column'>
                     <header class='ui blue huge header'>    
-                        <?php echo $clubName ?>Club Profile Page
+                        $clubName Club Profile Page
                 </header>
                 </div>
 			    <div class='eight wide column'>

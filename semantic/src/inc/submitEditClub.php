@@ -56,14 +56,14 @@ else{
     $pdo->prepare($sql3)->execute([$clubID]);
     usleep(10000);
     $caption = 'test';
-    $sql1 = "INSERT INTO photos(caption,url,clubID,locationID,healthContentID,routeID) VALUES(?,?,?,?,?,?)";
-    $pdo->prepare($sql1)->execute([$caption,$url,$clubID,0,0,0]);
+    $sql1 = "INSERT INTO photos(caption,url,clubID,locationID,healthContentID,routeID, homeContentID) VALUES(?,?,?,?,?,?,?)";
+    $pdo->prepare($sql1)->execute([$caption,$url,$clubID,0,0,0,0]);
 
 
 }
 
 
 
-header('Location: /semantic/src/inc/clubLandingPage.php');
+header('Location: /semantic/src/inc/clubLandingPage.php?editedClub');
 
 ?>
