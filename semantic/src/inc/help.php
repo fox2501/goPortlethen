@@ -2,6 +2,7 @@
 //session begins
 session_start();
 
+include("includes/PDOConnect.php");
 $sql = "SELECT emailAddress FROM users A, useraccess B WHERE A.userName = B.userName AND B.accessID = ?";
 $stmt = $pdo->prepare($sql);
 $stmt->execute([1]);
