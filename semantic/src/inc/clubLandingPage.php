@@ -97,7 +97,7 @@ include("includes/header.php");
         <div class="ui hidden divider"></div><?php
         $sql = "SELECT A.clubName, A.clubDescription, A.clubID, B.url FROM club A, photos B WHERE A.clubID = B.clubID";
         $result = mysqli_query($db, $sql);
-        while ($row = mysqli_query_fetch($result)) {
+        while ($row = mysqli_fetch_assoc($result)) {
             $title = $row['clubName'];
             $mainText = $row['clubDescription'];
             $clubID = $row['clubID'];
