@@ -35,7 +35,7 @@ if (isset($_SESSION['loggedIn'])) {
     </head>
     <?php include("includes/header.php"); ?>
     <body>
-    <div class="ui container">
+    <div class="ui stackable container">
         <form class="ui form" action="submitCCForm.php" enctype="multipart/form-data" method="POST">
             <h1 align="center">
                 <div class="content">
@@ -68,7 +68,7 @@ if (isset($_SESSION['loggedIn'])) {
                 <div class="required field">
                     <label>Club Category</label>
                     <select class="ui search dropdown" name="clubCategory">
-                        <option value="">Select Category</option>
+                        <option>Select Category</option>
                         <option value="ART">Art</option>
                         <option value="E-SPORT">E-Sport</option>
                         <option value="HEALTH">Health</option>

@@ -44,7 +44,6 @@ while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
 </head><?php
 include("includes/header.php");
 //checks user access level can view club
-if (isset($_SESSION['loggedIn'])) {
     $userID = $_SESSION['loggedIn'];
     $canAccess = '0';
     $sql = "SELECT userName from users WHERE userID = ?";
@@ -58,12 +57,11 @@ if (isset($_SESSION['loggedIn'])) {
     $row = $stmt -> fetch(PDO::FETCH_ASSOC);
     $accessID = $row["accessID"];
 
-    if ($accessID == '1' || $accessID == '4') {
-        $canAccess = '1';
+    if ($accessID == 1 || $accessID == 4) {
+        $canAccess = 1;
     } else {
-        $canAccess = '0';
+        $canAccess = 0;
     }
-}
 ?>
 <body>
 <div class='ui stackable container'>
@@ -73,7 +71,7 @@ if (isset($_SESSION['loggedIn'])) {
             echo"
 			    <div class='sixteen wide column'>
 			        <form action='editClubPage.php' class='ui form' method='post'>
-			            <button class='ui right floated button' type='submit'><input name='editClub' type='hidden' value=\"$clubID\"> <i class='ui settings icon'></i> Edit Club</button>
+			            <button class='ui right floated button' type='submit'><input name='editClub' type='hidden' value='$clubID'> <i class='ui settings icon'></i> Edit Club</button>
 			        </form>
 			    </div>";
         }?>
@@ -82,7 +80,6 @@ if (isset($_SESSION['loggedIn'])) {
                 <?php echo $clubName ?>Club Profile Page
             </header>
         </div>
-        <div class='ui stackable grid'>
             <div class='four wide column'>
                 <div class='ui card'>
                     <div class='image'><img src='<?php echo $photoURL ?>'></div>
@@ -117,8 +114,7 @@ if (isset($_SESSION['loggedIn'])) {
                 </div>
             </div>
         </div>
-    </div>
-</div><?php
+    </div><?php
 
 include("includes/footer.php");
 ?>
