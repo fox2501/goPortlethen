@@ -17,7 +17,8 @@ if (isset($_SESSION['loggedIn'])) {
     $stmt->execute([$userName]);
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
     $accessID = $row["accessID"];
-    if ($accessID == '1' || $accessID == '3') {
+
+    if ($accessID == '1' || $accessID == '2') {
         $canAccess = '1';
     } else {
         $canAccess = '0';
@@ -48,33 +49,27 @@ if (isset($_SESSION['loggedIn'])) {
 
     <!-- Form -->
     <div class="ui container">
-        <form class="ui form" action="submitHealthForm.php" enctype="multipart/form-data" method="POST"
+        <form class="ui form" action="submitCreateEvent.php" enctype="multipart/form-data" method="POST"
               onsubmit="return validateForm()">
 
             <div class="ui error message"></div>
 
             <div class="required field">
                 <label>Title</label>
-                <div class="field">
-                    <input type="text" name="title" placeholder="Enter the title of your Event">
+                <div class="field"><input type="text" name="title" placeholder="Enter the title of your Event">
                 </div>
             </div>
             <div class="required field">
-                <lavel>Event Date</lavel>
-                <div class="field">
-                    <input type="date" name ="date">
+                <label>Event Date</label><input type="date" name ="date">
                 </div>
             </div>
-
             <div class="required field">
-                <label>Content</label>
-                <textarea rows="8" type="text" name="mainText" placeholder="Enter the content of your event"></textarea>
+                <label>Description</label>
+                <textarea rows="8" name="mainText" placeholder="Enter the content of your event"></textarea>
             </div>
-
             <button class="ui fluid large green submit button" id="createClubEvent" type="submit">Submit Event</button>
-
             <script type="text/javascript">
-                ;
+
                 (function ($) {
                     $('.ui.form').form({
                         fields: {
