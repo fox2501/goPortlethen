@@ -5,18 +5,18 @@ include("includes/PDOConnect.php");
 if (isset($_SESSION['loggedIn'])) {
     $userID = $_SESSION['loggedIn'];
 
-    $sql = "SELECT userAccessID from useraccess A, users B WHERE A.userName = B.userName AND B.userID = ?";
+    $sql = "SELECT accessID from useraccess A, users B WHERE A.userName = B.userName AND B.userID = ?";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([$userID]);
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
-    $userAccessID = $row['userAccessID'];
+    $accessID = $row['userAccessID'];
 
     $clubID = $_POST['editClub'];
     $sql = "SELECT userID from club where clubID = ?";
     $stmt = $pdo -> prepare($sql);
     $stmt->execute([$clubID]);
     while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
-        if ($row['userID'] == $userID || $userAccessID == '1') {
+        if ($row['userID'] == $userID || $accessID == '1') {
             $clubID = $_POST['editClub'];
             $sql = "SELECT * FROM club WHERE clubID = ?";
             $stmt = $pdo -> prepare($sql);
