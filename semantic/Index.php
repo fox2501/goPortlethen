@@ -36,7 +36,7 @@ if(strpos($url, 'accountDeleted') !== false){
     <form class='ui form' action='editHomePage.php'  method='post' onclick='/semantic/src/inc/editHomePage.php'>
         <button class='ui right floated button' onclick='/semantic/src/inc/editHomePage.php' type='submit'><input name='editHome' type='hidden'> <i class='ui settings icon'></i> Edit Home</button>
     </form>
-    <div class="ui one column stackable grid">
+    <div class="ui stackable grid">
         <div class="row">
             <div class="column">
                 <div class="ui huge blue centered header">
