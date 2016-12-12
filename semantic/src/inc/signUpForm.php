@@ -16,22 +16,22 @@ $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
         <div class="content">
             <h1 align="center">Sign Up</h1>
         </div>
-        <div class="ui segment">
-            <div class="ui attached message">
-                <div class="header">
-                    Welcome to goPortlethen!
-                </div>
-                <p>Please fill out the form below to sign up</p>
+        <div class="ui attached message" style="padding-bottom: 10px;">
+            <div class="header">
+                Welcome to goPortlethen!
             </div>
+            <p>Please fill out the form below to sign up</p>
+        </div>
+        <div class="ui form attached fluid segment">
             <div class="ui error message"></div><?php
             if (strpos($url, 'error=usernameExists') !== false) {
                 echo "
-				                <div class='ui negative message'>
-				                    <div class='header'>
-				                        Sorry. The username you have chosen already exists.
-				                    </div>
-				                </div>
-				                ";
+				                                <div class='ui negative message'>
+				                                    <div class='header'>
+				                                        Sorry. The username you have chosen already exists.
+				                                    </div>
+				                                </div>
+				                                ";
             }
             ?>
             <div class="required field">
