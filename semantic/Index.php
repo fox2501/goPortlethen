@@ -21,7 +21,7 @@ $sql = "SELECT * FROM photos WHERE homeContentID = ?";
 $stmt = $pdo -> prepare($sql);
 $stmt -> execute([$contentID]);
 $row = $stmt -> fetch(PDO::FETCH_ASSOC);
-$photoID = $row['photoID'];
+$url = $row['url'];
 
 ?>
 <!DOCTYPE html>
@@ -63,7 +63,7 @@ if(strpos($url, 'accountDeleted') !== false){
             </div>
         </div>
         <div class="sixteen wide column">
-            <div class="column"><img class="ui medium centered circular image" src="<?php echo $photoID ?>"></div>
+            <div class="column"><img class="ui medium centered circular image" src="<?php echo $url ?>"></div>
         </div>
         <div class="sixteen wide column">
             <p><?php echo $caption ?></p>
