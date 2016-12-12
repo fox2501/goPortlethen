@@ -5,7 +5,7 @@ include("includes/dbconnect.php");
 
 $clubCategory = $_POST["search"];
 
-$sql = "SELECT * FROM clubs WHERE search = clubs.clubCategory";
+$sql = "SELECT * FROM clubs WHERE $clubCategory = clubs.clubCategory";
 
 header("Location: /semantic/src/inc/clubLandingPageSearched.php");
 ?>
