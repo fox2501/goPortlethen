@@ -12,6 +12,7 @@ if (isset($_SESSION['loggedIn'])) {
         $accessLevel = $row['accessID'];
     }
     if ($accessLevel == 3) {
+        include("includes/header.php");
         echo "<h1 align='center'>Map Content Approvals</h1>
         <div class='ui horizontal section divider'>
         </div>";
