@@ -38,11 +38,8 @@ include("includes/header.php");
             <?php
             if ($canAccess == 1) {
                 echo "
-	<div class='four wide column'>      
-                <button class='ui green submit button' type='submit' onclick='/semantic/src/inc/CreateClubPage.php'>
-                            <input type='hidden' name='createClub'>
-                            Create Club
-                        </button>
+	<div class='four wide column'>
+                <button class='ui green submit button'><a href='/semantic/src/inc/CreateClubPage.php'>Create a Club</a></button>      
             </div>";
             } ?>
 
