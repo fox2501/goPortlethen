@@ -53,7 +53,12 @@ include("includes/header.php");
                         <?php echo $clubName ?>Club Profile Page
                     </header>
                 </div>
-			    <div class='eight wide column'>
+			    <div class='four wide column'>
+			        <form action='editClubPage.php' class='ui form' method='post'>
+			            <button class='ui right floated button' type='submit'><input name='editClub' type='hidden' value='$clubID'> <i class='ui settings icon'></i> Edit Club</button>
+			        </form>
+			    </div>
+			    <div class='four wide column'>
 			        <form action='editClubPage.php' class='ui form' method='post'>
 			            <button class='ui right floated button' type='submit'><input name='editClub' type='hidden' value='$clubID'> <i class='ui settings icon'></i> Edit Club</button>
 			        </form>
@@ -61,12 +66,16 @@ include("includes/header.php");
         }
         else{
             echo "
-                <div class='sixteen wide column'>
+                <div class='eight wide column'>
                     <header class='ui blue huge header'>
                         <?php echo $clubName ?>Club Profile Page
                 </header>
                 </div>
-                ";
+			    <div class='eight wide column'>
+			        <form action='editClubPage.php' class='ui form' method='post'>
+			            <button class='ui right floated button' type='submit'><input name='editClub' type='hidden' value='$clubID'> <i class='ui settings icon'></i> Edit Club</button>
+			        </form>
+			    </div>";
         }?>
 
             <div class='four wide column'>
