@@ -32,7 +32,7 @@ $accessLevel = $row["accessID"];
         echo"
 		        <div class = 'ui warning message'>
 		        <h3 class = 'ui header''>
-		        You can only edit content that you have submitted!
+		        You do not have access to that page.
 		        </h3>
 		    </div>
 		    ";
