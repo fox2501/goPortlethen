@@ -4,6 +4,7 @@
 session_start();
 //connects to database server
 include("includes/dbconnect.php");
+$url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 
 if (isset($_SESSION['loggedIn'])) {
     $userID = $_SESSION['loggedIn'];
@@ -44,6 +45,63 @@ if (isset($_SESSION['loggedIn'])) {
 </div>
 
 <div class="ui stackable container">
+    <?php
+    if(strpos($url, 'restricted') !== false){
+        echo"
+        <div class = 'ui warning message'>
+        <h3 class = 'ui header''>
+        You can only edit content that you have submitted!
+        </h3>
+    </div>
+    ";
+    }
+    if(strpos($url, 'contentDeleted') !== false){
+        echo"
+        <div class = 'ui error message'>
+        <h3 class = 'ui header''>
+        You have successfully deleted health content.
+        </h3>
+    </div>
+    ";
+    }
+    if(strpos($url, 'newApprovalNeeded') !== false){
+        echo"
+        <div class = 'ui warning message'>
+        <h3 class = 'ui header''>
+        You have successfully submitted new content. This requires approval first.
+        </h3>
+    </div>
+    ";
+    }
+    if(strpos($url, 'newContentSubmitted') !== false){
+        echo"
+        <div class = 'ui message'>
+        <h3 class = 'ui header''>
+        You have successfully created new health content.
+        </h3>
+    </div>
+    ";
+    }
+    if(strpos($url, 'editedContent') !== false){
+        echo"
+        <div class = 'ui message'>
+        <h3 class = 'ui header''>
+        You have successfully edited the content.
+        </h3>
+    </div>
+    ";
+    }
+    if(strpos($url, 'editApprovalNeeded') !== false){
+        echo"
+        <div class = 'ui warning message'>
+        <h3 class = 'ui header''>
+        You have successfully submitted content to be edited. This needs approval by a site admin.
+        </h3>
+    </div>
+    ";
+    }
+    ?>
+
     <div class="ui two column stackable grid">
         <div class="ten wide column">
             <?php

@@ -45,21 +45,21 @@ session_start();
         <div class="row">
             <div class="column">
                 <div class="ui header">
-                    How do I create an account?
+                    How do I see a map/route in the area?
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce velit tellus, porta efficitur blandit eget, lobortis eget libero. Aliquam id augue a sapien efficitur consequat. Pellentesque commodo tempor rutrum. Vestibulum sit amet mi quis purus viverra viverra. Mauris sit amet molestie quam. Vestibulum a convallis diam.</p>
+                <p>Click on the maps button at the top of the page and then click on click here to view this map</p>
+            </div>
+            <div class="column">
+                <div class="ui header">
+                    How do I create a point of interest on the map?
+                </div>
+                <p>Firstly login on a map admin account or create one. then navigate to the map page and click create route. From here you can add a marker to the map which will give you the coordinates. You can also determine if it is a Viewpoint, Location of Interest or a Historical Landmark</p>
             </div>
             <div class="column">
                 <div class="ui header">
                     How do I create an account?
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce velit tellus, porta efficitur blandit eget, lobortis eget libero. Aliquam id augue a sapien efficitur consequat. Pellentesque commodo tempor rutrum. Vestibulum sit amet mi quis purus viverra viverra. Mauris sit amet molestie quam. Vestibulum a convallis diam.</p>
-            </div>
-            <div class="column">
-                <div class="ui header">
-                    How do I create an account?
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce velit tellus, porta efficitur blandit eget, lobortis eget libero. Aliquam id augue a sapien efficitur consequat. Pellentesque commodo tempor rutrum. Vestibulum sit amet mi quis purus viverra viverra. Mauris sit amet molestie quam. Vestibulum a convallis diam.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. velit tellus, porta efficitur blandit eget, lobortis eget libero. Aliquam id augue a sapien efficitur consequat. Pellentesque commodo tempor rutrum. Vestibulum sit amet mi quis purus viverra viverra. Mauris sit amet molestie quam. Vestibulum a convallis diam.</p>
             </div>
         </div>
     </div><br>
@@ -83,41 +83,41 @@ session_start();
         Send a message to a Site Administrator for help
     </div>
     <div class="ui segment">
-        <div class="ui form">
+        <form class="ui form" method = "post">
             <div class="ui grid">
                 <div class="four wide column">
                     <div class="field">
-                        <label>First name</label> <input placeholder="First Name" type="text">
+                        <label>First name</label> <input name = "firstName" placeholder="First Name" type="text">
                     </div>
                 </div>
                 <div class="four wide column">
                     <div class="field">
-                        <label>Last name</label> <input placeholder="Middle Name" type="text">
+                        <label>Last name</label> <input name = "lastName" placeholder="Last Name" type="text">
                     </div>
                 </div>
                 <div class="four wide column">
                     <div class="field">
-                        <label>Contact Number</label> <input placeholder="Contact Number" type="text">
+                        <label>Email Address</label> <input name = "EmailAddress" placeholder="Email Address" type="text">
                     </div>
                 </div>
                 <div class="sixteen wide column">
                     <div class="field">
                         <div class="field">
-                            <label>Enter your question here :</label>
-                            <textarea></textarea>
+                            <label>Enter your question here :</label> <input name="question" type="text">
                         </div>
                     </div>
+                    <button class="ui positive right labeled icon button" id= "createEmail" type="submit">
+                        <a href="submitHelp.php">Send Message</a> <i class="checkmark icon"></i>
+                    </button>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
     <div class="actions">
         <div class="ui black deny button">
             Cancel
         </div>
-        <div class="ui positive right labeled icon button">
-            <a href="submitHelp.php">Send Message</a> <i class="checkmark icon"></i>
-        </div>
+
     </div>
 </div><?php include("includes/footer.php"); ?>
 <script>

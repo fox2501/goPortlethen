@@ -3,7 +3,6 @@
 session_start();
 //connects to database server
 include("includes/PDOConnect.php");
-include("includes/header.php");
 if (isset($_SESSION['loggedIn'])) {
     $userID = $_SESSION['loggedIn'];
     $sql = "SELECT accessID from useraccess UA, users U where UA.userName = U.userName AND U.userID = ?";
@@ -13,6 +12,7 @@ if (isset($_SESSION['loggedIn'])) {
         $accessLevel = $row['accessID'];
     }
     if ($accessLevel == 3) {
+        include("includes/header.php");
         echo "<h1 align='center'>Map Content Approvals</h1>
         <div class='ui horizontal section divider'>
         </div>
@@ -61,7 +61,7 @@ if (isset($_SESSION['loggedIn'])) {
         }
         echo "</div></div>";
     } else{
-        echo "You cannot access this page.";
+        header ("Location: /semantic/src/inc/mapLandingPage.php");
     }
 }
 ?>

@@ -31,6 +31,7 @@ if (isset($_SESSION['loggedIn'])) {
     <div class="ui container">
         <div class = "ui two column grid">
             <div class = "ui column">
+
                 <div class = "ui huge blue header">
                     My profile
                 </div>
@@ -87,7 +88,7 @@ if (isset($_SESSION['loggedIn'])) {
     <?php
     include("includes/footer.php");
 } else{
-    echo "You do not have permission to view this page.";
+    header("Location: /semantic/src/inc/logIn.php");
 }
 ?>
 

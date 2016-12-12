@@ -20,13 +20,13 @@ while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
     $healthUserID = $row['userID'];
 }
 
-if($accessLevel = 1) {
+if($accessLevel == 1) {
     $canAccess = 1;
 }
-if($healthUserID = $userID) {
+if($healthUserID == $userID) {
     $canAccess = 1;
 }
-if ($canAccess = 1) {
+if ($canAccess == 1) {
 $sql = "SELECT * from healthcontent WHERE healthContentID = ?";
 $stmt = $pdo -> prepare($sql);
 $stmt -> execute([$healthContentID]);
@@ -118,7 +118,7 @@ while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
 <?php
 include("includes/footer.php");
 } else {
-    echo "You do not have permission.";
+    header("Location: /semantic/src/inc/health.php?restricted");
 }
 };
 ?>
