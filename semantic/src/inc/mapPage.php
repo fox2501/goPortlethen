@@ -60,8 +60,9 @@ include("includes/header.php");
 <div class="ui container">
     <div class='ui grid'>
         <div class='ten wide column'></div><?php
-        if(strpos($url, 'mapApproval') !== false){
-            echo "
+        if($accessID == 1){
+            if(strpos($url, 'mapApproval') !== false){
+                echo "
 			            <div class='two wide column'>
 			                                <form action='submitMapApproval.php' class='ui form' method='POST'>
 			                                    <button class='ui positive right floated button' onclick='/semantic/src/inc/submitMapApproval.php' type='submit'><input name='approveMap' type='hidden' value='$locationID'> Approve</button>
@@ -73,8 +74,14 @@ include("includes/header.php");
 			                                </form>
 			                            </div>
 			                            ";
+            }
+            echo "        <div class='two wide column'>
+			            <form action='editMap.php' class='ui form' method='post'>
+			                <button class='ui right floated button' onclick='/semantic/src/inc/editMap.php' type='submit'><input name='editMap' type='hidden' value='$locationID'> Edit</button>
+			            </form>
+			        </div>";
         }
-        if($canAccess == 1){
+        if($accessID == 3 || $accessID == 4){
             echo "        <div class='two wide column'>
 			            <form action='editMap.php' class='ui form' method='post'>
 			                <button class='ui right floated button' onclick='/semantic/src/inc/editMap.php' type='submit'><input name='editMap' type='hidden' value='$locationID'> Edit</button>
