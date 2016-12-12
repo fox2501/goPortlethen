@@ -20,7 +20,7 @@ if($accessLevel = 4){
 // IF ACCESSLEVEL = 1 THEN APPROVAL STATUS IS SET TO 1. I THINK...
 
 $sql ="UPDATE healthcontent SET title = ?,mainText= ?, approvalStatus =? WHERE healthContentID = ?";
-$pdo->prepare($sql)->execute([$title,$mainText,$healthContentID, $approvalStatus]);
+$pdo->prepare($sql)->execute([$title,$mainText,$approvalStatus, $healthContentID]);
 
 
 $img = $_FILES['healthPhoto'];
