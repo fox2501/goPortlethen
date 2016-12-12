@@ -39,10 +39,10 @@ if (isset($_SESSION['loggedIn'])) {
             $photoURL        = $row['url'];
             echo "
     <div class='row'>
-        <div class='ui container'>
+        <div class='ui stackable container'>
             <div class='ui raised segment'>
-                <div class='ui container'>
-                    <div class='ui grid'>
+                <div class='ui stackable container'>
+                    <div class='ui stackable grid'>
                         <div class='row'>
                             <div class='four wide column'>
                                 <h3 class='ui header' id='title'>$title</h3>
@@ -84,10 +84,10 @@ if (isset($_SESSION['loggedIn'])) {
             $photoURL        = $row['url'];
             echo "
     <div class='row'>
-        <div class='ui container'>
+        <div class='ui stackable container'>
             <div class='ui raised segment'>
-                <div class='ui container'>
-                    <div class='ui grid'>
+                <div class='ui stackable container'>
+                    <div class='ui stackable grid'>
                         <div class='row'>
                             <div class='four wide column'>
                                 <h3 class='ui header' id='title'>$title</h3>
@@ -110,3 +110,11 @@ if (isset($_SESSION['loggedIn'])) {
     }
 }
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Submissions</title>
+</head>
+<body>
+</body>
+</html>
