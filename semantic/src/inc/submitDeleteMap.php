@@ -9,6 +9,7 @@ session_start();
 include("includes/PDOConnect.php");
 $locationID = htmlentities($_POST["deleteMap"]);
 
+echo $locationID;
 
 $sql = "DELETE FROM locations WHERE locationID = ?";
 $stmt = $pdo->prepare($sql)->execute([$locationID]);
