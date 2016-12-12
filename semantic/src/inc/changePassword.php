@@ -23,7 +23,7 @@ if (isset($_SESSION['loggedIn'])) {
             </div>
         </div>
         <!-- Main body -->
-        <div class="ui grid">
+        <div class="ui stackable grid">
             <div class="row">
                 <div class="column">
                     <form action="submitChangePassword.php" class="ui form" method="post">
