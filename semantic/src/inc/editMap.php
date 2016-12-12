@@ -115,7 +115,7 @@ include("includes/header.php");
 </div>
 <?php include("includes/footer.php"); }
 else{
-    header("Location: ../mapLandingPage.php");
+    header("Location: /semantic/src/inc/mapLandingPage.php");
 }?>
 </body>
 </html>
