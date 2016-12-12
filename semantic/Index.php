@@ -66,7 +66,7 @@ if(strpos($url, 'accountDeleted') !== false){
         if($accessLevel == 1){
             echo "
             <div class='eight wide column'>
-                <div class='ui huge blue header'>
+                <div class='ui huge blue centered header'>
                     <?php echo $title ?>
                 </div>
             </div>
@@ -93,9 +93,9 @@ if(strpos($url, 'accountDeleted') !== false){
             <div class="column"><img class="ui medium centered circular image" src="<?php echo $url ?>"></div>
         </div>
         <div class="sixteen wide column">
-            <h2 class = 'ui header'>
+            <h3 class = 'ui header'>
                 <?php echo $caption ?>
-            </h2>
+            </h3>
         <div class="ui header">
             Need help? Click <a href="/semantic/src/inc/help.php">here</a> for FAQs!
         </div>
