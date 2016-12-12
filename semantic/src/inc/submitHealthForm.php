@@ -63,6 +63,10 @@ $sql = "INSERT INTO photos (caption,url,clubID,locationID,healthContentID,routeI
 $pdo->prepare($sql)->execute(['',$url,0,0,$healthID,0,0]);
 
 
-
-header("location:health.php");
+if($accessLevel == 4){
+    header("location: /semantic/src/inc/health.php?newApprovalNeeded");
+}
+if($accessLevel == 1){
+    header("location:/semantic/src/inc/health.php?newContentSubmitted");
+}
 ?>

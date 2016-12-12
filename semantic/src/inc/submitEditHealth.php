@@ -70,6 +70,11 @@ else{
 
 }
 
+if($accessLevel == 4){
+    header('Location: /semantic/src/inc/health.php?approvalNeeded');
+}
+if($accessLevel == 1){
+    header('Location: /semantic/src/inc/health.php?editedContent');
+}
 
-header('Location: /semantic/src/inc/health.php');
 ?>
