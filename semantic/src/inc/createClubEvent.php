@@ -57,7 +57,6 @@ if (isset($_SESSION['loggedIn'])) {
             </div>
             <div class="required field">
                 <label>Event Date</label><input type="date" name ="date">
-                </div>
             </div>
             <div class="required field">
                 <label>Description</label>
