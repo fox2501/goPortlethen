@@ -5,10 +5,6 @@ session_start();
 include("includes/PDOConnect.php");
 
 if (isset($_SESSION['loggedIn'])) {
-    include("includes/header.php");
-    echo "<h1 align='center'>Health Content Approvals</h1>
-        <div class='ui horizontal section divider'>
-        </div>";
     $userID = $_SESSION['loggedIn'];
     $sql = "SELECT accessID from users U, useraccess UA where U.userName = UA.userName AND userID = ?";
     $stmt = $pdo ->prepare($sql);
@@ -17,6 +13,11 @@ if (isset($_SESSION['loggedIn'])) {
     $accessLevel = $row['accessID'];
 
     if ($accessLevel == 1) {
+    include("includes/header.php");
+    echo "<h1 align='center'>Health Content Approvals</h1>
+        <div class='ui horizontal section divider'>
+        </div>";
+
         $sql = "
     SELECT A.title, A.mainText, B.userName, A.datePosted, A.healthContentID, A.approvalStatus, C.url
     FROM healthcontent A, users B, photos C
@@ -68,6 +69,10 @@ if (isset($_SESSION['loggedIn'])) {
 	</div>
 ";
         }
+    } else{
+        header("Location: /semantic/src/inc/health.php?restricted");
     }
+} else{
+    header("Location: /semantic/src/inc/health.php?restricted");
 }
 ?>

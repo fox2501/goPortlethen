@@ -39,78 +39,83 @@ $url = $row['url'];
     <title>GoPortlethen Home</title>
 </head>
 <body>
-<?php
-if(strpos($url, 'newUser') !== false){
-    echo "
-	            <div class='ui warning message'>
-	          <div class='centered header'>
-	            You have successfully signed up. Please login!
-	          </div>
-	        </div>
-	        ";
-}
-
-if(strpos($url, 'accountDeleted') !== false){
-    echo "
-	            <div class='ui error message'>
-	          <div class='centered header'>
-	            You have successfully deleted your account.
-	          </div>
-	        </div>
-	        ";
-}
-if(strpos($url, 'contentEdited') !== false){
-    echo "
-	            <div class='ui message'>
-	          <div class='centered header'>
-	            You have successfully edited the home page content.
-	          </div>
-	        </div>
-	        ";
-}
-?>
 <div class="ui stackable container">
+    <?php
+    if(strpos($url, 'newUser') !== false){
+        echo "
+		                <div class='ui warning message'>
+		              <div class='centered header'>
+		                You have successfully signed up. Please login!
+		              </div>
+		            </div>
+		            ";
+    }
+
+    if(strpos($url, 'accountDeleted') !== false){
+        echo "
+		                <div class='ui error message'>
+		              <div class='centered header'>
+		                You have successfully deleted your account.
+		              </div>
+		            </div>
+		            ";
+    }
+    if(strpos($url, 'contentEdited') !== false){
+        echo "
+		                <div class='ui message'>
+		              <div class='centered header'>
+		                You have successfully edited the home page content.
+		              </div>
+		            </div>
+		            ";
+    }
+    if(strpos($url, 'restricted') !== false){
+        echo "
+		                <div class='ui error message'>
+		              <div class='centered header'>
+		                You do not have access to edit this page.
+		              </div>
+		            </div>
+		            ";
+    }
+    ?>
     <div class="ui stackable grid">
         <?php
         if($accessLevel == 1){
             echo "
-            <div class='eight wide column'>
-                <div class='ui huge blue centered header'>
-                    $title
-                </div>
-            </div>
-            <div class='eight wide column'>
-                <form action='/semantic/src/inc/editHome.php' class='ui form' method='post'>
-                    <button class='ui right floated button' type='submit'><input name='editHome' type='hidden' value = '$contentID'> <i class='ui settings icon'></i> Edit Home</button>
-                </form>
-            </div>
-            ";
+			            <div class='eight wide column'>
+			                <div class='ui huge blue centered header'>
+			                    $title
+			                </div>
+			            </div>
+			            <div class='eight wide column'>
+			                <form action='/semantic/src/inc/editHome.php' class='ui form' method='post'>
+			                    <button class='ui right floated button' type='submit'><input name='editHome' type='hidden' value = '$contentID'> <i class='ui settings icon'></i> Edit Home</button>
+			                </form>
+			            </div>
+			            ";
         }else{
             echo"
-        <div class='sixteen wide column'>
-            <div class='ui huge blue centered header'>
-                $title
-            </div>
-        </div>
-        ";
+			        <div class='sixteen wide column'>
+			            <div class='ui huge blue centered header'>
+			                $title
+			            </div>
+			        </div>
+			        ";
 
         }
 
         ?>
-
         <div class="sixteen wide column">
-            <div class="column"><img class="ui medium centered circular image" src="<?php echo $url ?>"></div>
+            <div class="column"><img class="ui medium centered circular image" src="%3C?php%20echo%20$url%20?%3E"></div>
         </div>
         <div class="sixteen wide column">
-            <h3 class = 'ui header'>
-                <?php echo $caption ?>
-            </h3>
-        <div class="ui header">
-            Need help? Click <a href="/semantic/src/inc/help.php">here</a> for FAQs!
+            <h3 class='ui header'><?php echo $caption ?></h3>
+            <div class="ui header">
+                Need help? Click <a href="/semantic/src/inc/help.php">here</a> for FAQs!
+            </div>
         </div>
     </div>
-</div>
-</div>
-<?php include("/src/inc/includes/footer.php");?>
+</div><?php include("/src/inc/includes/footer.php");?>
 </body>
 </html>
