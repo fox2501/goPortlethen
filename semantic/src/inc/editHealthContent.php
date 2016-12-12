@@ -67,43 +67,6 @@ while ($row = mysqli_fetch_assoc($result)) {
             </div>
         </div><button class="ui fluid large green submit button" type="submit">Submit</button>
 
-
-        <script type="text/javascript">
-            ;
-            (function ($) {
-                $('.ui.form').form({
-                    fields: {
-                        Title: {
-                            identifier: 'title',
-                            rules: [
-                                {
-                                    type: 'empty',
-                                    prompt: 'Please enter a title'
-                                }
-                            ]
-                        },
-                        mainText: {
-                            identifier: 'mainText',
-                            rules: [
-                                {
-                                    type: 'empty',
-                                    prompt: 'Please enter text to populate the main text section'
-                                }
-                            ]
-                        },
-                        photo: {
-                            identifier: 'healthPhoto',
-                            rules: [
-                                {
-                                    type: 'empty',
-                                    prompt: 'Please choose a photo for the post'
-                                }
-                            ]
-                        }
-                    }
-                })
-            })(jQuery);
-        </script>
     </form>
 
 </div>
