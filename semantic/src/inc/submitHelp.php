@@ -1,7 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Alexander
- * Date: 11/12/2016
- * Time: 20:45
- */
+$to      = 'cameron.lawrie.1@gmail.com';
+$subject = 'the subject';
+$message = 'hello';
+$headers = 'From: webmaster@example.com' . "\r\n" .
+    'Reply-To: webmaster@example.com' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+
+mail($to, $subject, $message, $headers);
+?>
