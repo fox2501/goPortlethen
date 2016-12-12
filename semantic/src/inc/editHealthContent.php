@@ -102,15 +102,6 @@ while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
                                     prompt: 'Please enter text to populate the main text section'
                                 }
                             ]
-                        },
-                        photo: {
-                            identifier: 'healthPhoto',
-                            rules: [
-                                {
-                                    type: 'empty',
-                                    prompt: 'Please choose a photo for the post'
-                                }
-                            ]
                         }
                     }
                 })
