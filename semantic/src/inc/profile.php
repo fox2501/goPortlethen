@@ -31,6 +31,7 @@ if (isset($_SESSION['loggedIn'])) {
     <div class="ui container" style="height:80%">
         <div class = "ui two column grid">
             <div class = "ui column">
+
                 <div class = "ui huge blue header">
                     My profile
                 </div>
