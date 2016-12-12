@@ -35,5 +35,5 @@ $sql = "DELETE FROM users WHERE userName = ?";
 $stmt = $pdo -> prepare($sql);
 $stmt -> execute([$userName]);
 
-header("Location: /semantic/src/inc/userApprovals.php");
+header("Location: /semantic/src/inc/userApprovals.php?userDenied");
 ?>
