@@ -2,26 +2,16 @@
 //session begins
 session_start();
 //connects to database server
-include("includes/dbconnect.php");
+include("includes/PDOConnect.php");
 $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 //access levels
-if (isset($_SESSION['loggedIn'])) {
     $userID = $_SESSION['loggedIn'];
     $canAccess = '0';
-    $sql = "SELECT userName from users WHERE userID = '$userID'";
-    $result = mysqli_query($db, $sql);
-    $row = mysqli_fetch_assoc($result);
-    $userName = $row["userName"];
-    $sql = "SELECT accessID from useraccess where userName = '$userName'";
-    $result = mysqli_query($db, $sql);
-    $row = mysqli_fetch_assoc($result);
-    $accessID = $row["accessID"];
-    if ($accessID == '1' || $accessID == '2') {
-        $canAccess = '1';
-    } else {
-        $canAccess = '0';
-    }
-}
+    $sql = "SELECT accessID from users U, useraccess UA WHERE U.userName = UA.userName AND userID = ?";
+    $stmt = $pdo -> prepare($sql);
+    $stmt -> execute([$userID]);
+    $row = $stmt -> fetch(PDO::FETCH_ASSOC);
+    $accessLevel = $row["accessID"];
 ?>
 <!DOCTYPE html>
 <html>
@@ -50,7 +40,7 @@ include("includes/header.php");
     <div class="ui stackable grid">
         <div class="row">
             <?php
-            if ($canAccess == 1) {
+            if ($accessLevel == 1 || $accessLevel == 2) {
                 echo "
 				<div class='four wide column'>
                     <a href='createClubPage.php'>
@@ -96,8 +86,9 @@ include("includes/header.php");
     <div class="ui stackable grid">
         <div class="ui hidden divider"></div><?php
         $sql_query = "SELECT A.clubName, A.clubDescription, A.clubID, B.url FROM club A, photos B WHERE A.clubID = B.clubID";
-        $result = $db->query($sql_query);
-        while ($row = $result->fetch_array()) {
+        $stmt = $pdo -> prepare($sql);
+        $stmt -> execute();
+        while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
             $title = $row['clubName'];
             $mainText = $row['clubDescription'];
             $clubID = $row['clubID'];
