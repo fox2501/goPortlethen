@@ -70,13 +70,13 @@ if (isset($_SESSION['loggedIn'])) {
 
             <div class="required field">
                 <label>Title</label>
-                <div class="field"><input type="text" name="title">
-                    <?php echo $title;?>
+                <div class="field"><?php echo $title;?><input type="text" name="title">
+
                 </div>
             </div>
             <div class="required field">
-                <label>Event Date</label><input type="date" name ="date">
-                <?php echo $date;?>
+                <label>Event Date</label> <?php echo $date;?><input type="date" name ="date">
+
             </div>
             <div class="required field">
                 <label>Description</label>
