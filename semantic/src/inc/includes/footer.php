@@ -25,7 +25,7 @@ session_start();
 
         <div class="ui stackable center aligned container">
             <div class="ui stackable inverted grid">
-                <div class="three wide column">
+                <div class="four wide column">
                     <!--navigation pane for site links-->
                     <h4 class="ui stackable inverted header">Navigation</h4>
                     <div class="ui stackable inverted link list">
@@ -34,7 +34,7 @@ session_start();
                         <a class="item" href="/semantic/src/inc/mapLandingPage.php" target="_blank">Maps</a>
                     </div>
                 </div>
-                <div class="three wide column">
+                <div class="four wide column">
                     <div class="ui stackable inverted link list">
                         <a class="item"> </a>
                         <a class="item"> </a>
