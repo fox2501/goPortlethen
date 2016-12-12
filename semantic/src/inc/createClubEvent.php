@@ -1,5 +1,7 @@
 <?php
-
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 session_start();
 //connects to database server
 include("includes/PDOConnect.php");
@@ -18,7 +20,7 @@ if (isset($_SESSION['loggedIn'])) {
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
     $accessID = $row["accessID"];
     usleep(10000);
-    $sql = "SELECT userID FROM clubs WHERE userID =?";
+    $sql = "SELECT userID FROM club WHERE userID =?";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([$userID]);
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -69,7 +71,7 @@ if (isset($_SESSION['loggedIn'])) {
                 <label>Description</label>
                 <textarea rows="8" name="mainText" placeholder="Enter the content of your event"></textarea>
             </div>
-            <button class="ui fluid large green submit button" id="createClubEvent" name ="createClubEvent" type="submit" value=<?php echo $clubID;?>>Submit Event</button>
+            <button class="ui fluid large green submit button" id="submitCreateEvent" name ="submitCreateEvent" type="submit" value=<?php echo $clubID;?>>Submit Event</button>
             <script type="text/javascript">
 
                 (function ($) {
