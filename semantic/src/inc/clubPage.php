@@ -41,7 +41,26 @@ while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
 <?php
 include("includes/header.php");
 
-echo "
+if (isset($_SESSION['loggedIn'])) {
+    $userID = $_SESSION['loggedIn'];
+    $canAccess = '0';
+    $sql = "SELECT userName from users WHERE userID = '$userID'";
+    $result = mysqli_query($db, $sql);
+    $row = mysqli_fetch_assoc($result);
+    $userName = $row["userName"];
+
+    $sql = "SELECT accessID from useraccess where userName = '$userName'";
+    $result = mysqli_query($db, $sql);
+    $row = mysqli_fetch_assoc($result);
+    $accessID = $row["accessID"];
+    if ($accessID == '1' || $accessID == '4') {
+        $canAccess = '1';
+    } else {
+        $canAccess = '0';
+    }
+}
+?>
+
 <body>
 <div class='ui container'>
     <div class = 'ui grid'>
@@ -51,12 +70,12 @@ echo "
         <div class = 'eight wide column'>
         <form class = 'ui form' method = 'POST' action = 'editClubPage.php' onclick = '/semantic/src/inc/editClubPage.php'>
             
-            <!-- If ordinary user, hide this button -->
             <button class = 'ui right floated button' onclick = '/semantic/src/inc/editClubPage.php' type = 'submit'>
                 <input type = 'hidden' name = 'editClub' value = $clubID>
                 <i class = 'ui settings icon'></i>
                     Edit Club
             </button>
+
         </form>
         </div>
     </div>
@@ -111,7 +130,7 @@ echo "
             </div>
         </div>
 </div>
-</body>";
+</body>
 
 
 
