@@ -99,7 +99,7 @@ $clubName = $row['clubName'];
                             </div>
                             <div class='two wide column'>
                             <form action='deleteClubEvent.php' method='post'>
-                                <button class='ui red right floated mini button' name='eventID' type='submit' value='$eventID'>Delete Club</button>
+                                <button class='ui red right floated mini button' name='eventID' type='submit' value='$eventID'>Delete Club Event</button>
                             </form>
                             </div>
                             ";}
