@@ -9,6 +9,15 @@ include("/src/inc/includes/header.php");
 include("/src/inc/includes/PDOConnect.php");
 $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 
+if (isset($_SESSION['loggedIn'])) {
+    $userID = $_SESSION['loggedIn'];
+    $sql = "SELECT A.accessID from useraccess A, users B WHERE A.userName = B.userName AND B.userID = ?";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$userID]);
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+    $accessLevel = $row['accessID'];
+}
+
 $sql = "SELECT * FROM homecontent";
 $stmt = $pdo -> prepare($sql);
 $stmt -> execute();
@@ -52,11 +61,17 @@ if(strpos($url, 'accountDeleted') !== false){
 ?>
 <div class="ui stackable container">
     <div class="ui stackable grid">
-        <div class="sixteen wide column">
-            <form action='/semantic/src/inc/editHome.php' class='ui form' method='post'>
-                <button class='ui right floated button' type='submit'><input name='editHome' type='hidden' value = '<?php echo $contentID ?>'> <i class='ui settings icon'></i> Edit Home</button>
-            </form>
-        </div>
+        <?php
+        if($accessLevel == 1){
+            echo "
+            <div class='sixteen wide column'>
+                <form action='/semantic/src/inc/editHome.php' class='ui form' method='post'>
+                    <button class='ui right floated button' type='submit'><input name='editHome' type='hidden' value = '<?php echo $contentID ?>'> <i class='ui settings icon'></i> Edit Home</button>
+                </form>
+            </div>
+            ";
+        }
+        ?>
         <div class="sixteen wide column">
             <div class="ui huge blue centered header">
                 <?php echo $title ?>
