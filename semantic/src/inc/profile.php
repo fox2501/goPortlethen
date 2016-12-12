@@ -29,6 +29,17 @@ if (isset($_SESSION['loggedIn'])) {
     ?>
     <body>
     <div class="ui container">
+        <?php
+        if(strpos($url, 'editedProfile') !== false){
+            echo "
+	            <div class='ui message'>
+	          <div class='centered header'>
+	            You have successfully edited your profile information.
+	          </div>
+	        </div>
+	        ";
+        }
+        ?>
         <div class = "ui two column grid">
             <div class = "ui column">
 

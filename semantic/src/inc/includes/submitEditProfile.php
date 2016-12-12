@@ -3,7 +3,7 @@
 session_start();
 
 //connects to database
-include("dbconnect.php");
+include("PDOConnect.php");
 
 //puts entered fields into variables
 $firstName =  htmlentities($_POST["firstName"]);
@@ -16,14 +16,15 @@ $userID = $_SESSION['loggedIn'];
 //sql statement to update on database based on entries
 $sql = "
     UPDATE users 
-    SET firstName = '$firstName', 
-    surname = '$surname', 
-    age = $age, 
-    emailAddress = '$email'
-    WHERE userID = $userID;
+    SET firstName = ?, 
+    surname = ?, 
+    age = ?, 
+    emailAddress = ?
+    WHERE userID = ?;
 ";
-$result = mysqli_query($db, $sql);
+$stmt = $pdo -> prepare($sql);
+$stmt -> execute([$firstName, $surname, $age, $email, $userID]);
 
 //redirect
-header("location: ../profile.php");
+header("location: ../profile.php?editedProfile");
 ?>
