@@ -1,8 +1,8 @@
 <?php
 
 session_start();
-include("includes/dbconnect.php");
-
+include("includes/PDOConnect.php");
+include("includes/header.php");
 if (isset($_SESSION['loggedIn'])) {
     $userID = $_SESSION['loggedIn'];
     $sql = "SELECT accessID from useraccess UA, users U where UA.userName = U.userName AND U.userID = ?";
@@ -33,28 +33,28 @@ if (isset($_SESSION['loggedIn'])) {
                 $locationType = 'Location of Interest';
             }
             echo "
-	<div class='sixteen wide column'>
-		<div class='ui raised segment'>
-			<div class='ui two column grid'>
-				<div class='column'>
-					<h2 class='ui header'>
-						$locationName
-						<div class='sub header'>$locationType</div>
-					</h2>
-					<p>$caption</p>
-				</div>
-				<div class='column'>
-					<div class='extra'>
-						<form action='/semantic/src/inc/mapPage.php' class='ui form' method='post'>
-							<button class='ui right floated button' onclick='/semantic/src/inc/mapPage.php' type='submit'><input name='viewMap' type='hidden' value='$locationID'>Click here to view this on a map</button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class='ui hidden section divider'></div>
-	</div>
-			        ";
+    <div class='sixteen wide column'>
+        <div class='ui raised segment'>
+            <div class='ui two column grid'>
+                <div class='column'>
+                    <h2 class='ui header'>
+                        $locationName
+                        <div class='sub header'>$locationType</div>
+                    </h2>
+                    <p>$caption</p>
+                </div>
+                <div class='column'>
+                    <div class='extra'>
+                        <form action='/semantic/src/inc/mapPage.php' class='ui form' method='post'>
+                            <button class='ui right floated button' onclick='/semantic/src/inc/mapPage.php' type='submit'><input name='viewMap' type='hidden' value='$locationID'>Click here to view this on a map</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='ui hidden section divider'></div>
+    </div>
+                    ";
         }
     } eLSE{
         echo "You cannot access this page.";
