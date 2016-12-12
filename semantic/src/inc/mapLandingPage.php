@@ -49,6 +49,24 @@ include("includes/header.php");
     </div>
     ";
     }
+    if(strpos($url, 'newMapApproval') !== false){
+        echo "
+    <div class='ui warning message'>
+        <div class='centered header'>
+            Your request for new map content has been submitted. This requires approval.
+        </div>
+    </div>
+    ";
+    }
+    if(strpos($url, 'newMapSubmitted') !== false){
+        echo "
+    <div class='ui warning message'>
+        <div class='centered header'>
+            Your new map content has been created.
+        </div>
+    </div>
+    ";
+    }
     ?>
     <div class='ui stackable grid'>
         <?php

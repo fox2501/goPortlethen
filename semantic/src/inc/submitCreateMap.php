@@ -15,7 +15,6 @@ $userID = $_SESSION['loggedIn'];;
 $sql = "SELECT accessID from users U, useraccess UA WHERE U.userName = UA.userName AND U.userID = ?";
 $stmt = $pdo -> prepare($sql);
 $stmt -> execute([$userID]);
-
 $row = $stmt -> fetch(PDO::FETCH_ASSOC);
 $accessID = $row["accessID"];
 
@@ -27,5 +26,11 @@ $sql = "INSERT INTO locations (longitude, latitude, locationType, caption, locat
 
 $pdo->prepare($sql)->execute([$long,$lat,$mapType,$desc, $title, $approvalStatus]);
 
-header("location: mapLandingPage.php");
+if($accessID == 4){
+    header("location: /semantic/src/inc/mapLandingPage.php?newMapApproval");
+}
+if($accessID == 1 || $accessID == 3){
+    header("location: /semantic/src/inc/mapLandingPage.php?newMapSubmitted");
+}
+
 ?>

@@ -11,7 +11,7 @@ $stmt -> execute([$userID]);
 $row = $stmt -> fetch(PDO::FETCH_ASSOC);
 $accessLevel = $row['accessID'];
 
-IF($accessID == 1 || $accessID == 3 || $accessID == 4) {
+IF($accessLevel == 1 || $accessLevel == 3 || $accessLevel == 4) {
 
 $locationID = $_POST['editMap'];
 
