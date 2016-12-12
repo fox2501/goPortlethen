@@ -35,6 +35,6 @@ if (isset($_SESSION['loggedIn'])) {
 $sql = 'INSERT INTO clubEvents(title,date,description,clubID) VALUES(?,?,?,?)';
 $stmt = $pdo->prepare($sql)->execute([$title,$date,$mainText,$clubID]);
 
-echo $clubID;
+header("location: /semantic/src/inc/clublandingpage.php");
 
     ?>
