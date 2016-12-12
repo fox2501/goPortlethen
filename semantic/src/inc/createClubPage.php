@@ -37,6 +37,7 @@ if (isset($_SESSION['loggedIn'])) {
     <?php include("includes/header.php"); ?>
     <body>
     <div class="ui stackable container">
+
         <form class="ui form" action="submitCCForm.php" enctype="multipart/form-data" method="POST">
             <h1 align="center">
                 <div class="content">
@@ -99,7 +100,7 @@ if (isset($_SESSION['loggedIn'])) {
                     <label>Please check if your club requires a fee: </label>
                     <div class="inline field">
                         <div class="ui checkbox">
-                            <input type="checkbox" tabindex="0" class="hidden" id="isFee">
+                            <input type="checkbox" tabindex="0" class="hidden" id="isFee" name = "isFee">
                             <label for="isFee">Requires Free</label>
                         </div>
                         <!--<div class="ui fluid right labeled input">
