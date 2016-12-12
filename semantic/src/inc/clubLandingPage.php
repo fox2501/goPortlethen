@@ -55,6 +55,15 @@ include("includes/header.php");
 		            </div>
 		            ";
     }
+    if(strpos($url, 'noClub') !== false){
+        echo "
+		                <div class='ui message'>
+		              <div class='centered header'>
+		                Please select a club to view.
+		              </div>
+		            </div>
+		            ";
+    }
     ?>
     <div class="ui stackable grid">
         <div class="row">

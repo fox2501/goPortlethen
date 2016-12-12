@@ -116,7 +116,7 @@ include("includes/header.php");
 </div><?php
 include("includes/footer.php");
 } else{
-    header("Location: /semantic/src/inc/clubLandingPage.php");
+    header("Location: /semantic/src/inc/clubLandingPage.php?noClub");
 }
 ?>
 </body>
