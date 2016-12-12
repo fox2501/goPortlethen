@@ -28,6 +28,8 @@ if(isset($_SESSION['loggedIn'])){
     </div>
 </div><?php
 include("includes/footer.php");
+}else{
+    header("Location: /semantic/src/inc/logIn.php?restrcited");
 }
 ?>
 </body>
