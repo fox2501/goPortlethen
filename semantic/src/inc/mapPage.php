@@ -46,7 +46,7 @@ if(!(empty($locationID))) {
     <body>
     <h1 class='ui centered header'>Maps</h1>
     <div class="ui horizontal section divider">
-        Discover Portlethen
+        Discover North Kindcardineshire
     </div>
     <div class="ui stackable container">
         <div class='ui stackable grid'>

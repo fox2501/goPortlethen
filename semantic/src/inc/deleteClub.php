@@ -11,7 +11,7 @@ $clubID =$_POST["clubID"];
 <!DOCTYPE html>
 <html>
 <head>
-    <title>goPortlethen</title>
+    <title>Delete Club</title>
 </head>
 <!--main body-->
 <body>

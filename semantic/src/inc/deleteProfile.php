@@ -11,7 +11,7 @@ if(isset($_SESSION['loggedIn'])){
 <html>
 
 <head>
-    <title>goPortlethen</title>
+    <title>Delete Profile</title>
 </head>
 
 <body>

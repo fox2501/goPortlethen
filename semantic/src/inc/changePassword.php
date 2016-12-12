@@ -10,20 +10,20 @@ if (isset($_SESSION['loggedIn'])) {
 <html>
 
 <head>
-    <title>goPortlethen</title>
+    <title>Change Password</title>
 </head>
 
 <body>
     <!-- Begin container -->
-    <div class="ui container">
+    <div class="ui stackable container">
         <!-- Heading -->
-        <div class="ui two column grid">
+        <div class="ui stackable two column grid">
             <div class="ui column">
                 <div class="ui huge blue header">Change Password</div>
             </div>
         </div>
         <!-- Main body -->
-        <div class="ui grid">
+        <div class="ui stackable grid">
             <div class="row">
                 <div class="column">
                     <form action="submitChangePassword.php" class="ui form" method="post">

@@ -15,7 +15,8 @@ if (isset($_SESSION['loggedIn'])) {
     $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
     $userID = $_SESSION['loggedIn'];
     $sql = "SELECT firstName, surname, age, emailAddress FROM users WHERE userID = ?";
-    $stmt = $pdo -> prepare($sql) -> execute([$userID]);
+    $stmt = $pdo -> prepare($sql);
+    $stmt -> execute([$userID]);
     $row = $stmt -> fetch(PDO::FETCH_ASSOC);
         $firstName = $row['firstName'];
         $surname = $row['surname'];
@@ -30,6 +31,15 @@ if (isset($_SESSION['loggedIn'])) {
 	            <div class='ui message'>
 	          <div class='centered header'>
 	            You have successfully edited your profile information.
+	          </div>
+	        </div>
+	        ";
+        }
+        if(strpos($url, 'passwordChanged') !== false){
+            echo "
+	            <div class='ui message'>
+	          <div class='centered header'>
+	            You have successfully changed your password.
 	          </div>
 	        </div>
 	        ";

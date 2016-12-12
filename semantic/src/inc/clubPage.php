@@ -9,7 +9,9 @@ $stmt = $pdo->prepare($sql);
 $stmt->execute([$userID]);
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
 $accessLevel = $row['accessID'];
-$clubID = $_POST['viewClub'];
+
+$clubID = htmlentities($_POST['viewClub']);
+
 $sql = "SELECT * FROM club WHERE clubID = ?";
 $stmt = $pdo -> prepare($sql);
 $stmt -> execute([$clubID]);

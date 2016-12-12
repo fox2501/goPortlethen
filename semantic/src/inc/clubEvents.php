@@ -42,8 +42,7 @@ $clubName = $row['clubName'];
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="semantic.css">
-    <title>GoPortlethen</title>
+    <title>Club Events</title>
 </head>
 
 <? include("includes/header.php"); ?>
