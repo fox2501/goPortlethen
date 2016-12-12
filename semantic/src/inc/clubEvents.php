@@ -94,12 +94,12 @@ $clubName = $row['clubName'];
                         if($canAccess == 1){
                         echo "<div class='two wide column'>
                             <form action='editClubEvent.php' class='ui form' method='post'>
-                                <button class='ui right floated mini button' onclick='/semantic/src/inc/editClubEvent.php' type='submit'><input name='editClub' type='hidden' value='$clubID'>Edit</button> 
+                                <button class='ui right floated button' onclick='/semantic/src/inc/editClubEvent.php' type='submit'><input name='editClub' type='hidden' value='$clubID'>Edit</button> 
                             </form>
                             </div>
                             <div class='two wide column'>
                             <form action='deleteClubEvent.php' method='post'>
-                                <button class='ui red right floated button' name='eventID' type='submit' value='$eventID'>Delete Club</button>
+                                <button class='ui red right floated mini button' name='eventID' type='submit' value='$eventID'>Delete Club</button>
                             </form>
                             </div>
                             ";}
