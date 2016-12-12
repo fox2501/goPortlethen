@@ -3,10 +3,9 @@
 session_start();
 
 include("includes/PDOConnect.php");
+$userID = $_SESSION["loggedIn"];
 $title = $_POST["title"];
 $mainText = $_POST["mainText"];
-$userID = $_SESSION["loggedIn"];
-
 
 $sql = "SELECT userName from users WHERE userID = ?";
 $stmt = $pdo->prepare($sql);
