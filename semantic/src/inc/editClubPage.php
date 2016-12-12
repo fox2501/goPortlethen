@@ -34,6 +34,11 @@ if (isset($_SESSION['loggedIn'])) {
             ?>
             <head>
                 <meta charset="UTF-8">
+
+                <link rel="stylesheet" type="text/css" href="goPortlethen/semantic/dist/semantic.css">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css">
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
                 <title>Edit Club</title>
             </head>
             <?php
@@ -107,7 +112,73 @@ $('#dropdown')
                         <input name='img' size='35'type='file'>
                     </div>
                     </div>
-					<button class='ui fluid large green submit button' type='submit'>Submit</button> 
+					<button class='ui fluid large green submit button' type='submit'>Submit</button>
+					 
+					 <script type=\"text/javascript\">
+                    
+                    (function ($) {
+                        $('.ui.form').form({
+                            fields: {
+                                clubName: {
+                                    identifier: 'clubName',
+                                    rules: [
+                                        {
+                                            type: 'empty',
+                                            prompt: 'Please enter your clubs name'
+                                        }
+                                    ]
+                                },
+                                clubEmail: {
+                                    identifier: 'email',
+                                    rules: [
+                                        {
+                                            type: 'email',
+                                            prompt: 'Please enter a valid email address'
+                                        }
+                                    ]
+                                },
+                                clubCategory: {
+                                    identifier: 'clubCategory',
+                                    rules: [
+                                        {
+                                            type: 'empty',
+                                            prompt: 'Please select a club category'
+                                        }
+                                    ]
+                                },
+                                clubDescription: {
+                                    identifier: 'clubDescription',
+                                    rules: [
+                                        {
+                                            type: 'empty',
+                                            prompt: 'Please select a club category'
+                                        }
+                                    ]
+                                },
+                                number: {
+                                    identifier: 'phoneNumber',
+                                    rules: [
+                                        {
+                                            type: 'number',
+                                            prompt: 'Please enter a valid phone number'
+                                        }
+                                    ]
+                                },
+                                url: {
+                                    identifier: 'websiteURL',
+                                    optional   : true,
+                                    rules: [
+                                        {
+                                            type: 'url',
+                                            prompt: 'Please enter a url'
+                                        }
+                                    ]
+                                }
+                            }
+                        })
+                    })(jQuery);
+                </script>
+					 
 				</form>
 			</div>
 		</div>

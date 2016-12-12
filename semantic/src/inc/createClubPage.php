@@ -154,7 +154,7 @@ if (isset($_SESSION['loggedIn'])) {
 
 
                 <script type="text/javascript">
-                    ;
+
                     (function ($) {
                         $('.ui.form').form({
                             fields: {
