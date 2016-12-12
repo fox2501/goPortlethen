@@ -26,7 +26,7 @@ if($accessLevel = 1) {
 if($healthUserID = $userID) {
     $canAccess = 1;
 }
-if ($canAccess = 1) {
+if ($canAccess == 1) {
 $sql = "SELECT * from healthcontent WHERE healthContentID = ?";
 $stmt = $pdo -> prepare($sql);
 $stmt -> execute([$healthContentID]);
