@@ -25,7 +25,7 @@ $locationID = $_POST["deleteMap"];
 <div class='ui center aligned container'>
     <div class='ui middle aligned center aligned grid'>
         <div class='ui ten wide column'>
-            <form action="submitDeleteMap.php" class="ui large form" method="post">
+            <form action="submitDeleteMap.php" class="ui large form" method="POST">
                 <div class='ui negative message'>
                     <h1 class='header'>ARE YOU SURE YOU WANT TO DELETE THIS MAP?
                         <input type="hidden" name="deleteMap" value='<?php echo $locationID ?>'>
