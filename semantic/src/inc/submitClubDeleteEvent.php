@@ -12,6 +12,6 @@ $stmt = $pdo->prepare($sql)->execute([$eventID]);
 
 
 
-header('Location: /semantic/src/inc/clublandingpage.php?deletedClubEvent');
+header('Location: /semantic/src/inc/clublandingpage.php?deletedEvent');
 
 ?>

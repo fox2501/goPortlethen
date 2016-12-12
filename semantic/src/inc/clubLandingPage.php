@@ -46,7 +46,7 @@ include("includes/header.php");
 		                    </div>
 		                    ";
     }
-    if(strpos($url, 'deletedClubEvent') !== false){
+    if(strpos($url, 'deletedEvent') !== false){
         echo "
 		                        <div class='ui error message'>
 		                      <div class='centered header'>
