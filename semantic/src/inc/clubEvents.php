@@ -66,6 +66,7 @@ $clubName = $row['clubName'];
                                 <input type='hidden' name='createClubEvent' value=$clubID>
                                 <button class='ui green submit button' style='margin-right:50px'>Create Club Event</button>
                             </form>
+                            
                                 
                             </div>";
                 }
@@ -78,6 +79,7 @@ $clubName = $row['clubName'];
                     $title = $row['title'];
                     $created = $row['date'];
                     $description = $row['description'];
+                    $eventID = $row['id'];
                         echo "
             <div class='ui raised segment'>
                 <div class='ui stackable container'>
@@ -92,8 +94,14 @@ $clubName = $row['clubName'];
                         if($canAccess == 1){
                         echo "<div class='two wide column'>
                             <form action='editClubEvent.php' class='ui form' method='post'>
-                                <button class='ui right floated mini button' onclick='/semantic/src/inc/editClubEvent.php' type='submit'><input name='editClub' type='hidden' value='$clubID'>Edit</button> 
+                                <button class='ui right floated button' onclick='/semantic/src/inc/editClubEvent.php' type='submit'><input name='editClub' type='hidden' value='$clubID'>Edit</button> 
                             </form>
+                            </div>
+                            <div class='two wide column'>
+                            <form action='deleteClubEvent.php' method='post'>
+                                <button class='ui red right floated mini button' name='eventID' type='submit' value='$eventID'>Delete Club Event</button>
+                            </form>
+                            </div>
                             ";}
                             echo "
                         </div>
