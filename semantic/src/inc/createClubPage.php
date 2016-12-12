@@ -106,7 +106,7 @@ if (isset($_SESSION['loggedIn'])) {
                     </div>
                 </div>-->
 
-                        <div class="inline field" id="feeAmount" style="display: none;">
+                        <div class="fluid field" id="feeAmount" style="display: none;">
                             <label>Please enter your clubs monthly fee (e.g. 10.00): </label>
                             <div class="ui right labeled input">
                                 <div class="ui label">£</div>
