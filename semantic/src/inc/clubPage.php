@@ -76,17 +76,12 @@ if (isset($_SESSION['loggedIn'])) {
         <?php
         if ($canAccess == 1){
             echo"
-        <div class='eight wide column'>
-            <form action='editClubPage.php' class='ui form' method='post' onclick='/semantic/src/inc/editClubPage.php'>
-					            <button class = 'ui right floated button' onclick = '/semantic/src/inc/editClubPage.php' type = 'submit'>
-					                <input type = 'hidden' name = 'editClub' value = $clubID>
-					                <i class = 'ui settings icon'></i>
-					                    Edit Club
-					            </button>";
+	<div class='eight wide column'>
+		<form action='editClubPage.php' class='ui form' method='post'>
+			<button class='ui right floated button' type='submit'><input name='editClub' type='hidden' value=\"$clubID\"> <i class='ui settings icon'></i> Edit Club</button>
+		</form>
+	</div>";
                 }?>
-            </form>
-        </div>
-    </div>
     <div class='ui stackable grid'>
         <div class='four wide column'>
             <div class='ui card'>
