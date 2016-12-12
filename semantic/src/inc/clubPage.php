@@ -47,15 +47,17 @@ include("includes/header.php");
 if (isset($_SESSION['loggedIn'])) {
     $userID = $_SESSION['loggedIn'];
     $canAccess = '0';
-    $sql = "SELECT userName from users WHERE userID = '$userID'";
-    $result = mysqli_query($db, $sql);
-    $row = mysqli_fetch_assoc($result);
+    $sql = "SELECT userName from users WHERE userID = ?";
+    $stmt = $pdo -> prepare($sql);
+    $stmt -> execute([$userID]);
+    $row = $stmt -> fetch(PDO::FETCH_ASSOC);
     $userName = $row["userName"];
 
-    $sql = "SELECT accessID from useraccess where userName = '$userName'";
-    $result = mysqli_query($db, $sql);
-    $row = mysqli_fetch_assoc($result);
+    $sql = "SELECT accessID from useraccess where userName = ?";
+    $stmt = $pdo -> prepare($sql)->execute([$userName]);
+    $row = $stmt -> fetch(PDO::FETCH_ASSOC);
     $accessID = $row["accessID"];
+
     if ($accessID == '1' || $accessID == '4') {
         $canAccess = '1';
     } else {
@@ -63,83 +65,67 @@ if (isset($_SESSION['loggedIn'])) {
     }
 }
 //echoes out club page main body
-echo "
+?>
 <body>
 <div class='ui stackable container'>
-    <div class = 'ui stackable grid'>
-        <div class = 'eight wide column'>
-            <header class = 'ui blue huge header'>$clubName Club Profile Page</header>
+    <div class='ui stackable grid'>
+        <div class='eight wide column'>
+            <header class='ui blue huge header'>
+                $clubName Club Profile Page
+            </header>
         </div>
-        <div class = 'eight wide column'>
-        <form class = 'ui form' method = 'POST' action = 'editClubPage.php' onclick = '/semantic/src/inc/editClubPage.php'>
-            
-            if ($canAccess = '1'){
-            <button class = 'ui right floated button' onclick = '/semantic/src/inc/editClubPage.php' type = 'submit'>
-                <input type = 'hidden' name = 'editClub' value = $clubID>
-                <i class = 'ui settings icon'></i>
-                    Edit Club
-            </button>
-            }
-        </form>
+        <div class='eight wide column'>
+            <form action='editClubPage.php' class='ui form' method='post' onclick='/semantic/src/inc/editClubPage.php'>
+                <?php
+                if ($canAccess = '1'){
+                    echo"
+					            <button class = 'ui right floated button' onclick = '/semantic/src/inc/editClubPage.php' type = 'submit'>
+					                <input type = 'hidden' name = 'editClub' value = $clubID>
+					                <i class = 'ui settings icon'></i>
+					                    Edit Club
+					            </button>";
+                }?>
+            </form>
         </div>
     </div>
     <div class='ui stackable grid'>
-            <div class='four wide column'>
-                <div class='ui card'>
-                    <div class='image'>
-                        <img
-                            src='$photoURL'>
-                    </div>
-                </div>
+        <div class='four wide column'>
+            <div class='ui card'>
+                <div class='image'><img src='$photoURL'></div>
             </div>
-            <div class = 'twelve wide column'>
-            <div class='ui segment '>
-                <h5 class='ui top attached header '>
-                    Club Category:
-                </h5>
-                <div class='ui attached segment '>
+        </div>
+        <div class='twelve wide column'>
+            <div class='ui segment'>
+                <h5 class='ui top attached header'>Club Category:</h5>
+                <div class='ui attached segment'>
                     <p>$category</p>
                 </div>
-                <h5 class='ui attached header '>
-                    Club Description:
-                </h5>
-                <div class='ui attached segment '>
+                <h5 class='ui attached header'>Club Description:</h5>
+                <div class='ui attached segment'>
                     <p>$clubDesc</p>
                 </div>
-                <h5 class='ui attached header '>
-                    Contact Number:
-                </h5>
-                <div class='ui attached segment '>
+                <h5 class='ui attached header'>Contact Number:</h5>
+                <div class='ui attached segment'>
                     <p>$contactNum</p>
                 </div>
-                <h5 class='ui attached header '>
-                    Website URL:
-                </h5>
-                <div class='ui attached segment '>
+                <h5 class='ui attached header'>Website URL:</h5>
+                <div class='ui attached segment'>
                     <p>$websiteURL</p>
                 </div>
-                <h5 class='ui attached header '>
-                    Fee Required?
-                </h5>
-                <div class='ui attached segment '>
+                <h5 class='ui attached header'>Fee Required?</h5>
+                <div class='ui attached segment'>
                     <p>$feeRequired</p>
                 </div>
-                <h5 class='ui attached header '>
-                    Monthly Fee:
-                </h5>
-                <div class='ui attached segment '>
+                <h5 class='ui attached header'>Monthly Fee:</h5>
+                <div class='ui attached segment'>
                     <p>$feeCost</p>
                 </div>
             </div>
-            </div>
         </div>
-</div>  
-</body>";
-
-
+    </div>
+</div>"; <?php
 
 include("includes/footer.php");
 ?>
-<body>
 </body>
 </html>
