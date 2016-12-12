@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 //session begins
 session_start();
 //connects to database server
@@ -7,7 +10,7 @@ $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 //access levels
     $userID = $_SESSION['loggedIn'];
     $canAccess = '0';
-    $sql = "SELECT accessID from users U, useraccess UA WHERE U.userName = UA.userName AND userID = ?'";
+    $sql = "SELECT accessID from users U, useraccess UA WHERE U.userName = UA.userName AND userID = ?";
     $stmt = $pdo -> prepare($sql);
     $stmt -> execute([$userID]);
     $row = $stmt -> fetch(PDO::FETCH_ASSOC);
