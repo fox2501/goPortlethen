@@ -18,6 +18,9 @@ $feeCost = htmlentities($_POST["feeAmount"]);
 if (empty($feeCost)) {
     $feeCost = 0;
 }
+if (empty($feePaid)) {
+    $feePaid = 0;
+}
 $clubCategory = htmlentities($_POST["clubCategory"]);
 
 
