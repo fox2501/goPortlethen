@@ -92,9 +92,9 @@ if (isset($_SESSION['loggedIn'])) {
                         </div>
                         <div class='two wide column'>
                             <form action='editHealthContent.php' class='ui form' method='post'>
-                                <button class='ui right floated mini button' onclick='/semantic/src/inc/editHealthContent.php' type='submit'><input name='editHealth' type='hidden' value='$healthContentID'> Edit
+                                <button class='ui right floated mini button' onclick='/semantic/src/inc/editHealthContent.php' type='submit'><input name='editHealth' type='hidden' value='$healthContentID'> <i class=\"settings icon\"></i></button> Edit
                                 
-                                <i class=\"settings icon\"></i></button>
+                               
                             </form>
                         </div>
                     </div>
