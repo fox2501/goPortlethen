@@ -11,7 +11,7 @@ $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
     <title>goPortlethen</title>
 </head><?php include("includes/header.php"); ?>
 <body>
-<div class="ui container">
+<div class="ui stackable container">
     <form action="includes/submitSignUp.php" class="ui form" method="post">
         <h2 class="ui center aligned blue header"></h2>
         <div class="content">
