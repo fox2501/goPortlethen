@@ -91,33 +91,24 @@ include("includes/header.php");
             $clubID = $row['clubID'];
             $photo = $row['url'];
             echo "
-<div class='ui raised segment'>
-    <div class='ui stackable container'>
-        <div class='ui stackable grid'>
-            <div class='ui four wide column'>
-                <div class='ui image'>
-                    <img src='$photo'>
-                </div>
-            </div>
-            <div class='ui twelve wide column'>
-                <div class='header'>
-                    $title
-                </div>
-                <div class='description'>
-                    <p> $mainText </p>
-                </div>
-                <div class='extra'>
-                    <form class='ui form' method='POST' action='/semantic/src/inc/clubPage.php'>
-                        <button class='ui right floated button' type='submit' onclick='/semantic/src/inc/clubPage.php'>
-                            <input type='hidden' name='viewClub' value=$clubID>
-                            For more info click here!
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+	<div class='ui raised segment'>
+		<div class='ui four wide column'>
+			<div class='ui image'><img src='$photo'></div>
+		</div>
+		<div class='ui twelve wide column'>
+			<div class='header'>
+				$title
+			</div>
+			<div class='description'>
+				<p>$mainText</p>
+			</div>
+			<div class='extra'>
+				<form action='/semantic/src/inc/clubPage.php' class='ui form' method='post'>
+					<button class='ui right floated button' onclick='/semantic/src/inc/clubPage.php' type='submit'><input name='viewClub' type='hidden' value=\"$clubID\"> For more info click here!</button>
+				</form>
+			</div>
+		</div>
+	</div>
 ";
         }
         ?>
