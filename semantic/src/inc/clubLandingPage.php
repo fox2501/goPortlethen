@@ -41,16 +41,7 @@ include("includes/header.php");
 	<div class='four wide column'>
 	                            <a href='createClubPage.php'>
                                     <button class='ui green submit button' style='margin-right:50px'>Create a club</button>
-                                </a>
-
-                  
-                  <style>
-                  
-                  #link {
-  display : block;
-}
-                  </style>
-                  
+                                </a>      
             </div>";
             } ?>
 
