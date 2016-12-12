@@ -1,13 +1,15 @@
 <?php
 session_start();
 include("includes/dbconnect.php");
+include("includes/PDOConnect.php");
 if (isset($_SESSION['loggedIn'])) {
 $userID = $_SESSION['loggedIn'];
-$sql = "SELECT A.accessID from useraccess A, users B WHERE A.userName = B.userName AND B.userID = '$userID'";
-$result = mysqli_query($db, $sql);
-while($row = mysqli_fetch_assoc($result)){
-    $accessLevel = $row['accessID'];
-}
+$sql = "SELECT A.accessID from useraccess A, users B WHERE A.userName = B.userName AND B.userID = ?";
+$stmt = $pdo->prepare($sql);
+$stmt->execute([$userID]);
+$row = $stmt->fetch(PDO::FETCH_ASSOC);
+$accessLevel = $row['accessID'];
+
 $healthContentID = $_POST['editHealth'];
 $sql = "SELECT userID from healthcontent where healthContentID = $healthContentID";
 $result = mysqli_query($db, $sql);
