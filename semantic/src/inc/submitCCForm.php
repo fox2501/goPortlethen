@@ -53,7 +53,7 @@ if ($img['name'] == '') {
 }
 
 
-
+//sql statement to insert inputted information on form from user
 $sql    = "INSERT INTO club (clubName, clubDescription, email, contactNumber, feePaid, feeCost, websiteURL, clubCategory, userID)
 VALUES (?,?,?,?,?,?,?,?,?)";
 $pdo->prepare($sql)->execute([$clubName,$clubDescription,$email,$contactNumber,$feePaid,$feeCost,'',$clubCategory,$userID]);

@@ -55,6 +55,7 @@ if(!(empty($locationID))) {
     <div class="ui container">
         <div class='ui grid'>
             <div class='ten wide column'></div><?php
+            //sql statement to check for correct access level
             if ($accessID == 1 || $accessID == 3) {
                 if (strpos($url, 'mapApproval') !== false) {
                     echo "

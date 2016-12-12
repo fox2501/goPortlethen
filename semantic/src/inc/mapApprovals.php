@@ -60,7 +60,7 @@ if (isset($_SESSION['loggedIn'])) {
                     ";
         }
         echo "</div></div>";
-    } eLSE{
+    } else{
         echo "You cannot access this page.";
     }
 }

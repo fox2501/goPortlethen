@@ -4,7 +4,7 @@ session_start();
 include("includes/PDOConnect.php");
 $clubID = $_POST["deleteClub"];
 
-
+//deletes club
 $sql = "DELETE FROM club WHERE clubID = ?";
 $stmt = $pdo->prepare($sql)->execute([$clubID]);
 
