@@ -73,11 +73,11 @@ if (isset($_SESSION['loggedIn'])) {
                 <?php echo $clubName ?> Club Profile Page
             </header>
         </div>
+        <?php
+        if ($canAccess = '1'){
+            echo"
         <div class='eight wide column'>
             <form action='editClubPage.php' class='ui form' method='post' onclick='/semantic/src/inc/editClubPage.php'>
-                <?php
-                if ($canAccess = '1'){
-                    echo"
 					            <button class = 'ui right floated button' onclick = '/semantic/src/inc/editClubPage.php' type = 'submit'>
 					                <input type = 'hidden' name = 'editClub' value = $clubID>
 					                <i class = 'ui settings icon'></i>
