@@ -53,7 +53,7 @@ session_start();
                 <div class="ui header">
                     How do I create a point of interest on the map?
                 </div>
-                <p>Firstly login on a map admin account or create one. then navigate to the map page and click create route. From here you can add a marker to the map which will give you the coordinates. you can also determine if it is a ................</p>
+                <p>Firstly login on a map admin account or create one. then navigate to the map page and click create route. From here you can add a marker to the map which will give you the coordinates. You can also determine if it is a Viewpoint, Location of Interest or a Historical Landmark</p>
             </div>
             <div class="column">
                 <div class="ui header">
