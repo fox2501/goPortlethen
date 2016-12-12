@@ -3,7 +3,7 @@
 session_start();
 //connects to database server
 include("includes/PDOConnect.php");
-$clubID = htmlentities($_POST['createClubEvent']);
+$clubID = htmlentities($_POST['editClubEvent']);
 $title = htmlentities($_POST['title']);
 $date = htmlentities($_POST['date']);
 $mainText = htmlentities($_POST['mainText']);
