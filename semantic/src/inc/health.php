@@ -35,7 +35,7 @@ if (isset($_SESSION['loggedIn'])) {
 </head>
 
 <? include("includes/header.php"); ?>
-
+<!--main body-->
 <body>
 
 <h1 align="center">Health & Wellbeing</h1>

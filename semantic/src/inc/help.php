@@ -14,6 +14,7 @@ session_start();
     </script>
     <title>goPortlethen</title>
 </head><?php include("includes/header.php"); ?>
+<!--main body-->
 <body>
 <h2 class="ui center aligned header">Help Page</h2>
 <div class="ui container">

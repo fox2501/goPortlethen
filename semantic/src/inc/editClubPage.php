@@ -60,6 +60,7 @@ $('#dropdown')
     .dropdown()
 ;
 </script>
+<!--main body-->
 <body>
     <form method='post' action='deleteClub.php'>
         <button class='ui red right floated button' type='submit' name='clubID' value='$clubID' >Delete Club</button>

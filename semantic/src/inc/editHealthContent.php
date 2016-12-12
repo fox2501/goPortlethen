@@ -46,6 +46,7 @@ while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
 <!-- Nav bar -->
 <? include("includes/header.php"); ?>
 <body>
+<!--main body-->
 <!-- Form -->
 
 

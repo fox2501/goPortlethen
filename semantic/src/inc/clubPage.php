@@ -42,7 +42,7 @@ while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
     </head>
 <?php
 include("includes/header.php");
-
+//checks user access level can view club
 if (isset($_SESSION['loggedIn'])) {
     $userID = $_SESSION['loggedIn'];
     $canAccess = '0';
@@ -61,7 +61,7 @@ if (isset($_SESSION['loggedIn'])) {
         $canAccess = '0';
     }
 }
-
+//echoes out club page main body
 echo "
 <body>
 <div class='ui container'>

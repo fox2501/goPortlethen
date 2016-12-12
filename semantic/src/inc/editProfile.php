@@ -24,6 +24,7 @@ while($row = mysqli_fetch_array($result)) {
     $email = $row['emailAddress'];
 }
 ?>
+<!--main body-->
 <body>
 <div class="ui container">
     <div class="ui three column grid">

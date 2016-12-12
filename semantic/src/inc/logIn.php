@@ -10,6 +10,7 @@ session_start();
 $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 include("includes/header.php");
 ?>
+<!--main body-->
 <body>
 <div class="ui center aligned container">
     <div class="ui middle aligned center aligned grid">

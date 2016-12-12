@@ -13,6 +13,7 @@ $locationID =$_POST["deleteMap"];
 <head>
     <title>goPortlethen</title>
 </head>
+<!--main body-->
 <body>
 <div class='ui center aligned container'>
     <div class='ui middle aligned center aligned grid'>
