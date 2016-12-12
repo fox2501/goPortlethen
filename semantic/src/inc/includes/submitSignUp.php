@@ -1,10 +1,12 @@
 <?php
 //session begins
-
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 session_start();
 
 //connects to database server
-include("dbconnect.php");
+include("PDOConnect.php");
 
 //puts entered fields into variables
 $firstName = (htmlentities($_POST["firstName"])) ;
@@ -20,9 +22,10 @@ $userApproved = "0";
 $accessLevel = "0";
 
 //sql statement that takes username entered
-$sql = "SELECT username FROM users WHERE username = '$username'";
-$result = mysqli_query($db, $sql);
-$usernameCheck = mysqli_num_rows($result);
+$sql = "SELECT userName FROM users WHERE userName = ?";
+$stmt = $pdo -> prepare($sql);
+$stmt -> execute([$username]);
+$usernameCheck = $stmt->rowCount();
 if($usernameCheck > 0){
     header("Location: ../signUpForm.php?error=usernameExists");
     exit();
@@ -44,12 +47,14 @@ else {
         $accessLevel = "1";
     }
 
-    $sql = "INSERT INTO users (userName, password, emailAddress, firstName, surname, requireApproval, userApproved, age, location, aboutUser, dateCreated) 
-        values('$username', '$hashpass', '$email', '$firstName', '$surname', '$requireApproval', $userApproved, '$age', '', '', CURRENT_DATE)";
-    $result = mysqli_query($db, $sql);
+    $sql = "INSERT INTO users (userName, password, emailAddress, firstName, surname, requireApproval, userApproved, age, location, aboutUser) 
+        values(?,?,?,?,?,?,?,?,?,?)";
+    $stmt = $pdo -> prepare($sql);
+    $stmt -> execute([$username, $hashpass, $email, $firstName, $surname, $requireApproval, $userApproved, $age, '', '']);
 
-    $sql = "INSERT INTO useraccess (accessID, userName) VALUES ('$accessLevel', '$username')";
-    $result = mysqli_query($db, $sql);
+    $sql = "INSERT INTO useraccess (accessID, userName) VALUES (?,?)";
+    $stmt = $pdo -> prepare($sql);
+    $stmt->execute([$accessLevel, $username]);
 
     //redirect
     header("location: /semantic/?newUser");

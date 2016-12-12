@@ -67,7 +67,7 @@ include("includes/header.php");
         else{
             echo "
                 <div class='eight wide column'>
-                    <header class='ui blue huge header'>
+                    <header class='ui blue huge header'>    
                         <?php echo $clubName ?>Club Profile Page
                 </header>
                 </div>
