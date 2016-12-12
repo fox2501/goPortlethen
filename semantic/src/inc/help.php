@@ -20,11 +20,8 @@ session_start();
 <div class="ui horizontal section divider">
     <p>Here to help!</p>
 </div>
-<div class="ui container">
-    <div class="ui horizontal section divider">
-        FAQs
-    </div>
-    <div class="ui three column grid">
+<div class="ui stackable container">
+    <div class="ui stackable three column grid">
         <div class="row">
             <div class="column">
                 <div class="ui header">
