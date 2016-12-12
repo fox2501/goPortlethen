@@ -1,13 +1,18 @@
 <?php
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 session_start();
 //connects to database server
 include("includes/PDOConnect.php");
-$locationID =htmlentities($_POST["deleteMap"]);
+$locationID = htmlentities($_POST["deleteMap"]);
 
 
 $sql = "DELETE FROM locations WHERE locationID = ?";
 $stmt = $pdo->prepare($sql)->execute([$locationID]);
 
-header('Location: /semantic/src/inc/mapLandingPage.php?DeletedMap');
+//header('Location: /semantic/src/inc/mapLandingPage.php?DeletedMap');
 
 ?>
