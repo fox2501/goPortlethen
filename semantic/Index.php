@@ -105,7 +105,3 @@ if(strpos($url, 'accountDeleted') !== false){
 <?php include("/src/inc/includes/footer.php");?>
 </body>
 </html>
-
-<script>
-    $('#footer').css('margin-top',$(document).height() - $('body').height() - $('#footer').height());
-</script>
