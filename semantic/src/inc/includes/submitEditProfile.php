@@ -6,11 +6,11 @@ session_start();
 include("dbconnect.php");
 
 //puts entered fields into variables
-$firstName =  $_POST["firstName"];
-$surname = $_POST["surname"];
-$email = $_POST["email"];
-$username = $_POST["username"];
-$age = $_POST["age"];
+$firstName =  htmlentities($_POST["firstName"]);
+$surname = htmlentities($_POST["surname"]);
+$email = htmlentities($_POST["email"]);
+$username = htmlentities($_POST["username"]);
+$age = htmlentities($_POST["age"]);
 $userID = $_SESSION['loggedIn'];
 
 //sql statement to update on database based on entries
