@@ -61,6 +61,7 @@ include("dbconnect.php");
             $result = mysqli_query($db, $sql);
             while ($row = mysqli_fetch_assoc($result)) {
                 $userName = $row['userName'];
+                $name = $row['firstName'];
             }
             $sql = "SELECT accessID from useraccess WHERE userName = '$userName'";
             $result = mysqli_query($db, $sql);
@@ -71,7 +72,7 @@ include("dbconnect.php");
                 echo "  <div class = 'ui simple dropdown'>
                            <a class = 'browse item'>
                                 <i class = 'user icon'></i>
-                                " . $_SESSION['name'] . "
+                                " . $name . "
                                 <i class='dropdown icon'></i>
                             </a>
                         <div class = 'ui menu'>
