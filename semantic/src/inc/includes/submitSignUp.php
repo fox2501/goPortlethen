@@ -48,7 +48,7 @@ else {
     }
 
     $sql = "INSERT INTO users (userName, password, emailAddress, firstName, surname, requireApproval, userApproved, age, location, aboutUser) 
-        values(?,?,?,?,?,?,?,?,?,?,?)";
+        values(?,?,?,?,?,?,?,?,?,?)";
     $stmt = $pdo -> prepare($sql);
     $stmt -> execute([$username, $hashpass, $email, $firstName, $surname, $requireApproval, $userApproved, $age, '', '']);
 
