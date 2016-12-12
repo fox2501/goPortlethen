@@ -7,7 +7,7 @@ error_reporting(E_ALL);
 session_start();
 //connects to database server
 include("includes/PDOConnect.php");
-$locationID = htmlentities($_POST["deleteMap"]);
+$locationID = $_POST["deleteMap"];
 
 echo $locationID;
 
