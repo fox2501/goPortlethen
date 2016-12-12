@@ -8,13 +8,13 @@ include("dbconnect.php");
 
 //puts entered fields into variables
 $firstName = (htmlentities($_POST["firstName"])) ;
-$surname = $_POST["surname"];
-$email = $_POST["email"];
-$username = $_POST["username"];
-$password = $_POST["password"];
-$passwordConfirm = $_POST["passwordConfirm"];
+$surname = htmlentities($_POST["surname"]);
+$email = htmlentities($_POST["email"]);
+$username = htmlentities($_POST["username"]);
+$password = htmlentities($_POST["password"]);
+$passwordConfirm = htmlentities($_POST["passwordConfirm"]);
 $age = htmlentities($_POST["age"]);
-$accessRequested = $_POST["accessRequested"];
+$accessRequested = htmlentities($_POST["accessRequested"]);
 $requireApproval = "1";
 $userApproved = "0";
 $accessLevel = "0";
