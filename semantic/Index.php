@@ -65,12 +65,12 @@ if(strpos($url, 'accountDeleted') !== false){
         <?php
         if($accessLevel == 1){
             echo "
-            <div class=\"sixteen wide column\">
-                <div class=\"ui huge blue centered header\">
+            <div class=\"eight wide column\">
+                <div class=\"ui huge blue right floated header\">
                     <?php echo $title ?>
                 </div>
             </div>
-            <div class='sixteen wide column'>
+            <div class='eight wide column'>
                 <form action='/semantic/src/inc/editHome.php' class='ui form' method='post'>
                     <button class='ui right floated button' type='submit'><input name='editHome' type='hidden' value = '$contentID'> <i class='ui settings icon'></i> Edit Home</button>
                 </form>
