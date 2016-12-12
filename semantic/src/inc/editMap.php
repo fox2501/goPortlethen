@@ -40,9 +40,16 @@ include("includes/header.php");
     Discover Portlethen
 </div>
 <div class="ui container">
-    <form method ="post" action ="deleteMap.php">
-        <button class="ui red right floated button" type ="submit" name = "deleteMap" value = "<?php echo $locationID ?>">Delete Map</button>
-    </form>
+    <?php
+    if(!($accessLevel == 4)){
+        echo "
+            <form method ='post' action ='deleteMap.php'>
+                <button class='ui red right floated button' type ='submit' name = 'deleteMap' value = '<?php echo $locationID ?>'>Delete Map</button>
+            </form>
+        ";
+    }
+    ?>
+
     <div id="map" style="width: 100%; height: 350px; padding-top: 10px;"></div>
     <div class='ui raised segment'>
         <h3 class='ui header' id="current">Drag the marker to select a position on the map.</h3>
