@@ -59,7 +59,7 @@ $caption = $row['caption'];
         <div class="field">
             <label>Choose a new image for the home page</label>
             <div class="ui fluid action input">
-                <input name="healthPhoto" size="35" type="file">
+                <input name="homePhoto" size="35" type="file">
             </div>
         </div><button class="ui fluid large green submit button" type="submit">Submit</button>
         <script type="text/javascript">
