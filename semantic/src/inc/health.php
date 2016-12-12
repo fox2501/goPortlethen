@@ -43,7 +43,7 @@ if (isset($_SESSION['loggedIn'])) {
 </div>
 
 <div class="ui stackable container">
-    <div class="ui two column grid">
+    <div class="ui two column stackable grid">
         <div class="ten wide column">
             <?php
             if ($canAccess == '1') {
@@ -76,8 +76,8 @@ if (isset($_SESSION['loggedIn'])) {
                         if ($canAccess == '1') {
                             echo "
             <div class='ui raised segment'>
-                <div class='ui container'>
-                    <div class='ui grid'>
+                <div class='ui stackable container'>
+                    <div class='ui stackable grid'>
                         <div class='three wide column'>
                             <div class='ui medium image'><img src='$photoURL'></div>
                         </div>
@@ -102,8 +102,8 @@ if (isset($_SESSION['loggedIn'])) {
                         } else {
                             echo "
             <div class='ui raised segment'>
-                <div class='ui container'>
-                    <div class='ui grid'>
+                <div class='ui stackable container'>
+                    <div class='ui stackable grid'>
                         <div class='four wide column'>
                             <div class='ui medium image'><img src='$photoURL'></div>
                         </div>
