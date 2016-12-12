@@ -16,7 +16,7 @@ if (isset($_SESSION['loggedIn'])) {
     $stmt = $pdo -> prepare($sql);
     $stmt->execute([$clubID]);
     while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
-        if ($row['userID'] == $userID || $userAccessID == 1) {
+        if ($row['userID'] == $userID || $userAccessID == '1') {
             $clubID = $_POST['editClub'];
             $sql = "SELECT * FROM club WHERE clubID = ?";
             $stmt = $pdo -> prepare($sql);
