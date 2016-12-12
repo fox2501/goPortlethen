@@ -118,7 +118,7 @@ while($row = $stmt -> fetch(PDO::FETCH_ASSOC)){
 
                 </div>
             </div>
-            <button class="ui fluid large green submit button" type="submit">Create Account</button>
+            <button class="ui fluid large green submit button" type="submit">Send Question</button>
         </form>
     </div>
     <div class="actions">
