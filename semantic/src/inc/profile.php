@@ -35,6 +35,15 @@ if (isset($_SESSION['loggedIn'])) {
 	        </div>
 	        ";
         }
+        if(strpos($url, 'passwordChanged') !== false){
+            echo "
+	            <div class='ui message'>
+	          <div class='centered header'>
+	            You have successfully changed your password.
+	          </div>
+	        </div>
+	        ";
+        }
         ?>
         <div class = "ui two column grid">
             <div class = "ui column">
