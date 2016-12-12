@@ -49,3 +49,15 @@ session_start();
     </div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+<script>
+$('#footer').css('margin-top',$(document).height() - $('body').height() - $('#footer').height());
+</script>
