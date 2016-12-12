@@ -83,41 +83,42 @@ session_start();
         Send a message to a Site Administrator for help
     </div>
     <div class="ui segment">
-        <div class="ui form">
+        <form class="ui form" method = "post">
             <div class="ui grid">
                 <div class="four wide column">
                     <div class="field">
-                        <label>First name</label> <input placeholder="First Name" type="text">
+                        <label>First name</label> <input name = "firstname" placeholder="First Name" type="text">
                     </div>
                 </div>
                 <div class="four wide column">
                     <div class="field">
-                        <label>Last name</label> <input placeholder="Middle Name" type="text">
+                        <label>Last name</label> <input name = "middlename" placeholder="Middle Name" type="text">
                     </div>
                 </div>
                 <div class="four wide column">
                     <div class="field">
-                        <label>Contact Number</label> <input placeholder="Contact Number" type="text">
+                        <label>Contact Number</label> <input name = "contactnumber" placeholder="Contact Number" type="text">
                     </div>
                 </div>
                 <div class="sixteen wide column">
                     <div class="field">
                         <div class="field">
-                            <label>Enter your question here :</label>
+                            <label>Enter your question here :</label> <input name="question" type="text">
                             <textarea></textarea>
                         </div>
                     </div>
+                    <button class="ui positive right labeled icon button" type="submit">
+                        <a href="submitHelp.php">Send Message</a> <i class="checkmark icon"></i>
+                    </button>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
     <div class="actions">
         <div class="ui black deny button">
             Cancel
         </div>
-        <div class="ui positive right labeled icon button">
-            <a href="submitHelp.php">Send Message</a> <i class="checkmark icon"></i>
-        </div>
+
     </div>
 </div><?php include("includes/footer.php"); ?>
 <script>
