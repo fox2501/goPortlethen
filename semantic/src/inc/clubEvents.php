@@ -76,7 +76,7 @@ $clubName = $row['clubName'];
                 $stmt->execute([$clubID]);
                 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                     $title = $row['title'];
-                    $created = $row['created'];
+                    $created = $row['date'];
                     $description = $row['description'];
                         echo "
             <div class='ui raised segment'>
@@ -84,7 +84,7 @@ $clubName = $row['clubName'];
                     <div class='ui stackable grid'>
                         <div class='four wide column'>
                             <h3 class='ui header' id='title'>$title</h3>
-                            <h4 class='ui header' id='datePosted'>$created</h4>
+                            <h4 class='ui header' id='datePosted'>$date</h4>
                         </div>
                         <div class='seven wide column'>
                             <p id='mainText' style='text - align:justify'>$description<br></p>
