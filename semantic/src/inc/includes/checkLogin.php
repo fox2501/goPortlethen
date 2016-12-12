@@ -31,8 +31,6 @@ else {
     $stmt -> execute([$username, $hashpass]);
     while($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
         $_SESSION['loggedIn'] = $row['userID'];
-        $_SESSION['name'] = $row['firstName'];
-        $_SESSION['surname'] = $row['surname'];
     }
     header('Location: /semantic/');
 }
