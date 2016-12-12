@@ -53,7 +53,7 @@ include("dbconnect.php");
         Help
     </a>
     <!--Access levels check for various logged in users-->
-    <div class="right menu">
+    <div class="ui right stackable menu">
         <?php
         if (isset($_SESSION['loggedIn'])) {
             $userID = $_SESSION['loggedIn'];
