@@ -55,21 +55,21 @@ $clubName = $row['clubName'];
 
 <h1 align="center"><?php echo $clubName;?> Events</h1>
 <div class="ui stackable two column grid">
-    <div class="ten wide column">
-        <?php
-        if ($canAccess == '1') {
-            echo "<div class='row'>
+    <div class="fifteen wide column">
+        <div class="row">
+
+            <ul>
+                <?php
+                if ($canAccess == '1') {
+                    echo "<div class='row'>
                             <form action='createClubEvent.php' class='ui large form' method='post'>
                                 <input type='hidden' name='createClubEvent' value=$clubID>
                                 <button class='ui green submit button' style='margin-right:50px'>Create Club Event</button>
                             </form>
                                 
                             </div>";
-        }
-        ?>
-
-        <div class="row">
-            <ul>
+                }
+                ?>
                 <?php
                 $sql= "SELECT * FROM clubevents WHERE clubID = ?";
                 $stmt = $pdo->prepare($sql);
@@ -84,7 +84,7 @@ $clubName = $row['clubName'];
                     <div class='ui stackable grid'>
                         <div class='four wide column'>
                             <h3 class='ui header' id='title'>$title</h3>
-                            <h4 class='ui header' id='datePosted'>$date</h4>
+                            <h4 class='ui header' id='datePosted'>$created</h4>
                         </div>
                         <div class='seven wide column'>
                             <p id='mainText' style='text - align:justify'>$description<br></p>
