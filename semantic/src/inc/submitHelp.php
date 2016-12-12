@@ -1,10 +1,7 @@
 <?php
-$to      = 'cameron.lawrie.1@gmail.com';
-$subject = 'the subject';
-$message = 'hello';
-$headers = 'From: webmaster@example.com' . "\r\n" .
-    'Reply-To: webmaster@example.com' . "\r\n" .
-    'X-Mailer: PHP/' . phpversion();
-
-mail($to, $subject, $message, $headers);
+$firstname = $_POST['firstName'];
+$lastname = $_POST['lastName'];
+$emailID = $_POST['emailID'];
+$question = $_POST['question'];
+$body = "From: $firstName\n E-Mail: $email\n Message:\n $message";
 ?>
