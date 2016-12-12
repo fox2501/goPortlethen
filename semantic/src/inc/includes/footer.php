@@ -20,7 +20,7 @@ document.getElementById("footer").classList.add('stikybottom');
 }, false);
 </script>
 
-<footer class="stikybottom" style="position:fixed; left:0, right:0, bottom:0">
+<footer class="stikybottom" style="position:fixed; left:0; right:0; bottom:0">
 </footer>
 <body>
     <div class="ui blue inverted footer segment" id = "footer" style = "position:absolute; height: 175px; width: 100%">
