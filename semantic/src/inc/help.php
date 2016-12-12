@@ -73,7 +73,7 @@ while($row = $stmt -> fetch(PDO::FETCH_ASSOC)){
         </div>
     </div><br>
     <br>
-    <div class="ui container">
+    <!--<div class="ui container">
         <div class="ui grid">
             <div class="eleven wide column">
                 <div class="ui centered header">
@@ -85,6 +85,7 @@ while($row = $stmt -> fetch(PDO::FETCH_ASSOC)){
             </div>
         </div>
     </div>
+    -->
 </div>
 <div class="ui modal">
     <i class="close icon"></i>
