@@ -44,21 +44,26 @@ include("includes/header.php");
 ?>
 <body>
 <div class='ui container'>
-    <div class='ui grid'>
-        <div class='eight wide column'>
-            <header class='ui blue huge header'>
-                <?php echo $clubName ?> Club Profile Page
-            </header>
-        </div><?php
+    <div class='ui grid'><?php
         if($accessLevel == 1 || $accessLevel == 2){
             echo "
-			                    <div class='eight wide column'>
-			            <form action='editClubPage.php' class='ui form' method='post' onclick='/semantic/src/inc/editClubPage.php'>
-			                <button class='ui right floated button' onclick='/semantic/src/inc/editClubPage.php' type='submit'><input name='editClub' type='hidden' value=\"$clubID\"> <i class='ui settings icon'></i> Edit Club</button>
-			            </form>
-			        </div>
+	<div class='eight wide column'>
+		<header class='ui blue huge header'>
+			<?php echo $clubName ?>Club Profile Page
+		</header>
+	</div>
+	<div class='eight wide column'>
+		<form action='editClubPage.php' class='ui form' method='post' onclick='/semantic/src/inc/editClubPage.php'>
+			<button class='ui right floated button' onclick='/semantic/src/inc/editClubPage.php' type='submit'><input name='editClub' type='hidden' value=\"\&quot;$clubID\&quot;\"> <i class='ui settings icon'></i> Edit Club</button>
+		</form>
+	</div>
 			            ";
-        }
+        } else echo"
+	<div class='sixteen wide column'>
+		<header class='ui blue huge header'>
+			<?php echo $clubName ?>Club Profile Page
+		</header>
+	</div>";
         ?>
         <div class='four wide column'>
             <div class='ui card'>
