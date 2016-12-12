@@ -1,6 +1,7 @@
 <?php
-
+//session begins
 session_start();
+//connects to database server
 include("includes/PDOConnect.php");
 include("includes/header.php");
 if (isset($_SESSION['loggedIn'])) {

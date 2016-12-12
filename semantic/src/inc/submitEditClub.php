@@ -2,6 +2,7 @@
 
 
 session_start();
+//connects to database server
 include("includes/PDOConnect.php");
 
 $clubName = $_POST["editClubName"];

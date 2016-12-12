@@ -1,5 +1,5 @@
 <?php
-
+//connects to database server
 include("includes/PDOConnect.php");
 
 $img=$_FILES['img'];

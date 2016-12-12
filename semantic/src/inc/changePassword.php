@@ -18,6 +18,7 @@ include("includes/header.php");
             </div>
         </div>
     </div>
+    <!--changing password logic-->
     <div class="ui grid">
         <div class="row">
             <div class="column">
@@ -37,6 +38,7 @@ include("includes/header.php");
                                 fields: {
                                     passwordOne: {
                                         identifier: 'passwordOne',
+                                        <!--checks password is atleast 8 chars and if not gives error message-->
                                         rules: [
                                             {
                                                 type: 'minLength[8]',
@@ -46,6 +48,7 @@ include("includes/header.php");
                                     },
                                     passwordConfirm: {
                                         identifier: 'passwordConfirm',
+                                        <!--makes sure same passwords are entered-->
                                         rules: [
                                             {
                                                 type: 'match[passwordOne]',
