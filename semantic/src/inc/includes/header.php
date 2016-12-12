@@ -13,6 +13,7 @@
 <!--<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 <?
+//session begins
 session_start();
 include("dbconnect.php");
 ?>

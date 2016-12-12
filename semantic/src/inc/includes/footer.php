@@ -1,4 +1,5 @@
 <?
+//session begins
 session_start();
 ?>
 <!DOCTYPE html>
