@@ -84,7 +84,10 @@ include("includes/header.php");
                 $clubID = $row['clubID'];
                 $photo = $row['url'];
                 echo "
+                <div class = 'row'>
 				    <div class='ui raised segment'>
+				    <div class = 'ui stackable container'>
+				    <div class = 'ui stackable grid'>
 				        <div class='ui four wide column'>
 				            <div class='ui image'><img src='$photo'></div>
 				        </div>
@@ -100,8 +103,11 @@ include("includes/header.php");
 				                    <button class='ui right floated button' onclick='/semantic/src/inc/clubPage.php' type='submit'><input name='viewClub' type='hidden' value=\"$clubID\"> For more info click here!</button>
 				                </form>
 				            </div>
+				            </div>
+				            </div>
 				        </div>
 				    </div>
+				</div>
 				";
             }
             ?>
