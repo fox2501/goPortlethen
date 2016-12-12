@@ -38,6 +38,9 @@ $locationID = $_POST["deleteMap"];
 </div><?php
 include("includes/footer.php");
 }
+else{
+    header("Location: /semantic/src/inc/mapLandingPage.php?restricted");
+}
 }
 ?>
 </body>
