@@ -74,7 +74,7 @@ if (isset($_SESSION['loggedIn'])) {
             </header>
         </div>
         <?php
-        if ($canAccess = '1'){
+        if ($canAccess == 1){
             echo"
         <div class='eight wide column'>
             <form action='editClubPage.php' class='ui form' method='post' onclick='/semantic/src/inc/editClubPage.php'>
