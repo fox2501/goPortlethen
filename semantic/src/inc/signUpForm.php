@@ -49,7 +49,7 @@ $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
             </div>
             <div class="required field">
                 <label>Age</label>
-                    <input name='age' placeholder='Please enter your age.' type='number' >
+                    <input name='age' placeholder='Please enter your age.' type='number' type="range" min="0" max="100" >
             </div>
             <div class="required field">
                 <label>Email Address</label>
@@ -139,10 +139,6 @@ $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
                                 {
                                     type: 'empty',
                                     prompt: 'Please enter your age.'
-                                }
-                                {
-                                    type: 'integer[1..100]',
-                                    prompt: 'Please enter an arge between 1 and 100.'
                                 }
                             ]
                         },
