@@ -68,7 +68,6 @@ if(strpos($url, 'contentEdited') !== false){
 	        </div>
 	        ";
 }
-contentEdited
 ?>
 <div class="ui stackable container">
     <div class="ui stackable grid">
