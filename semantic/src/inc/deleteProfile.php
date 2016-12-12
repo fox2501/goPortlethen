@@ -1,18 +1,19 @@
 <?php
-//session begins
 session_start();
-//connects to database server
 include("includes/dbconnect.php");
+
 if(isset($_SESSION['loggedIn'])){
-$userID = $_SESSION['loggedIn'];
-include("includes/header.php");
+    $userID = $_SESSION['loggedIn'];
+    include("includes/header.php");
 ?>
+
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>goPortlethen</title>
 </head>
-<!--main body-->
+
 <body>
 <div class='ui center aligned container'>
     <div class='ui middle aligned center aligned grid'>

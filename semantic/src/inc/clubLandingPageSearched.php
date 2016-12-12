@@ -26,7 +26,7 @@ if (isset($_SESSION['loggedIn'])) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Club Landing Page</title>
+    <title>Club Search Results</title>
 </head><?
 include("includes/header.php");
 ?>
@@ -65,19 +65,13 @@ include("includes/header.php");
             <div class="four wide column">
                 <div class="ui fluid category search">
                     <div class="ui right floated icon input">
-                        <input class="prompt" placeholder="Search clubs..." type="text"><?php header("Location: /semantic/src/inc/clubLandingPageSearched.php"); ?> <i class="search icon"></i>
-
-                        <!-- User types in search query
-                        Find corresponding clubs with that category/name
-                        Echo them here -->
+                        <input class="prompt" placeholder="Search clubs..." type="text"> <i class="search icon"></i>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-
 <div class="ui stackable container">
     <div class="ui stackable grid">
         <div class="ui hidden divider"></div><?php

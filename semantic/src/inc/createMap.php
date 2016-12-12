@@ -1,20 +1,21 @@
 <?php
-//session begins
+// Begin session
 session_start();
-//connects to database server
+// Connect to DB server
 include ("includes/dbconnect.php");
-$userID = $_SESSION['loggedIn'];
 
+$userID = $_SESSION['loggedIn'];
 $sql = "SELECT UA.accessID FROM useraccess UA, users U WHERE UA.userName = U.userName AND U.userID = ?";
 $stmt = $pdo -> prepare($sql);
 $stmt -> execute([$userID]);
 $row = $stmt -> fetch(PDO::FETCH_ASSOC);
 $accessLevel = $row['accessID'];
 
-IF($accessID == 1 || $accessID == 3) {
+if($accessID == 1 || $accessID == 3) {
 
     include("includes/header.php");
-    ?>
+?>
+
     <!DOCTYPE html>
     <html>
     <head>
