@@ -94,12 +94,12 @@ include("includes/header.php");
 <div class='ui raised segment'>
     <div class='ui stackable container'>
         <div class='ui stackable grid'>
-            <div class='ui two wide column'>
+            <div class='ui four wide column'>
                 <div class='ui image'>
                     <img src='$photo'>
                 </div>
             </div>
-            <div class='ui fourteen wide column'>
+            <div class='ui twelve wide column'>
                 <div class='header'>
                     $title
                 </div>
