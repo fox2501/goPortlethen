@@ -35,7 +35,7 @@ if (isset($_SESSION['loggedIn'])) {
     };
     $clubID = $_POST['editClub'];
 
-    $sql ="SELECT FROM clubEvents WHERE clubID = ?";
+    $sql ="SELECT * FROM clubEvents WHERE clubID = ?";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([$clubID]);
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
