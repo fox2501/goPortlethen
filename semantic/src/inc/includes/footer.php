@@ -14,7 +14,7 @@ session_start();
     <div class="ui stackable blue inverted footer segment" id = "footer"
     style="width:100%; height:150px">
 
-        <div class="ui center aligned container">
+        <div class="ui stackable center aligned container">
             <div class="ui stackable inverted grid">
                 <div class="three wide column">
                     <!--navigation pane for site links-->
