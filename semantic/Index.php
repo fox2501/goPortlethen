@@ -4,7 +4,7 @@ session_start();
 include("/src/inc/includes/header.php");
 $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 
-$sql = "SELECT * FROM homeContent";
+$sql = "SELECT * FROM homecontent";
 $stmt = $pdo -> prepare($sql);
 $stmt -> execute();
 $row = $stmt -> fetch(PDO::FETCH_ASSOC);
