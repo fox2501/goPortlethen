@@ -3,6 +3,7 @@ session_start();
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+
 include("includes/dbconnect.php");
 include("includes/PDOConnect.php");
 $clubID = $_POST['clubEvent'];
@@ -60,7 +61,7 @@ $clubName = $row['clubName'];
         <div class="row">
             <ul>
                 <?php
-                $sql_query = "SELECT * FROM clubevents WHERE clubID = $clubID";
+                $sql_query = "SELECT * FROM clubevents WHERE clubID = '$clubID'";
                 $result = $db->query($sql_query);
                 while ($row = $result->fetch_array()) {
                     $title = $row['title'];
