@@ -17,15 +17,15 @@ $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
             <h1 align="center">Sign Up </h1>
         </div>
 
-
-        <div class="ui segment">
-            <div class="ui attached message">
-                <div class="header">
-                    Welcome to goPortlethen!
-                </div>
-                <p>Please fill out the form below to sign up</p>
-
+        <div class="ui attached message">
+            <div class="header">
+                Welcome to goPortlethen!
             </div>
+            <p>Please fill out the form below to sign up</p>
+
+        </div>
+        <div class="ui segment">
+
             <div class="ui error message"></div>
             <?php
             if (strpos($url, 'error=usernameExists') !== false) {
