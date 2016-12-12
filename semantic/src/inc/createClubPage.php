@@ -35,11 +35,11 @@ if (isset($_SESSION['loggedIn'])) {
     <body>
     <div class="ui container">
         <form class="ui form" action="submitCCForm.php" enctype="multipart/form-data" method="POST">
-            <h2 class="ui center aligned blue header">
+            <h1 align="center">
                 <div class="content">
                     Create Your Club
                 </div>
-            </h2>
+            </h1>
             <div class="ui horizontal section divider">
                 Inspire your local community
             </div>

@@ -14,9 +14,18 @@ $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
     <form class="ui form" action="includes/submitSignUp.php" method="post">
         <h2 class="ui center aligned blue header"></h2>
         <div class="content">
-            <h2 class="ui center aligned blue header">Sign Up </h2>
+            <h1 align="center">Sign Up </h1>
+        </div>
+
+        <div class="ui attached message">
+            <div class="header">
+                Welcome to goPortlethen!
+            </div>
+            <p>Please fill out the form below to sign up</p>
+
         </div>
         <div class="ui segment">
+
             <div class="ui error message"></div>
             <?php
             if (strpos($url, 'error=usernameExists') !== false) {
@@ -29,13 +38,7 @@ $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
                 ";
             }
             ?>
-            <div class="ui attached message">
-                <div class="header">
-                    Welcome to goPortlethen!
-                </div>
-                <p>Please fill out the form below to sign up</p>
 
-            </div>
             <div class="required field">
                 <label>First Name</label>
                     <input name='firstName' placeholder='Please enter your first name.' type='text'>
@@ -46,7 +49,7 @@ $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
             </div>
             <div class="required field">
                 <label>Age</label>
-                    <input name='age' placeholder='Please enter your age.' type='number'>
+                    <input name='age' placeholder='Please enter your age.' type='number' >
             </div>
             <div class="required field">
                 <label>Email Address</label>
@@ -137,8 +140,13 @@ $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
                                     type: 'empty',
                                     prompt: 'Please enter your age.'
                                 }
+                                {
+                                    type: 'integer[1..100]',
+                                    prompt: 'Please enter an arge between 1 and 100.'
+                                }
                             ]
                         },
+
                         usernameEmpty: {
                             identifier: 'username',
                             rules: [
