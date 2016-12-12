@@ -55,6 +55,51 @@ if (isset($_SESSION['loggedIn'])) {
     </div>
     ";
     }
+    if(strpos($url, 'contentDeleted') !== false){
+        echo"
+        <div class = 'ui error message'>
+        <h3 class = 'ui header''>
+        You have successfully deleted health content.
+        </h3>
+    </div>
+    ";
+    }
+    if(strpos($url, 'newApprovalNeeded') !== false){
+        echo"
+        <div class = 'ui warning message'>
+        <h3 class = 'ui header''>
+        You have successfully submitted new content. This requires approval first.
+        </h3>
+    </div>
+    ";
+    }
+    if(strpos($url, 'newContentSubmitted') !== false){
+        echo"
+        <div class = 'ui message'>
+        <h3 class = 'ui header''>
+        You have successfully created new health content.
+        </h3>
+    </div>
+    ";
+    }
+    if(strpos($url, 'editedContent') !== false){
+        echo"
+        <div class = 'ui message'>
+        <h3 class = 'ui header''>
+        You have successfully edited the content.
+        </h3>
+    </div>
+    ";
+    }
+    if(strpos($url, 'editApprovalNeeded') !== false){
+        echo"
+        <div class = 'ui warning message'>
+        <h3 class = 'ui header''>
+        You have successfully submitted content to be edited. This needs approval by a site admin.
+        </h3>
+    </div>
+    ";
+    }
     ?>
 
     <div class="ui two column stackable grid">

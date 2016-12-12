@@ -3,6 +3,7 @@
 session_start();
 //connects to database server
 include("includes/dbconnect.php");
+$url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 //access levels
 if (isset($_SESSION['loggedIn'])) {
     $userID = $_SESSION['loggedIn'];
@@ -31,6 +32,17 @@ if (isset($_SESSION['loggedIn'])) {
 include("includes/header.php");
 ?>
 <body>
+<?php
+if(strpos($url, 'newUser') !== false){
+    echo "
+	            <div class='ui warning message'>
+	          <div class='centered header'>
+	            You have successfully craeted a club.
+	          </div>
+	        </div>
+	        ";
+}
+?>
 <h1 align="center">Club Landing Page</h1>
 <div class="ui horizontal section divider">
     Become More Involved

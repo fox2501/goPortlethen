@@ -17,6 +17,9 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 if($accessLevel = 4){
     $approvalStatus = 0;
 }
+IF($accessLevel = 1){
+    $approvalStatus = 1;
+}
 //ACCESS LEVEL QUERY IS ABOVE. IF ACCESSLEVEL = 4 THEN NEEDS APPROVAL, SO UPDATE APPROVAL STATUS TO 0.
 // IF ACCESSLEVEL = 1 THEN APPROVAL STATUS IS SET TO 1. I THINK...
 
@@ -70,6 +73,11 @@ else{
 
 }
 
+if($accessLevel == 4){
+    header('Location: /semantic/src/inc/health.php?approvalNeeded');
+}
+if($accessLevel == 1){
+    header('Location: /semantic/src/inc/health.php?editedContent');
+}
 
-header('Location: /semantic/src/inc/health.php');
 ?>
