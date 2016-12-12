@@ -9,7 +9,7 @@ if (isset($_SESSION['loggedIn'])) {
     $stmt = $pdo->prepare($sql);
     $stmt->execute([$userID]);
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
-    $accessID = $row['userAccessID'];
+    $accessID = $row['accessID'];
 
     $clubID = $_POST['editClub'];
     $sql = "SELECT userID from club where clubID = ?";
