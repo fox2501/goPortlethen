@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 $firstname = htmlentities($_POST['firstName']);
 $lastname = htmlentities($_POST['lastName']);
 $emailAddress = htmlentities($_POST['emailAddress']);
@@ -12,7 +15,8 @@ $stmt->execute([1]);
 $emailString;
 while($row = $stmt -> fetch(PDO::FETCH_ASSOC)){
 
-$emailString = $emailString.$row['emailAddress'].";";
+    echo $row;
+//$emailString = $emailString.$row['emailAddress'].";";
 
 }
 
