@@ -55,6 +55,15 @@ if (isset($_SESSION['loggedIn'])) {
     </div>
     ";
     }
+    if(strpos($url, 'contentDeleted') !== false){
+        echo"
+        <div class = 'ui error message'>
+        <h3 class = 'ui header''>
+        You have successfully deleted health content.
+        </h3>
+    </div>
+    ";
+    }
     if(strpos($url, 'newApprovalNeeded') !== false){
         echo"
         <div class = 'ui warning message'>

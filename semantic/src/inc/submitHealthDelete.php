@@ -11,6 +11,6 @@ $stmt = $pdo->prepare($sql)->execute([$healthID]);
 echo "$healthID";
 
 
-header('Location: /semantic/src/inc/health.php');
+header('Location: /semantic/src/inc/health.php?contentDeleted');
 
 ?>
