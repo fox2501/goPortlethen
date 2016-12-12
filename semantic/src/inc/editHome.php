@@ -16,7 +16,7 @@ $accessLevel = $row['accessID'];
 $contentID = $_POST['editHome'];
 
 if ($accessLevel == 1) {
-$sql = "SELECT * from homeContent WHERE $contentID = ?";
+$sql = "SELECT * from homecontent WHERE $contentID = ?";
 $stmt = $pdo -> prepare($sql);
 $stmt -> execute([$contentID]);
 while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
