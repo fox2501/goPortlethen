@@ -87,23 +87,23 @@ session_start();
             <div class="ui grid">
                 <div class="four wide column">
                     <div class="field">
-                        <label>First name</label> <input name = "firstname"placeholder="First Name" type="text">
+                        <label>First name</label> <input name = "firstname" placeholder="First Name" type="text">
                     </div>
                 </div>
                 <div class="four wide column">
                     <div class="field">
-                        <label>Last name</label> <input placeholder="Middle Name" type="text">
+                        <label>Last name</label> <input name = "middlename" placeholder="Middle Name" type="text">
                     </div>
                 </div>
                 <div class="four wide column">
                     <div class="field">
-                        <label>Contact Number</label> <input placeholder="Contact Number" type="text">
+                        <label>Contact Number</label> <input name = "contactnumber" placeholder="Contact Number" type="text">
                     </div>
                 </div>
                 <div class="sixteen wide column">
                     <div class="field">
                         <div class="field">
-                            <label>Enter your question here :</label>
+                            <label>Enter your question here :</label> <input name="question" type="text">
                             <textarea></textarea>
                         </div>
                     </div>
