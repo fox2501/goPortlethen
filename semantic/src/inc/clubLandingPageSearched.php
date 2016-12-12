@@ -28,6 +28,7 @@ if (isset($_SESSION['loggedIn'])) {
 <head>
     <title>Club Search Results</title>
 </head><?
+
 include("includes/header.php");
 ?>
 <body>
