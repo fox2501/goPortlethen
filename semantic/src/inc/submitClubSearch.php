@@ -1,7 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Lorna
- * Date: 12/12/2016
- * Time: 14:05
- */
+session_start();
+include("includes/PDOConnect.php");
+
+$sql = "SELECT * from Clubs where clubCategory =?";
+
+
+header ("Location: /semantic/src/inc/clubLandingPageSearched.php");
+?>
