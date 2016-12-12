@@ -30,51 +30,51 @@ include("includes/header.php");
     <?php
     if(strpos($url, 'newClub') !== false){
         echo "
-		                <div class='ui warning message'>
-		              <div class='centered header'>
-		                You have successfully created a club. Please login with your new club account! 
-		              </div>
-		            </div>
-		            ";
+		                        <div class='ui warning message'>
+		                      <div class='centered header'>
+		                        You have successfully created a club. Please login with your new club account! 
+		                      </div>
+		                    </div>
+		                    ";
     }
     if(strpos($url, 'deletedClub') !== false){
         echo "
-		                <div class='ui error message'>
-		              <div class='centered header'>
-		                You have successfully deleted your club.
-		              </div>
-		            </div>
-		            ";
+		                        <div class='ui error message'>
+		                      <div class='centered header'>
+		                        You have successfully deleted your club.
+		                      </div>
+		                    </div>
+		                    ";
     }
     if(strpos($url, 'editedClub') !== false){
         echo "
-		                <div class='ui error message'>
-		              <div class='centered header'>
-		                You have successfully edited your club.
-		              </div>
-		            </div>
-		            ";
+		                        <div class='ui error message'>
+		                      <div class='centered header'>
+		                        You have successfully edited your club.
+		                      </div>
+		                    </div>
+		                    ";
     }
     if(strpos($url, 'noClub') !== false){
         echo "
-		                <div class='ui message'>
-		              <div class='centered header'>
-		                Please select a club to view.
-		              </div>
-		            </div>
-		            ";
+		                        <div class='ui message'>
+		                      <div class='centered header'>
+		                        Please select a club to view.
+		                      </div>
+		                    </div>
+		                    ";
     }
     ?>
     <div class="ui stackable grid">
         <?php
         if ($accessLevel == 1 || $accessLevel == 2) {
             echo "
-				                <div class='sixteen wide column'>
-				                    <a href='createClubPage.php'>
-				                        <button class='ui green submit button' style='margin-right:50px'>Create a club</button>
-				                    </a>      
-				                </div>
-				                ";}?>
+			                                <div class='sixteen wide column'>
+			                                    <a href='createClubPage.php'>
+			                                        <button class='ui green submit button' style='margin-right:50px'>Create a club</button>
+			                                    </a>      
+			                                </div>
+			                                ";}?>
         <div class="ui hidden divider"></div><?php
         $sql = "SELECT A.clubName, A.clubDescription, A.clubID, B.url FROM club A, photos B WHERE A.clubID = B.clubID";
         $stmt = $pdo -> prepare($sql);
@@ -85,31 +85,31 @@ include("includes/header.php");
             $clubID = $row['clubID'];
             $photo = $row['url'];
             echo "
-			                            <div class = 'row'>
-			                                <div class='ui raised segment'>
-			                                <div class = 'ui stackable container'>
-			                                <div class = 'ui stackable grid'>
-			                                    <div class='ui three wide column'>
-			                                        <div class='ui image'><img src='$photo'></div>
-			                                    </div>
-			                                    <div class='ui thirteen wide column'>
-			                                        <div class='header'>
-			                                            $title
+			                                        <div class = 'row'>
+			                                            <div class='ui raised segment'>
+			                                            <div class = 'ui stackable container'>
+			                                            <div class = 'ui stackable grid'>
+			                                                <div class='ui three wide column'>
+			                                                    <div class='ui image'><img src='$photo'></div>
+			                                                </div>
+			                                                <div class='ui thirteen wide column'>
+			                                                    <div class='header'>
+			                                                        $title
+			                                                    </div>
+			                                                    <div class='description'>
+			                                                        <p>$mainText</p>
+			                                                    </div>
+			                                                    <div class='extra'>
+			                                                        <form action='/semantic/src/inc/clubPage.php' class='ui form' method='post'>
+			                                                            <button class='ui right floated button' onclick='/semantic/src/inc/clubPage.php' type='submit'><input name='viewClub' type='hidden' value=\"$clubID\"> For more info click here!</button>
+			                                                        </form>
+			                                                    </div>
+			                                                    </div>
+			                                                    </div>
+			                                                </div>
+			                                            </div>
 			                                        </div>
-			                                        <div class='description'>
-			                                            <p>$mainText</p>
-			                                        </div>
-			                                        <div class='extra'>
-			                                            <form action='/semantic/src/inc/clubPage.php' class='ui form' method='post'>
-			                                                <button class='ui right floated button' onclick='/semantic/src/inc/clubPage.php' type='submit'><input name='viewClub' type='hidden' value=\"$clubID\"> For more info click here!</button>
-			                                            </form>
-			                                        </div>
-			                                        </div>
-			                                        </div>
-			                                    </div>
-			                                </div>
-			                            </div>
-			                            ";
+			                                        ";
         }
         ?>
     </div>
