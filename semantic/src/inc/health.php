@@ -109,13 +109,13 @@ $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
             <div class="row">
                 <ul>
                     <?php
-                    $sql_query = "
+                    $sql = "
                                 SELECT A.title, A.mainText, B.userName, A.datePosted, A.healthContentID, C.url
                                 FROM healthcontent A, users B, photos C
                                 WHERE 
                                 A.userID=B.userID
                                 AND A.healthContentID = C.healthContentID
-                                AND A.approvalStatus = ?;";
+                                AND A.approvalStatus = ?";
                     $stmt = $pdo -> prepare($sql);
                     $stmt -> execute([1]);
                     while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
