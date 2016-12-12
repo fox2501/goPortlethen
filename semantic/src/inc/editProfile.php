@@ -22,12 +22,12 @@ $userID = $_SESSION['loggedIn'];
 $sql = "SELECT firstName, surname, age, emailAddress FROM users WHERE userID = ?";
 $stmt = $pdo -> prepare($sql);
 $stmt -> execute([$userID]);
-while($row = $stmt ->fetch(PDO::FETCH_ASSOC)) {
+$row = $stmt ->fetch(PDO::FETCH_ASSOC);
     $firstName = $row['firstName'];
     $surname = $row['surname'];
     $age = $row['age'];
     $email = $row['emailAddress'];
-}
+
 ?>
 <!--main body-->
 <body>
