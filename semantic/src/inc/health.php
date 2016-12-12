@@ -66,7 +66,7 @@ if (isset($_SESSION['loggedIn'])) {
     }
     if(strpos($url, 'newContentSubmitted') !== false){
         echo"
-        <div class = 'ui warning message'>
+        <div class = 'ui message'>
         <h3 class = 'ui header''>
         You have successfully created new health content.
         </h3>
@@ -77,7 +77,7 @@ if (isset($_SESSION['loggedIn'])) {
         echo"
         <div class = 'ui message'>
         <h3 class = 'ui header''>
-        You have successfully submitted content to be edited.
+        You have successfully edited the content.
         </h3>
     </div>
     ";
