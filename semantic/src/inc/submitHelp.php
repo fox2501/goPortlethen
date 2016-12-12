@@ -19,6 +19,9 @@ $emailString = "";
 while($row = $stmt -> fetch(PDO::FETCH_ASSOC)){
     $emailString = $emailString.$row['emailAddress'].";";
 }
+
+
+
 $to = $emailString;
 
 ?>

@@ -84,11 +84,13 @@ if (isset($_SESSION['loggedIn'])) {
         </div>
     </div>
     </body>
-    </html>
+
     <?php
     include("includes/footer.php");
 } else{
     header("Location: /semantic/src/inc/logIn.php");
 }
 ?>
+</html>
+
 
