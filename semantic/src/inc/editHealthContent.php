@@ -118,7 +118,7 @@ while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
 <?php
 include("includes/footer.php");
 } else {
-    echo "You do not have permission.";
+    header("Location: /semantic/src/inc/mapLandingPage?restricted");
 }
 };
 ?>
