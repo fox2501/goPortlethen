@@ -20,9 +20,6 @@ if($accessLevel = 4){
 IF($accessLevel = 1){
     $approvalStatus = 1;
 }
-//ACCESS LEVEL QUERY IS ABOVE. IF ACCESSLEVEL = 4 THEN NEEDS APPROVAL, SO UPDATE APPROVAL STATUS TO 0.
-// IF ACCESSLEVEL = 1 THEN APPROVAL STATUS IS SET TO 1. I THINK...
-
 $sql ="UPDATE healthcontent SET title = ?,mainText= ?, approvalStatus =? WHERE healthContentID = ?";
 $pdo->prepare($sql)->execute([$title,$mainText,$approvalStatus, $healthContentID]);
 
