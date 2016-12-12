@@ -2,7 +2,7 @@
 //session begins
 session_start();
 //connects to database server
-include ("includes/dbconnect.php");
+include ("includes/PDOConnect.php");
 $userID = $_SESSION['loggedIn'];
 
 $sql = "SELECT UA.accessID FROM useraccess UA, users U WHERE UA.userName = U.userName AND U.userID = ?";
@@ -11,14 +11,14 @@ $stmt -> execute([$userID]);
 $row = $stmt -> fetch(PDO::FETCH_ASSOC);
 $accessLevel = $row['accessID'];
 
-IF($accessID == 1 || $accessID == 3) {
+if($accessLevel == 1 || $accessLevel == 3 || $accessLevel == 4) {
 
     include("includes/header.php");
     ?>
     <!DOCTYPE html>
     <html>
     <head>
-        <title></title>
+        <title>Create Map Content</title>
     </head>
     <body>
     <h1 align="center">Submit Map Content</h1>

@@ -60,6 +60,9 @@ include("includes/header.php");
 			            <button class='ui right floated button' type='submit'><input name='editClub' type='hidden' value='$clubID'> <i class='ui settings icon'></i> Edit Club</button>
 			        </form>
 			    </div>";
+        }
+        else{
+            echo "<div class = 'eight wide column'></div>";
         }?>
 
             <div class='four wide column'>
