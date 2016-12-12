@@ -20,7 +20,13 @@ if (isset($_SESSION['loggedIn'])) {
     $stmt->execute([$userName]);
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
     $accessID = $row["accessID"];
-    if ($accessID == '1' || $accessID == '2') {
+    usleep(10000);
+    $sql = "SELECT userID FROM club WHERE userID =?";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$userID]);
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+    $clubUserID = $row['userID'];
+    if ($accessID == '1' || $userID == $clubUserID) {
         $canAccess = '1';
     } else {
         $canAccess = '0';
