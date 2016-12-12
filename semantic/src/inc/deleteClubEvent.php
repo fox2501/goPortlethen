@@ -33,13 +33,13 @@ if ($accessLevel == 1 || $userID == $clubUserID) {
 <div class='ui stackable center aligned container'>
     <div class='ui stackable middle aligned center aligned grid'>
         <div class='ui ten wide column'>
-            <form action="submitClubEventDelete.php" class="ui large form" method="post">
+            <form action="submitClubDeleteEvent.php" class="ui large form" method="post">
                 <div class='ui negative message'>
-                    <h1 class='header'>ARE YOU SURE YOU WANT TO DELETE THIS CLUB?<input type="hidden" name="deleteClubEvent"
+                    <h1 class='header'>ARE YOU SURE YOU WANT TO DELETE THIS CLUB EVENT?<input type="hidden" name="deleteClubEvent"
                                                                                         value='<?php echo $eventID; ?>'>
                     </h1>
                 </div>
-                <button class="ui fluid large red submit button" type="submit">Delete Club</button>
+                <button class="ui fluid large red submit button" type="submit">Delete Club Event</button>
             </form>
         </div>
     </div>

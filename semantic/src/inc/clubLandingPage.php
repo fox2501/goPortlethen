@@ -46,6 +46,15 @@ include("includes/header.php");
 		                    </div>
 		                    ";
     }
+    if(strpos($url, 'deletedClubEvent') !== false){
+        echo "
+		                        <div class='ui error message'>
+		                      <div class='centered header'>
+		                        You have successfully deleted your club event.
+		                      </div>
+		                    </div>
+		                    ";
+    }
     if(strpos($url, 'editedClub') !== false){
         echo "
 		                        <div class='ui error message'>
