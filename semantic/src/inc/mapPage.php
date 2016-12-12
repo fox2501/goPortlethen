@@ -59,28 +59,27 @@ include("includes/header.php");
 </div>
 <div class="ui container">
     <div class='ui grid'>
-        <div class='ten wide column'></div>
-        <?php
+        <div class='ten wide column'></div><?php
         if(strpos($url, 'mapApproval') !== false){
             echo "
-            <div class='two wide column'>
-								<form action='submitMapApproval.php' class='ui form' method='POST'>
-									<button class='ui positive basic right floated button' onclick='/semantic/src/inc/submitMapApproval.php' type='submit'><input name='approveMap' type='hidden' value='$locationID'> Approve</button>
-								</form>
-							</div>
-							<div class = 'two wide column'>
-								<form action='denyMapApproval.php' class='ui form' method='POST'>
-									<button class='ui negative basic right floated button' onclick='/semantic/src/inc/submitMapApproval.php' type='submit'><input name='denyMap' type='hidden' value='$locationID'> Deny</button>
-								</form>
-							</div>
-							";
+			            <div class='ui column'>
+			                                <form action='submitMapApproval.php' class='ui form' method='POST'>
+			                                    <button class='ui positive basic right floated button' onclick='/semantic/src/inc/submitMapApproval.php' type='submit'><input name='approveMap' type='hidden' value='$locationID'> Approve</button>
+			                                </form>
+			                            </div>
+			                            <div class = 'ui column'>
+			                                <form action='denyMapApproval.php' class='ui form' method='POST'>
+			                                    <button class='ui negative basic right floated button' onclick='/semantic/src/inc/submitMapApproval.php' type='submit'><input name='denyMap' type='hidden' value='$locationID'> Deny</button>
+			                                </form>
+			                            </div>
+			                            ";
         }
         if($canAccess == 1){
-            echo "        <div class='two wide column'>
-            <form action='editMap.php' class='ui form' method='post'>
-                <button class='ui right floated button' onclick='/semantic/src/inc/editMap.php' type='submit'><input name='editMap' type='hidden' value='$locationID'> Edit</button>
-            </form>
-        </div>";
+            echo "        <div class='ui column'>
+			            <form action='editMap.php' class='ui form' method='post'>
+			                <button class='ui right floated button' onclick='/semantic/src/inc/editMap.php' type='submit'><input name='editMap' type='hidden' value='$locationID'> Edit</button>
+			            </form>
+			        </div>";
         }
         ?>
         <div class="sixteen wide column">
