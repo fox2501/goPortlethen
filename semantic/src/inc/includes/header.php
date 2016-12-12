@@ -86,6 +86,11 @@ include("dbconnect.php");
                                 </a>
                             </div>
                             <div class = 'item'>
+                                <a class = 'header' href = '/semantic/src/inc/mapApprovals.php'>
+                                    <p style = 'color: black;'>Map Approvals</p>
+                                </a>
+                            </div>
+                            <div class = 'item'>
                                 <a  href = '/semantic/src/inc/userApprovals.php'>
                                     <p style = 'color: black;'>Account Approvals</p>
                                 </a>

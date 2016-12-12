@@ -18,7 +18,7 @@ $locationID = $_POST["deleteMap"];
 <!DOCTYPE html>
 <html>
 <head>
-    <title>goPortlethen</title>
+    <title>Delete Map</title>
 </head>
 <!--main body-->
 <body>

@@ -40,12 +40,8 @@ if(!(empty($locationID))) {
     <!DOCTYPE html>
     <html>
     <head>
-        <script src="https://goportlethencs8.azurewebsites.net/semantic/dist/routeplot.js" type="text/javascript">
-        </script>
         <meta charset="UTF-8">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css" rel="stylesheet"
-              type="text/css">
-        <title>Map Landing Page</title>
+        <title>Map Page</title>
     </head>
     <body>
     <h1 class='ui centered header'>Maps</h1>
