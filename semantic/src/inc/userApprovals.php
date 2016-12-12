@@ -66,6 +66,10 @@ if (isset($_SESSION['loggedIn'])) {
 		</div>
                             ";
         }
+    }else{
+        header("Location: /semantic/src/inc/logIn.php?restricted");
     }
+} else{
+    header("Location: /semantic/src/inc/logIn.php?restricted");
 }
 ?>
