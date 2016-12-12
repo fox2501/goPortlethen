@@ -62,9 +62,9 @@ usleep(10000);
 
 $clubID = $pdo->lastInsertId();
 
-$sql1 = "INSERT INTO photos (caption,url,clubID,locationID,healthContentID,routeID) VALUES (?,?,?,?,?,?)";
+$sql1 = "INSERT INTO photos (caption,url,clubID,locationID,healthContentID,routeID,homeContentID) VALUES (?,?,?,?,?,?,?)";
 
-$pdo->prepare($sql1)->execute(['',$url,$clubID,0,0,0]);
+$pdo->prepare($sql1)->execute(['',$url,$clubID,0,0,0,0]);
 
 
     header("location:clubLandingPage.php?newclub");

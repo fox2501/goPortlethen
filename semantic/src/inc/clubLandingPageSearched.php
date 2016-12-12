@@ -3,7 +3,6 @@
 session_start();
 //connects to database server
 include("includes/dbconnect.php");
-$url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 //access levels
 if (isset($_SESSION['loggedIn'])) {
     $userID = $_SESSION['loggedIn'];
@@ -27,8 +26,9 @@ if (isset($_SESSION['loggedIn'])) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Club Landing Page</title>
+    <title>Club Search Results</title>
 </head><?
+
 include("includes/header.php");
 ?>
 <body>
@@ -36,58 +36,6 @@ include("includes/header.php");
 <div class="ui horizontal section divider">
     Become More Involved
 </div>
-<div class="ui stackable container">
-    <?php
-    if(strpos($url, 'newclub') !== false){
-        echo "
-	            <div class='ui warning message'>
-	          <div class='centered header'>
-	            You have successfully created a club.
-	          </div>
-	        </div>
-	        ";
-    }
-    ?>
-    <div class="ui stackable grid">
-        <div class="row">
-            <?php
-            if ($canAccess == 1) {
-                echo "
-				<div class='four wide column'>
-                    <a href='createClubPage.php'>
-                        <button class='ui green submit button' style='margin-right:50px'>Create a club</button>
-                    </a>      
-                </div>
-                ";}?>
-            <div class="eight wide column">
-                <div class="ui form">
-                    <div class="inline fields">
-                        <label>Filter clubs by:</label>
-                        <div class="field">
-                            <div class="ui checkbox">
-                                <input class="hidden" id="A-Z" tabindex="0" type="checkbox"> <label for="A-Z">Name A-Z</label>
-                            </div>
-                            <div class="ui checkbox">
-                                <input class="hidden" id="fee" tabindex="0" type="checkbox"> <label for="fee">Fee does apply</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="four wide column">
-                <div class="ui fluid category search">
-                    <div class="ui right floated icon input">
-                        <form action="clubLandingPageSearched.php" method="post">
-                            <input class="prompt" placeholder="Search clubs..." type="text">
-                            <button><i class="search icon"><?php header("Location: /semantic/src/inc/clubLandingPageSearched.php"); ?></i></button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 
 <div class="ui stackable container">
     <div class="ui stackable grid">
