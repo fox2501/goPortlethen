@@ -33,8 +33,8 @@ if (isset($_SESSION['loggedIn'])) {
 <html>
 <head>
     <title>goPortlethen</title>
-</head><?
-echo "$clubCategory";
+</head>
+<?
 include("includes/header.php");
 ?>
 <body>
@@ -45,10 +45,11 @@ include("includes/header.php");
 
 <div class="ui stackable container">
     <div class="ui stackable grid">
-        <div class="ui hidden divider"></div><?php
+        <div class="ui hidden divider"></div>
+        <?php
         $sql_query = "SELECT A.clubName, A.clubDescription, A.clubID, B.url FROM club A, photos B
                       WHERE A.clubID = B.clubID
-                      AND $clubCategory = ?";
+                      AND $clubCategory = 'ART'";
         $stmt = $pdo->prepare($sql);
         $stmt->execute([$clubCategory]);
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
