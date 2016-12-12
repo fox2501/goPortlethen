@@ -11,66 +11,54 @@ $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 </head><?php include("includes/header.php"); ?>
 <body>
 <div class="ui container">
-    <form class="ui form" action="includes/submitSignUp.php" method="post">
+    <form action="includes/submitSignUp.php" class="ui form" method="post">
         <h2 class="ui center aligned blue header"></h2>
         <div class="content">
-            <h1 align="center">Sign Up </h1>
-        </div>
-
-        <div class="ui attached message">
-            <div class="header">
-                Welcome to goPortlethen!
-            </div>
-            <p>Please fill out the form below to sign up</p>
-
+            <h1 align="center">Sign Up</h1>
         </div>
         <div class="ui segment">
-
-            <div class="ui error message"></div>
-            <?php
+            <div class="ui attached message">
+                <div class="header">
+                    Welcome to goPortlethen!
+                </div>
+                <p>Please fill out the form below to sign up</p>
+            </div>
+            <div class="ui error message"></div><?php
             if (strpos($url, 'error=usernameExists') !== false) {
                 echo "
-                <div class='ui negative message'>
-                    <div class='header'>
-                        Sorry. The username you have chosen already exists.
-                    </div>
-                </div>
-                ";
+				                <div class='ui negative message'>
+				                    <div class='header'>
+				                        Sorry. The username you have chosen already exists.
+				                    </div>
+				                </div>
+				                ";
             }
             ?>
-
             <div class="required field">
-                <label>First Name</label>
-                    <input name='firstName' placeholder='Please enter your first name.' type='text'>
+                <label>First Name</label> <input name='firstName' placeholder='Please enter your first name.' type='text'>
             </div>
             <div class="required field">
-                <label>Surname</label>
-                    <input name='surname' placeholder='Please enter your surname.' type='text'>
+                <label>Surname</label> <input name='surname' placeholder='Please enter your surname.' type='text'>
             </div>
             <div class="required field">
-                <label>Age</label>
-                    <input name='age' placeholder='Please enter your age.' type='number' type="range" min="0" max="100" >
+                <label>Age</label> <input max="100" min="0" name='age' placeholder='Please enter your age.' type="range">
             </div>
             <div class="required field">
-                <label>Email Address</label>
-                    <input name='email' placeholder='Please enter an email address.' type='text'>
+                <label>Email Address</label> <input name='email' placeholder='Please enter an email address.' type='text'>
             </div>
             <div class="required field">
-                <label>Username</label>
-                    <input name='username' placeholder='Please enter a username.' type='text'>
+                <label>Username</label> <input name='username' placeholder='Please enter a username.' type='text'>
             </div>
             <div class="required field">
-                <label>Password</label>
-                    <input name='password' placeholder='Please enter a password.' type='password'>
+                <label>Password</label> <input name='password' placeholder='Please enter a password.' type='password'>
             </div>
             <div class="required field">
-                <label>Confirm Password</label>
-                    <input name='passwordConfirm' placeholder='Please now confirm your password.' type='password'>
+                <label>Confirm Password</label> <input name='passwordConfirm' placeholder='Please now confirm your password.' type='password'>
             </div>
             <div class="required field">
-                <label>Access Requested</label>
-                <select class="ui search dropdown" name="accessRequested">
-                    <option></option>
+                <label>Access Requested</label> <select class="ui search dropdown" name="accessRequested">
+                    <option>
+                    </option>
                     <option value="contributor">
                         Contributor
                     </option>
@@ -84,8 +72,7 @@ $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
                         Site Admin
                     </option>
                 </select>
-            </div>
-            <button class="ui fluid large green submit button" type="submit">Create Account</button>
+            </div><button class="ui fluid large green submit button" type="submit">Create Account</button>
         </div>
         <script type="text/javascript">
             ;
