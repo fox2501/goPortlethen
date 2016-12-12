@@ -10,6 +10,18 @@ session_start();
     <title>goPortlethen</title>
 </head>
 
+<script>
+document.addEventListener("DOMContentLoaded", function (event) {
+var element = document.getElementById('html');
+var height = element.offsetHeight;
+if (height < screen.height) {
+document.getElementById("footer").classList.add('stikybottom');
+}
+}, false);
+</script>
+
+<footer class="stikybottom" style="position:fixed; left:0, right:0, bottom:0">
+</footer>
 <body>
     <div class="ui blue inverted footer segment" id = "footer" style = "position:absolute; height: 175px; width: 100%">
 
