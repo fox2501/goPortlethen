@@ -87,10 +87,10 @@ include("includes/header.php");
 			                    <div class='ui raised segment'>
 			                    <div class = 'ui stackable container'>
 			                    <div class = 'ui stackable grid'>
-			                        <div class='ui four wide column'>
+			                        <div class='ui three wide column'>
 			                            <div class='ui image'><img src='$photo'></div>
 			                        </div>
-			                        <div class='ui twelve wide column'>
+			                        <div class='ui thirteen wide column'>
 			                            <div class='header'>
 			                                $title
 			                            </div>
