@@ -1,8 +1,5 @@
 <?php
 //error reporting / debug
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
 
 session_start();
 //connects to database server
@@ -14,6 +11,6 @@ $sql = "DELETE FROM locations WHERE locationID = ?";
 $stmt = $pdo -> prepare($sql);
 $stmt -> execute([$locationID]);
 
-header("Location: /semantic/src/inc/mapApprovals.php");
+header("Location: /semantic/src/inc/mapApprovals.php?contentApproved");
 
 ?>

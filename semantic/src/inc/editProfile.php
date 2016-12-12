@@ -9,7 +9,7 @@ if (isset($_SESSION['loggedIn'])) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>goPortlethen</title>
+    <title>Edit Profile</title>
 </head>
 
 <?php

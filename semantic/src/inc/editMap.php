@@ -31,7 +31,7 @@ include("includes/header.php");
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>Edit Map Content</title>
 </head>
 <!--main body-->
 <body>
