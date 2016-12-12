@@ -1,19 +1,15 @@
 <?php
 session_start();
 //connects to database server
-include("includes/dbconnect.php");
+include("includes/PDOConnect.php");
 if (isset($_SESSION['loggedIn'])) {
     $userID = $_SESSION['loggedIn'];
-    $sql    = "SELECT userName from users where userID = '$userID'";
-    $result = mysqli_query($db, $sql);
-    while ($row = mysqli_fetch_assoc($result)) {
-        $userName = $row['userName'];
-    }
-    $sql    = "SELECT accessID from useraccess WHERE userName = '$userName'";
-    $result = mysqli_query($db, $sql);
-    while ($row = mysqli_fetch_assoc($result)) {
-        $accessLevel = $row['accessID'];
-    }
+    $sql    = "SELECT accessID from users U, useraccess UA where U.userName = UA.userName AND userID = ?";
+    $stmt = $pdo -> prepare($sql);
+    $stmt -> execute([$userID]);
+    $row = $stmt -> fetch(PDO::FETCH_ASSOC);
+    $accessLevel = $row['accessID'];
+
     //sql statement to check for correct access level
     if ($accessLevel == 4) {
         include("includes/header.php");
@@ -21,16 +17,17 @@ if (isset($_SESSION['loggedIn'])) {
         <div class='ui horizontal section divider'>
         </div>";
 
-        $sql_query = "
+        $sql = "
     SELECT A.title, A.mainText, B.userName, A.datePosted, A.healthContentID, A.approvalStatus, C.url
     FROM healthcontent A, users B, photos C
     WHERE 
     A.userID=B.userID
     AND A.healthContentID = C.healthContentID
-    AND A.approvalStatus = 0
-    AND A.userID = $userID;";
-        $result    = $db->query($sql_query);
-        while ($row = $result->fetch_array()) {
+    AND A.approvalStatus = ?
+    AND A.userID = ?;";
+        $stmt = $pdo -> prepare($sql);
+        $stmt->execute([0, $userID]);
+        while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
             $title           = $row['title'];
             $mainText        = $row['mainText'];
             $userName        = $row['userName'];
@@ -72,10 +69,11 @@ if (isset($_SESSION['loggedIn'])) {
     WHERE 
     A.userID=B.userID
     AND A.healthContentID = C.healthContentID
-    AND A.approvalStatus = 1
-    AND A.userID = $userID;";
-        $result    = $db->query($sql_query);
-        while ($row = $result->fetch_array()) {
+    AND A.approvalStatus = ?
+    AND A.userID = ?";
+        $stmt = $pdo -> prepare($sql);
+        $stmt -> execute([1, $userID]);
+        while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
             $title           = $row['title'];
             $mainText        = $row['mainText'];
             $userName        = $row['userName'];
