@@ -34,7 +34,7 @@ if (isset($_SESSION['loggedIn'])) {
 <head>
     <title>goPortlethen</title>
 </head><?
-
+echo "$clubCategory";
 include("includes/header.php");
 ?>
 <body>
