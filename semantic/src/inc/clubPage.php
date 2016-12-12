@@ -48,7 +48,7 @@ include("includes/header.php");
         <?php
         if ($accessLevel == 1 || $accessLevel == 2){
             echo"
-                <div class='sixteen wide column'>
+                <div class='eight wide column'>
                     <header class='ui blue huge header'>
                         <?php echo $clubName ?>Club Profile Page
                     </header>
