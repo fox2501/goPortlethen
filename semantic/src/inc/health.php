@@ -42,7 +42,7 @@ if (isset($_SESSION['loggedIn'])) {
     <p>Keeping Portlethen Healthy</p>
 </div>
 
-<div class="ui container">
+<div class="ui stackable container">
     <div class="ui two column grid">
         <div class="ten wide column">
             <?php
