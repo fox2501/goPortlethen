@@ -55,9 +55,11 @@ $clubName = $row['clubName'];
         <?php
         if ($canAccess == '1') {
             echo "<div class='row'>
-                            <a href='createClubEvent.php'.php'>
-                                <button class='ui green submit button' style='margin-right:50px' name='createClubEvent' value= $clubID>Create Club Event</button>
-                            </a>
+                            <form action='createClubEvent.php' class='ui large form' method='post'>
+                                <input type='hidden' name='createClubEvent' value=$clubID>
+                                <button class='ui green submit button' style='margin-right:50px'>Create Club Event</button>
+                            </form>
+                                
                             </div>";
         }
         ?>
