@@ -19,8 +19,7 @@ include("includes/header.php");
                 Change Password
             </div>
         </div>
-    </div>
-    <!--changing password logic-->
+    </div><!--changing password logic-->
     <div class="ui grid">
         <div class="row">
             <div class="column">

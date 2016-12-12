@@ -1,9 +1,12 @@
 <?php
 //session begins
+
 session_start();
+
 //connects to database server
 include("dbconnect.php");
 
+//puts entered fields into variables
 $firstName =  $_POST["firstName"];
 $surname = $_POST["surname"];
 $email = $_POST["email"];
@@ -15,6 +18,7 @@ $accessRequested = $_POST["accessRequested"];
 $requireApproval = "1";
 $userApproved = "0";
 $accessLevel = "0";
+
 //sql statement that takes username entered
 $sql = "SELECT username FROM users WHERE username = '$username'";
 $result = mysqli_query($db, $sql);
@@ -47,6 +51,7 @@ else {
     $sql = "INSERT INTO useraccess (accessID, userName) VALUES ('$accessLevel', '$username')";
     $result = mysqli_query($db, $sql);
 
+    //redirect
     header("location: /semantic/?newUser");
 }
 ?>
