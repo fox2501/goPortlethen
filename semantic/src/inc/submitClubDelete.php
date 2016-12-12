@@ -2,7 +2,7 @@
 session_start();
 //connects to database server
 include("includes/PDOConnect.php");
-$clubID = $_POST["deleteClub"];
+$clubID = htmlentities($_POST["deleteClub"]);
 
 //deletes club
 $sql = "DELETE FROM club WHERE clubID = ?";

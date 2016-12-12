@@ -3,9 +3,9 @@ session_start();
 //connects to database server
 include("includes/PDOConnect.php");
 $userID = $_SESSION['loggedIn'];
-$title = $_POST["editTitle"];
-$mainText = $_POST["editMainText"];
-$healthContentID = $_POST["healthContentToEdit"];
+$title = htmlentities($_POST["editTitle"]);
+$mainText = htmlentities($_POST["editMainText"]);
+$healthContentID = htmlentities($_POST["healthContentToEdit"]);
 $approvalStatus = 1;
 
 $sql = "SELECT accessID from useraccess UA, users U where UA.userName = U.userName AND U.userID = ?";

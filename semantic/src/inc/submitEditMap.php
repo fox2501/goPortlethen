@@ -20,12 +20,12 @@ if($accessLevel == 4){
     $approvalStatus = 0;
 }
 
-$locationID = $_POST['editMap'];
-$title = $_POST['title'];
-$mapType = $_POST['mapType'];
-$lat = $_POST['lat'];
-$lng = $_POST['long'];
-$mapDesc = $_POST['mapDesc'];
+$locationID = htmlentities($_POST['editMap']);
+$title = htmlentities($_POST['title']);
+$mapType = htmlentities($_POST['mapType']);
+$lat = htmlentities($_POST['lat']);
+$lng = htmlentities($_POST['long']);
+$mapDesc = htmlentities($_POST['mapDesc']);
 
 $sql = "UPDATE locations SET locationName = ?, locationType = ?, latitude = ?, longitude = ?, caption = ?, approvalStatus = ? WHERE locationID = ?";
 $stmt = $pdo -> prepare($sql);

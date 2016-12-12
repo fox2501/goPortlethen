@@ -4,8 +4,8 @@ session_start();
 //connects to database server
 include("includes/PDOConnect.php");
 $userID = $_SESSION["loggedIn"];
-$title = $_POST["title"];
-$mainText = $_POST["mainText"];
+$title = htmlentities($_POST["title"]);
+$mainText = htmlentities($_POST["mainText"]);
 
 //checking username
 $sql = "SELECT userName from users WHERE userID = ?";

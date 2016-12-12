@@ -3,9 +3,9 @@ session_start();
 //connects to database server
 include("includes/PDOConnect.php");
 $userID = $_SESSION['loggedIn'];
-$title = $_POST["editTitle"];
-$caption = $_POST["editCaption"];
-$homeContentID = $_POST["editContent"];
+$title = htmlentities($_POST["editTitle"]);
+$caption = htmlentities($_POST["editCaption"]);
+$homeContentID = htmlentities($_POST["editContent"]);
 
 
 $sql ="UPDATE homecontent SET title = ?,caption= ? WHERE contentID = ?";
