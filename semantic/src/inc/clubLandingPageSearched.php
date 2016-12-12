@@ -22,6 +22,13 @@ if (isset($_SESSION['loggedIn'])) {
         $canAccess = '0';
     }
 }
+
+
+$clubCategory = $_POST["search"];
+
+$sql = "SELECT * FROM clubs WHERE $clubCategory = ?";
+$stmt = $pdo->prepare($sql);
+$stmt->execute([$clubCategory]);
 ?>
 <!DOCTYPE html>
 <html>
