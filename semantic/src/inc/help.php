@@ -16,7 +16,10 @@ session_start();
 </head><?php include("includes/header.php"); ?>
 <!--main body-->
 <body>
-<h2 class="ui center aligned header">Help Page</h2>
+<h1 align="center">FAQS</h1>
+<div class="ui horizontal section divider">
+    <p>Here to help!</p>
+</div>
 <div class="ui container">
     <div class="ui horizontal section divider">
         FAQs
