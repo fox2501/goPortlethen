@@ -1,16 +1,11 @@
 <?php
-
-
-
 session_start();
 include("includes/PDOConnect.php");
-
+$userID = $_SESSION['loggedIn'];
 $title = $_POST["editTitle"];
 $mainText = $_POST["editMainText"];
 $healthContentID = $_POST["healthContentToEdit"];
-$userID = $_SESSION['loggedIn'];
 
-$userID = $_SESSION['loggedIn'];
 $sql = "SELECT accessID from useraccess UA, users U where UA.userName = U.userName AND U.userID = ?";
 $stmt = $pdo->prepare($sql);
 $stmt->execute([$userID]);
