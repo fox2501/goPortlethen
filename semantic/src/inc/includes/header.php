@@ -135,6 +135,11 @@ include("PDOConnect.php");
                                 </a>
                             </div>
                             <div class = 'item'>
+                                <a class = 'header' href = '/semantic/src/inc/myMapSubmissions.php'>
+                                    <p style = 'color: black;'>My Map Submissions</p>
+                                </a>
+                            </div>
+                            <div class = 'item'>
                                 <a class = 'header' href = '/semantic/src/inc/mapApprovals.php'>
                                     <p style = 'color: black;'>Map Approvals</p>
                                 </a>
@@ -160,8 +165,13 @@ include("PDOConnect.php");
                                 </a>
                             </div>
                             <div class = 'item'>
-                                <a class = 'header' href = '/semantic/src/inc/mySubmissions.php'>
+                                <a class = 'header' href = '/semantic/src/inc/myHealthSubmissions.php'>
                                     <p style = 'color: black;'>My Health Submissions</p>
+                                </a>
+                            </div>
+                            <div class = 'item'>
+                                <a class = 'header' href = '/semantic/src/inc/myMapSubmissions.php'>
+                                    <p style = 'color: black;'>My Map Submissions</p>
                                 </a>
                             </div>
                         </div>
