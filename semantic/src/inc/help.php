@@ -97,7 +97,7 @@ session_start();
                 </div>
                 <div class="four wide column">
                     <div class="field">
-                        <label>Email Address</label> <input name = "EmailID" placeholder="Email Address" type="text">
+                        <label>Email Address</label> <input name = "EmailAddress" placeholder="Email Address" type="text">
                     </div>
                 </div>
                 <div class="sixteen wide column">
