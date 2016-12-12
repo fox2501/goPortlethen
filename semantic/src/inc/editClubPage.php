@@ -197,15 +197,17 @@ $('#dropdown')
             </div>
             
     </div>
+    ";
+    include('includes/footer.php');
+
+echo "
 </body>
 ";
-include("includes/footer.php");
+
 } else {
     echo "You do not have permission";
 }
 }
 };
 ?>
-<body>
-</body>
 </html>
