@@ -96,160 +96,162 @@ if (isset($_SESSION['loggedIn'])) {
                     <label>Please check if your club requires a fee: </label>
                     <div class="inline field">
                         <div class="ui checkbox">
-                            <input type="checkbox" tabindex="0" class="hidden" id="feeRequired1">
-                            <label for="feeRequired1">Requires Free</label>
+                            <input type="checkbox" tabindex="0" class="hidden" id="isFee">
+                            <label for="isFee">Requires Free</label>
                         </div>
-                        <div class="ui fluid right labeled input">
+                        <!--<div class="ui fluid right labeled input">
                             <div class="ui label">£</div>
                             <input type="number" name="feeRequired2" placeholder="Please enter your clubs fee">
                         </div>
                     </div>
-                </div>
-
-                <!--<div class="field" id="feeAmount" style="display: none;">
-                    <label>Please enter your clubs monthly fee (e.g. 10.00): </label>
-                    <div class="ui  right labeled input">
-                        <div class="ui label">£</div>
-                        <input type="text" placeholder="Amount" name="feeAmount">
-                    </div>
-                    <script>
-                        var checker = document.getElementById('isFee');
-                        var sendbtn = document.getElementById('feeAmount');
-                        // when unchecked or checked, run the function
-                        checker.onchange = function () {
-                            if (this.checked) {
-                                sendbtn.style.display = 'block';
-                                checker.value = 1;
-                            } else {
-                                sendbtn.style.display = 'none';
-                                checker.value = 0;
-                            }
-
-                        }
-                    </script>
                 </div>-->
-                <div class="field">
-                    <label>Please upload your clubs profile picture: </label>
-                    <div class="ui fluid action input">
-                        <input name="img" size="35" type="file"/>
 
-                    </div>
-                    <!--                    <script>-->
-                    <!--                        $('input:text, .ui.button', '.ui.action.input')-->
-                    <!--                            .on('click', function (e) {-->
-                    <!--                                $('input:file', $(e.target).parents()).click();-->
-                    <!--                            })-->
-                    <!--                        ;-->
-                    <!---->
-                    <!--                        $('input:file', '.ui.action.input')-->
-                    <!--                            .on('change', function (e) {-->
-                    <!--                                var name = e.target.files[0].name;-->
-                    <!--                                $('input:text', $(e.target).parent()).val(name);-->
-                    <!--                            })-->
-                    <!--                        ;-->
-                    <!--                    </script>-->
-                    <!--                    <style>-->
-                    <!--                        body {-->
-                    <!--                            padding: 1em;-->
-                    <!--                        }-->
-                    <!---->
-                    <!--                        .ui.action.input input[type="file"] {-->
-                    <!--                            display: none;-->
-                    <!--                        }-->
-                    <!--                    </style>-->
-                </div>
-                <div class="required inline field">
-                    <div class="ui checkbox">
-                        <input type="checkbox" tabindex="0" class="hidden" name="terms" id="terms">
-                        <label for="terms">I agree to the terms and conditions</label>
-                    </div>
-                </div>
-                <button class="ui fluid large green submit button" id="createClub" type="submit">Create Club</button>
+                        <div class="field" id="feeAmount" style="display: none;">
+                            <label>Please enter your clubs monthly fee (e.g. 10.00): </label>
+                            <div class="ui  right labeled input">
+                                <div class="ui label">£</div>
+                                <input type="text" placeholder="Amount" name="feeAmount">
+                            </div>
+                            <script>
+                                var checker = document.getElementById('isFee');
+                                var sendbtn = document.getElementById('feeAmount');
+                                // when unchecked or checked, run the function
+                                checker.onchange = function () {
+                                    if (this.checked) {
+                                        sendbtn.style.display = 'block';
+                                        checker.value = 1;
+                                    } else {
+                                        sendbtn.style.display = 'none';
+                                        checker.value = 0;
+                                    }
 
-
-                <script type="text/javascript">
-
-                    (function ($) {
-                        $('.ui.form').form({
-                            fields: {
-                                clubName: {
-                                    identifier: 'clubName',
-                                    rules: [
-                                        {
-                                            type: 'empty',
-                                            prompt: 'Please enter your clubs name'
-                                        }
-                                    ]
-                                },
-                                clubEmail: {
-                                    identifier: 'email',
-                                    rules: [
-                                        {
-                                            type: 'email',
-                                            prompt: 'Please enter a valid email address'
-                                        }
-                                    ]
-                                },
-                                clubCategory: {
-                                    identifier: 'clubCategory',
-                                    rules: [
-                                        {
-                                            type: 'empty',
-                                            prompt: 'Please select a club category'
-                                        }
-                                    ]
-                                },
-                                clubDescription: {
-                                    identifier: 'clubDescription',
-                                    rules: [
-                                        {
-                                            type: 'empty',
-                                            prompt: 'Please select a club category'
-                                        }
-                                    ]
-                                },
-                                number: {
-                                    identifier: 'phoneNumber',
-                                    rules: [
-                                        {
-                                            type: 'number',
-                                            prompt: 'Please enter a valid phone number'
-                                        }
-                                    ]
-                                },
-                                url: {
-                                    identifier: 'websiteURL',
-                                    optional: true,
-                                    rules: [
-                                        {
-                                            type: 'url',
-                                            prompt: 'Please enter a url'
-                                        }
-                                    ]
-                                },
-                                terms: {
-                                    identifier: 'terms',
-                                    rules: [
-                                        {
-                                            type: 'checked',
-                                            prompt: 'You must agree to the terms and conditions'
-                                        }
-                                    ]
-                                },
-                                photo: {
-                                    identifier: 'img',
-                                    rules: [
-                                        {
-                                            type: 'empty',
-                                            prompt: 'Please choose a photo for the post'
-                                        }
-                                    ]
                                 }
-                            }
+                            </script>
+                        </div>
 
-                        })
-                    })(jQuery);
-                </script>
+                        <div class="field">
+                            <label>Please upload your clubs profile picture: </label>
+                            <div class="ui fluid action input">
+                                <input name="img" size="35" type="file"/>
+
+                            </div>
+                            <!--                    <script>-->
+                            <!--                        $('input:text, .ui.button', '.ui.action.input')-->
+                            <!--                            .on('click', function (e) {-->
+                            <!--                                $('input:file', $(e.target).parents()).click();-->
+                            <!--                            })-->
+                            <!--                        ;-->
+                            <!---->
+                            <!--                        $('input:file', '.ui.action.input')-->
+                            <!--                            .on('change', function (e) {-->
+                            <!--                                var name = e.target.files[0].name;-->
+                            <!--                                $('input:text', $(e.target).parent()).val(name);-->
+                            <!--                            })-->
+                            <!--                        ;-->
+                            <!--                    </script>-->
+                            <!--                    <style>-->
+                            <!--                        body {-->
+                            <!--                            padding: 1em;-->
+                            <!--                        }-->
+                            <!---->
+                            <!--                        .ui.action.input input[type="file"] {-->
+                            <!--                            display: none;-->
+                            <!--                        }-->
+                            <!--                    </style>-->
+                        </div>
+                        <div class="required inline field">
+                            <div class="ui checkbox">
+                                <input type="checkbox" tabindex="0" class="hidden" name="terms" id="terms">
+                                <label for="terms">I agree to the terms and conditions</label>
+                            </div>
+                        </div>
+                        <button class="ui fluid large green submit button" id="createClub" type="submit">Create Club
+                        </button>
+
+
+                        <script type="text/javascript">
+
+                            (function ($) {
+                                $('.ui.form').form({
+                                    fields: {
+                                        clubName: {
+                                            identifier: 'clubName',
+                                            rules: [
+                                                {
+                                                    type: 'empty',
+                                                    prompt: 'Please enter your clubs name'
+                                                }
+                                            ]
+                                        },
+                                        clubEmail: {
+                                            identifier: 'email',
+                                            rules: [
+                                                {
+                                                    type: 'email',
+                                                    prompt: 'Please enter a valid email address'
+                                                }
+                                            ]
+                                        },
+                                        clubCategory: {
+                                            identifier: 'clubCategory',
+                                            rules: [
+                                                {
+                                                    type: 'empty',
+                                                    prompt: 'Please select a club category'
+                                                }
+                                            ]
+                                        },
+                                        clubDescription: {
+                                            identifier: 'clubDescription',
+                                            rules: [
+                                                {
+                                                    type: 'empty',
+                                                    prompt: 'Please select a club category'
+                                                }
+                                            ]
+                                        },
+                                        number: {
+                                            identifier: 'phoneNumber',
+                                            rules: [
+                                                {
+                                                    type: 'number',
+                                                    prompt: 'Please enter a valid phone number'
+                                                }
+                                            ]
+                                        },
+                                        url: {
+                                            identifier: 'websiteURL',
+                                            optional: true,
+                                            rules: [
+                                                {
+                                                    type: 'url',
+                                                    prompt: 'Please enter a url'
+                                                }
+                                            ]
+                                        },
+                                        terms: {
+                                            identifier: 'terms',
+                                            rules: [
+                                                {
+                                                    type: 'checked',
+                                                    prompt: 'You must agree to the terms and conditions'
+                                                }
+                                            ]
+                                        },
+                                        photo: {
+                                            identifier: 'img',
+                                            rules: [
+                                                {
+                                                    type: 'empty',
+                                                    prompt: 'Please choose a photo for the post'
+                                                }
+                                            ]
+                                        }
+                                    }
+
+                                })
+                            })(jQuery);
+                        </script>
 
         </form>
 
