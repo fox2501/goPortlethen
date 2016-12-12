@@ -5,7 +5,7 @@ session_start();
 //connects to database server
 include("includes/PDOConnect.php");
 
-$locationID = $_POST['approveMap'];
+$locationID = htmlentities($_POST['approveMap']);
 
 $sql = "UPDATE locations SET approvalStatus = ? WHERE locationID = ?";
 $stmt = $pdo -> prepare($sql);

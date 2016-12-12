@@ -1,8 +1,8 @@
 <?php
-$firstname = $_POST['firstName'];
-$lastname = $_POST['lastName'];
-$emailAddress = $_POST['emailAddress'];
-$question = $_POST['question'];
+$firstname = htmlentities($_POST['firstName']);
+$lastname = htmlentities($_POST['lastName']);
+$emailAddress = htmlentities($_POST['emailAddress']);
+$question = htmlentities($_POST['question']);
 $from = 'From: xander19@btinternet.com';
 $to = 'alexander.ladd@btinternet.com';
 
@@ -12,7 +12,7 @@ $stmt->execute([1]);
 $emailString;
 while($row = $stmt -> fetch(PDO::FETCH_ASSOC){
 
-$emailString = $row['emailAddress'].";";
+$emailString = $row['emailAddress'].";"
 }
 
 ?>

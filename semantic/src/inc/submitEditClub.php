@@ -5,13 +5,13 @@ session_start();
 //connects to database server
 include("includes/PDOConnect.php");
 
-$clubName = $_POST["editClubName"];
-$clubID = $_POST["clubToEdit"];
-$clubDesc = $_POST["editDescription"];
-$contactNum = $_POST["editNumber"];
-$websiteURL = $_POST["editURL"];
-$feeRequired = $_POST["editFeeRequired"];
-$feeCost = $_POST["editCost"];
+$clubName = htmlentities($_POST["editClubName"]);
+$clubID = htmlentities($_POST["clubToEdit"]);
+$clubDesc = htmlentities($_POST["editDescription"]);
+$contactNum = htmlentities($_POST["editNumber"]);
+$websiteURL = htmlentities($_POST["editURL"]);
+$feeRequired = htmlentities($_POST["editFeeRequired"]);
+$feeCost = htmlentities($_POST["editCost"]);
 
 //FEE REQUIRED DOES NOT WORK
 

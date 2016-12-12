@@ -2,7 +2,7 @@
 session_start();
 //connects to database server
 include("includes/PDOConnect.php");
-$healthID =$_POST["deleteHealth"];
+$healthID =htmlentities($_POST["deleteHealth"]);
 
 
 $sql = "DELETE FROM healthContent WHERE healthContentID = ?";

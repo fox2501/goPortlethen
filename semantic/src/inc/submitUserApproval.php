@@ -8,7 +8,7 @@ session_start();
 //connects to database server
 include("includes/PDOConnect.php");
 
-$userName = $_POST['approveUser'];
+$userName = htmlentities($_POST['approveUser']);
 
 $sql = "UPDATE users SET userApproved = ? WHERE userName = ?";
 $stmt = $pdo->prepare($sql);
