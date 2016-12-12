@@ -31,6 +31,7 @@ if (isset($_SESSION['loggedIn'])) {
         $canAccess = '1';
     } else {
         $canAccess = '0';
+        header("location: /semantic/src/inc/logIn.php");
     };
     $clubID = $_POST['createClubEvent']
     ?>
