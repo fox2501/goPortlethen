@@ -36,20 +36,20 @@ if(empty($img)){
     $url=$pms['data']['link'];
 }
 
-echo $url;
 
-//if(empty($url)){
-//
-//}
-//else{
-//    $sql = "DELETE FROM photos WHERE homeContentID  = 1";
-//    $pdo->prepare($sql)->execute();
-//    usleep(10000);
-//    $sql = "INSERT INTO photos(caption,url,clubID,locationID,healthContentID,routeID, homeContentID) VALUES(?,?,?,?,?,?,?)";
-//    $pdo->prepare($sql)->execute(['',$url,0,0,0,0,1]);
-//
-//
-//}
 
-//header('Location: /semantic/');
+if(empty($url)){
+
+}
+else{
+    $sql = "DELETE FROM photos WHERE homeContentID  = 1";
+    $pdo->prepare($sql)->execute();
+    usleep(10000);
+    $sql = "INSERT INTO photos(caption,url,clubID,locationID,healthContentID,routeID, homeContentID) VALUES(?,?,?,?,?,?,?)";
+    $pdo->prepare($sql)->execute(['',$url,0,0,0,0,1]);
+
+
+}
+
+header('Location: /semantic/');
 ?>
