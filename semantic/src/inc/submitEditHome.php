@@ -40,7 +40,7 @@ if(empty($url)){
 
 }
 else{
-    $sql = "DELETE FROM photos WHERE homeContentID  =?";
+    $sql = "DELETE FROM photos WHERE homeContentID  = ?";
     $pdo->prepare($sql)->execute([$homeContentID]);
     usleep(10000);
     $sql = "INSERT INTO photos(caption,url,clubID,locationID,healthContentID,routeID, homeContentID) VALUES(?,?,?,?,?,?,?)";
