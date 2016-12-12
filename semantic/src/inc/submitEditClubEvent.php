@@ -30,7 +30,7 @@ if (isset($_SESSION['loggedIn'])) {
     $clubID = $_POST['editClubEvent'];
 }
 
-$sql = 'INSERT INTO clubEvents(title,date,description,clubID) VALUES(?,?,?,?)';
+$sql = 'UPDATE clubEvents SET title =? ,date =?,description = ?,clubID = ?';
 $stmt = $pdo->prepare($sql)->execute([$title,$date,$mainText,$clubID]);
 
 header("location: /semantic/src/inc/clublandingpage.php");

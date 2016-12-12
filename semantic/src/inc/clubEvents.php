@@ -41,7 +41,7 @@ $stmt->execute([$clubID]);
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
 $clubName = $row['clubName'];
 ?>
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
