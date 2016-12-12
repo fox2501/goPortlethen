@@ -82,11 +82,8 @@ if (isset($_SESSION['loggedIn'])) {
                     <input type="text" name="phoneNumber" maxlength="11" placeholder="Phone Number">
                 </div>
                 <div class="field">
-                    <div class="ui labeled input">
-                        <div class="ui label">
-                            http://
-                        </div>
-                    <input type="URL" name="websiteURL" placeholder="Website URL" >
+                    <label>Website URL</label>
+                    <input type="URL" name="websiteURL" placeholder="Website URL" value="http://">
                 </div>
                 <div class="field">
                     <label>Please toggle if your club requires a fee: </label>
