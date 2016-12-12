@@ -104,10 +104,9 @@ session_start();
                     <div class="field">
                         <div class="field">
                             <label>Enter your question here :</label> <input name="question" type="text">
-                            <textarea></textarea>
                         </div>
                     </div>
-                    <button class="ui positive right labeled icon button" type="submit">
+                    <button class="ui positive right labeled icon button" id= "createEmail" type="submit">
                         <a href="submitHelp.php">Send Message</a> <i class="checkmark icon"></i>
                     </button>
                 </div>
