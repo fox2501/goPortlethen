@@ -11,7 +11,7 @@ session_start();
 </head>
 
 <body>
-    <div class="ui blue inverted footer segment" id = "footer" style = "position:absolute; height: 150px; width: 100%">
+    <div class="ui blue inverted footer segment" id = "footer" style = "position:absolute; height: 175px; width: 100%">
 
         <div class="ui center aligned container">
             <div class="ui stackable inverted grid">
@@ -22,7 +22,10 @@ session_start();
                         <a class="item" href="/semantic/src/inc/health.php" target="_blank">Health & Wellbeing</a>
                         <a class="item" href="/semantic/src/inc/clubLandingPage.php" target="_blank">Clubs</a>
                         <a class="item" href="/semantic/src/inc/mapLandingPage.php" target="_blank">Maps</a>
-
+                    </div>
+                    <div class="ui inverted link list">
+                        <a class="item" href="/semantic/src/inc/help.php" target="_blank">Help</a>
+                        <a class="item" href="#" target="_blank">Terms & Conditions</a>
                     </div>
                 </div>
                 <!--cookies and terms links-->
@@ -31,14 +34,11 @@ session_start();
                 </div>
 
                 <div class="three wide column">
-                    <div class="ui inverted link list">
-                        <a class="item" href="/semantic/src/inc/help.php" target="_blank">Help</a>
-                        <a class="item" href="#" target="_blank">Terms & Conditions</a>
-                    </div>
+
                 </div>
 
                 <div class="three wide column">
-
+                    <h4 class="ui inverted header">Copyright © 2016 GoPortlethen</h4>
                 </div>
 
             </div>
