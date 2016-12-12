@@ -1,6 +1,14 @@
 <?php
 //session begins
 session_start();
+
+$sql = "SELECT emailAddress FROM users A, useraccess B WHERE A.userName = B.userName AND B.accessID = ?";
+$stmt = $pdo->prepare($sql);
+$stmt->execute([1]);
+$emailString = "";
+while($row = $stmt -> fetch(PDO::FETCH_ASSOC)){
+    $emailString = $emailString.$row['emailAddress'].";";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -83,7 +91,7 @@ session_start();
         Send a message to a Site Administrator for help
     </div>
     <div class="ui segment">
-        <form class="ui form" action= "submitHelp.php" method = "post">
+        <form class="ui form" action= "mailto: <?php echo $emailString ?>" method = "post">
             <div class="ui grid">
                 <div class="four wide column">
                     <div class="field">
@@ -97,7 +105,7 @@ session_start();
                 </div>
                 <div class="four wide column">
                     <div class="field">
-                        <label>Email Address</label> <input name = "EmailAddress" placeholder="Email Address" type="text">
+                        <label>Email Address</label> <input name = "emailAddress" placeholder="Email Address" type="text">
                     </div>
                 </div>
                 <div class="sixteen wide column">
