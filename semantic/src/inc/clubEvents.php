@@ -89,8 +89,10 @@ $clubName = $row['clubName'];
                             <form action='editClubEvent.php' class='ui form' method='post'>
                                 <button class='ui right floated mini button' onclick='/semantic/src/inc/editClubEvent.php' type='submit'><input name='editClub' type='hidden' value='$clubID'>Edit</button> 
                             </form>
+                            ";}
+                            echo "
                         </div>
-                        }
+                        
                         
                     </div>
                 </div>

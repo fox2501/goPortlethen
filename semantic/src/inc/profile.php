@@ -15,7 +15,8 @@ if (isset($_SESSION['loggedIn'])) {
     $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
     $userID = $_SESSION['loggedIn'];
     $sql = "SELECT firstName, surname, age, emailAddress FROM users WHERE userID = ?";
-    $stmt = $pdo -> prepare($sql) -> execute([$userID]);
+    $stmt = $pdo -> prepare($sql);
+    $stmt -> execute([$userID]);
     $row = $stmt -> fetch(PDO::FETCH_ASSOC);
         $firstName = $row['firstName'];
         $surname = $row['surname'];
