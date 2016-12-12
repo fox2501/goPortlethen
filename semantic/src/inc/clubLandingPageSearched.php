@@ -46,8 +46,9 @@ include("includes/header.php");
 <div class="ui stackable container">
     <div class="ui stackable grid">
         <div class="ui hidden divider"></div><?php
-        $sql_query = "SELECT A.clubName, A.clubDescription, A.clubID, B.url FROM club A, photos B WHERE A.clubID = B.clubID
-AND $clubCategory = ?";
+        $sql_query = "SELECT A.clubName, A.clubDescription, A.clubID, B.url FROM club A, photos B
+                      WHERE A.clubID = B.clubID
+                      AND $clubCategory = ?";
         $stmt = $pdo->prepare($sql);
         $stmt->execute([$clubCategory]);
         $result = $db->query($sql_query);
